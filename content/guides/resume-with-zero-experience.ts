@@ -1,6 +1,7 @@
 import type { Guide } from "./types";
 import { check, example, h2, h3, ol, p, table, tyler, ul } from "./_helpers";
 import { tb } from "../toolkitBlocks";
+import { sampleResumeBlocks } from "./_resumeSamples";
 
 export const guide: Guide = {
   slug: "resume-with-zero-experience",
@@ -64,6 +65,10 @@ export const guide: Guide = {
     p("Here's a made-up student to show the whole transformation. Same experience, same person. The only thing that changed is how it's written."),
     ...tb.exampleResume(),
     p("Notice what changed. The \"after\" version has a clear header, specific titles, numbers in most bullets, a project that shows interest in the field, and skills that are real and testable. It also cut \"teamwork, communication, leadership\" from the skills line, because those are claims, not skills. Show them in bullets instead."),
+
+    h2("Sample resumes"),
+    p("The best way to see what a finished resume looks like is to read a few. Penn Career Services publishes undergraduate samples by field, and they're some of the cleanest examples out there. They're written for juniors and seniors, so expect more experience than a first-year student has. Borrow the format, not the bar: notice where the strongest item sits, how every bullet ends in a result, and how specific the skills are."),
+    ...sampleResumeBlocks(),
 
     h2("Section by section"),
     h3("Header"),

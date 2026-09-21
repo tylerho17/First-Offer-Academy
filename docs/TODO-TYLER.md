@@ -12,6 +12,7 @@ Things that need your real input. Each line names the file to edit.
 - **Legal business entity name** → `content/site.ts` `legalEntityName` (shows in the privacy policy and terms).
 - Once the newsletter tool is chosen, add it to `content/site.ts` `serviceProviders` so the privacy policy lists it.
 - Confirm the attendance policy stated on /program and /our-promise: "two missed weeks in a row triggers a call with the student and a parent" (`content/programOverview.ts`, `content/promise.ts`).
+- **Your own resume for the resume guide** (optional): fill in `tylerResume` in `content/guides/_resumeSamples.ts` and it appears above the Penn samples on /blog/resume-with-zero-experience. Remove employer names first (the site never names them), plus your phone and email.
 - Set `showPlaceholders: false` in `content/site.ts` before sharing the site. Every empty video/proof/testimonial slot then disappears.
 
 ## Attorney review

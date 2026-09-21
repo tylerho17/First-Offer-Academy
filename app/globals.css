@@ -1047,6 +1047,34 @@ a.featured-download:hover { transform: translateY(-3px); }
 .block-callout.is-example { border: 2px dashed rgba(63,102,144,.5); white-space: pre-line; }
 .block-callout.is-example .block-title { font-family: var(--sans); font-size: 13px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--dusty); }
 .block-callout.is-note { border-left: 6px solid var(--dusty); }
+.block-links { margin-top: 28px; }
+.block-links ul { list-style: none !important; padding: 0 !important; margin: 12px 0 0 !important; display: grid; gap: 12px; }
+@media (min-width: 640px) { .block-links ul { grid-template-columns: 1fr 1fr; } }
+.block-links li { margin: 0 !important; }
+.block-links a.card { display: grid; gap: 6px; height: 100%; padding: 18px 20px; text-decoration: none; color: var(--ink); border: 1.5px solid transparent; }
+.block-links a.card:hover { border-color: var(--dusty); }
+.block-links a.card:focus-visible { outline: 1.5px solid var(--dusty); outline-offset: 3px; }
+.block-links-label { display: block; font-family: var(--display); font-weight: 600; font-size: 20px; line-height: 1.25; color: var(--navy); }
+.block-links-label svg { display: inline; width: 18px; height: 18px; margin-left: 6px; vertical-align: -2px; color: var(--dusty); }
+.block-links-note { font-size: 15px; line-height: 1.5; }
+.block-links p.block-links-source { margin-top: 12px; font-size: 15px; line-height: 1.5; color: var(--ink); }
+.block-resume { margin: 32px 0 0; }
+.block-resume figcaption { display: grid; gap: 4px; margin-bottom: 12px; }
+.block-resume figcaption span:not(.eyebrow) { font-size: 15px; color: var(--ink); }
+.block-resume .resume-doc { background: var(--cream); border: 1px solid var(--navy-line); border-radius: 6px; box-shadow: 0 8px 24px rgba(26,43,72,.08); padding: 20px 16px; font-family: Georgia, "Times New Roman", serif; color: var(--ink); font-size: 13px; line-height: 1.4; }
+.block-resume .resume-doc * { font-family: inherit; }
+.block-resume .resume-doc p { margin: 0; font-size: 13px; line-height: 1.4; }
+@media (min-width: 640px) { .block-resume .resume-doc { padding: 32px 36px; } }
+.block-resume .resume-doc .resume-name { text-align: center; font-size: 22px; font-weight: 700; color: var(--ink); letter-spacing: .02em; }
+.block-resume .resume-doc .resume-contact { text-align: center; font-size: 12px; overflow-wrap: anywhere; margin-top: 2px; }
+.block-resume .resume-doc .resume-h { margin-top: 14px; font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; border-bottom: 1px solid var(--navy); padding-bottom: 2px; }
+.block-resume .resume-doc .resume-entry { margin-top: 7px; }
+.block-resume .resume-doc .resume-row { display: flex; flex-wrap: wrap; justify-content: space-between; column-gap: 16px; }
+.block-resume .resume-doc .resume-row span { margin-left: auto; }
+.block-resume .resume-doc .resume-line { margin-top: 5px; }
+.block-resume .resume-doc ul { margin: 3px 0 0; padding-left: 18px; }
+.block-resume .resume-doc li { margin-top: 1px; font-size: 13px; line-height: 1.4; }
+.block-resume .resume-doc li::marker { color: var(--ink); }
 .article-toc { margin-top: 28px; }
 .article-toc ol { margin: 0; padding-left: 22px; display: grid; gap: 6px; }
 .article-toc li { font-size: 16px; }
