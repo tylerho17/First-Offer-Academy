@@ -2,7 +2,7 @@ import Link from "next/link";
 import { tracks } from "@/content/tracks";
 
 const topics = [
-  { label: "Freshman timeline", href: "/blog/freshman-internship-timeline" },
+  { label: "Free timeline PDF", href: "/timeline" },
   { label: "Cold emails", href: "/blog/cold-email-template" },
   { label: "Tell me about yourself", href: "/blog/tell-me-about-yourself" },
   { label: "Parent info sessions", href: "/events" },

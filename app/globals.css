@@ -857,7 +857,7 @@ a.topic-pill:hover { background: var(--navy); color: var(--cream); }
 .consent-group .consent label { font-size: 15px; }
 .consent-group .consent label a { text-decoration: underline; }
 .consent-note { font-size: 14px; }
-.nl-fine { font-size: 13px; color: var(--navy); margin: 2px 0 0 !important; }
+.nl-form .nl-fine { font-size: 13px; color: var(--navy); margin: 2px 0 0 !important; }
 .nl-fine a { color: var(--navy); text-decoration: underline; }
 
 /* ---------- Syllabus (task 11) ---------- */
@@ -884,3 +884,19 @@ a.topic-pill:hover { background: var(--navy); color: var(--cream); }
 .story-facts dt { font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--dusty); margin-bottom: 8px; }
 .story-facts dd { margin: 0; font-size: 17px; }
 .story-note { margin-top: 24px; font-size: 14px; color: var(--navy); }
+
+/* ---------- /timeline lead magnet (task 14) ---------- */
+.timeline-page { padding-top: 56px; }
+.timeline-card { padding: 28px 22px; }
+@media (min-width: 768px) { .timeline-card { padding: 40px; } }
+.pdf-preview { background: var(--navy); color: var(--cream); border-radius: 14px; padding: 22px; display: grid; gap: 10px; margin-bottom: 20px; }
+.pdf-preview span { justify-self: start; background: var(--sage); color: var(--navy); font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; padding: 4px 10px; border-radius: 999px; }
+.pdf-preview strong { font-family: var(--display); font-weight: 400; font-size: 22px; line-height: 1.2; }
+.pdf-preview i { display: block; height: 10px; border-radius: 4px; background: rgba(247,244,238,.18); }
+.pdf-preview i:nth-of-type(2) { width: 80%; } .pdf-preview i:nth-of-type(3) { width: 60%; }
+.timeline-note { font-size: 15px; margin-bottom: 16px; }
+.timeline-form input, .timeline-form select { background: var(--mist); border: 1.5px solid var(--navy-line); }
+.timeline-done { display: grid; gap: 16px; justify-items: start; }
+.timeline-promo { display: grid !important; gap: 8px; margin-bottom: 20px; }
+@media (min-width: 900px) { .timeline-promo { grid-template-columns: auto 1fr auto; align-items: center; gap: 24px; } .timeline-promo .eyebrow { margin: 0; } }
+.timeline-promo strong { font-family: var(--display); font-weight: 400; font-size: 20px; color: var(--navy); line-height: 1.3; }

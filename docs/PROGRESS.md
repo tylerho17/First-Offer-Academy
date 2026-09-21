@@ -29,7 +29,7 @@ Re-read this file after any restart. Continue from the first unchecked task. Nev
 - [x] 11. Syllabus accordion
 - [x] 12. For Parents
 - [x] 13. Student stories
-- [ ] 14. Lead magnet (/timeline)
+- [x] 14. Lead magnet (/timeline)
 - [ ] 15. Referral page
 - [ ] 16. Chinese-language parent page
 

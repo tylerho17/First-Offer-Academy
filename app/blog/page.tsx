@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { articles } from "@/content/articles";
 import ArticleCard from "@/components/ArticleCard";
+import Link from "next/link";
 import NewsletterForm from "@/components/NewsletterForm";
 
 export const metadata: Metadata = {
@@ -27,6 +28,11 @@ export default function BlogPage() {
       </section>
       <section className="section" style={{ paddingTop: 56 }}>
         <div className="wrap">
+          <Link href="/timeline" className="card timeline-promo">
+            <span className="eyebrow">Free download</span>
+            <strong>The Freshman Recruiting Timeline: one printable page, quarter by quarter.</strong>
+            <span className="link-arrow">Get the PDF →</span>
+          </Link>
           <div className="grid grid-3">
             {articles.map((a) => <ArticleCard key={a.slug} a={a} />)}
           </div>
