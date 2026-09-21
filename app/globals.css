@@ -874,3 +874,13 @@ a.topic-pill:hover { background: var(--navy); color: var(--cream); }
 .dont-card li { display: flex; gap: 12px; align-items: center; font-size: 18px; color: var(--navy); font-weight: 600; }
 .dont-card svg { flex: none; width: 22px; height: 22px; color: var(--dusty); }
 .dont-card .is-yes { padding-top: 14px; border-top: 1px solid var(--navy-line); }
+
+/* ---------- Story pages (task 13) ---------- */
+.story-title { font-size: 34px; margin-top: 4px; }
+@media (min-width: 768px) { .story-title { font-size: 48px; } }
+.story-hero-photo { margin-top: 32px; border-radius: var(--radius); width: 100%; height: auto; object-fit: cover; }
+.story-facts { display: grid; gap: 16px; margin: 32px 0 0; }
+@media (min-width: 768px) { .story-facts { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.story-facts dt { font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--dusty); margin-bottom: 8px; }
+.story-facts dd { margin: 0; font-size: 17px; }
+.story-note { margin-top: 24px; font-size: 14px; color: var(--navy); }

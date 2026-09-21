@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { permittedStories } from "@/content/stories";
+import { permittedStories, storyPhoto, storyVideo } from "@/content/stories";
 import { site } from "@/content/site";
 import Carousel from "../Carousel";
 import VideoSlot from "../VideoSlot";
@@ -32,11 +32,11 @@ export default function SuccessStories({
         <Carousel label="Student success stories">
           {list.map((s) => (
             <article className="story-card" key={s.slug}>
-              {s.videoUrl ? (
-                <VideoSlot url={s.videoUrl} label={s.headline} />
-              ) : s.photo ? (
+              {storyVideo(s) ? (
+                <VideoSlot url={storyVideo(s)} label={s.headline} />
+              ) : storyPhoto(s) ? (
                 // eslint-disable-next-line @next/next/no-img-element
-                <img className="story-photo" src={s.photo} alt={s.name} width={640} height={360} loading="lazy" />
+                <img className="story-photo" src={storyPhoto(s)} alt={s.name} width={640} height={360} loading="lazy" />
               ) : null}
               <div className="story-body">
                 <span className="tag">{s.track} · {s.year}</span>
