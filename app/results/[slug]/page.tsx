@@ -36,7 +36,6 @@ export default async function StoryPage({ params }: { params: Promise<{ slug: st
           <span className="eyebrow" style={{ display: "block" }}>{s.track} · {s.year}</span>
           <h1 className="story-title">{s.headline}</h1>
           <p className="article-byline">{s.name} · {s.school}{employer ? ` · ${s.role} at ${employer}` : ` · ${s.role}`}</p>
-          {s.studentTypes.length > 0 && <div className="coach-tags">{s.studentTypes.map((t) => <span key={t}>{t}</span>)}</div>}
 
           {video ? (
             <div style={{ marginTop: 32 }}><VideoSlot url={video} label={s.headline} /></div>

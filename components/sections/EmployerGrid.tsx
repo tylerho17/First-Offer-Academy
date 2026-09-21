@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { employers, MIN_EMPLOYERS_FOR_GRID } from "@/content/employers";
 import { site } from "@/content/site";
 import Ornament from "../Ornament";
@@ -35,10 +34,6 @@ export default function EmployerGrid() {
             : Array.from({ length: 8 }, (_, i) => (
                 <div className="logo-cell is-placeholder" key={i}><span>Employer {i + 1}</span></div>
               ))}
-        </div>
-        <div className="card logo-cta">
-          <p>See stories from students with profiles like yours</p>
-          <Link href="/results/by-type" className="btn btn-secondary">Browse by student type</Link>
         </div>
       </div>
     </section>

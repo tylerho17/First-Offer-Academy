@@ -24,7 +24,6 @@ export const nav: Item[] = [
       { label: "Student testimonials", href: "/results" },
       { label: "Parent testimonials", href: "/results/parents" },
       { label: "For parents", href: "/parents", note: "Reports, payment, what we promise" },
-      { label: "Case studies by student type", href: "/results/by-type", note: "Community college, no club, and more" },
       { label: "Share your story", href: "/share-your-story", note: "For current students and alumni" },
       // A review-platform link appears only once real reviews exist.
       ...(site.reviewsUrl ? [{ label: "Reviews", href: site.reviewsUrl }] : []),

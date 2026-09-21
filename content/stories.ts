@@ -5,24 +5,12 @@
 // mediaPermission: true.
 // Seeded with zero stories on purpose. Add real ones as students agree.
 
-export const studentTypes = [
-  "Community college",
-  "No club",
-  "First-generation",
-  "Transfer",
-  "Freshman",
-  "Sophomore",
-] as const;
-
-export type StudentType = (typeof studentTypes)[number];
-
 export type Story = {
   slug: string; // /results/<slug>
   name: string; // first name + last initial: "Jamie L."
   school: string;
   year: string; // "Freshman year"
   track: "Finance" | "Consulting" | "Marketing" | "Tech";
-  studentTypes: StudentType[];
   headline: string; // "How Jamie landed a marketing internship as a freshman"
   role: string; // "Marketing intern"
   employer?: string;
