@@ -45,6 +45,7 @@ export default function Footer() {
               <li><a href={site.calendlyUrl} target="_blank" rel="noopener noreferrer">Book a parent call</a></li>
               <li><Link href="/refer">Refer a student</Link></li>
               <li>Irvine, California</li>
+              {site.zhReviewed && <li><Link href="/zh" lang="zh-Hans">中文（家长）</Link></li>}
             </ul>
           </div>
         </div>

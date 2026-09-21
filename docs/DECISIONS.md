@@ -51,3 +51,4 @@ Ambiguous calls made during the autonomous build, and why.
 - **Task 14:** If `/api/subscribe` isn't connected (503/404), /timeline still shows the download link with a note that nothing was saved, rather than blocking the download. Once Supabase is connected, the email is captured first.
 - **Task 14:** The hero "Freshman timeline" pill now points to /timeline ("Free timeline PDF"); the article is still linked from the Playbook.
 - **Task 15:** /refer requires a checkbox confirming the person being referred knows their contact is being shared (so the first outreach isn't unsolicited). Linked from the footer Contact column.
+- **Task 16:** Besides the file-top banner, /zh shows a visible bilingual draft notice while `zhReviewed` is false, since the page is reachable by direct URL. The CTA notes the call is in English (true today; edit if Tyler offers Mandarin/Vietnamese calls). Chinese text uses system CJK fonts (Young Serif has no CJK glyphs).

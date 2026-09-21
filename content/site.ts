@@ -60,6 +60,9 @@ export const site = {
   // TODO(Tyler): referral reward, e.g. "$250 off tuition for you and your
   // friend". Empty = /refer doesn't mention a reward at all.
   referralReward: "",
+  // /zh (Mandarin parent page) stays noindex, out of the nav, and out of the
+  // sitemap until a native speaker has reviewed content/zh.ts.
+  zhReviewed: false,
   // Link to a public review platform (Google, etc.). Stays hidden in the
   // header until real reviews exist.
   reviewsUrl: "",

@@ -1,5 +1,6 @@
 import { readdirSync, statSync } from "node:fs";
 import path from "node:path";
+import { site } from "@/content/site";
 
 // Every static page route, found by scanning app/ for page.tsx files.
 // Dynamic segments ([slug]), route groups, and private routes are skipped;
@@ -7,7 +8,7 @@ import path from "node:path";
 
 // Never listed in the sitemap: admin, payment result pages, and anything
 // kept out of search on purpose.
-export const PRIVATE_ROUTES = ["/admin", "/deposit", "/zh"];
+export const PRIVATE_ROUTES = ["/admin", "/deposit", ...(site.zhReviewed ? [] : ["/zh"])];
 
 export function staticRoutes(dir = path.join(process.cwd(), "app"), base = ""): string[] {
   const out: string[] = [];

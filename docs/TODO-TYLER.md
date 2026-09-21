@@ -3,6 +3,7 @@
 Things that need your real input. Each line names the file to edit.
 
 ## Must do before parents see it
+- **/zh Mandarin parent page** (`content/zh.ts`) is machine-drafted. Have a native speaker review it, then set `zhReviewed: true` in `content/site.ts`. That removes noindex, adds it to the sitemap, and adds a footer link. Until then it is reachable only by direct URL and shows a draft notice.
 - **Confirm the default policies drafted on /refunds** (`content/legal/refunds.ts`): missed payments (email first; sessions may be paused if unresolved), full refund if we cancel the cohort or change the start date or format before it starts, and response times (2 business days to confirm a refund request).
 - **Refund terms (required before taking deposits):** `content/site.ts` → `depositRefundDeadline`, `withdrawalPolicy`, and optionally `refundTerms`. Until they're set, /refunds, /pricing, and the FAQ say terms will be published before deposits open.
 - **Legal business entity name** → `content/site.ts` `legalEntityName` (shows in the privacy policy and terms).

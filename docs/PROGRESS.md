@@ -31,7 +31,7 @@ Re-read this file after any restart. Continue from the first unchecked task. Nev
 - [x] 13. Student stories
 - [x] 14. Lead magnet (/timeline)
 - [x] 15. Referral page
-- [ ] 16. Chinese-language parent page
+- [x] 16. Chinese-language parent page
 
 ## Phase D — Backend
 - [ ] 17. Supabase-backed forms
