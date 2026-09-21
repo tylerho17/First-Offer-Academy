@@ -867,3 +867,10 @@ a.topic-pill:hover { background: var(--navy); color: var(--cream); }
 .syllabus-phase-head h3 { font-size: 26px; margin-top: 6px; }
 .syllabus-levels { font-size: 15px; margin-top: 8px; }
 .syllabus-sub { color: var(--dusty); font-family: var(--sans); font-size: 15px; font-weight: 600; }
+
+/* ---------- /parents (task 12) ---------- */
+.band-link { color: var(--cream); font-weight: 600; text-decoration: underline; }
+.dont-card { list-style: none; margin: 0; display: grid; gap: 14px; align-self: center; }
+.dont-card li { display: flex; gap: 12px; align-items: center; font-size: 18px; color: var(--navy); font-weight: 600; }
+.dont-card svg { flex: none; width: 22px; height: 22px; color: var(--dusty); }
+.dont-card .is-yes { padding-top: 14px; border-top: 1px solid var(--navy-line); }

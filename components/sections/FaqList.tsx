@@ -2,15 +2,15 @@ import Link from "next/link";
 import { faqs } from "@/content/faq";
 import { Plus } from "../Icons";
 
-export default function FaqList({ all = false }: { all?: boolean }) {
-  const list = all ? faqs : faqs.filter((f) => f.home);
+export default function FaqList({ all = false, parent = false, title = "Questions parents ask" }: { all?: boolean; parent?: boolean; title?: string }) {
+  const list = all ? faqs : parent ? faqs.filter((f) => f.parent) : faqs.filter((f) => f.home);
   return (
     <section className="section" id="faq" style={all ? { paddingTop: 24 } : undefined}>
       <div className="wrap">
         {!all && (
           <div className="section-head">
             <span className="eyebrow">FAQ</span>
-            <h2>Questions parents ask</h2>
+            <h2>{title}</h2>
           </div>
         )}
         <div className="faq-list">

@@ -20,6 +20,7 @@ export default function Footer() {
               <li><Link href="/">Home</Link></li>
               <li><Link href="/about">About</Link></li>
               <li><Link href="/results">Testimonials</Link></li>
+              <li><Link href="/parents">For parents</Link></li>
               <li><Link href="/blog">The Playbook</Link></li>
               <li><Link href="/events">Free events</Link></li>
               <li><Link href="/workshops">School workshops</Link></li>

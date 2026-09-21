@@ -27,7 +27,7 @@ Re-read this file after any restart. Continue from the first unchecked task. Nev
 ## Phase C — Growth and depth
 - [x] 10. SEO and share previews
 - [x] 11. Syllabus accordion
-- [ ] 12. For Parents
+- [x] 12. For Parents
 - [ ] 13. Student stories
 - [ ] 14. Lead magnet (/timeline)
 - [ ] 15. Referral page
