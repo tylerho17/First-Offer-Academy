@@ -39,3 +39,4 @@ Ambiguous calls made during the autonomous build, and why.
 - **Task 8:** The story form also asks for an email (not in the spec's field list) so Tyler can confirm details and permission before publishing anything. The three publish permissions are separate, unchecked, optional checkboxes.
 - **Task 8:** The apply form's optional consent covers both email and text updates in one line, as the plan asked for "an optional SMS/email consent line".
 - **Task 8:** The testimonial release template includes an FTC endorsement-disclosure note in case any discount or payment is ever given for a testimonial.
+- **Task 9:** Pre-existing sage *text* (footer column headings, eyebrows on navy bands, event-date month, plan-featured eyebrow) conflicts with CLAUDE.md's "never sage text" rule. Queued for the task 23 contrast/brand pass rather than changed mid-phase.

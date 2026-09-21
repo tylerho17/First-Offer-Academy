@@ -47,7 +47,14 @@ export default function Footer() {
         </div>
         <div className="footer-bottom">
           <span>© 2026 First Offer Academy · All rights reserved</span>
-          <span><Link href="/privacy">Privacy</Link> · <Link href="/terms">Terms</Link></span>
+          <nav aria-label="Legal" className="footer-legal">
+            <Link href="/privacy">Privacy</Link>
+            <Link href="/terms">Terms</Link>
+            <Link href="/refunds">Refunds</Link>
+            <Link href="/accessibility">Accessibility</Link>
+            <Link href="/code-of-conduct">Code of Conduct</Link>
+          </nav>
+          <p className="footer-disclaimer">First Offer Academy is not affiliated with any employer, university, or student organization mentioned by students.</p>
         </div>
       </div>
       <aside className="footer-nl" aria-labelledby="nl-title">

@@ -22,7 +22,7 @@ Re-read this file after any restart. Continue from the first unchecked task. Nev
 - [x] 6. Refund & Payment Policy
 - [x] 7. Accessibility, cookie notice, code of conduct
 - [x] 8. Consent and forms
-- [ ] 9. Footer legal row
+- [x] 9. Footer legal row
 
 ## Phase C — Growth and depth
 - [ ] 10. SEO and share previews
