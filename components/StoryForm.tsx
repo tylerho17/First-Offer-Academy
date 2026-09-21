@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { site } from "@/content/site";
 import { postForm } from "@/lib/submit";
+import Honeypot from "./Honeypot";
 
 const tracks = ["Finance", "Consulting", "Marketing", "Tech"];
 
@@ -36,6 +37,7 @@ export default function StoryForm() {
 
   return (
     <form className="form" onSubmit={onSubmit}>
+      <Honeypot />
       <div className="field"><label htmlFor="s-name">Your name</label><input id="s-name" name="name" required autoComplete="name" /></div>
       <div className="field"><label htmlFor="s-email">Email <span className="hint">(so we can confirm with you)</span></label><input id="s-email" name="email" type="email" required autoComplete="email" /></div>
       <div className="field"><label htmlFor="s-school">School</label><input id="s-school" name="school" required /></div>

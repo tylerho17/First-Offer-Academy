@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { leadMagnet } from "@/content/leadMagnet";
 import { postForm } from "@/lib/submit";
+import Honeypot from "./Honeypot";
 
 export default function TimelineForm() {
   const [status, setStatus] = useState<"idle" | "sending" | "done" | "error" | "unconnected">("idle");
@@ -33,6 +34,7 @@ export default function TimelineForm() {
 
   return (
     <form className="nl-form timeline-form" onSubmit={onSubmit}>
+      <Honeypot />
       <div className="nl-row">
         <label className="sr-only" htmlFor="tl-first">First name</label>
         <input id="tl-first" name="firstName" placeholder="First name" autoComplete="given-name" />

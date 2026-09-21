@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { site } from "@/content/site";
 import { postForm } from "@/lib/submit";
+import Honeypot from "./Honeypot";
 
 export default function ContactForm() {
   const [status, setStatus] = useState<"idle" | "sending" | "error" | "unconnected">("idle");
@@ -28,6 +29,7 @@ export default function ContactForm() {
 
   return (
     <form className="form contact-form" onSubmit={onSubmit}>
+      <Honeypot />
       <div className="field"><label htmlFor="c-first">First name <span aria-hidden="true">*</span></label><input id="c-first" name="firstName" required autoComplete="given-name" /></div>
       <div className="field"><label htmlFor="c-last">Last name</label><input id="c-last" name="lastName" autoComplete="family-name" /></div>
       <div className="field"><label htmlFor="c-email">Email <span aria-hidden="true">*</span></label><input id="c-email" name="email" type="email" required autoComplete="email" /></div>

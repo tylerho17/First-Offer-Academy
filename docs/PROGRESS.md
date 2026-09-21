@@ -34,7 +34,7 @@ Re-read this file after any restart. Continue from the first unchecked task. Nev
 - [x] 16. Chinese-language parent page
 
 ## Phase D — Backend
-- [ ] 17. Supabase-backed forms
+- [x] 17. Supabase-backed forms
 - [ ] 18. Email confirmations
 - [ ] 19. Stripe deposit
 - [ ] 20. Admin view

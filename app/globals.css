@@ -361,7 +361,7 @@ p { margin: 0; }
 @media (min-width: 768px) { .form-card { padding: 48px; } }
 .form-status { grid-column: 1 / -1; padding: 16px 18px; border-radius: 12px; background: var(--mist); color: var(--navy); font-size: 16px; }
 .form-group-title { grid-column: 1 / -1; font-family: var(--display); font-size: 22px; color: var(--navy); margin-top: 12px; padding-top: 20px; border-top: 1px solid var(--navy-line); }
-.form-group-title:first-child { margin-top: 0; padding-top: 0; border-top: 0; }
+.form-group-title:first-child, .hp + .form-group-title { margin-top: 0; padding-top: 0; border-top: 0; }
 
 .two-col { display: grid; gap: 40px; }
 @media (min-width: 900px) { .two-col { grid-template-columns: 1fr 1fr; gap: 64px; } }
@@ -905,3 +905,4 @@ a.topic-pill:hover { background: var(--navy); color: var(--cream); }
 .zh .zh-h2 { font-size: 26px; margin-bottom: 8px; }
 .zh h1 { line-height: 1.25; }
 .zh .why-text { margin-top: 12px; }
+.hp { position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden; }

@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { useState } from "react";
 import { site } from "@/content/site";
+import { postForm } from "@/lib/submit";
+import Honeypot from "./Honeypot";
 
 const tracks = ["Finance", "Consulting", "Marketing", "Tech"];
 
@@ -20,29 +22,19 @@ export default function ApplyForm() {
       updatesConsent: data.get("updatesConsent") === "on",
     };
 
-    if (!site.applyEndpoint) {
-      console.info("[apply] endpoint not set. Payload:", payload);
-      setStatus("unconnected");
+    setStatus("sending");
+    const result = await postForm("/api/apply", payload);
+    if (result !== "ok") {
+      setStatus(result);
       return;
     }
-
-    setStatus("sending");
-    try {
-      const res = await fetch(site.applyEndpoint, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      });
-      if (!res.ok) throw new Error(String(res.status));
-      setStatus("done");
-      window.location.href = site.calendlyUrl;
-    } catch {
-      setStatus("error");
-    }
+    setStatus("done");
+    window.location.href = site.calendlyUrl;
   }
 
   return (
     <form className="form" onSubmit={onSubmit}>
+      <Honeypot />
       <h2 className="form-group-title">About the student</h2>
       <div className="field"><label htmlFor="name">Full name</label><input id="name" name="name" required autoComplete="name" /></div>
       <div className="field"><label htmlFor="email">Email</label><input id="email" name="email" type="email" required autoComplete="email" /></div>

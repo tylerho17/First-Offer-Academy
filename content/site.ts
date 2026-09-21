@@ -24,9 +24,6 @@ export const site = {
   calendlyUrl: "https://calendly.com/ctylerho714",
   // TODO: Stripe payment link for the $1,000 refundable deposit.
   depositUrl: "",
-  // TODO: where applications go (Supabase edge function, Tally, Formspree...).
-  // Empty = the form shows a "not connected yet" notice instead of submitting.
-  applyEndpoint: "",
   // TODO(Tyler): legal business entity name (e.g. "First Offer Academy LLC").
   // Empty = the privacy policy and terms say "First Offer Academy" only.
   legalEntityName: "",
@@ -66,8 +63,6 @@ export const site = {
   // Link to a public review platform (Google, etc.). Stays hidden in the
   // header until real reviews exist.
   reviewsUrl: "",
-  // TODO: newsletter signup endpoint (e.g. beehiiv). Empty = friendly "not connected" notice.
-  newsletterEndpoint: "",
 
 
   // TODO: fill in. Empty strings render as "To be announced".

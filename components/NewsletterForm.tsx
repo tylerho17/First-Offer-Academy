@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { site } from "@/content/site";
+import { postForm } from "@/lib/submit";
+import Honeypot from "./Honeypot";
 
 export default function NewsletterForm() {
   const [status, setStatus] = useState<"idle" | "sending" | "done" | "error" | "unconnected">("idle");
@@ -10,29 +11,16 @@ export default function NewsletterForm() {
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const data = Object.fromEntries(new FormData(e.currentTarget).entries());
-    if (!site.newsletterEndpoint) {
-      console.info("[newsletter] endpoint not set. Payload:", data);
-      setStatus("unconnected");
-      return;
-    }
     setStatus("sending");
-    try {
-      const res = await fetch(site.newsletterEndpoint, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
-      if (!res.ok) throw new Error(String(res.status));
-      setStatus("done");
-    } catch {
-      setStatus("error");
-    }
+    const result = await postForm("/api/subscribe", { ...data, source: "newsletter" });
+    setStatus(result === "ok" ? "done" : result);
   }
 
   if (status === "done") return <p className="nl-status">You&apos;re in. Look for the first issue in your inbox.</p>;
 
   return (
     <form className="nl-form" onSubmit={onSubmit}>
+      <Honeypot />
       <div className="nl-row">
         <label className="sr-only" htmlFor="nl-first">First name</label>
         <input id="nl-first" name="firstName" placeholder="First name" autoComplete="given-name" />

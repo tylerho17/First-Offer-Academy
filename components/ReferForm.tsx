@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { site } from "@/content/site";
 import { postForm } from "@/lib/submit";
+import Honeypot from "./Honeypot";
 
 export default function ReferForm() {
   const [status, setStatus] = useState<"idle" | "sending" | "done" | "error" | "unconnected">("idle");
@@ -21,6 +22,7 @@ export default function ReferForm() {
 
   return (
     <form className="form" onSubmit={onSubmit}>
+      <Honeypot />
       <h2 className="form-group-title">About you</h2>
       <div className="field"><label htmlFor="r-name">Your name</label><input id="r-name" name="referrerName" required autoComplete="name" /></div>
       <div className="field"><label htmlFor="r-email">Your email</label><input id="r-email" name="referrerEmail" type="email" required autoComplete="email" /></div>
