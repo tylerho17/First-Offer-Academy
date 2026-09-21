@@ -17,7 +17,10 @@ export default function FaqList({ all = false }: { all?: boolean }) {
           {list.map((f) => (
             <details className="faq-item" key={f.q}>
               <summary>{f.q}<span className="plus" aria-hidden="true"><Plus /></span></summary>
-              <p className="answer">{f.a}</p>
+              <div className="answer">
+                <p>{f.a}</p>
+                {f.link && <p style={{ marginTop: 10 }}><Link href={f.link.href}>{f.link.label} →</Link></p>}
+              </div>
             </details>
           ))}
         </div>

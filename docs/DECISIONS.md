@@ -33,3 +33,5 @@ Ambiguous calls made during the autonomous build, and why.
 - **Task 4:** Listed Resend as the email provider (task 18 uses it) and YouTube/Vimeo for embedded videos. The newsletter tool isn't chosen yet; add it to `site.serviceProviders` when it is.
 - **Task 4:** Restored bullet markers on legal, article, and prose lists; Tailwind's preflight had silently removed them.
 - **Task 5:** Terms use courts in Orange County for disputes, with no arbitration clause. Adding arbitration is a legal call for the attorney, not a default to invent.
+- **Task 6:** /refunds never states a refund deadline or withdrawal refund amount it doesn't have. Empty fields render as "Exact terms will be published here before deposits open". The cancellation-by-us full refund and the missed-payment process are drafted as consumer-friendly defaults and flagged for Tyler to confirm.
+- **Task 6:** FAQ entries can now carry an optional `link`; the deposit and payment-plan answers link to /refunds.

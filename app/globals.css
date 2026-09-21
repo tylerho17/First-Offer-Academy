@@ -844,3 +844,6 @@ a.topic-pill:hover { background: var(--navy); color: var(--cream); }
 .legal-body li::marker, .article-body li::marker, .prose li::marker { color: var(--dusty); }
 .legal-body li { margin-top: 8px; }
 .legal-contact { margin-top: 48px !important; padding-top: 20px; border-top: 1px solid var(--navy-line); }
+.price-policy { display: inline-block; margin-top: 14px; font-size: 15px; font-weight: 600; color: var(--navy); text-decoration: underline; }
+.apply-note { margin-top: 20px; font-size: 15px; text-align: center; }
+.faq-item .answer p + p { margin-top: 10px; }

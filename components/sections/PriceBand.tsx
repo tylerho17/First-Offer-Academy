@@ -26,6 +26,7 @@ export default function PriceBand() {
           <span className="amount">{c.price}</span>
           <span className="plan">or {c.plan}</span>
           <span className="seats">{c.seats} seats. A {c.deposit} refundable deposit holds your spot.</span>
+          <Link href="/refunds" className="price-policy">Refund &amp; payment policy</Link>
         </div>
       </div>
     </section>

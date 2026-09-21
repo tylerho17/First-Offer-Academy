@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import ApplyForm from "@/components/ApplyForm";
+import Link from "next/link";
 import { site } from "@/content/site";
 
 export const metadata: Metadata = { title: "Apply" };
@@ -18,6 +19,9 @@ export default function ApplyPage() {
           <div className="card form-card">
             <ApplyForm />
           </div>
+          <p className="apply-note">
+            Questions about cost? See pricing and the <Link href="/refunds">Refund &amp; Payment Policy</Link>.
+          </p>
         </div>
       </section>
     </>

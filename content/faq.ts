@@ -2,7 +2,7 @@ import { site } from "./site";
 
 const tba = (v: string, fallback = "To be announced.") => (v ? v : fallback);
 
-export type Faq = { q: string; a: string; home?: boolean };
+export type Faq = { q: string; a: string; home?: boolean; link?: { label: string; href: string } };
 
 export const faqs: Faq[] = [
   {
@@ -36,6 +36,7 @@ export const faqs: Faq[] = [
     home: true,
     q: "Is the deposit refundable?",
     a: `Yes. A ${site.cohort.deposit} refundable deposit holds a seat. ${tba(site.refundTerms, "Exact refund dates will be published before deposits open.")}`,
+    link: { label: "Read the Refund & Payment Policy", href: "/refunds" },
   },
   {
     q: "Are community college students welcome?",
@@ -56,6 +57,7 @@ export const faqs: Faq[] = [
   {
     q: "How does the payment plan work?",
     a: `The program is ${site.cohort.price}, or ${site.cohort.plan}. A ${site.cohort.deposit} refundable deposit holds a seat.`,
+    link: { label: "Read the Refund & Payment Policy", href: "/refunds" },
   },
   {
     q: "What do parents see during the program?",

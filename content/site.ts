@@ -69,4 +69,8 @@ export const site = {
   weeklyHours: "", // e.g. "6–8"
   applicationDeadline: "",
   refundTerms: "", // e.g. "Fully refundable until December 15, 2026."
+  // TODO(Tyler): exact refund terms. Empty = /refunds says they'll be
+  // published before deposits open. Never fill these with guesses.
+  depositRefundDeadline: "", // e.g. "December 15, 2026"
+  withdrawalPolicy: "", // e.g. "Withdraw before Week 3 for a prorated refund of unused weeks. No refunds after Week 3."
 };

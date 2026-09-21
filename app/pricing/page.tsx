@@ -87,6 +87,7 @@ export default function PricingPage() {
               <h3>Hold a seat</h3>
               <p className="pay-amt">{c.deposit} deposit</p>
               <p>{site.refundTerms || "Refundable. Exact refund dates are published before deposits open."}</p>
+              <p style={{ marginTop: 12 }}><Link href="/refunds">Refund &amp; payment policy →</Link></p>
             </div>
           </div>
         </div>
