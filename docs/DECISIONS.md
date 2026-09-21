@@ -14,3 +14,5 @@ Ambiguous calls made during the autonomous build, and why.
 - **A2.2:** "By Week 12" items are framed as "What the program requires", with a note that they describe the work, not an outcome. "100+ emails" and "5+ calls" come from Standard levels 3–4; "graded mocks" from level 5.
 - **A2.2:** Module copy is built only from `content/program.ts`, `content/tracks.ts`, the FAQ, and the three Playbook articles. The positioning lines are new phrasing but make no claims.
 - **A2.2:** "Two missed weeks in a row triggers a student + parent call" comes from the build plan's A2.3 spec; Tyler should confirm it's the actual policy (logged in TODO-TYLER).
+- **A2.3:** /our-promise copy lives in `content/promise.ts`. The "What we don't promise" block sits on a navy band so it reads as a serious, deliberate statement, not fine print.
+- **A2.3:** Added a global `:where(p, li, dd, td) a { text-decoration: underline }` because Tailwind's preflight removes link underlines and the brand guide requires underlined text links. `:where()` has zero specificity, so nav, button, and card links keep their own styles.

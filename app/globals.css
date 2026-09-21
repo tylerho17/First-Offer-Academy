@@ -42,6 +42,8 @@ body {
 * , *::before, *::after { box-sizing: border-box; }
 img { max-width: 100%; display: block; }
 a { color: var(--dusty); text-underline-offset: 3px; }
+/* Text links in running copy are underlined (brand guide). :where() keeps this below any class rule. */
+:where(p, li, dd, td) a { text-decoration: underline; }
 :focus-visible { outline: 3px solid var(--dusty); outline-offset: 3px; border-radius: 6px; }
 ::selection { background: var(--sage); color: var(--navy); }
 
@@ -765,3 +767,11 @@ a.topic-pill:hover { background: var(--navy); color: var(--cream); }
 .proof-note { font-size: 13px; color: var(--dusty); margin-top: 8px; }
 .promise-call { text-align: center; }
 @media (max-width: 479px) { .promise-call .btn { width: 100%; white-space: normal; text-align: center; padding: 14px 20px; } }
+
+/* ---------- /our-promise (A2.3) ---------- */
+.promise-grid { list-style: none; padding: 0; margin: 0; }
+.dont-list { list-style: none; padding: 0; margin: 24px 0 0; display: grid; gap: 14px; }
+.dont-list li { display: flex; gap: 12px; align-items: flex-start; font-size: 19px; color: var(--cream); }
+.dont-list svg { flex: none; width: 22px; height: 22px; color: var(--sage); margin-top: 4px; }
+.why-title { font-size: 22px; }
+.why-text { margin-top: 12px; color: var(--cream); font-size: 18px; }
