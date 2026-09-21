@@ -6,7 +6,7 @@ This is the source of truth for the program, the week pages, and every guide. Ex
 What we sell is **execution and accountability**, from someone who just went through the two most recent recruiting cycles himself. The tactics are free (we give them away in the Playbook). What families pay for is a coach who makes sure the student actually does the work every week, reviews every piece of it, and holds them to a number.
 
 Founder facts (use exactly):
-- Tyler Ho, UC Irvine, Finance & Computer Science.
+- Tyler Ho, Finance & Computer Science.
 - Worked 7+ internships across investment banking, venture, consulting, FP&A, and sales, and landed offers from many more. The exact offer count is TODO (`content/site.ts` → `founder.offerCount`); until it's set, say "and landed offers from many more."
 - Went through the two most recent recruiting cycles himself.
 - Coached 8 first-year students who landed internships in their first year.
@@ -65,7 +65,7 @@ Founder facts (use exactly):
 
 ### Week 1 — The Game
 - **Objective:** kill the idea that recruiting rewards intelligence. It rewards persistence.
-- **Teach:** the 5 things that matter, ranked: networking, resume, enthusiasm, behaviorals, technicals **(Tyler)**. Why clubs matter less than people think. How the freshman/sophomore market actually works: boutiques, middle market, local OC firms, startups, early-insight and diversity programs.
+- **Teach:** the 5 things that matter, ranked: networking, resume, enthusiasm, behaviorals, technicals **(Tyler)**. Why clubs matter less than people think. How the freshman/sophomore market actually works: boutiques, middle market, local firms, startups, early-insight and diversity programs.
 - **Live reps:** each student answers "tell me about yourself" cold, recorded. This is the Week 12 baseline.
 - **Deliverable:** resume v1 · answers to 25 self-questions (raw material for stories) · baseline assessment.
 - **Coach questions:** What would have to be true in 12 weeks for you to call this a win? How many hours a week can you honestly commit? What have you been avoiding?
@@ -78,7 +78,7 @@ Founder facts (use exactly):
 
 ### Week 3 — Target List & the AI Outreach System
 - **Objective:** a working outreach machine and the first 50 sequenced emails out the door.
-- **Teach:** the tiered target list: A (dream firms, for relationships), B (realistic: boutiques, middle market, OC firms, startups), C (safe) **(Tyler)**. Sourcing contacts with tools like Apollo or RecruitEm. Building the AI email automation: personalization prompts, mail-merge/sequencing, and follow-up steps. The tracker: only track people who reply **(Tyler)**.
+- **Teach:** the tiered target list: A (dream firms, for relationships), B (realistic: boutiques, middle market, local firms, startups), C (safe) **(Tyler)**. Sourcing contacts with tools like Apollo or RecruitEm. Building the AI email automation: personalization prompts, mail-merge/sequencing, and follow-up steps. The tracker: only track people who reply **(Tyler)**.
 - **Live reps:** every student builds their sequence live and sends before leaving.
 - **Deliverable:** automation live · 50 sequenced emails sent → **Level 2**.
 

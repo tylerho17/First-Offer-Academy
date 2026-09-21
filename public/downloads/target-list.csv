@@ -1,7 +1,7 @@
 ﻿Tier (A/B/C),Company,Type,City,Contact name,Title,Email,LinkedIn URL,School / shared background,Personal detail for first line,Source,Date added
-A,EXAMPLE (delete this row) Example Capital Partners,Boutique advisory,"Irvine, CA",Alex Example,Analyst,alex@example.com,linkedin.com/in/example,Same school,Wrote a post on consumer deals,Alumni search,2027-01-12
-B,EXAMPLE (delete this row) Example Growth Co.,Startup,"Costa Mesa, CA",Sam Example,Founder,sam@example.com,linkedin.com/in/example2,Same hometown,Launched a new product in March,Apollo,2027-01-12
-C,EXAMPLE (delete this row) Example Family Office,Local firm,"Newport Beach, CA",Jordan Example,Associate,jordan@example.com,linkedin.com/in/example3,—,Spoke at a campus event,Referral,2027-01-13
+A,EXAMPLE (delete this row) Example Capital Partners,Boutique advisory,"[City, ST]",Alex Example,Analyst,alex@example.com,linkedin.com/in/example,Same school,Wrote a post on consumer deals,Alumni search,2027-01-12
+B,EXAMPLE (delete this row) Example Growth Co.,Startup,Remote,Sam Example,Founder,sam@example.com,linkedin.com/in/example2,Same hometown,Launched a new product in March,Apollo,2027-01-12
+C,EXAMPLE (delete this row) Example Family Office,Local firm,"[City, ST]",Jordan Example,Associate,jordan@example.com,linkedin.com/in/example3,—,Spoke at a campus event,Referral,2027-01-13
 A,,,,,,,,,,,
 A,,,,,,,,,,,
 A,,,,,,,,,,,

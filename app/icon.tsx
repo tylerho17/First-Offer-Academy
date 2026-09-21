@@ -1,8 +1,9 @@
 import { iconImage } from "@/lib/og";
 
-export const size = { width: 64, height: 64 };
+// 32px favicon generated from public/logo.png.
+export const size = { width: 32, height: 32 };
 export const contentType = "image/png";
 
 export default function Icon() {
-  return iconImage(64);
+  return iconImage(32);
 }

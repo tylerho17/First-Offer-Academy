@@ -12,6 +12,7 @@ export default function PriceBand() {
         <div>
           <span className="eyebrow">Tuition</span>
           <h2>{c.name} · {c.start}</h2>
+          <p className="includes-title">{c.price} includes</p>
           <ul className="checks">
             {included.map((i) => (
               <li key={i}><Check />{i}</li>

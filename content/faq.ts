@@ -9,27 +9,27 @@ export const faqs: Faq[] = [
     home: true,
     parent: true,
     q: "My student is a freshman. Isn't this too early?",
-    a: "No. Many internship timelines start sophomore year. Freshman year is when you build the resume, the network, and the stories that get you there.",
+    a: "No. Many internship timelines start sophomore year. Freshman year is when you build the Candidate Brand, the Outreach System, and the Story Bank that get you there.",
   },
   {
     home: true,
     parent: true,
     q: "Why pay when the career center is free?",
-    a: "Use it too. Career centers serve thousands of students. We run your search with you every week: your emails, your calls, your interviews.",
+    a: "Use it too. Career centers serve thousands of students. We run all six parts with your student every week: Candidate Brand, Outreach System, Story Bank, Track Technicals, Interview Reps, and Accountability & Pods.",
   },
   {
     home: true,
     parent: true,
     q: "What if they don't land an internship?",
-    a: "We don't promise offers; nobody honest can. We promise a fully executed search with a documented record of every step, graded against a clear standard.",
+    a: "We don't promise offers; nobody honest can. We promise the six parts, fully run: Candidate Brand, Outreach System, Story Bank, Track Technicals, Interview Reps, and Accountability & Pods, with every email, call, and interview on record.",
   },
   {
     home: true,
     parent: true,
     q: "How much time does it take each week?",
     a: site.weeklyHours
-      ? `Plan on ${site.weeklyHours} hours a week: the session, the 1:1, and outreach.`
-      : "The weekly session is 90 minutes and the 1:1 is 60 minutes. Outreach time on top of that will be confirmed before the cohort starts.",
+      ? `Plan on ${site.weeklyHours} hours a week: the session, the Interview Reps 1:1, and the Outreach System.`
+      : "The weekly session is 90 minutes and the Interview Reps 1:1 is 60 minutes. Outreach System time on top of that will be confirmed before the cohort starts.",
   },
   {
     home: true,
@@ -45,11 +45,11 @@ export const faqs: Faq[] = [
   },
   {
     q: "Are community college students welcome?",
-    a: "Yes. The program is built for first- and second-year students at any Orange County college, including community colleges.",
+    a: "Yes. The program is built for college freshmen and sophomores at any school, including community colleges.",
   },
   {
     q: "Which majors is this for?",
-    a: "Any major. Students pick one of four tracks: Finance, Consulting, Marketing, or Tech (software, data, product).",
+    a: "Any major. In Track Technicals, students pick one of four tracks: Finance, Consulting, Marketing, or Tech (software, data, product).",
   },
   {
     q: "Does my student need to be in a club?",
@@ -58,7 +58,7 @@ export const faqs: Faq[] = [
   {
     parent: true,
     q: "Who coaches the program?",
-    a: "Tyler Ho, the founder, leads the founding cohort. Guest professionals join for mock interviews.",
+    a: "Tyler Ho, the founder, leads the founding cohort. Guest professionals run the last graded mocks in Interview Reps.",
   },
   {
     parent: true,
@@ -69,10 +69,10 @@ export const faqs: Faq[] = [
   {
     parent: true,
     q: "What do parents see during the program?",
-    a: "A one-page progress report every two weeks, and a Week 12 family meeting where your student presents their results.",
+    a: "Through Accountability & Pods: a one-page progress report every two weeks, and a Week 12 family meeting where your student presents their results.",
   },
   {
     q: "What happens after Week 12?",
-    a: "Students leave with a documented search, a network, and interview practice they keep using. Details on continued support will be shared with the cohort.",
+    a: "Students leave with the six parts: Candidate Brand, Outreach System, Story Bank, Track Technicals, Interview Reps, and Accountability & Pods, and keep using them. Details on continued support will be shared with the cohort.",
   },
 ];

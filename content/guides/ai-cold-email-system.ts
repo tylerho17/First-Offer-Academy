@@ -46,7 +46,7 @@ export const guide: Guide = {
     p("Your first line does one job: prove that this email was written for this person. It uses the Two C's from the cold email guide: a genuine compliment about something specific they did, and a real connection you share. You won't always have both. When you only have one, make it very specific."),
     table("First lines, weak vs. strong (made-up examples)", ["Weak", "Strong"], [
       ["I really admire your career.", "Your move from audit into deal advisory after two years is exactly the path I'm trying to understand."],
-      ["I saw you work at [firm].", "I saw you went from our school to [firm]'s Irvine office. I'm a freshman in the same major."],
+      ["I saw you work at [firm].", "I saw you went from our school to [firm]'s local office. I'm a freshman in the same major."],
       ["Your company is doing great things.", "I read your post on pricing for early-stage products, especially the point about testing with ten customers first."],
       ["I'm interested in marketing.", "The campaign your team ran for [local brand] last spring is the reason I started paying attention to agency work."],
     ]),

@@ -13,7 +13,7 @@ import { chromium } from "@playwright/test";
 
 const PORT = 3123;
 const BASE = `http://localhost:${PORT}`;
-const WIDTHS = [375, 768, 1440];
+const WIDTHS = [375, 768, 1280, 1440];
 const OUT = "screenshots";
 
 const only = process.argv.find((a) => a.startsWith("--only="))?.slice(7).split(",");

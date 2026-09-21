@@ -12,7 +12,7 @@ export const terms: LegalDoc = {
   intro: `These terms apply to the ${site.name} website and program. By using the website, applying, or enrolling, you agree to them. If a student is under 18, a parent or guardian must agree on their behalf.`,
   body: [
     { type: "h2", text: "Who we are" },
-    { type: "p", text: `${who} is based in ${site.city}. "We", "us", and "our" mean ${site.name}. "Student" means the person enrolled in the program. "You" means the student and, where one is involved, the parent or guardian who enrolls or pays for them.` },
+    { type: "p", text: `${who} runs a 12-week internship recruiting program for college students. "We", "us", and "our" mean ${site.name}. "Student" means the person enrolled in the program. "You" means the student and, where one is involved, the parent or guardian who enrolls or pays for them.` },
 
     { type: "h2", text: "Eligibility" },
     { type: "ul", items: [
@@ -64,7 +64,7 @@ export const terms: LegalDoc = {
     { type: "p", text: "To the extent the law allows, we aren't liable for indirect, incidental, or consequential losses, including lost job opportunities or lost earnings. Our total liability for any claim relating to the program is limited to the amount you paid us for it. Nothing in these terms limits liability that can't be limited under California law." },
 
     { type: "h2", text: "Governing law and disputes" },
-    { type: "p", text: `These terms are governed by the laws of the State of California. If there's a problem, please email ${legalContact} first; most issues can be resolved with a conversation. Any legal dispute that can't be resolved informally will be handled in the state or federal courts located in Orange County, California.` },
+    { type: "p", text: `These terms are governed by the laws of the State of California. If there's a problem, please email ${legalContact} first; most issues can be resolved with a conversation. Any legal dispute that can't be resolved informally will be handled in the state or federal courts in California.` },
 
     { type: "h2", text: "Changes to these terms" },
     { type: "p", text: "We may update these terms. We'll change the \"Last updated\" date at the top of this page, and we'll email enrolled students and parents about material changes. Changes won't apply retroactively to a cohort already in progress unless you agree." },

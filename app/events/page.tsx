@@ -5,7 +5,7 @@ import FinalCta from "@/components/sections/FinalCta";
 
 export const metadata: Metadata = {
   title: "Free events",
-  description: "Free parent info sessions and student recruiting workshops from First Offer Academy in Orange County.",
+  description: "Free parent info sessions and student recruiting workshops from First Offer Academy.",
 };
 
 export default function EventsPage() {

@@ -1,4 +1,4 @@
-import { site } from "./site";
+import { modules } from "./programOverview";
 
 // Program facts. Source of truth: docs/CURRICULUM-SOURCE.md.
 
@@ -6,28 +6,38 @@ import { site } from "./site";
 export const positioning =
   "Execution and accountability, from someone who just went through the two most recent recruiting cycles.";
 
+// The 12 weeks, phase by phase, named by which of the six parts each one
+// builds (content/programOverview.ts → modules). Accountability & Pods runs
+// the whole way through.
 export const phases = [
   {
     weeks: "Weeks 1–3",
-    name: "Foundation",
-    body: "A resume that passes our rubric, a recorded 60-second intro, a target list of 50 companies with named contacts, an AI-assisted email system, and the first 50 sequenced emails sent.",
+    name: "Candidate Brand + Outreach System",
+    body: "Candidate Brand: an honest gap check, a resume that passes our rubric, and a recorded 60-second intro. Outreach System: a target list of 50 with named contacts and the first AI-assisted email sequences.",
   },
   {
     weeks: "Weeks 4–8",
-    name: "Outreach & network",
-    body: "50 new sequenced emails a week, calls with working professionals, referrals and intros earned, 8 behavioral stories recorded, and the first externship completed.",
+    name: "Story Bank + Interview Reps",
+    body: "Story Bank: 8 stories, mapped to every common question and edited line by line. Interview Reps: live reps in every session and the weekly 60-minute 1:1. The Outreach System keeps running at 50 emails a week.",
   },
   {
     weeks: "Weeks 9–10",
-    name: "Your track",
-    body: "Split into Finance, Consulting, Marketing, or Tech for track-specific technical prep and the first graded mock interview.",
+    name: "Track Technicals",
+    body: "The cohort splits into Finance, Consulting, Marketing, or Tech. Concepts before memorization, practice with answer walk-throughs. Interview Reps adds the first graded mock in Week 10.",
   },
   {
     weeks: "Weeks 11–12",
-    name: "Interview-ready",
-    body: "500+ emails sent, graded mock interviews (the last run by strangers), a family results meeting, and a 6-month game plan.",
+    name: "Interview Reps",
+    body: "The final graded mock in Week 11, run by a stranger. Accountability & Pods closes with the Week 12 family meeting.",
   },
 ];
+
+// Runs through all 12 weeks.
+export const throughout = {
+  weeks: "Weeks 1–12",
+  name: "Accountability & Pods",
+  body: "A pod of three, weekly minimums and a Sunday scoreboard, and biweekly parent reports.",
+};
 
 export { tracks } from "./tracks";
 
@@ -41,53 +51,21 @@ export const levels = [
   { n: 6, name: "Offer", week: "Week 12+ (not promised)", gate: "A signed offer." },
 ];
 
-export const weeklyMinimum = {
-  title: "The weekly minimum, from Week 3",
-  items: [
-    "50 new sequenced emails",
-    "Every follow-up due that week",
-    "Tracker updated by Sunday night",
-  ],
-  note: "10 weeks × 50 = 500+ emails. Two missed weekly minimums in a row triggers a call with the student and a parent.",
-};
-
-// Externship wording depends on whether Tyler has confirmed the provider
-// (content/site.ts → externships.provider). Never say "Fortune 500" until then.
-export const externshipLine = () =>
-  site.externships.provider
-    ? `2 externships completed: virtual projects with Fortune 500 companies, through ${site.externships.provider}`
-    : "2 virtual externship projects completed";
-
-// What every student leaves with. Program requirements, not outcomes.
+// What the student leaves with: the six parts (content/programOverview.ts).
+// Program requirements, not outcomes.
 export const leavesWith = {
-  title: "What every student leaves with",
-  note: "These are program requirements every student works to, not promised outcomes. Hiring decisions belong to employers.",
-  items: [
-    "A top-tier resume that passes our rubric",
-    "A target list of 50 companies, with named contacts at each",
-    "An AI-assisted email automation system (their own sequencing setup)",
-    "500+ personalized emails sequenced, sent, and logged",
-    "5+ calls with working professionals",
-    "8 behavioral stories, written and recorded",
-    "Graded mock interviews (the last ones run by strangers, on a written scorecard)",
-    externshipLine(),
-    "A 6-month game plan for after the program",
-  ],
+  title: "What the student leaves with",
+  note: "These are the six parts every student works through. They describe the work, not an outcome: hiring decisions belong to employers.",
+  items: modules.map((m) => m.title),
 };
 
-export const included = [
-  "12 weekly 90-minute group sessions",
-  "Twelve 60-minute 1:1s with your coach",
-  "An accountability pod of three",
-  "Resume, outreach, and interview toolkit",
-  "Graded mock interviews",
-  "Parent progress report every two weeks",
-];
+// "$5,000 includes": the same six parts, by the same names.
+export const included = modules.map((m) => m.title);
 
 export const weekly = [
-  { name: "90-minute session", body: "Scoreboard, one skill taught, live reps, and a clear commitment for the week." },
-  { name: "Weekly 60-minute 1:1", body: "Tracker review, the single biggest bottleneck fixed, live edits on the work, and exact commitments for the next 7 days." },
-  { name: "Pod of three", body: "Two classmates matched to your schedule who see your numbers every Sunday." },
+  { name: "90-minute session", body: "The Accountability & Pods scoreboard, one skill from the week's part, and live Interview Reps." },
+  { name: "Weekly 60-minute 1:1", body: "Part of Interview Reps: tracker review, the single biggest bottleneck fixed, and line-by-line edits on the work." },
+  { name: "Pod of three", body: "Part of Accountability & Pods: two classmates matched to your schedule who see your numbers every Sunday." },
 ];
 
 export type FormatRow = { block: string; time: string; what: string };
@@ -109,11 +87,11 @@ export const oneOnOneFormat: FormatRow[] = [
 // Comparison table. true = yes, false = no, "some" = partially.
 export type Cell = true | false | "some";
 export const comparison: { row: string; us: Cell; center: Cell; clubs: Cell; alone: Cell }[] = [
-  { row: "Weekly 1:1 coaching", us: true, center: "some", clubs: false, alone: false },
-  { row: "Someone reviews your outreach emails", us: true, center: "some", clubs: "some", alone: false },
-  { row: "Graded mock interviews", us: true, center: "some", clubs: "some", alone: false },
+  { row: "Candidate Brand: a resume graded on a rubric", us: true, center: "some", clubs: "some", alone: false },
+  { row: "Outreach System: emails reviewed every week", us: true, center: "some", clubs: "some", alone: false },
+  { row: "Story Bank: stories edited line by line", us: true, center: "some", clubs: "some", alone: false },
+  { row: "Track Technicals for your field", us: true, center: "some", clubs: "some", alone: false },
+  { row: "Interview Reps: a weekly 1:1 and graded mocks", us: true, center: "some", clubs: "some", alone: false },
+  { row: "Accountability & Pods: a weekly number and parent reports", us: true, center: false, clubs: false, alone: false },
   { row: "Open to every student", us: true, center: true, clubs: false, alone: true },
-  { row: "Accountable to a weekly number", us: true, center: false, clubs: false, alone: false },
-  { row: "Parent progress reports", us: true, center: false, clubs: false, alone: false },
-  { row: "Track-specific prep", us: true, center: "some", clubs: "some", alone: false },
 ];

@@ -1,40 +1,39 @@
-import { site } from "@/content/site";
+import { liveSocialLinks } from "@/content/social";
 
-type Network = keyof typeof site.socials;
-
-const labels: Record<Network, string> = {
-  instagram: "Instagram",
-  linkedin: "LinkedIn",
-  youtube: "YouTube",
-  tiktok: "TikTok",
-  facebook: "Facebook",
-  reddit: "Reddit",
-  spotify: "Spotify",
-  podcast: "Podcast",
+// Inline SVG icons: LinkedIn and Instagram from Lucide, TikTok from Simple Icons.
+const icons: Record<string, React.ReactNode> = {
+  LinkedIn: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+      <rect x="2" y="9" width="4" height="12" />
+      <circle cx="4" cy="4" r="2" />
+    </svg>
+  ),
+  TikTok: (
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" />
+    </svg>
+  ),
+  Instagram: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+    </svg>
+  ),
 };
 
-const paths: Record<Network, React.ReactNode> = {
-  instagram: (<><rect x="3.5" y="3.5" width="17" height="17" rx="5" /><circle cx="12" cy="12" r="4" /><path d="M17.3 6.7h.01" /></>),
-  linkedin: (<><rect x="3.5" y="3.5" width="17" height="17" rx="3" /><path d="M8 10.5V16M8 7.8h.01M11.5 16v-3.2c0-1.4.9-2.3 2.1-2.3s1.9.9 1.9 2.3V16M11.5 10.5V16" /></>),
-  youtube: (<><rect x="3" y="6" width="18" height="12" rx="4" /><path d="M10.5 9.5l4 2.5-4 2.5z" /></>),
-  tiktok: (<path d="M14 4v10.5a3.5 3.5 0 11-3.5-3.5M14 4c.4 2.3 2 3.8 4.5 4" />),
-  facebook: (<path d="M14.5 8H16V4.5h-2a4 4 0 00-4 4V11H8v3.5h2V21h3.5v-6.5H16l.5-3.5h-3V9a1 1 0 011-1z" />),
-  reddit: (<><ellipse cx="12" cy="14" rx="7.5" ry="5" /><circle cx="18.5" cy="6" r="1.5" /><path d="M12 9l1.2-4.5 5.3 1.5M9.5 13.5h.01M14.5 13.5h.01M9.5 16.3c1.5 1 3.5 1 5 0" /></>),
-  spotify: (<><circle cx="12" cy="12" r="8.5" /><path d="M7.5 9.5c3-1 6.5-.7 9 .8M8 12.5c2.5-.7 5.2-.4 7.2.8M8.5 15.3c2-.5 4-.3 5.6.6" /></>),
-  podcast: (<><circle cx="12" cy="10" r="2.5" /><path d="M12 14.5V21M7.5 14.5a6 6 0 119 0M5 17a9 9 0 1114 0" /></>),
-};
-
-// WSM-style square tiles, 2 rows of 4 on desktop. Only networks with a URL
-// render, and the grid hides entirely when none are set.
+// Footer social buttons. Only links with a real URL render (TikTok and
+// Instagram stay hidden while they're placeholders in content/social.ts).
 export default function Social() {
-  const entries = (Object.keys(site.socials) as Network[]).filter((n) => site.socials[n]);
-  if (entries.length === 0) return null;
+  const links = liveSocialLinks();
+  if (links.length === 0) return null;
   return (
     <ul className="social-grid" aria-label="Social media">
-      {entries.map((n) => (
-        <li key={n}>
-          <a href={site.socials[n]} target="_blank" rel="noopener noreferrer" aria-label={labels[n]}>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{paths[n]}</svg>
+      {links.map((s) => (
+        <li key={s.name}>
+          <a href={s.url} target="_blank" rel="noopener noreferrer" aria-label={`${s.name} (opens in a new tab)`}>
+            {icons[s.name]}
           </a>
         </li>
       ))}

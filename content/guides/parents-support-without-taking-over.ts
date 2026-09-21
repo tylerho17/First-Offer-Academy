@@ -30,7 +30,7 @@ export const guide: Guide = {
     h2("A realistic first year"),
     p("For a first- or second-year student, a successful year isn't only measured by an offer. The foundation is the real prize: a strong resume, a target list, a steady outreach habit, relationships with professionals, practiced stories, and interview experience. Those are what make sophomore and junior recruiting work."),
     note("On outcomes", "Nobody can promise an internship offer. Hiring decisions depend on each firm's needs that season, the other candidates, and how an interview goes on the day. What your student can control is the quality and volume of their search. That's what's worth measuring."),
-    p("It's also worth knowing that the first internship often isn't at a famous firm. Boutiques, middle-market firms, local Orange County businesses, and startups hire many first-year interns, and a first role at any of them makes the second role much easier."),
+    p("It's also worth knowing that the first internship often isn't at a famous firm. Boutiques, middle-market firms, local businesses, and startups hire many first-year interns, and a first role at any of them makes the second role much easier."),
 
     h2("Questions that help (and questions that don't)"),
     p("The way you ask about the search matters as much as whether you ask. Questions about outcomes tend to create pressure and short answers. Questions about the process show interest and help your student think."),

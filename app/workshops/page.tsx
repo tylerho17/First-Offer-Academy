@@ -6,7 +6,7 @@ import FinalCta from "@/components/sections/FinalCta";
 
 export const metadata: Metadata = {
   title: "Free school workshops",
-  description: "Bring a free internship recruiting workshop to your club, high school, community college, or PTSA in Orange County.",
+  description: "Bring a free internship recruiting workshop to your club, high school, community college, or PTSA.",
 };
 
 export default function WorkshopsPage() {
@@ -19,7 +19,7 @@ export default function WorkshopsPage() {
           <h1>Want a free recruiting workshop for your club or school?</h1>
           <p className="lede">
             First Offer Academy runs free, hands-on workshops on internship recruiting for college clubs,
-            high schools, PTSAs, and tutoring centers across Orange County. If your group would benefit, email{" "}
+            high schools, PTSAs, and tutoring centers. If your group would benefit, email{" "}
             <a href={mail}><strong>{site.email}</strong></a> and we&apos;ll set one up.
           </p>
           <div className="btn-row">
@@ -36,7 +36,7 @@ export default function WorkshopsPage() {
           </div>
           <div className="float-card split-float">
             <strong>60–90 min</strong>
-            In person in Orange County or on Zoom
+            In person or on Zoom
           </div>
         </div>
       </section>

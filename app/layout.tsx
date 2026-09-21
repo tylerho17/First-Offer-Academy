@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Young_Serif, Hanken_Grotesk } from "next/font/google";
+import { Source_Serif_4, Hanken_Grotesk } from "next/font/google";
 import AnnouncementBar from "@/components/AnnouncementBar";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -9,7 +9,7 @@ import BackToTop from "@/components/BackToTop";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
-const youngSerif = Young_Serif({ weight: "400", subsets: ["latin"], variable: "--font-young-serif", display: "swap" });
+const sourceSerif = Source_Serif_4({ weight: "600", subsets: ["latin"], variable: "--font-source-serif", display: "swap" });
 const hanken = Hanken_Grotesk({ subsets: ["latin"], variable: "--font-hanken", display: "swap" });
 
 export const metadata: Metadata = {
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     template: "%s · First Offer Academy",
   },
   description:
-    "A 12-week program that teaches first- and second-year college students in Orange County how to land internships in finance, consulting, marketing, and tech.",
+    "A 12-week internship program for college freshmen and sophomores in finance, consulting, marketing, and tech.",
   openGraph: {
     type: "website",
     siteName: "First Offer Academy",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${youngSerif.variable} ${hanken.variable}`}>
+    <html lang="en" className={`${sourceSerif.variable} ${hanken.variable}`}>
       <body>
         <AnnouncementBar />
         <Header />

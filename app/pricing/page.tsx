@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { site } from "@/content/site";
-import { included, leavesWith } from "@/content/program";
-import LogoMarquee from "@/components/sections/LogoMarquee";
+import { included } from "@/content/program";
 import FaqList from "@/components/sections/FaqList";
 import CallLink from "@/components/CallLink";
 import DepositButton from "@/components/DepositButton";
@@ -38,8 +37,6 @@ export default function PricingPage() {
         </div>
       </section>
 
-      <LogoMarquee />
-
       <section className="section" id="plans">
         <div className="wrap plans">
           <article className="card plan">
@@ -59,15 +56,10 @@ export default function PricingPage() {
             <span className="eyebrow">12-week program</span>
             <h2 className="plan-price">{c.price}</h2>
             <p className="plan-sub">or {c.plan}. A {c.deposit} refundable deposit holds a seat.</p>
+            <p className="includes-title">{c.price} includes</p>
             <ul className="plan-list">
               {included.map((f) => <li key={f}><Check />{f}</li>)}
-              <li><Check />A Week 12 family results meeting</li>
             </ul>
-            <p className="plan-leaves-title">{leavesWith.title}</p>
-            <ul className="plan-list plan-leaves">
-              {leavesWith.items.map((f) => <li key={f}><Check />{f}</li>)}
-            </ul>
-            <p className="plan-leaves-note">Program requirements, not outcomes.</p>
             <div className="btn-row">
               <Link href="/apply" className="btn btn-sage">Apply now</Link>
               <CallLink className="btn btn-cream-outline" />

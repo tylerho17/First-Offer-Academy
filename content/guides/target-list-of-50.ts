@@ -27,7 +27,7 @@ export const guide: Guide = {
     h3("A tier: dream firms, for relationships"),
     p("These are the firms you'd be thrilled to work at. As a freshman, you're very unlikely to get an internship at most of them this year, and that's fine. You're emailing A-tier contacts to build relationships that pay off in sophomore and junior year. Ask about their path, stay in touch, and update them when you make progress."),
     h3("B tier: where first-year internships actually come from"),
-    p("This is the heart of your list. Boutiques, middle-market firms, Orange County firms, and startups hire first- and second-year interns far more often than the famous names, and they get far fewer emails from students. A single good call at a B-tier firm can turn into an interview, because there may not be a formal program standing between you and the decision-maker."),
+    p("This is the heart of your list. Boutiques, middle-market firms, local firms, and startups hire first- and second-year interns far more often than the famous names, and they get far fewer emails from students. A single good call at a B-tier firm can turn into an interview, because there may not be a formal program standing between you and the decision-maker."),
     h3("C tier: safe, and still valuable"),
     p("Local businesses, campus roles, small startups, and companies in your family's network. They give you reps (every call makes the next one better) and a real line on your resume. Never skip your C tier because it feels less exciting."),
 
@@ -37,7 +37,7 @@ export const guide: Guide = {
     h3("Places to look"),
     ul(
       "Your school's alumni on LinkedIn: search your school, filter by company and title.",
-      "Local business journals and 'best places to work' lists for Orange County and Southern California.",
+      "Local business journals and 'best places to work' lists for your area.",
       "Startup directories and local accelerator portfolios.",
       "Industry association member lists (accounting, wealth management, marketing, tech meetups).",
       "The firms your calls mention. Ask every person: \"What firms like yours should I be looking at?\"",
@@ -47,10 +47,10 @@ export const guide: Guide = {
     h2("What a list looks like by track"),
     p("The tiers work the same for everyone, but the firms in each tier look different depending on your track. Here's the general shape. Swap in real names from your own research."),
     table("Firm types by track and tier", ["Track", "A tier (relationships)", "B tier (realistic)", "C tier (safe)"], [
-      ["Finance", "Large banks and well-known investment firms with early-insight programs", "Boutique advisory firms, middle-market banks, OC wealth managers and family offices", "Local accounting firms, a campus investment fund, small financial planners"],
-      ["Consulting", "Large strategy and management consulting firms", "Boutique and specialty consultancies, in-house strategy teams at OC companies", "Small local consultancies, nonprofits needing project help, campus consulting groups"],
-      ["Marketing", "Big consumer brands and well-known agencies", "Mid-size agencies, growing DTC brands, OC marketing teams", "Local businesses, campus offices, small startups that need social or content help"],
-      ["Tech", "Large tech companies with formal internship programs", "Growth-stage startups, mid-size software companies, OC tech firms", "Early-stage startups, campus research labs, small businesses needing a site or data work"],
+      ["Finance", "Large banks and well-known investment firms with early-insight programs", "Boutique advisory firms, middle-market banks, local wealth managers and family offices", "Local accounting firms, a campus investment fund, small financial planners"],
+      ["Consulting", "Large strategy and management consulting firms", "Boutique and specialty consultancies, in-house strategy teams at local companies", "Small local consultancies, nonprofits needing project help, campus consulting groups"],
+      ["Marketing", "Big consumer brands and well-known agencies", "Mid-size agencies, growing DTC brands, local marketing teams", "Local businesses, campus offices, small startups that need social or content help"],
+      ["Tech", "Large tech companies with formal internship programs", "Growth-stage startups, mid-size software companies, local tech firms", "Early-stage startups, campus research labs, small businesses needing a site or data work"],
     ]),
     p("If you're split between two tracks, it's fine to build a mixed list for your first few weeks. After ten or so calls, you'll know which direction pulls you, and you can re-tier the list around it."),
 
@@ -61,7 +61,7 @@ export const guide: Guide = {
     table("Picking a contact", ["Firm type", "Best first contact", "Why"], [
       ["Large firm", "An analyst or associate 1–4 years out of school, ideally an alum", "Closest to your situation and most likely to reply"],
       ["Boutique or middle market", "An analyst, associate, or VP", "Small teams, so one person can open a real door"],
-      ["Local OC firm", "An associate or a partner", "Partners at small firms often read their own email"],
+      ["Local firm", "An associate or a partner", "Partners at small firms often read their own email"],
       ["Startup", "A founder or early employee", "They answer cold emails and hire for hustle"],
       ["Brand or agency (marketing)", "A coordinator, associate, or manager on the team you want", "They know what the team needs right now"],
       ["Tech company", "An engineer, PM, or data person 1–4 years in", "Referrals often matter more than applications"],
@@ -74,7 +74,7 @@ export const guide: Guide = {
     h2("What to log for each contact"),
     p("The template has one row per company with these columns. The most important column is the last personal one: a specific detail for your first line. That's what turns a template into a personal email."),
     table("Target list columns", ["Column", "What goes in it"], targetListColumns.map((c) => [c, columnHint(c)])),
-    example("Example row (made-up)", "B · Example Growth Co. · Startup · Costa Mesa, CA · Sam Example · Founder · sam@example.com · linkedin.com/in/example2 · Same hometown · Launched a new product in March · Apollo · 2027-01-12"),
+    example("Example row (made-up)", "B · Example Growth Co. · Startup · Remote · Sam Example · Founder · sam@example.com · linkedin.com/in/example2 · Same hometown · Launched a new product in March · Apollo · 2027-01-12"),
 
     h2("A weekend plan to build the list"),
     ol(
@@ -116,7 +116,7 @@ function columnHint(c: string): string {
   const hints: Record<string, string> = {
     "Tier (A/B/C)": "A = dream firm, B = realistic, C = safe",
     Company: "The firm's name",
-    Type: "Boutique, middle market, OC firm, startup, brand, agency, tech company",
+    Type: "Boutique, middle market, local firm, startup, brand, agency, tech company",
     City: "Where the team sits (local firms are an advantage)",
     "Contact name": "A named person, never a generic inbox",
     Title: "Their current title",

@@ -75,7 +75,7 @@ export const guide: Guide = {
     h3("Leadership and activities"),
     p("Real roles with real bullets. A list of club names tells a reader nothing; one line about what you actually did in one club tells them a lot."),
     h3("Skills and interests"),
-    p("Only skills you could use in an interview tomorrow: Excel with the specific functions you know, SQL, Python, Figma, languages with your level. Then two or three specific interests that start conversations. \"Long-distance running\" and \"Orange County food trucks\" get asked about. \"Sports\" and \"music\" don't."),
+    p("Only skills you could use in an interview tomorrow: Excel with the specific functions you know, SQL, Python, Figma, languages with your level. Then two or three specific interests that start conversations. \"Long-distance running\" and \"local food trucks\" get asked about. \"Sports\" and \"music\" don't."),
 
     h2("Formatting that passes the 6-second test"),
     p("Most readers decide in about six seconds whether to keep reading. In those six seconds, a stranger should be able to tell what you're interested in, and your strongest item should be in the top third of the page."),

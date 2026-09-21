@@ -4,21 +4,27 @@
 // start pages back out of the generated PDF.
 
 import { readFile } from "node:fs/promises";
+import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 export const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 
 const font = async (f) => (await readFile(path.join(root, "assets/fonts", f))).toString("base64");
-const [serif, sans6, sans7] = await Promise.all([font("young-serif-400.woff"), font("hanken-grotesk-600.woff"), font("hanken-grotesk-700.woff")]);
+const [serif, sans6, sans7] = await Promise.all([font("source-serif-4-600.woff"), font("hanken-grotesk-600.woff"), font("hanken-grotesk-700.woff")]);
 
+// Brand logo (public/logo.png) as an <img>, or nothing if the file is missing.
+export const logoTag = (h = 24) => {
+  const f = path.join(root, "public", "logo.png");
+  return existsSync(f) ? `<img src="data:image/png;base64,${readFileSync(f).toString("base64")}" alt="" style="height:${h}px;width:auto">` : "";
+};
 export const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 
 // Brand tokens. No pure white: cream is the white.
 export const C = { mist: "#E7EDF5", navy: "#1A2B48", ink: "#000000", cream: "#F7F4EE", sage: "#A8C4A4", dusty: "#3F6690" };
 
 export const baseCss = (footerLeft) => `
-@font-face { font-family: "Young Serif"; src: url(data:font/woff;base64,${serif}) format("woff"); }
+@font-face { font-family: "Source Serif 4"; font-weight: 600; src: url(data:font/woff;base64,${serif}) format("woff"); }
 @font-face { font-family: "Hanken"; font-weight: 600; src: url(data:font/woff;base64,${sans6}) format("woff"); }
 @font-face { font-family: "Hanken"; font-weight: 700; src: url(data:font/woff;base64,${sans7}) format("woff"); }
 @page {
@@ -32,7 +38,7 @@ export const baseCss = (footerLeft) => `
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { background: ${C.mist}; }
 body { color: ${C.ink}; font-family: "Hanken"; font-weight: 600; font-size: 8.8pt; line-height: 1.38; }
-h1, h2, h3 { font-family: "Young Serif"; font-weight: 400; color: ${C.navy}; line-height: 1.15; }
+h1, h2, h3 { font-family: "Source Serif 4"; font-weight: 600; color: ${C.navy}; line-height: 1.15; }
 h2.ch { font-size: 21pt; margin: 2px 0 6px; break-after: avoid; }
 
 .ch-n { break-after: avoid; font-weight: 700; font-size: 8.5pt; letter-spacing: .14em; text-transform: uppercase; color: ${C.dusty}; }
@@ -45,7 +51,7 @@ li::marker { color: ${C.dusty}; font-weight: 700; }
 .box { background: ${C.cream}; border-radius: 10px; padding: 8px 11px; margin: 0 0 7px; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
 .box.keep, table.keep { break-inside: avoid; }
 .box-title { break-after: avoid; }
-.box-title { font-family: "Young Serif"; color: ${C.navy}; font-size: 11.5pt; margin-bottom: 5px; }
+.box-title { font-family: "Source Serif 4"; font-weight: 600; color: ${C.navy}; font-size: 11.5pt; margin-bottom: 5px; }
 .check { list-style: none; margin: 0; }
 .check.cols { columns: 2; column-gap: 20px; }
 .check.cols li { break-inside: avoid; }
@@ -59,7 +65,7 @@ li::marker { color: ${C.dusty}; font-weight: 700; }
 .callout-example { border: 1.5px dashed ${C.dusty}; }
 .callout-example .box-title { font-family: "Hanken"; font-weight: 700; font-size: 8.5pt; letter-spacing: .08em; text-transform: uppercase; color: ${C.dusty}; }
 table { width: 100%; border-collapse: collapse; background: ${C.cream}; border-radius: 10px; overflow: hidden; margin: 0 0 12px; font-size: 8.8pt; line-height: 1.38; }
-.cap { font-family: "Young Serif"; color: ${C.navy}; font-size: 11pt; padding: 2px 0 5px; break-after: avoid; }
+.cap { font-family: "Source Serif 4"; font-weight: 600; color: ${C.navy}; font-size: 11pt; padding: 2px 0 5px; break-after: avoid; }
 th, td { text-align: left; vertical-align: top; padding: 4px 7px; border-bottom: 1px solid rgba(26,43,72,.14); white-space: pre-wrap; }
 thead th { background: ${C.navy}; color: ${C.cream}; font-weight: 700; font-size: 8pt; letter-spacing: .04em; text-transform: uppercase; }
 tbody td:first-child { color: ${C.navy}; font-weight: 700; }
@@ -69,8 +75,8 @@ table.dense th, table.dense td { padding: 5px 4px; }
 table.blank td { height: 20px; }
 .chip { display: inline-block; background: ${C.sage}; color: ${C.navy}; font-weight: 700; font-size: 8pt; letter-spacing: .12em; text-transform: uppercase; padding: 4px 10px; border-radius: 99px; }
 .draft { display: inline-block; border: 1.5px dashed ${C.cream}; color: ${C.cream}; font-weight: 700; font-size: 8pt; letter-spacing: .12em; text-transform: uppercase; padding: 3px 10px; border-radius: 99px; margin-left: 8px; }
-.mark { display: inline-flex; align-items: center; gap: 8px; font-family: "Young Serif"; font-size: 12pt; }
-.mark i { font-style: normal; width: 24px; height: 24px; border-radius: 6px; background: ${C.cream}; color: ${C.navy}; display: inline-grid; place-items: center; font-size: 13pt; }
+.mark { display: inline-flex; align-items: center; gap: 8px; font-family: "Source Serif 4"; font-weight: 600; font-size: 12pt; }
+.mark img { background: ${C.cream}; border-radius: 6px; padding: 2px; }
 `;
 
 const cols = (b) => b.head.length;

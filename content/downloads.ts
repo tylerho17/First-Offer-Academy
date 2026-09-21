@@ -66,9 +66,9 @@ export const downloads: Download[] = [
     week: 2,
     head: t.targetListColumns,
     rows: [
-      ["A", `${EX} Example Capital Partners`, "Boutique advisory", "Irvine, CA", "Alex Example", "Analyst", "alex@example.com", "linkedin.com/in/example", "Same school", "Wrote a post on consumer deals", "Alumni search", "2027-01-12"],
-      ["B", `${EX} Example Growth Co.`, "Startup", "Costa Mesa, CA", "Sam Example", "Founder", "sam@example.com", "linkedin.com/in/example2", "Same hometown", "Launched a new product in March", "Apollo", "2027-01-12"],
-      ["C", `${EX} Example Family Office`, "Local firm", "Newport Beach, CA", "Jordan Example", "Associate", "jordan@example.com", "linkedin.com/in/example3", "—", "Spoke at a campus event", "Referral", "2027-01-13"],
+      ["A", `${EX} Example Capital Partners`, "Boutique advisory", "[City, ST]", "Alex Example", "Analyst", "alex@example.com", "linkedin.com/in/example", "Same school", "Wrote a post on consumer deals", "Alumni search", "2027-01-12"],
+      ["B", `${EX} Example Growth Co.`, "Startup", "Remote", "Sam Example", "Founder", "sam@example.com", "linkedin.com/in/example2", "Same hometown", "Launched a new product in March", "Apollo", "2027-01-12"],
+      ["C", `${EX} Example Family Office`, "Local firm", "[City, ST]", "Jordan Example", "Associate", "jordan@example.com", "linkedin.com/in/example3", "—", "Spoke at a campus event", "Referral", "2027-01-13"],
       ...Array.from({ length: 47 }, (_, i) => [i < 9 ? "A" : i < 39 ? "B" : "C", "", "", "", "", "", "", "", "", "", "", ""]),
     ],
   },

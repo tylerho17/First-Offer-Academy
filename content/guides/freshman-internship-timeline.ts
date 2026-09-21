@@ -44,7 +44,7 @@ export const guide: Guide = {
     h2("Freshman winter: start talking to people"),
     p("Winter is when the real work starts. Networking is ranked first for a reason: most early opportunities start with someone who replied to an email and remembered the call, not with an application portal."),
     h3("Build a target list of 50, with names"),
-    p("Build a list of 50 companies in your field, each with a named person you're going to email. Tier them. A is dream firms, where you're building relationships for later. B is realistic: boutiques, middle-market firms, Orange County firms, and startups, where most first-year opportunities actually come from. C is safe: places very likely to take a first-year student. Roughly 10 A, 30 B, and 10 C works for most students."),
+    p("Build a list of 50 companies in your field, each with a named person you're going to email. Tier them. A is dream firms, where you're building relationships for later. B is realistic: boutiques, middle-market firms, local firms, and startups, where most first-year opportunities actually come from. C is safe: places very likely to take a first-year student. Roughly 10 A, 30 B, and 10 C works for most students."),
     h3("Set up your outreach system"),
     p("Sending 50 personalized emails a week sounds impossible until you have a system. Use AI to research people and draft first lines, a mail-merge or sequencing tool to send and follow up, and your own eyes to read every single email before it goes. The AI outreach guide walks through the setup."),
     h3("Hit a weekly number"),

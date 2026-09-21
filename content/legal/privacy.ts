@@ -13,7 +13,7 @@ export const privacy: LegalDoc = {
   intro: `This policy explains what information ${site.name} collects, why, who we share it with, and the choices you have. We wrote it in plain English. If anything is unclear, email ${legalContact}.`,
   body: [
     { type: "h2", text: "Who we are" },
-    { type: "p", text: `${who} runs a 12-week internship recruiting program for college students, based in ${site.city}. In this policy, "we", "us", and "our" mean ${site.name}. "You" means anyone who uses our website or program, including students and their parents or guardians.` },
+    { type: "p", text: `${who} runs a 12-week internship recruiting program for college students. In this policy, "we", "us", and "our" mean ${site.name}. "You" means anyone who uses our website or program, including students and their parents or guardians.` },
 
     { type: "h2", text: "What we collect and why" },
     { type: "p", text: "We only collect what we need to run the program and answer your questions." },
@@ -87,12 +87,12 @@ export const privacy: LegalDoc = {
     { type: "p", text: "Some browsers send a \"Do Not Track\" signal. Because we don't track visitors across other websites, and our analytics don't use cookies or identify individuals, our website works the same way whether or not the signal is on. We also honor the Global Privacy Control signal as a request to opt out of sale or sharing, which we don't do in any case." },
 
     { type: "h2", text: "Users outside the United States" },
-    { type: "p", text: "Our program serves students in Southern California, and our website and service providers are based in the United States. If you visit from elsewhere, your information will be processed in the United States." },
+    { type: "p", text: "Our website and service providers are based in the United States. If you visit from elsewhere, your information will be processed in the United States." },
 
     { type: "h2", text: "Changes to this policy" },
     { type: "p", text: "If we change this policy, we'll update the \"Last updated\" date at the top of this page. If a change materially affects how we use information we already have, we'll email enrolled students and parents before it takes effect. This policy is effective as of the \"Last updated\" date." },
 
     { type: "h2", text: "Contact us" },
-    { type: "p", text: `For privacy questions or requests, email ${legalContact}. ${who}, ${site.city}.` },
+    { type: "p", text: `For privacy questions or requests, email ${legalContact}.` },
   ],
 };

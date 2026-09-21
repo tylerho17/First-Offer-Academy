@@ -41,7 +41,7 @@ export const guide: Guide = {
     ul(
       "Small and mid-size agencies, which often need extra hands on social, content, and research.",
       "Startups and direct-to-consumer brands with small marketing teams.",
-      "Local Orange County businesses that need help with social media or email.",
+      "Local businesses that need help with social media or email.",
       "Campus offices and organizations that run events and communications.",
       "Brand teams at larger companies (A tier: build relationships early).",
     ),
@@ -63,7 +63,7 @@ export const guide: Guide = {
     h3("Who to target"),
     ul(
       "Early- and growth-stage startups, where founders and early engineers answer emails.",
-      "Mid-size software companies and Orange County tech firms.",
+      "Mid-size software companies and local tech firms.",
       "Campus research labs that need programming help.",
       "Small businesses and nonprofits that need a site, a tool, or data work.",
       "First-year programs at larger tech companies (check each one's dates).",

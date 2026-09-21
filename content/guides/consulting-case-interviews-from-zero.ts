@@ -57,7 +57,7 @@ export const guide: Guide = {
     p("Use these as starting points, then tailor. The best structures sound like they were built for this client, because they were."),
 
     h2("Market sizing, out loud"),
-    p("Market sizing questions ask you to estimate a number you can't possibly know, like the number of electric scooters in Orange County. The interviewer isn't grading the final number. They're grading your logic, your assumptions, and your math."),
+    p("Market sizing questions ask you to estimate a number you can't possibly know, like the number of electric scooters in a mid-size US city. The interviewer isn't grading the final number. They're grading your logic, your assumptions, and your math."),
     ol(
       "Clarify what you're estimating (all scooters, or only rentals? a year or at one time?).",
       "Pick an approach: from the population down, or from supply up.",

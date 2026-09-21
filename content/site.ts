@@ -37,7 +37,6 @@ export const site = {
   // TODO(Tyler): legal business entity name (e.g. "First Offer Academy LLC").
   // Empty = the privacy policy and terms say "First Offer Academy" only.
   legalEntityName: "",
-  city: "Irvine, California",
 
   // Every outside service that touches personal data. The privacy policy
   // lists exactly these, so keep it accurate when a tool is added or dropped.
@@ -52,18 +51,7 @@ export const site = {
 
   // TODO: real inbox on the domain.
   email: "hello@firstofferacademy.com",
-  // TODO: social profile URLs. Empty ones don't render; the footer tile grid
-  // hides entirely while all are empty.
-  socials: {
-    instagram: "",
-    linkedin: founderLinkedIn,
-    youtube: "",
-    tiktok: "",
-    facebook: "",
-    reddit: "",
-    spotify: "",
-    podcast: "", // Apple Podcasts or any podcast feed page
-  },
+  // Social profile URLs live in content/social.ts.
   // TODO(Tyler): referral reward, e.g. "$250 off tuition for you and your
   // friend". Empty = /refer doesn't mention a reward at all.
   referralReward: "",
@@ -75,16 +63,9 @@ export const site = {
   reviewsUrl: "",
 
 
-  // TODO(Tyler): virtual externship provider (e.g. "Extern"). Only fill this
-  // in once you've confirmed students complete real company-designed projects.
-  // Empty = the site says "2 virtual externship projects" with no company
-  // names and no "Fortune 500".
-  externships: {
-    provider: "",
-  },
 
   // TODO: fill in. Empty strings render as "To be announced".
-  format: "", // e.g. "In person in Irvine, Tuesdays 6–7:30pm"
+  format: "", // e.g. "In person, Tuesdays 6–7:30pm"
   weeklyHours: "", // e.g. "6–8"
   applicationDeadline: "",
   refundTerms: "", // e.g. "Fully refundable until December 15, 2026."

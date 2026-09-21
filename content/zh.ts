@@ -14,12 +14,12 @@ const c = site.cohort;
 export const zh = {
   meta: {
     title: "给家长的介绍（中文）",
-    description: "First Offer Academy 是一个为期12周的实习求职项目，帮助橙县大一、大二学生申请金融、咨询、市场营销和科技领域的实习。",
+    description: "First Offer Academy 是一个为期12周的实习求职项目，帮助大一、大二学生申请金融、咨询、市场营销和科技领域的实习。",
   },
   draftNotice: "草稿：本页为机器翻译初稿，尚未经母语人士审阅。如有疑问，请以英文网站为准。 (Draft: machine-translated, not yet reviewed.)",
   eyebrow: "给家长的介绍",
   title: "您孩子的第一份实习，不应取决于能否进入某个社团。",
-  lede: "First Offer Academy 是一个为期12周的项目，面向橙县（Orange County）的大一、大二学生（包括社区大学学生），从零开始教他们如何申请金融、咨询、市场营销和科技领域的实习。",
+  lede: "First Offer Academy 是一个为期12周的项目，面向大一、大二学生（包括社区大学学生），从零开始教他们如何申请金融、咨询、市场营销和科技领域的实习。",
 
   program: {
     title: "项目内容",

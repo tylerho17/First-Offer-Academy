@@ -76,7 +76,7 @@ export const guide: Guide = {
     p("Here's a compressed, made-up exchange that shows the framework in motion. Notice how little of it is the student asking prepared questions."),
     table("A call, annotated (made-up)", ["Moment", "What was said", "Why it works"], [
       ["Open", "\"Anything exciting going on lately?\" / \"Honestly, just got back from a trip. You?\" / \"I just finished my first cooking class series. I burned everything for three weeks and finally made a decent dumpling.\"", "Casual, a little funny, and long enough to set the tone."],
-      ["Intro", "\"I grew up in Santa Ana, did the books for my family's restaurant, and that got me curious about how businesses make money. I reached out because you went from our school into advisory.\"", "Short, specific, and tells them exactly how to help."],
+      ["Intro", "\"I did the books for my family's restaurant growing up, and that got me curious about how businesses make money. I reached out because you went from our school into advisory.\"", "Short, specific, and tells them exactly how to help."],
       ["Their story", "\"…and my first year was mostly learning to organize information.\" / \"What did that look like day to day?\"", "A follow-up on their words, not a scripted question."],
       ["Listening", "The student mostly listens, takes two notes, and asks one more follow-up.", "80/20."],
       ["Close", "\"This has been really helpful. Is there anyone on the team you'd be comfortable introducing me to?\"", "Easy to say yes to, and asked at the right moment."],

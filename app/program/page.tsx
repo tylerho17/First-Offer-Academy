@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { modules } from "@/content/programOverview";
 import ProgramHero from "@/components/sections/program/ProgramHero";
 import WhoFor from "@/components/sections/program/WhoFor";
-import LeavesWith from "@/components/sections/LeavesWith";
 import WeeklyFormat from "@/components/sections/program/WeeklyFormat";
 import BookingBand from "@/components/sections/program/BookingBand";
 import Helps from "@/components/sections/program/Helps";
@@ -25,7 +24,6 @@ export default function ProgramPage() {
     <>
       <ProgramHero />
       <WhoFor />
-      <LeavesWith />
       <BookingBand />
       <Helps />
       <WhyNow />

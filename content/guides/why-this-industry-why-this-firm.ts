@@ -35,7 +35,7 @@ export const guide: Guide = {
     h2("From industry to firm"),
     p("\"Why this industry\" and \"why this firm\" are usually asked together, or back to back. Your industry answer is the 3 buckets. Your firm answer narrows them down to this specific place."),
     table("Building a firm-specific answer", ["Ingredient", "Where it comes from", "Example (made-up)"], [
-      ["One thing only this firm does", "The firm's site, news, your calls", "\"Your focus on family-owned businesses in Southern California\""],
+      ["One thing only this firm does", "The firm's site, news, your calls", "\"Your focus on family-owned businesses\""],
       ["One person you've talked to there", "Your tracker", "\"When I spoke with Alex, they described…\""],
       ["A link to your bucket 1", "Your stories", "\"…which fits how I like to work, because…\""],
     ]),

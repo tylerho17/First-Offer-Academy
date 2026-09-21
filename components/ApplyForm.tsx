@@ -63,7 +63,7 @@ export default function ApplyForm({ depositEnabled = false }: { depositEnabled?:
       <div className="field"><label htmlFor="name">Full name</label><input id="name" name="name" required autoComplete="name" /></div>
       <div className="field"><label htmlFor="email">Email</label><input id="email" name="email" type="email" required autoComplete="email" /></div>
       <div className="field"><label htmlFor="phone">Phone</label><input id="phone" name="phone" type="tel" autoComplete="tel" /></div>
-      <div className="field"><label htmlFor="school">School</label><input id="school" name="school" required placeholder="UC Irvine, Irvine Valley College…" /></div>
+      <div className="field"><label htmlFor="school">School</label><input id="school" name="school" required placeholder="Your college or community college" /></div>
       <div className="field">
         <label htmlFor="year">Year</label>
         <select id="year" name="year" required defaultValue="">

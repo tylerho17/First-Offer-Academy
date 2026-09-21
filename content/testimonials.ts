@@ -23,7 +23,7 @@ export const testimonials: Testimonial[] = [
   // Example shape. Replace with real entries and set permission: true.
   {
     name: "TODO Student",
-    school: "UC Irvine",
+    school: "TODO school",
     year: "Freshman year",
     track: "Finance",
     quote: "TODO: real quote from a real student.",

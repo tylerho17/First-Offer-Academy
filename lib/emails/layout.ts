@@ -27,7 +27,7 @@ ${body}
 </td></tr>
 <tr><td style="padding:20px 28px;border-top:1px solid rgba(26,43,72,.14);font-size:13px;color:${NAVY}">
 ${footerNote ? `<p style="margin:0 0 8px">${footerNote}</p>` : ""}
-<p style="margin:0">${esc(site.name)} · ${esc(site.city)} · <a href="mailto:${esc(site.email)}" style="color:${DUSTY}">${esc(site.email)}</a></p>
+<p style="margin:0">${esc(site.name)} · <a href="mailto:${esc(site.email)}" style="color:${DUSTY}">${esc(site.email)}</a></p>
 </td></tr></table></td></tr></table></body></html>`;
 }
 

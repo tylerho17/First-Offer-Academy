@@ -14,8 +14,9 @@ export default function Tracks() {
     <section className="section" style={{ paddingTop: 0 }}>
       <div className="wrap">
         <div className="section-head">
-          <span className="eyebrow">Four tracks</span>
+          <span className="eyebrow">Track Technicals · Weeks 9–10</span>
           <h2>One method. Pick the field you want to break into.</h2>
+          <p className="lede">In Weeks 9–10, Track Technicals splits the cohort into four fields.</p>
         </div>
         <div className="grid grid-4">
           {tracks.map((t) => (

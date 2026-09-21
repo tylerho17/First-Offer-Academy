@@ -22,7 +22,7 @@ export const fiveThings = [
 export const earlyMarket = [
   { name: "Boutiques", body: "Small, specialized firms (advisory, investment, consulting, agencies). Fewer applicants, and a single conversation can turn into an interview." },
   { name: "Middle-market firms", body: "Firms that work with mid-sized companies. Real work, lean teams, and more willingness to take a first- or second-year intern." },
-  { name: "Local Orange County firms", body: "Wealth managers, accounting and advisory firms, family offices, agencies, and operating companies. Being local is an advantage you should use." },
+  { name: "Local firms near you", body: "Wealth managers, accounting and advisory firms, family offices, agencies, and operating companies. Being local is an advantage you should use." },
   { name: "Startups", body: "They hire for hustle and learn-fast. Founders often answer cold emails themselves." },
   { name: "Early-insight and diversity programs", body: "Structured programs at larger firms built for first- and second-year students. Deadlines are early and dates change every year, so check each one directly." },
 ];
@@ -134,7 +134,7 @@ export const exampleResume = {
     "EXPERIENCE — Example Coffee Co., Shift Lead (2024–present): Handled 150+ transactions per shift; trained 4 new hires on register and closing; cut end-of-night cash discrepancies to zero over three months by adding a two-person count.",
     "LEADERSHIP — Business Club, Events Committee: Planned a 120-person alumni networking night with 6 speakers; ran outreach and a $900 budget.",
     "PROJECTS — Personal valuation of a consumer company (Excel, comparable companies); presented to a 20-person investing club.",
-    "SKILLS — Excel (VLOOKUP, pivot tables), Canva · Spanish (fluent) · Interests: long-distance running, Orange County food trucks",
+    "SKILLS — Excel (VLOOKUP, pivot tables), Canva · Spanish (fluent) · Interests: long-distance running, local food trucks",
   ],
 };
 
@@ -148,7 +148,7 @@ export const resumeTemplate = [
 ];
 
 export const introStructure = [
-  { part: "Where you're from", seconds: "10 sec", example: "I grew up in Santa Ana; my parents run a small restaurant, so I did the books on weekends from age 14." },
+  { part: "Where you're from", seconds: "10 sec", example: "My parents run a small restaurant, so I've done the books on weekends since I was 14." },
   { part: "What pulled you in", seconds: "15 sec", example: "That's what got me curious about how businesses actually make money." },
   { part: "What you've done", seconds: "25 sec", example: "At school I've led events for the business club and started teaching myself valuation in Excel." },
   { part: "Why you're talking to them", seconds: "10 sec", example: "I'm reaching out because you went from our school into advisory, and I'd love to understand how you made that jump." },
@@ -158,7 +158,7 @@ export const introStructure = [
 
 export const targetTiers = [
   { tier: "A", name: "Dream firms", share: "About 10", purpose: "For relationships, not for this season's offer. You're playing the long game here: calls, updates, and staying warm into sophomore and junior year." },
-  { tier: "B", name: "Realistic", share: "About 30", purpose: "Boutiques, middle-market firms, Orange County firms, and startups. This is where most first- and second-year internships actually come from." },
+  { tier: "B", name: "Realistic", share: "About 30", purpose: "Boutiques, middle-market firms, local firms, and startups. This is where most first- and second-year internships actually come from." },
   { tier: "C", name: "Safe", share: "About 10", purpose: "Places very likely to take a first-year student: local businesses, campus roles, small startups, family-network companies. Reps and a line on the resume." },
 ];
 
@@ -181,7 +181,7 @@ export const twoCs = {
 };
 
 export const subjectLines = [
-  "UCI freshman: quick question about your path into [field]",
+  "[School] freshman: quick question about your path into [field]",
   "Fellow [school] student with a question about [firm]",
   "Your post on [topic]",
   "From [hometown] to [role]: a question",
@@ -215,8 +215,8 @@ export const emailTemplates = [
   },
   {
     name: "4. Local or small firm",
-    use: "Orange County firms, boutiques, and small teams where a student reaching out is rare.",
-    text: "Subject: Irvine student with a question about [firm]\n\nHi [First name],\n\nI'm a freshman at [school] and I've been reading about [firm]'s work with [type of client / recent project]. It's rare to find a firm doing [specific thing] right here in Orange County.\n\nI'm trying to learn how people get started in [field]. Would you be open to a quick call? I'm local and happy to meet for coffee if that's easier.\n\nThank you,\n[Your name]\n[LinkedIn URL]",
+    use: "Local firms, boutiques, and small teams where a student reaching out is rare.",
+    text: "Subject: Local student with a question about [firm]\n\nHi [First name],\n\nI'm a freshman at [school] and I've been reading about [firm]'s work with [type of client / recent project]. It's rare to find a firm doing [specific thing] right here in [your area].\n\nI'm trying to learn how people get started in [field]. Would you be open to a quick call? I'm local and happy to meet for coffee if that's easier.\n\nThank you,\n[Your name]\n[LinkedIn URL]",
   },
   {
     name: "5. Startup founder",
@@ -465,7 +465,7 @@ export const technicals = {
     questions: [
       "A client's profits have fallen 20% over two years. How would you figure out why?",
       "Should a regional coffee chain expand into a new state?",
-      "Estimate the number of electric scooters in Orange County.",
+      "Estimate the number of electric scooters in a mid-size US city.",
       "Estimate the annual revenue of a campus bookstore.",
       "A hospital's wait times doubled this year. What would you look at first?",
       "Should a snack company launch a healthier product line?",

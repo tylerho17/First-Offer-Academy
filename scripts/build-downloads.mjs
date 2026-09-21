@@ -39,7 +39,7 @@ body { zoom: var(--z, 1); }
 .pair > .box { flex: 1 1 0; min-width: 0; }
 .pair .template pre { font-size: 8pt; }
 .paper { background: ${C.cream}; border-radius: 10px; padding: 26px 34px; font-size: 9.5pt; }
-.paper .name { text-align: center; font-family: "Young Serif"; color: ${C.navy}; font-size: 18pt; }
+.paper .name { text-align: center; font-family: "Source Serif 4"; font-weight: 600; color: ${C.navy}; font-size: 18pt; }
 .paper .contact { text-align: center; font-size: 9pt; margin-bottom: 10px; }
 .paper h3 { font-family: "Hanken"; font-weight: 700; font-size: 9.5pt; letter-spacing: .08em; text-transform: uppercase; border-bottom: 1.5px solid ${C.navy}; margin: 12px 0 5px; padding-bottom: 2px; }
 .paper p { margin: 0 0 2px; }

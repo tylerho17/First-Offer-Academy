@@ -6,7 +6,7 @@ export const contentType = "image/png";
 
 export default function Image() {
   return brandImage({
-    label: "12-week internship program · Orange County",
+    label: "12-week internship program for freshmen and sophomores",
     headline: "Your first internship shouldn't depend on which club lets you in.",
   });
 }

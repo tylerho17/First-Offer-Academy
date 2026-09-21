@@ -1,8 +1,7 @@
 import Link from "next/link";
 import { site } from "@/content/site";
-import { positioning } from "@/content/program";
 import CallLink from "../CallLink";
-import { Calendar, Pin, Users } from "../Icons";
+import { Book, Calendar, Users } from "../Icons";
 import TrackPills from "./TrackPills";
 
 export default function Hero() {
@@ -10,12 +9,13 @@ export default function Hero() {
     <section className="hero">
       <div className="wrap hero-grid">
         <div>
-          <span className="eyebrow">12-week internship program · Orange County</span>
+          <span className="eyebrow">12-week internship program · Freshmen and sophomores</span>
           <h1>Your first internship shouldn&apos;t depend on which club lets you in.</h1>
           <p className="lede">
-            First Offer Academy is a 12-week program that teaches first- and second-year college
-            students how to land internships in finance, consulting, marketing, and tech, starting from zero.
-            {" "}{positioning}
+            A 12-week internship program for college freshmen and sophomores aiming at finance,
+            consulting, marketing, and tech. Every student leaves with six things: a Candidate Brand,
+            an Outreach System, a Story Bank, Track Technicals, Interview Reps, and the Accountability
+            &amp; Pods that keep the work moving.
           </p>
           <div className="btn-row">
             <Link href="/apply" className="btn btn-primary">Apply for the January cohort</Link>
@@ -24,7 +24,7 @@ export default function Hero() {
           <div className="proof-row">
             <span><Users />{site.cohort.seats} seats</span>
             <span><Calendar />Starts {site.cohort.start}</span>
-            <span><Pin />Orange County</span>
+            <span><Book />Freshmen and sophomores</span>
           </div>
           <TrackPills />
         </div>

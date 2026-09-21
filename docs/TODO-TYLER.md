@@ -21,7 +21,7 @@ Things that need your real input. Each line names the file to edit.
 - **Code of Conduct** (`/code-of-conduct`, `content/legal/codeOfConduct.ts`): consequences and removal language.
 - **Accessibility Statement** (`/accessibility`, `content/legal/accessibility.ts`): confirm the 5-business-day response commitment.
 - **Refund & Payment Policy** (`/refunds`, content in `content/legal/refunds.ts`), especially the withdrawal and missed-payment sections.
-- **Terms of Service** (`/terms`, content in `content/legal/terms.ts`): limitation of liability, disclaimers, dispute venue (Orange County courts; no arbitration clause was added), IP license, minors agreeing via parent.
+- **Terms of Service** (`/terms`, content in `content/legal/terms.ts`): limitation of liability, disclaimers, dispute venue (state or federal courts in California, with no county named per the no-geography rule; confirm this works; no arbitration clause was added), IP license, minors agreeing via parent.
 - **Privacy Policy** (`/privacy`, content in `content/legal/privacy.ts`): CCPA/CPRA rights section, CalOPPA items, retention periods, minors section.
 - **SMS consent wording** on /contact (`components/ContactForm.tsx`). It only matters once an SMS tool is connected. Review it together with the privacy policy before sending any texts.
 
@@ -49,7 +49,7 @@ Things that need your real input. Each line names the file to edit.
 
 
 ## Build Plan v4
-- **Externship provider (confirm before launch):** if students really complete company-designed virtual externship projects (e.g. through Extern), put the provider name in `content/site.ts` → `externships.provider`. Only then does the site say "2 externships with Fortune 500 companies". Until then it says "2 virtual externship projects".
+- **Externships:** no longer listed as a program deliverable anywhere on the site (the "what the student leaves with" list is now the six parts). If externships stay in the program, decide which of the six parts they belong to. The `/blog/externships` guide still exists.
 - **Internship offer count:** set `content/site.ts` → `founder.offerCount` (e.g. "12"). Until then the site says "7+ internships worked, and offers from many more"; once set, it says "[N] internship offers" in the stats row, founder section, and coach card.
 - **LinkedIn:** the footer social grid now shows your personal LinkedIn. If you create a First Offer Academy company page, put it in `socials.linkedin`; `founder.linkedin` stays your personal profile.
 - **Review the curriculum expansion:** `content/curriculum.ts` expands each week in `docs/CURRICULUM-SOURCE.md` into 4–6 teaching bullets, a 1:1 focus, coach questions, and a parent line. Anything beyond the source is my wording; check it matches how you'll actually run each week. It powers /curriculum, the 12 week pages, and the /program syllabus.

@@ -15,7 +15,7 @@ export default function CoachCard({ focus }: { focus?: string }) {
           <h3>Tyler Ho</h3>
           <span className="badge">Founder &amp; head coach</span>
         </div>
-        <p className="coach-headline">{founderInternships()} across investment banking, venture, consulting, FP&amp;A, and sales · UC Irvine, Finance &amp; CS</p>
+        <p className="coach-headline">{founderInternships()} across investment banking, venture, consulting, FP&amp;A, and sales · Finance &amp; Computer Science</p>
         <p>
           Coached eight first-year students to internships.{focus ? ` Leads ${focus} prep for the founding cohort.` : " Leads every track in the founding cohort."}
         </p>

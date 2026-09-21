@@ -1,4 +1,4 @@
-import { phases, weekly } from "@/content/program";
+import { phases, throughout, weekly } from "@/content/program";
 
 export default function HowItWorks() {
   return (
@@ -6,7 +6,7 @@ export default function HowItWorks() {
       <div className="wrap">
         <div className="section-head">
           <span className="eyebrow">How it works</span>
-          <h2>12 weeks. One standard. A real search, fully executed.</h2>
+          <h2>12 weeks. Six parts. A real search, fully executed.</h2>
         </div>
         <ol className="timeline" style={{ listStyle: "none", padding: 0, margin: 0 }}>
           {phases.map((p, i) => (
@@ -18,6 +18,11 @@ export default function HowItWorks() {
             </li>
           ))}
         </ol>
+        <div className="card throughout">
+          <span className="weeks">{throughout.weeks}</span>
+          <h3>{throughout.name}</h3>
+          <p>{throughout.body}</p>
+        </div>
         <div className="weekly-strip">
           {weekly.map((w) => (
             <div className="card" key={w.name}>

@@ -69,7 +69,7 @@ export const weeks: Week[] = [
     teach: [
       "The 5 things that matter, ranked: networking, resume, enthusiasm, behaviorals, technicals. Most students study them in reverse order.",
       "Why clubs matter less than people think. A club is one way to get reps and contacts; it is not a gate you have to pass.",
-      "How the freshman and sophomore market actually works: boutiques, middle-market firms, local Orange County firms, startups, and early-insight and diversity programs.",
+      "How the freshman and sophomore market actually works: boutiques, middle-market firms, local firms, startups, and early-insight and diversity programs.",
       "What a 12-week search looks like on paper: the level gates, the weekly minimum from Week 3, and how the tracker is graded.",
       "How to answer the 25 self-questions honestly. They're the raw material for every story you'll tell in an interview.",
     ],
@@ -118,7 +118,7 @@ export const weeks: Week[] = [
     phase: "Foundation",
     objective: "A working outreach machine, and the first 50 sequenced emails out the door.",
     teach: [
-      "The tiered target list: A (dream firms, for relationships), B (realistic: boutiques, middle market, OC firms, startups), and C (safe).",
+      "The tiered target list: A (dream firms, for relationships), B (realistic: boutiques, middle market, local firms, startups), and C (safe).",
       "Sourcing contacts with tools like Apollo or RecruitEm, and checking that the person actually does the job you want to hear about.",
       "Building the AI email automation: personalization prompts, mail merge and sequencing, and the follow-up steps loaded from day one.",
       "The tracker. Only track people who reply. Everyone else lives in the sequence until they do.",
