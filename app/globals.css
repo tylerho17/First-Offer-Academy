@@ -847,3 +847,12 @@ a.topic-pill:hover { background: var(--navy); color: var(--cream); }
 .price-policy { display: inline-block; margin-top: 14px; font-size: 15px; font-weight: 600; color: var(--navy); text-decoration: underline; }
 .apply-note { margin-top: 20px; font-size: 15px; text-align: center; }
 .faq-item .answer p + p { margin-top: 10px; }
+
+/* ---------- Consent (task 8) ---------- */
+.consent-group { display: grid; gap: 14px; }
+.consent-group legend { margin-bottom: 12px; }
+.consent-group .consent label { font-size: 15px; }
+.consent-group .consent label a { text-decoration: underline; }
+.consent-note { font-size: 14px; }
+.nl-fine { font-size: 13px; color: var(--navy); margin: 2px 0 0 !important; }
+.nl-fine a { color: var(--navy); text-decoration: underline; }

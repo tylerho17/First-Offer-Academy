@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import { site } from "@/content/site";
 
@@ -15,6 +16,8 @@ export default function ApplyForm() {
     const payload = {
       ...Object.fromEntries(data.entries()),
       tracks: data.getAll("tracks"),
+      agreeTerms: data.get("agreeTerms") === "on",
+      updatesConsent: data.get("updatesConsent") === "on",
     };
 
     if (!site.applyEndpoint) {
@@ -89,6 +92,17 @@ export default function ApplyForm() {
       <h2 className="form-group-title">Parent or guardian <span className="hint" style={{ fontFamily: "var(--sans)", fontSize: 15 }}>(optional)</span></h2>
       <div className="field"><label htmlFor="parentName">Name</label><input id="parentName" name="parentName" /></div>
       <div className="field"><label htmlFor="parentEmail">Email</label><input id="parentEmail" name="parentEmail" type="email" /></div>
+
+      <div className="field full consent-group">
+        <div className="consent">
+          <input id="agreeTerms" name="agreeTerms" type="checkbox" required />
+          <label htmlFor="agreeTerms">I agree to the <Link href="/terms">Terms</Link> and <Link href="/privacy">Privacy Policy</Link>. <span aria-hidden="true">*</span></label>
+        </div>
+        <div className="consent">
+          <input id="updatesConsent" name="updatesConsent" type="checkbox" />
+          <label htmlFor="updatesConsent">Send me program updates by email and text <span className="hint">(optional)</span>. Every email has an unsubscribe link; reply STOP to any text to opt out.</label>
+        </div>
+      </div>
 
       <div className="full" style={{ gridColumn: "1 / -1" }}>
         <button type="submit" className="btn btn-primary" disabled={status === "sending"}>

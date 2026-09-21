@@ -36,3 +36,6 @@ Ambiguous calls made during the autonomous build, and why.
 - **Task 6:** /refunds never states a refund deadline or withdrawal refund amount it doesn't have. Empty fields render as "Exact terms will be published here before deposits open". The cancellation-by-us full refund and the missed-payment process are drafted as consumer-friendly defaults and flagged for Tyler to confirm.
 - **Task 6:** FAQ entries can now carry an optional `link`; the deposit and payment-plan answers link to /refunds.
 - **Task 7:** Accessibility statement and code of conduct use the LegalPage layout (draft banner, TOC) like the other legal pages. No cookie banner, per the plan, since there are no tracking cookies.
+- **Task 8:** The story form also asks for an email (not in the spec's field list) so Tyler can confirm details and permission before publishing anything. The three publish permissions are separate, unchecked, optional checkboxes.
+- **Task 8:** The apply form's optional consent covers both email and text updates in one line, as the plan asked for "an optional SMS/email consent line".
+- **Task 8:** The testimonial release template includes an FTC endorsement-disclosure note in case any discount or payment is ever given for a testimonial.

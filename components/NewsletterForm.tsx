@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import { site } from "@/content/site";
 
@@ -48,6 +49,7 @@ export default function NewsletterForm() {
       <button type="submit" className="btn btn-primary" disabled={status === "sending"}>
         {status === "sending" ? "Subscribing…" : "Subscribe"}
       </button>
+      <p className="nl-fine">Unsubscribe anytime. See our <Link href="/privacy">Privacy Policy</Link>.</p>
       {status === "unconnected" && <p className="nl-status" role="status">Signup isn&apos;t connected yet. Check back soon.</p>}
       {status === "error" && <p className="nl-status" role="alert">Something went wrong. Please try again.</p>}
     </form>
