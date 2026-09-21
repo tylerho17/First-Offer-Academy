@@ -5,7 +5,7 @@ import { tb } from "../toolkitBlocks";
 export const guide: Guide = {
   slug: "networking-call-framework",
   title: "The networking call: a full framework and question bank",
-  excerpt: "A reply isn't the win. The call is. How to prep in 15 minutes, open so it doesn't feel like an interview, listen 80% of the time, ask questions that prove you listened, and send the thank-you that gets you remembered.",
+  excerpt: "A reply isn't the win. The call is. How to prep fast, open so it doesn't feel like an interview, listen 80% of the time, ask questions that prove you listened, and send the thank-you that gets you remembered.",
   category: "Networking",
   date: "2026-09-21",
   author: "Tyler Ho",
@@ -17,7 +17,7 @@ export const guide: Guide = {
     p("The biggest failure mode on a networking call is being dry. The goal of a call isn't to extract information. It's to have a real conversation that the other person enjoys and remembers, so that when a role opens or a colleague asks \"know any good students?\", your name comes to mind."),
     p("This is the framework I use for every call. It covers how to prep, how to open, how to structure 20 minutes, the questions to ask, the thank-you, and the mistakes that sink calls. The one-page call framework is a free download."),
 
-    h2("Before the call: 15 minutes of prep"),
+    h2("Before the call: quick prep"),
     p("Prep with AI on the firm and the person, then check every fact yourself. You want four things in your head, not on a script:"),
     ol(
       "What the firm does, in two sentences you could say out loud.",
@@ -99,7 +99,7 @@ export const guide: Guide = {
     h2("After ten calls"),
     p("Something changes around the tenth call. You stop being nervous, you start recognizing patterns in what people say about their jobs, and your \"why this field\" answer starts writing itself from real conversations. That's the goal. Every call is research for your interviews, and every call is a relationship that might open a door."),
     check("Every call",
-      "15 minutes of prep, facts verified",
+      "Quick prep done, facts verified",
       "Opened with \"anything exciting lately?\"",
       "Listened 80% of the time",
       "At least one follow-up question about something they said",

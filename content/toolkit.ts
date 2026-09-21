@@ -229,7 +229,7 @@ export const followUpCadence = {
   rule: "At most 4 follow-ups. Weekly in November and December (peak season); biweekly to monthly off-peak.",
   steps: [
     { step: "Follow-up 1", peak: "Day 7", offPeak: "Day 14", text: "Hi [First name], just bumping this up in case it got buried. Would love 20 minutes whenever works. Thank you!" },
-    { step: "Follow-up 2", peak: "Day 14", offPeak: "Day 28", text: "Hi [First name], I know this time of year is busy. I'm still very interested in hearing about your path at [firm]. Even 15 minutes would help a lot." },
+    { step: "Follow-up 2", peak: "Day 14", offPeak: "Day 28", text: "Hi [First name], I know this time of year is busy. I'm still very interested in hearing about your path at [firm]. Even a short call would help a lot." },
     { step: "Follow-up 3", peak: "Day 21", offPeak: "Day 45", text: "Hi [First name], I've been [one real update: reading about X / started Y]. It made me want to ask you about [specific question] even more. Any chance for a quick call?" },
     { step: "Follow-up 4 (last)", peak: "Day 28", offPeak: "Day 75", text: "Hi [First name], I'll leave it here so I'm not crowding your inbox. If a call ever makes sense down the road, I'd be grateful. Thanks for reading." },
   ],

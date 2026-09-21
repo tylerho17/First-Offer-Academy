@@ -9,4 +9,4 @@ Re-read this file after any restart. Continue from the first unchecked task. Nev
 - [x] 5. The First Offer Playbook PDF
 - [x] 6. Free loot: downloadable templates
 - [x] 7. In-depth recruiting guides
-- [ ] 8. QA and report
+- [x] 8. QA and report
