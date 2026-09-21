@@ -16,7 +16,7 @@ Re-read this file after any restart. Continue from the first unchecked task. Nev
 - [x] A2.7 Contact page: WSM form
 
 ## Phase B — Legal and trust
-- [ ] 3. Legal page system
+- [x] 3. Legal page system
 - [ ] 4. Privacy Policy
 - [ ] 5. Terms of Service
 - [ ] 6. Refund & Payment Policy

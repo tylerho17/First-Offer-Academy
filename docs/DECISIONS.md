@@ -26,3 +26,5 @@ Ambiguous calls made during the autonomous build, and why.
 - **A2.6:** Social tiles are 48px on mobile (4 × 48 + gaps fits the 375px column) and 56px from 768px up.
 - **A2.7:** Added an optional "Message" textarea to the contact form. The spec's field list had none, but the page copy invites people to "send a message", so a form with nowhere to write one would be confusing.
 - **A2.7:** New `lib/submit.ts` posts every form's JSON to its `/api/*` route and treats 404 (route not built yet) and 503 (backend env not set) as "not connected yet". All forms share this pattern from here on.
+- **Task 3:** Legal content reuses the article `Block` type unchanged. For links inside legal text, `LegalPage` renders `[label](/path)` as a link and bare email addresses as mailto links, so `content/legal/*.ts` stays plain strings.
+- **Task 3:** On mobile the table of contents is an open `<details>` ("On this page") above the text; on desktop (≥1000px) it's a sticky sidebar.
