@@ -909,3 +909,12 @@ a.topic-pill:hover { background: var(--navy); color: var(--cream); }
 .apply-done h2 { margin-bottom: 10px; }
 .apply-done .btn-row { margin-top: 24px; }
 @media (max-width: 479px) { .apply-done .btn { white-space: normal; text-align: center; } }
+
+/* ---------- /admin (task 20) ---------- */
+.admin-title { font-size: 36px; }
+.admin-tabs { justify-content: flex-start; }
+.admin-bar { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between; margin: 24px 0 16px; font-size: 15px; }
+.admin-table { border-collapse: collapse; font-size: 13px; min-width: 100%; }
+.admin-table th, .admin-table td { padding: 10px 12px; border-bottom: 1px solid var(--navy-line); text-align: left; vertical-align: top; }
+.admin-table th { position: sticky; top: 0; background: var(--cream); color: var(--navy); font-size: 12px; text-transform: uppercase; letter-spacing: .06em; white-space: nowrap; }
+.admin-table td { max-width: 360px; white-space: pre-wrap; overflow-wrap: anywhere; }

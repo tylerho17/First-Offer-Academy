@@ -37,7 +37,7 @@ Re-read this file after any restart. Continue from the first unchecked task. Nev
 - [x] 17. Supabase-backed forms
 - [x] 18. Email confirmations
 - [x] 19. Stripe deposit
-- [ ] 20. Admin view
+- [x] 20. Admin view
 - [ ] 21. Analytics
 
 ## Phase E — Finish

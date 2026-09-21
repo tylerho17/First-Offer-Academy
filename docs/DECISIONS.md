@@ -64,3 +64,5 @@ Ambiguous calls made during the autonomous build, and why.
 - **Task 19:** Removed the unused `depositUrl` (payment link) from `content/site.ts`; Checkout Sessions replace it. The deposit amount lives in `site.cohort.depositCents`.
 - **Task 19:** /apply no longer auto-redirects to Calendly after submit. It shows an "Application received" panel with "Book my fit call" (primary) and, when enabled, the deposit button, so the plan's "deposit button on /apply after submission" has somewhere to live.
 - **Task 19:** Pages decide whether to show the button at build time; redeploy after adding the key. Verified with a fake key and a temporary deadline (both reverted).
+- **Task 20:** /admin is guarded twice: `middleware.ts` (Basic Auth; 404 when env unset) and a check inside the page and export route. Credential comparison is constant-time, and both parts are always compared. Responses are `no-store` and `noindex`.
+- **Task 20:** Tables are tabs (`/admin?table=…`), showing the latest 1,000 rows; CSV export (`/admin/export/<table>`) returns up to 100,000 rows with a UTF-8 BOM (so Excel opens it cleanly) and spreadsheet formula-injection protection.
