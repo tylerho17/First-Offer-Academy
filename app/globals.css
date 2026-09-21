@@ -819,7 +819,7 @@ a.topic-pill:hover { background: var(--navy); color: var(--cream); }
 
 /* ---------- Legal pages (task 3) ---------- */
 .legal-hero { padding-bottom: 8px; }
-.legal-draft { display: inline-block; background: var(--cream); border: 2px dashed rgba(63,102,144,.55); border-radius: 12px; padding: 10px 16px; color: var(--navy); font-size: 15px; margin-bottom: 24px; }
+.legal-draft { display: block; width: fit-content; background: var(--cream); border: 2px dashed rgba(63,102,144,.55); border-radius: 12px; padding: 10px 16px; color: var(--navy); font-size: 15px; margin-bottom: 24px; }
 .legal-updated { margin-top: 14px; font-size: 15px; color: var(--dusty); font-weight: 600; }
 .legal-layout { display: grid; gap: 32px; }
 @media (min-width: 1000px) { .legal-layout { grid-template-columns: 260px minmax(0, 1fr); gap: 64px; align-items: start; } }
@@ -839,5 +839,8 @@ a.topic-pill:hover { background: var(--navy); color: var(--cream); }
 .legal-body p, .legal-body li { font-size: 17px; line-height: 1.7; }
 .legal-body p { margin-top: 16px; }
 .legal-body ul { padding-left: 22px; margin-top: 12px; }
+/* Tailwind preflight removes list markers; running-copy lists keep them. */
+.legal-body ul, .article-body ul, .prose ul { list-style: disc; }
+.legal-body li::marker, .article-body li::marker, .prose li::marker { color: var(--dusty); }
 .legal-body li { margin-top: 8px; }
 .legal-contact { margin-top: 48px !important; padding-top: 20px; border-top: 1px solid var(--navy-line); }

@@ -27,6 +27,22 @@ export const site = {
   // TODO: where applications go (Supabase edge function, Tally, Formspree...).
   // Empty = the form shows a "not connected yet" notice instead of submitting.
   applyEndpoint: "",
+  // TODO(Tyler): legal business entity name (e.g. "First Offer Academy LLC").
+  // Empty = the privacy policy and terms say "First Offer Academy" only.
+  legalEntityName: "",
+  city: "Irvine, California",
+
+  // Every outside service that touches personal data. The privacy policy
+  // lists exactly these, so keep it accurate when a tool is added or dropped.
+  serviceProviders: [
+    { name: "Vercel", purpose: "Website hosting and cookieless, aggregate site analytics", url: "https://vercel.com/legal/privacy-policy" },
+    { name: "Supabase", purpose: "Database that stores form submissions (applications, contact messages, subscribers)", url: "https://supabase.com/privacy" },
+    { name: "Stripe", purpose: "Payment processing for deposits and tuition", url: "https://stripe.com/privacy" },
+    { name: "Calendly", purpose: "Scheduling calls", url: "https://calendly.com/privacy" },
+    { name: "Resend", purpose: "Sending confirmation and program emails", url: "https://resend.com/legal/privacy-policy" },
+    { name: "YouTube and Vimeo", purpose: "Embedded videos (loaded in privacy-enhanced mode; they only collect data when you play a video)", url: "https://policies.google.com/privacy" },
+  ],
+
   // TODO: real inbox on the domain.
   email: "hello@firstofferacademy.com",
   // TODO: social profile URLs. Empty ones don't render; the footer tile grid

@@ -28,3 +28,7 @@ Ambiguous calls made during the autonomous build, and why.
 - **A2.7:** New `lib/submit.ts` posts every form's JSON to its `/api/*` route and treats 404 (route not built yet) and 503 (backend env not set) as "not connected yet". All forms share this pattern from here on.
 - **Task 3:** Legal content reuses the article `Block` type unchanged. For links inside legal text, `LegalPage` renders `[label](/path)` as a link and bare email addresses as mailto links, so `content/legal/*.ts` stays plain strings.
 - **Task 3:** On mobile the table of contents is an open `<details>` ("On this page") above the text; on desktop (≥1000px) it's a sticky sidebar.
+- **Task 4:** Retention periods: applications and contact messages 2 years; subscribers until unsubscribe; enrolled students' program records for the program plus 2 years; payment records as tax law requires; testimonials while permission stands. (The plan specified the first two; the rest fill obvious gaps.)
+- **Task 4:** The policy offers CCPA/CPRA-style rights to everyone, not just Californians, and doesn't claim the CCPA legally applies (a new small business likely falls under its thresholds). That's accurate whichever way the attorney reads it.
+- **Task 4:** Listed Resend as the email provider (task 18 uses it) and YouTube/Vimeo for embedded videos. The newsletter tool isn't chosen yet; add it to `site.serviceProviders` when it is.
+- **Task 4:** Restored bullet markers on legal, article, and prose lists; Tailwind's preflight had silently removed them.

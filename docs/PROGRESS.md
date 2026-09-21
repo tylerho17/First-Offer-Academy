@@ -17,7 +17,7 @@ Re-read this file after any restart. Continue from the first unchecked task. Nev
 
 ## Phase B — Legal and trust
 - [x] 3. Legal page system
-- [ ] 4. Privacy Policy
+- [x] 4. Privacy Policy
 - [ ] 5. Terms of Service
 - [ ] 6. Refund & Payment Policy
 - [ ] 7. Accessibility, cookie notice, code of conduct

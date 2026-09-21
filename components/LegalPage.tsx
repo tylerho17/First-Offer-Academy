@@ -4,7 +4,7 @@ import { slugify } from "@/content/legal/types";
 
 // [label](href) → link, bare email → mailto. Everything else stays text.
 function Inline({ text }: { text: string }) {
-  const parts = text.split(/(\[[^\]]+\]\([^)]+\)|[\w.+-]+@[\w-]+\.[\w.]+)/g);
+  const parts = text.split(/(\[[^\]]+\]\([^)]+\)|[\w.+-]+@[\w-]+(?:\.[\w-]+)+)/g);
   return (
     <>
       {parts.map((part, i) => {
@@ -13,7 +13,7 @@ function Inline({ text }: { text: string }) {
           const [, label, href] = md;
           return href.startsWith("/") ? <Link key={i} href={href}>{label}</Link> : <a key={i} href={href}>{label}</a>;
         }
-        if (/^[\w.+-]+@[\w-]+\.[\w.]+$/.test(part)) return <a key={i} href={`mailto:${part}`}>{part}</a>;
+        if (/^[\w.+-]+@[\w-]+(?:\.[\w-]+)+$/.test(part)) return <a key={i} href={`mailto:${part}`}>{part}</a>;
         return part;
       })}
     </>
