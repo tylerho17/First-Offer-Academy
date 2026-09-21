@@ -976,3 +976,5 @@ a.card, .story-card, .icon-tile { transition: transform .15s ease, box-shadow .1
 .plan-leaves { margin-top: 14px; gap: 10px; }
 .plan-leaves li { font-size: 16px; }
 .plan-leaves-note { margin-top: 12px; font-size: 14px; color: var(--cream); opacity: .85; }
+.linkedin-link { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; color: var(--dusty); text-decoration: underline; }
+.linkedin-link svg { width: 22px; height: 22px; flex: none; }

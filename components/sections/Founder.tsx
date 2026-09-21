@@ -1,4 +1,6 @@
 import CallLink from "../CallLink";
+import LinkedInLink from "../LinkedInLink";
+import { site } from "@/content/site";
 
 export default function Founder() {
   return (
@@ -17,8 +19,10 @@ export default function Founder() {
             couldn&apos;t show me how recruiting worked.
           </p>
           <p>
-            So I figured it out myself: seven internships across investment banking, venture,
-            consulting, and finance, and an incoming investment banking offer. At UCI I led finance
+            So I figured it out myself: 7+ internships worked across investment banking, venture,
+            consulting, FP&amp;A, and sales,{" "}
+            {site.founder.offerCount ? `${site.founder.offerCount} internship offers` : "offers from many more"}, and an
+            incoming investment banking offer. At UCI I led finance
             recruiting education for a student investing organization and coached eight freshmen who
             landed internships in their first year. The system kept producing after I stepped back.
           </p>
@@ -39,6 +43,7 @@ export default function Founder() {
           <div className="btn-row">
             <CallLink>Book a call with Tyler</CallLink>
           </div>
+          <p style={{ marginTop: 18 }}><LinkedInLink /></p>
         </div>
       </div>
     </section>

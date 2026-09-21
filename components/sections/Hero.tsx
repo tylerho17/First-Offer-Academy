@@ -36,7 +36,7 @@ export default function Hero() {
           </div>
           <div className="float-card float-b">
             <span className="seal">Founder</span>
-            <div>7 internships before starting First Offer</div>
+            <div>7+ internships worked</div>
           </div>
           <div className="float-card float-a">
             <strong>8 students</strong>

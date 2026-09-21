@@ -51,3 +51,5 @@ Things that need your real input. Each line names the file to edit.
 
 ## Build Plan v4
 - **Externship provider (confirm before launch):** if students really complete company-designed virtual externship projects (e.g. through Extern), put the provider name in `content/site.ts` → `externships.provider`. Only then does the site say "2 externships with Fortune 500 companies". Until then it says "2 virtual externship projects".
+- **Internship offer count:** set `content/site.ts` → `founder.offerCount` (e.g. "12"). Until then the site says "7+ internships worked, and offers from many more"; once set, it says "[N] internship offers" in the stats row, founder section, and coach card.
+- **LinkedIn:** the footer social grid now shows your personal LinkedIn. If you create a First Offer Academy company page, put it in `socials.linkedin`; `founder.linkedin` stays your personal profile.

@@ -4,7 +4,7 @@ import FinalCta from "@/components/sections/FinalCta";
 
 export const metadata: Metadata = {
   title: "About",
-  description: "Why Tyler Ho built First Offer Academy: seven internships learned the hard way, eight freshmen coached into first-year internships, and a system for every student.",
+  description: "Why Tyler Ho built First Offer Academy: 7+ internships worked and offers from many more, eight freshmen coached into first-year internships, and a system for every student.",
 };
 
 export default function AboutPage() {

@@ -1,4 +1,6 @@
 import CallLink from "./CallLink";
+import LinkedInLink from "./LinkedInLink";
+import { founderInternships } from "@/content/site";
 
 // Leland-style coach card. No ratings or review counts until real reviews exist.
 export default function CoachCard({ focus }: { focus?: string }) {
@@ -13,7 +15,7 @@ export default function CoachCard({ focus }: { focus?: string }) {
           <h3>Tyler Ho</h3>
           <span className="badge">Founder &amp; head coach</span>
         </div>
-        <p className="coach-headline">7 internships across investment banking, venture, consulting, and finance · UC Irvine, Finance &amp; CS</p>
+        <p className="coach-headline">{founderInternships()} across investment banking, venture, consulting, FP&amp;A, and sales · UC Irvine, Finance &amp; CS</p>
         <p>
           Coached eight first-year students to internships.{focus ? ` Leads ${focus} prep for the founding cohort.` : " Leads every track in the founding cohort."}
         </p>
@@ -23,6 +25,7 @@ export default function CoachCard({ focus }: { focus?: string }) {
         <div className="btn-row" style={{ marginTop: 20 }}>
           <CallLink className="btn btn-primary">Free intro call</CallLink>
         </div>
+        <p style={{ marginTop: 16 }}><LinkedInLink /></p>
       </div>
     </article>
   );

@@ -36,7 +36,7 @@ export default function Home() {
           email: site.email,
           address: { "@type": "PostalAddress", addressLocality: "Irvine", addressRegion: "CA", addressCountry: "US" },
           areaServed: "Orange County, California",
-          founder: { "@type": "Person", name: "Tyler Ho" },
+          founder: { "@type": "Person", name: site.founder.name, sameAs: [site.founder.linkedin] },
           ...(sameAs.length ? { sameAs } : {}),
         }}
       />

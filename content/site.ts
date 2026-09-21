@@ -1,9 +1,20 @@
 // Site-wide settings. Every outbound link on the site comes from here.
 
+const founderLinkedIn = "https://www.linkedin.com/in/tylerho1";
+
 export const site = {
   name: "First Offer Academy",
   tagline: "Build the skills. Be that candidate. Get the offer.",
   domain: "firstofferacademy.com",
+
+  founder: {
+    name: "Tyler Ho",
+    linkedin: founderLinkedIn,
+    // TODO(Tyler): exact number of internship offers you received, e.g. "12".
+    // Empty = the site says "and offers from many more". Once set, stats and
+    // the founder copy say "[N] internship offers".
+    offerCount: "",
+  },
 
   // Pre-launch switch. true = show clearly labeled empty slots (testimonials,
   // employer bar) so you can see where content goes. Set to false before you
@@ -45,7 +56,7 @@ export const site = {
   // hides entirely while all are empty.
   socials: {
     instagram: "",
-    linkedin: "",
+    linkedin: founderLinkedIn,
     youtube: "",
     tiktok: "",
     facebook: "",
@@ -82,3 +93,10 @@ export const site = {
   depositRefundDeadline: "", // e.g. "December 15, 2026"
   withdrawalPolicy: "", // e.g. "Withdraw before Week 3 for a prorated refund of unused weeks. No refunds after Week 3."
 };
+
+// "7+ internships worked, and offers from many more", or the exact offer
+// count once Tyler sets founder.offerCount.
+export const founderInternships = () =>
+  site.founder.offerCount
+    ? `7+ internships worked, and ${site.founder.offerCount} internship offers`
+    : "7+ internships worked, and offers from many more";
