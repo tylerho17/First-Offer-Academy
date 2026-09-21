@@ -22,3 +22,5 @@ Ambiguous calls made during the autonomous build, and why.
 - **A2.5:** `/results/by-type` filter is single-select ("All" plus one type) with `aria-pressed` chips and a live count for screen readers. Multi-select would return near-empty results with a small story set.
 - **A2.5:** `/results/parents` shows labeled placeholder slots pre-launch; after `showPlaceholders` is off and with zero parent quotes, it shows an honest "being added" card with a call link rather than an empty page.
 - **A2.5:** Created a minimal `/share-your-story` stub so the new nav link doesn't 404; task 8 replaces it with the real form.
+- **A2.6:** Footer "Navigation" keeps an Apply link (the old Program column had one) since the new "Program Details" column is fixed to five items. Track links moved out of the footer; they remain in the header Program dropdown.
+- **A2.6:** Social tiles are 48px on mobile (4 × 48 + gaps fits the 375px column) and 56px from 768px up.

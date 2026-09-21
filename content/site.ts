@@ -29,12 +29,17 @@ export const site = {
   applyEndpoint: "",
   // TODO: real inbox on the domain.
   email: "hello@firstofferacademy.com",
-  // TODO: social profile URLs. Empty ones don't render.
+  // TODO: social profile URLs. Empty ones don't render; the footer tile grid
+  // hides entirely while all are empty.
   socials: {
     instagram: "",
     linkedin: "",
-    tiktok: "",
     youtube: "",
+    tiktok: "",
+    facebook: "",
+    reddit: "",
+    spotify: "",
+    podcast: "", // Apple Podcasts or any podcast feed page
   },
   // Link to a public review platform (Google, etc.). Stays hidden in the
   // header until real reviews exist.
