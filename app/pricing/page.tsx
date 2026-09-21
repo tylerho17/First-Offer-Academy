@@ -5,6 +5,8 @@ import { included } from "@/content/program";
 import LogoMarquee from "@/components/sections/LogoMarquee";
 import FaqList from "@/components/sections/FaqList";
 import CallLink from "@/components/CallLink";
+import DepositButton from "@/components/DepositButton";
+import { depositEnabled } from "@/lib/deposit";
 import { Check } from "@/components/Icons";
 
 export const metadata: Metadata = {
@@ -91,6 +93,7 @@ export default function PricingPage() {
               <p className="pay-amt">{c.deposit} deposit</p>
               <p>{site.refundTerms || "Refundable. Exact refund dates are published before deposits open."}</p>
               <p style={{ marginTop: 12 }}><Link href="/refunds">Refund &amp; payment policy →</Link></p>
+              {depositEnabled() && <div style={{ marginTop: 16 }}><DepositButton /></div>}
             </div>
           </div>
         </div>

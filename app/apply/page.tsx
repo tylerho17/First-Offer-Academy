@@ -3,6 +3,7 @@ import PageHero from "@/components/PageHero";
 import ApplyForm from "@/components/ApplyForm";
 import Link from "next/link";
 import { site } from "@/content/site";
+import { depositEnabled } from "@/lib/deposit";
 
 export const metadata: Metadata = {
   title: "Apply",
@@ -20,7 +21,7 @@ export default function ApplyPage() {
       <section className="section" style={{ paddingTop: 16 }}>
         <div className="wrap">
           <div className="card form-card">
-            <ApplyForm />
+            <ApplyForm depositEnabled={depositEnabled()} />
           </div>
           <p className="apply-note">
             Questions about cost? See pricing and the <Link href="/refunds">Refund &amp; Payment Policy</Link>.

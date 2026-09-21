@@ -24,6 +24,7 @@ Things that need your real input. Each line names the file to edit.
 - **SMS consent wording** on /contact (`components/ContactForm.tsx`). It only matters once an SMS tool is connected. Review it together with the privacy policy before sending any texts.
 
 ## Keys and accounts
+- **Stripe:** set `STRIPE_SECRET_KEY` (start with a test key) **and** `depositRefundDeadline` in `content/site.ts`, then redeploy. The deposit button stays hidden until both exist. `site.cohort.depositCents` must match `site.cohort.deposit`.
 - **Resend:** verify firstofferacademy.com in Resend, then set `RESEND_API_KEY`, `EMAIL_FROM` (e.g. `First Offer Academy <hello@firstofferacademy.com>`), and `NOTIFY_EMAIL` (where new-application alerts go). Emails are skipped silently until set.
 - **Supabase:** create a project, run `supabase/migrations/001_init.sql` in the SQL editor, then set `SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY` in Vercel (see `.env.example`). Until then, every form shows "not connected yet".
 

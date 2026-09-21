@@ -5,11 +5,14 @@ import { useState } from "react";
 import { site } from "@/content/site";
 import { postForm } from "@/lib/submit";
 import Honeypot from "./Honeypot";
+import CallLink from "./CallLink";
+import DepositButton from "./DepositButton";
 
 const tracks = ["Finance", "Consulting", "Marketing", "Tech"];
 
-export default function ApplyForm() {
+export default function ApplyForm({ depositEnabled = false }: { depositEnabled?: boolean }) {
   const [status, setStatus] = useState<"idle" | "sending" | "done" | "error" | "unconnected">("idle");
+  const [email, setEmail] = useState("");
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -28,8 +31,27 @@ export default function ApplyForm() {
       setStatus(result);
       return;
     }
+    setEmail(String(data.get("email") ?? ""));
     setStatus("done");
-    window.location.href = site.calendlyUrl;
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  if (status === "done") {
+    return (
+      <div className="apply-done" role="status">
+        <h2>Application received.</h2>
+        <p>Thank you. Tyler reads every application personally. Next step: book a short fit call.</p>
+        <div className="btn-row">
+          <CallLink className="btn btn-primary">Book my fit call</CallLink>
+          {depositEnabled && <DepositButton email={email} />}
+        </div>
+        {depositEnabled && (
+          <p className="apply-note" style={{ textAlign: "left" }}>
+            Ready to commit? The {site.cohort.deposit} deposit is refundable. See the <Link href="/refunds">Refund &amp; Payment Policy</Link>.
+          </p>
+        )}
+      </div>
+    );
   }
 
   return (

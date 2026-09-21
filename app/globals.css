@@ -906,3 +906,6 @@ a.topic-pill:hover { background: var(--navy); color: var(--cream); }
 .zh h1 { line-height: 1.25; }
 .zh .why-text { margin-top: 12px; }
 .hp { position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden; }
+.apply-done h2 { margin-bottom: 10px; }
+.apply-done .btn-row { margin-top: 24px; }
+@media (max-width: 479px) { .apply-done .btn { white-space: normal; text-align: center; } }
