@@ -19,7 +19,7 @@ export default function LogoMarquee() {
             <div className={`logo-tile${"placeholder" in e ? " is-placeholder" : ""}`} key={i} aria-hidden={i >= items.length}>
               {e.logo ? (
                 // eslint-disable-next-line @next/next/no-img-element
-                <img src={e.logo} alt={e.name} />
+                <img src={e.logo} alt={e.name} width={140} height={56} loading="lazy" />
               ) : (
                 <span>{e.name}</span>
               )}

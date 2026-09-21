@@ -1,5 +1,11 @@
 import { site } from "@/content/site";
 
+// "4 / 3" → 1.333…
+const ratioValue = (r: string) => {
+  const [w, h] = r.split("/").map((n) => parseFloat(n));
+  return w && h ? w / h : 4 / 3;
+};
+
 // Generic proof asset: an image, audio clip, or video file. With no `src` it
 // renders a labeled placeholder while placeholders are on, and nothing after.
 export default function ProofSlot({
@@ -29,7 +35,7 @@ export default function ProofSlot({
     return (
       <figure className="proof">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={src} alt={alt ?? label} style={{ aspectRatio: ratio }} loading="lazy" />
+        <img src={src} alt={alt ?? label} style={{ aspectRatio: ratio }} width={1200} height={Math.round(1200 / ratioValue(ratio))} loading="lazy" />
         <figcaption>{label}</figcaption>
       </figure>
     );

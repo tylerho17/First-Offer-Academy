@@ -3,6 +3,8 @@ import { programOverview } from "@/content/programOverview";
 import CallLink from "../../CallLink";
 import VideoSlot from "../../VideoSlot";
 import Ornament from "../../Ornament";
+import ArchPhoto from "../../ArchPhoto";
+import { site } from "@/content/site";
 
 export default function ProgramHero() {
   const h = programOverview.hero;
@@ -19,7 +21,11 @@ export default function ProgramHero() {
             <CallLink />
           </div>
         </div>
-        <VideoSlot url={h.videoUrl} label={h.videoLabel} note="2–3 minutes" />
+        {h.videoUrl || site.showPlaceholders ? (
+          <VideoSlot url={h.videoUrl} label={h.videoLabel} note="2–3 minutes" />
+        ) : (
+          <ArchPhoto />
+        )}
       </div>
     </section>
   );

@@ -9,7 +9,7 @@ function QuoteCard({ t }: { t: Testimonial }) {
       <figcaption className="who">
         {t.photo && (
           // eslint-disable-next-line @next/next/no-img-element
-          <img src={t.photo} alt={t.name} />
+          <img src={t.photo} alt={t.name} width={44} height={44} loading="lazy" />
         )}
         <div>
           <strong>{t.name}</strong>

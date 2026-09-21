@@ -54,7 +54,7 @@ try {
       await page.goto(BASE + route, { waitUntil: "networkidle" });
       await page.evaluate(() => document.fonts.ready);
       // Reveal-on-scroll content: show everything before capturing.
-      await page.addStyleTag({ content: ".reveal.reveal{opacity:1!important;transform:none!important}" });
+      await page.addStyleTag({ content: ".reveal.reveal{opacity:1!important;transform:none!important} *,*::before,*::after{transition:none!important}" });
 
       const found = await page.evaluate(() => {
         const out = [];
@@ -67,7 +67,7 @@ try {
         while ((n = walker.nextNode())) {
           if (!n.textContent.trim()) continue;
           const el = n.parentElement;
-          if (!el || el.closest("[data-scroller], .marquee, .table-scroll, .videos, .sr-only, .footer-nl, .announce")) continue;
+          if (!el || el.closest("[data-scroller], .marquee, .table-scroll, .videos, .sr-only, .hp, .footer-nl, .announce")) continue;
           const style = getComputedStyle(el);
           if (style.visibility === "hidden" || style.display === "none") continue;
           const range = document.createRange();

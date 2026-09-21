@@ -42,5 +42,5 @@ Re-read this file after any restart. Continue from the first unchecked task. Nev
 
 ## Phase E — Finish
 - [x] 22. Polish
-- [ ] 23. Final QA
+- [x] 23. Final QA
 - [ ] 24. Session report
