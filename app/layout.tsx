@@ -4,6 +4,8 @@ import AnnouncementBar from "@/components/AnnouncementBar";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AnalyticsEvents from "@/components/AnalyticsEvents";
+import Reveal from "@/components/Reveal";
+import BackToTop from "@/components/BackToTop";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
@@ -34,10 +36,12 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body>
         <AnnouncementBar />
         <Header />
-        <main>{children}</main>
+        <main id="main" tabIndex={-1}>{children}</main>
         <Footer />
         <Analytics />
         <AnalyticsEvents />
+        <Reveal />
+        <BackToTop />
       </body>
     </html>
   );

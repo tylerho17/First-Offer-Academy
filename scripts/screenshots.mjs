@@ -54,7 +54,7 @@ try {
       await page.goto(BASE + route, { waitUntil: "networkidle" });
       await page.evaluate(() => document.fonts.ready);
       // Reveal-on-scroll content: show everything before capturing.
-      await page.addStyleTag({ content: ".reveal{opacity:1!important;transform:none!important}" });
+      await page.addStyleTag({ content: ".reveal.reveal{opacity:1!important;transform:none!important}" });
 
       const found = await page.evaluate(() => {
         const out = [];
