@@ -24,6 +24,7 @@ Things that need your real input. Each line names the file to edit.
 ## Keys and accounts
 
 ## Content to collect
+- **Referral reward** (if you offer one) → `content/site.ts` `referralReward`. Hidden on /refer until set. If it involves a tuition discount, add it to the Refund & Payment Policy too.
 - **Week-by-week syllabus detail** → `content/syllabus.ts` (`detail` for each of the 12 weeks). Empty weeks show their phase summary on /program.
 - **Social profile URLs** (Instagram, LinkedIn, YouTube, TikTok, Facebook, Reddit, Spotify, podcast) → `content/site.ts` `socials`. The footer tile grid appears once at least one is set.
 - **Review platform link** (once real reviews exist) → `content/site.ts` `reviewsUrl`. Adds "Reviews" to the Testimonials menu.

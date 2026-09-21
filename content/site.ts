@@ -57,6 +57,9 @@ export const site = {
     spotify: "",
     podcast: "", // Apple Podcasts or any podcast feed page
   },
+  // TODO(Tyler): referral reward, e.g. "$250 off tuition for you and your
+  // friend". Empty = /refer doesn't mention a reward at all.
+  referralReward: "",
   // Link to a public review platform (Google, etc.). Stays hidden in the
   // header until real reviews exist.
   reviewsUrl: "",

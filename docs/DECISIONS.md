@@ -50,3 +50,4 @@ Ambiguous calls made during the autonomous build, and why.
 - **Task 14:** The timeline PDF is rendered from branded HTML with Playwright (already a dev dependency) instead of adding a PDF library. Run `npm run pdf` after editing the freshman timeline article; the script warns if content spills past one page.
 - **Task 14:** If `/api/subscribe` isn't connected (503/404), /timeline still shows the download link with a note that nothing was saved, rather than blocking the download. Once Supabase is connected, the email is captured first.
 - **Task 14:** The hero "Freshman timeline" pill now points to /timeline ("Free timeline PDF"); the article is still linked from the Playbook.
+- **Task 15:** /refer requires a checkbox confirming the person being referred knows their contact is being shared (so the first outreach isn't unsolicited). Linked from the footer Contact column.

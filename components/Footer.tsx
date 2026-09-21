@@ -43,6 +43,7 @@ export default function Footer() {
             <ul>
               <li><a href={`mailto:${site.email}`}>{site.email}</a></li>
               <li><a href={site.calendlyUrl} target="_blank" rel="noopener noreferrer">Book a parent call</a></li>
+              <li><Link href="/refer">Refer a student</Link></li>
               <li>Irvine, California</li>
             </ul>
           </div>
