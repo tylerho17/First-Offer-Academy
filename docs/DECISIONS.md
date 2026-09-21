@@ -19,3 +19,6 @@ Ambiguous calls made during the autonomous build, and why.
 - **A2.4:** Mission copy lives in `content/home.ts`. The "View program details →" button is secondary (navy outline) because the hero's Apply is the page's primary button.
 - **A2.4:** On the home page, the Success Stories carousel replaces both the old "What students say" header and the 3 vertical video slots (the carousel cards carry the video). /results keeps the full wall with video slots.
 - **A2.4:** Employer grid threshold is a new constant `MIN_EMPLOYERS_FOR_GRID = 8` in `content/employers.ts`; the marquee keeps its own threshold of 4.
+- **A2.5:** `/results/by-type` filter is single-select ("All" plus one type) with `aria-pressed` chips and a live count for screen readers. Multi-select would return near-empty results with a small story set.
+- **A2.5:** `/results/parents` shows labeled placeholder slots pre-launch; after `showPlaceholders` is off and with zero parent quotes, it shows an honest "being added" card with a call link rather than an empty page.
+- **A2.5:** Created a minimal `/share-your-story` stub so the new nav link doesn't 404; task 8 replaces it with the real form.

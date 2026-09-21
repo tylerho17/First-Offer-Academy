@@ -36,6 +36,9 @@ export const site = {
     tiktok: "",
     youtube: "",
   },
+  // Link to a public review platform (Google, etc.). Stays hidden in the
+  // header until real reviews exist.
+  reviewsUrl: "",
   // TODO: newsletter signup endpoint (e.g. beehiiv). Empty = friendly "not connected" notice.
   newsletterEndpoint: "",
 

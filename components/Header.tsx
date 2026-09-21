@@ -3,6 +3,7 @@ import Logo from "./Logo";
 import NavDropdown from "./NavDropdown";
 import MobileNav from "./MobileNav";
 import { tracks } from "@/content/tracks";
+import { site } from "@/content/site";
 
 type Item = { label: string; href: string; children?: { label: string; href: string; note?: string }[] };
 
@@ -17,11 +18,15 @@ export const nav: Item[] = [
     ],
   },
   {
-    label: "Results",
+    label: "Testimonials",
     href: "/results",
     children: [
-      { label: "Student results", href: "/results" },
-      { label: "Parent stories", href: "/results#parents" },
+      { label: "Student testimonials", href: "/results" },
+      { label: "Parent testimonials", href: "/results/parents" },
+      { label: "Case studies by student type", href: "/results/by-type", note: "Community college, no club, and more" },
+      { label: "Share your story", href: "/share-your-story", note: "For current students and alumni" },
+      // A review-platform link appears only once real reviews exist.
+      ...(site.reviewsUrl ? [{ label: "Reviews", href: site.reviewsUrl }] : []),
     ],
   },
   { label: "Pricing", href: "/pricing" },
