@@ -80,6 +80,9 @@ export const privacy: LegalDoc = {
     { type: "h2", text: "Security" },
     { type: "p", text: "We use service providers with strong security practices, encrypted connections (HTTPS) across our website, and access controls so only the people who need information can see it. No system is perfectly secure, so if we ever learn of a breach that affects your information, we'll tell you as the law requires." },
 
+    { type: "h2", text: "Cookies" },
+    { type: "p", text: "We don't use advertising or tracking cookies, and we don't let advertisers place cookies on our website. Our analytics (Vercel Analytics) are cookieless. The website may use strictly necessary browser storage to work properly, for example to remember that you've already submitted a form. Embedded YouTube and Vimeo videos load in privacy-enhanced mode and only set cookies if you press play. If we ever add a tracking cookie, we'll update this section first and ask for your consent where the law requires it." },
+
     { type: "h2", text: "Do Not Track and Global Privacy Control" },
     { type: "p", text: "Some browsers send a \"Do Not Track\" signal. Because we don't track visitors across other websites, and our analytics don't use cookies or identify individuals, our website works the same way whether or not the signal is on. We also honor the Global Privacy Control signal as a request to opt out of sale or sharing, which we don't do in any case." },
 

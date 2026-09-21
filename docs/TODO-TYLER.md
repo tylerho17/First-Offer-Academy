@@ -11,6 +11,9 @@ Things that need your real input. Each line names the file to edit.
 - Set `showPlaceholders: false` in `content/site.ts` before sharing the site. Every empty video/proof/testimonial slot then disappears.
 
 ## Attorney review
+- **Cookie section** inside the Privacy Policy (`content/legal/privacy.ts`): accurate as long as no tracking cookies are added. Revisit if any ad pixel or cookie-based tool is ever installed.
+- **Code of Conduct** (`/code-of-conduct`, `content/legal/codeOfConduct.ts`): consequences and removal language.
+- **Accessibility Statement** (`/accessibility`, `content/legal/accessibility.ts`): confirm the 5-business-day response commitment.
 - **Refund & Payment Policy** (`/refunds`, content in `content/legal/refunds.ts`), especially the withdrawal and missed-payment sections.
 - **Terms of Service** (`/terms`, content in `content/legal/terms.ts`): limitation of liability, disclaimers, dispute venue (Orange County courts; no arbitration clause was added), IP license, minors agreeing via parent.
 - **Privacy Policy** (`/privacy`, content in `content/legal/privacy.ts`): CCPA/CPRA rights section, CalOPPA items, retention periods, minors section.

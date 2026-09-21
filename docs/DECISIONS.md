@@ -35,3 +35,4 @@ Ambiguous calls made during the autonomous build, and why.
 - **Task 5:** Terms use courts in Orange County for disputes, with no arbitration clause. Adding arbitration is a legal call for the attorney, not a default to invent.
 - **Task 6:** /refunds never states a refund deadline or withdrawal refund amount it doesn't have. Empty fields render as "Exact terms will be published here before deposits open". The cancellation-by-us full refund and the missed-payment process are drafted as consumer-friendly defaults and flagged for Tyler to confirm.
 - **Task 6:** FAQ entries can now carry an optional `link`; the deposit and payment-plan answers link to /refunds.
+- **Task 7:** Accessibility statement and code of conduct use the LegalPage layout (draft banner, TOC) like the other legal pages. No cookie banner, per the plan, since there are no tracking cookies.

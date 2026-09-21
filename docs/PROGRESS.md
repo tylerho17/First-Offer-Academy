@@ -20,7 +20,7 @@ Re-read this file after any restart. Continue from the first unchecked task. Nev
 - [x] 4. Privacy Policy
 - [x] 5. Terms of Service
 - [x] 6. Refund & Payment Policy
-- [ ] 7. Accessibility, cookie notice, code of conduct
+- [x] 7. Accessibility, cookie notice, code of conduct
 - [ ] 8. Consent and forms
 - [ ] 9. Footer legal row
 
