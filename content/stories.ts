@@ -1,0 +1,40 @@
+// Student success stories in "How [Name] landed [role]…" format.
+// Every story needs WRITTEN permission. A story renders only when
+// permission: true. The employer name renders only when employerPermission: true.
+// Seeded with zero stories on purpose. Add real ones as students agree.
+
+export const studentTypes = [
+  "Community college",
+  "No club",
+  "First-generation",
+  "Transfer",
+  "Freshman",
+  "Sophomore",
+] as const;
+
+export type StudentType = (typeof studentTypes)[number];
+
+export type Story = {
+  slug: string; // /results/<slug>
+  name: string; // first name + last initial: "Jamie L."
+  school: string;
+  year: string; // "Freshman year"
+  track: "Finance" | "Consulting" | "Marketing" | "Tech";
+  studentTypes: StudentType[];
+  headline: string; // "How Jamie landed a marketing internship as a freshman"
+  role: string; // "Marketing intern"
+  employer?: string;
+  employerPermission: boolean;
+  startingPoint: string; // where they started, in plain words
+  weeklyNumbers: string; // e.g. "25 emails a week, 6 calls in Weeks 4–8"
+  outcome: string; // what actually happened
+  quote: string;
+  videoUrl?: string; // YouTube or Vimeo
+  photo?: string; // /images/students/jamie.jpg
+  permission: boolean;
+};
+
+export const stories: Story[] = [];
+
+export const permittedStories = () => stories.filter((s) => s.permission);
+export const getStory = (slug: string) => permittedStories().find((s) => s.slug === slug);

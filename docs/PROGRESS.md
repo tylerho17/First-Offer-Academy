@@ -8,7 +8,7 @@ Re-read this file after any restart. Continue from the first unchecked task. Nev
 
 ## Phase A2 — WSM program-overview build
 - [x] A2.1 Shared building blocks
-- [ ] A2.2 Rebuild /program as long-form overview
+- [x] A2.2 Rebuild /program as long-form overview
 - [ ] A2.3 /our-promise
 - [ ] A2.4 Home page: WSM patterns
 - [ ] A2.5 Header: Testimonials dropdown

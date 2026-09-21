@@ -1,38 +1,37 @@
 import type { Metadata } from "next";
-import PageHero from "@/components/PageHero";
-import HowItWorks from "@/components/sections/HowItWorks";
-import Tracks from "@/components/sections/Tracks";
-import Standard from "@/components/sections/Standard";
-import PriceBand from "@/components/sections/PriceBand";
-import FinalCta from "@/components/sections/FinalCta";
+import { modules } from "@/content/programOverview";
+import ProgramHero from "@/components/sections/program/ProgramHero";
+import WhoFor from "@/components/sections/program/WhoFor";
+import Week12Checklist from "@/components/sections/program/Week12Checklist";
+import BookingBand from "@/components/sections/program/BookingBand";
+import Helps from "@/components/sections/program/Helps";
+import WhyNow from "@/components/sections/program/WhyNow";
+import ModuleSection from "@/components/sections/program/ModuleSection";
+import Together from "@/components/sections/program/Together";
+import SuccessStories from "@/components/sections/SuccessStories";
+import Comparison from "@/components/sections/Comparison";
+import PromiseCta from "@/components/sections/program/PromiseCta";
 
-export const metadata: Metadata = { title: "The Program" };
+export const metadata: Metadata = {
+  title: "The Program",
+  description:
+    "How the 12-week First Offer Academy program works: six parts, weekly coaching, graded mock interviews, and a documented internship search.",
+};
 
 export default function ProgramPage() {
   return (
     <>
-      <PageHero
-        eyebrow="The program"
-        title="Twelve weeks from zero to a fully executed internship search."
-        lede="Built for first- and second-year students who are starting from nothing: no club, no network, no idea where to begin. Every week has a skill, a number to hit, and a coach checking the work."
-      />
-      <div style={{ paddingTop: 48 }}><HowItWorks /></div>
-      <Tracks />
-      <Standard />
-      <section className="section" style={{ paddingTop: 0 }}>
-        <div className="wrap">
-          <div className="card" style={{ padding: "40px 32px" }}>
-            <span className="eyebrow">Week 12</span>
-            <h2>The family results meeting</h2>
-            <p className="lede">
-              The program ends with your student presenting their results to you: every email, call,
-              and interview on record, plus their Week 1 and Week 12 recorded intros side by side.
-            </p>
-          </div>
-        </div>
-      </section>
-      <PriceBand />
-      <div style={{ paddingTop: 112 }}><FinalCta /></div>
+      <ProgramHero />
+      <WhoFor />
+      <Week12Checklist />
+      <BookingBand />
+      <Helps />
+      <WhyNow />
+      {modules.map((m, i) => <ModuleSection key={m.slug} m={m} n={i + 1} />)}
+      <Together />
+      <SuccessStories title="See what students are saying." flush />
+      <Comparison />
+      <PromiseCta />
     </>
   );
 }

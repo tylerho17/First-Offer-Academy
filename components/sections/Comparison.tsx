@@ -9,7 +9,7 @@ function Mark({ v }: { v: Cell }) {
 
 export default function Comparison() {
   return (
-    <section className="section" style={{ paddingTop: 0 }}>
+    <section className="section" id="compare" style={{ paddingTop: 0 }}>
       <div className="wrap">
         <div className="section-head">
           <span className="eyebrow">Compare</span>
