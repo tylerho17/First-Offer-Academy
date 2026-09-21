@@ -40,7 +40,6 @@ Things that need your real input. Each line names the file to edit.
 - **Employer names each student permits** → `content/employers.ts` (`employerPermission: true`). The marquee needs 4; the /results grid needs 8.
 - **Total internships landed by the 8 students** → `content/stats.ts` (the empty stat renders once filled).
 - **Referral reward** (if you offer one) → `content/site.ts` `referralReward`. Hidden on /refer until set. If it involves a tuition discount, add it to the Refund & Payment Policy too.
-- **Week-by-week syllabus detail** → `content/syllabus.ts` (`detail` for each of the 12 weeks). Empty weeks show their phase summary on /program.
 - **Social profile URLs** (Instagram, LinkedIn, YouTube, TikTok, Facebook, Reddit, Spotify, podcast) → `content/site.ts` `socials`. The footer tile grid appears once at least one is set.
 - **Review platform link** (once real reviews exist) → `content/site.ts` `reviewsUrl`. Adds "Reviews" to the Testimonials menu.
 - **Program overview video** ("Program overview from Tyler", 2–3 min): YouTube/Vimeo URL → `content/programOverview.ts` (`hero.videoUrl`).
@@ -53,3 +52,4 @@ Things that need your real input. Each line names the file to edit.
 - **Externship provider (confirm before launch):** if students really complete company-designed virtual externship projects (e.g. through Extern), put the provider name in `content/site.ts` → `externships.provider`. Only then does the site say "2 externships with Fortune 500 companies". Until then it says "2 virtual externship projects".
 - **Internship offer count:** set `content/site.ts` → `founder.offerCount` (e.g. "12"). Until then the site says "7+ internships worked, and offers from many more"; once set, it says "[N] internship offers" in the stats row, founder section, and coach card.
 - **LinkedIn:** the footer social grid now shows your personal LinkedIn. If you create a First Offer Academy company page, put it in `socials.linkedin`; `founder.linkedin` stays your personal profile.
+- **Review the curriculum expansion:** `content/curriculum.ts` expands each week in `docs/CURRICULUM-SOURCE.md` into 4–6 teaching bullets, a 1:1 focus, coach questions, and a parent line. Anything beyond the source is my wording; check it matches how you'll actually run each week. It powers /curriculum, the 12 week pages, and the /program syllabus.

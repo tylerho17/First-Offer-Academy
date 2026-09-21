@@ -13,6 +13,7 @@ export const nav: Item[] = [
     href: "/program",
     children: [
       { label: "How it works", href: "/program", note: "The 12-week plan" },
+      { label: "Curriculum", href: "/curriculum", note: "All 12 weeks, week by week" },
       ...tracks.map((t) => ({ label: `${t.name} track`, href: `/tracks/${t.slug}` })),
       { label: "Pricing", href: "/pricing", note: "Tuition and payment plans" },
     ],

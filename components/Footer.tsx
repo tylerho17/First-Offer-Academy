@@ -32,6 +32,7 @@ export default function Footer() {
             <h4>Program Details</h4>
             <ul>
               <li><Link href="/program">How it works</Link></li>
+              <li><Link href="/curriculum">Curriculum</Link></li>
               <li><Link href="/program#modules">The six parts</Link></li>
               <li><Link href="/our-promise">Our promise</Link></li>
               <li><Link href="/pricing">Pricing</Link></li>

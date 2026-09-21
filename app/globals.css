@@ -433,8 +433,9 @@ p { margin: 0; }
 .footer a:hover { text-decoration: underline; }
 .footer-main { padding: 64px 16px 32px; }
 @media (min-width: 768px) { .footer-main { padding: 72px 48px 36px; } }
-.footer-cols { display: grid; gap: 36px; grid-template-columns: 1fr 1fr; }
-@media (min-width: 768px) { .footer-cols { grid-template-columns: 1.4fr 1fr 1fr 1.2fr; } }
+.footer-cols { display: grid; gap: 36px; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+@media (min-width: 768px) { .footer-cols { grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1.2fr); } }
+.footer-cols a { overflow-wrap: anywhere; }
 .footer-brand { grid-column: 1 / -1; }
 @media (min-width: 768px) { .footer-brand { grid-column: auto; } }
 .footer .logo { color: var(--cream); }
@@ -443,8 +444,8 @@ p { margin: 0; }
 .footer h4 { font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--cream); margin: 0 0 16px; font-weight: 700; }
 .footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
 .footer .tagline { margin-top: 16px; max-width: 300px; opacity: .85; }
-.social-grid { list-style: none; padding: 0; margin: 24px 0 0; display: grid; grid-template-columns: repeat(4, 48px); gap: 8px; }
-@media (min-width: 768px) { .social-grid { grid-template-columns: repeat(4, 56px); } }
+.social-grid { list-style: none; padding: 0; margin: 24px 0 0; display: grid; grid-template-columns: repeat(auto-fill, 48px); max-width: 216px; gap: 8px; }
+@media (min-width: 768px) { .social-grid { grid-template-columns: repeat(auto-fill, 56px); max-width: 248px; } }
 .social-grid a { width: 48px; height: 48px; border-radius: 8px; background: rgba(247,244,238,.1); color: var(--cream); display: grid; place-items: center; }
 @media (min-width: 768px) { .social-grid a { width: 56px; height: 56px; } }
 .social-grid a:hover { background: rgba(247,244,238,.2); }
@@ -865,7 +866,6 @@ a.topic-pill:hover { background: var(--navy); color: var(--cream); }
 @media (min-width: 900px) { .syllabus-phase { grid-template-columns: 280px minmax(0, 1fr); gap: 40px; align-items: start; } }
 .syllabus-phase-head h3 { font-size: 26px; margin-top: 6px; }
 .syllabus-levels { font-size: 15px; margin-top: 8px; }
-.syllabus-sub { color: var(--dusty); font-family: var(--sans); font-size: 15px; font-weight: 600; }
 
 /* ---------- /parents (task 12) ---------- */
 .band-link { color: var(--cream); font-weight: 600; text-decoration: underline; }
@@ -976,3 +976,63 @@ a.card, .story-card, .icon-tile { transition: transform .15s ease, box-shadow .1
 .plan-leaves-note { margin-top: 12px; font-size: 14px; color: var(--cream); opacity: .85; }
 .linkedin-link { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; color: var(--dusty); text-decoration: underline; }
 .linkedin-link svg { width: 22px; height: 22px; flex: none; }
+
+/* ---------- v4: Curriculum ---------- */
+.level-badge { display: inline-block; background: var(--navy); color: var(--cream); font-size: 13px; font-weight: 700; padding: 5px 12px; border-radius: 999px; line-height: 1.4; }
+.phase-bands { display: grid; gap: 56px; }
+.phase-band-head { max-width: 720px; margin-bottom: 20px; }
+.phase-band-head h2 { margin-top: 6px; }
+.phase-band-head p { margin-top: 8px; }
+.week-grid { list-style: none; padding: 0; margin: 0; display: grid; gap: 16px; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 640px) { .week-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1000px) { .week-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.week-grid > li { display: flex; }
+.week-card { display: flex; flex-direction: column; gap: 8px; width: 100%; text-decoration: none; color: var(--ink); padding: 24px; }
+.week-card h3 { margin: 0; }
+.week-card p { font-size: 16px; }
+.week-num { font-size: 13px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--dusty); }
+.week-card-foot { margin-top: auto; padding-top: 14px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; }
+a.week-card:hover { transform: translateY(-3px); }
+.rhythm-grid { list-style: none; padding: 0; margin: 0; }
+.rhythm-notes { list-style: none; padding: 0; margin: 28px 0 0; display: grid; gap: 10px; }
+.rhythm-notes li { display: flex; gap: 10px; align-items: flex-start; font-size: 17px; }
+.rhythm-notes svg { flex: none; width: 20px; height: 20px; color: var(--dusty); margin-top: 4px; }
+
+.week-hero { padding-bottom: 24px; }
+.week-numbers { background: var(--navy); color: var(--cream); border-radius: var(--radius); padding: 24px; }
+.week-numbers .eyebrow { color: var(--cream); margin-bottom: 12px; }
+.week-numbers dl { margin: 0; display: grid; gap: 16px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (min-width: 900px) { .week-numbers dl { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.week-numbers dt { font-size: 13px; font-weight: 600; opacity: .85; }
+.week-numbers dd { margin: 4px 0 0; font-family: var(--display); font-size: 22px; line-height: 1.25; color: var(--cream); }
+.week-layout { display: grid; gap: 20px; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 900px) { .week-layout { grid-template-columns: repeat(2, minmax(0, 1fr)); } .week-layout > .week-block:first-child { grid-column: 1 / -1; } }
+.week-block-title { font-size: 24px; margin-bottom: 14px; }
+@media (min-width: 768px) { .week-block-title { font-size: 26px; } }
+.week-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+.week-list li { display: flex; gap: 10px; align-items: flex-start; font-size: 17px; }
+.week-list svg { flex: none; width: 20px; height: 20px; color: var(--dusty); margin-top: 4px; }
+.week-questions { margin: 0; padding-left: 22px; display: grid; gap: 10px; font-size: 17px; }
+.week-gate { margin-top: 16px; font-size: 16px; }
+.track-teach { margin-top: 24px; display: grid; gap: 20px; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 640px) { .track-teach { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.track-teach > div { background: var(--mist); border-radius: 14px; padding: 18px; }
+.track-teach h3 { font-size: 20px; margin-bottom: 10px; }
+.week-parents { border: 2px solid var(--navy-line); }
+.week-nav { display: grid; gap: 16px; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 640px) { .week-nav { grid-template-columns: 1fr 1fr; } }
+.week-nav-link { display: block; text-decoration: none; color: var(--navy); padding: 20px 24px; }
+.week-nav-link .eyebrow { margin-bottom: 6px; }
+.week-nav-link strong { display: block; font-family: var(--display); font-weight: 400; font-size: 20px; }
+.week-nav-link.is-next { text-align: right; }
+a.week-nav-link:hover { transform: translateY(-3px); }
+
+/* /program syllabus panels */
+.syllabus-panels { display: grid; gap: 16px; }
+.syllabus-panel { display: grid; gap: 14px; padding: 24px; }
+@media (min-width: 900px) { .syllabus-panel { grid-template-columns: 180px 1fr auto; align-items: start; gap: 28px; } }
+.syllabus-panel h3 { margin: 0 0 6px; }
+.syllabus-panel p { font-size: 16px; }
+.syllabus-panel .week-list li { font-size: 15px; }
+.syllabus-panel .week-list { margin-top: 12px; }
+.syllabus-panel-meta { display: flex; flex-direction: column; gap: 8px; align-items: flex-start; }
