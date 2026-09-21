@@ -40,3 +40,7 @@ Ambiguous calls made during the autonomous build, and why.
 - **Task 8:** The apply form's optional consent covers both email and text updates in one line, as the plan asked for "an optional SMS/email consent line".
 - **Task 8:** The testimonial release template includes an FTC endorsement-disclosure note in case any discount or payment is ever given for a testimonial.
 - **Task 9:** Pre-existing sage *text* (footer column headings, eyebrows on navy bands, event-date month, plan-featured eyebrow) conflicts with CLAUDE.md's "never sage text" rule. Queued for the task 23 contrast/brand pass rather than changed mid-phase.
+- **Task 10:** OG and icon fonts (Young Serif 400, Hanken Grotesk 600/700, OFL) are bundled as .woff in `assets/fonts/` because `next/og` can't read woff2 and builds shouldn't depend on network access.
+- **Task 10:** The sitemap finds static routes by scanning `app/` for `page.tsx` files (`lib/routes.ts`), so new pages are included automatically. /admin, /deposit/*, and /zh are excluded by `PRIVATE_ROUTES`. Dynamic routes come from content (articles, tracks, permitted stories).
+- **Task 10:** Also added `app/apple-icon.tsx` (180px) alongside the favicon. JSON-LD has no rating or review fields anywhere.
+- **Task 10:** Renamed the /results page title to "Student Testimonials" to match the new nav label.

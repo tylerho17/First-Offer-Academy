@@ -25,7 +25,7 @@ Re-read this file after any restart. Continue from the first unchecked task. Nev
 - [x] 9. Footer legal row
 
 ## Phase C — Growth and depth
-- [ ] 10. SEO and share previews
+- [x] 10. SEO and share previews
 - [ ] 11. Syllabus accordion
 - [ ] 12. For Parents
 - [ ] 13. Student stories

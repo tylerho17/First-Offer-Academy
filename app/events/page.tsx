@@ -3,7 +3,10 @@ import PageHero from "@/components/PageHero";
 import EventsSchedule from "@/components/sections/EventsSchedule";
 import FinalCta from "@/components/sections/FinalCta";
 
-export const metadata: Metadata = { title: "Free events" };
+export const metadata: Metadata = {
+  title: "Free events",
+  description: "Free parent info sessions and student recruiting workshops from First Offer Academy in Orange County.",
+};
 
 export default function EventsPage() {
   return (

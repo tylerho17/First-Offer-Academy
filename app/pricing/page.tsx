@@ -7,7 +7,10 @@ import FaqList from "@/components/sections/FaqList";
 import CallLink from "@/components/CallLink";
 import { Check } from "@/components/Icons";
 
-export const metadata: Metadata = { title: "Pricing" };
+export const metadata: Metadata = {
+  title: "Pricing",
+  description: "First Offer Academy tuition: $5,000 or 3 payments of $1,700, with a $1,000 refundable deposit to hold a seat. Free guides and events too.",
+};
 
 const free = [
   "The Playbook: free recruiting guides and templates",

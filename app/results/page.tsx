@@ -5,7 +5,10 @@ import Testimonials from "@/components/sections/Testimonials";
 import EmployerGrid from "@/components/sections/EmployerGrid";
 import FinalCta from "@/components/sections/FinalCta";
 
-export const metadata: Metadata = { title: "Results" };
+export const metadata: Metadata = {
+  title: "Student Testimonials",
+  description: "Student and parent testimonials for First Offer Academy, each shared with written permission.",
+};
 
 export default function ResultsPage() {
   return (

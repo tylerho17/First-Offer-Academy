@@ -4,7 +4,10 @@ import ApplyForm from "@/components/ApplyForm";
 import Link from "next/link";
 import { site } from "@/content/site";
 
-export const metadata: Metadata = { title: "Apply" };
+export const metadata: Metadata = {
+  title: "Apply",
+  description: "Apply for one of 24 seats in the January 2027 founding cohort. Ten minutes, then a short fit call with Tyler. No payment on this page.",
+};
 
 export default function ApplyPage() {
   return (

@@ -4,7 +4,10 @@ import { workshopTopics, workshopAudiences, pastWorkshops } from "@/content/work
 import { Check } from "@/components/Icons";
 import FinalCta from "@/components/sections/FinalCta";
 
-export const metadata: Metadata = { title: "Free school workshops" };
+export const metadata: Metadata = {
+  title: "Free school workshops",
+  description: "Bring a free internship recruiting workshop to your club, high school, community college, or PTSA in Orange County.",
+};
 
 export default function WorkshopsPage() {
   const mail = `mailto:${site.email}?subject=${encodeURIComponent("Free workshop request")}`;

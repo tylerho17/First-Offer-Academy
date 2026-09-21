@@ -16,10 +16,29 @@ import PriceBand from "@/components/sections/PriceBand";
 import LatestArticles from "@/components/sections/LatestArticles";
 import FaqList from "@/components/sections/FaqList";
 import FinalCta from "@/components/sections/FinalCta";
+import JsonLd from "@/components/JsonLd";
+import { site } from "@/content/site";
 
 export default function Home() {
+  const sameAs = Object.values(site.socials).filter(Boolean);
   return (
     <>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "EducationalOrganization",
+          name: site.name,
+          url: `https://${site.domain}`,
+          logo: `https://${site.domain}/apple-icon`,
+          description:
+            "A 12-week program that teaches first- and second-year college students in Orange County how to land internships in finance, consulting, marketing, and tech.",
+          email: site.email,
+          address: { "@type": "PostalAddress", addressLocality: "Irvine", addressRegion: "CA", addressCountry: "US" },
+          areaServed: "Orange County, California",
+          founder: { "@type": "Person", name: "Tyler Ho" },
+          ...(sameAs.length ? { sameAs } : {}),
+        }}
+      />
       <Hero />
       <Stats />
       <LogoMarquee />

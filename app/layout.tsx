@@ -17,10 +17,13 @@ export const metadata: Metadata = {
   description:
     "A 12-week program that teaches first- and second-year college students in Orange County how to land internships in finance, consulting, marketing, and tech.",
   openGraph: {
+    type: "website",
+    siteName: "First Offer Academy",
+    locale: "en_US",
     title: "First Offer Academy",
     description: "Build the skills. Be that candidate. Get the offer.",
-    images: ["/images/tyler.jpg"],
   },
+  twitter: { card: "summary_large_image" },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

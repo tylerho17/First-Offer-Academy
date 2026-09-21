@@ -3,7 +3,10 @@ import { articles } from "@/content/articles";
 import ArticleCard from "@/components/ArticleCard";
 import NewsletterForm from "@/components/NewsletterForm";
 
-export const metadata: Metadata = { title: "The Playbook" };
+export const metadata: Metadata = {
+  title: "The Playbook",
+  description: "Free recruiting guides for college students and parents: the freshman internship timeline, cold email templates, and interview prep.",
+};
 
 export default function BlogPage() {
   const cats = Array.from(new Set(articles.map((a) => a.category)));

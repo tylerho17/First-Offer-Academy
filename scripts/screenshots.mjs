@@ -21,7 +21,7 @@ const only = process.argv.find((a) => a.startsWith("--only="))?.slice(7).split("
 async function routes() {
   const manifest = JSON.parse(await readFile(".next/prerender-manifest.json", "utf8"));
   const all = Object.keys(manifest.routes).filter(
-    (r) => !/\.(xml|txt|png|ico|jpg|svg|webmanifest)$/.test(r) && !r.includes("opengraph-image") && !r.startsWith("/icon") && r !== "/_not-found",
+    (r) => !/\.(xml|txt|png|ico|jpg|svg|webmanifest)$/.test(r) && !r.includes("opengraph-image") && !r.startsWith("/icon") && !r.startsWith("/apple-icon") && r !== "/_not-found",
   );
   all.push("/this-page-does-not-exist");
   return (only ?? all).sort();
