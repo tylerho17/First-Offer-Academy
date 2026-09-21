@@ -2,6 +2,8 @@ import Hero from "@/components/sections/Hero";
 import Stats from "@/components/sections/Stats";
 import LogoMarquee from "@/components/sections/LogoMarquee";
 import Problem from "@/components/sections/Problem";
+import Mission from "@/components/sections/Mission";
+import SuccessStories from "@/components/sections/SuccessStories";
 import Offerings from "@/components/sections/Offerings";
 import HowItWorks from "@/components/sections/HowItWorks";
 import Tracks from "@/components/sections/Tracks";
@@ -22,10 +24,12 @@ export default function Home() {
       <Stats />
       <LogoMarquee />
       <Problem />
+      <Mission />
       <Offerings />
       <HowItWorks />
       <Tracks />
-      <Testimonials />
+      <SuccessStories eyebrow="Results" title="Success stories" flushBottom />
+      <Testimonials compact />
       <Standard />
       <Founder />
       <EventsSchedule />

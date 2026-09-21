@@ -7,4 +7,5 @@ export const employers: Employer[] = [
   // { name: "Company Name", logo: "/images/logos/company.svg", employerPermission: true },
 ];
 
-export const MIN_EMPLOYERS_TO_SHOW = 4;
+export const MIN_EMPLOYERS_TO_SHOW = 4; // marquee band
+export const MIN_EMPLOYERS_FOR_GRID = 8; // "Where our students work" grid on /results

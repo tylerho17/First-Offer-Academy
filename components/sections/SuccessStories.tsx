@@ -13,12 +13,13 @@ export default function SuccessStories({
   title = "See what students are saying.",
   eyebrow = "Success stories",
   flush = false,
-}: { title?: string; eyebrow?: string; flush?: boolean }) {
+  flushBottom = false,
+}: { title?: string; eyebrow?: string; flush?: boolean; flushBottom?: boolean }) {
   const list = permittedStories();
   if (list.length === 0 && !site.showPlaceholders) return null;
 
   return (
-    <section className="section stories" style={flush ? { paddingTop: 0 } : undefined}>
+    <section className="section stories" style={{ ...(flush && { paddingTop: 0 }), ...(flushBottom && { paddingBottom: 32 }) }}>
       <div className="wrap">
         <div className="section-head row-head">
           <div>

@@ -10,7 +10,7 @@ Re-read this file after any restart. Continue from the first unchecked task. Nev
 - [x] A2.1 Shared building blocks
 - [x] A2.2 Rebuild /program as long-form overview
 - [x] A2.3 /our-promise
-- [ ] A2.4 Home page: WSM patterns
+- [x] A2.4 Home page: WSM patterns
 - [ ] A2.5 Header: Testimonials dropdown
 - [ ] A2.6 Footer: social tile grid
 - [ ] A2.7 Contact page: WSM form

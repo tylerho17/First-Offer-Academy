@@ -16,3 +16,6 @@ Ambiguous calls made during the autonomous build, and why.
 - **A2.2:** "Two missed weeks in a row triggers a student + parent call" comes from the build plan's A2.3 spec; Tyler should confirm it's the actual policy (logged in TODO-TYLER).
 - **A2.3:** /our-promise copy lives in `content/promise.ts`. The "What we don't promise" block sits on a navy band so it reads as a serious, deliberate statement, not fine print.
 - **A2.3:** Added a global `:where(p, li, dd, td) a { text-decoration: underline }` because Tailwind's preflight removes link underlines and the brand guide requires underlined text links. `:where()` has zero specificity, so nav, button, and card links keep their own styles.
+- **A2.4:** Mission copy lives in `content/home.ts`. The "View program details →" button is secondary (navy outline) because the hero's Apply is the page's primary button.
+- **A2.4:** On the home page, the Success Stories carousel replaces both the old "What students say" header and the 3 vertical video slots (the carousel cards carry the video). /results keeps the full wall with video slots.
+- **A2.4:** Employer grid threshold is a new constant `MIN_EMPLOYERS_FOR_GRID = 8` in `content/employers.ts`; the marquee keeps its own threshold of 4.

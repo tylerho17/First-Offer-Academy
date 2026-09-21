@@ -23,7 +23,9 @@ function QuoteCard({ t }: { t: Testimonial }) {
   );
 }
 
-export default function Testimonials({ full = false }: { full?: boolean }) {
+// `compact`: home page. The Success Stories row above supplies the header
+// and video, so this renders only the quote wall.
+export default function Testimonials({ full = false, compact = false }: { full?: boolean; compact?: boolean }) {
   const ok = testimonials.filter((t) => t.permission);
   const parents = ok.filter((t) => t.role === "parent");
   const featuredParent = parents.find((t) => t.featured) ?? parents[0];
@@ -38,16 +40,16 @@ export default function Testimonials({ full = false }: { full?: boolean }) {
   const quoteSlots = placeholders ? Math.max(0, 6 - cards.length) : 0;
 
   return (
-    <section className="section" id="results" style={full ? { paddingTop: 24 } : undefined}>
+    <section className="section" id="results" style={full ? { paddingTop: 24 } : compact ? { paddingTop: 0 } : undefined}>
       <div className="wrap">
-        {!full && (
+        {!full && !compact && (
           <div className="section-head">
             <span className="eyebrow">Results</span>
             <h2>What students say</h2>
           </div>
         )}
 
-        {(videos.length > 0 || placeholders) && (
+        {!compact && (videos.length > 0 || placeholders) && (
           <div className="videos">
             {videos.map((t) => (
               <div className="video-card" key={t.name}>
