@@ -34,13 +34,11 @@ Things that need your real input. Each line names the file to edit.
 
 ## Content to collect
 - **Photos:** transparent headshot at `public/images/tyler.png` and a casual daylight photo at `public/images/tyler-casual.jpg` (founder section, arch photo).
-- **Dedicated Calendly "Parent call" event link** → `content/site.ts` `calendlyUrl` (currently your general Calendly page).
 - **Info-session dates** → `content/events.ts`.
 - **Session format, day/time, weekly hours, application deadline** → `content/site.ts` `format`, `weeklyHours`, `applicationDeadline`. Also used by the FAQ and /zh.
 - **Employer names each student permits** → `content/employers.ts` (`employerPermission: true`). The marquee needs 4; the /results grid needs 8.
 - **Total internships landed by the 8 students** → `content/stats.ts` (the empty stat renders once filled).
 - **Referral reward** (if you offer one) → `content/site.ts` `referralReward`. Hidden on /refer until set. If it involves a tuition discount, add it to the Refund & Payment Policy too.
-- **Social profile URLs** (Instagram, LinkedIn, YouTube, TikTok, Facebook, Reddit, Spotify, podcast) → `content/site.ts` `socials`. The footer tile grid appears once at least one is set.
 - **Review platform link** (once real reviews exist) → `content/site.ts` `reviewsUrl`. Adds "Reviews" to the Testimonials menu.
 - **Program overview video** ("Program overview from Tyler", 2–3 min): YouTube/Vimeo URL → `content/programOverview.ts` (`hero.videoUrl`).
 - **12 module videos** ("Hear from Tyler" + "Hear from a student" for each of the 6 parts) → `content/programOverview.ts` (`modules[].videos`). Student videos need written permission.

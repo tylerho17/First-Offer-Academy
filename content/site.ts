@@ -32,8 +32,7 @@ export const site = {
     depositCents: 100000, // what Stripe Checkout charges for the deposit; keep in sync with `deposit`
   },
 
-  // TODO: replace with a dedicated "Parent call" event link once created.
-  calendlyUrl: "https://calendly.com/ctylerho714",
+  calendlyUrl: "https://calendly.com/tylerch2-building",
   // TODO(Tyler): legal business entity name (e.g. "First Offer Academy LLC").
   // Empty = the privacy policy and terms say "First Offer Academy" only.
   legalEntityName: "",
