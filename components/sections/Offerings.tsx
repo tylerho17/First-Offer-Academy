@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { Calendar, Report, Users, Compass } from "../Icons";
+import { downloads } from "@/content/downloads";
 
 const items = [
   { n: "01", icon: <Calendar />, title: "Join a free event", body: "Parent info sessions and student workshops on how recruiting works now.", href: "/events", cta: "See upcoming events" },
   { n: "02", icon: <Compass />, title: "Enroll in the 12-week program", body: "A weekly session, a 1:1 with your coach, and a pod that keeps you accountable.", href: "/program", cta: "How the program works" },
   { n: "03", icon: <Users />, title: "Work 1:1 with your coach", body: "Every week, your coach reviews your tracker and fixes the biggest bottleneck.", href: "/about", cta: "Meet the founder" },
-  { n: "04", icon: <Report />, title: "Read the free Playbook", body: "Timelines, cold-email templates, and interview guides you can use today.", href: "/blog", cta: "Read the Playbook" },
+  { n: "04", icon: <Report />, title: "Use the free templates", body: `The Playbook PDF plus ${downloads.length} free templates: resume rubric, outreach tracker, email pack, and more.`, href: "/free-resources", cta: "Get the free resources" },
 ];
 
 export default function Offerings() {

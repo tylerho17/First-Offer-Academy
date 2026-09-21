@@ -1052,3 +1052,21 @@ a.week-nav-link:hover { transform: translateY(-3px); }
 .chapter-list .pain-n { margin: 0; }
 .chapter-list h3 { font-size: 19px; margin-bottom: 4px; }
 .chapter-list p { font-size: 15px; }
+
+/* ---------- v4: /free-resources ---------- */
+.featured-download { display: grid; gap: 24px; text-decoration: none; color: var(--ink); align-items: center; }
+@media (min-width: 768px) { .featured-download { grid-template-columns: 260px 1fr; gap: 40px; padding: 36px; } }
+a.featured-download:hover { transform: translateY(-3px); }
+.pdf-cover.is-small { aspect-ratio: 8.5 / 11; margin: 0; max-width: 260px; }
+.pdf-cover.is-small strong { font-size: 24px; }
+.download-stage { margin-top: 56px; }
+.download-stage > h2 { margin-bottom: 18px; }
+.download-grid { list-style: none; padding: 0; margin: 0; display: grid; gap: 16px; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 640px) { .download-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1000px) { .download-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.download-card { display: flex; flex-direction: column; gap: 8px; padding: 24px; }
+.download-card h3 { margin: 0; }
+.download-card p { font-size: 16px; }
+.download-card .btn { margin-top: auto; align-self: flex-start; }
+.download-format { font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--dusty); }
+.download-week { font-size: 14px !important; margin-bottom: 12px; }

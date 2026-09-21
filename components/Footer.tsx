@@ -23,6 +23,7 @@ export default function Footer() {
               <li><Link href="/parents">For parents</Link></li>
               <li><Link href="/blog">The Playbook</Link></li>
               <li><Link href="/playbook-pdf">Free Playbook (PDF)</Link></li>
+              <li><Link href="/free-resources">Free templates</Link></li>
               <li><Link href="/events">Free events</Link></li>
               <li><Link href="/workshops">School workshops</Link></li>
               <li><Link href="/apply">Apply</Link></li>

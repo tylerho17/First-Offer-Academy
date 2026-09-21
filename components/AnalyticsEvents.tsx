@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import { site } from "@/content/site";
 
 // One listener for click events site-wide:
-// - any element with data-event="<name>" (deposit_click, playbook_download)
+// - any element with data-event="<name>" (deposit_click, playbook_download, template_download)
 // - any link to the Calendly URL counts as "book_call", wherever it appears
 // Form submits are tracked in the forms themselves, after the server accepts them.
 export default function AnalyticsEvents() {

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { assetTitles, weekHref, weeks, type Week } from "@/content/curriculum";
+import { downloadFile, getDownload } from "@/content/downloads";
 import Ornament from "../Ornament";
 import CallLink from "../CallLink";
 import LevelBadge from "./LevelBadge";
@@ -104,8 +105,17 @@ export default function WeekView({ week: w }: { week: Week }) {
 
           <Block title="Templates used this week">
             <ul className="week-list">
-              {w.assets.map((a) => <li key={a}><Check />{assetTitles[a]}</li>)}
+              {w.assets.map((a) => {
+                const d = getDownload(a);
+                return (
+                  <li key={a}>
+                    <Check />
+                    {d ? <a href={downloadFile(d)} download data-event="template_download">{assetTitles[a]} ({d.format})</a> : assetTitles[a]}
+                  </li>
+                );
+              })}
             </ul>
+            <p style={{ marginTop: 14 }}><Link href="/free-resources" className="link-arrow">All free templates →</Link></p>
           </Block>
 
           <div className="card week-block week-parents">

@@ -36,6 +36,7 @@ export const nav: Item[] = [
     href: "/blog",
     children: [
       { label: "The Playbook", href: "/blog", note: "Free recruiting guides" },
+      { label: "Free resources", href: "/free-resources", note: "Templates, trackers, and the Playbook PDF" },
       { label: "Free events", href: "/events", note: "Info sessions and workshops" },
       { label: "School workshops", href: "/workshops", note: "For clubs, schools, PTSAs" },
     ],

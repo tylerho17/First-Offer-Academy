@@ -1,0 +1,3 @@
+﻿Name,Firm,Title,Tier,Email,Date first sent,Sequence step,Replied? (date),Call date,Thank-you sent (time),Referral close used?,Intro to,Next follow-up date,Notes (what they said)
+EXAMPLE (delete this row) Alex Example,Example Capital Partners,Analyst,A,alex@example.com,2027-01-20,Follow-up 1,2027-01-27,2027-02-03,2027-02-03 4:10pm,Yes,Taylor Example,2027-03-17,Said the team hires one sophomore intern each summer
+EXAMPLE (delete this row) Sam Example,Example Growth Co.,Founder,B,sam@example.com,2027-01-20,Initial,2027-01-22,2027-01-29,2027-01-29 1:45pm,Yes,,2027-02-26,Offered a small research project
