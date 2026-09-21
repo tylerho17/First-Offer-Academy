@@ -1,11 +1,14 @@
-// Legal pages use the same block format as content/articles.ts.
+// Legal pages use a small block format (a subset of content/blocks.ts).
 // Inside "p" and "ul" text, [label](/path) renders as a link and a bare email
 // address renders as a mailto link.
 
-import type { Block } from "../articles";
 import { site } from "../site";
 
-export type { Block };
+export type Block =
+  | { type: "p"; text: string }
+  | { type: "h2"; text: string }
+  | { type: "ul"; items: string[] }
+  | { type: "template"; title: string; text: string };
 
 export type LegalDoc = {
   slug: string; // route: /<slug>

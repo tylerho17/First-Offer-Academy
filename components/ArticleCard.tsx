@@ -1,7 +1,9 @@
 import Link from "next/link";
 import type { Article } from "@/content/articles";
 
-export default function ArticleCard({ a }: { a: Article }) {
+export type ArticleSummary = Pick<Article, "slug" | "title" | "excerpt" | "category" | "author" | "readMinutes">;
+
+export default function ArticleCard({ a }: { a: ArticleSummary }) {
   return (
     <Link href={`/blog/${a.slug}`} className="card article-card">
       <div className="article-cover" aria-hidden="true">

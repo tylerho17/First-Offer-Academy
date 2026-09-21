@@ -8,5 +8,5 @@ Re-read this file after any restart. Continue from the first unchecked task. Nev
 - [x] 4. Week 1–12 buildout
 - [x] 5. The First Offer Playbook PDF
 - [x] 6. Free loot: downloadable templates
-- [ ] 7. In-depth recruiting guides
+- [x] 7. In-depth recruiting guides
 - [ ] 8. QA and report

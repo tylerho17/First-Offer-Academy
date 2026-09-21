@@ -1,0 +1,142 @@
+import type { Guide } from "./types";
+import { check, h2, h3, note, ol, p, table, tyler, ul } from "./_helpers";
+import { technicals } from "../toolkit";
+
+export const guide: Guide = {
+  slug: "finance-technicals-for-beginners",
+  title: "Finance technicals for beginners: the study order that works",
+  excerpt: "Accounting, then valuation, then enterprise vs. equity value, then M&A, then LBOs. Why the order matters, the core concepts in plain English, worked examples, and the questions to practice out loud.",
+  category: "Technicals",
+  track: "finance",
+  date: "2026-09-21",
+  author: "Tyler Ho",
+  downloads: ["technicals-finance"],
+  related: ["consulting-case-interviews-from-zero", "why-this-industry-why-this-firm", "behavioral-stories"],
+  reviewedByTyler: false,
+  body: [
+    p("Most students approach finance technicals the way they approach a hard class: download a 400-question guide and start memorizing from page one. A week later they can recite a definition of WACC and can't explain why a company's cash goes up when depreciation goes up. Then an interviewer asks the question in a slightly different way, and the memorized answer falls apart."),
+    p("Technicals are ranked last of the five things that matter in recruiting, and for first- and second-year roles, nobody expects you to know everything. But you do need a solid base, and you need to be able to reason out loud when you don't know. That comes from studying in the right order and understanding each concept before moving on."),
+    p("This guide gives you the study order I recommend, plain-English explanations of each core concept, worked examples, and the questions to practice. The full question bank is a free one-page download."),
+    note("Not financial advice", "This guide teaches interview concepts, not investing. Examples use simple made-up numbers."),
+
+    h2("The study order"),
+    p("Accounting, then valuation, then enterprise value vs. equity value, then M&A, then LBOs. Each topic builds on the one before it. You can't value a company without reading its statements. You can't understand enterprise value without understanding valuation. M&A and LBOs are applications of everything before them."),
+    table("What to learn, in order", ["Step", "Topic", "You're ready to move on when you can…"], [
+      ["1", "Accounting (the three statements)", "Walk through how a change in one line flows through all three statements"],
+      ["2", "Valuation", "Explain the main methods, when each is used, and walk through a DCF"],
+      ["3", "Enterprise vs. equity value", "Bridge from one to the other and explain why each item is added or subtracted"],
+      ["4", "M&A", "Explain why companies buy each other and what makes a deal accretive or dilutive"],
+      ["5", "LBOs", "Explain how a leveraged buyout works and why debt increases returns"],
+    ]),
+    tyler("Say answers out loud, work on paper, and use AI to close gaps. If you can't explain it to a friend, you don't know it yet."),
+
+    h2("Step 1: accounting"),
+    p("Everything in finance interviews starts with the three financial statements. Learn them until you can describe each one, and how they connect, without thinking."),
+    table("The three statements", ["Statement", "What it shows", "Covers"], [
+      ["Income statement", "Revenue, expenses, and profit (net income)", "A period of time (a quarter or a year)"],
+      ["Balance sheet", "Assets = liabilities + shareholders' equity", "A single point in time"],
+      ["Cash flow statement", "How cash actually moved: operating, investing, financing", "A period of time"],
+    ]),
+    h3("How they connect"),
+    ul(
+      "Net income from the income statement is the first line of the cash flow statement.",
+      "The cash flow statement adjusts net income for non-cash items (like depreciation) and changes in working capital, then adds investing and financing cash flows.",
+      "The ending cash from the cash flow statement becomes cash on the balance sheet.",
+      "Net income (minus any dividends) flows into retained earnings in shareholders' equity on the balance sheet.",
+    ),
+    h3("The classic: depreciation goes up by $10"),
+    p("This question tests whether you understand the links. Assume a 25% tax rate and walk through it one statement at a time."),
+    table("Depreciation +$10, 25% tax rate", ["Statement", "What happens", "Net effect"], [
+      ["Income statement", "Depreciation (an expense) +10, so pre-tax income −10. Taxes fall by 2.5 (25% of 10).", "Net income −7.5"],
+      ["Cash flow statement", "Net income −7.5, but depreciation is non-cash, so add back +10.", "Cash +2.5"],
+      ["Balance sheet", "Assets: cash +2.5, PP&E −10, so total assets −7.5. Equity: retained earnings −7.5.", "Both sides −7.5, so it balances"],
+    ]),
+    p("Why does cash go up when an expense went up? Because depreciation doesn't cost cash, but it lowers taxable income, so you pay less tax. That insight is what the interviewer actually wants to hear."),
+    h3("Also know"),
+    ul(
+      "Cash vs. accrual accounting: accrual records revenue when it's earned and expenses when they're incurred, not when cash moves.",
+      "Working capital: roughly current operating assets minus current operating liabilities. An increase uses cash; a decrease frees cash.",
+      "Why the balance sheet always balances: every transaction affects at least two accounts.",
+    ),
+
+    h2("Step 2: valuation"),
+    p("Valuation answers one question: what is this company worth? There are three main approaches, and interviewers want to know what each one is and when you'd use it."),
+    table("The main valuation methods", ["Method", "The idea", "Good for"], [
+      ["Comparable companies", "Value the company using multiples (like EV/EBITDA) of similar public companies", "A market-based view of what similar businesses trade at today"],
+      ["Precedent transactions", "Use multiples paid in past acquisitions of similar companies", "What buyers have actually paid, often including a control premium"],
+      ["Discounted cash flow (DCF)", "Project future cash flows and discount them to today", "An intrinsic value based on the company's own cash flows"],
+    ]),
+    h3("Walking through a DCF"),
+    ol(
+      "Project the company's unlevered free cash flow for about five years (cash from operations available to all investors, before interest).",
+      "Estimate a terminal value for all the years after that, using either a perpetuity growth rate or an exit multiple.",
+      "Discount the projected cash flows and the terminal value back to today using the discount rate (usually WACC).",
+      "Add them up. The result is the company's enterprise value.",
+      "Bridge to equity value if you need a value per share.",
+    ),
+    h3("WACC in plain English"),
+    p("WACC is the weighted average cost of capital: the blended return that debt and equity investors expect, weighted by how much of each the company uses. Cost of debt is adjusted for taxes because interest is tax-deductible. Cost of equity is usually estimated with the capital asset pricing model. You don't need to calculate it perfectly in a first-round interview. You need to explain what it represents and why it's the discount rate in a DCF."),
+
+    h2("Step 3: enterprise value vs. equity value"),
+    p("Equity value is what the company's shares are worth: the value to shareholders. Enterprise value is what the whole business is worth to everyone who funds it, debt and equity together, regardless of how it's financed."),
+    table("Bridging equity value to enterprise value", ["Item", "Add or subtract", "Why"], [
+      ["Equity value", "Start here", "Value of all shares"],
+      ["Debt", "Add", "A buyer of the whole business takes on the debt too"],
+      ["Preferred stock", "Add", "Another claim on the business, like debt"],
+      ["Noncontrolling interest", "Add", "Keeps the numerator consistent with consolidated financials"],
+      ["Cash", "Subtract", "A buyer effectively gets the cash back, so it reduces the net cost"],
+      ["Enterprise value", "Result", "Value of the core business to all capital providers"],
+    ]),
+    p("Why it matters: multiples have to match. EV-based multiples (like EV/EBITDA) pair enterprise value with metrics available to all investors. Equity-based multiples (like price/earnings) pair equity value with metrics that belong to shareholders."),
+
+    h2("Step 4: M&A"),
+    p("Why do companies buy other companies? To grow faster than they could on their own, to enter new markets, to gain technology or talent, or to cut combined costs (synergies). Interviewers want the reasons, and a basic sense of whether a deal is good for the buyer's shareholders."),
+    h3("Accretive vs. dilutive"),
+    p("A deal is accretive if the buyer's earnings per share go up after the acquisition, and dilutive if they go down. A quick intuition for all-stock deals: if the buyer's price-to-earnings ratio is higher than the price-to-earnings ratio it's paying for the target, the deal tends to be accretive. For cash or debt-funded deals, compare the target's earnings yield with the after-tax cost of the cash or debt used."),
+
+    h2("Step 5: LBOs"),
+    p("A leveraged buyout is when a buyer, usually a private equity firm, acquires a company using a large amount of debt. The company's own cash flows pay down that debt over several years, and the firm aims to sell the company later for a return."),
+    h3("Why debt increases returns"),
+    p("Because the buyer puts in less of its own money. Made-up example: buy a company for $100 using $40 of equity and $60 of debt. Over five years the company's cash pays the debt down, and the company is sold for $120. If $40 of debt is left, the equity is worth $80, double the $40 invested. Buying it with $100 of equity and selling at $120 would have been a much smaller gain. Debt magnifies returns, and also risk."),
+    h3("A good LBO candidate"),
+    ul(
+      "Stable, predictable cash flows to pay down debt",
+      "Not much need for heavy ongoing investment",
+      "A strong market position",
+      "Room to improve operations or grow",
+      "A realistic path to sell later",
+    ),
+
+    h2("The practice questions"),
+    p("Answer every one of these out loud, on paper, without notes. Mark the ones you couldn't explain to a friend, and close one gap a day."),
+    { type: "ol", items: technicals.finance.questions },
+
+    h2("How to study"),
+    ol(
+      "One topic at a time, in order. Don't start valuation until you can do the depreciation walk cold.",
+      "Explain each concept out loud as if to a friend who's never heard of it.",
+      "Work examples on paper with simple round numbers.",
+      "Use AI to check your reasoning and to generate variations of each question, not to give you answers to memorize.",
+      "Practice with a partner: they ask, you answer out loud, they push back.",
+      "Keep a list of gaps and close one a day.",
+    ),
+    p("In the program, Week 9 is the finance track's technicals week, with timed drills where students grade each other and a baseline quiz at the track threshold. Week 10 puts it under pressure in a full graded mock interview."),
+
+    h2("Common mistakes"),
+    ul(
+      "Memorizing answers you can't explain.",
+      "Starting with LBOs because they sound impressive.",
+      "Freezing instead of reasoning out loud when you don't know.",
+      "Bluffing. \"I'm not sure, but here's how I'd think about it\" beats a confident wrong answer.",
+      "Skipping the \"pitch me a stock\" question. Have one company you can discuss for two minutes.",
+    ),
+    check("You're ready for a first round when you can",
+      "Walk through the three statements and how they connect",
+      "Do the depreciation walk without notes",
+      "Name the valuation methods, when to use each, and walk through a DCF",
+      "Bridge equity value to enterprise value and explain each step",
+      "Explain accretion/dilution and why debt boosts LBO returns",
+      "Talk about one company for two minutes",
+    ),
+  ],
+};

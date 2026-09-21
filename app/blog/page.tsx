@@ -1,16 +1,15 @@
 import type { Metadata } from "next";
-import { articles } from "@/content/articles";
-import ArticleCard from "@/components/ArticleCard";
+import { articles, categories } from "@/content/articles";
+import BlogFilter from "@/components/BlogFilter";
 import Link from "next/link";
 import NewsletterForm from "@/components/NewsletterForm";
 
 export const metadata: Metadata = {
   title: "The Playbook",
-  description: "Free recruiting guides for college students and parents: the freshman internship timeline, cold email templates, and interview prep.",
+  description: `${articles.length} free, in-depth recruiting guides for college students and parents: timelines, resumes, target lists, cold email, networking calls, behavioral interviews, technicals by track, and advice for parents.`,
 };
 
 export default function BlogPage() {
-  const cats = Array.from(new Set(articles.map((a) => a.category)));
   return (
     <>
       <section className="blog-hero">
@@ -18,12 +17,8 @@ export default function BlogPage() {
           <span className="eyebrow">Free recruiting guides</span>
           <h1>The First Offer Playbook</h1>
           <p className="lede">
-            The recruiting playbook we use with our students: timelines, outreach templates, and interview
-            guides for first- and second-year college students and their parents. Free, always.
+            In-depth guides to the exact system we use with our students, from the first resume to the first interview. Written for first- and second-year college students and their parents. Free, always.
           </p>
-          <div className="pill-row" style={{ justifyContent: "center", marginTop: 24 }}>
-            {cats.map((c) => <span key={c} className="topic-pill is-static">{c}</span>)}
-          </div>
         </div>
       </section>
       <section className="section" style={{ paddingTop: 56 }}>
@@ -33,9 +28,10 @@ export default function BlogPage() {
             <strong>The First Offer Playbook: how to land your first internship before junior year.</strong>
             <span className="link-arrow">Get the PDF →</span>
           </Link>
-          <div className="grid grid-3">
-            {articles.map((a) => <ArticleCard key={a.slug} a={a} />)}
-          </div>
+          <BlogFilter
+            articles={articles.map(({ slug, title, excerpt, category, author, readMinutes }) => ({ slug, title, excerpt, category, author, readMinutes }))}
+            categories={categories}
+          />
           <div className="card nl-inline">
             <div>
               <h2>Get the next guide in your inbox</h2>

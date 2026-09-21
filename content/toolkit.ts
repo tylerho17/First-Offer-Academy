@@ -182,7 +182,7 @@ export const twoCs = {
 
 export const subjectLines = [
   "UCI freshman: quick question about your path into [field]",
-  "Fellow [school] Anteater with a question about [firm]",
+  "Fellow [school] student with a question about [firm]",
   "Your post on [topic]",
   "From [hometown] to [role]: a question",
   "[Mutual contact] suggested I reach out",
