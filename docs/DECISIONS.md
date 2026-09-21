@@ -32,3 +32,4 @@ Ambiguous calls made during the autonomous build, and why.
 - **Task 4:** The policy offers CCPA/CPRA-style rights to everyone, not just Californians, and doesn't claim the CCPA legally applies (a new small business likely falls under its thresholds). That's accurate whichever way the attorney reads it.
 - **Task 4:** Listed Resend as the email provider (task 18 uses it) and YouTube/Vimeo for embedded videos. The newsletter tool isn't chosen yet; add it to `site.serviceProviders` when it is.
 - **Task 4:** Restored bullet markers on legal, article, and prose lists; Tailwind's preflight had silently removed them.
+- **Task 5:** Terms use courts in Orange County for disputes, with no arbitration clause. Adding arbitration is a legal call for the attorney, not a default to invent.
