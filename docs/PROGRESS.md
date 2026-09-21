@@ -4,7 +4,7 @@ Re-read this file after any restart. Continue from the first unchecked task. Nev
 
 ## Phase A — Foundation
 - [x] 1. Baseline
-- [ ] 2. Visual QA pass
+- [x] 2. Visual QA pass
 
 ## Phase A2 — WSM program-overview build
 - [ ] A2.1 Shared building blocks
