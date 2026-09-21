@@ -3,6 +3,8 @@
 Things that need your real input. Each line names the file to edit.
 
 ## Must do before parents see it
+- **Review the three Playbook articles** in `content/articles.ts`. They were drafted earlier in your name; the timeline PDF is generated from one of them (`npm run pdf` after edits).
+- **Real testimonials with written permission** (students and at least one parent) → `content/testimonials.ts`. The home quote wall, /results, /results/parents, and /parents fill from it. (From the site brief; still open.)
 - **Email copy commitments** (`lib/emails/templates.ts`): contact confirmations promise a reply "within two business days", and subscribe confirmations offer unsubscribe-by-reply. CAN-SPAM requires honoring opt-outs within 10 business days. Once a newsletter tool is chosen, switch to its one-click unsubscribe link.
 - **/zh Mandarin parent page** (`content/zh.ts`) is machine-drafted. Have a native speaker review it, then set `zhReviewed: true` in `content/site.ts`. That removes noindex, adds it to the sitemap, and adds a footer link. Until then it is reachable only by direct URL and shows a draft notice.
 - **Confirm the default policies drafted on /refunds** (`content/legal/refunds.ts`): missed payments (email first; sessions may be paused if unresolved), full refund if we cancel the cohort or change the start date or format before it starts, and response times (2 business days to confirm a refund request).
@@ -31,6 +33,12 @@ Things that need your real input. Each line names the file to edit.
 - **Supabase:** create a project, run `supabase/migrations/001_init.sql` in the SQL editor, then set `SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY` in Vercel (see `.env.example`). Until then, every form shows "not connected yet".
 
 ## Content to collect
+- **Photos:** transparent headshot at `public/images/tyler.png` and a casual daylight photo at `public/images/tyler-casual.jpg` (founder section, arch photo).
+- **Dedicated Calendly "Parent call" event link** → `content/site.ts` `calendlyUrl` (currently your general Calendly page).
+- **Info-session dates** → `content/events.ts`.
+- **Session format, day/time, weekly hours, application deadline** → `content/site.ts` `format`, `weeklyHours`, `applicationDeadline`. Also used by the FAQ and /zh.
+- **Employer names each student permits** → `content/employers.ts` (`employerPermission: true`). The marquee needs 4; the /results grid needs 8.
+- **Total internships landed by the 8 students** → `content/stats.ts` (the empty stat renders once filled).
 - **Referral reward** (if you offer one) → `content/site.ts` `referralReward`. Hidden on /refer until set. If it involves a tuition discount, add it to the Refund & Payment Policy too.
 - **Week-by-week syllabus detail** → `content/syllabus.ts` (`detail` for each of the 12 weeks). Empty weeks show their phase summary on /program.
 - **Social profile URLs** (Instagram, LinkedIn, YouTube, TikTok, Facebook, Reddit, Spotify, podcast) → `content/site.ts` `socials`. The footer tile grid appears once at least one is set.
