@@ -1,5 +1,7 @@
 import { z } from "zod";
 import { bool, email, formRoute, optText, reqText } from "@/lib/formRoute";
+import { sendEmail } from "@/lib/emails/send";
+import { contactConfirmation } from "@/lib/emails/templates";
 
 const schema = z.object({
   firstName: reqText(100),
@@ -24,4 +26,5 @@ export const POST = formRoute({
     message: d.message,
     sms_consent: d.smsConsent,
   }),
+  after: (d) => sendEmail({ to: d.email, ...contactConfirmation(d) }),
 });

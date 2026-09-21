@@ -1,5 +1,7 @@
 import { z } from "zod";
 import { bool, email, formRoute, optText, reqText } from "@/lib/formRoute";
+import { sendEmail } from "@/lib/emails/send";
+import { applyConfirmation, applyNotify } from "@/lib/emails/templates";
 
 const schema = z.object({
   name: reqText(),
@@ -40,4 +42,10 @@ export const POST = formRoute({
     agree_terms: d.agreeTerms,
     updates_consent: d.updatesConsent,
   }),
+  after: async (d) => {
+    await Promise.allSettled([
+      sendEmail({ to: d.email, ...applyConfirmation(d) }),
+      process.env.NOTIFY_EMAIL ? sendEmail({ to: process.env.NOTIFY_EMAIL, replyTo: d.email, ...applyNotify(d) }) : Promise.resolve(),
+    ]).then((rs) => rs.forEach((r) => r.status === "rejected" && console.error("[apply] email failed:", r.reason)));
+  },
 });

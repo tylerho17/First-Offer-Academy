@@ -57,3 +57,6 @@ Ambiguous calls made during the autonomous build, and why.
 - **Task 17:** Subscribers upsert on email (ignore duplicates), so re-subscribing is a silent success. Emails use `citext` so case differences don't create duplicates.
 - **Task 17:** Removed `applyEndpoint` and `newsletterEndpoint` from `content/site.ts`; forms now post to their own `/api/*` routes. `server-only` isn't installed (no extra packages allowed), so the server libs rely on only being imported from route handlers.
 - **Task 17:** No local Postgres was available, so `001_init.sql` was reviewed but not executed. Route behavior was tested live: 503 without env, 400 on invalid input, fake 200 on honeypot, 429 after 5/min.
+- **Task 18:** Emails are hand-written table HTML with inline styles and a plain-text version (no React Email dependency). Georgia/Helvetica stand in for the brand fonts, since email clients can't load them reliably. All user input is HTML-escaped (verified with a script-tag test).
+- **Task 18:** Email sending runs in the route's `after` hook: a failed email is logged but never turns a saved submission into an error for the user. Application confirmation and Tyler's alert go out in parallel; the alert's reply-to is the applicant.
+- **Task 18:** The /timeline subscribe confirmation includes the PDF link.
