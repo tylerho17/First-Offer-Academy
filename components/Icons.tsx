@@ -24,3 +24,11 @@ export const Report = (p: P) => (<svg {...base} {...p}><rect x="5" y="3.5" width
 export const Pin = (p: P) => (<svg {...base} {...p}><path d="M12 21s-6.5-5.5-6.5-11a6.5 6.5 0 0113 0c0 5.5-6.5 11-6.5 11z" /><circle cx="12" cy="10" r="2.3" /></svg>);
 export const Calendar = (p: P) => (<svg {...base} {...p}><rect x="4" y="5" width="16" height="15" rx="2" /><path d="M4 10h16M9 3v4M15 3v4" /></svg>);
 export const Users = (p: P) => (<svg {...base} {...p}><circle cx="9" cy="9" r="3.2" /><path d="M3.5 19a5.5 5.5 0 0111 0M16 6.3a3 3 0 010 5.6M17.5 14a5 5 0 013 5" /></svg>);
+export const Mail = (p: P) => (<svg {...base} {...p}><rect x="3.5" y="5.5" width="17" height="13" rx="2" /><path d="M4 7l8 6 8-6" /></svg>);
+export const Mic = (p: P) => (<svg {...base} {...p}><rect x="9" y="3.5" width="6" height="11" rx="3" /><path d="M5.5 11.5a6.5 6.5 0 0013 0M12 18v3" /></svg>);
+export const Book = (p: P) => (<svg {...base} {...p}><path d="M5 4.5h10a3 3 0 013 3v12H8a3 3 0 01-3-3v-12z" /><path d="M5 16.5a3 3 0 013-3h10" /></svg>);
+export const IdCard = (p: P) => (<svg {...base} {...p}><rect x="3.5" y="5.5" width="17" height="13" rx="2" /><circle cx="9" cy="11" r="2" /><path d="M6 15.5a3 3 0 016 0M14 10h4M14 13.5h3" /></svg>);
+export const Play = (p: P) => (<svg {...base} {...p}><path d="M8 5.5v13l10.5-6.5L8 5.5z" fill="currentColor" /></svg>);
+export const ArrowDown = (p: P) => (<svg {...base} {...p}><path d="M12 5v14M6 13l6 6 6-6" /></svg>);
+export const ArrowLeft = (p: P) => (<svg {...base} {...p}><path d="M19 12H5M11 6l-6 6 6 6" /></svg>);
+export const ArrowRight = (p: P) => (<svg {...base} {...p}><path d="M5 12h14M13 6l6 6-6 6" /></svg>);

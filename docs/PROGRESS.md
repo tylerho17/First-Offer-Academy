@@ -7,7 +7,7 @@ Re-read this file after any restart. Continue from the first unchecked task. Nev
 - [x] 2. Visual QA pass
 
 ## Phase A2 — WSM program-overview build
-- [ ] A2.1 Shared building blocks
+- [x] A2.1 Shared building blocks
 - [ ] A2.2 Rebuild /program as long-form overview
 - [ ] A2.3 /our-promise
 - [ ] A2.4 Home page: WSM patterns
