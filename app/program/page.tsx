@@ -10,6 +10,7 @@ import ModuleSection from "@/components/sections/program/ModuleSection";
 import Together from "@/components/sections/program/Together";
 import SuccessStories from "@/components/sections/SuccessStories";
 import Comparison from "@/components/sections/Comparison";
+import Syllabus from "@/components/sections/program/Syllabus";
 import PromiseCta from "@/components/sections/program/PromiseCta";
 
 export const metadata: Metadata = {
@@ -31,6 +32,7 @@ export default function ProgramPage() {
       <Together />
       <SuccessStories title="See what students are saying." flush />
       <Comparison />
+      <Syllabus />
       <PromiseCta />
     </>
   );

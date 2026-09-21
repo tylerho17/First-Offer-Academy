@@ -859,3 +859,11 @@ a.topic-pill:hover { background: var(--navy); color: var(--cream); }
 .consent-note { font-size: 14px; }
 .nl-fine { font-size: 13px; color: var(--navy); margin: 2px 0 0 !important; }
 .nl-fine a { color: var(--navy); text-decoration: underline; }
+
+/* ---------- Syllabus (task 11) ---------- */
+.syllabus { display: grid; gap: 40px; }
+.syllabus-phase { display: grid; gap: 16px; }
+@media (min-width: 900px) { .syllabus-phase { grid-template-columns: 280px minmax(0, 1fr); gap: 40px; align-items: start; } }
+.syllabus-phase-head h3 { font-size: 26px; margin-top: 6px; }
+.syllabus-levels { font-size: 15px; margin-top: 8px; }
+.syllabus-sub { color: var(--dusty); font-family: var(--sans); font-size: 15px; font-weight: 600; }

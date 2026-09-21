@@ -44,3 +44,4 @@ Ambiguous calls made during the autonomous build, and why.
 - **Task 10:** The sitemap finds static routes by scanning `app/` for `page.tsx` files (`lib/routes.ts`), so new pages are included automatically. /admin, /deposit/*, and /zh are excluded by `PRIVATE_ROUTES`. Dynamic routes come from content (articles, tracks, permitted stories).
 - **Task 10:** Also added `app/apple-icon.tsx` (180px) alongside the favicon. JSON-LD has no rating or review fields anywhere.
 - **Task 10:** Renamed the /results page title to "Student Testimonials" to match the new nav label.
+- **Task 11:** The syllabus sits after the comparison table and before the final CTA pair, so /program still ends on a call to action. Each phase shows the Standard levels its deliverables map to (Foundation → levels 1–2, Outreach → 3–4, Interview-ready → 5), matching the phase text to the level gates in `content/program.ts`. Level 6 (Offer) is deliberately not mapped to any week.
