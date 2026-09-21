@@ -1,4 +1,5 @@
 import { site } from "@/content/site";
+import { leadMagnet } from "@/content/leadMagnet";
 import { button, esc, layout, p } from "./layout";
 
 const url = `https://${site.domain}`;
@@ -46,22 +47,22 @@ export function applyNotify(d: Record<string, unknown>) {
 }
 
 export function subscribeConfirmation(d: { firstName?: string | null; source?: string | null }) {
-  const timeline = d.source === "timeline";
-  const pdf = `${url}/downloads/freshman-recruiting-timeline.pdf`;
-  const subject = timeline ? "Your Freshman Recruiting Timeline" : "You're subscribed to the First Offer newsletter";
+  const playbook = d.source === "playbook";
+  const pdf = `${url}${leadMagnet.file}`;
+  const subject = playbook ? `Your copy of ${leadMagnet.title}` : "You're subscribed to the First Offer newsletter";
   const text = `${hi(d.firstName)}
 
-${timeline ? `Here's your copy of the Freshman Recruiting Timeline: ${pdf}\n\n` : ""}You're on the list for the First Offer newsletter: recruiting timelines, outreach templates, and interview tips, every other week.
+${playbook ? `Here's your copy of ${leadMagnet.title}: ${pdf}\n\n` : ""}You're on the list for the First Offer newsletter: recruiting timelines, outreach templates, and interview tips, every other week.
 
 Unsubscribe anytime by replying "unsubscribe".
 
 ${site.name}`;
   const html = layout({
-    preheader: timeline ? "Your one-page timeline is inside." : "Recruiting guides every other week.",
-    heading: timeline ? "Here's your timeline." : "You're subscribed.",
+    preheader: playbook ? `Your ${leadMagnet.pages}-page Playbook is inside.` : "Recruiting guides every other week.",
+    heading: playbook ? "Here's your Playbook." : "You're subscribed.",
     body:
       p(hi(d.firstName)) +
-      (timeline ? p("Here's your copy of the Freshman Recruiting Timeline.") + button("Download the PDF", pdf) : "") +
+      (playbook ? p(`Here's your copy of ${leadMagnet.title}.`) + button("Download the PDF", pdf) : "") +
       p("You're on the list for the First Offer newsletter: recruiting timelines, outreach templates, and interview tips, every other week.") +
       p(`While you wait for the next issue, <a href="${url}/blog" style="color:#3F6690">the Playbook</a> has free guides you can use today.`),
     footerNote: 'Don\'t want these emails? Reply with "unsubscribe" and we\'ll remove you.',

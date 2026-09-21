@@ -28,9 +28,9 @@ export default function BlogPage() {
       </section>
       <section className="section" style={{ paddingTop: 56 }}>
         <div className="wrap">
-          <Link href="/timeline" className="card timeline-promo">
+          <Link href="/playbook-pdf" className="card timeline-promo">
             <span className="eyebrow">Free download</span>
-            <strong>The Freshman Recruiting Timeline: one printable page, quarter by quarter.</strong>
+            <strong>The First Offer Playbook: how to land your first internship before junior year.</strong>
             <span className="link-arrow">Get the PDF →</span>
           </Link>
           <div className="grid grid-3">

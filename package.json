@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "eslint .",
     "screenshots": "node scripts/screenshots.mjs",
-    "pdf": "node --no-warnings scripts/build-timeline-pdf.mjs"
+    "pdf": "node --no-warnings scripts/build-playbook-pdf.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.116.0",

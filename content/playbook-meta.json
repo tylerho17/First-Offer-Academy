@@ -1,0 +1,22 @@
+{
+  "pages": 20,
+  "chapterPages": {
+    "ch-how-recruiting-works": 3,
+    "ch-recruiting-calendar": 4,
+    "ch-resume": 5,
+    "ch-target-list": 7,
+    "ch-ai-outreach": 8,
+    "ch-cold-email": 9,
+    "ch-the-call": 11,
+    "ch-referrals": 12,
+    "ch-behavioral-stories": 13,
+    "ch-technicals": 15,
+    "ch-why": 15,
+    "ch-interviews": 17,
+    "ch-externships": 18,
+    "ch-execution-calendar": 19,
+    "ch-game-plan": 20,
+    "ch-closing": 20,
+    "Dest": 1
+  }
+}

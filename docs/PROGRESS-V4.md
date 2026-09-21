@@ -6,7 +6,7 @@ Re-read this file after any restart. Continue from the first unchecked task. Nev
 - [x] 2. Founder facts + LinkedIn
 - [x] 3. Remove case studies by student type
 - [x] 4. Week 1–12 buildout
-- [ ] 5. The First Offer Playbook PDF
+- [x] 5. The First Offer Playbook PDF
 - [ ] 6. Free loot: downloadable templates
 - [ ] 7. In-depth recruiting guides
 - [ ] 8. QA and report
