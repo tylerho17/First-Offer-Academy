@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { promise } from "@/content/promise";
 import Ornament from "@/components/Ornament";
+import LeavesWith from "@/components/sections/LeavesWith";
 import CallLink from "@/components/CallLink";
 import { Check, Minus } from "@/components/Icons";
 
@@ -40,6 +41,8 @@ export default function OurPromisePage() {
           </ul>
         </div>
       </section>
+
+      <LeavesWith />
 
       <section className="section band">
         <div className="wrap two-col">

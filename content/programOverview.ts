@@ -48,22 +48,6 @@ export const programOverview = {
     callout: "This does not require a target school, a 4.0, a finance background, or club membership.",
   },
 
-  // Drawn from the level gates in content/program.ts. These are what the
-  // program requires every student to do, not promised outcomes.
-  week12: {
-    title: "By Week 12, your student will have:",
-    note: "These are the requirements every student works to in the program. They describe the work, not an outcome: hiring decisions belong to employers.",
-    items: [
-      "A resume that passes our rubric",
-      "A target list of 50 companies",
-      "100+ personalized emails sent and logged",
-      "5+ calls with working professionals",
-      "6 behavioral stories recorded",
-      "Graded mock interviews completed",
-      "A documented search to show you, step by step",
-    ],
-  },
-
   booking: {
     title: "Book a free call to ask questions or apply.",
     sub: "Twenty minutes with Tyler to talk through your student's situation and whether the program fits.",
@@ -116,13 +100,13 @@ export const modules: Module[] = [
     title: "Outreach System",
     icon: "mail",
     positioning: "Recruiting doesn't reward the smartest student. It rewards the one who sent the 40th email.",
-    detail: "A target list of 50, personalized emails every week, and a follow-up rule for every call.",
+    detail: "A target list of 50 with named contacts, 50 sequenced emails a week, and a thank-you after every call.",
     body: [
-      "Every student builds a target list of 50 companies in their field, including small and local firms, not only the famous names. The first 25 personalized emails go out by the end of Week 3, then 25 new emails a week through Week 8.",
-      "Emails follow a short structure: who you are, why this person, one specific ask, and thanks. No reply is normal, so each email gets one follow-up after five business days. Your student's coach reviews the emails before they go out.",
-      "Every call is logged in the tracker and gets a thank-you note within two hours that mentions one specific thing the person said. Referrals are asked for only once there's a real relationship.",
+      "Every student builds a target list of 50 companies in their field, including small and local firms, not only the famous names. Each contact is named, not a generic inbox. In Week 3 every student sets up their own AI-assisted email automation and sends the first 50 sequenced emails before leaving the session. From then on the minimum is 50 new sequenced emails a week, 500+ by the end of the program.",
+      "Emails follow the Two C's: a genuine compliment and a real connection, then one specific ask. AI drafts; your student personalizes and reads every email before it goes. No reply is normal, so each sequence carries up to four follow-ups. Your student's coach reviews the emails in the weekly 1:1.",
+      "Every call is logged in the tracker and gets a thank-you note within two hours that mentions one specific thing the person said. Nobody asks for a referral directly; students learn the close that earns an introduction instead.",
     ],
-    components: ["Target list of 50", "Personalized emails with a follow-up cadence", "Every call logged and thanked within 2 hours"],
+    components: ["Target list of 50 with named contacts", "AI-assisted sequencing, 50 emails a week", "Every call logged and thanked within 2 hours"],
     videos: { tyler: "", student: "" },
     proof: { kind: "image", label: "Sneak peek: a student's outreach tracker", ratio: "16 / 10", src: "", note: "Screenshot with names removed" },
   },
@@ -131,13 +115,13 @@ export const modules: Module[] = [
     title: "Story Bank",
     icon: "book",
     positioning: "The point isn't to have the perfect answer. It's to have a better-prepared one.",
-    detail: "Six core behavioral stories, built on a structure and edited line by line.",
+    detail: "8 behavioral stories, chosen for uniqueness and edited line by line.",
     body: [
-      "Most interviews come back to the same handful of questions. Students prepare six core stories: leadership, teamwork, failure, conflict, initiative, and why this field.",
+      "Most interviews come back to the same handful of questions. Students mine 8 stories from 25 self-questions, chosen for uniqueness, not impressiveness, and map each one to leadership, failure, conflict, teamwork, initiative, and why this field.",
       "Each story is built on a structured framework, written once, and then practiced out loud until it sounds natural rather than memorized. In the weekly 1:1, your student's coach gives line-by-line edits.",
-      "All six stories are recorded by the Networked level of the Standard, so they're ready well before the first real interview.",
+      "All 8 stories are recorded by the Networked level of the Standard (Week 8), so they're ready well before the first real interview.",
     ],
-    components: ["Six core stories", "Structured frameworks", "Line-by-line edits from your coach"],
+    components: ["8 stories, mapped to every common question", "Structured frameworks", "Line-by-line edits from your coach"],
     videos: { tyler: "", student: "" },
     proof: {
       kind: "videoPair",
@@ -155,7 +139,7 @@ export const modules: Module[] = [
     positioning: "Understand the concept first. The answer comes easier after that.",
     detail: "Weeks 9–10 split by track: Finance, Consulting, Marketing, or Tech.",
     body: [
-      "In Weeks 9–10 the cohort splits into four tracks for track-specific technical prep. Finance covers the three statements and valuation basics. Consulting covers case structure and mental math. Marketing builds a starter portfolio and the metrics that matter. Tech focuses on one strong project and technical interview reps.",
+      "In Weeks 9–10 the cohort splits into four tracks for track-specific technical prep. Finance follows a set study order: accounting, valuation, enterprise vs. equity value, M&A, then LBOs. Consulting covers case structure and mental math. Marketing builds a starter portfolio and the metrics that matter. Tech focuses on one strong project and technical interview reps.",
       "Concepts come before memorization: students learn why an answer is right, so they can handle the version of the question they haven't seen.",
       "Practice questions come with answer walk-throughs, so students can check their reasoning, not only their final answer.",
     ],
@@ -168,13 +152,13 @@ export const modules: Module[] = [
     title: "Interview Reps",
     icon: "mic",
     positioning: "Confidence in an interview comes from reps, not from reading about interviews.",
-    detail: "Weekly 1:1 feedback, live reps in every session, and graded mocks in Weeks 11–12.",
+    detail: "A weekly 60-minute 1:1, live reps in every session, and graded mocks in Weeks 10–11.",
     body: [
-      "Every week, a 15-minute 1:1 with your student's coach reviews the tracker and fixes the single biggest bottleneck. Every 90-minute session includes live reps, not only instruction.",
-      "Weeks 11–12 are graded mock interviews. The last ones are run by guest professionals your student has never met, because a real interviewer is a stranger too.",
-      "To reach the Interviewing level of the Standard, a student completes a first-round interview and passes two graded mocks.",
+      "Every week, a 60-minute 1:1 with your student's coach reviews the tracker line by line, fixes the single biggest bottleneck, and edits real work live, often a mini-mock. Every 90-minute session includes live reps, not only instruction.",
+      "Weeks 10 and 11 each include a full 30-minute graded mock on a written scorecard. The last one is run by a guest professional your student has never met, because a real interviewer is a stranger too.",
+      "To reach the Interviewing level of the Standard, a student has sent 500+ emails, passed two graded mocks, completed their second externship, and done a real first round where one is available.",
     ],
-    components: ["Weekly 1:1 feedback", "Live reps in session", "Graded mocks, the last run by strangers"],
+    components: ["Weekly 60-minute 1:1", "Live reps in session", "Graded mocks, the last run by strangers"],
     videos: { tyler: "", student: "" },
     proof: { kind: "media", label: "Mock interview recording", ratio: "16 / 9", src: "", note: "Audio or video, shared with permission" },
   },

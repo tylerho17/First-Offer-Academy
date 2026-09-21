@@ -48,3 +48,6 @@ Things that need your real input. Each line names the file to edit.
 - **Module proof assets** → `content/programOverview.ts` (`modules[].proof`): 3 resume before/after images (names removed, permission), outreach tracker screenshot, Week 1 vs Week 12 "Tell me about yourself" recordings, a sample technical session video, a mock interview recording, and a real pod photo.
 - **Success stories** in "How [Name] landed [role]" format → `content/stories.ts` (`permission: true` only after written consent; `employerPermission` separately).
 
+
+## Build Plan v4
+- **Externship provider (confirm before launch):** if students really complete company-designed virtual externship projects (e.g. through Extern), put the provider name in `content/site.ts` → `externships.provider`. Only then does the site say "2 externships with Fortune 500 companies". Until then it says "2 virtual externship projects".

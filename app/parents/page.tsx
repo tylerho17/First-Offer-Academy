@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { parentsPage as p } from "@/content/parents";
-import { weekly } from "@/content/program";
+import { positioning, weekly } from "@/content/program";
+import LeavesWith from "@/components/sections/LeavesWith";
 import { site } from "@/content/site";
 import { testimonials } from "@/content/testimonials";
 import Ornament from "@/components/Ornament";
@@ -26,6 +27,7 @@ export default function ParentsPage() {
           <span className="eyebrow" style={{ display: "block" }}>{p.eyebrow}</span>
           <h1>{p.title}</h1>
           <p className="lede">{p.lede}</p>
+          <p className="lede">{positioning} The tactics are free; what you pay for is someone making sure the work gets done, every week.</p>
           <div className="btn-row">
             <CallLink className="btn btn-primary">Book a parent call</CallLink>
             <Link href="/program" className="btn btn-secondary">See the full program</Link>
@@ -69,6 +71,8 @@ export default function ParentsPage() {
           </div>
         </div>
       </section>
+
+      <LeavesWith />
 
       <section className="section band" id="payment">
         <div className="wrap price-grid">

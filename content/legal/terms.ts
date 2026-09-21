@@ -22,7 +22,7 @@ export const terms: LegalDoc = {
     ] },
 
     { type: "h2", text: "What the program is" },
-    { type: "p", text: "The program is coaching and instruction for a student's internship search. It includes 12 weekly 90-minute group sessions, 12 weekly 15-minute 1:1s, an accountability pod, feedback on the student's work, graded mock interviews, parent progress reports every two weeks, and a Week 12 family meeting. Dates, times, and format are shared before the cohort starts." },
+    { type: "p", text: "The program is coaching and instruction for a student's internship search. It includes 12 weekly 90-minute group sessions, twelve weekly 60-minute 1:1s, an accountability pod, feedback on the student's work, graded mock interviews, parent progress reports every two weeks, and a Week 12 family meeting. Dates, times, and format are shared before the cohort starts." },
     { type: "p", text: "We may adjust session content, order, or coaches to improve the program. If we need to change a scheduled session, we'll give as much notice as we can and offer a make-up or recording." },
 
     { type: "h2", text: "No promise of outcomes" },

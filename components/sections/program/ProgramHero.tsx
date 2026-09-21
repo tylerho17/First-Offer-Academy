@@ -5,6 +5,7 @@ import VideoSlot from "../../VideoSlot";
 import Ornament from "../../Ornament";
 import ArchPhoto from "../../ArchPhoto";
 import { site } from "@/content/site";
+import { positioning } from "@/content/program";
 
 export default function ProgramHero() {
   const h = programOverview.hero;
@@ -15,7 +16,7 @@ export default function ProgramHero() {
           <Ornament />
           <span className="eyebrow" style={{ display: "block" }}>{h.eyebrow}</span>
           <h1>{h.title}</h1>
-          <p className="lede">{h.sub}</p>
+          <p className="lede">{positioning} {h.sub}</p>
           <div className="btn-row">
             <Link href="/apply" className="btn btn-primary">Apply</Link>
             <CallLink />

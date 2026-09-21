@@ -10,7 +10,7 @@ export const promise = {
     title: "What we promise",
     items: [
       { title: "A weekly group session", body: "Twelve 90-minute sessions: the scoreboard, one skill taught, live reps, and a clear commitment for the week." },
-      { title: "A weekly 1:1", body: "Twelve 15-minute 1:1s where your student's coach reviews the tracker and fixes the single biggest bottleneck." },
+      { title: "A weekly 1:1", body: "Twelve 60-minute 1:1s: a line-by-line tracker review, the single biggest bottleneck fixed, live edits on real work, and exact commitments for the next 7 days." },
       { title: "Feedback on every piece of work", body: "Resume, outreach emails, behavioral stories, and interviews. Nothing your student submits goes unreviewed." },
       { title: "A documented search, graded against the Standard", body: "Every email, call, and interview is logged. Your student's level on the Standard moves on evidence, not on how the week felt." },
       { title: "Parent progress reports", body: "A one-page report every two weeks showing your student's level and numbers." },

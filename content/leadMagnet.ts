@@ -10,7 +10,7 @@ export const leadMagnet = {
   bullets: [
     "Fall: the foundation (resume, direction, LinkedIn, a recorded intro)",
     "Winter: start talking to people (a target list of 50, personalized emails, a tracker)",
-    "Spring: turn conversations into opportunities (follow-ups, referrals, six stories)",
+    "Spring: turn conversations into opportunities (follow-ups, referrals, eight stories)",
   ],
   note: "Enter your email and the download link appears right away. We'll also send the First Offer newsletter every other week; unsubscribe anytime.",
 };

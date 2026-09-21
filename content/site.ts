@@ -64,6 +64,14 @@ export const site = {
   reviewsUrl: "",
 
 
+  // TODO(Tyler): virtual externship provider (e.g. "Extern"). Only fill this
+  // in once you've confirmed students complete real company-designed projects.
+  // Empty = the site says "2 virtual externship projects" with no company
+  // names and no "Fortune 500".
+  externships: {
+    provider: "",
+  },
+
   // TODO: fill in. Empty strings render as "To be announced".
   format: "", // e.g. "In person in Irvine, Tuesdays 6–7:30pm"
   weeklyHours: "", // e.g. "6–8"

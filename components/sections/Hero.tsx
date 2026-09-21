@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { site } from "@/content/site";
+import { positioning } from "@/content/program";
 import CallLink from "../CallLink";
 import { Calendar, Pin, Users } from "../Icons";
 import TrackPills from "./TrackPills";
@@ -14,6 +15,7 @@ export default function Hero() {
           <p className="lede">
             First Offer Academy is a 12-week program that teaches first- and second-year college
             students how to land internships in finance, consulting, marketing, and tech, starting from zero.
+            {" "}{positioning}
           </p>
           <div className="btn-row">
             <Link href="/apply" className="btn btn-primary">Apply for the January cohort</Link>

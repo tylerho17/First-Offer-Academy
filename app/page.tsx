@@ -9,6 +9,7 @@ import HowItWorks from "@/components/sections/HowItWorks";
 import Tracks from "@/components/sections/Tracks";
 import Testimonials from "@/components/sections/Testimonials";
 import Standard from "@/components/sections/Standard";
+import LeavesWith from "@/components/sections/LeavesWith";
 import Founder from "@/components/sections/Founder";
 import EventsSchedule from "@/components/sections/EventsSchedule";
 import Comparison from "@/components/sections/Comparison";
@@ -50,6 +51,7 @@ export default function Home() {
       <SuccessStories eyebrow="Results" title="Success stories" flushBottom />
       <Testimonials compact />
       <Standard />
+      <LeavesWith />
       <Founder />
       <EventsSchedule />
       <Comparison />

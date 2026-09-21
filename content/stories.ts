@@ -28,7 +28,7 @@ export type Story = {
   employer?: string;
   employerPermission: boolean;
   startingPoint: string; // where they started, in plain words
-  weeklyNumbers: string; // e.g. "25 emails a week, 6 calls in Weeks 4–8"
+  weeklyNumbers: string; // e.g. "50 emails a week, 6 calls in Weeks 4–8"
   outcome: string; // what actually happened
   quote: string;
   videoUrl?: string; // YouTube or Vimeo

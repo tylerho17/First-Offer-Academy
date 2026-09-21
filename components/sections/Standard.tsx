@@ -1,5 +1,5 @@
-import { levels } from "@/content/program";
-import { Report } from "../Icons";
+import { levels, weeklyMinimum } from "@/content/program";
+import { Check, Report } from "../Icons";
 
 export default function Standard() {
   return (
@@ -15,12 +15,19 @@ export default function Standard() {
             <li className="rung" key={l.n}>
               <span className="lvl">{l.n}</span>
               <div>
-                <h3>{l.name}</h3>
+                <h3>{l.name} <span className="rung-week">Target: {l.week}</span></h3>
                 <p>{l.gate}</p>
               </div>
             </li>
           ))}
         </ol>
+        <div className="card minimum-card">
+          <h3>{weeklyMinimum.title}</h3>
+          <ul className="checks">
+            {weeklyMinimum.items.map((i) => <li key={i}><Check />{i}</li>)}
+          </ul>
+          <p className="minimum-note">{weeklyMinimum.note}</p>
+        </div>
         <p className="note-line"><Report />Every two weeks, parents get a one-page progress report showing their student&apos;s level and numbers.</p>
       </div>
     </section>

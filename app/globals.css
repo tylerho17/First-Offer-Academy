@@ -947,3 +947,32 @@ a.card, .story-card, .icon-tile { transition: transform .15s ease, box-shadow .1
 .back-to-top.is-visible { opacity: 1; transform: none; pointer-events: auto; }
 .back-to-top:hover { background: #23385d; }
 @media (min-width: 768px) { .back-to-top { right: 24px; bottom: 24px; } }
+
+/* ---------- v4: Standard extras, weekly format tables ---------- */
+.rung-week { display: block; font-family: var(--sans); font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--dusty); margin-top: 4px; }
+.rung:last-child .rung-week { color: var(--cream); }
+.minimum-card { margin-top: 28px; }
+.minimum-card .checks { margin-top: 16px; }
+.minimum-card .checks svg, .card .checks svg { color: var(--dusty); }
+.minimum-note { margin-top: 16px; font-size: 16px; }
+.format-grid { align-items: start; }
+@media (min-width: 640px) and (max-width: 1099px) { .format-grid { grid-template-columns: minmax(0, 1fr); } }
+.format-card { padding: 22px; }
+.format-table { width: 100%; border-collapse: collapse; font-size: 15px; }
+.format-table caption { text-align: left; font-family: var(--display); color: var(--navy); font-size: 22px; margin-bottom: 12px; }
+.format-table th, .format-table td { text-align: left; vertical-align: top; padding: 12px 8px; border-bottom: 1px solid var(--navy-line); }
+.format-table thead th { font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--dusty); }
+.format-table tbody th { color: var(--navy); font-weight: 700; }
+.format-table tr:last-child th, .format-table tr:last-child td { border-bottom: 0; }
+.format-time { white-space: nowrap; color: var(--navy); font-weight: 600; }
+@media (max-width: 520px) {
+  .format-table thead { display: none; }
+  .format-table tbody tr { display: grid; grid-template-columns: 1fr auto; padding: 12px 0; border-bottom: 1px solid var(--navy-line); }
+  .format-table tbody tr:last-child { border-bottom: 0; }
+  .format-table tbody th, .format-table tbody td { border: 0; padding: 2px 0; }
+  .format-table tbody td:last-child { grid-column: 1 / -1; }
+}
+.plan-leaves-title { margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--cream-line); font-family: var(--display); font-size: 20px; color: var(--cream); }
+.plan-leaves { margin-top: 14px; gap: 10px; }
+.plan-leaves li { font-size: 16px; }
+.plan-leaves-note { margin-top: 12px; font-size: 14px; color: var(--cream); opacity: .85; }

@@ -1,7 +1,7 @@
 import { programOverview } from "@/content/programOverview";
 import CallLink from "../../CallLink";
 import Ornament from "../../Ornament";
-import { Week12List } from "./Week12Checklist";
+import { LeavesWithList } from "../LeavesWith";
 
 export default function Together() {
   const t = programOverview.together;
@@ -12,7 +12,7 @@ export default function Together() {
           <Ornament />
           <h2>{t.title}</h2>
           <p className="together-note">{t.note}</p>
-          <Week12List compact />
+          <LeavesWithList compact />
           <div className="btn-row">
             <CallLink className="btn btn-primary">Book a free call</CallLink>
           </div>

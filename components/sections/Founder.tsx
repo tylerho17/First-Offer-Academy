@@ -23,6 +23,12 @@ export default function Founder() {
             landed internships in their first year. The system kept producing after I stepped back.
           </p>
           <p>
+            I went through the two most recent recruiting cycles myself. The tactics I used are
+            free: I give them away in the Playbook. What I sell is execution and accountability:
+            making sure your student does the work every week, reviewing every piece of it, and
+            holding them to a number.
+          </p>
+          <p>
             First Offer Academy is that system, built for every student, not just the ones who got
             into the right club.
           </p>

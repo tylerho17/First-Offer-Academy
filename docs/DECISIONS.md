@@ -74,3 +74,10 @@ Ambiguous calls made during the autonomous build, and why.
 - **Task 23:** Automated WCAG audit of every visible text node on every route (with accordions and tiles expanded): all pass AA. Keyboard test of all 7 forms: every field reachable by Tab with a visible focus ring; every form submits by keyboard alone. Strengthened focus rings on inputs (the newsletter inputs previously signaled focus with a border color only).
 - **Task 23:** With `showPlaceholders: false`, the /program hero had an empty right column (no video yet); it now falls back to the arch photo. All pages were checked in placeholders-off mode.
 - **Task 23:** Added width/height to the last three `<img>` tags. Banned-word and banned-name sweep across app/, components/, content/, lib/, scripts/, templates, and README: no hits.
+
+## Build Plan v4
+- **v4 Task 1:** Program facts live in `content/program.ts` (`positioning`, `levels` with target weeks, `weeklyMinimum`, `leavesWith`, `sessionFormat`, `oneOnOneFormat`). The "leaves with" list replaced the old "By Week 12" list and renders through one component (`components/sections/LeavesWith.tsx`) on /program, /parents, /our-promise and home, and as a second list on the /pricing plan card.
+- **v4 Task 1:** /program shows the 1:1 format table next to the 90-minute session table (both come from the curriculum source), so parents can compare the two weekly formats side by side.
+- **v4 Task 1:** The externship line is driven by `site.externships.provider`. While it's empty the site says "2 virtual externship projects completed", with no company names and no "Fortune 500".
+- **v4 Task 1:** Networking-call email templates used to ask for a "15-minute call". They now ask for a "quick call", so "15-minute" appears nowhere on the site and can't be confused with the 60-minute 1:1.
+- **v4 Task 1:** The mock interview module now says the graded mocks happen in Weeks 10–11 (per the curriculum source), not "Weeks 11–12".

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { site } from "@/content/site";
-import { included } from "@/content/program";
+import { included, leavesWith } from "@/content/program";
 import LogoMarquee from "@/components/sections/LogoMarquee";
 import FaqList from "@/components/sections/FaqList";
 import CallLink from "@/components/CallLink";
@@ -63,6 +63,11 @@ export default function PricingPage() {
               {included.map((f) => <li key={f}><Check />{f}</li>)}
               <li><Check />A Week 12 family results meeting</li>
             </ul>
+            <p className="plan-leaves-title">{leavesWith.title}</p>
+            <ul className="plan-list plan-leaves">
+              {leavesWith.items.map((f) => <li key={f}><Check />{f}</li>)}
+            </ul>
+            <p className="plan-leaves-note">Program requirements, not outcomes.</p>
             <div className="btn-row">
               <Link href="/apply" className="btn btn-sage">Apply now</Link>
               <CallLink className="btn btn-cream-outline" />
