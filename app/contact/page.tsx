@@ -1,35 +1,30 @@
 import type { Metadata } from "next";
-import PageHero from "@/components/PageHero";
-import CallLink from "@/components/CallLink";
+import Link from "next/link";
+import ContactForm from "@/components/ContactForm";
+import Ornament from "@/components/Ornament";
 import { site } from "@/content/site";
 
-export const metadata: Metadata = { title: "Contact" };
+export const metadata: Metadata = {
+  title: "Contact",
+  description: "Questions about First Offer Academy or your student's internship search? Send a message and book a call with Tyler.",
+};
 
 export default function ContactPage() {
   return (
-    <>
-      <PageHero eyebrow="Contact" title="Talk to a real person." lede="Parents, students, and schools: reach Tyler directly." />
-      <section className="section" style={{ paddingTop: 24 }}>
-        <div className="wrap grid grid-3">
-          <div className="card">
-            <span className="eyebrow">Parents &amp; students</span>
-            <h3>Book a free call</h3>
-            <p style={{ margin: "10px 0 20px" }}>Twenty minutes to talk through your student&apos;s situation and whether the program fits.</p>
-            <CallLink className="btn btn-primary" />
+    <section className="section contact-page">
+      <div className="wrap">
+        <div className="card contact-card">
+          <div className="contact-head">
+            <Ornament className="is-center" />
+            <h1>Contact</h1>
+            <p>Send a message if you have questions about the program or your student&apos;s search.</p>
           </div>
-          <div className="card">
-            <span className="eyebrow">Email</span>
-            <h3>{site.email}</h3>
-            <p style={{ marginTop: 10 }}>For questions about the program, payment, or anything else.</p>
-          </div>
-          <div className="card">
-            <span className="eyebrow">Schools &amp; clubs</span>
-            <h3>Free workshops</h3>
-            <p style={{ margin: "10px 0 20px" }}>Bring a free recruiting workshop to your club, school, or PTSA.</p>
-            <a href="/workshops" className="link-arrow">Learn more →</a>
-          </div>
+          <ContactForm />
         </div>
-      </section>
-    </>
+        <p className="contact-alt">
+          Prefer email? <a href={`mailto:${site.email}`}>{site.email}</a> · Schools and clubs: <Link href="/workshops">free workshops</Link>
+        </p>
+      </div>
+    </section>
   );
 }

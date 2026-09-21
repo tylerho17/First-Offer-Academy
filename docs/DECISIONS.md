@@ -24,3 +24,5 @@ Ambiguous calls made during the autonomous build, and why.
 - **A2.5:** Created a minimal `/share-your-story` stub so the new nav link doesn't 404; task 8 replaces it with the real form.
 - **A2.6:** Footer "Navigation" keeps an Apply link (the old Program column had one) since the new "Program Details" column is fixed to five items. Track links moved out of the footer; they remain in the header Program dropdown.
 - **A2.6:** Social tiles are 48px on mobile (4 × 48 + gaps fits the 375px column) and 56px from 768px up.
+- **A2.7:** Added an optional "Message" textarea to the contact form. The spec's field list had none, but the page copy invites people to "send a message", so a form with nowhere to write one would be confusing.
+- **A2.7:** New `lib/submit.ts` posts every form's JSON to its `/api/*` route and treats 404 (route not built yet) and 503 (backend env not set) as "not connected yet". All forms share this pattern from here on.
