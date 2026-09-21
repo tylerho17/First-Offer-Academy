@@ -3,6 +3,8 @@ import { Young_Serif, Hanken_Grotesk } from "next/font/google";
 import AnnouncementBar from "@/components/AnnouncementBar";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import AnalyticsEvents from "@/components/AnalyticsEvents";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const youngSerif = Young_Serif({ weight: "400", subsets: ["latin"], variable: "--font-young-serif", display: "swap" });
@@ -34,6 +36,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <Header />
         <main>{children}</main>
         <Footer />
+        <Analytics />
+        <AnalyticsEvents />
       </body>
     </html>
   );

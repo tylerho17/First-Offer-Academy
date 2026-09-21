@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { leadMagnet } from "@/content/leadMagnet";
+import { track } from "@vercel/analytics";
 import { postForm } from "@/lib/submit";
 import Honeypot from "./Honeypot";
 
@@ -14,6 +15,7 @@ export default function TimelineForm() {
     const data = Object.fromEntries(new FormData(e.currentTarget).entries());
     setStatus("sending");
     const result = await postForm("/api/subscribe", { ...data, source: "timeline" });
+    if (result === "ok") track("subscribe", { source: "timeline" });
     setStatus(result === "ok" ? "done" : result);
   }
 

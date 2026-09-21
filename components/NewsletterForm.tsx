@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { track } from "@vercel/analytics";
 import { postForm } from "@/lib/submit";
 import Honeypot from "./Honeypot";
 
@@ -13,6 +14,7 @@ export default function NewsletterForm() {
     const data = Object.fromEntries(new FormData(e.currentTarget).entries());
     setStatus("sending");
     const result = await postForm("/api/subscribe", { ...data, source: "newsletter" });
+    if (result === "ok") track("subscribe", { source: "newsletter" });
     setStatus(result === "ok" ? "done" : result);
   }
 

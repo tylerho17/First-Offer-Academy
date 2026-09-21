@@ -38,7 +38,7 @@ Re-read this file after any restart. Continue from the first unchecked task. Nev
 - [x] 18. Email confirmations
 - [x] 19. Stripe deposit
 - [x] 20. Admin view
-- [ ] 21. Analytics
+- [x] 21. Analytics
 
 ## Phase E — Finish
 - [ ] 22. Polish

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { site } from "@/content/site";
+import { track } from "@vercel/analytics";
 import { postForm } from "@/lib/submit";
 import Honeypot from "./Honeypot";
 import CallLink from "./CallLink";
@@ -31,6 +32,7 @@ export default function ApplyForm({ depositEnabled = false }: { depositEnabled?:
       setStatus(result);
       return;
     }
+    track("apply_submit");
     setEmail(String(data.get("email") ?? ""));
     setStatus("done");
     window.scrollTo({ top: 0, behavior: "smooth" });
