@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { assetTitles, weekHref, weeks, type Week } from "@/content/curriculum";
 import { downloadFile, getDownload } from "@/content/downloads";
+import GatedDownload from "@/components/GatedDownload";
 import Ornament from "../Ornament";
 import CallLink from "../CallLink";
 import LevelBadge from "./LevelBadge";
@@ -110,7 +111,7 @@ export default function WeekView({ week: w }: { week: Week }) {
                 return (
                   <li key={a}>
                     <Check />
-                    {d ? <a href={downloadFile(d)} download data-event="template_download">{assetTitles[a]} ({d.format})</a> : assetTitles[a]}
+                    {d ? <GatedDownload slug={d.slug} href={downloadFile(d)} label={`Download: ${assetTitles[a]} (${d.format})`} className="link-download" /> : assetTitles[a]}
                   </li>
                 );
               })}

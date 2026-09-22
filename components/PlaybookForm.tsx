@@ -5,17 +5,23 @@ import { useState } from "react";
 import { leadMagnet } from "@/content/leadMagnet";
 import { track } from "@vercel/analytics";
 import { postForm } from "@/lib/submit";
+import { rememberSubscribed, useSubscribed } from "@/lib/subscribed";
 import Honeypot from "./Honeypot";
 
 export default function PlaybookForm() {
   const [status, setStatus] = useState<"idle" | "sending" | "done" | "error" | "unconnected">("idle");
+  // Already gave an email for another download in this browser: skip the form.
+  const subscribed = useSubscribed();
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const data = Object.fromEntries(new FormData(e.currentTarget).entries());
     setStatus("sending");
     const result = await postForm("/api/subscribe", { ...data, source: "playbook" });
-    if (result === "ok") track("subscribe", { source: "playbook" });
+    if (result === "ok") {
+      rememberSubscribed();
+      track("subscribe", { source: "playbook" });
+    }
     setStatus(result === "ok" ? "done" : result);
   }
 
@@ -24,6 +30,8 @@ export default function PlaybookForm() {
       Download the Playbook (PDF)
     </a>
   );
+
+  if (subscribed && status === "idle") return <div className="timeline-done">{download}</div>;
 
   if (status === "done" || status === "unconnected") {
     return (

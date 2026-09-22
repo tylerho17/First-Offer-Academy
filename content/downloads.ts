@@ -1,24 +1,25 @@
-// Free downloads on /free-resources. Files are generated into
-// public/downloads/ by `npm run downloads` (scripts/build-downloads.mjs):
-// CSVs for sheets, branded single-page PDFs for documents. Only the Playbook
-// PDF (content/playbook.ts) is email-gated; everything here is free.
+// Free downloads on /free-resources, guides, and curriculum weeks. Files are
+// generated into public/downloads/ by `npm run downloads`
+// (scripts/build-downloads.mjs): CSVs for sheets, branded single-page PDFs for
+// documents. Every download button sits behind the email gate
+// (components/GatedDownload.tsx); the file URLs themselves stay public.
 //
-// Content comes from content/toolkit.ts. Written from docs/CURRICULUM-SOURCE.md
-// and not yet reviewed by Tyler (reviewedByTyler below).
+// Content comes from content/toolkit.ts. No resume files for now: add them
+// here (and to the AssetSlug type) when they're ready.
 
 import type { Block } from "./blocks";
 import type { AssetSlug } from "./curriculum";
 import { tb } from "./toolkitBlocks";
 import * as t from "./toolkit";
 
-export const downloadsReviewedByTyler = false;
+export const downloadsReviewedByTyler = true;
 
-export type Stage = "Resume & story" | "Target list & outreach" | "Calls & referrals" | "Stories & the why" | "Technicals & interviews" | "After the program";
-export const stages: Stage[] = ["Resume & story", "Target list & outreach", "Calls & referrals", "Stories & the why", "Technicals & interviews", "After the program"];
+export type Stage = "Target list & outreach" | "Calls & referrals" | "Stories & the why" | "Technicals & interviews" | "After the program";
+export const stages: Stage[] = ["Target list & outreach", "Calls & referrals", "Stories & the why", "Technicals & interviews", "After the program"];
 
 type Base = { slug: AssetSlug; title: string; what: string; stage: Stage; week: number };
 export type CsvDownload = Base & { format: "CSV"; head: string[]; rows: string[][] };
-export type PdfDownload = Base & { format: "PDF"; subtitle: string; blocks: Block[]; layout?: "resume" };
+export type PdfDownload = Base & { format: "PDF"; subtitle: string; blocks: Block[] };
 export type Download = CsvDownload | PdfDownload;
 
 export const downloadFile = (d: Download) => `/downloads/${d.slug}.${d.format.toLowerCase()}`;
@@ -26,27 +27,6 @@ export const downloadFile = (d: Download) => `/downloads/${d.slug}.${d.format.to
 const EX = "EXAMPLE (delete this row)";
 
 export const downloads: Download[] = [
-  {
-    slug: "resume-rubric",
-    format: "PDF",
-    title: "Resume rubric",
-    what: "The checklist every First Offer resume is graded against. Passes when every box is checked.",
-    subtitle: "A resume passes when every box is checked.",
-    stage: "Resume & story",
-    week: 2,
-    blocks: [...tb.rubric()],
-  },
-  {
-    slug: "resume-template",
-    format: "PDF",
-    title: "Resume template",
-    what: "The one-page structure, section by section, with the bullet formula on every line.",
-    subtitle: "One page. Verb + what you did + result (with a number).",
-    stage: "Resume & story",
-    week: 1,
-    layout: "resume",
-    blocks: [],
-  },
   {
     slug: "self-questions",
     format: "PDF",

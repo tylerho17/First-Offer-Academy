@@ -20,7 +20,8 @@ Every service is optional. With no env vars at all, the site works fully: forms 
 | `npm run build` / `npm start` | Production build / serve it |
 | `npm run lint` | ESLint |
 | `npm run screenshots` | After `npm run build`: full-page screenshots of every route at 375/768/1440px into `screenshots/`, and a report of horizontal scroll, text within 16px of the edge, and broken images |
-| `npm run pdf` | Rebuild `public/downloads/freshman-recruiting-timeline.pdf` from the freshman timeline article (run after editing that article) |
+| `npm run pdf` | Rebuild `public/downloads/first-offer-playbook.pdf` from `content/playbook.ts` (run after editing the Playbook) |
+| `npm run downloads` | Rebuild every template in `public/downloads/` from `content/downloads.ts` |
 
 ## Where content lives (no code changes needed)
 | What | File |
@@ -36,10 +37,12 @@ Every service is optional. With no env vars at all, the site works fully: forms 
 | /our-promise | `content/promise.ts` |
 | /parents | `content/parents.ts` |
 | Home mission section | `content/home.ts` |
-| Free timeline PDF page (/timeline) | `content/leadMagnet.ts` |
+| Playbook PDF (/playbook-pdf) | `content/playbook.ts` (PDF content), `content/leadMagnet.ts` (page copy) |
+| Free templates on /free-resources (all email-gated) | `content/downloads.ts`, content in `content/toolkit.ts` |
 | Mandarin parent page (/zh) | `content/zh.ts` |
 | Track pages | `content/tracks.ts` |
-| Events, workshops, FAQ, Playbook articles | `content/events.ts`, `content/workshops.ts`, `content/faq.ts`, `content/articles.ts` |
+| Events, workshops, FAQ | `content/events.ts`, `content/workshops.ts`, `content/faq.ts` |
+| Guides (/blog) and which templates each one offers | `content/guides/*.ts` (`downloads: []` = read-only), listed in `content/articles.ts` |
 | Legal pages (privacy, terms, refunds, accessibility, code of conduct) | `content/legal/*.ts` |
 | Email templates | `lib/emails/templates.ts` |
 | Draft agreements (release, parent acknowledgment, enrollment) | `docs/templates/` |
@@ -60,7 +63,7 @@ Forms post to `/api/apply`, `/api/subscribe`, `/api/contact`, `/api/stories`, an
 2. Create an API key → `RESEND_API_KEY`.
 3. `EMAIL_FROM` = a sender on the verified domain, e.g. `First Offer Academy <hello@firstofferacademy.com>`.
 4. `NOTIFY_EMAIL` = where new-application alerts go (your inbox).
-5. Newsletter list: Audience → Segments → create a segment (e.g. "Newsletter") → Copy ID → `RESEND_SEGMENT_ID`. Every newsletter and Playbook signup is added to Resend as a contact in that segment, after it's saved in Supabase. If the key or segment ID is missing, the sync is skipped; a Resend error is logged and never fails the signup.
+5. Newsletter list: Audience → Segments → create a segment (e.g. "Newsletter") → Copy ID → `RESEND_SEGMENT_ID`. Every newsletter signup and download-gate signup is added to Resend as a contact in that segment, after it's saved in Supabase. If the key or segment ID is missing, the sync is skipped; a Resend error is logged and never fails the signup.
 
 Applicants, subscribers, and contact-form senders get a confirmation; you get an alert for every application. Missing keys = emails skipped silently.
 

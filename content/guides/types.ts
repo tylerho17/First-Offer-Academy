@@ -8,6 +8,7 @@ export type Guide = {
   slug: string;
   title: string;
   excerpt: string;
+  oneLine: string; // one-line description on /free-resources
   category: Category;
   track?: "finance" | "consulting" | "marketing" | "tech";
   date: string; // ISO date

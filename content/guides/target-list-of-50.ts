@@ -7,16 +7,17 @@ export const guide: Guide = {
   slug: "target-list-of-50",
   title: "Building a target list of 50 companies (and finding the right contacts)",
   excerpt: "A target list is 50 names you'll actually email, not 50 companies you might apply to someday. How to tier it A/B/C, where first-year opportunities really come from, and how to find the right person at each firm.",
+  oneLine: "Tier 50 companies A/B/C and find a named contact at each one.",
   category: "Networking",
   date: "2026-09-21",
   author: "Tyler Ho",
-  downloads: ["target-list"],
+  downloads: [],
   related: ["ai-cold-email-system", "cold-email-template", "freshman-internship-timeline"],
-  reviewedByTyler: false,
+  reviewedByTyler: true,
   body: [
     p("Most students have a list of companies they'd like to work for. Almost none of them have a target list. The difference is names. A target list is 50 companies, each with a specific person you're going to email, a way to reach them, and one detail you can use in your first line. Without names, it's a wish list."),
     p("The target list is the Level 1 gate of our program, due in Week 2, because everything after it depends on it. Your outreach system sends emails to this list. Your calls come from this list. Your referrals come from the people on it. Build it well once, and the next ten weeks get much easier."),
-    p("This guide walks through how to tier your list, where first-year opportunities actually come from, how to find the right person at each firm, and what to log. The template is a free CSV download that opens in Google Sheets or Excel."),
+    p("This guide walks through how to tier your list, where first-year opportunities actually come from, how to find the right person at each firm, and what to log. All you need is one spreadsheet in Google Sheets or Excel."),
 
     h2("Why 50, and why now"),
     p("Fifty is enough to keep a steady weekly pace without recycling the same people, and small enough to research properly. It's also the number where the math starts working in your favor. Most cold emails don't get replies, and that's normal. With a good list and good emails, your reply rate should move toward 10%. Fifty well-chosen contacts, plus the new names you add as people introduce you to others, gives you a real pipeline of calls."),
@@ -72,7 +73,7 @@ export const guide: Guide = {
     note("Be respectful with contact data", "Use work emails you find for one purpose: a short, personal note asking for a conversation. Don't add people to newsletters, don't share their details, and stop emailing anyone who asks you to."),
 
     h2("What to log for each contact"),
-    p("The template has one row per company with these columns. The most important column is the last personal one: a specific detail for your first line. That's what turns a template into a personal email."),
+    p("Your sheet has one row per company with these columns. The most important column is the last personal one: a specific detail for your first line. That's what turns a template into a personal email."),
     table("Target list columns", ["Column", "What goes in it"], targetListColumns.map((c) => [c, columnHint(c)])),
     example("Example row (made-up)", "B · Example Growth Co. · Startup · Remote · Sam Example · Founder · sam@example.com · linkedin.com/in/example2 · Same hometown · Launched a new product in March · Apollo · 2027-01-12"),
 

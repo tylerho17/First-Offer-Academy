@@ -15,7 +15,6 @@ register("./lib/ts-resolve.mjs", import.meta.url);
 const { root, esc, baseCss, renderBlocks, countPages, C } = await import("./lib/pdf.mjs");
 const { downloads, downloadFile, downloadsReviewedByTyler } = await import(path.join(root, "content/downloads.ts"));
 const { site } = await import(path.join(root, "content/site.ts"));
-const t = await import(path.join(root, "content/toolkit.ts"));
 
 const outDir = path.join(root, "public/downloads");
 await mkdir(outDir, { recursive: true });
@@ -38,27 +37,8 @@ body { zoom: var(--z, 1); }
 .pair { display: flex; gap: 8px; break-inside: avoid; }
 .pair > .box { flex: 1 1 0; min-width: 0; }
 .pair .template pre { font-size: 8pt; }
-.paper { background: ${C.cream}; border-radius: 10px; padding: 26px 34px; font-size: 9.5pt; }
-.paper .name { text-align: center; font-family: "Source Serif 4"; font-weight: 600; color: ${C.navy}; font-size: 18pt; }
-.paper .contact { text-align: center; font-size: 9pt; margin-bottom: 10px; }
-.paper h3 { font-family: "Hanken"; font-weight: 700; font-size: 9.5pt; letter-spacing: .08em; text-transform: uppercase; border-bottom: 1.5px solid ${C.navy}; margin: 12px 0 5px; padding-bottom: 2px; }
-.paper p { margin: 0 0 2px; }
-.paper .hint { color: ${C.dusty}; font-size: 8.5pt; }
-.notes { margin-top: 12px; }
 table.blank td { height: 56px; }
 `;
-
-function resumeHtml() {
-  const [header, ...sections] = t.resumeTemplate;
-  return `<div class="paper">
-    <div class="name">${esc(header.lines[0])}</div>
-    <div class="contact">${esc(header.lines[1])}</div>
-    ${sections.map((s) => `<h3>${esc(s.section)}</h3>${s.lines.map((l) => `<p>${esc(l)}</p>`).join("")}`).join("")}
-  </div>
-  <div class="box notes"><div class="box-title">Rules that matter most</div><ul class="check cols">
-    ${["One page. Standard font, 10–12 pt.", "Every bullet: verb + what you did + result.", "Numbers in at least half your bullets.", "Nothing you can't talk about for two minutes.", "High school counts in freshman year.", "Save as Firstname-Lastname-Resume.pdf."].map((r) => `<li>${esc(r)}</li>`).join("")}
-  </ul></div>`;
-}
 
 // Runs of templates render as side-by-side pairs to save space.
 function body(blocks) {
@@ -77,7 +57,7 @@ function body(blocks) {
 const pdfHtml = (d, z) => `<!doctype html><html lang="en"><head><meta charset="utf-8"><title>${esc(d.title)} · ${esc(site.name)}</title><style>${css}</style></head>
 <body style="--z:${z}">
   <div class="head"><div><h1>${esc(d.title)}</h1><p>${esc(d.subtitle)}</p></div><span class="chip">Free template</span></div>
-  ${d.layout === "resume" ? resumeHtml() : body(d.blocks)}
+  ${body(d.blocks)}
 </body></html>`;
 
 const browser = await chromium.launch();

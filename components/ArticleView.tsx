@@ -4,6 +4,7 @@ import { downloadFile, getDownload } from "@/content/downloads";
 import ArticleCard from "./ArticleCard";
 import Blocks from "./Blocks";
 import CallLink from "./CallLink";
+import GatedDownload from "./GatedDownload";
 
 export default function ArticleView({ article: a }: { article: Article }) {
   const related = relatedArticles(a);
@@ -22,16 +23,14 @@ export default function ArticleView({ article: a }: { article: Article }) {
           <p className="article-byline">{a.author} · {date} · {a.readMinutes} min read</p>
 
           {files.length > 0 && (
-            <div className="card article-download">
+            <div className="card article-download" id="templates">
               <div>
-                <span className="eyebrow">Free template</span>
-                <p>{files.map((d) => d.title).join(" · ")}</p>
+                <span className="eyebrow">{files.length > 1 ? "Free templates" : "Free template"}</span>
+                <p>{files.map((d) => `${d.title} (${d.format})`).join(" · ")}</p>
               </div>
               <div className="btn-row">
                 {files.map((d) => (
-                  <a key={d.slug} href={downloadFile(d)} className="btn btn-secondary" download data-event="template_download">
-                    Download the template <span className="sr-only">: {d.title} ({d.format})</span>
-                  </a>
+                  <GatedDownload key={d.slug} slug={d.slug} href={downloadFile(d)} label={`Download: ${d.title}`} />
                 ))}
               </div>
             </div>
@@ -50,10 +49,7 @@ export default function ArticleView({ article: a }: { article: Article }) {
 
           {files.length > 0 && (
             <p className="article-download-line">
-              Download the template:{" "}
-              {files.map((d, i) => (
-                <span key={d.slug}>{i > 0 && " · "}<a href={downloadFile(d)} download data-event="template_download">{d.title} ({d.format})</a></span>
-              ))}
+              <a href="#templates">{files.length > 1 ? "Get the templates for this guide" : "Get the template for this guide"}</a>
               {" "}· <Link href="/free-resources">All free resources</Link>
             </p>
           )}

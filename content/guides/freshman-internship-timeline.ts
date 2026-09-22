@@ -6,15 +6,16 @@ export const guide: Guide = {
   slug: "freshman-internship-timeline",
   title: "The complete freshman internship timeline: what to do each quarter",
   excerpt: "Most students find out how early recruiting starts when it's already too late. Here's what freshman year, sophomore year, and the start of junior year should actually look like, by track.",
+  oneLine: "What to do each quarter of freshman and sophomore year, by track.",
   category: "Getting started",
   date: "2026-09-21",
   author: "Tyler Ho",
-  downloads: ["game-plan", "target-list"],
+  downloads: [],
   related: ["resume-with-zero-experience", "target-list-of-50", "externships"],
-  reviewedByTyler: false,
+  reviewedByTyler: true,
   body: [
     p("The most common thing I hear from sophomores is some version of: \"I didn't know it started this early.\" For finance and consulting especially, and for a growing share of tech and marketing roles, the students who land internships in sophomore and junior summer started building toward them in freshman year. Not by applying to everything they could find, but by doing a few boring things consistently, every week, for a long time."),
-    p("This guide is the timeline I give every first-year student. It covers what to do each quarter of freshman year, what changes in sophomore year, and how the calendar differs across Finance, Consulting, Marketing, and Tech. At the end there's a checklist you can print and a 6-month game plan template you can download."),
+    p("This guide is the timeline I give every first-year student. It covers what to do each quarter of freshman year, what changes in sophomore year, and how the calendar differs across Finance, Consulting, Marketing, and Tech. At the end there's a checklist you can print."),
     note("Dates move", "Recruiting timelines move earlier almost every year, and they differ from firm to firm. Treat everything here as a planning map. For any firm you care about, check its careers page for the real dates and put them on your calendar the day you find them."),
 
     h2("Why freshman year matters more than people think"),
@@ -118,7 +119,7 @@ export const guide: Guide = {
 
     h2("Your next step"),
     ol(
-      "Download the 6-month game plan template and fill in next month's targets.",
+      "Write down next month's targets: emails, calls, and one skill to build.",
       "Put the next three deadlines you know of on your calendar.",
       "Block one hour this week to start your target list.",
     ),

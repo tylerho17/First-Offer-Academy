@@ -7,16 +7,17 @@ export const guide: Guide = {
   slug: "resume-with-zero-experience",
   title: "How to write a top-tier resume with zero experience",
   excerpt: "You don't need an impressive resume. You need a clean, specific one you can talk about. The rubric we grade every resume against, bullet rewrites, and a full before-and-after.",
+  oneLine: "The rubric, bullet rewrites, what counts as experience, and sample resumes.",
   category: "Resume",
   date: "2026-09-21",
   author: "Tyler Ho",
-  downloads: ["resume-rubric", "resume-template"],
+  downloads: [],
   related: ["tell-me-about-yourself", "behavioral-stories", "freshman-internship-timeline"],
-  reviewedByTyler: false,
+  reviewedByTyler: true,
   body: [
     p("Every first-year student I talk to says some version of the same thing: \"I don't have anything to put on my resume.\" That's almost never true. What's true is that they don't know how to write about what they've done, so it reads like nothing."),
     p("Here's the good news. Nobody reading a freshman's resume expects a finance internship or a startup exit. What they want is a clean page, specific bullets, and a sense of who you are and what you're curious about. That's achievable for every student, regardless of background, by the end of a single weekend."),
-    p("This guide covers the rubric we grade every resume against in the program, how to turn duties into outcomes, what counts as experience when you think you have none, and a full before-and-after example. The rubric and a one-page template are free downloads."),
+    p("This guide covers the rubric we grade every resume against in the program, how to turn duties into outcomes, what counts as experience when you think you have none, and a full before-and-after example."),
 
     h2("What a resume is actually for"),
     p("Your resume is ranked second on the list of things that matter in recruiting, right behind networking. That ranking tells you what it's for. A resume rarely gets you the job on its own. It gets read because a person asked to see it, and then it becomes the agenda for every conversation that follows."),
@@ -112,7 +113,7 @@ export const guide: Guide = {
 
     h2("Your weekend plan"),
     ol(
-      "Download the resume template and move your content into it.",
+      "Move your content onto one clean page: header, education, experience, leadership, skills and interests.",
       "Rewrite every bullet with the verb + what + result formula.",
       "Find a number for at least half your bullets.",
       "Grade it against the rubric and fix every unchecked box.",

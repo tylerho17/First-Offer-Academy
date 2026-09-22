@@ -6,7 +6,7 @@ const items = [
   { n: "01", icon: <Calendar />, title: "Join a free event", body: "Parent info sessions and student workshops on how recruiting works now.", href: "/events", cta: "See upcoming events" },
   { n: "02", icon: <Compass />, title: "Enroll in the 12-week program", body: "Twelve weeks that build all six parts, from Candidate Brand to Accountability & Pods.", href: "/program", cta: "How the program works" },
   { n: "03", icon: <Users />, title: "Work 1:1 with your coach", body: "The weekly 60-minute 1:1 is part of Interview Reps: your coach reviews the tracker and fixes the biggest bottleneck.", href: "/about", cta: "Meet the founder" },
-  { n: "04", icon: <Report />, title: "Use the free templates", body: `The Playbook PDF plus ${downloads.length} free templates: resume rubric, outreach tracker, email pack, and more.`, href: "/free-resources", cta: "Get the free resources" },
+  { n: "04", icon: <Report />, title: "Use the free templates", body: `The Playbook PDF plus ${downloads.length} free templates: outreach tracker, cold email pack, question banks, and more.`, href: "/free-resources", cta: "Get the free resources" },
 ];
 
 export default function Offerings() {

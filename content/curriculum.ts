@@ -9,8 +9,6 @@ export type TrackName = "Finance" | "Consulting" | "Marketing" | "Tech";
 
 // Download slugs from content/downloads.ts. Week pages link each one to its file.
 export type AssetSlug =
-  | "resume-rubric"
-  | "resume-template"
   | "outreach-tracker"
   | "target-list"
   | "cold-email-pack"
@@ -82,7 +80,7 @@ export const weeks: Week[] = [
       "How many hours a week can you honestly commit?",
       "What have you been avoiding?",
     ],
-    assets: ["self-questions", "resume-template"],
+    assets: ["self-questions"],
     parents: "Your student records their cold Week 1 intro. You'll see it again at the Week 12 family meeting, next to the new one.",
     numbers: { emails: "0", calls: "0", stories: "25 self-questions answered", externship: "Not started" },
   },
@@ -108,7 +106,7 @@ export const weeks: Week[] = [
       "If someone read only your top three bullets, what would they think you're good at?",
       "Which ten companies on your list would you most regret never contacting?",
     ],
-    assets: ["resume-rubric", "resume-template", "target-list"],
+    assets: ["target-list"],
     parents: "The first biweekly progress report: your student's level (Foundation, if the gate is met), the resume status, and the target list count.",
     numbers: { emails: "0", calls: "0", stories: "Intro recorded", externship: "Not started" },
   },
@@ -408,8 +406,6 @@ export const weekHref = (n: number) => `/curriculum/week-${n}`;
 
 // Display names for each asset. Files are listed in content/downloads.ts.
 export const assetTitles: Record<AssetSlug, string> = {
-  "resume-rubric": "Resume rubric",
-  "resume-template": "Resume template",
   "outreach-tracker": "Outreach tracker",
   "target-list": "Target list template (A/B/C tiers)",
   "cold-email-pack": "Cold email template pack",

@@ -1010,15 +1010,30 @@ a.week-nav-link:hover { transform: translateY(-3px); }
 a.featured-download:hover { transform: translateY(-3px); }
 .pdf-cover.is-small { aspect-ratio: 8.5 / 11; margin: 0; max-width: 260px; }
 .pdf-cover.is-small strong { font-size: 24px; }
-.download-stage { margin-top: 56px; }
-.download-stage > h2 { margin-bottom: 18px; }
+.featured-download .featured-title { font-size: 30px; margin: 6px 0 0; }
+.download-stage { margin-top: 48px; }
+.download-stage-title { margin-bottom: 18px; font-size: 26px; }
+.download-card h4 { margin: 0; font-family: var(--display); font-weight: 600; font-size: 22px; line-height: 1.2; color: var(--navy); letter-spacing: -0.01em; }
+.read-card .read-title { margin: 0; font-size: 22px; line-height: 1.25; }
+.read-card .read-title a { color: var(--navy); text-decoration: none; }
+.read-card .read-title a:hover { text-decoration: underline; }
+.read-card .read-title a:focus-visible { outline: 1.5px solid var(--dusty); outline-offset: 3px; }
 .download-grid { list-style: none; padding: 0; margin: 0; display: grid; gap: 16px; grid-template-columns: minmax(0, 1fr); }
 @media (min-width: 640px) { .download-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (min-width: 1000px) { .download-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 .download-card { display: flex; flex-direction: column; gap: 8px; padding: 24px; }
 .download-card h3 { margin: 0; }
 .download-card p { font-size: 16px; }
-.download-card .btn { margin-top: auto; align-self: flex-start; }
+.download-card .gate { margin-top: auto; }
+.download-card .gate > .btn { align-self: flex-start; }
+/* Email gate on download buttons (components/GatedDownload.tsx) */
+.gate { display: grid; gap: 12px; justify-items: start; }
+.gate.is-open { flex-basis: 100%; width: 100%; }
+.gate .btn { white-space: normal; text-align: left; }
+.gate-form { width: 100%; }
+.gate-form .btn { justify-content: center; text-align: center; }
+.gate-msg { font-size: 15px !important; color: var(--navy); font-weight: 600; margin: 0 !important; }
+.link-download { color: var(--dusty); text-decoration: underline; font-weight: 600; }
 .download-format { font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--dusty); }
 .download-week { font-size: 14px !important; margin-bottom: 12px; }
 
@@ -1079,7 +1094,6 @@ a.featured-download:hover { transform: translateY(-3px); }
 .article-toc ol { margin: 0; padding-left: 22px; display: grid; gap: 6px; }
 .article-toc li { font-size: 16px; }
 .article-download { margin-top: 28px; display: grid; gap: 4px; }
-@media (min-width: 700px) { .article-download { grid-template-columns: 1fr auto; align-items: center; gap: 24px; } .article-download .btn-row { margin-top: 0; } }
 .article-download .eyebrow { margin-bottom: 4px; }
 .article-download p { font-size: 16px; }
 .article-download .btn-row { margin-top: 12px; }

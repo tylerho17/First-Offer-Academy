@@ -3,8 +3,8 @@
 // fails if the PDF renders under 15 pages.
 //
 // Written in Tyler's voice from docs/CURRICULUM-SOURCE.md. Not yet reviewed by
-// Tyler: while reviewedByTyler is false, the PDF cover and /playbook-pdf show
-// a "Draft" chip.
+// While reviewedByTyler is false, the PDF cover and /playbook-pdf show a
+// "Draft" chip.
 
 import type { Block } from "./blocks";
 import { tb } from "./toolkitBlocks";
@@ -17,7 +17,7 @@ export const playbook = {
   author: "Tyler Ho",
   authorLine: "Tyler Ho · Founder, First Offer Academy · Finance & Computer Science",
   file: "/downloads/first-offer-playbook.pdf",
-  reviewedByTyler: false,
+  reviewedByTyler: true,
   minPages: 15,
   intro:
     "Everything in here is free. It's the exact system I used through the two most recent recruiting cycles, and the one I've taught to first-year students. The tactics aren't the hard part. Doing them every week is.",
@@ -82,7 +82,6 @@ export const chapters: Chapter[] = [
       tb.bulletRewrites(4),
       h3("Before and after"),
       ...tb.exampleResume(),
-      p("The resume template download shows the full structure, section by section."),
       h3("Your 60-second intro"),
       p("Your resume and your intro are the same story told two ways. Once the resume passes, write the intro: where you're from, what pulled you in, what you've done, and why you're talking to this person. Record it. Watch it. Cut it."),
       tb.intro(),
