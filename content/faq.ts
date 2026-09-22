@@ -1,4 +1,4 @@
-import { site } from "./site";
+import { depositLine, site } from "./site";
 
 const tba = (v: string, fallback = "To be announced.") => (v ? v : fallback);
 
@@ -40,7 +40,7 @@ export const faqs: Faq[] = [
     home: true,
     parent: true,
     q: "Is the deposit refundable?",
-    a: `Yes. A ${site.cohort.deposit} refundable deposit holds a seat. ${tba(site.refundTerms, "Exact refund dates will be published before deposits open.")}`,
+    a: `${tba(site.refundTerms, "Exact refund dates will be published before deposits open.")} ${site.withdrawalPolicy}`.trim(),
     link: { label: "Read the Refund & Payment Policy", href: "/refunds" },
   },
   {
@@ -63,7 +63,7 @@ export const faqs: Faq[] = [
   {
     parent: true,
     q: "How does the payment plan work?",
-    a: `The program is ${site.cohort.price}, or ${site.cohort.plan}. A ${site.cohort.deposit} refundable deposit holds a seat.`,
+    a: `The program is ${site.cohort.price}, or ${site.cohort.plan}. ${depositLine()}`,
     link: { label: "Read the Refund & Payment Policy", href: "/refunds" },
   },
   {

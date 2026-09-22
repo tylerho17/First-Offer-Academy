@@ -53,7 +53,7 @@ export const zh = {
     title: "费用",
     items: [
       `学费：${c.price}，或分三期付款，每期$1,700。`,
-      `${c.deposit}可退还订金即可保留名额，并计入学费。`,
+      `${c.deposit}订金即可保留名额，并计入学费；${site.depositRefundDeadline}前可全额退还。`,
       "所有付款均通过 Stripe 安全处理，我们不会看到或保存您的银行卡号。",
       "具体退款条款请参阅英文版《退款与付款政策》。",
     ],

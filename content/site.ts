@@ -1,6 +1,8 @@
 // Site-wide settings. Every outbound link on the site comes from here.
 
 const founderLinkedIn = "https://www.linkedin.com/in/tylerho1";
+const deposit = "$1,000";
+const depositRefundDeadline = "December 15, 2026";
 
 export const site = {
   name: "First Offer Academy",
@@ -28,7 +30,7 @@ export const site = {
     sections: "three sections of 8",
     price: "$5,000",
     plan: "3 payments of $1,700",
-    deposit: "$1,000",
+    deposit,
     depositCents: 100000, // what Stripe Checkout charges for the deposit; keep in sync with `deposit`
   },
 
@@ -67,12 +69,20 @@ export const site = {
   format: "", // e.g. "In person, Tuesdays 6–7:30pm"
   weeklyHours: "", // e.g. "6–8"
   applicationDeadline: "",
-  refundTerms: "", // e.g. "Fully refundable until December 15, 2026."
-  // TODO(Tyler): exact refund terms. Empty = /refunds says they'll be
-  // published before deposits open. Never fill these with guesses.
-  depositRefundDeadline: "", // e.g. "December 15, 2026"
-  withdrawalPolicy: "", // e.g. "Withdraw before Week 3 for a prorated refund of unused weeks. No refunds after Week 3."
+  // Founding cohort refund terms. /refunds, /pricing, the FAQ, and the deposit
+  // button all read these. Changing them changes a written promise to families.
+  refundTerms: `The ${deposit} deposit is fully refundable until ${depositRefundDeadline}. After that, it applies to tuition.`,
+  depositRefundDeadline,
+  withdrawalPolicy: "Withdraw before Week 3 for a prorated refund of unused weeks. No refunds after Week 3. If we cancel the cohort, every payment is refunded in full.",
 };
+
+// "A $1,000 deposit, refundable until December 15, 2026, holds a seat."
+// Used wherever a page mentions the deposit, so no page calls it refundable
+// without the deadline.
+export const depositLine = () =>
+  site.depositRefundDeadline
+    ? `A ${site.cohort.deposit} deposit, fully refundable until ${site.depositRefundDeadline}, holds a seat.`
+    : `A ${site.cohort.deposit} deposit holds a seat.`;
 
 // "7+ internships worked, and offers from many more", or the exact offer
 // count once Tyler sets founder.offerCount.

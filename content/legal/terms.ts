@@ -1,4 +1,4 @@
-import { site } from "../site";
+import { depositLine, site } from "../site";
 import { legalContact, type LegalDoc } from "./types";
 
 const who = site.legalEntityName ? `${site.name} (${site.legalEntityName})` : site.name;
@@ -42,7 +42,7 @@ export const terms: LegalDoc = {
     { type: "p", text: "Students must follow our [Code of Conduct](/code-of-conduct): respect for everyone in the program, honesty and professionalism in outreach, and never misrepresenting themselves to professionals. Serious or repeated violations can lead to removal from the program, as described there." },
 
     { type: "h2", text: "Payment and refunds" },
-    { type: "p", text: `Tuition is ${site.cohort.price}, or ${site.cohort.plan}. A ${site.cohort.deposit} refundable deposit holds a seat. Payment plans, deadlines, missed payments, withdrawals, and refunds are covered in our [Refund & Payment Policy](/refunds), which is part of these terms.` },
+    { type: "p", text: `Tuition is ${site.cohort.price}, or ${site.cohort.plan}. ${depositLine()} Payment plans, deadlines, missed payments, withdrawals, and refunds are covered in our [Refund & Payment Policy](/refunds), which is part of these terms.` },
 
     { type: "h2", text: "Intellectual property" },
     { type: "p", text: "Our curriculum, templates, rubrics, trackers, recordings of sessions, and website content belong to us. Enrolled students get a personal, non-transferable license to use them for their own internship search, during and after the program." },

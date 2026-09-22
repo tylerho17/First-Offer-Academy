@@ -49,7 +49,7 @@ export default function ApplyForm({ depositEnabled = false }: { depositEnabled?:
         </div>
         {depositEnabled && (
           <p className="apply-note" style={{ textAlign: "left" }}>
-            Ready to commit? The {site.cohort.deposit} deposit is refundable. See the <Link href="/refunds">Refund &amp; Payment Policy</Link>.
+            Ready to commit? {site.refundTerms} See the <Link href="/refunds">Refund &amp; Payment Policy</Link>.
           </p>
         )}
       </div>

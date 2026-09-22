@@ -3,7 +3,7 @@ import Link from "next/link";
 import { parentsPage as p } from "@/content/parents";
 import { positioning, weekly } from "@/content/program";
 import LeavesWith from "@/components/sections/LeavesWith";
-import { site } from "@/content/site";
+import { depositLine, site } from "@/content/site";
 import { testimonials } from "@/content/testimonials";
 import Ornament from "@/components/Ornament";
 import CallLink from "@/components/CallLink";
@@ -12,7 +12,7 @@ import { Check, Minus } from "@/components/Icons";
 
 export const metadata: Metadata = {
   title: "For Parents",
-  description: "For parents: what your student does each week in First Offer Academy, the progress reports you receive, payment and the refundable deposit, and what we don't promise.",
+  description: "For parents: what your student does each week in First Offer Academy, the progress reports you receive, payment and the deposit, and what we don't promise.",
 };
 
 export default function ParentsPage() {
@@ -82,7 +82,7 @@ export default function ParentsPage() {
             <ul className="checks">
               <li><Check />Pay in full: {c.price}</li>
               <li><Check />Or a payment plan: {c.plan}</li>
-              <li><Check />A {c.deposit} refundable deposit holds a seat and counts toward tuition</li>
+              <li><Check />A {c.deposit} deposit holds a seat and counts toward tuition. It&apos;s fully refundable until {site.depositRefundDeadline}.</li>
               <li><Check />Payments are processed by Stripe; we never see your card number</li>
             </ul>
             <p style={{ marginTop: 24 }}>
@@ -92,7 +92,7 @@ export default function ParentsPage() {
           <div className="price-box">
             <span className="amount">{c.price}</span>
             <span className="plan">or {c.plan}</span>
-            <span className="seats">{c.seats} seats. A {c.deposit} refundable deposit holds your spot.</span>
+            <span className="seats">{c.seats} seats. {depositLine()}</span>
           </div>
         </div>
       </section>

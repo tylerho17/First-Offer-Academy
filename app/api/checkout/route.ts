@@ -4,7 +4,7 @@ import { z } from "zod";
 import { site } from "@/content/site";
 import { depositEnabled } from "@/lib/deposit";
 
-// Creates a Stripe Checkout Session for the refundable deposit. Only the
+// Creates a Stripe Checkout Session for the deposit. Only the
 // deposit: there is no tuition flow on the site. 503 when STRIPE_SECRET_KEY
 // isn't set.
 
@@ -29,8 +29,8 @@ export async function POST(req: Request) {
             currency: "usd",
             unit_amount: c.depositCents,
             product_data: {
-              name: `Refundable deposit: ${c.name}, ${c.start}`,
-              description: `Holds one seat. Credited toward ${c.price} tuition. Refund terms: ${origin}/refunds`,
+              name: `Deposit: ${c.name}, ${c.start}`,
+              description: `Holds one seat. Credited toward ${c.price} tuition. Fully refundable until ${site.depositRefundDeadline}. Refund terms: ${origin}/refunds`,
             },
           },
         },

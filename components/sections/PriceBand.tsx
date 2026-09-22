@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { site } from "@/content/site";
+import { depositLine, site } from "@/content/site";
 import { included } from "@/content/program";
 import CallLink from "../CallLink";
 import { Check } from "../Icons";
@@ -26,7 +26,7 @@ export default function PriceBand() {
         <div className="price-box">
           <span className="amount">{c.price}</span>
           <span className="plan">or {c.plan}</span>
-          <span className="seats">{c.seats} seats. A {c.deposit} refundable deposit holds your spot.</span>
+          <span className="seats">{c.seats} seats. {depositLine()}</span>
           <Link href="/refunds" className="price-policy">Refund &amp; payment policy</Link>
         </div>
       </div>

@@ -14,7 +14,7 @@ export default function DepositSuccessPage() {
           <Ornament className="is-center" />
           <h1>Your seat is held.</h1>
           <p className="lede center">
-            Thank you. Your {site.cohort.deposit} refundable deposit went through, and Stripe will email you a receipt.
+            Thank you. Your {site.cohort.deposit} deposit went through, and Stripe will email you a receipt.
             It counts toward tuition for the {site.cohort.name.toLowerCase()} ({site.cohort.start}).
           </p>
           <p style={{ marginTop: 16 }}>Tyler will be in touch with next steps. Refund terms are in the <Link href="/refunds">Refund &amp; Payment Policy</Link>.</p>

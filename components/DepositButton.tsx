@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { site } from "@/content/site";
 
-// Starts Stripe Checkout for the refundable deposit. Render it only when
+// Starts Stripe Checkout for the deposit. Render it only when
 // STRIPE_SECRET_KEY is set (the parent page decides).
 export default function DepositButton({ email, className = "btn btn-secondary" }: { email?: string; className?: string }) {
   const [state, setState] = useState<"idle" | "loading" | "error">("idle");
@@ -23,7 +23,7 @@ export default function DepositButton({ email, className = "btn btn-secondary" }
   return (
     <>
       <button type="button" className={className} onClick={go} disabled={state === "loading"} data-event="deposit_click">
-        {state === "loading" ? "Opening checkout…" : `Hold a seat: ${site.cohort.deposit} refundable deposit`}
+        {state === "loading" ? "Opening checkout…" : `Hold a seat: ${site.cohort.deposit} deposit`}
       </button>
       {state === "error" && (
         <p className="form-status" role="alert">

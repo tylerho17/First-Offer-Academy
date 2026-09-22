@@ -7,8 +7,8 @@ Things that need your real input. Each line names the file to edit.
 - **Real testimonials with written permission** (students and at least one parent) → `content/testimonials.ts`. The home quote wall, /results, /results/parents, and /parents fill from it. (From the site brief; still open.)
 - **Email copy commitments** (`lib/emails/templates.ts`): contact confirmations promise a reply "within two business days", and subscribe confirmations offer unsubscribe-by-reply. CAN-SPAM requires honoring opt-outs within 10 business days. Once a newsletter tool is chosen, switch to its one-click unsubscribe link.
 - **/zh Mandarin parent page** (`content/zh.ts`) is machine-drafted. Have a native speaker review it, then set `zhReviewed: true` in `content/site.ts`. That removes noindex, adds it to the sitemap, and adds a footer link. Until then it is reachable only by direct URL and shows a draft notice.
-- **Confirm the default policies drafted on /refunds** (`content/legal/refunds.ts`): missed payments (email first; sessions may be paused if unresolved), full refund if we cancel the cohort or change the start date or format before it starts, and response times (2 business days to confirm a refund request).
-- **Refund terms (required before taking deposits):** `content/site.ts` → `depositRefundDeadline`, `withdrawalPolicy`, and optionally `refundTerms`. Until they're set, /refunds, /pricing, and the FAQ say terms will be published before deposits open.
+- **Confirm the default policies drafted on /refunds** (`content/legal/refunds.ts`): missed payments (email first; sessions may be paused if unresolved), full refund if we cancel the cohort (at any point) or change the start date or format before it starts, and response times (2 business days to confirm a refund request).
+- ~~**Refund terms**~~ Done (2026-09-21): deposit refundable until December 15, 2026; prorated refund of unused weeks before Week 3, none after; full refund if we cancel the cohort. Set in `content/site.ts`. /refunds and /terms still need the attorney review (see below).
 - **Legal business entity name** → `content/site.ts` `legalEntityName` (shows in the privacy policy and terms).
 - Once the newsletter tool is chosen, add it to `content/site.ts` `serviceProviders` so the privacy policy lists it.
 - Confirm the attendance policy stated on /program and /our-promise: "two missed weeks in a row triggers a call with the student and a parent" (`content/programOverview.ts`, `content/promise.ts`).
@@ -17,7 +17,7 @@ Things that need your real input. Each line names the file to edit.
 
 ## Attorney review
 - **Apply form consent lines** (`components/ApplyForm.tsx`): required Terms/Privacy checkbox and optional email + SMS updates consent.
-- **Templates** in `docs/templates/`: testimonial & media release, parent/guardian acknowledgment, student enrollment agreement. All marked DRAFT; fill the blanks (entity name, refund deadline, schedule) and have them reviewed before anyone signs.
+- **Templates** in `docs/templates/`: testimonial & media release, parent/guardian acknowledgment, student enrollment agreement. All marked DRAFT; fill the blanks (entity name, schedule; the refund lines in the enrollment agreement are filled in) and have them reviewed before anyone signs.
 - **Cookie section** inside the Privacy Policy (`content/legal/privacy.ts`): accurate as long as no tracking cookies are added. Revisit if any ad pixel or cookie-based tool is ever installed.
 - **Code of Conduct** (`/code-of-conduct`, `content/legal/codeOfConduct.ts`): consequences and removal language.
 - **Accessibility Statement** (`/accessibility`, `content/legal/accessibility.ts`): confirm the 5-business-day response commitment.
@@ -29,7 +29,7 @@ Things that need your real input. Each line names the file to edit.
 ## Keys and accounts
 - **Vercel Analytics:** enable Web Analytics in the Vercel project (Analytics tab). Custom events (`apply_submit`, `book_call`, `subscribe`, `deposit_click`, `timeline_download`) require a Vercel Pro plan to view; page views work on all plans.
 - **Admin:** set `ADMIN_USER` and a long random `ADMIN_PASSWORD` in Vercel to turn on /admin (read-only submissions + CSV export). Leave either empty and /admin returns 404.
-- **Stripe:** set `STRIPE_SECRET_KEY` (start with a test key) **and** `depositRefundDeadline` in `content/site.ts`, then redeploy. The deposit button stays hidden until both exist. `site.cohort.depositCents` must match `site.cohort.deposit`.
+- **Stripe:** set `STRIPE_SECRET_KEY` (start with a test key), then redeploy. `depositRefundDeadline` is already set, so the key is the only thing keeping the deposit button hidden on /pricing and after /apply. `site.cohort.depositCents` must match `site.cohort.deposit`.
 - **Resend:** verify firstofferacademy.com in Resend, then set `RESEND_API_KEY`, `EMAIL_FROM` (e.g. `First Offer Academy <hello@firstofferacademy.com>`), and `NOTIFY_EMAIL` (where new-application alerts go). Emails are skipped silently until set.
 - **Supabase:** create a project, run `supabase/migrations/001_init.sql` in the SQL editor, then set `SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY` in Vercel (see `.env.example`). Until then, every form shows "not connected yet".
 

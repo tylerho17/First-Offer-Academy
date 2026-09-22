@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { site } from "@/content/site";
+import { depositLine, site } from "@/content/site";
 import { included } from "@/content/program";
 import FaqList from "@/components/sections/FaqList";
 import CallLink from "@/components/CallLink";
@@ -10,7 +10,7 @@ import { Check } from "@/components/Icons";
 
 export const metadata: Metadata = {
   title: "Pricing",
-  description: "First Offer Academy tuition: $5,000 or 3 payments of $1,700, with a $1,000 refundable deposit to hold a seat. Free guides and events too.",
+  description: "First Offer Academy tuition: $5,000 or 3 payments of $1,700, with a $1,000 deposit to hold a seat, refundable until December 15, 2026. Free guides and events too.",
 };
 
 const free = [
@@ -55,7 +55,7 @@ export default function PricingPage() {
             <div className="plan-flag">Founding cohort · {c.start}</div>
             <span className="eyebrow">12-week program</span>
             <h2 className="plan-price">{c.price}</h2>
-            <p className="plan-sub">or {c.plan}. A {c.deposit} refundable deposit holds a seat.</p>
+            <p className="plan-sub">or {c.plan}. {depositLine()}</p>
             <p className="includes-title">{c.price} includes</p>
             <ul className="plan-list">
               {included.map((f) => <li key={f}><Check />{f}</li>)}
