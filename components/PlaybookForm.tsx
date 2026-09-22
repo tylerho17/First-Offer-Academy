@@ -50,6 +50,7 @@ export default function PlaybookForm() {
       </div>
       <label className="sr-only" htmlFor="tl-email">Email</label>
       <input id="tl-email" name="email" type="email" required placeholder="Email" autoComplete="email" />
+      <p className="nl-fine">You&apos;ll also get the First Offer newsletter every other week. Unsubscribe anytime.</p>
       <button type="submit" className="btn btn-primary" disabled={status === "sending"}>
         {status === "sending" ? "Sending…" : "Get the free Playbook"}
       </button>

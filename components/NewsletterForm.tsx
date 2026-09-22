@@ -36,6 +36,7 @@ export default function NewsletterForm() {
       </div>
       <label className="sr-only" htmlFor="nl-email">Email</label>
       <input id="nl-email" name="email" type="email" required placeholder="Email" autoComplete="email" />
+      <p className="nl-fine">You&apos;ll also get the First Offer newsletter every other week. Unsubscribe anytime.</p>
       <button type="submit" className="btn btn-primary" disabled={status === "sending"}>
         {status === "sending" ? "Subscribing…" : "Subscribe"}
       </button>

@@ -60,6 +60,7 @@ Forms post to `/api/apply`, `/api/subscribe`, `/api/contact`, `/api/stories`, an
 2. Create an API key → `RESEND_API_KEY`.
 3. `EMAIL_FROM` = a sender on the verified domain, e.g. `First Offer Academy <hello@firstofferacademy.com>`.
 4. `NOTIFY_EMAIL` = where new-application alerts go (your inbox).
+5. Newsletter list: Audience → Segments → create a segment (e.g. "Newsletter") → Copy ID → `RESEND_SEGMENT_ID`. Every newsletter and Playbook signup is added to Resend as a contact in that segment, after it's saved in Supabase. If the key or segment ID is missing, the sync is skipped; a Resend error is logged and never fails the signup.
 
 Applicants, subscribers, and contact-form senders get a confirmation; you get an alert for every application. Missing keys = emails skipped silently.
 
@@ -90,6 +91,7 @@ Vercel project → Analytics → enable Web Analytics. It's cookieless. Custom e
 | `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY` | Saving form submissions, /admin | For forms to work |
 | `RESEND_API_KEY`, `EMAIL_FROM` | Confirmation emails | Optional |
 | `NOTIFY_EMAIL` | New-application alerts | Optional |
+| `RESEND_SEGMENT_ID` | Newsletter signups synced to a Resend segment (also needs `RESEND_API_KEY`) | Optional |
 | `STRIPE_SECRET_KEY` | Deposit checkout (also needs `depositRefundDeadline`) | Optional |
 | `ADMIN_USER`, `ADMIN_PASSWORD` | /admin | Optional |
 
