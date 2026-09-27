@@ -1,4 +1,4 @@
-import { oneOnOneFormat, sessionFormat, type FormatRow } from "@/content/program";
+import { formatNote, oneOnOneFormat, sessionFormat, type FormatRow } from "@/content/program";
 import Ornament from "../../Ornament";
 
 function FormatTable({ caption, rows }: { caption: string; rows: FormatRow[] }) {
@@ -35,7 +35,8 @@ export default function WeeklyFormat() {
           <Ornament />
           <span className="eyebrow" style={{ display: "block" }}>Every week</span>
           <h2>A 90-minute session and a 60-minute 1:1</h2>
-          <p className="lede">Twelve of each. The session builds the skill; the 1:1 makes sure the work actually gets done.</p>
+          <p className="lede">Eight of each. The session builds the skill; the 1:1 makes sure the work actually gets done.</p>
+          <p className="lede">{formatNote}</p>
         </div>
         <div className="grid grid-2 format-grid">
           <FormatTable caption="Weekly 60-minute 1:1" rows={oneOnOneFormat} />

@@ -14,7 +14,7 @@ export default function Syllabus() {
           <span className="eyebrow" style={{ display: "block" }}>Syllabus</span>
           <h2>Week by week</h2>
           <p className="lede">
-            The twelve weeks, phase by phase. Open any week for the full plan: what we teach, the live reps, the 1:1 focus,
+            The eight weeks, phase by phase. Open any week for the full plan: what we teach, the live reps, the 1:1 focus,
             and what parents see. <Link href="/curriculum">See the full curriculum</Link>.
           </p>
         </div>

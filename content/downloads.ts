@@ -43,7 +43,7 @@ export const downloads: Download[] = [
     title: "Target list template (A/B/C tiers)",
     what: "50 companies, tiered A/B/C, with a named contact and a first-line detail for each.",
     stage: "Target list & outreach",
-    week: 2,
+    week: 1,
     head: t.targetListColumns,
     rows: [
       ["A", `${EX} Example Capital Partners`, "Boutique advisory", "[City, ST]", "Alex Example", "Analyst", "alex@example.com", "linkedin.com/in/example", "Same school", "Wrote a post on consumer deals", "Alumni search", "2027-01-12"],
@@ -58,7 +58,7 @@ export const downloads: Download[] = [
     title: "Outreach tracker",
     what: "Log everyone who replies: calls, thank-yous, the close, intros, and the next follow-up date.",
     stage: "Target list & outreach",
-    week: 3,
+    week: 2,
     head: t.trackerColumns,
     rows: [
       [`${EX} Alex Example`, "Example Capital Partners", "Analyst", "A", "alex@example.com", "2027-01-20", "Follow-up 1", "2027-01-27", "2027-02-03", "2027-02-03 4:10pm", "Yes", "Taylor Example", "2027-03-17", "Said the team hires one sophomore intern each summer"],
@@ -72,7 +72,7 @@ export const downloads: Download[] = [
     what: "Seven prompts for research, first lines, tightening, subject lines, mail merge, call prep, and thank-yous.",
     subtitle: "AI drafts; you personalize. Never send an email you haven't read.",
     stage: "Target list & outreach",
-    week: 3,
+    week: 2,
     blocks: [...tb.aiPrompts(), tb.aiGuardrails()],
   },
   {
@@ -82,7 +82,7 @@ export const downloads: Download[] = [
     what: "5 templates for different situations plus the 4-step follow-up sequence.",
     subtitle: "The Two C's: a compliment and a connection. One ask. Under 120 words.",
     stage: "Target list & outreach",
-    week: 4,
+    week: 3,
     blocks: [...tb.emailTemplates(), ...tb.followUps()],
   },
   {
@@ -92,7 +92,7 @@ export const downloads: Download[] = [
     what: "The 20-minute call, the questions that prove you listened, the close, and the thank-you.",
     subtitle: "Open warm, listen 80%, close without asking for a referral, thank them within 2 hours.",
     stage: "Calls & referrals",
-    week: 5,
+    week: 3,
     blocks: [
       tb.callFramework(),
       { type: "checklist", title: "The close (never ask for a referral directly)", items: t.referralClose.lines.map((l) => `"${l}"`).concat([`If no: ${t.referralClose.ifNo}`]) },
@@ -107,7 +107,7 @@ export const downloads: Download[] = [
     what: "Build \"why this industry, why this firm\" from the 3 buckets and your own calls.",
     subtitle: "Mentality, the work, the people. Under 90 seconds.",
     stage: "Stories & the why",
-    week: 8,
+    week: 5,
     blocks: [tb.whyBuckets(), tb.whyWorksheet(), tb.whyExample()],
   },
   ...(["finance", "consulting", "marketing", "tech"] as const).map((k): PdfDownload => ({
@@ -117,7 +117,7 @@ export const downloads: Download[] = [
     what: `The study order and ${t.technicals[k].questions.length} practice questions for the ${t.technicals[k].name} track.`,
     subtitle: `Study order: ${t.technicals[k].studyOrder.join(" → ")}`,
     stage: "Technicals & interviews",
-    week: 9,
+    week: 5,
     blocks: [
       { type: "p", text: t.technicals[k].method },
       { type: "checklist", title: "Practice questions (say every answer out loud)", items: t.technicals[k].questions },
@@ -130,7 +130,7 @@ export const downloads: Download[] = [
     what: "The written scorecard for graded mocks: 10 areas, scored 1–5.",
     subtitle: "Use it for every mock. Have the interviewer fill it in, not you.",
     stage: "Technicals & interviews",
-    week: 10,
+    week: 6,
     blocks: [...tb.scorecard(), { type: "table", caption: "Notes", head: ["Two things to fix before the next mock"], rows: [["1."], ["2."]] }],
   },
   {
@@ -140,7 +140,7 @@ export const downloads: Download[] = [
     what: "Monthly targets, contacts to keep warm, deadlines, and skills for the six months after the program.",
     subtitle: "Fill it in before your last session. Review it on the first of every month.",
     stage: "After the program",
-    week: 12,
+    week: 8,
     blocks: [...tb.gamePlan()],
   },
 ];

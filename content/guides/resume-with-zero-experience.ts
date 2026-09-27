@@ -125,6 +125,6 @@ export const guide: Guide = {
       "You can talk for two minutes about every line",
       "A stranger can tell your direction in six seconds",
     ),
-    p("In the program, the resume is the Week 2 deliverable, and the weekly 60-minute 1:1 is where we edit it live, bullet by bullet, until it passes. On your own, the rubric is the next best thing: be as honest grading yourself as a stranger would be."),
+    p("In the program, the resume is the Week 1 deliverable, and the weekly 60-minute 1:1 is where we edit it live, bullet by bullet, until it passes. On your own, the rubric is the next best thing: be as honest grading yourself as a stranger would be."),
   ],
 };

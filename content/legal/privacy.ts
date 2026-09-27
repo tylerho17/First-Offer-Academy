@@ -13,7 +13,7 @@ export const privacy: LegalDoc = {
   intro: `This policy explains what information ${site.name} collects, why, who we share it with, and the choices you have. We wrote it in plain English. If anything is unclear, email ${legalContact}.`,
   body: [
     { type: "h2", text: "Who we are" },
-    { type: "p", text: `${who} runs a 12-week internship recruiting program for college students. In this policy, "we", "us", and "our" mean ${site.name}. "You" means anyone who uses our website or program, including students and their parents or guardians.` },
+    { type: "p", text: `${who} runs an 8-week internship recruiting program for college students. In this policy, "we", "us", and "our" mean ${site.name}. "You" means anyone who uses our website or program, including students and their parents or guardians.` },
 
     { type: "h2", text: "What we collect and why" },
     { type: "p", text: "We only collect what we need to run the program and answer your questions." },

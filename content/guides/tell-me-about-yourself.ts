@@ -16,7 +16,7 @@ export const guide: Guide = {
   body: [
     p("\"Tell me about yourself\" is not a request for your life story. It's the interviewer asking three things at once: who are you, why are you here, and should I keep listening? You have about sixty seconds to answer all three. It's the first question in almost every interview and a version of it opens every networking call, which makes it the single answer you'll give most often in your entire search."),
     p("It's also the one most students wing. They either recite their resume from top to bottom (\"So I'm a freshman at… and I'm majoring in… and I'm in these clubs…\") or ramble for three minutes about their childhood. Both lose the room before the real interview has started."),
-    p("This guide gives you a four-part structure, examples, versions for calls and interviews, and a practice routine. In the program, every student records this answer cold in Week 1 and again in Week 12, and watches the two side by side at the family results meeting. It's the clearest proof of progress we know."),
+    p("This guide gives you a four-part structure, examples, versions for calls and interviews, and a practice routine. In the program, every student records this answer cold in Week 1 and again in Week 8, and watches the two side by side at the family results meeting. It's the clearest proof of progress we know."),
 
     h2("The four-part structure"),
     p("The intro has four parts, in this order: where you're from, what pulled you in, what you've done, and why you're talking to them. It's the same structure students build in Week 2 of the program, right after their resume passes the rubric, because the two tell the same story."),

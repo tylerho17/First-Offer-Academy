@@ -86,7 +86,7 @@ export const guide: Guide = {
     p("One more tip: update your \"why\" after every few calls. The answer you give in Week 8 should sound noticeably more specific than the one you'd have given in Week 3, because you've met more people and seen more of the work."),
 
     h2("Practicing"),
-    p("In the program, the Week 8 session runs rapid-fire \"why us\" drills: students pick firms from their own target lists and answer on the spot, one after another. It's hard at first, and it gets fast. Try it yourself: write ten firms from your list on slips of paper, draw one, and answer in under 90 seconds. If you can't say something specific about the firm, that's a gap to fill."),
+    p("In the program, the Week 5 session runs rapid-fire \"why us\" drills: students pick firms from their own target lists and answer on the spot, one after another. It's hard at first, and it gets fast. Try it yourself: write ten firms from your list on slips of paper, draw one, and answer in under 90 seconds. If you can't say something specific about the firm, that's a gap to fill."),
 
     h2("Common mistakes"),
     ul(
@@ -104,6 +104,6 @@ export const guide: Guide = {
       "You have firm-specific versions for your top three firms",
       "It's recorded and under 90 seconds",
     ),
-    p("In the program, the \"why\" pitch is recorded in Week 8, at the same time students reach the Networked level, because by then they've had enough calls to fill every bucket with something real."),
+    p("In the program, the \"why\" pitch is recorded in Week 5, at the same time students reach the Networked level, because by then they've had enough calls to fill every bucket with something real."),
   ],
 };

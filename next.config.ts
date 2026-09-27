@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
     return [
       { source: "/results/by-type", destination: "/results", permanent: true },
       { source: "/timeline", destination: "/playbook-pdf", permanent: true },
+      { source: "/tracks/tech", destination: "/tracks", permanent: true },
       { source: "/downloads/freshman-recruiting-timeline.pdf", destination: "/downloads/first-offer-playbook.pdf", permanent: true },
     ];
   },

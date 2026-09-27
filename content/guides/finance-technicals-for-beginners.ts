@@ -121,7 +121,7 @@ export const guide: Guide = {
       "Practice with a partner: they ask, you answer out loud, they push back.",
       "Keep a list of gaps and close one a day.",
     ),
-    p("In the program, Week 9 is the finance track's technicals week, with timed drills where students grade each other and a baseline quiz at the track threshold. Week 10 puts it under pressure in a full graded mock interview."),
+    p("In the program, Weeks 5–6 are the finance track's technicals weeks, with timed drills where students grade each other and a baseline quiz at the track threshold. Week 6 puts it under pressure in a full graded mock interview."),
 
     h2("Common mistakes"),
     ul(

@@ -6,12 +6,12 @@ export default function HowItWorks() {
       <div className="wrap">
         <div className="section-head">
           <span className="eyebrow">How it works</span>
-          <h2>12 weeks. Six parts. A real search, fully executed.</h2>
+          <h2>8 weeks. Six parts. A real search, fully executed.</h2>
         </div>
         <ol className="timeline" style={{ listStyle: "none", padding: 0, margin: 0 }}>
           {phases.map((p, i) => (
             <li className="card step" key={p.name}>
-              <div className="num">{i + 1}</div>
+              <div className="num">{i}</div>
               <span className="weeks">{p.weeks}</span>
               <h3>{p.name}</h3>
               <p>{p.body}</p>

@@ -105,7 +105,7 @@ export const guide: Guide = {
       "Spring: finish and ship your project or pieces, 8 stories recorded, apply to every open role on your list.",
       "Summer: an internship, a freelance project, an externship, or a shipped project you can talk about.",
     ),
-    p("In the program, marketing and tech students share Weeks 1–8 with everyone, then split in Weeks 9–10: marketing builds portfolio pieces, learns the metrics that matter, and does a brand teardown; tech works on one strong project, coding and SQL and product practice, and referral strategy. Then both face a full graded mock interview."),
+    p("In the program, marketing students share Weeks 1–4 with everyone, then split in Weeks 5–6: portfolio pieces, the metrics that matter, and a brand teardown, followed by a full graded mock interview. We coach three tracks — Finance, Consulting, and Marketing — so the tech sections of this guide are here as a free resource, not as a track we run."),
 
     p("One last point for both fields: keep a simple public home for your work. A clean LinkedIn with your projects listed, a portfolio page, or a code profile gives anyone who reads your email a place to check your work in thirty seconds. Link it in your email signature and at the top of your resume."),
 

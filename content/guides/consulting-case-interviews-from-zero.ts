@@ -117,7 +117,7 @@ export const guide: Guide = {
       "Every day: ten minutes of mental math.",
       "Before any interview: one full case with someone you don't know.",
     ),
-    p("In the program, consulting students spend Week 9 on case structure, frameworks, market sizing, and mental math with timed drills, then face a full 30-minute graded mock in Week 10 that includes a case."),
+    p("In the program, consulting students spend Weeks 5–6 on case structure, frameworks, market sizing, and mental math with timed drills, then face a full 30-minute graded mock in Week 6 that includes a case."),
 
     p("A note on partners: the best practice partner isn't always the smartest person you know. It's someone who will give you cases consistently, stop you when your structure overlaps or leaves something out, and tell you honestly when your recommendation didn't land. Trade roles every session; giving cases teaches you what a clear answer sounds like from the other side of the table."),
 

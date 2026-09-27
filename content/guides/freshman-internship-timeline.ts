@@ -123,6 +123,6 @@ export const guide: Guide = {
       "Put the next three deadlines you know of on your calendar.",
       "Block one hour this week to start your target list.",
     ),
-    p("None of this is secret, and it's all free. The hard part is doing it every week. If you want someone checking the work and holding your student to a number, that's exactly what the 12-week program is for."),
+    p("None of this is secret, and it's all free. The hard part is doing it every week. If you want someone checking the work and holding your student to a number, that's exactly what the 8-week program is for."),
   ],
 };

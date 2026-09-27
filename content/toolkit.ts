@@ -596,24 +596,20 @@ export const externships = {
 // ---------------------------------------------------------------- execution
 
 export const executionCalendar = [
-  { week: 1, focus: "The Game: resume v1, 25 self-questions, baseline intro", emails: "0", calls: "0" },
-  { week: 2, focus: "Resume passes the rubric, intro recorded, target list of 50 with contacts", emails: "0", calls: "0" },
-  { week: 3, focus: "AI outreach system live, first 50 sequenced emails", emails: "50", calls: "0" },
-  { week: 4, focus: "Cold email that gets answered; follow-ups loaded; externship 1 started", emails: "100", calls: "0" },
-  { week: 5, focus: "The call; thank-yous within 2 hours", emails: "150", calls: "3" },
-  { week: 6, focus: "The referral close on every call; first intro", emails: "200", calls: "5" },
-  { week: 7, focus: "8 stories written and recorded; externship 1 done", emails: "250", calls: "5+" },
-  { week: 8, focus: "Why this industry, why this firm; 2 referrals or intros; externship 2 started", emails: "300", calls: "5+" },
-  { week: 9, focus: "Technicals for your track", emails: "350", calls: "5+" },
-  { week: 10, focus: "Mock interview 1; apply to every open role on your list", emails: "400", calls: "5+" },
-  { week: 11, focus: "Mock interview 2 with a stranger; externship 2 done; real first rounds", emails: "500+", calls: "5+" },
-  { week: 12, focus: "Results and the 6-month game plan", emails: "500+", calls: "5+" },
+  { week: 1, focus: "The game; resume passes the rubric; intro recorded; target list of 50 with contacts", emails: "0", calls: "0" },
+  { week: 2, focus: "AI outreach system live, first 50 sequenced emails", emails: "50", calls: "0" },
+  { week: 3, focus: "Cold email that gets answered; the call; thank-yous within 2 hours", emails: "150", calls: "3" },
+  { week: 4, focus: "The referral close on every call; 8 stories written and recorded", emails: "250", calls: "5" },
+  { week: 5, focus: "Why this industry, why this firm; 2 referrals or intros; technicals begin", emails: "300", calls: "5+" },
+  { week: 6, focus: "Technicals for your track; mock interview 1; apply to every open role on your list", emails: "350", calls: "5+" },
+  { week: 7, focus: "Mock interview 2 with a stranger; real first rounds", emails: "350+", calls: "5+" },
+  { week: 8, focus: "Results and the 6-month game plan", emails: "350+", calls: "5+" },
 ];
 
-export const weeklyMinimumLine = "From Week 3: 50 new sequenced emails, every follow-up due that week, and the tracker updated by Sunday night. 10 weeks × 50 = 500+.";
+export const weeklyMinimumLine = "From Week 2: 50 new sequenced emails, every follow-up due that week, and the tracker updated by Sunday night. 7 weeks × 50 = 350+.";
 
 export const gamePlan = {
-  intro: "The search doesn't end when the 12 weeks do. Fill this in before your last session and review it on the first of every month.",
+  intro: "The search doesn't end when the 8 weeks do. Fill this in before your last session and review it on the first of every month.",
   months: ["Month 1", "Month 2", "Month 3", "Month 4", "Month 5", "Month 6"],
   fields: [
     "Outreach target (new emails this month)",

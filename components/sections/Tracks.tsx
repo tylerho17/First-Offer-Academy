@@ -1,12 +1,11 @@
 import Link from "next/link";
 import { tracks } from "@/content/program";
-import { Chart, Code, Compass, Megaphone } from "../Icons";
+import { Chart, Compass, Megaphone } from "../Icons";
 
 const icons: Record<string, React.ReactNode> = {
   Finance: <Chart />,
   Consulting: <Compass />,
   Marketing: <Megaphone />,
-  Tech: <Code />,
 };
 
 export default function Tracks() {
@@ -14,11 +13,11 @@ export default function Tracks() {
     <section className="section" style={{ paddingTop: 0 }}>
       <div className="wrap">
         <div className="section-head">
-          <span className="eyebrow">Track Technicals · Weeks 9–10</span>
+          <span className="eyebrow">Track Technicals · Weeks 5–6</span>
           <h2>One method. Pick the field you want to break into.</h2>
-          <p className="lede">In Weeks 9–10, Track Technicals splits the cohort into four fields.</p>
+          <p className="lede">In Weeks 5–6, Track Technicals splits the cohort into three fields.</p>
         </div>
-        <div className="grid grid-4">
+        <div className="grid grid-3">
           {tracks.map((t) => (
             <Link href={`/tracks/${t.slug}`} className="card track" key={t.name}>
               <div className="icon-dot">{icons[t.name]}</div>

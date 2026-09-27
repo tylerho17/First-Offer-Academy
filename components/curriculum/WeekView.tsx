@@ -38,7 +38,7 @@ export default function WeekView({ week: w }: { week: Week }) {
     <>
       <section className="page-hero week-hero">
         <div className="wrap">
-          <Link href="/curriculum" className="link-arrow">← All 12 weeks</Link>
+          <Link href="/curriculum" className="link-arrow">← All 8 weeks</Link>
           <div style={{ marginTop: 24 }}><Ornament /></div>
           <span className="eyebrow" style={{ display: "block" }}>
             Week {w.n} of 12 · {w.phase}{w.split ? " · track split" : ""}
@@ -146,7 +146,7 @@ export default function WeekView({ week: w }: { week: Week }) {
         <div className="wrap booking-inner">
           <div>
             <h2>Want your student doing this every week?</h2>
-            <p>Twelve weeks, a 60-minute 1:1 every week, and a coach who checks the numbers.</p>
+            <p>Eight weeks, a 60-minute 1:1 every week, and a coach who checks the numbers.</p>
           </div>
           <div className="btn-row">
             <Link href="/apply" className="btn btn-sage">Apply</Link>

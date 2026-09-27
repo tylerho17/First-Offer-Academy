@@ -57,21 +57,6 @@ export const tracks: Track[] = [
       { title: "Marketing behaviorals", body: "Stories about creativity, iteration, and working with data." },
     ],
   },
-  {
-    slug: "tech",
-    name: "Tech",
-    roles: "Software engineering, data, and product roles, from startups to large tech.",
-    headline: "Get past the resume screen and into the technical round.",
-    intro:
-      "Tech recruiting rewards projects, referrals, and interview practice. The Tech track helps your student ship something worth talking about, reach the people who refer, and prepare for software, data, or product interviews.",
-    roleList: ["Software engineering", "Data science & analytics", "Product management", "Technical program management", "Startup generalist"],
-    prep: [
-      { title: "One strong project", body: "A shipped project with a clear story: the problem, the build, and the result." },
-      { title: "Technical interview reps", body: "Structured practice for coding, SQL, or product questions, matched to the role." },
-      { title: "Referral strategy", body: "Finding engineers and PMs to talk to, and turning conversations into referrals." },
-      { title: "Tech behaviorals", body: "Ownership, debugging, and teamwork stories told with specifics." },
-    ],
-  },
 ];
 
 export const getTrack = (slug: string) => tracks.find((t) => t.slug === slug);

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Ornament from "@/components/Ornament";
 import CallLink from "@/components/CallLink";
-import WeekGrid from "@/components/curriculum/WeekGrid";
+import PhaseMap from "@/components/curriculum/PhaseMap";
 import WeeklyRhythm from "@/components/curriculum/WeeklyRhythm";
 import BookingBand from "@/components/sections/program/BookingBand";
 
@@ -19,10 +19,11 @@ export default function CurriculumPage() {
         <div className="wrap">
           <Ornament />
           <span className="eyebrow" style={{ display: "block" }}>Curriculum</span>
-          <h1>Twelve weeks, one week at a time.</h1>
+          <h1>Eight weeks, four phases, one search.</h1>
           <p className="lede">
-            Every week has an objective, a skill taught, live reps, a 60-minute 1:1, and a number to hit. Open any week
-            to see exactly what your student does and what you&apos;ll see as a parent.
+            It starts with winter break pre-work, the day you enroll. Then four phases that overlap on purpose: outreach
+            starts in Phase 1 and never stops. Open any week to see exactly what your student does and what you&apos;ll
+            see as a parent.
           </p>
           <div className="btn-row">
             <Link href="/apply" className="btn btn-primary">Apply</Link>
@@ -32,7 +33,7 @@ export default function CurriculumPage() {
       </section>
       <section className="section" style={{ paddingTop: 16 }}>
         <div className="wrap">
-          <WeekGrid />
+          <PhaseMap />
         </div>
       </section>
       <WeeklyRhythm />

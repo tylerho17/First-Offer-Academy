@@ -15,7 +15,7 @@ export const guide: Guide = {
   reviewedByTyler: true,
   body: [
     p("The hardest part of the first internship search is the loop everyone complains about: you need experience to get an internship, and you need an internship to get experience. Most students respond by waiting, hoping someone will take a chance on them. The better response is to go create the experience yourself."),
-    p("An externship is one of the fastest ways to do that. It's short, it's structured, it ends with a real deliverable, and it gives you something concrete to put on your resume and talk about in every interview. In our program, every student completes two externship projects over the 12 weeks, because the difference they make on a thin first-year resume is hard to overstate."),
+    p("An externship is one of the fastest ways to do that. It's short, it's structured, it ends with a real deliverable, and it gives you something concrete to put on your resume and talk about in every interview. In our program, every student applies to real externship programs with coaching on the application, the video, and the interview, and we cover the fee, because the difference one makes on a thin first-year resume is hard to overstate."),
     p("This guide covers what an externship is, what counts and what doesn't, how to find one or create your own, how to do it well, and how to write it up."),
 
     h2("What an externship is"),
@@ -92,7 +92,7 @@ export const guide: Guide = {
     p("An externship is a perfect behavioral story: a clear situation, specific actions, a result, and a lesson. It also answers \"what have you done in this field?\" and gives you real material for \"why this industry.\" Prepare a two-minute version: what the project was, what you did, what you found, what you'd do differently, and what it taught you about the work."),
 
     h2("How externships fit the program"),
-    p("In the 12-week program, externship 1 starts in Week 4 and is completed by Week 7, and externship 2 starts in Week 8 and is completed by Week 11. Both are part of the Standard's level gates. Every week, the scoreboard and the tracker show exactly where each student is."),
+    p("In the 8-week program, externship applications run through Weeks 3–5: we find the programs that are open, coach the written application, the recorded video, and the live interview, and cover the fee. Submitting them is part of the Standard's level gates; admission is the externship program's decision, not ours. Every week, the scoreboard and the tracker show exactly where each student is."),
 
     h2("After it's done: turning it into the next step"),
     p("The project isn't finished when you hit send. What you do in the following weeks decides whether it stays a resume line or becomes a relationship."),

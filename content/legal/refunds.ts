@@ -13,7 +13,7 @@ export const refunds: LegalDoc = {
   intro: `This page explains what the program costs, how to pay, and how refunds work. It's part of our [Terms of Service](/terms).`,
   body: [
     { type: "h2", text: "Tuition" },
-    { type: "p", text: `Tuition for the ${c.name.toLowerCase()} (${c.start}) is ${c.price}. It covers the full 12-week program: every session, 1:1, mock interview, parent report, and the Week 12 family meeting. There are no other required fees.` },
+    { type: "p", text: `Tuition for the ${c.name.toLowerCase()} (${c.start}) is ${c.price}. It covers the full 8-week program: every session, 1:1, mock interview, parent report, and the Week 12 family meeting. There are no other required fees.` },
 
     { type: "h2", text: "Ways to pay" },
     { type: "ul", items: [

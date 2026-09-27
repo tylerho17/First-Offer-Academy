@@ -95,7 +95,7 @@ export const guide: Guide = {
     tb.callFailures(),
 
     h2("Practicing before the real thing"),
-    p("In the program, Week 5 students run mock calls in pairs, then take the hot seat with the coach playing a distracted associate who checks their phone and gives one-word answers. It's uncomfortable on purpose. You can do a version of this with a friend: have them play someone busy and slightly bored, and practice keeping the conversation warm anyway. Record it and watch where your energy drops."),
+    p("In the program, Week 3 students run mock calls in pairs, then take the hot seat with the coach playing a distracted associate who checks their phone and gives one-word answers. It's uncomfortable on purpose. You can do a version of this with a friend: have them play someone busy and slightly bored, and practice keeping the conversation warm anyway. Record it and watch where your energy drops."),
 
     h2("After ten calls"),
     p("Something changes around the tenth call. You stop being nervous, you start recognizing patterns in what people say about their jobs, and your \"why this field\" answer starts writing itself from real conversations. That's the goal. Every call is research for your interviews, and every call is a relationship that might open a door."),
@@ -107,6 +107,6 @@ export const guide: Guide = {
       "Used the close",
       "Thank-you sent within 2 hours and logged",
     ),
-    p("In the program, the Level 3 gate (Week 5) is 150 emails sent, 3 calls completed, and a thank-you within 2 hours of each. It's a small number of calls on purpose: done well, three calls teach you more than thirty done badly."),
+    p("In the program, the Level 3 gate (Week 3) is 150 emails sent, 3 calls completed, and a thank-you within 2 hours of each. It's a small number of calls on purpose: done well, three calls teach you more than thirty done badly."),
   ],
 };

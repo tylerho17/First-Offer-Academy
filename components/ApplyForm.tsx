@@ -9,7 +9,7 @@ import Honeypot from "./Honeypot";
 import CallLink from "./CallLink";
 import DepositButton from "./DepositButton";
 
-const tracks = ["Finance", "Consulting", "Marketing", "Tech"];
+const tracks = ["Finance", "Consulting", "Marketing"];
 
 export default function ApplyForm({ depositEnabled = false }: { depositEnabled?: boolean }) {
   const [status, setStatus] = useState<"idle" | "sending" | "done" | "error" | "unconnected">("idle");

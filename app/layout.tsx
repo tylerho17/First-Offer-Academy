@@ -15,11 +15,11 @@ const hanken = Hanken_Grotesk({ subsets: ["latin"], variable: "--font-hanken", d
 export const metadata: Metadata = {
   metadataBase: new URL("https://firstofferacademy.com"),
   title: {
-    default: "First Offer Academy · 12-week internship program for college students",
+    default: "First Offer Academy · 8-week internship program for college students",
     template: "%s · First Offer Academy",
   },
   description:
-    "A 12-week internship program for college freshmen and sophomores in finance, consulting, marketing, and tech.",
+    "An 8-week internship program for college freshmen and sophomores in finance, consulting, and marketing.",
   openGraph: {
     type: "website",
     siteName: "First Offer Academy",

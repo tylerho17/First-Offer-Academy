@@ -19,7 +19,7 @@ export const guide: Guide = {
     p("This guide covers the principle behind every email I send (the Two C's), the rules for length and subject lines, five templates for five common situations, the follow-up sequence, and how to read your own numbers. The full template pack is a free download."),
 
     h2("The goal: a reply rate moving toward 10%"),
-    p("Most cold emails won't get a reply, and that's normal. It's not a sign you're doing it wrong. In the program, the Week 4 objective is to move each student's reply rate toward 10%. If you're well under that after a few weeks, the problem is almost always one of three things: the first line, the ask, or the list. This guide is mostly about the first two. The target list guide covers the third."),
+    p("Most cold emails won't get a reply, and that's normal. It's not a sign you're doing it wrong. In the program, the Week 3 objective is to move each student's reply rate toward 10%. If you're well under that after a few weeks, the problem is almost always one of three things: the first line, the ask, or the list. This guide is mostly about the first two. The target list guide covers the third."),
 
     h2("The Two C's"),
     ...tb.twoCs(),
@@ -49,7 +49,7 @@ export const guide: Guide = {
     h2("Subject lines"),
     p("Your subject line has one job: get the email opened. Specific and short beats clever. Here are patterns that work:"),
     tb.subjectLines(),
-    p("Test two subject lines on a friend: show them both and ask which one they'd open. In the program, the group votes on subject lines every Week 4 session."),
+    p("Test two subject lines on a friend: show them both and ask which one they'd open. In the program, the group votes on subject lines every Week 3 session."),
 
     h2("Five templates"),
     p("Every bracket gets replaced with something real. If you can't fill a bracket with a specific, true detail, choose a different template or a different person. A template with generic fill-ins is worse than no template."),

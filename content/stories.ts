@@ -10,7 +10,7 @@ export type Story = {
   name: string; // first name + last initial: "Jamie L."
   school: string;
   year: string; // "Freshman year"
-  track: "Finance" | "Consulting" | "Marketing" | "Tech";
+  track: "Finance" | "Consulting" | "Marketing";
   headline: string; // "How Jamie landed a marketing internship as a freshman"
   role: string; // "Marketing intern"
   employer?: string;

@@ -6,35 +6,40 @@ import { modules } from "./programOverview";
 export const positioning =
   "Execution and accountability, from someone who just went through the two most recent recruiting cycles.";
 
-// The 12 weeks, phase by phase, named by which of the six parts each one
-// builds (content/programOverview.ts → modules). Accountability & Pods runs
-// the whole way through.
+// The 8 weeks, phase by phase, named by which of the six parts each one
+// builds (content/programOverview.ts → modules). Phases overlap on purpose.
+// Accountability & Pods runs the whole way through.
 export const phases = [
   {
-    weeks: "Weeks 1–3",
+    weeks: "Week 0",
+    name: "Winter break pre-work",
+    body: "Starts the day you enroll, not in January. Students arrive at Week 1 with a resume draft, their first 20 named contacts, and the Candidate Brand module already watched.",
+  },
+  {
+    weeks: "Weeks 1–2",
     name: "Candidate Brand + Outreach System",
-    body: "Candidate Brand: an honest gap check, a resume that passes our rubric, and a recorded 60-second intro. Outreach System: a target list of 50 with named contacts and the first AI-assisted email sequences.",
+    body: "Candidate Brand: an honest gap check, a resume that passes our rubric, and a recorded 60-second intro. Outreach System: a target list of 50 with named contacts and the first email sequences sent.",
   },
   {
-    weeks: "Weeks 4–8",
-    name: "Story Bank + Interview Reps",
-    body: "Story Bank: 8 stories, mapped to every common question and edited line by line. Interview Reps: live reps in every session and the weekly 60-minute 1:1. The Outreach System keeps running at 50 emails a week.",
+    weeks: "Weeks 3–5",
+    name: "Outreach System + Story Bank",
+    body: "50 emails a week with a follow-up system, networking calls and the question that turns a call into a referral, and 8 stories mapped to every common question. Externship applications are written, recorded, and rehearsed in the same weeks.",
   },
   {
-    weeks: "Weeks 9–10",
+    weeks: "Weeks 5–6",
     name: "Track Technicals",
-    body: "The cohort splits into Finance, Consulting, Marketing, or Tech. Concepts before memorization, practice with answer walk-throughs. Interview Reps adds the first graded mock in Week 10.",
+    body: "The cohort splits into Finance, Consulting, or Marketing. Concepts before memorization, practice with answer walk-throughs, and the first graded mock in Week 6.",
   },
   {
-    weeks: "Weeks 11–12",
+    weeks: "Weeks 6–8",
     name: "Interview Reps",
-    body: "The final graded mock in Week 11, run by a stranger. Accountability & Pods closes with the Week 12 family meeting.",
+    body: "Live reps every week and a second graded mock run by a stranger. Accountability & Pods closes with the Week 8 family meeting.",
   },
 ];
 
-// Runs through all 12 weeks.
+// Runs through all 8 weeks.
 export const throughout = {
-  weeks: "Weeks 1–12",
+  weeks: "Weeks 1–8",
   name: "Accountability & Pods",
   body: "A pod of three, weekly minimums and a Sunday scoreboard, and biweekly parent reports.",
 };
@@ -43,12 +48,12 @@ export { tracks } from "./tracks";
 
 // The Standard. Gates are all-required and graded on evidence in the tracker.
 export const levels = [
-  { n: 1, name: "Foundation", week: "Week 2", gate: "Top-tier resume passes the rubric · 60-second intro recorded · target list of 50 companies with named contacts built." },
-  { n: 2, name: "Launched", week: "Week 3", gate: "AI email automation set up · first 50 sequenced emails sent and logged." },
-  { n: 3, name: "In Motion", week: "Week 5", gate: "150 sent · 3 calls completed · a thank-you within 2 hours of each." },
-  { n: 4, name: "Networked", week: "Week 8", gate: "300 sent · 5+ calls · 2 referrals or intros · 8 behavioral stories recorded · externship 1 completed." },
-  { n: 5, name: "Interviewing", week: "Week 11", gate: "500+ sent · 2 graded mocks passed · externship 2 completed · 1+ real first round (when available)." },
-  { n: 6, name: "Offer", week: "Week 12+ (not promised)", gate: "A signed offer." },
+  { n: 1, name: "Foundation", week: "Week 1", gate: "Top-tier resume passes the rubric · 60-second intro recorded · target list of 50 companies with named contacts built." },
+  { n: 2, name: "Launched", week: "Week 2", gate: "AI email automation set up · first 50 sequenced emails sent and logged." },
+  { n: 3, name: "In Motion", week: "Week 3", gate: "150 sent · 3 calls completed · a thank-you within 2 hours of each." },
+  { n: 4, name: "Networked", week: "Week 5", gate: "300 sent · 5+ calls · 2 referrals or intros · 8 behavioral stories recorded · externship applications submitted." },
+  { n: 5, name: "Interviewing", week: "Week 7", gate: "350+ sent · 2 graded mocks passed · 1+ real first round (when available)." },
+  { n: 6, name: "Offer", week: "Week 8+ (not promised)", gate: "A signed offer." },
 ];
 
 // What the student leaves with: the six parts (content/programOverview.ts).
@@ -62,17 +67,41 @@ export const leavesWith = {
 // "$5,000 includes": the same six parts, by the same names.
 export const included = modules.map((m) => m.title);
 
+// What tuition buys, in plain terms. Shown on /pricing under the price.
+export const pricingIncludes = [
+  "90-minute group session every week",
+  "60-minute 1:1 every week",
+  "A pod of three, with weekly minimums and a Sunday scoreboard",
+  "Progress report for parents every two weeks",
+  "Week 8 family meeting",
+  "Winter break pre-work, starting the day you enroll",
+  "Externship applications, coached and paid for",
+];
+
+// The externship block. Applications and coaching are what we provide;
+// admission is the externship program's decision. Never write this as
+// "externship included" or "every student gets an externship".
+export const externshipBlock = {
+  title: "Externship applications, covered.",
+  body:
+    "Every student applies to real externship programs — remote projects with actual companies — with our coaching on the written application, the recorded video, and the live interview. We cover the cost. These are competitive and admission isn't guaranteed, but a student who lands one finishes the program with real company work on their resume before their first internship interview.",
+};
+
 export const weekly = [
   { name: "90-minute session", body: "The Accountability & Pods scoreboard, one skill from the week's part, and live Interview Reps." },
   { name: "Weekly 60-minute 1:1", body: "Part of Interview Reps: tracker review, the single biggest bottleneck fixed, and line-by-line edits on the work." },
   { name: "Pod of three", body: "Part of Accountability & Pods: two classmates matched to your schedule who see your numbers every Sunday." },
 ];
 
+// Shown wherever the weekly format appears.
+export const formatNote =
+  "Teaching is recorded and watched before each session. Live time is reps, teardowns, and questions — not lecture.";
+
 export type FormatRow = { block: string; time: string; what: string };
 
 export const sessionFormat: FormatRow[] = [
   { block: "Scoreboard", time: "0–15 min", what: "Each student reads their numbers aloud: sent, replies, calls, level. No excuses, just numbers." },
-  { block: "Teach", time: "15–40 min", what: "One skill, taught from the week's module." },
+  { block: "Teardown", time: "15–40 min", what: "The recorded module is watched before the session. Live time goes to teardowns of real work and questions on it." },
   { block: "Live reps", time: "40–80 min", what: "Drills in pairs or hot seat: emails rewritten live, mock calls, mock interviews." },
   { block: "Commit", time: "80–90 min", what: "Each student states their exact deliverable and deadline for the week." },
 ];
@@ -91,6 +120,7 @@ export const comparison: { row: string; us: Cell; center: Cell; clubs: Cell; alo
   { row: "Outreach System: emails reviewed every week", us: true, center: "some", clubs: "some", alone: false },
   { row: "Story Bank: stories edited line by line", us: true, center: "some", clubs: "some", alone: false },
   { row: "Track Technicals for your field", us: true, center: "some", clubs: "some", alone: false },
+  { row: "Externship applications, coached and paid for", us: true, center: false, clubs: false, alone: false },
   { row: "Interview Reps: a weekly 1:1 and graded mocks", us: true, center: "some", clubs: "some", alone: false },
   { row: "Accountability & Pods: a weekly number and parent reports", us: true, center: false, clubs: false, alone: false },
   { row: "Open to every student", us: true, center: true, clubs: false, alone: true },

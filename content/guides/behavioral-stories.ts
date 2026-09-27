@@ -70,7 +70,7 @@ export const guide: Guide = {
       "Cut, re-record, repeat until each story is under two minutes.",
       "Practice answering random questions from the list by picking a story on the spot.",
     ),
-    p("In the program, the Week 7 session has every student tell two stories while peers guess which question each one answers. If the group can't tell, the story needs a clearer point."),
+    p("In the program, the Week 4 session has every student tell two stories while peers guess which question each one answers. If the group can't tell, the story needs a clearer point."),
 
     h2("Answering the tricky ones"),
     h3("\"Tell me about a time you failed\""),
@@ -99,6 +99,6 @@ export const guide: Guide = {
       "All 8 are recorded, each under two minutes",
       "You can answer a random question by picking a story in under five seconds",
     ),
-    p("In the program, 8 stories written, recorded, and mapped is the Week 7 deliverable and part of the Level 4 gate, so they're ready well before the first mock interview. The weekly 60-minute 1:1 is where the weakest two stories get line-by-line edits."),
+    p("In the program, 8 stories written, recorded, and mapped is the Week 4 deliverable and part of the Level 4 gate, so they're ready well before the first mock interview. The weekly 60-minute 1:1 is where the weakest two stories get line-by-line edits."),
   ],
 };

@@ -185,7 +185,7 @@ export const tb = {
     { type: "p", text: t.weeklyMinimumLine },
     {
       type: "table",
-      caption: "12-week execution calendar",
+      caption: "8-week execution calendar",
       head: ["Week", "Focus", "Emails (cumulative)", "Calls"],
       rows: t.executionCalendar.map((w) => [String(w.week), w.focus, w.emails, w.calls]),
     },

@@ -7,7 +7,7 @@ export type EventItem = {
   date: string; // ISO, e.g. "2026-10-14T18:30:00-07:00"
   kind: "Parent info session" | "Student workshop" | "Livestream";
   location: string; // "Zoom" or an address
-  track?: "finance" | "consulting" | "marketing" | "tech";
+  track?: "finance" | "consulting" | "marketing";
   registerUrl: string;
 };
 

@@ -67,7 +67,7 @@ export const guide: Guide = {
 
     h2("How introductions become interviews"),
     p("An introduction isn't an interview, but it's a much shorter path to one. A colleague who takes your call because a teammate asked is already more open than a stranger. Over a few conversations, several things can happen: they tell you about a role before it posts, they flag your application internally, they suggest you apply to a program you didn't know about, or they introduce you to the person who makes the decision. None of these is a sure thing, and none happens after one call. They happen after a relationship."),
-    p("In the program, the Week 6 deliverable is 200 emails sent, 5 calls, the close used on every call, and a first intro earned. By Week 8, the Level 4 gate includes 2 referrals or intros. The numbers are deliberately modest. A handful of warm relationships beats a hundred forgotten calls."),
+    p("In the program, the Week 4 deliverable is 250 emails sent, 5 calls, the close used on every call, and a first intro earned. By Week 5, the Level 4 gate includes 2 referrals or intros. The numbers are deliberately modest. A handful of warm relationships beats a hundred forgotten calls."),
 
     h2("A worked example: one call, three doors"),
     p("Here's how the close plays out over a couple of months, for a made-up student. The names and firms are invented; the sequence is the point."),

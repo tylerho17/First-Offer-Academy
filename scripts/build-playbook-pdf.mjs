@@ -56,7 +56,7 @@ const html = (pages) => `<!doctype html><html lang="en"><head><meta charset="utf
   <h1>${esc(pb.title)}</h1>
   <p class="sub">${esc(pb.subtitle)}</p>
   <p class="intro">${esc(pb.intro)}</p>
-  <div class="price-box"><strong>16 chapters, every template included</strong>The resume rubric, the target list, the AI outreach system, 5 cold email templates, the call framework, the referral close, the story map, technicals by track, and a 12-week calendar to 500 emails.</div>
+  <div class="price-box"><strong>16 chapters, every template included</strong>The resume rubric, the target list, the AI outreach system, 5 cold email templates, the call framework, the referral close, the story map, technicals by track, and an 8-week calendar to 500 emails.</div>
   <div class="foot">
     <span class="mark">${logoTag()}${esc(site.name)}</span>
     <span>${esc(pb.authorLine)}</span>
@@ -97,7 +97,7 @@ function closingCta() {
   const c = site.cohort;
   return `<div class="cta">
     <h3>Want someone making sure it actually gets done?</h3>
-    <p>${esc(site.name)} is a 12-week internship program for college freshmen and sophomores. ${esc(c.name)} starts ${esc(c.start)}: ${c.seats} seats, ${esc(c.price)} or ${esc(c.plan)}.</p>
+    <p>${esc(site.name)} is an 8-week internship program for college freshmen and sophomores. ${esc(c.name)} starts ${esc(c.start)}: ${c.seats} seats, ${esc(c.price)} or ${esc(c.plan)}.</p>
     <a class="btn" href="https://${site.domain}/apply">Apply at ${site.domain}/apply</a>
     <a class="btn alt" href="https://${site.domain}/parents">For parents: ${site.domain}/parents</a>
   </div>`;

@@ -15,9 +15,19 @@ export const parentsPage = {
     title: "What you see",
     items: [
       { title: "A progress report every two weeks", body: "One page: your student's level on the Standard, their numbers (emails, calls, interviews), and what they're working on next. It goes only to the parent or guardian your student lists." },
-      { title: "The Week 12 family meeting", body: "Your student presents their results to you: every email, call, and interview on record, plus their Week 1 and Week 12 recorded introductions side by side." },
+      { title: "The Week 8 family meeting", body: "Your student presents their results to you: every email, call, and interview on record, plus their Week 1 and Week 8 recorded introductions side by side." },
       { title: "A call if things slip", body: "If your student misses their weekly minimums two weeks in a row, we set up a call with your student and you to reset the plan." },
     ],
+  },
+
+  timing: {
+    title: "The timing",
+    body: "The program ends before spring recruiting opens, not during it.",
+  },
+
+  externship: {
+    title: "Externship applications, covered.",
+    body: "Every student applies to real externship programs — remote projects with actual companies — with our coaching on the written application, the recorded video, and the live interview. We cover the cost. These are competitive and admission isn't guaranteed, but a student who lands one finishes the program with real company work on their resume before their first internship interview.",
   },
 
   dont: {

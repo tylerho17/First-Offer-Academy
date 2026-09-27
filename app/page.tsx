@@ -32,7 +32,7 @@ export default function Home() {
           url: `https://${site.domain}`,
           logo: `https://${site.domain}/apple-icon`,
           description:
-            "A 12-week internship program for college freshmen and sophomores in finance, consulting, marketing, and tech.",
+            "An 8-week internship program for college freshmen and sophomores in finance, consulting, and marketing.",
           email: site.email,
           founder: { "@type": "Person", name: site.founder.name, sameAs: [site.founder.linkedin] },
           ...(sameAs.length ? { sameAs } : {}),

@@ -9,11 +9,11 @@ export default function Hero() {
     <section className="hero">
       <div className="wrap hero-grid">
         <div>
-          <span className="eyebrow">12-week internship program · Freshmen and sophomores</span>
+          <span className="eyebrow">8-week internship program · Freshmen and sophomores</span>
           <h1>Your first internship shouldn&apos;t depend on which club lets you in.</h1>
           <p className="lede">
-            A 12-week internship program for college freshmen and sophomores aiming at finance,
-            consulting, marketing, and tech. Every student leaves with six things: a Candidate Brand,
+            An 8-week internship program for college freshmen and sophomores aiming at finance,
+            consulting, and marketing. Every student leaves with six things: a Candidate Brand,
             an Outreach System, a Story Bank, Track Technicals, Interview Reps, and the Accountability
             &amp; Pods that keep the work moving.
           </p>

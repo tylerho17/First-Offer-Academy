@@ -8,7 +8,7 @@ const schema = z.object({
   email: email(),
   school: reqText(),
   year: reqText(40),
-  track: z.enum(["Finance", "Consulting", "Marketing", "Tech"]),
+  track: z.enum(["Finance", "Consulting", "Marketing"]),
   employer: optText(200),
   quote: reqText(5000),
   videoUrl: z.union([z.url({ protocol: /^https?$/ }), z.literal("")]).optional().transform((v) => v || null),

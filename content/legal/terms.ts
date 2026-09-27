@@ -6,13 +6,13 @@ const who = site.legalEntityName ? `${site.name} (${site.legalEntityName})` : si
 export const terms: LegalDoc = {
   slug: "terms",
   title: "Terms of Service",
-  description: "The terms for using the First Offer Academy website and enrolling in the 12-week program, including what we do and don't promise.",
+  description: "The terms for using the First Offer Academy website and enrolling in the 8-week program, including what we do and don't promise.",
   lastUpdated: "2026-09-21",
   contactEmail: legalContact,
   intro: `These terms apply to the ${site.name} website and program. By using the website, applying, or enrolling, you agree to them. If a student is under 18, a parent or guardian must agree on their behalf.`,
   body: [
     { type: "h2", text: "Who we are" },
-    { type: "p", text: `${who} runs a 12-week internship recruiting program for college students. "We", "us", and "our" mean ${site.name}. "Student" means the person enrolled in the program. "You" means the student and, where one is involved, the parent or guardian who enrolls or pays for them.` },
+    { type: "p", text: `${who} runs an 8-week internship recruiting program for college students. "We", "us", and "our" mean ${site.name}. "Student" means the person enrolled in the program. "You" means the student and, where one is involved, the parent or guardian who enrolls or pays for them.` },
 
     { type: "h2", text: "Eligibility" },
     { type: "ul", items: [
@@ -22,12 +22,12 @@ export const terms: LegalDoc = {
     ] },
 
     { type: "h2", text: "What the program is" },
-    { type: "p", text: "The program is coaching and instruction for a student's internship search. It includes 12 weekly 90-minute group sessions, twelve weekly 60-minute 1:1s, an accountability pod, feedback on the student's work, graded mock interviews, parent progress reports every two weeks, and a Week 12 family meeting. Dates, times, and format are shared before the cohort starts." },
+    { type: "p", text: "The program is coaching and instruction for a student's internship search. It includes 8 weekly 90-minute group sessions, eight weekly 60-minute 1:1s, an accountability pod, feedback on the student's work, graded mock interviews, parent progress reports every two weeks, and a Week 12 family meeting. Dates, times, and format are shared before the cohort starts." },
     { type: "p", text: "We may adjust session content, order, or coaches to improve the program. If we need to change a scheduled session, we'll give as much notice as we can and offer a make-up or recording." },
 
     { type: "h2", text: "No promise of outcomes" },
     { type: "p", text: "We do not promise internship offers or any specific outcome. We don't promise an internship at any particular company, in any particular role, at any particular pay, or by any particular date. Hiring decisions belong to employers, and they depend on things no one outside the employer controls." },
-    { type: "p", text: "What we do commit to is described on our [Our Promise](/our-promise) page: the sessions, 1:1s, feedback, documented search, parent reports, and the Week 12 meeting." },
+    { type: "p", text: "What we do commit to is described on our [Our Promise](/our-promise) page: the sessions, 1:1s, feedback, documented search, parent reports, and the Week 8 meeting." },
 
     { type: "h2", text: "Student responsibilities" },
     { type: "ul", items: [
@@ -52,7 +52,7 @@ export const terms: LegalDoc = {
     { type: "p", text: "We never publish a student's or parent's name, quote, photo, video, results, or employer without separate written permission for each. Declining won't affect a student's place in the program in any way. You can withdraw permission at any time by emailing us, and we'll remove the content from our website within 10 business days. See our [Privacy Policy](/privacy) for details." },
 
     { type: "h2", text: "Recordings" },
-    { type: "p", text: "Students record practice answers (like their 60-second introduction) and mock interviews as part of the program. These recordings are used for feedback and shown at the Week 12 family meeting. They are not published anywhere without separate written permission." },
+    { type: "p", text: "Students record practice answers (like their 60-second introduction) and mock interviews as part of the program. These recordings are used for feedback and shown at the Week 8 family meeting. They are not published anywhere without separate written permission." },
 
     { type: "h2", text: "Using our website" },
     { type: "p", text: "Don't misuse the website: no attempts to break it, scrape it at scale, or submit false information through its forms. Free guides and articles on the website are general information, not personalized advice." },

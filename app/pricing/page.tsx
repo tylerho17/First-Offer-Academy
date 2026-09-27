@@ -1,24 +1,18 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { depositLine, site } from "@/content/site";
-import { included } from "@/content/program";
+import { externshipBlock, pricingIncludes } from "@/content/program";
 import FaqList from "@/components/sections/FaqList";
 import CallLink from "@/components/CallLink";
 import DepositButton from "@/components/DepositButton";
+import ExternshipNote from "@/components/sections/ExternshipNote";
 import { depositEnabled } from "@/lib/deposit";
 import { Check } from "@/components/Icons";
 
 export const metadata: Metadata = {
   title: "Pricing",
-  description: "First Offer Academy tuition: $5,000 or 3 payments of $1,700, with a $1,000 deposit to hold a seat, refundable until December 15, 2026. Free guides and events too.",
+  description: "First Offer Academy tuition: $5,000 for the 8-week program, or 3 payments of $1,700, with a $1,000 deposit to hold a seat, refundable until December 15, 2026.",
 };
-
-const free = [
-  "The Playbook: free recruiting guides and templates",
-  "Parent info sessions",
-  "Free student workshops",
-  "The First Offer newsletter",
-];
 
 export default function PricingPage() {
   const c = site.cohort;
@@ -28,42 +22,40 @@ export default function PricingPage() {
         <div className="wrap">
           <span className="proof-chip">{c.seats} seats · {c.name} · {c.start}</span>
           <h1>Clear pricing. <em>No surprises.</em></h1>
-          <p className="lede">Start free. Join the 12-week program when your student is ready to run a real search.</p>
+          <p className="lede">One program, one price. Join the 8-week program when your student is ready to run a real search.</p>
           <div className="tab-row">
-            <a href="#plans" className="tab is-active">Plans</a>
+            <a href="#plan" className="tab is-active">The price</a>
             <a href="#payment" className="tab">Payment options</a>
             <a href="#faq" className="tab">FAQ</a>
           </div>
         </div>
       </section>
 
-      <section className="section" id="plans">
-        <div className="wrap plans">
-          <article className="card plan">
-            <span className="eyebrow">Free</span>
-            <h2 className="plan-price">$0</h2>
-            <p className="plan-sub">For students and parents getting oriented.</p>
-            <ul className="plan-list">
-              {free.map((f) => <li key={f}><Check />{f}</li>)}
-            </ul>
-            <div className="btn-row">
-              <Link href="/blog" className="btn btn-secondary">Read the Playbook</Link>
-            </div>
-          </article>
+      <section className="section" id="plan" style={{ paddingTop: 16 }}>
+        <div className="wrap">
+          <article className="card price-card">
+            <span className="eyebrow">8-week program</span>
+            <p className="price-amount">{c.price}</p>
+            <p className="price-sub">for the 8-week program, or {c.plan}</p>
+            <p className="price-line">{depositLine()}</p>
+            <p className="price-line">{c.name}: {c.start} · {c.seats} seats · {c.sections}</p>
+            <p className="price-note">This is founding-cohort pricing. It goes up for the next cohort.</p>
 
-          <article className="plan plan-featured">
-            <div className="plan-flag">Founding cohort · {c.start}</div>
-            <span className="eyebrow">12-week program</span>
-            <h2 className="plan-price">{c.price}</h2>
-            <p className="plan-sub">or {c.plan}. {depositLine()}</p>
-            <p className="includes-title">{c.price} includes</p>
+            <p className="includes-title">What&apos;s included</p>
             <ul className="plan-list">
-              {included.map((f) => <li key={f}><Check />{f}</li>)}
+              {pricingIncludes.map((f) => <li key={f}><Check />{f}</li>)}
             </ul>
-            <div className="btn-row">
-              <Link href="/apply" className="btn btn-sage">Apply now</Link>
-              <CallLink className="btn btn-cream-outline" />
+
+            <ExternshipNote block={externshipBlock} />
+
+            <div className="btn-row price-actions">
+              <Link href="/apply" className="btn btn-primary">Apply now</Link>
+              <CallLink className="btn btn-secondary" />
             </div>
+            <p className="price-free">
+              Not ready? The Playbook, every template, parent info sessions, and student workshops are{" "}
+              <Link href="/free-resources">free</Link>.
+            </p>
           </article>
         </div>
       </section>

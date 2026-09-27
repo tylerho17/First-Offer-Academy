@@ -3,6 +3,7 @@ import Link from "next/link";
 import { parentsPage as p } from "@/content/parents";
 import { positioning, weekly } from "@/content/program";
 import LeavesWith from "@/components/sections/LeavesWith";
+import ExternshipNote from "@/components/sections/ExternshipNote";
 import { depositLine, site } from "@/content/site";
 import { testimonials } from "@/content/testimonials";
 import Ornament from "@/components/Ornament";
@@ -69,6 +70,16 @@ export default function ParentsPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="section" style={{ paddingTop: 0 }}>
+        <div className="wrap">
+          <div className="card timing-card">
+            <h3>{p.timing.title}</h3>
+            <p>{p.timing.body}</p>
+          </div>
+          <ExternshipNote block={p.externship} />
         </div>
       </section>
 

@@ -16,7 +16,7 @@ import PromiseCta from "@/components/sections/program/PromiseCta";
 export const metadata: Metadata = {
   title: "The Program",
   description:
-    "How the 12-week First Offer Academy program works: six parts, a weekly 90-minute session and 60-minute 1:1, graded mock interviews, and a documented internship search.",
+    "How the 8-week First Offer Academy program works: six parts, a weekly 90-minute session and 60-minute 1:1, graded mock interviews, and a documented internship search.",
 };
 
 export default function ProgramPage() {

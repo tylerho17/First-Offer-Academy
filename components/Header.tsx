@@ -12,8 +12,8 @@ export const nav: Item[] = [
     label: "Program",
     href: "/program",
     children: [
-      { label: "How it works", href: "/program", note: "The 12-week plan" },
-      { label: "Curriculum", href: "/curriculum", note: "All 12 weeks, week by week" },
+      { label: "How it works", href: "/program", note: "The 8-week plan" },
+      { label: "Curriculum", href: "/curriculum", note: "Week 0 plus four phases" },
       ...tracks.map((t) => ({ label: `${t.name} track`, href: `/tracks/${t.slug}` })),
       { label: "Pricing", href: "/pricing", note: "Tuition and payment plans" },
     ],

@@ -552,6 +552,24 @@ a.topic-pill:hover { background: var(--navy); color: var(--cream); }
 .plan-flag { position: absolute; top: -14px; right: 24px; background: var(--sage); color: var(--navy); font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: 6px 12px; border-radius: 999px; }
 .pay-amt { font-family: var(--display); font-weight: 600; font-size: 26px; color: var(--navy); margin: 6px 0 10px; }
 
+/* /pricing: one centered cream card (single tier) */
+.price-card { max-width: 680px; margin: 0 auto; padding: 32px 24px; }
+@media (min-width: 768px) { .price-card { padding: 44px 48px; } }
+.price-card .price-amount { font-family: var(--display); font-weight: 600; font-size: 56px; line-height: 1.05; color: var(--navy); letter-spacing: -0.01em; margin: 6px 0 0; }
+.price-card .price-sub { font-size: 18px; margin-top: 6px; }
+.price-card .price-line { font-size: 17px; margin-top: 8px; }
+.price-card .price-note { font-size: 17px; font-weight: 600; color: var(--navy); margin-top: 16px; }
+.price-card .price-actions { margin-top: 28px; }
+.price-card .price-free { font-size: 16px; margin-top: 16px; }
+.timing-card { max-width: 720px; }
+.timing-card p { margin-top: 8px; }
+/* Externship block: applications covered, never placement */
+.ext-note { margin-top: 28px; border-left: 4px solid var(--sage); background: var(--mist); border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 20px; }
+.ext-note p { font-size: 17px; line-height: 1.6; margin: 0; }
+.ext-note strong { color: var(--navy); }
+.band .ext-note { background: rgba(247,244,238,.12); }
+.band .ext-note p, .band .ext-note strong { color: var(--cream); }
+
 /* ---------- Tracks ---------- */
 .role-list { list-style: none; padding: 0; margin: 24px 0 0; display: grid; gap: 12px; }
 .role-list li { display: flex; gap: 12px; align-items: center; font-size: 18px; font-weight: 600; color: var(--navy); }
@@ -930,18 +948,41 @@ a.card, .story-card, .icon-tile { transition: transform .15s ease, box-shadow .1
 
 /* ---------- v4: Curriculum ---------- */
 .level-badge { display: inline-block; background: var(--navy); color: var(--cream); font-size: 13px; font-weight: 700; padding: 5px 12px; border-radius: 999px; line-height: 1.4; }
-.phase-bands { display: grid; gap: 56px; }
-.phase-band-head { max-width: 720px; margin-bottom: 20px; }
-.phase-band-head h2 { margin-top: 6px; }
-.phase-band-head p { margin-top: 8px; }
+/* /curriculum: Week 0 + four overlapping phases */
+.phase-map { display: grid; gap: 28px; }
+.prework-card { border-left: 4px solid var(--sage); padding: 24px 26px; }
+.prework-card h2 { margin-top: 6px; font-size: 28px; }
+.prework-card p { margin-top: 8px; max-width: 720px; }
+
+.phase-rail { display: grid; gap: 6px; background: var(--cream); border-radius: var(--radius); padding: 18px 20px; }
+.phase-rail .rail-weeks, .phase-rail .rail-row { display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 6px; }
+.phase-rail .rail-weeks span { font-size: 12px; font-weight: 700; letter-spacing: .08em; color: var(--dusty); text-align: center; }
+.rail-bar { background: var(--mist); border: 1.5px solid var(--navy-line); border-radius: 999px; color: var(--navy); font-size: 13px; font-weight: 700; padding: 6px 10px; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.rail-bar.is-through { background: var(--navy); border-color: var(--navy); color: var(--cream); }
+@media (max-width: 640px) { .rail-bar { font-size: 11px; padding: 6px 4px; } }
+
+.phase-cards { list-style: none; padding: 0; margin: 0; display: grid; gap: 20px; }
+@media (min-width: 900px) { .phase-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.phase-card { padding: 26px; display: flex; flex-direction: column; gap: 10px; }
+.phase-card h2 { font-size: 28px; }
+.phase-card .phase-card-sub { font-size: 17px; font-weight: 600; color: var(--navy); }
+.phase-points { list-style: disc; padding-left: 20px; margin: 0; display: grid; gap: 8px; }
+.phase-points li { font-size: 16px; line-height: 1.55; }
+.phase-points li::marker { color: var(--dusty); }
+.phase-weeks { list-style: none; padding: 14px 0 0; margin: auto 0 0; display: grid; gap: 6px; border-top: 1px solid var(--navy-line); }
+.phase-weeks a { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; font-size: 16px; color: var(--dusty); text-decoration: none; padding: 4px 0; }
+.phase-weeks a:hover { text-decoration: underline; }
+.phase-weeks a:focus-visible { outline: 1.5px solid var(--dusty); outline-offset: 3px; }
+.phase-weeks .week-num { font-weight: 700; color: var(--navy); }
+.through-band { border-radius: var(--radius); padding: 28px 26px; }
+.through-band h2 { font-size: 28px; margin-top: 6px; }
+.through-band p { margin-top: 8px; }
 .week-grid { list-style: none; padding: 0; margin: 0; display: grid; gap: 16px; grid-template-columns: minmax(0, 1fr); }
 @media (min-width: 640px) { .week-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (min-width: 1000px) { .week-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
-.week-grid > li { display: flex; }
 .week-card { display: flex; flex-direction: column; gap: 8px; width: 100%; text-decoration: none; color: var(--ink); padding: 24px; }
 .week-card h3 { margin: 0; }
 .week-card p { font-size: 16px; }
-.week-num { font-size: 13px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--dusty); }
 .week-card-foot { margin-top: auto; padding-top: 14px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; }
 a.week-card:hover { transform: translateY(-3px); }
 .rhythm-grid { list-style: none; padding: 0; margin: 0; }

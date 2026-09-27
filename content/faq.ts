@@ -49,7 +49,7 @@ export const faqs: Faq[] = [
   },
   {
     q: "Which majors is this for?",
-    a: "Any major. In Track Technicals, students pick one of four tracks: Finance, Consulting, Marketing, or Tech (software, data, product).",
+    a: "Any major. In Track Technicals, students pick one of three tracks: Finance, Consulting, or Marketing.",
   },
   {
     q: "Does my student need to be in a club?",
@@ -69,10 +69,10 @@ export const faqs: Faq[] = [
   {
     parent: true,
     q: "What do parents see during the program?",
-    a: "Through Accountability & Pods: a one-page progress report every two weeks, and a Week 12 family meeting where your student presents their results.",
+    a: "Through Accountability & Pods: a one-page progress report every two weeks, and a Week 8 family meeting where your student presents their results.",
   },
   {
-    q: "What happens after Week 12?",
+    q: "What happens after Week 8?",
     a: "Students leave with the six parts: Candidate Brand, Outreach System, Story Bank, Track Technicals, Interview Reps, and Accountability & Pods, and keep using them. Details on continued support will be shared with the cohort.",
   },
 ];

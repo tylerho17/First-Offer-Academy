@@ -47,7 +47,7 @@ export const chapters: Chapter[] = [
       check("Chapter 1 checklist", [
         "Write down the 5 things in order, and how many hours a week you currently spend on each.",
         "List three firms you'd never heard of until you read the market list above.",
-        "Decide how many hours a week you can honestly commit for the next 12 weeks.",
+        "Decide how many hours a week you can honestly commit for the next 8 weeks.",
       ]),
     ],
   },
@@ -55,7 +55,7 @@ export const chapters: Chapter[] = [
     n: 2,
     slug: "recruiting-calendar",
     title: "The recruiting calendar by track and by quarter",
-    summary: "What to do in each quarter from freshman fall to junior year, for Finance, Consulting, Marketing, and Tech.",
+    summary: "What to do in each quarter from freshman fall to junior year, across Finance, Consulting, Marketing, and Tech.",
     blocks: [
       p("The most common thing I hear from sophomores is some version of \"I didn't know it started this early.\" For finance and consulting especially, many of the processes that decide junior summer open during sophomore year. The students who do well started building in freshman year: not by applying everywhere, but by doing a few boring things consistently."),
       tb.calendarByTrack(),
@@ -305,7 +305,7 @@ export const chapters: Chapter[] = [
   {
     n: 14,
     slug: "execution-calendar",
-    title: "Your 12-week execution calendar",
+    title: "Your 8-week execution calendar",
     summary: "The weekly numbers, from zero to 500 emails.",
     blocks: [
       p("This is the calendar we run in the program. Every week has a focus and a number. Hit the number, and the search takes care of itself far more often than you'd think."),
@@ -323,7 +323,7 @@ export const chapters: Chapter[] = [
     n: 15,
     slug: "game-plan",
     title: "Your 6-month game plan",
-    summary: "A template for the months after the 12 weeks.",
+    summary: "A template for the months after the 8 weeks.",
     blocks: [
       ...tb.gamePlan(),
     ],
@@ -334,7 +334,7 @@ export const chapters: Chapter[] = [
     title: "The tactics are free. Execution is the hard part.",
     summary: "What to do next.",
     blocks: [
-      p("You now have everything I use. None of it is secret; that's why it's free. What's hard is doing it every week for 12 weeks: sending the 50 emails when nobody's replying yet, following up when it feels awkward, recording the story for the fourth time, and showing your numbers to someone who will tell you the truth about them."),
+      p("You now have everything I use. None of it is secret; that's why it's free. What's hard is doing it every week for 8 weeks: sending the 50 emails when nobody's replying yet, following up when it feels awkward, recording the story for the fourth time, and showing your numbers to someone who will tell you the truth about them."),
       p("That's what First Offer Academy is. Not more tactics: execution and accountability, from someone who just went through the two most recent recruiting cycles. A weekly 90-minute session, a weekly 60-minute 1:1, a pod of three, and a coach who reviews every piece of work and holds your student to a number. We don't promise offers; nobody honest can. We promise a fully executed search."),
     ],
   },
