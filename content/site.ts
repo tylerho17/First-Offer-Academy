@@ -35,6 +35,16 @@ export const site = {
   },
 
   calendlyUrl: "https://calendly.com/tylerch2-building",
+
+  // Stripe payment links. Every payment button on the site reads from these:
+  // never paste a Stripe URL into a page or component. They are rendered only
+  // through components/PayOptions.tsx, which always prints the refund line
+  // underneath. Checkout redirects to /enrolled.
+  stripe: {
+    deposit: "https://buy.stripe.com/4gM9ALgTDgXd6JQbpT6g802",
+    full: "https://buy.stripe.com/aFa14f0UF6iz1pw9hL6g803",
+    plan: "https://buy.stripe.com/dRm9AL0UFfT95FM1Pj6g804",
+  },
   // TODO(Tyler): legal business entity name (e.g. "First Offer Academy LLC").
   // Empty = the privacy policy and terms say "First Offer Academy" only.
   legalEntityName: "",

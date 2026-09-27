@@ -7,13 +7,12 @@ import { track } from "@vercel/analytics";
 import { postForm } from "@/lib/submit";
 import Honeypot from "./Honeypot";
 import CallLink from "./CallLink";
-import DepositButton from "./DepositButton";
+import PayOptions from "./PayOptions";
 
 const tracks = ["Finance", "Consulting", "Marketing"];
 
-export default function ApplyForm({ depositEnabled = false }: { depositEnabled?: boolean }) {
+export default function ApplyForm() {
   const [status, setStatus] = useState<"idle" | "sending" | "done" | "error" | "unconnected">("idle");
-  const [email, setEmail] = useState("");
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -33,7 +32,6 @@ export default function ApplyForm({ depositEnabled = false }: { depositEnabled?:
       return;
     }
     track("apply_submit");
-    setEmail(String(data.get("email") ?? ""));
     setStatus("done");
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
@@ -45,13 +43,9 @@ export default function ApplyForm({ depositEnabled = false }: { depositEnabled?:
         <p>Thank you. Tyler reads every application personally. Next step: book a short fit call.</p>
         <div className="btn-row">
           <CallLink className="btn btn-primary">Book my fit call</CallLink>
-          {depositEnabled && <DepositButton email={email} />}
         </div>
-        {depositEnabled && (
-          <p className="apply-note" style={{ textAlign: "left" }}>
-            Ready to commit? {site.refundTerms} See the <Link href="/refunds">Refund &amp; Payment Policy</Link>.
-          </p>
-        )}
+        <p className="apply-note" style={{ textAlign: "left" }}>Ready to commit? Hold your seat now:</p>
+        <PayOptions />
       </div>
     );
   }

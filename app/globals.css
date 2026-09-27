@@ -563,6 +563,27 @@ a.topic-pill:hover { background: var(--navy); color: var(--cream); }
 .price-card .price-free { font-size: 16px; margin-top: 16px; }
 .timing-card { max-width: 720px; }
 .timing-card p { margin-top: 8px; }
+/* Payment links (components/PayOptions.tsx) */
+.pay-options { display: grid; gap: 10px; justify-items: start; margin-top: 24px; }
+.pay-alts { font-size: 16px; margin: 0; }
+.pay-alts a { color: var(--dusty); }
+.pay-note { font-size: 15px; color: var(--dusty); margin: 0; }
+.pay-note a { color: var(--dusty); }
+
+/* /enrolled: the post-checkout page */
+.enrolled { max-width: 760px; }
+.enrolled .lede { margin-top: 10px; }
+.enrolled-card { margin-top: 28px; padding: 28px 24px; }
+@media (min-width: 768px) { .enrolled-card { padding: 36px 40px; } }
+.enrolled-card h2 { font-size: 24px; }
+.enrolled-steps { list-style: none; padding: 0; margin: 18px 0 0; display: grid; gap: 18px; }
+.enrolled-steps li { display: flex; gap: 14px; align-items: flex-start; }
+.enrolled-steps p { margin: 0; font-size: 17px; line-height: 1.6; }
+.enrolled-num { flex: none; width: 30px; height: 30px; border-radius: 999px; background: var(--navy); color: var(--cream); font-family: var(--display); font-weight: 600; font-size: 16px; display: grid; place-items: center; }
+.enrolled-refund { margin-top: 22px; font-size: 16px; color: var(--dusty); }
+.enrolled-refund a { color: var(--dusty); }
+.enrolled-foot { margin-top: 28px; font-size: 16px; }
+
 /* Externship block: applications covered, never placement */
 .ext-note { margin-top: 28px; border-left: 4px solid var(--sage); background: var(--mist); border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 20px; }
 .ext-note p { font-size: 17px; line-height: 1.6; margin: 0; }

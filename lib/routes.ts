@@ -6,9 +6,10 @@ import { site } from "@/content/site";
 // Dynamic segments ([slug]), route groups, and private routes are skipped;
 // dynamic pages are added from content in app/sitemap.ts.
 
-// Never listed in the sitemap: admin, payment result pages, and anything
-// kept out of search on purpose.
-export const PRIVATE_ROUTES = ["/admin", "/deposit", ...(site.zhReviewed ? [] : ["/zh"])];
+// Never listed in the sitemap: admin, the post-checkout page, and anything
+// kept out of search on purpose. /enrolled is noindex and reachable only from
+// Stripe, so it stays out.
+export const PRIVATE_ROUTES = ["/admin", "/enrolled", ...(site.zhReviewed ? [] : ["/zh"])];
 
 export function staticRoutes(dir = path.join(process.cwd(), "app"), base = ""): string[] {
   const out: string[] = [];

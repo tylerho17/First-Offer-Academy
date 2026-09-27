@@ -4,9 +4,8 @@ import { depositLine, site } from "@/content/site";
 import { externshipBlock, pricingIncludes } from "@/content/program";
 import FaqList from "@/components/sections/FaqList";
 import CallLink from "@/components/CallLink";
-import DepositButton from "@/components/DepositButton";
 import ExternshipNote from "@/components/sections/ExternshipNote";
-import { depositEnabled } from "@/lib/deposit";
+import PayOptions from "@/components/PayOptions";
 import { Check } from "@/components/Icons";
 
 export const metadata: Metadata = {
@@ -48,8 +47,10 @@ export default function PricingPage() {
 
             <ExternshipNote block={externshipBlock} />
 
+            <PayOptions className="price-pay" />
+
             <div className="btn-row price-actions">
-              <Link href="/apply" className="btn btn-primary">Apply now</Link>
+              <Link href="/apply" className="btn btn-secondary">Apply first</Link>
               <CallLink className="btn btn-secondary" />
             </div>
             <p className="price-free">
@@ -82,7 +83,6 @@ export default function PricingPage() {
               <p className="pay-amt">{c.deposit} deposit</p>
               <p>{site.refundTerms || "Refundable. Exact refund dates are published before deposits open."}</p>
               <p style={{ marginTop: 12 }}><Link href="/refunds">Refund &amp; payment policy →</Link></p>
-              {depositEnabled() && <div style={{ marginTop: 16 }}><DepositButton /></div>}
             </div>
           </div>
         </div>
