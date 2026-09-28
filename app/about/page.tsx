@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import PageHero from "@/components/PageHero";
 import Founder from "@/components/sections/Founder";
 import FinalCta from "@/components/sections/FinalCta";
 
@@ -10,7 +11,12 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <div style={{ paddingTop: 72 }}><Founder /></div>
+      <PageHero
+        eyebrow="About"
+        title="Why I built First Offer Academy."
+        lede="I'm Tyler Ho. I ran this search myself, the hard way, and then ran it with eight first-year students."
+      />
+      <Founder />
       <section className="section" style={{ paddingTop: 0 }}>
         <div className="wrap two-col">
           <div className="card">

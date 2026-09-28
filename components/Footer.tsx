@@ -15,7 +15,7 @@ export default function Footer() {
             <Social />
           </div>
           <div>
-            <h4>Navigation</h4>
+            <h2>Navigation</h2>
             <ul>
               <li><Link href="/">Home</Link></li>
               <li><Link href="/about">About</Link></li>
@@ -30,7 +30,7 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h4>Program Details</h4>
+            <h2>Program Details</h2>
             <ul>
               <li><Link href="/program">How it works</Link></li>
               <li><Link href="/curriculum">Curriculum</Link></li>
@@ -41,7 +41,7 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h4>Contact</h4>
+            <h2>Contact</h2>
             <ul>
               <li><a href={`mailto:${site.email}`}>{site.email}</a></li>
               <li><a href={site.calendlyUrl} target="_blank" rel="noopener noreferrer">Book a parent call</a></li>

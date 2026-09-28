@@ -1,13 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useId, useState } from "react";
 import { track } from "@vercel/analytics";
 import { postForm } from "@/lib/submit";
 import Honeypot from "./Honeypot";
 
 export default function NewsletterForm() {
   const [status, setStatus] = useState<"idle" | "sending" | "done" | "error" | "unconnected">("idle");
+  const id = useId();
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -24,18 +25,18 @@ export default function NewsletterForm() {
     <form className="nl-form" onSubmit={onSubmit}>
       <Honeypot />
       <div className="nl-row">
-        <label className="sr-only" htmlFor="nl-first">First name</label>
-        <input id="nl-first" name="firstName" placeholder="First name" autoComplete="given-name" />
-        <label className="sr-only" htmlFor="nl-role">I am a</label>
-        <select id="nl-role" name="role" defaultValue="">
+        <label className="sr-only" htmlFor={`${id}-first`}>First name</label>
+        <input id={`${id}-first`} name="firstName" placeholder="First name" autoComplete="given-name" />
+        <label className="sr-only" htmlFor={`${id}-role`}>I am a</label>
+        <select id={`${id}-role`} name="role" defaultValue="">
           <option value="" disabled>I am a…</option>
           <option>Student</option>
           <option>Parent</option>
           <option>Educator</option>
         </select>
       </div>
-      <label className="sr-only" htmlFor="nl-email">Email</label>
-      <input id="nl-email" name="email" type="email" required placeholder="Email" autoComplete="email" />
+      <label className="sr-only" htmlFor={`${id}-email`}>Email</label>
+      <input id={`${id}-email`} name="email" type="email" required placeholder="Email" autoComplete="email" />
       <p className="nl-fine">You&apos;ll also get the First Offer newsletter every other week. Unsubscribe anytime.</p>
       <button type="submit" className="btn btn-primary" disabled={status === "sending"}>
         {status === "sending" ? "Subscribing…" : "Subscribe"}

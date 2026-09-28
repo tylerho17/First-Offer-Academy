@@ -28,6 +28,7 @@ export default function BlogPage() {
             <strong>The First Offer Playbook: how to land your first internship before junior year.</strong>
             <span className="link-arrow">Get the PDF →</span>
           </Link>
+          <h2 className="sr-only">All guides</h2>
           <BlogFilter
             articles={articles.map(({ slug, title, excerpt, category, author, readMinutes }) => ({ slug, title, excerpt, category, author, readMinutes }))}
             categories={categories}

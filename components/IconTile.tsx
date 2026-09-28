@@ -28,7 +28,7 @@ export default function IconTile({
       <div className="icon-tile-detail" id={id}>
         <div>
           <p>{detail}</p>
-          <a href={href} className="link-arrow">Read more <ArrowDown className="inline-icon" /></a>
+          <a href={href} className="link-arrow">Read more<span className="sr-only"> about {title}</span> <ArrowDown className="inline-icon" /></a>
         </div>
       </div>
     </div>

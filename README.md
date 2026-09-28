@@ -67,13 +67,14 @@ Forms post to `/api/apply`, `/api/subscribe`, `/api/contact`, `/api/stories`, an
 
 Applicants, subscribers, and contact-form senders get a confirmation; you get an alert for every application. Missing keys = emails skipped silently.
 
-### 3. Stripe (refundable deposit)
-1. Create a Stripe account. Start with **test mode**: Developers → API keys → Secret key (`sk_test_…`) → `STRIPE_SECRET_KEY`.
-2. In `content/site.ts`, set `depositRefundDeadline` (and `withdrawalPolicy`). **The deposit button stays hidden until both the key and the refund deadline exist**, because /refunds promises terms in writing before anyone pays.
-3. Redeploy (pages decide whether to show the button at build time).
-4. Test with card `4242 4242 4242 4242`, then swap in the live key (`sk_live_…`).
+### 3. Stripe (payments)
+Payments run on **Stripe payment links**, not an API integration, so there is no Stripe key in this project.
 
-The button appears on /pricing and after submitting /apply. It opens Stripe Checkout for `site.cohort.depositCents` (keep in sync with `site.cohort.deposit`) and returns to `/deposit/success` or `/deposit/canceled`. There is no tuition checkout on the site.
+1. The three links live in `content/site.ts` → `site.stripe` (deposit, pay in full, pay in three). Replace them there if you ever regenerate them.
+2. In the Stripe dashboard, set each link's confirmation page to `https://firstofferacademy.com/enrolled`. That redirect is configured in Stripe, not in this code.
+3. Test each link with card `4242 4242 4242 4242` while it's in test mode.
+
+Every payment button renders through `components/PayOptions.tsx`, which always prints the refund line beneath it. Never paste a Stripe URL anywhere else.
 
 ### 4. Admin (/admin)
 Set `ADMIN_USER` and a long random `ADMIN_PASSWORD`. /admin then asks for them (HTTP Basic Auth) and shows read-only tables of submissions, newest first, with a CSV export per table. Leave either empty and /admin doesn't exist (404).
@@ -95,7 +96,6 @@ Vercel project → Analytics → enable Web Analytics. It's cookieless. Custom e
 | `RESEND_API_KEY`, `EMAIL_FROM` | Confirmation emails | Optional |
 | `NOTIFY_EMAIL` | New-application alerts | Optional |
 | `RESEND_SEGMENT_ID` | Newsletter signups synced to a Resend segment (also needs `RESEND_API_KEY`) | Optional |
-| `STRIPE_SECRET_KEY` | Deposit checkout (also needs `depositRefundDeadline`) | Optional |
 | `ADMIN_USER`, `ADMIN_PASSWORD` | /admin | Optional |
 
 ## Before sending the site to parents

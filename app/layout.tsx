@@ -14,6 +14,9 @@ const hanken = Hanken_Grotesk({ subsets: ["latin"], variable: "--font-hanken", d
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://firstofferacademy.com"),
+  // "./" resolves per route, so every page gets its own canonical URL and the
+  // www, non-www, and ?utm= variants don't compete with each other in search.
+  alternates: { canonical: "./" },
   title: {
     default: "First Offer Academy · 8-week internship program for college students",
     template: "%s · First Offer Academy",

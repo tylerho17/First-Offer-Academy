@@ -11,7 +11,6 @@ export const INSTAGRAM_URL = "https://www.instagram.com/firstofferacademy/";
 // Instagram post or reel URLs for the "From the program" section on the home
 // page, e.g. "https://www.instagram.com/p/ABC123xyz/". Empty = the section
 // doesn't render.
-export const INSTAGRAM_POSTS: string[] = [];
 
 const PLACEHOLDERS = new Set(["TIKTOK_URL", "INSTAGRAM_URL"]);
 

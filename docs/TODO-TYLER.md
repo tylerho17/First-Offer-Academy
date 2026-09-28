@@ -29,7 +29,7 @@ Things that need your real input. Each line names the file to edit.
 ## Keys and accounts
 - **Vercel Analytics:** enable Web Analytics in the Vercel project (Analytics tab). Custom events (`apply_submit`, `book_call`, `subscribe`, `deposit_click`, `timeline_download`) require a Vercel Pro plan to view; page views work on all plans.
 - **Admin:** set `ADMIN_USER` and a long random `ADMIN_PASSWORD` in Vercel to turn on /admin (read-only submissions + CSV export). Leave either empty and /admin returns 404.
-- **Stripe:** set `STRIPE_SECRET_KEY` (start with a test key), then redeploy. `depositRefundDeadline` is already set, so the key is the only thing keeping the deposit button hidden on /pricing and after /apply. `site.cohort.depositCents` must match `site.cohort.deposit`.
+- **Stripe:** point each of the three payment links (Stripe dashboard → Payment links) at `https://firstofferacademy.com/enrolled` as the confirmation page, then test each one end to end. The links themselves are already wired in `content/site.ts` → `site.stripe`.
 - **Resend:** verify firstofferacademy.com in Resend, then set `RESEND_API_KEY`, `EMAIL_FROM` (e.g. `First Offer Academy <hello@firstofferacademy.com>`), and `NOTIFY_EMAIL` (where new-application alerts go). Emails are skipped silently until set.
 - **Supabase:** create a project, run `supabase/migrations/001_init.sql` in the SQL editor, then set `SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY` in Vercel (see `.env.example`). Until then, every form shows "not connected yet".
 
