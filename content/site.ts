@@ -34,7 +34,7 @@ export const site = {
     depositCents: 100000, // what Stripe Checkout charges for the deposit; keep in sync with `deposit`
   },
 
-  calendlyUrl: "https://calendly.com/tylerch2-building",
+  calendlyUrl: "https://calendly.com/tyler-firstofferacademy",
 
   // Stripe payment links. Every payment button on the site reads from these:
   // never paste a Stripe URL into a page or component. They are rendered only
