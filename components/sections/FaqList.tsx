@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { faqs } from "@/content/faq";
+import { getVideo } from "@/content/videoTestimonials";
+import VideoTestimonial from "@/components/VideoTestimonial";
 import { Plus } from "../Icons";
 
 export default function FaqList({ all = false, parent = false, title = "Questions parents ask" }: { all?: boolean; parent?: boolean; title?: string }) {
@@ -19,6 +21,7 @@ export default function FaqList({ all = false, parent = false, title = "Question
               <summary>{f.q}<span className="plus" aria-hidden="true"><Plus /></span></summary>
               <div className="answer">
                 <p>{f.a}</p>
+                {f.video && getVideo(f.video) && <VideoTestimonial video={getVideo(f.video)!} />}
                 {f.link && <p style={{ marginTop: 10 }}><Link href={f.link.href}>{f.link.label} →</Link></p>}
               </div>
             </details>

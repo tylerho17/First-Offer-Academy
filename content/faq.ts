@@ -2,7 +2,8 @@ import { depositLine, site } from "./site";
 
 const tba = (v: string, fallback = "To be announced.") => (v ? v : fallback);
 
-export type Faq = { q: string; a: string; home?: boolean; parent?: boolean; link?: { label: string; href: string } };
+// `video`: id from content/videoTestimonials.ts, embedded inside the answer.
+export type Faq = { q: string; a: string; home?: boolean; parent?: boolean; video?: string; link?: { label: string; href: string } };
 
 export const faqs: Faq[] = [
   {
@@ -16,6 +17,13 @@ export const faqs: Faq[] = [
     parent: true,
     q: "Why pay when the career center is free?",
     a: "Use it too. Career centers serve thousands of students. We run all six parts with your student every week: Candidate Brand, Outreach System, Story Bank, Track Technicals, Interview Reps, and Accountability & Pods.",
+  },
+  {
+    home: true,
+    parent: true,
+    q: "Is this right for my student?",
+    a: "It fits a student who will do the work every week: the outreach, the calls, the reps. It doesn't fit a student who wants it done for them, and it isn't a fix for a student who doesn't want to be there. A parent of a pilot student explains who it isn't for:",
+    video: "tom-not-for",
   },
   {
     home: true,

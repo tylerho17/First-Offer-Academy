@@ -563,6 +563,34 @@ a.topic-pill:hover { background: var(--navy); color: var(--cream); }
 .price-card .price-free { font-size: 16px; margin-top: 16px; }
 .timing-card { max-width: 720px; }
 .timing-card p { margin-top: 8px; }
+/* Video testimonials (components/VideoTestimonial.tsx) */
+.vt { padding: 0; overflow: hidden; display: flex; flex-direction: column; }
+.vt-frame { position: relative; aspect-ratio: 16 / 9; width: 100%; background: var(--navy); }
+.vt-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.vt-play { position: absolute; inset: 0; width: 100%; height: 100%; padding: 0; border: 0; background: var(--navy); cursor: pointer; display: block; }
+.vt-play img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.vt-play:focus-visible { outline: 3px solid var(--dusty); outline-offset: -3px; }
+.vt-play-mark { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 64px; height: 64px; border-radius: 999px; background: var(--navy); color: var(--cream); display: grid; place-items: center; box-shadow: 0 8px 24px rgba(26,43,72,.35); transition: transform .15s ease; }
+.vt-play-mark svg { width: 26px; height: 26px; margin-left: 3px; }
+.vt-play:hover .vt-play-mark { transform: translate(-50%, -50%) scale(1.06); }
+.vt-duration { position: absolute; right: 10px; bottom: 10px; background: var(--navy); color: var(--cream); font-size: 12px; font-weight: 700; letter-spacing: .04em; padding: 3px 8px; border-radius: 999px; }
+.vt-meta { padding: 18px 20px 20px; display: grid; gap: 4px; }
+.vt-meta .eyebrow { margin-bottom: 2px; }
+.vt-title { font-family: var(--display); font-weight: 600; font-size: 20px; line-height: 1.25; color: var(--navy); letter-spacing: -0.01em; margin: 0; }
+.vt-who { font-size: 15px; margin: 0; }
+.vt-len { white-space: nowrap; }
+.band .vt-title, .band .vt-who, .band .vt-meta .eyebrow { color: var(--cream); }
+.band .vt { background: rgba(247,244,238,.08); }
+
+/* Parent video grid (/results) */
+.vt-grid { list-style: none; padding: 0; margin: 24px 0 0; display: grid; gap: 20px; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 700px) { .vt-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1040px) { .vt-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.vt-grid li { margin: 0; }
+.vt-lead { max-width: 560px; margin-bottom: 28px; }
+.faq-item .vt { margin-top: 16px; max-width: 460px; }
+.price-card .vt { margin-top: 24px; }
+
 /* Payment links (components/PayOptions.tsx) */
 .pay-options { display: grid; gap: 10px; justify-items: start; margin-top: 24px; }
 .pay-alts { font-size: 16px; margin: 0; }

@@ -115,7 +115,7 @@ export const guide: Guide = {
     p("If your student would rather not share numbers with you directly, that's okay too. What matters is that someone is looking at them every week. That can be a mentor, a career center advisor, a coach, or your student alone with an honest tracker."),
 
     h2("How the program handles this"),
-    p("First Offer Academy is built for exactly this tension. Students own their search; parents get visibility. Every two weeks, parents receive a one-page progress report with their student's level on the Standard and their numbers. In Week 8, families attend a 30-minute results meeting where the student presents their own numbers and plays their Week 1 and Week 12 recorded introductions side by side. The coach holds the student to the weekly number, so you don't have to."),
+    p("First Offer Academy is built for exactly this tension. Students own their search; parents get visibility. Every two weeks, parents receive a one-page progress report with their student's level on the Standard and their numbers. In Week 8, families attend a 30-minute results meeting where the student presents their own numbers and plays their Week 1 and Week 8 recorded introductions side by side. The coach holds the student to the weekly number, so you don't have to."),
     check("A good week, from a parent's side",
       "You asked about the process, not the outcome",
       "Your student knows their numbers for the week",

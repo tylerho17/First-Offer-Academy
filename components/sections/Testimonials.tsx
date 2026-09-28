@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { testimonials, type Testimonial } from "@/content/testimonials";
 import { site } from "@/content/site";
+import { videosFor } from "@/content/videoTestimonials";
+import VideoTestimonial from "@/components/VideoTestimonial";
 
 function QuoteCard({ t }: { t: Testimonial }) {
   return (
@@ -33,8 +35,11 @@ export default function Testimonials({ full = false, compact = false }: { full?:
   const videos = ok.filter((t) => t.videoUrl).slice(0, 3);
   const cards = full ? quotes : quotes.slice(0, 6);
 
+  // One parent voice in the home results section: the lead video.
+  const leadVideo = videosFor("home-results")[0];
+
   const placeholders = site.showPlaceholders;
-  if (ok.length === 0 && !placeholders) return null;
+  if (ok.length === 0 && !leadVideo && !placeholders) return null;
 
   const videoSlots = Math.max(0, 3 - videos.length);
   const quoteSlots = placeholders ? Math.max(0, 6 - cards.length) : 0;
@@ -66,6 +71,10 @@ export default function Testimonials({ full = false, compact = false }: { full?:
               </div>
             ))}
           </div>
+        )}
+
+        {leadVideo && !full && (
+          <VideoTestimonial video={leadVideo} label="A parent on the change" className="vt-lead" />
         )}
 
         <div className="quotes">

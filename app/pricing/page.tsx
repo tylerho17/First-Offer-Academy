@@ -6,6 +6,8 @@ import FaqList from "@/components/sections/FaqList";
 import CallLink from "@/components/CallLink";
 import ExternshipNote from "@/components/sections/ExternshipNote";
 import PayOptions from "@/components/PayOptions";
+import VideoTestimonial from "@/components/VideoTestimonial";
+import { videosFor } from "@/content/videoTestimonials";
 import { Check } from "@/components/Icons";
 
 export const metadata: Metadata = {
@@ -15,6 +17,7 @@ export const metadata: Metadata = {
 
 export default function PricingPage() {
   const c = site.cohort;
+  const priceVideo = videosFor("pricing")[0];
   return (
     <>
       <section className="page-hero center-hero">
@@ -46,6 +49,8 @@ export default function PricingPage() {
             </ul>
 
             <ExternshipNote block={externshipBlock} />
+
+            {priceVideo && <VideoTestimonial video={priceVideo} label="A parent on the price" />}
 
             <PayOptions className="price-pay" />
 
