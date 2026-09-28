@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 // Photo inside an arch-topped cream shape (headshot blends into cream).
 export default function ArchPhoto({
   src = "/images/tyler.jpg",
@@ -7,8 +9,7 @@ export default function ArchPhoto({
 }: { src?: string; alt?: string; width?: number; height?: number }) {
   return (
     <div className="arch-photo">
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={src} alt={alt} width={width} height={height} loading="lazy" />
+      <Image src={src} alt={alt} width={width} height={height} sizes="(min-width: 860px) 420px, 90vw" />
     </div>
   );
 }

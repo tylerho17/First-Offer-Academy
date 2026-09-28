@@ -1,3 +1,4 @@
+import Image from "next/image";
 import CallLink from "../CallLink";
 import LinkedInLink from "../LinkedInLink";
 import { site } from "@/content/site";
@@ -8,8 +9,7 @@ export default function Founder() {
       <div className="wrap founder">
         <div className="founder-photo">
           {/* TODO: swap for a casual daylight photo at /images/tyler-casual.jpg */}
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/images/tyler.jpg" alt="Tyler Ho" width={800} height={903} />
+          <Image src="/images/tyler.jpg" alt="Tyler Ho" width={800} height={903} sizes="(min-width: 860px) 420px, 90vw" />
         </div>
         <div className="founder-copy">
           <span className="eyebrow">Why I built this</span>

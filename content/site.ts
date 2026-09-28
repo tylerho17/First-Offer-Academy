@@ -18,10 +18,11 @@ export const site = {
     offerCount: "",
   },
 
-  // Pre-launch switch. true = show clearly labeled empty slots (testimonials,
-  // employer bar) so you can see where content goes. Set to false before you
-  // send the site to parents: empty slots then disappear.
-  showPlaceholders: true,
+  // Labeled empty slots (testimonials, employer bar, video slots) so you can
+  // see where content still needs to go. Visible only when running locally:
+  // `npm run dev` shows them, and any production build hides them, so a
+  // visitor never sees a dashed "Placeholder" box.
+  showPlaceholders: process.env.NODE_ENV !== "production",
 
   cohort: {
     name: "Founding cohort",

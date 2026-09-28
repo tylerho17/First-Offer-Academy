@@ -10,10 +10,9 @@ import Testimonials from "@/components/sections/Testimonials";
 import LeavesWith from "@/components/sections/LeavesWith";
 import Founder from "@/components/sections/Founder";
 import EventsSchedule from "@/components/sections/EventsSchedule";
-import Comparison from "@/components/sections/Comparison";
 import PriceBand from "@/components/sections/PriceBand";
+import FreeResources from "@/components/sections/FreeResources";
 import LatestArticles from "@/components/sections/LatestArticles";
-import FromTheProgram from "@/components/sections/FromTheProgram";
 import FaqList from "@/components/sections/FaqList";
 import FinalCta from "@/components/sections/FinalCta";
 import JsonLd from "@/components/JsonLd";
@@ -49,11 +48,10 @@ export default function Home() {
       <Testimonials compact />
       <LeavesWith />
       <Founder />
+      <FreeResources />
       <EventsSchedule />
-      <Comparison />
       <PriceBand />
       <LatestArticles />
-      <FromTheProgram />
       <FaqList />
       <FinalCta />
     </>
