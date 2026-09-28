@@ -2,6 +2,7 @@ import Link from "next/link";
 import { upcomingEvents } from "@/content/events";
 import EventCard from "../EventCard";
 import CallLink from "../CallLink";
+import EventCalendars from "./EventCalendars";
 
 export default function EventsSchedule({ track, limit = 4, heading = true }: { track?: string; limit?: number; heading?: boolean }) {
   const list = upcomingEvents(track).slice(0, limit);
@@ -17,15 +18,19 @@ export default function EventsSchedule({ track, limit = 4, heading = true }: { t
             <Link href="/events" className="link-arrow">All events →</Link>
           </div>
         )}
-        {list.length > 0 ? (
+        {list.length > 0 && (
           <div className="event-list">
             {list.map((e) => <EventCard key={e.title + e.date} e={e} />)}
           </div>
-        ) : (
-          <div className="card empty-card">
+        )}
+
+        <EventCalendars className={list.length > 0 ? "is-below" : ""} />
+
+        {list.length === 0 && (
+          <div className="card empty-card" style={{ marginTop: 16 }}>
             <div>
-              <h3>New dates are being scheduled.</h3>
-              <p>Parent info sessions and free student workshops start this fall. Want answers now? Book a free call.</p>
+              <h3>Want answers now?</h3>
+              <p>Every new session is posted on the calendars above. For a conversation about your student, book a free call.</p>
             </div>
             <CallLink />
           </div>

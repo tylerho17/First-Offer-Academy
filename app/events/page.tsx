@@ -14,7 +14,7 @@ export default function EventsPage() {
       <PageHero
         eyebrow="Free events"
         title="Learn how recruiting works, live and free."
-        lede="Parent info sessions, student workshops, and livestreams. Ask questions in real time. No commitment."
+        lede="Parent info sessions, student workshops, and livestreams. Subscribe to the calendar for your side and every new date lands in your inbox. Ask questions in real time. No commitment."
       />
       <div style={{ paddingTop: 24 }}><EventsSchedule limit={50} heading={false} /></div>
       <FinalCta />

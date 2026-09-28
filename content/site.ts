@@ -36,6 +36,13 @@ export const site = {
 
   calendlyUrl: "https://calendly.com/tyler-firstofferacademy",
 
+  // Luma event calendars. People subscribe there and get every new date;
+  // individual sessions can also be listed in content/events.ts.
+  luma: {
+    parents: "https://luma.com/parentFOA",
+    students: "https://luma.com/firstofferacademy",
+  },
+
   // Stripe payment links. Every payment button on the site reads from these:
   // never paste a Stripe URL into a page or component. They are rendered only
   // through components/PayOptions.tsx, which always prints the refund line
