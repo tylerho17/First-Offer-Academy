@@ -49,8 +49,8 @@ export const guide: Guide = {
     p("The tiers work the same for everyone, but the firms in each tier look different depending on your track. Here's the general shape. Swap in real names from your own research."),
     table("Firm types by track and tier", ["Track", "A tier (relationships)", "B tier (realistic)", "C tier (safe)"], [
       ["Finance", "Large banks and well-known investment firms with early-insight programs", "Boutique advisory firms, middle-market banks, local wealth managers and family offices", "Local accounting firms, a campus investment fund, small financial planners"],
-      ["Consulting", "Large strategy and management consulting firms", "Boutique and specialty consultancies, in-house strategy teams at local companies", "Small local consultancies, nonprofits needing project help, campus consulting groups"],
       ["Marketing", "Big consumer brands and well-known agencies", "Mid-size agencies, growing DTC brands, local marketing teams", "Local businesses, campus offices, small startups that need social or content help"],
+      ["Accounting", "Large public accounting firms with early-identification programs", "Mid-size and regional accounting firms, corporate accounting teams at local companies", "Small local CPA firms, a campus accounting society, bookkeeping for small businesses"],
       ["Tech", "Large tech companies with formal internship programs", "Growth-stage startups, mid-size software companies, local tech firms", "Early-stage startups, campus research labs, small businesses needing a site or data work"],
     ]),
     p("If you're split between two tracks, it's fine to build a mixed list for your first few weeks. After ten or so calls, you'll know which direction pulls you, and you can re-tier the list around it."),

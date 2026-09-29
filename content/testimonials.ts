@@ -8,7 +8,7 @@ export type Testimonial = {
   name: string; // "Jamie L." (first name + last initial)
   school: string;
   year: string; // "Freshman year"
-  track: "Finance" | "Consulting" | "Marketing";
+  track: "Finance" | "Marketing" | "Accounting";
   quote: string;
   employer?: string;
   employerPermission: boolean;

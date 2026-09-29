@@ -6,7 +6,7 @@ import { site } from "@/content/site";
 import { postForm } from "@/lib/submit";
 import Honeypot from "./Honeypot";
 
-const tracks = ["Finance", "Consulting", "Marketing"];
+const tracks = ["Finance", "Marketing", "Accounting"];
 
 // Testimonial submissions. Nothing submitted here appears on the site
 // automatically: Tyler reviews each one and sets permission flags by hand.

@@ -5,7 +5,7 @@
 // Used by /curriculum, /curriculum/week-[n], and the /program syllabus.
 
 export type Phase = "Build the Candidate" | "Run the Search" | "Track Technicals" | "Interview Reps";
-export type TrackName = "Finance" | "Consulting" | "Marketing";
+export type TrackName = "Finance" | "Marketing" | "Accounting";
 
 // Download slugs from content/downloads.ts. Week pages link each one to its file.
 export type AssetSlug =
@@ -17,7 +17,7 @@ export type AssetSlug =
   | "self-questions"
   | "why-worksheet"
   | "technicals-finance"
-  | "technicals-consulting"
+  | "technicals-accounting"
   | "technicals-marketing"
   | "technicals-tech"
   | "interview-scorecard"
@@ -94,7 +94,7 @@ export const phaseInfo: { name: Phase; weeks: string; from: number; to: number; 
     to: 6,
     summary: "The cohort splits by track. First graded mock in Week 6.",
     points: [
-      "Finance, Consulting, or Marketing — what each actually tests",
+      "Finance, Marketing, or Accounting — what each actually tests",
       "Where to start and how deep a freshman needs to go",
       "The first graded mock interview, Week 6",
     ],
@@ -235,7 +235,7 @@ export const weeks: Week[] = [
       "The 3-bucket \"why\": (1) mentality, (2) 2–3 specific things about the work, and (3) the people and their standards.",
       "Building firm-specific answers from calls you've already had. The best \"why us\" quotes someone who works there.",
       "Why generic enthusiasm fails: \"I'm passionate about finance\" tells the interviewer nothing.",
-      "The cohort splits into Finance, Consulting, and Marketing for Weeks 5–6.",
+      "The cohort splits into Finance, Marketing, and Accounting for Weeks 5–6.",
       "Understand the concept first. The answer comes easier after that, and so does the version of the question you haven't seen.",
     ],
     trackTeach: {
@@ -244,15 +244,15 @@ export const weeks: Week[] = [
         "Walking the three statements, and what happens to each when one line changes.",
         "Valuation methods and when each one is used.",
       ],
-      Consulting: [
-        "Case structure and frameworks, built from the question rather than memorized.",
-        "Market sizing, out loud, with round numbers.",
-        "Mental math until it's fast enough not to break your train of thought.",
-      ],
       Marketing: [
         "Portfolio pieces: one campaign idea and one analysis you can walk through.",
         "The metrics that matter, and how to talk about them without jargon.",
         "The brand teardown: what a brand is doing, why, and what you'd change.",
+      ],
+      Accounting: [
+        "Debits and credits, and how one transaction moves through the three statements.",
+        "Accruals and revenue recognition, with worked examples.",
+        "Audit vs. tax vs. advisory: what each does, so the \"why accounting\" answer is specific.",
       ],
     },
     liveReps: "Rapid-fire \"why us\" drills across firms on each student's own target list, then timed technical drills where students grade each other.",
@@ -265,7 +265,7 @@ export const weeks: Week[] = [
       "If a firm asked \"why us\" right now, which call would you quote?",
       "Which question did you get right without being able to explain why?",
     ],
-    assets: ["why-worksheet", "technicals-finance", "technicals-consulting", "technicals-marketing"],
+    assets: ["why-worksheet", "technicals-finance", "technicals-marketing", "technicals-accounting"],
     parents: "The third progress report: whether your student has reached Level 4 (Networked), and their track group for technical prep.",
     numbers: { emails: "300", calls: "5+", stories: "8 recorded", externship: "Interviews where invited" },
   },
@@ -288,15 +288,15 @@ export const weeks: Week[] = [
         "One deal and one market story, explained in plain English.",
         "Where the line is: what a freshman is expected to know, and what they aren't.",
       ],
-      Consulting: [
-        "A full case, start to finish, with a stated hypothesis and a recommendation.",
-        "Exhibit reading under time pressure.",
-        "Where the line is: structure and clarity beat memorized frameworks.",
-      ],
       Marketing: [
         "Presenting a portfolio piece the way you would in an interview.",
         "Defending a metric: what you measured, why, and what you'd do next.",
         "Where the line is: taste and reasoning beat tool lists.",
+      ],
+      Accounting: [
+        "Walk-throughs of the questions first rounds ask, out loud and on paper.",
+        "A \"why this firm\" answer built from a recruiting event or office visit.",
+        "Where the line is: clean fundamentals beat memorized standards.",
       ],
     },
     liveReps: "A full 30-minute mock per student (behavioral, why, technical or case), graded on a written scorecard.",
@@ -308,7 +308,7 @@ export const weeks: Week[] = [
       "What did you say when you blanked? What would you say now?",
       "Which open roles on your list haven't you applied to yet?",
     ],
-    assets: ["interview-scorecard", "technicals-finance", "technicals-consulting", "technicals-marketing"],
+    assets: ["interview-scorecard", "technicals-finance", "technicals-marketing", "technicals-accounting"],
     parents: "The fourth progress report: the graded mock score, applications submitted, and emails sent (target: 350).",
     numbers: { emails: "350", calls: "5+", stories: "8 recorded", externship: "Outcome depends on the program" },
   },
@@ -390,7 +390,7 @@ export const assetTitles: Record<AssetSlug, string> = {
   "self-questions": "25 self-questions + story template",
   "why-worksheet": "\"Why\" worksheet",
   "technicals-finance": "Finance technical question bank",
-  "technicals-consulting": "Consulting technical question bank",
+  "technicals-accounting": "Accounting technical question bank",
   "technicals-marketing": "Marketing technical question bank",
   "technicals-tech": "Tech technical question bank",
   "interview-scorecard": "Interview scorecard",

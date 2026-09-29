@@ -1218,3 +1218,10 @@ button.topic-pill { font: inherit; font-size: 15px; font-weight: 600; cursor: po
 .audience-cta { display: grid; gap: 16px; margin-top: 20px; }
 @media (min-width: 700px) { .audience-cta { grid-template-columns: 1fr 1fr; } }
 .audience-cta .card p { margin: 6px 0 14px; }
+
+/* /program#tracks: the three track cards inside Track Technicals */
+.track-cards { list-style: none; padding: 0; margin: 24px 0 0; display: grid; gap: 12px; }
+@media (min-width: 700px) { .track-cards { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.track-card { display: grid !important; gap: 6px; padding: 18px 20px; height: 100%; }
+.track-card strong { color: var(--navy); font-size: 18px; }
+.track-card span { font-size: 15px; color: var(--ink); }

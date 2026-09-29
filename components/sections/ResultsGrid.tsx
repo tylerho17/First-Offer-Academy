@@ -5,7 +5,7 @@ import Link from "next/link";
 import type { Result } from "@/content/results";
 import ResultCard from "../ResultCard";
 
-const FILTERS = ["All", "Finance", "Consulting", "Marketing", "Parents"] as const;
+const FILTERS = ["All", "Finance", "Marketing", "Accounting", "Parents"] as const;
 type Filter = (typeof FILTERS)[number];
 
 // The results grid. `filters` adds the chips (/results); `limit` caps the

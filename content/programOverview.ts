@@ -45,7 +45,7 @@ export const programOverview = {
     pains: [
       { title: "Didn't get into the club", body: "The recruiting help on campus sits inside selective clubs, and most freshmen don't get in." },
       { title: "Don't know where to start", body: "They know internships matter. Nobody has shown them what to do first, or in what order." },
-      { title: "Have no network in the field", body: "No family contacts in finance, consulting, or marketing, and no idea how to meet anyone who is." },
+      { title: "Have no network in the field", body: "No family contacts in finance, marketing, or accounting, and no idea how to meet anyone who is." },
       { title: "Sending applications and hearing nothing", body: "Online applications go out. Nothing comes back, and there's no way to tell why." },
     ],
     callout: "This does not require a target school, a 4.0, a finance background, or club membership.",
@@ -66,7 +66,7 @@ export const programOverview = {
     title: "Recruiting starts earlier than anyone tells you.",
     sub: "Freshman year is the head start.",
     paragraphs: [
-      "For finance, consulting, and a growing share of tech and marketing roles, the students who land internships in sophomore and junior summer usually started building toward them in freshman year. Many find out how early it starts only after the first deadlines have passed.",
+      "For finance, accounting, and a growing share of tech and marketing roles, the students who land internships in sophomore and junior summer usually started building toward them in freshman year. Many find out how early it starts only after the first deadlines have passed.",
       "The most structured recruiting help on many campuses sits inside selective clubs. Students who don't get in are left to figure it out alone, at the same time as everyone else who didn't get in.",
       "Online advice is generic by design. It can't look at your student's resume, read their emails before they go out, or tell them what to fix after a mock interview. Feedback on real work, every week, is what changes the result of a search.",
     ],
@@ -140,9 +140,9 @@ export const modules: Module[] = [
     title: "Track Technicals",
     icon: "chart",
     positioning: "Understand the concept first. The answer comes easier after that.",
-    detail: "Weeks 5–6 split by track: Finance, Consulting, or Marketing.",
+    detail: "Weeks 5–6 split by track: Finance, Marketing, or Accounting.",
     body: [
-      "In Weeks 5–6 the cohort splits into three tracks for track-specific technical prep. Finance follows a set study order: accounting, valuation, enterprise vs. equity value, M&A, then LBOs. Consulting covers case structure and mental math. Marketing builds a starter portfolio and the metrics that matter.",
+      "In Weeks 5–6 the cohort splits into three tracks for track-specific technical prep. Finance follows a set study order: accounting, valuation, enterprise vs. equity value, M&A, then LBOs. Marketing builds a starter portfolio and the metrics that matter. Accounting covers debits and credits, the three statements, accruals and revenue recognition, and audit vs. tax vs. advisory.",
       "Concepts come before memorization: students learn why an answer is right, so they can handle the version of the question they haven't seen.",
       "Practice questions come with answer walk-throughs, so students can check their reasoning, not only their final answer.",
     ],

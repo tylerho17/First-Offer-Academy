@@ -10,7 +10,7 @@ const schema = z.object({
   school: reqText(),
   year: reqText(40),
   major: optText(120),
-  tracks: z.array(z.enum(["Finance", "Consulting", "Marketing"])).max(3).optional().default([]),
+  tracks: z.array(z.enum(["Finance", "Marketing", "Accounting"])).max(3).optional().default([]),
   gpa: optText(40),
   source: optText(300),
   tried: optText(3000),

@@ -55,9 +55,9 @@ export const chapters: Chapter[] = [
     n: 2,
     slug: "recruiting-calendar",
     title: "The recruiting calendar by track and by quarter",
-    summary: "What to do in each quarter from freshman fall to junior year, across Finance, Consulting, Marketing, and Tech.",
+    summary: "What to do in each quarter from freshman fall to junior year, across Finance, Marketing, Accounting, and Tech.",
     blocks: [
-      p("The most common thing I hear from sophomores is some version of \"I didn't know it started this early.\" For finance and consulting especially, many of the processes that decide junior summer open during sophomore year. The students who do well started building in freshman year: not by applying everywhere, but by doing a few boring things consistently."),
+      p("The most common thing I hear from sophomores is some version of \"I didn't know it started this early.\" For finance and accounting especially, many of the processes that decide junior summer open during sophomore year. The students who do well started building in freshman year: not by applying everywhere, but by doing a few boring things consistently."),
       tb.calendarByTrack(),
       tb.calendarByQuarter(),
       { type: "callout", tone: "note", title: "Dates move", text: "Timelines move earlier almost every year and differ by firm. Treat this as a planning map, and confirm each firm's real dates on its careers page. Put every deadline you find in your 6-month game plan (Chapter 15)." },
@@ -253,7 +253,7 @@ export const chapters: Chapter[] = [
     n: 11,
     slug: "technicals",
     title: "Technicals by track",
-    summary: "Study order and question lists for Finance, Consulting, Marketing, and Tech.",
+    summary: "Study order and question lists for Finance, Marketing, Accounting, and Tech.",
     blocks: [
       p("Understand the concept first; the answer comes easier after that. For first- and second-year roles, nobody expects you to know everything. They expect you to be learning, and to reason out loud when you don't know. Say answers out loud, work on paper, and use AI to close gaps, not to hand you answers."),
       ...tb.technicalsAll(10),

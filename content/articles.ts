@@ -28,13 +28,16 @@ export type Article = Guide & { readMinutes: number };
 
 const guides: Guide[] = [timeline, resume, targetList, aiEmail, coldEmail, call, referral, stories, intro, why, finance, consulting, mktTech, externships, parents];
 
-export const articles: Article[] = guides.map((g) => ({ ...g, readMinutes: readMinutes(g.body) }));
+// Every guide, including unlisted ones (their pages still render, noindex).
+export const allArticles: Article[] = guides.map((g) => ({ ...g, readMinutes: readMinutes(g.body) }));
+// Listed guides: /blog, the sitemap, track pages, and related lists.
+export const articles: Article[] = allArticles.filter((a) => !a.unlisted);
 
-export const getArticle = (slug: string) => articles.find((a) => a.slug === slug);
+export const getArticle = (slug: string) => allArticles.find((a) => a.slug === slug);
 
 // "Related guides": the guide's own picks first, then others in its category.
 export function relatedArticles(a: Article, n = 3): Article[] {
-  const picked = a.related.map(getArticle).filter((x): x is Article => !!x && x.slug !== a.slug);
+  const picked = a.related.map(getArticle).filter((x): x is Article => !!x && !x.unlisted && x.slug !== a.slug);
   const fill = articles.filter((x) => x.slug !== a.slug && x.category === a.category && !picked.includes(x));
   return [...picked, ...fill].slice(0, n);
 }

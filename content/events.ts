@@ -8,7 +8,7 @@ export type EventItem = {
   kind: "Parent info session" | "Student workshop" | "Livestream";
   audience: "Parents" | "Students" | "Parents and students";
   location: string; // "Zoom" or an address
-  track?: "finance" | "consulting" | "marketing";
+  track?: "finance" | "marketing" | "accounting";
   registerUrl: string; // the Luma event URL
 };
 

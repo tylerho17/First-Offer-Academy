@@ -110,7 +110,7 @@ export const downloads: Download[] = [
     week: 5,
     blocks: [tb.whyBuckets(), tb.whyWorksheet(), tb.whyExample()],
   },
-  ...(["finance", "consulting", "marketing", "tech"] as const).map((k): PdfDownload => ({
+  ...(["finance", "marketing", "accounting", "tech"] as const).map((k): PdfDownload => ({
     slug: `technicals-${k}` as AssetSlug,
     format: "PDF",
     title: `${t.technicals[k].name.split(" (")[0]} technical question bank`,

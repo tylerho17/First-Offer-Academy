@@ -12,8 +12,8 @@ export default function Hero() {
           <span className="eyebrow">8-week internship program · Freshmen and sophomores</span>
           <h1>Your first internship shouldn&apos;t depend on which club lets you in.</h1>
           <p className="lede">
-            An 8-week internship program for college freshmen and sophomores in finance, consulting,
-            and marketing.
+            An 8-week internship program for college freshmen and sophomores in finance, marketing,
+            and accounting.
           </p>
           <div className="btn-row">
             <PayButton />

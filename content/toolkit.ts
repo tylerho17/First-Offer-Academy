@@ -20,7 +20,7 @@ export const fiveThings = [
 ];
 
 export const earlyMarket = [
-  { name: "Boutiques", body: "Small, specialized firms (advisory, investment, consulting, agencies). Fewer applicants, and a single conversation can turn into an interview." },
+  { name: "Boutiques", body: "Small, specialized firms (advisory, investment, accounting, agencies). Fewer applicants, and a single conversation can turn into an interview." },
   { name: "Middle-market firms", body: "Firms that work with mid-sized companies. Real work, lean teams, and more willingness to take a first- or second-year intern." },
   { name: "Local firms near you", body: "Wealth managers, accounting and advisory firms, family offices, agencies, and operating companies. Being local is an advantage you should use." },
   { name: "Startups", body: "They hire for hustle and learn-fast. Founders often answer cold emails themselves." },
@@ -33,8 +33,8 @@ export const recruitingCalendar = {
   note: "Timelines move earlier almost every year and differ by firm. Treat this as a planning map, and confirm each firm's real dates on its careers page.",
   byTrack: [
     { track: "Finance (banking, investing)", freshman: "Resume, target list, first calls. Apply to early-insight and diversity programs.", sophomore: "Heavy networking in fall and winter. Many junior-summer processes open during sophomore year. Sophomore internships at boutiques and local firms.", junior: "Junior-summer internship (the one that most often leads to a full-time offer). Remaining processes run early in the year." },
-    { track: "Consulting", freshman: "Resume, stories, case basics, calls with consultants. Apply to early programs where they exist.", sophomore: "Sophomore programs and smaller-firm internships. Keep building relationships at target firms.", junior: "Most junior-summer recruiting runs in the fall and winter of junior year: applications, case interviews, final rounds." },
     { track: "Marketing", freshman: "Portfolio pieces, a campus or local role, calls with marketers at brands and agencies.", sophomore: "Internships at agencies, startups, and brands. Many postings go up in winter and spring.", junior: "Brand and agency internships. Rolling timelines: apply as roles post, and keep a warm list ready." },
+    { track: "Accounting", freshman: "Resume, target list, firm recruiting events and office visits. Apply to early-identification and leadership programs where they exist.", sophomore: "Many early-identification programs run in sophomore year and feed junior-summer internships. Plan coursework toward the CPA's 150-credit-hour requirement.", junior: "Junior-summer internship in audit, tax, or advisory: the main path to a full-time offer." },
     { track: "Tech (software, data, product)", freshman: "One real project, coding practice, first-year programs where they exist.", sophomore: "Many roles post in late summer and fall for the next summer. Referrals matter a lot.", junior: "Junior-summer internships, mostly recruited in the fall. Online assessments plus technical interviews." },
   ],
   byQuarter: [
@@ -458,25 +458,6 @@ export const technicals = {
       "Pitch me a stock (or a company you follow).",
     ],
   },
-  consulting: {
-    name: "Consulting",
-    studyOrder: ["Case structure", "Frameworks built from the question", "Market sizing", "Mental math", "Charts and synthesis"],
-    method: "Practice out loud with a partner, time yourself, and always finish with a clear recommendation.",
-    questions: [
-      "A client's profits have fallen 20% over two years. How would you figure out why?",
-      "Should a regional coffee chain expand into a new state?",
-      "Estimate the number of electric scooters in a mid-size US city.",
-      "Estimate the annual revenue of a campus bookstore.",
-      "A hospital's wait times doubled this year. What would you look at first?",
-      "Should a snack company launch a healthier product line?",
-      "How would you price a new gym membership near a university?",
-      "Profit = revenue − costs: break down each side for a food-delivery startup.",
-      "What's 15% of 240? 7 × 68? 1,200 ÷ 16? (Say it, don't write it.)",
-      "Read this chart and tell me the one thing that matters.",
-      "Summarize your recommendation in 30 seconds.",
-      "Why consulting, and why our firm?",
-    ],
-  },
   marketing: {
     name: "Marketing",
     studyOrder: ["The funnel (awareness to loyalty)", "Metrics that matter", "Brand teardown", "Portfolio pieces", "Campaign walkthrough"],
@@ -494,6 +475,25 @@ export const technicals = {
       "How would you position a new product against a bigger competitor?",
       "What marketing trend are you following right now?",
       "Why marketing, and why this brand or agency?",
+    ],
+  },
+  accounting: {
+    name: "Accounting",
+    studyOrder: ["Debits and credits", "The three statements and how they connect", "Accruals and revenue recognition", "Audit vs. tax vs. advisory", "Why accounting, why this firm"],
+    method: "Work each question on paper first, then explain it out loud. For every answer, say which statement it touches and why.",
+    questions: [
+      "What's the difference between a debit and a credit?",
+      "A company buys $1,000 of inventory with cash. What's the journal entry?",
+      "Walk me through the three financial statements and how they connect.",
+      "Depreciation goes up by $10. What happens on each statement? (Assume a 25% tax rate.)",
+      "What is an accrual? Give an example of an accrued expense.",
+      "A customer pays up front for a one-year subscription. When is the revenue recognized?",
+      "What's the difference between accounts receivable and deferred revenue?",
+      "What is the matching principle?",
+      "What does an auditor actually do during fieldwork?",
+      "What's the difference between audit, tax, and advisory?",
+      "What do you know about the path to a CPA license?",
+      "Why accounting, and why our firm?",
     ],
   },
   tech: {

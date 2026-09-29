@@ -49,10 +49,10 @@ export const guide: Guide = {
     table("Two-week project ideas", ["Track", "Project", "Deliverable"], [
       ["Finance", "Comparable-companies snapshot for a sector the firm covers", "A one-page table of 6–8 companies with key metrics and three observations"],
       ["Finance", "Prospect list for a wealth manager or advisory firm", "25 potential clients with a one-line fit note each"],
-      ["Consulting", "Competitor overview for a small business", "A 5-slide summary of 4–5 competitors: offer, pricing, strengths, gaps"],
-      ["Consulting", "Customer survey and synthesis", "A short survey, 20+ responses, and a one-page findings memo"],
       ["Marketing", "Social media audit", "A 6-slide review of the account with three content tests to try"],
       ["Marketing", "Email campaign draft", "Two versions of an email with a test plan and success metric"],
+      ["Accounting", "Month-end close checklist for a small business", "A one-page checklist and one sample account reconciliation"],
+      ["Accounting", "Quarterly expense review", "A categorized summary of a quarter's expenses with three observations"],
       ["Tech", "Small internal tool or script", "A working tool plus a short README explaining how to use it"],
       ["Tech", "Data cleanup and dashboard", "A cleaned dataset and a simple dashboard with three insights"],
     ]),

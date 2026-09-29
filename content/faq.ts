@@ -62,7 +62,7 @@ export const faqs: Faq[] = [
   },
   {
     q: "Which majors is this for?",
-    a: "Any major. In Track Technicals, students pick one of three tracks: Finance, Consulting, or Marketing.",
+    a: "Any major. In Track Technicals, students pick one of three tracks: Finance, Marketing, or Accounting.",
   },
   {
     q: "Does my student need to be in a club?",

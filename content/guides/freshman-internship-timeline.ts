@@ -14,8 +14,8 @@ export const guide: Guide = {
   related: ["resume-with-zero-experience", "target-list-of-50", "externships"],
   reviewedByTyler: true,
   body: [
-    p("The most common thing I hear from sophomores is some version of: \"I didn't know it started this early.\" For finance and consulting especially, and for a growing share of tech and marketing roles, the students who land internships in sophomore and junior summer started building toward them in freshman year. Not by applying to everything they could find, but by doing a few boring things consistently, every week, for a long time."),
-    p("This guide is the timeline I give every first-year student. It covers what to do each quarter of freshman year, what changes in sophomore year, and how the calendar differs across Finance, Consulting, Marketing, and Tech. At the end there's a checklist you can print."),
+    p("The most common thing I hear from sophomores is some version of: \"I didn't know it started this early.\" For finance and accounting especially, and for a growing share of tech and marketing roles, the students who land internships in sophomore and junior summer started building toward them in freshman year. Not by applying to everything they could find, but by doing a few boring things consistently, every week, for a long time."),
+    p("This guide is the timeline I give every first-year student. It covers what to do each quarter of freshman year, what changes in sophomore year, and how the calendar differs across Finance, Marketing, Accounting, and Tech. At the end there's a checklist you can print."),
     note("Dates move", "Recruiting timelines move earlier almost every year, and they differ from firm to firm. Treat everything here as a planning map. For any firm you care about, check its careers page for the real dates and put them on your calendar the day you find them."),
 
     h2("Why freshman year matters more than people think"),
@@ -81,7 +81,7 @@ export const guide: Guide = {
     ),
 
     h2("Freshman summer and sophomore year"),
-    p("Freshman summer is for doing something you can talk about, keeping 10–15 relationships warm, and starting technicals for your track. Sophomore year is when the pace picks up: sophomore internships, and in finance and consulting, many of the processes that decide junior summer."),
+    p("Freshman summer is for doing something you can talk about, keeping 10–15 relationships warm, and starting technicals for your track. Sophomore year is when the pace picks up: sophomore internships, and in finance and accounting, many of the processes that decide junior summer."),
     p("The good news: if you did freshman year right, sophomore year isn't a new project. It's the same weekly habits, with more relationships behind them and better stories."),
     tb.calendarByQuarter(),
 
@@ -90,10 +90,10 @@ export const guide: Guide = {
     tb.calendarByTrack(),
     h3("Finance"),
     p("Finance is the earliest. Many junior-summer processes open during sophomore year, and the students who do well have been networking since freshman year. Freshman goals: resume, target list, calls, early-insight and diversity programs. Start technicals in the order accounting, valuation, enterprise vs. equity value, M&A, then LBOs."),
-    h3("Consulting"),
-    p("Most junior-summer consulting recruiting runs in the fall and winter of junior year, with some sophomore programs earlier. Case interviews are a skill that takes months of practice out loud, so start casing with a partner in sophomore year at the latest."),
     h3("Marketing"),
     p("Marketing timelines are more rolling. Many roles post in winter and spring, and smaller agencies and startups hire when they need someone. Build two portfolio pieces (a campaign idea and an analysis) so you're ready when a role posts."),
+    h3("Accounting"),
+    p("Many public accounting firms run early-identification and leadership programs for freshmen and sophomores that feed into junior-summer internships, the main path to full-time offers. Freshman goals: resume, target list, firm recruiting events and office visits, and a coursework plan, since most states require 150 credit hours for the CPA."),
     h3("Tech"),
     p("Many tech internships post in late summer and fall for the following summer, and referrals matter a lot. Freshman goals: one strong project you can explain end to end, steady coding practice, and relationships with engineers and product people who can refer you."),
 

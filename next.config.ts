@@ -10,6 +10,7 @@ const nextConfig: NextConfig = {
       { source: "/results/parents", destination: "/results", statusCode: 301 },
       { source: "/tracks", destination: "/program#tracks", statusCode: 301 },
       { source: "/tracks/tech", destination: "/program#tracks", statusCode: 301 },
+      { source: "/tracks/consulting", destination: "/tracks/accounting", statusCode: 301 },
       { source: "/results/by-type", destination: "/results", statusCode: 301 },
       { source: "/timeline", destination: "/playbook-pdf", statusCode: 301 },
       // The Playbook PDF is only served behind the email gate (/api/playbook).

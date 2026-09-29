@@ -1,6 +1,22 @@
 import type { Guide } from "./types";
 import { check, example, h2, h3, ol, p, table, tyler, ul } from "./_helpers";
-import { technicals } from "../toolkit";
+
+// Unlisted (no Consulting track): noindex, out of /blog, the sitemap, and
+// related-guide lists. Kept for Tyler to decide whether to delete it.
+const caseQuestions = [
+  "A client's profits have fallen 20% over two years. How would you figure out why?",
+  "Should a regional coffee chain expand into a new state?",
+  "Estimate the number of electric scooters in a mid-size US city.",
+  "Estimate the annual revenue of a campus bookstore.",
+  "A hospital's wait times doubled this year. What would you look at first?",
+  "Should a snack company launch a healthier product line?",
+  "How would you price a new gym membership near a university?",
+  "Profit = revenue − costs: break down each side for a food-delivery startup.",
+  "What's 15% of 240? 7 × 68? 1,200 ÷ 16? (Say it, don't write it.)",
+  "Read this chart and tell me the one thing that matters.",
+  "Summarize your recommendation in 30 seconds.",
+  "Why consulting, and why our firm?",
+];
 
 export const guide: Guide = {
   slug: "consulting-case-interviews-from-zero",
@@ -8,10 +24,10 @@ export const guide: Guide = {
   excerpt: "What a case interview actually tests, how to structure any case from the question (not a memorized framework), market sizing out loud, the mental math that keeps you moving, and how to practice with a partner.",
   oneLine: "What a case tests, how to structure one from the question, and market sizing out loud.",
   category: "Technicals",
-  track: "consulting",
+  unlisted: true,
   date: "2026-09-21",
   author: "Tyler Ho",
-  downloads: ["technicals-consulting", "interview-scorecard"],
+  downloads: ["interview-scorecard"],
   related: ["finance-technicals-for-beginners", "why-this-industry-why-this-firm", "behavioral-stories"],
   reviewedByTyler: true,
   body: [
@@ -107,7 +123,7 @@ export const guide: Guide = {
     p("Most consulting interviews aren't only a case. They usually open with your intro, a couple of behavioral questions, and \"why consulting, why our firm?\" Interviewers are also asking themselves whether they'd want you in front of a client. Your 8 stories, your 60-second intro, and your 3-bucket \"why\" matter as much as the case, so practice them with the same seriousness. A strong case with a flat \"why consulting\" answer is a common way to miss the next round."),
 
     h2("The practice questions"),
-    { type: "ol", items: technicals.consulting.questions },
+    { type: "ol", items: caseQuestions },
 
     h2("How to practice"),
     p("Cases are a conversation, so you can't learn them only by reading. Practice out loud with a partner: one person gives the case, the other solves it, then you switch. Time yourself and always finish with a recommendation."),

@@ -4,7 +4,7 @@ import { tb } from "../toolkitBlocks";
 
 export const guide: Guide = {
   slug: "why-this-industry-why-this-firm",
-  title: "\"Why banking, consulting, marketing, or tech, and why this firm?\"",
+  title: "\"Why banking, marketing, accounting, or tech, and why this firm?\"",
   excerpt: "\"I'm passionate about finance\" tells the interviewer nothing. The 3-bucket answer (mentality, the work, the people), how to build firm-specific versions from your calls, and the sector questions that catch students off guard.",
   oneLine: "The 3-bucket answer and how to make it specific to each firm.",
   category: "Interviews",
@@ -19,7 +19,7 @@ export const guide: Guide = {
     p("This guide gives you a structure that makes your answer specific and believable: the 3-bucket \"why.\" It also shows how to build firm-specific versions from calls you've already had, and how to prepare for the sector questions that often follow. The worksheet is a free download."),
 
     h2("Why generic enthusiasm fails"),
-    p("Interviewers aren't testing whether you like the field. They're testing whether you understand it well enough to know you'd like it. \"I'm passionate about consulting\" can't be checked. \"I talked to four consultants this fall, and the part every one of them described as the best part of the job was the first two weeks of a project, when nobody knows the answer yet. That's exactly the kind of problem I enjoy\" can be checked, and it's obviously true."),
+    p("Interviewers aren't testing whether you like the field. They're testing whether you understand it well enough to know you'd like it. \"I'm passionate about accounting\" can't be checked. \"I talked to four auditors this fall, and every one of them said the best part of the job was figuring out why the numbers didn't tie. That's exactly the kind of problem I enjoy\" can be checked, and it's obviously true."),
     p("Enthusiasm reads as real when it's specific, and it's specific when it comes from people you've actually talked to. That's why this answer gets built last, after your calls, not first."),
     tyler("The best \"why us\" quotes someone who works there. If you haven't talked to anyone at the firm yet, that's your next email."),
 
@@ -46,8 +46,8 @@ export const guide: Guide = {
     h2("Versions by track"),
     table("What buckets 1 and 2 often sound like", ["Track", "Mentality (bucket 1)", "The work (bucket 2)"], [
       ["Finance", "Measured against clear numbers; comfortable with detail and pace", "Building models, defending assumptions, seeing a deal from pitch to close"],
-      ["Consulting", "Likes ambiguous problems; enjoys structuring chaos", "The early weeks of a project, synthesizing data into one recommendation, client presentations"],
       ["Marketing", "Curious about why people choose things; likes testing ideas", "Campaign tests, audience research, turning numbers into creative decisions"],
+      ["Accounting", "Likes getting the numbers exactly right; comfortable with rules and deadlines", "Audit fieldwork, preparing returns, explaining what the numbers say to a client"],
       ["Tech", "Likes building and fixing things; cares about users", "Shipping features, debugging, measuring how people use what you built"],
     ]),
     p("These are starting points, not scripts. Your version has to come from your own stories and your own calls, or it will sound like everyone else's."),
@@ -71,7 +71,7 @@ export const guide: Guide = {
     ),
 
     h2("What if you're not sure yet?"),
-    p("Plenty of first-year students aren't certain which field they want, and that's fine. You don't need lifelong certainty to give a good answer. You need honest, specific reasons for this stage of your life. \"I'm exploring finance and consulting, and here's what I've learned about each from my calls\" is a real answer in a networking conversation."),
+    p("Plenty of first-year students aren't certain which field they want, and that's fine. You don't need lifelong certainty to give a good answer. You need honest, specific reasons for this stage of your life. \"I'm exploring finance and accounting, and here's what I've learned about each from my calls\" is a real answer in a networking conversation."),
     p("In an interview for a specific role, though, commit. Choose the reasons that are true for this field and lead with them. If the honest answer is that you're still deciding, the 3 buckets will help you decide: the field where you can fill all three with real, specific material is usually the one that fits."),
     table("Signs a field fits you", ["Signal", "What it looks like"], [
       ["Calls energize you", "You leave conversations with people in this field wanting to learn more"],

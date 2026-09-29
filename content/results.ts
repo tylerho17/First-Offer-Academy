@@ -11,7 +11,7 @@
 
 import { videoTestimonials } from "./videoTestimonials";
 
-export type Track = "Finance" | "Consulting" | "Marketing";
+export type Track = "Finance" | "Marketing" | "Accounting";
 
 export type Result = {
   id: string;

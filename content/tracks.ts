@@ -28,21 +28,6 @@ export const tracks: Track[] = [
     ],
   },
   {
-    slug: "consulting",
-    name: "Consulting",
-    roles: "Strategy, operations, and advisory roles at consulting firms and in-house teams.",
-    headline: "Learn to think like a consultant, then interview like one.",
-    intro:
-      "Consulting interviews test structured thinking out loud. The Consulting track teaches case frameworks, mental math, and how to run a case conversation, alongside the networking every firm expects.",
-    roleList: ["Strategy consulting", "Operations & implementation", "Risk & advisory", "In-house strategy teams", "Boutique consulting firms"],
-    prep: [
-      { title: "Case structure", body: "Breaking an ambiguous business problem into a clear, MECE plan of attack." },
-      { title: "Mental math & charts", body: "Fast, clean arithmetic and reading exhibits under time pressure." },
-      { title: "Running the case", body: "Leading the conversation, stating a hypothesis, and closing with a recommendation." },
-      { title: "Fit interviews", body: "Leadership, teamwork, and impact stories told in a tight, consulting-style format." },
-    ],
-  },
-  {
     slug: "marketing",
     name: "Marketing",
     roles: "Brand, growth, content, and product marketing at startups and consumer companies.",
@@ -55,6 +40,21 @@ export const tracks: Track[] = [
       { title: "Metrics that matter", body: "Reach, conversion, retention, and how to talk about them credibly." },
       { title: "Brand teardown", body: "Analyzing a company's positioning and proposing one smart idea for it." },
       { title: "Marketing behaviorals", body: "Stories about creativity, iteration, and working with data." },
+    ],
+  },
+  {
+    slug: "accounting",
+    name: "Accounting",
+    roles: "Audit, tax, and advisory at public accounting firms, plus corporate accounting in industry.",
+    headline: "Start your accounting career before junior year.",
+    intro:
+      "Many public accounting firms run early-identification and leadership programs for freshmen and sophomores that feed into junior-summer internships, the main path to full-time offers. The Accounting track gets your student ready for those programs early. Planning coursework early also matters for the CPA's 150-credit-hour requirement in most states.",
+    roleList: ["Audit and assurance", "Tax", "Advisory", "Mid-size and regional public accounting", "Corporate accounting in industry"],
+    prep: [
+      { title: "Debits, credits, and the three statements", body: "How a transaction moves through the books, and how the three financial statements connect. Weeks 5–6, with answer walk-throughs." },
+      { title: "Accruals and revenue recognition", body: "When revenue and expenses are recorded, and why that isn't always when cash moves. The first graded mock is in Week 6." },
+      { title: "Audit, tax, or advisory", body: "What each service line does day to day, so the \"why accounting\" and \"why this firm\" answers are specific." },
+      { title: "Outreach built on firm events", body: "A target list organized around firm recruiting events, office visits, and early-identification deadlines, plus campus accounting society events." },
     ],
   },
 ];

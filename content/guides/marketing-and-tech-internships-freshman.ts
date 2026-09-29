@@ -14,7 +14,7 @@ export const guide: Guide = {
   related: ["target-list-of-50", "cold-email-template", "externships"],
   reviewedByTyler: true,
   body: [
-    p("Finance and consulting get most of the attention in campus recruiting conversations, so students interested in marketing or tech often feel like they're figuring it out alone. The good news is that both fields reward something every student can build, starting today: proof. A marketing student with two portfolio pieces and a tech student with one real project they can explain end to end have something to talk about in every email and every interview."),
+    p("Finance and accounting get most of the attention in campus recruiting conversations, so students interested in marketing or tech often feel like they're figuring it out alone. The good news is that both fields reward something every student can build, starting today: proof. A marketing student with two portfolio pieces and a tech student with one real project they can explain end to end have something to talk about in every email and every interview."),
     p("This guide covers what marketing and tech internships look for in first- and second-year students, how to build proof, who to target, how the timelines differ, and the questions to practice for each. The marketing and tech question banks are free downloads."),
 
     h2("What's different about marketing and tech"),
@@ -71,7 +71,7 @@ export const guide: Guide = {
     ),
 
     h2("Interviews in marketing and tech"),
-    p("Both fields use behavioral questions, just like finance and consulting, so your 8 stories and your 60-second intro matter just as much. What's different is the walkthrough: sooner or later, someone will ask you to walk them through your work."),
+    p("Both fields use behavioral questions, just like finance and accounting, so your 8 stories and your 60-second intro matter just as much. What's different is the walkthrough: sooner or later, someone will ask you to walk them through your work."),
     h3("The portfolio or project walkthrough"),
     p("Prepare a two- to three-minute walkthrough of your best piece. Use the same shape every time, and practice it out loud until it's smooth."),
     table("The walkthrough", ["Part", "What to say"], [
@@ -105,7 +105,7 @@ export const guide: Guide = {
       "Spring: finish and ship your project or pieces, 8 stories recorded, apply to every open role on your list.",
       "Summer: an internship, a freelance project, an externship, or a shipped project you can talk about.",
     ),
-    p("In the program, marketing students share Weeks 1–4 with everyone, then split in Weeks 5–6: portfolio pieces, the metrics that matter, and a brand teardown, followed by a full graded mock interview. We coach three tracks — Finance, Consulting, and Marketing — so the tech sections of this guide are here as a free resource, not as a track we run."),
+    p("In the program, marketing students share Weeks 1–4 with everyone, then split in Weeks 5–6: portfolio pieces, the metrics that matter, and a brand teardown, followed by a full graded mock interview. We coach three tracks — Finance, Marketing, and Accounting — so the tech sections of this guide are here as a free resource, not as a track we run."),
 
     p("One last point for both fields: keep a simple public home for your work. A clean LinkedIn with your projects listed, a portfolio page, or a code profile gives anyone who reads your email a place to check your work in thirty seconds. Link it in your email signature and at the top of your resume."),
 

@@ -12,7 +12,7 @@ export const guide: Guide = {
   date: "2026-09-21",
   author: "Tyler Ho",
   downloads: ["technicals-finance"],
-  related: ["consulting-case-interviews-from-zero", "why-this-industry-why-this-firm", "behavioral-stories"],
+  related: ["why-this-industry-why-this-firm", "behavioral-stories", "tell-me-about-yourself"],
   reviewedByTyler: true,
   body: [
     p("Most students approach finance technicals the way they approach a hard class: download a 400-question guide and start memorizing from page one. A week later they can recite a definition of WACC and can't explain why a company's cash goes up when depreciation goes up. Then an interviewer asks the question in a slightly different way, and the memorized answer falls apart."),

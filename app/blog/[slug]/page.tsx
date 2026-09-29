@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { articles, getArticle } from "@/content/articles";
+import { allArticles, getArticle } from "@/content/articles";
 import ArticleView from "@/components/ArticleView";
 import JsonLd from "@/components/JsonLd";
 
 export function generateStaticParams() {
-  return articles.map((a) => ({ slug: a.slug }));
+  return allArticles.map((a) => ({ slug: a.slug }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const a = getArticle(slug);
-  return a ? { title: a.title, description: a.excerpt, openGraph: { type: "article", title: a.title, description: a.excerpt, publishedTime: a.date, authors: [a.author] } } : {};
+  return a ? { title: a.title, description: a.excerpt, ...(a.unlisted ? { robots: { index: false, follow: true } } : {}), openGraph: { type: "article", title: a.title, description: a.excerpt, publishedTime: a.date, authors: [a.author] } } : {};
 }
 
 export default async function ArticlePage({ params }: { params: Promise<{ slug: string }> }) {

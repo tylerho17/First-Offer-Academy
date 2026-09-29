@@ -67,12 +67,16 @@ export default function ModuleSection({ m, n }: { m: Module; n: number }) {
               {m.components.map((c) => <li key={c}><Check />{c}</li>)}
             </ul>
             {m.slug === "track-technicals" && (
-              <p className="module-tracks" id="tracks">
-                The tracks:{" "}
-                {tracks.map((t, i) => (
-                  <span key={t.slug}>{i > 0 && " · "}<Link href={`/tracks/${t.slug}`}>{t.name}</Link></span>
+              <ul className="track-cards" id="tracks" aria-label="The three tracks">
+                {tracks.map((t) => (
+                  <li key={t.slug}>
+                    <Link href={`/tracks/${t.slug}`} className="card track-card">
+                      <strong>{t.name}</strong>
+                      <span>{t.roles}</span>
+                    </Link>
+                  </li>
                 ))}
-              </p>
+              </ul>
             )}
           </div>
           {showProof && (

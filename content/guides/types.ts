@@ -10,7 +10,8 @@ export type Guide = {
   excerpt: string;
   oneLine: string; // one-line description on /free-resources
   category: Category;
-  track?: "finance" | "consulting" | "marketing" | "tech";
+  track?: "finance" | "marketing" | "accounting" | "tech";
+  unlisted?: boolean; // noindex, and left out of /blog, the sitemap, and related lists
   date: string; // ISO date
   author: string;
   downloads: AssetSlug[]; // "Download the template" links (content/downloads.ts)

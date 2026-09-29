@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     template: "%s · First Offer Academy",
   },
   description:
-    "An 8-week internship program for college freshmen and sophomores in finance, consulting, and marketing.",
+    "An 8-week internship program for college freshmen and sophomores in finance, marketing, and accounting.",
   openGraph: {
     type: "website",
     siteName: "First Offer Academy",

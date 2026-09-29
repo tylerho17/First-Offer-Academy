@@ -9,7 +9,7 @@ import Honeypot from "./Honeypot";
 import CallLink from "./CallLink";
 import PayOptions from "./PayOptions";
 
-const tracks = ["Finance", "Consulting", "Marketing"];
+const tracks = ["Finance", "Marketing", "Accounting"];
 
 export default function ApplyForm() {
   const [status, setStatus] = useState<"idle" | "sending" | "done" | "error" | "unconnected">("idle");
