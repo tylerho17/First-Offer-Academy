@@ -38,7 +38,6 @@ export const site = {
     installment,
     plan: `3 payments of ${installment}`,
     deposit,
-    depositCents: 100000, // what Stripe Checkout charges for the deposit; keep in sync with `deposit`
   },
 
   calendlyUrl: "https://calendly.com/tyler-firstofferacademy",
@@ -50,15 +49,7 @@ export const site = {
     students: "https://luma.com/firstofferacademy",
   },
 
-  // Stripe payment links. Every payment button on the site reads from these:
-  // never paste a Stripe URL into a page or component. They are rendered only
-  // through components/PayOptions.tsx, which always prints the refund line
-  // underneath. Checkout redirects to /enrolled.
-  stripe: {
-    deposit: "https://buy.stripe.com/4gM9ALgTDgXd6JQbpT6g802",
-    full: "https://buy.stripe.com/aFa14f0UF6iz1pw9hL6g803",
-    plan: "https://buy.stripe.com/dRm9AL0UFfT95FM1Pj6g804",
-  },
+  // Stripe Payment Links live in lib/payments.ts.
   // TODO(Tyler): legal business entity name (e.g. "First Offer Academy LLC").
   // Empty = the privacy policy and terms say "First Offer Academy" only.
   legalEntityName: "",
@@ -95,10 +86,14 @@ export const site = {
   applicationDeadline: "",
   // Founding cohort refund terms. /refunds, /pricing, the FAQ, and the deposit
   // button all read these. Changing them changes a written promise to families.
-  refundTerms: `The ${deposit} deposit is fully refundable until ${depositRefundDeadline}. After that, it applies to tuition.`,
+  refundTerms: `The ${deposit} deposit is refunded in full if the fit call shows the program isn't a fit, or if you withdraw before ${depositRefundDeadline}. After that, it applies to tuition.`,
   depositRefundDeadline,
   withdrawalPolicy: "Withdraw before Week 3 for a prorated refund of unused weeks. No refunds after Week 3. If we cancel the cohort, every payment is refunded in full.",
 };
+
+// The line that sits next to every deposit button.
+export const depositRefundLine = () =>
+  `Refunded in full if the fit call shows it isn't a fit, or if you withdraw before ${site.depositRefundDeadline}.`;
 
 // "A $1,000 deposit, refundable until December 15, 2026, holds a seat."
 // Used wherever a page mentions the deposit, so no page calls it refundable

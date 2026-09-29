@@ -8,6 +8,7 @@ import { depositLine, site } from "@/content/site";
 import { testimonials } from "@/content/testimonials";
 import Ornament from "@/components/Ornament";
 import CallLink from "@/components/CallLink";
+import PayButton, { DepositNote } from "@/components/PayButton";
 import FaqList from "@/components/sections/FaqList";
 import { Check, Minus } from "@/components/Icons";
 
@@ -96,7 +97,12 @@ export default function ParentsPage() {
               <li><Check />A {c.deposit} deposit holds a seat and counts toward tuition. It&apos;s fully refundable until {site.depositRefundDeadline}.</li>
               <li><Check />Payments are processed by Stripe; we never see your card number</li>
             </ul>
-            <p style={{ marginTop: 24 }}>
+            <div className="btn-row">
+              <PayButton className="btn btn-sage" />
+              <CallLink className="btn btn-cream-outline" />
+            </div>
+            <DepositNote />
+            <p style={{ marginTop: 16 }}>
               <Link href="/refunds" className="band-link">Read the Refund &amp; Payment Policy</Link>
             </p>
           </div>

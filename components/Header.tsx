@@ -2,6 +2,7 @@ import Link from "next/link";
 import Logo from "./Logo";
 import NavDropdown from "./NavDropdown";
 import MobileNav from "./MobileNav";
+import PayButton from "./PayButton";
 import { tracks } from "@/content/tracks";
 
 type Item = { label: string; href: string; children?: { label: string; href: string; note?: string }[] };
@@ -47,6 +48,7 @@ export default function Header() {
           )}
         </nav>
         <div className="header-cta">
+          <PayButton className="btn btn-primary header-reserve">Reserve a seat</PayButton>
           <MobileNav items={nav} />
         </div>
       </div>

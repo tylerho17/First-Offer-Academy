@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { depositLine, site } from "@/content/site";
 import CallLink from "../CallLink";
+import PayButton, { DepositNote } from "../PayButton";
 
 // Homepage tuition and final call to action in one navy band.
 export default function PriceBand() {
@@ -11,11 +12,12 @@ export default function PriceBand() {
         <div>
           <span className="eyebrow">Tuition</span>
           <h2>{c.name} · {c.start}</h2>
-          <p className="lede">Apply in ten minutes, or talk it through with Tyler first.</p>
+          <p className="lede">Reserve a seat now, or talk it through with Tyler first.</p>
           <div className="btn-row">
-            <Link href="/apply" className="btn btn-sage">Apply</Link>
+            <PayButton className="btn btn-sage" />
             <CallLink className="btn btn-cream-outline" />
           </div>
+          <DepositNote />
         </div>
         <div className="price-box">
           <span className="amount">{c.price}</span>

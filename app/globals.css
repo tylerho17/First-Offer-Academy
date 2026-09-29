@@ -1194,3 +1194,15 @@ a.featured-download:hover { transform: translateY(-3px); }
 .arch-card .eyebrow { margin-bottom: 4px; }
 
 .promise-sub { margin-bottom: 20px; }
+
+/* ---------- Payments ---------- */
+.header-reserve { display: none; min-height: 44px; padding: 0 20px; font-size: 16px; }
+@media (min-width: 768px) { .header-reserve { display: inline-flex; } }
+.mobile-reserve { padding: 4px 0 10px; border-bottom: 1px solid var(--navy-line); }
+.mobile-reserve .btn { width: 100%; }
+.band .pay-note { color: var(--cream); margin-top: 14px; }
+.pay-options .pay-note:first-of-type { color: var(--ink); }
+.balance-note { margin-top: 12px; color: var(--ink); }
+.deposit-banner { margin-bottom: 20px; max-width: 860px; }
+.deposit-banner h2 { font-size: 28px; }
+.deposit-banner p { margin-top: 8px; }

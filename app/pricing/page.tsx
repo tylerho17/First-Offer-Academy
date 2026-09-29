@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { depositLine, site } from "@/content/site";
+import { balance } from "@/lib/payments";
 import { externshipBlock, pricingIncludes } from "@/content/program";
 import FaqList from "@/components/sections/FaqList";
 import CallLink from "@/components/CallLink";
@@ -53,6 +54,9 @@ export default function PricingPage() {
             {priceVideo && <VideoTestimonial video={priceVideo} label="A parent on the price" />}
 
             <PayOptions className="price-pay" />
+            <p className="pay-note balance-note">
+              Already paid the deposit? Your balance is {balance.full}, or {balance.plan}. We&apos;ll email your balance link.
+            </p>
 
             <div className="btn-row price-actions">
               <Link href="/apply" className="btn btn-secondary">Apply first</Link>
@@ -86,7 +90,8 @@ export default function PricingPage() {
             <div className="card">
               <h3>Hold a seat</h3>
               <p className="pay-amt">{c.deposit} deposit</p>
-              <p>{site.refundTerms || "Refundable. Exact refund dates are published before deposits open."}</p>
+              <p>{site.refundTerms}</p>
+              <p style={{ marginTop: 12 }}>Already paid it? Your balance is {balance.full}, or {balance.plan}. We&apos;ll email your balance link.</p>
               <p style={{ marginTop: 12 }}><Link href="/refunds">Refund &amp; payment policy →</Link></p>
             </div>
           </div>

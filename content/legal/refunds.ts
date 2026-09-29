@@ -1,4 +1,5 @@
 import { site } from "../site";
+import { balance } from "@/lib/payments";
 import { legalContact, type LegalDoc } from "./types";
 
 const c = site.cohort;
@@ -8,7 +9,7 @@ export const refunds: LegalDoc = {
   slug: "refunds",
   title: "Refund & Payment Policy",
   description: "Tuition, the payment plan, the deposit, and how refunds and withdrawals work at First Offer Academy.",
-  lastUpdated: "2026-09-21",
+  lastUpdated: "2026-09-29",
   contactEmail: legalContact,
   intro: `This page explains what the program costs, how to pay, and how refunds work. It's part of our [Terms of Service](/terms).`,
   body: [
@@ -25,6 +26,7 @@ export const refunds: LegalDoc = {
     { type: "h2", text: "The deposit" },
     { type: "p", text: `A ${c.deposit} deposit holds a seat in the cohort. It counts toward tuition; it is not an extra fee.` },
     { type: "p", text: site.refundTerms || `The deposit is refundable. The deadline for a full deposit refund: ${pending}` },
+    { type: "p", text: `After the deposit, the balance is ${balance.full} paid in full, or ${balance.plan}. We email your balance link; it isn't posted on the site.` },
 
     { type: "h2", text: "Missed payments" },
     { type: "p", text: "If a payment-plan charge fails or is missed, we'll email you and give you time to update your payment method. We'd much rather work out a plan than remove a student, so please reply and tell us what's going on. A student's access to sessions may be paused if a payment remains unresolved after we've been in touch." },

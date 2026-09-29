@@ -41,7 +41,7 @@ function renderBlock(b: Block, i: number) {
   return <p key={i}><Inline text={b.text} /></p>;
 }
 
-export default function LegalPage({ doc, children }: { doc: LegalDoc; children?: React.ReactNode }) {
+export default function LegalPage({ doc, draft = true, children }: { doc: LegalDoc; draft?: boolean; children?: React.ReactNode }) {
   const headings = doc.body.filter((b): b is Extract<Block, { type: "h2" }> => b.type === "h2");
   const updated = new Date(doc.lastUpdated + "T12:00:00").toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
 
@@ -49,7 +49,7 @@ export default function LegalPage({ doc, children }: { doc: LegalDoc; children?:
     <>
       <section className="page-hero legal-hero">
         <div className="wrap">
-          <p className="legal-draft" role="note"><strong>Draft — review with an attorney before launch.</strong></p>
+          {draft && <p className="legal-draft" role="note"><strong>Draft — review with an attorney before launch.</strong></p>}
           <span className="eyebrow">Legal</span>
           <h1>{doc.title}</h1>
           <p className="legal-updated">Last updated {updated}</p>
