@@ -48,7 +48,7 @@ export const pricingIncludes = [
 export const externshipBlock = {
   title: "Externship applications, covered.",
   body:
-    "Every student applies to real externship programs — remote projects with actual companies — with our coaching on the written application, the recorded video, and the live interview. We cover the cost. These are competitive and admission isn't guaranteed, but a student who lands one finishes the program with real company work on their resume before their first internship interview.",
+    "Every student applies to real externship programs — remote projects with actual companies — with our coaching on the written application, the recorded video, and the live interview. We cover the cost. These are competitive and admission is each program's decision, but a student who lands one finishes the program with real company work on their resume before their first internship interview.",
 };
 
 export const weekly = [

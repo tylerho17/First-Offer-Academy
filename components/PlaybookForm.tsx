@@ -21,7 +21,7 @@ export default function PlaybookForm() {
     const result = await postForm("/api/subscribe", { ...data, source: "playbook" });
     if (result === "ok") {
       rememberSubscribed();
-      track("subscribe", { source: "playbook" });
+      track("newsletter_signup", { source: "playbook" });
     }
     setStatus(result === "ok" ? "done" : result);
   }

@@ -49,7 +49,7 @@ export default function GatedDownload({
     const result = await postForm("/api/subscribe", { ...data, source });
     if (result === "ok") {
       rememberSubscribed();
-      track("subscribe", { source });
+      track("newsletter_signup", { source });
     }
     setState(result === "ok" ? "ready" : result);
   }

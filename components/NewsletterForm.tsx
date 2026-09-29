@@ -16,7 +16,7 @@ export default function NewsletterForm() {
     const data = Object.fromEntries(new FormData(e.currentTarget).entries());
     setStatus("sending");
     const result = await postForm("/api/subscribe", { ...data, source: "newsletter" });
-    if (result === "ok") track("subscribe", { source: "newsletter" });
+    if (result === "ok") track("newsletter_signup", { source: "newsletter" });
     setStatus(result === "ok" ? "done" : result);
   }
 

@@ -4,10 +4,15 @@ import { track } from "@vercel/analytics";
 import { useEffect } from "react";
 import { site } from "@/content/site";
 
-// One listener for click events site-wide:
-// - any element with data-event="<name>" (deposit_click, playbook_download, template_download)
-// - any link to the Calendly URL counts as "book_call", wherever it appears
-// Form submits are tracked in the forms themselves, after the server accepts them.
+// Vercel Analytics custom events, fired from shared components:
+//   deposit_click, pay_full_click, pay_plan_click  PayButton (data-event)
+//   parent_call_click                              CallLink (data-event), plus any
+//                                                  other link to the Calendly URL
+//   playbook_download, template_download           GatedDownload, PlaybookForm
+//   newsletter_signup                              NewsletterForm, GatedDownload,
+//                                                  PlaybookForm (after the server accepts)
+//   apply_submit                                   ApplyForm (after the server accepts)
+// This listener handles the click events: any element with data-event="<name>".
 export default function AnalyticsEvents() {
   useEffect(() => {
     function onClick(e: MouseEvent) {
@@ -16,7 +21,7 @@ export default function AnalyticsEvents() {
       const name = el.getAttribute("data-event");
       if (name) return void track(name, { path: location.pathname });
       const href = el.getAttribute("href") ?? "";
-      if (site.calendlyUrl && href.startsWith(site.calendlyUrl)) track("book_call", { path: location.pathname });
+      if (site.calendlyUrl && href.startsWith(site.calendlyUrl)) track("parent_call_click", { path: location.pathname });
     }
     document.addEventListener("click", onClick, { capture: true });
     return () => document.removeEventListener("click", onClick, { capture: true });
