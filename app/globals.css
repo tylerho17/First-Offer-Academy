@@ -1246,3 +1246,4 @@ button.topic-pill { font: inherit; font-size: 15px; font-weight: 600; cursor: po
   .result-card.is-wide .result-body { padding: 28px 36px; }
   .result-card.is-wide h3 { font-size: 24px; }
 }
+.deposit-received { background: var(--navy); color: var(--cream); text-align: center; font-weight: 600; padding: 12px 16px; margin: 0; }

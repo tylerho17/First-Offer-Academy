@@ -11,7 +11,8 @@ import PayOptions from "./PayOptions";
 
 const tracks = ["Finance", "Marketing", "Accounting"];
 
-export default function ApplyForm() {
+// `paid`: arrived from the deposit checkout (/apply?deposit=1).
+export default function ApplyForm({ paid = false }: { paid?: boolean }) {
   const [status, setStatus] = useState<"idle" | "sending" | "done" | "error" | "unconnected">("idle");
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -44,8 +45,12 @@ export default function ApplyForm() {
         <div className="btn-row">
           <CallLink className="btn btn-primary" />
         </div>
-        <p className="apply-note" style={{ textAlign: "left" }}>Ready to commit? Reserve your seat now:</p>
-        <PayOptions />
+        {!paid && (
+          <>
+            <p className="apply-note" style={{ textAlign: "left" }}>Ready to commit? Reserve your seat now:</p>
+            <PayOptions />
+          </>
+        )}
       </div>
     );
   }
@@ -116,7 +121,7 @@ export default function ApplyForm() {
 
       <div className="full" style={{ gridColumn: "1 / -1" }}>
         <button type="submit" className="btn btn-primary" disabled={status === "sending"}>
-          {status === "sending" ? "Sending…" : "Submit and book my fit call"}
+          {status === "sending" ? "Sending…" : paid ? "Submit and book the fit call." : "Submit and book my fit call"}
         </button>
       </div>
 
