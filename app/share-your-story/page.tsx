@@ -3,6 +3,8 @@ import PageHero from "@/components/PageHero";
 import StoryForm from "@/components/StoryForm";
 
 export const metadata: Metadata = {
+  // Live but unlinked: kept out of search and the sitemap (lib/routes.ts).
+  robots: { index: false, follow: false },
   title: "Share Your Story",
   description: "First Offer Academy students and alumni: share how your internship search went. Nothing is published without your written permission.",
 };

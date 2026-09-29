@@ -5,6 +5,8 @@ import { Check } from "@/components/Icons";
 import FinalCta from "@/components/sections/FinalCta";
 
 export const metadata: Metadata = {
+  // Live but unlinked: kept out of search and the sitemap (lib/routes.ts).
+  robots: { index: false, follow: false },
   title: "Free school workshops",
   description: "Bring a free internship recruiting workshop to your club, high school, community college, or PTSA.",
 };

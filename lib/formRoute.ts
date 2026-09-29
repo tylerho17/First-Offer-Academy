@@ -42,6 +42,7 @@ type Options<S extends z.ZodType> = {
   toRow: (data: z.output<S>) => Record<string, unknown>;
   upsertOn?: string; // ignore duplicates on this unique column
   after?: (data: z.output<S>) => Promise<void>; // e.g. confirmation emails; errors are logged, not surfaced
+  onOk?: (res: NextResponse, data: z.output<S>) => void; // e.g. set a cookie; not called for honeypot hits
 };
 
 export function formRoute<S extends z.ZodType>(opts: Options<S>) {
@@ -86,6 +87,8 @@ export function formRoute<S extends z.ZodType>(opts: Options<S>) {
         console.error(`[${opts.name}] after-submit hook failed:`, e);
       }
     }
-    return NextResponse.json({ ok: true });
+    const res = NextResponse.json({ ok: true });
+    opts.onOk?.(res, parsed.data);
+    return res;
   };
 }

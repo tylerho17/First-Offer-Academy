@@ -13,24 +13,22 @@ export const nav: Item[] = [
     href: "/program",
     children: [
       { label: "How it works", href: "/program", note: "The 8-week plan" },
-      ...tracks.map((t) => ({ label: `${t.name} track`, href: `/tracks/${t.slug}` })),
+      ...tracks.map((t) => ({ label: t.name, href: `/tracks/${t.slug}` })),
     ],
   },
-  { label: "Testimonials", href: "/results" },
+  { label: "Results", href: "/results" },
   { label: "For parents", href: "/parents" },
   { label: "Pricing", href: "/pricing" },
   {
-    label: "Resources",
-    href: "/blog",
+    label: "Free resources",
+    href: "/free-resources",
     children: [
-      { label: "The Playbook", href: "/blog", note: "Free recruiting guides" },
-      { label: "Free resources", href: "/free-resources", note: "Templates, trackers, and the Playbook PDF" },
-      { label: "Free events", href: "/events", note: "Info sessions and workshops" },
-      { label: "School workshops", href: "/workshops", note: "For clubs, schools, PTSAs" },
+      { label: "Playbook guides", href: "/blog", note: "Free recruiting guides" },
+      { label: "Templates", href: "/free-resources", note: "Trackers, email packs, and the Playbook PDF" },
+      { label: "Events", href: "/events", note: "Free sessions for parents and students" },
     ],
   },
   { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
 ];
 
 export default function Header() {

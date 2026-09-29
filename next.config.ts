@@ -1,15 +1,20 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // The gated Playbook PDF is read from disk by /api/playbook.
+  outputFileTracingIncludes: { "/api/playbook": ["./private/**"] },
   async redirects() {
     return [
-      { source: "/results/by-type", destination: "/results", permanent: true },
-      { source: "/timeline", destination: "/playbook-pdf", permanent: true },
-      { source: "/tracks/tech", destination: "/tracks", permanent: true },
-      { source: "/curriculum", destination: "/program#curriculum", permanent: true },
-      { source: "/our-promise", destination: "/program#promise", permanent: true },
-      { source: "/results/parents", destination: "/results#parents", permanent: true },
-      { source: "/downloads/freshman-recruiting-timeline.pdf", destination: "/downloads/first-offer-playbook.pdf", permanent: true },
+      { source: "/our-promise", destination: "/program", statusCode: 301 },
+      { source: "/curriculum", destination: "/program", statusCode: 301 },
+      { source: "/results/parents", destination: "/results", statusCode: 301 },
+      { source: "/tracks", destination: "/program#tracks", statusCode: 301 },
+      { source: "/tracks/tech", destination: "/program#tracks", statusCode: 301 },
+      { source: "/results/by-type", destination: "/results", statusCode: 301 },
+      { source: "/timeline", destination: "/playbook-pdf", statusCode: 301 },
+      // The Playbook PDF is only served behind the email gate (/api/playbook).
+      { source: "/downloads/first-offer-playbook.pdf", destination: "/playbook-pdf", statusCode: 301 },
+      { source: "/downloads/freshman-recruiting-timeline.pdf", destination: "/playbook-pdf", statusCode: 301 },
     ];
   },
 };

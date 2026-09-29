@@ -10,8 +10,9 @@ import Honeypot from "./Honeypot";
 // A download button behind the email gate. The first download asks for an
 // email (posted to /api/subscribe with source = the download's slug, so it
 // lands in Supabase and the Resend newsletter segment). After that, this
-// browser downloads straight away. The file URL itself stays public: without
-// JavaScript the link simply downloads.
+// browser downloads straight away. Template files stay public (without JavaScript
+// the link simply downloads); the Playbook PDF is served by /api/playbook only
+// after a signup.
 export default function GatedDownload({
   slug,
   href,
@@ -29,6 +30,9 @@ export default function GatedDownload({
   const id = useId();
   const emailRef = useRef<HTMLInputElement>(null);
   const readyRef = useRef<HTMLAnchorElement>(null);
+  // Static files download directly. A gated route (/api/playbook) sets its own
+  // Content-Disposition, and may redirect to the gate page instead.
+  const download = href.startsWith("/api/") ? undefined : true;
 
   useEffect(() => {
     if (state === "open") emailRef.current?.focus();
@@ -53,7 +57,7 @@ export default function GatedDownload({
         <p className="gate-msg">
           {state === "ready" ? "You're in. Your download is ready." : "Here's your copy. (Email signup isn't connected yet, so nothing was saved.)"}
         </p>
-        <a ref={readyRef} href={href} className="btn btn-primary" download data-event={event}>{label}</a>
+        <a ref={readyRef} href={href} className="btn btn-primary" download={download} data-event={event}>{label}</a>
       </div>
     );
   }
@@ -64,7 +68,7 @@ export default function GatedDownload({
       <a
         href={href}
         className={className}
-        download
+        download={download}
         aria-expanded={open}
         onClick={(e) => {
           if (isSubscribed()) {

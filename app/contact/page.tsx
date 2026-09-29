@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import ContactForm from "@/components/ContactForm";
 import Ornament from "@/components/Ornament";
 import { site } from "@/content/site";
@@ -23,7 +22,7 @@ export default function ContactPage() {
           <ContactForm />
         </div>
         <p className="contact-alt">
-          Prefer email? <a href={`mailto:${site.email}`}>{site.email}</a> · Schools and clubs: <Link href="/workshops">free workshops</Link>
+          Prefer email? <a href={`mailto:${site.email}`}>{site.email}</a>
         </p>
         <p className="contact-alt"><LinkedInLink /></p>
       </div>

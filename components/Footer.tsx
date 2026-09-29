@@ -20,7 +20,6 @@ export default function Footer() {
               <li><Link href="/">Home</Link></li>
               <li><Link href="/about">About</Link></li>
               <li><Link href="/results">Testimonials</Link></li>
-              <li><Link href="/share-your-story">Share your story</Link></li>
               {/* A review-platform link appears only once real reviews exist. */}
               {site.reviewsUrl && <li><a href={site.reviewsUrl} target="_blank" rel="noopener noreferrer">Reviews</a></li>}
               <li><Link href="/parents">For parents</Link></li>
@@ -28,7 +27,6 @@ export default function Footer() {
               <li><Link href="/playbook-pdf">Free Playbook (PDF)</Link></li>
               <li><Link href="/free-resources">Free templates</Link></li>
               <li><Link href="/events">Free events</Link></li>
-              <li><Link href="/workshops">School workshops</Link></li>
               <li><Link href="/apply">Apply</Link></li>
             </ul>
           </div>

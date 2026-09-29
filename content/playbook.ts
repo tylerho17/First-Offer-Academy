@@ -16,7 +16,7 @@ export const playbook = {
   subtitle: "How to Land Your First Internship Before Junior Year",
   author: "Tyler Ho",
   authorLine: "Tyler Ho · Founder, First Offer Academy · Finance & Computer Science",
-  file: "/downloads/first-offer-playbook.pdf",
+  file: "/api/playbook", // served behind the email gate; the PDF lives in private/
   reviewedByTyler: true,
   minPages: 15,
   intro:

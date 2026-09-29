@@ -1,3 +1,4 @@
+import { signDownload } from "@/lib/downloadToken";
 import { site } from "@/content/site";
 import { leadMagnet } from "@/content/leadMagnet";
 import { button, esc, layout, p } from "./layout";
@@ -46,9 +47,10 @@ export function applyNotify(d: Record<string, unknown>) {
   return { subject, text, html };
 }
 
-export function subscribeConfirmation(d: { firstName?: string | null; source?: string | null }) {
+export function subscribeConfirmation(d: { email: string; firstName?: string | null; source?: string | null }) {
   const playbook = d.source === "playbook";
-  const pdf = `${url}${leadMagnet.file}`;
+  const token = signDownload(d.email);
+  const pdf = token ? `${url}${leadMagnet.file}?t=${token}` : `${url}/playbook-pdf`;
   const subject = playbook ? `Your copy of ${leadMagnet.title}` : "You're subscribed to the First Offer newsletter";
   const text = `${hi(d.firstName)}
 

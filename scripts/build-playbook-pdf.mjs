@@ -1,4 +1,5 @@
-// Builds public/downloads/first-offer-playbook.pdf from content/playbook.ts.
+// Builds private/first-offer-playbook.pdf from content/playbook.ts. It is served
+// only through /api/playbook, behind the email gate.
 //
 // Usage: npm run pdf
 //
@@ -121,7 +122,7 @@ await browser.close();
 const total = countPages(pdf);
 // The /playbook-pdf page reads the real page count and chapter pages from here.
 await writeFile(path.join(root, "content/playbook-meta.json"), JSON.stringify({ pages: total, chapterPages: pages }, null, 2) + "\n");
-const out = path.join(root, "public", pb.file);
+const out = path.join(root, "private", "first-offer-playbook.pdf");
 await mkdir(path.dirname(out), { recursive: true });
 await writeFile(out, pdf);
 console.log(`Wrote ${path.relative(root, out)}: ${total} pages`);

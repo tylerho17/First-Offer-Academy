@@ -27,7 +27,7 @@ export default function PlaybookForm() {
   }
 
   const download = (
-    <a href={leadMagnet.file} className="btn btn-primary" download data-event="playbook_download">
+    <a href={leadMagnet.file} className="btn btn-primary" data-event="playbook_download">
       Download the Playbook (PDF)
     </a>
   );

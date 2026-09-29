@@ -1,3 +1,5 @@
+import Link from "next/link";
+import { tracks } from "@/content/tracks";
 import type { Module, ProofAsset } from "@/content/programOverview";
 import { site } from "@/content/site";
 import Ornament from "../../Ornament";
@@ -64,6 +66,14 @@ export default function ModuleSection({ m, n }: { m: Module; n: number }) {
             <ul className="module-components">
               {m.components.map((c) => <li key={c}><Check />{c}</li>)}
             </ul>
+            {m.slug === "track-technicals" && (
+              <p className="module-tracks" id="tracks">
+                The tracks:{" "}
+                {tracks.map((t, i) => (
+                  <span key={t.slug}>{i > 0 && " · "}<Link href={`/tracks/${t.slug}`}>{t.name}</Link></span>
+                ))}
+              </p>
+            )}
           </div>
           {showProof && (
             <figure className="module-proof">
