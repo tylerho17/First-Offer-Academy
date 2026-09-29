@@ -914,7 +914,8 @@ main:focus { outline: none; }
 .not-found-links { list-style: none; padding: 0; margin: 28px 0 0; display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
 
 /* Doubled class so these beat each component's own transition rules. */
-.reveal.reveal { opacity: 0; transform: translateY(18px); transition: opacity .55s ease, transform .55s ease; }
+.reveal.reveal { opacity: .4; transform: translateY(12px); transition: opacity .25s ease-out, transform .25s ease-out; }
+@media (prefers-reduced-motion: reduce) { .reveal.reveal { opacity: 1; transform: none; transition: none; } }
 .reveal.reveal.is-in { opacity: 1; transform: none; }
 
 /* One hover lift for everything clickable: buttons 1px, cards 3px. */
