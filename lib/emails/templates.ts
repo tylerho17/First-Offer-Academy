@@ -72,23 +72,3 @@ ${site.name}`;
   return { subject, text, html };
 }
 
-export function contactConfirmation(d: { firstName: string }) {
-  const subject = "We got your message";
-  const text = `${hi(d.firstName)}
-
-Thanks for reaching out to ${site.name}. Tyler will reply within two business days.
-
-If you'd like to talk sooner, book a call: ${site.calendlyUrl}
-
-${site.name}`;
-  const html = layout({
-    preheader: "Tyler will reply within two business days.",
-    heading: "We got your message.",
-    body:
-      p(hi(d.firstName)) +
-      p(`Thanks for reaching out to ${esc(site.name)}. Tyler will reply within two business days.`) +
-      p("If you'd like to talk sooner, book a call:") +
-      button("Book a call", site.calendlyUrl),
-  });
-  return { subject, text, html };
-}

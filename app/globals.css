@@ -331,11 +331,11 @@ p { margin: 0; }
   border-bottom: 1px solid var(--navy-line);
 }
 .header-inner { display: flex; align-items: stretch; height: 72px; }
-@media (min-width: 1100px) { .header-inner { height: 88px; } }
+@media (min-width: 1024px) { .header-inner { height: 88px; } }
 .header-logo { display: flex; align-items: center; padding: 0 16px; }
-@media (min-width: 1100px) { .header-logo { padding: 0 32px; border-right: 1px solid var(--navy-line); } }
+@media (min-width: 1024px) { .header-logo { padding: 0 32px; border-right: 1px solid var(--navy-line); } }
 .nav { display: none; flex: 1; justify-content: center; align-items: stretch; gap: 4px; }
-@media (min-width: 1100px) { .nav { display: flex; } }
+@media (min-width: 1024px) { .nav { display: flex; } }
 .nav-link {
   display: inline-flex; align-items: center; gap: 6px; height: 100%; padding: 0 14px;
   color: var(--navy); text-decoration: none; font-size: 18px; font-weight: 500;
@@ -354,7 +354,7 @@ p { margin: 0; }
 .dd-menu a small { display: block; font-weight: 600; color: var(--dusty); font-size: 13px; margin-top: 2px; }
 .dd-menu a:hover { background: var(--mist); }
 .header-cta { display: flex; align-items: center; gap: 12px; margin-left: auto; padding: 0 16px; }
-@media (min-width: 1100px) { .header-cta { border-left: 1px solid var(--navy-line); padding: 0 32px; margin-left: 0; } }
+@media (min-width: 1024px) { .header-cta { border-left: 1px solid var(--navy-line); padding: 0 32px; margin-left: 0; } }
 .get-started { display: inline-flex; align-items: center; gap: 8px; color: var(--navy); font-weight: 700; font-size: 18px; text-decoration: none; white-space: nowrap; }
 .get-started svg { width: 18px; height: 18px; transition: transform .15s ease; }
 .get-started:hover svg { transform: translateX(3px); }
@@ -372,7 +372,7 @@ p { margin: 0; }
 .mobile-group { padding: 6px 0; border-bottom: 1px solid var(--navy-line); }
 .mobile-top { display: block; padding: 8px 12px; text-decoration: none; color: var(--navy); font-weight: 700; }
 .mobile-sub { display: block; padding: 6px 12px 6px 24px; text-decoration: none; color: var(--dusty); font-size: 15px; font-weight: 500; }
-@media (min-width: 1100px) { .mobile-nav { display: none; } }
+@media (min-width: 1024px) { .mobile-nav { display: none; } }
 @media (max-width: 400px) { .get-started { font-size: 15px; } }
 
 /* ---------- Newsletter row (above the footer) ---------- */
@@ -675,7 +675,7 @@ a.topic-pill:hover { background: var(--navy); color: var(--cream); }
 
 /* ---------- /program long-form overview (A2.2) ---------- */
 [id] { scroll-margin-top: 96px; }
-@media (min-width: 1100px) { [id] { scroll-margin-top: 112px; } }
+@media (min-width: 1024px) { [id] { scroll-margin-top: 112px; } }
 .program-hero .hero-grid { align-items: center; }
 @media (min-width: 900px) { .program-hero .hero-grid { grid-template-columns: 1fr 1fr; } }
 
@@ -1247,3 +1247,8 @@ button.topic-pill { font: inherit; font-size: 15px; font-weight: 600; cursor: po
   .result-card.is-wide h3 { font-size: 24px; }
 }
 .deposit-received { background: var(--navy); color: var(--cream); text-align: center; font-weight: 600; padding: 12px 16px; margin: 0; }
+/* Full nav from 1024px; tighter spacing until there's room. */
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .nav-link { padding: 0 10px; font-size: 17px; }
+  .header-logo, .header-cta { padding: 0 20px; }
+}
