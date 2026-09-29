@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import type { Result } from "@/content/results";
+import { trackLabel, type Result } from "@/content/results";
 import { Play } from "./Icons";
 
 // YouTube's maxresdefault, else hqdefault (older or low-res uploads have no
@@ -45,23 +45,25 @@ function Video({ r }: { r: Result }) {
   );
 }
 
-export default function ResultCard({ r }: { r: Result }) {
+// `wide`: the only card in its section, laid out video-left, text-right so
+// there's no empty half.
+export default function ResultCard({ r, wide = false }: { r: Result; wide?: boolean }) {
   const name = r.lastInitial ? `${r.firstName} ${r.lastInitial}.` : r.firstName;
   return (
-    <figure className="card result-card">
+    <figure className={`card result-card${wide ? " is-wide" : ""}`}>
       {r.videoId && <Video r={r} />}
       {r.photo && r.permissions.photo && (
         // eslint-disable-next-line @next/next/no-img-element
         <img className="result-photo" src={r.photo} alt={name} width={88} height={88} loading="lazy" />
       )}
       <div className="result-body">
-        <span className="tag">{r.kind === "parent" ? "Parent" : r.track}</span>
+        <span className="tag">{r.type === "parent" ? "Parent" : r.track ? trackLabel[r.track] : "Student"}</span>
         <h3>{r.outcome}</h3>
-        {r.oneLineQuote && <blockquote>{r.oneLineQuote}</blockquote>}
+        {r.quote && <blockquote>{r.quote}</blockquote>}
         <figcaption>
           <strong>{name}</strong>
           {r.major && <> · {r.major}</>}
-          {r.kind === "student" && r.employer && r.permissions.employer && <><br />Interned at {r.employer}</>}
+          {r.type === "student" && r.employer && r.permissions.employer && <><br />Interned at {r.employer}</>}
         </figcaption>
       </div>
     </figure>

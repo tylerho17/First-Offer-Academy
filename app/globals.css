@@ -1211,7 +1211,6 @@ button.topic-pill { font: inherit; font-size: 15px; font-weight: 600; cursor: po
 .result-body figcaption { font-size: 15px; }
 .result-body figcaption strong { color: var(--navy); }
 .result-photo { width: 88px; height: 88px; border-radius: 999px; object-fit: cover; margin: 22px 22px 0; }
-.result-empty { font-size: 18px; }
 .article-end { margin-top: 48px; }
 .audience-cta { display: grid; gap: 16px; margin-top: 20px; }
 @media (min-width: 700px) { .audience-cta { grid-template-columns: 1fr 1fr; } }
@@ -1239,3 +1238,11 @@ button.topic-pill { font: inherit; font-size: 15px; font-weight: 600; cursor: po
 .download-card { scroll-margin-top: 110px; }
 .download-card.is-target { box-shadow: 0 0 0 2px var(--dusty), var(--shadow); }
 .download-locked { font-size: 15px; font-weight: 600; color: var(--dusty); text-decoration: underline; margin-top: auto; }
+.result-grid.is-two { grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 800px) { .result-grid.is-two { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.result-grid.is-single { grid-template-columns: minmax(0, 1fr) !important; }
+@media (min-width: 800px) {
+  .result-card.is-wide { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); align-items: center; }
+  .result-card.is-wide .result-body { padding: 28px 36px; }
+  .result-card.is-wide h3 { font-size: 24px; }
+}

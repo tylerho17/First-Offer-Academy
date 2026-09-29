@@ -11,17 +11,17 @@
 
 import { videoTestimonials } from "./videoTestimonials";
 
-export type Track = "Finance" | "Marketing" | "Accounting";
+export type Track = "finance" | "marketing" | "accounting";
 
 export type Result = {
   id: string;
-  kind: "student" | "parent";
+  type: "student" | "parent";
   outcome: string; // "Landed a marketing internship, freshman year"
   firstName: string;
   lastInitial?: string;
-  major?: string;
+  major?: string; // for parents: who they are, e.g. "Parent of a pilot student"
   track?: Track;
-  oneLineQuote?: string;
+  quote?: string; // one line
   employer?: string;
   photo?: string;
   videoId?: string;
@@ -30,28 +30,40 @@ export type Result = {
   permissions: { quote: boolean; employer: boolean; photo: boolean };
 };
 
-// TODO(Tyler): [[RESULTS_ENTRIES]] — add student outcomes, e.g.
-// { id: "jamie-l", kind: "student", outcome: "Landed a marketing internship, freshman year",
-//   firstName: "Jamie", lastInitial: "L", major: "Business", track: "Marketing",
-//   oneLineQuote: "…", permissions: { quote: true, employer: false, photo: false } },
+// TODO(Tyler): [[RESULTS_ENTRIES]]: add student outcomes here, newest at
+// the top (that's the order they render). Example:
+// { id: "jamie-l", type: "student", outcome: "Landed a marketing internship, freshman year",
+//   firstName: "Jamie", lastInitial: "L", major: "Business", track: "marketing",
+//   quote: "…", permissions: { quote: true, employer: false, photo: false } },
 const students: Result[] = [];
+
+// Custom thumbnails (in /public) that replace YouTube's frame, e.g. to hide
+// the Zoom name tag.
+// TODO(Tyler): [[TOM_POSTER_PATH]]: poster for "Kim's before and after"
+// (replaces the mid-gesture frame), e.g. "/images/posters/tom-before-after.jpg".
+const posters: Record<string, string> = {
+  // "tom-before-after": "/images/posters/tom-before-after.jpg",
+};
 
 // Parent videos, from content/videoTestimonials.ts (written permission on
 // file; first names only). Before-and-after first.
-// TODO(Tyler): add a videoPoster for each to hide the Zoom name tag.
 const parents: Result[] = videoTestimonials
   .filter((v) => v.permitted && v.youtubeId)
   .map((v) => ({
     id: v.id,
-    kind: "parent",
+    type: "parent",
     outcome: v.title,
     firstName: v.speaker,
     major: v.speakerLabel,
     videoId: v.youtubeId,
+    ...(posters[v.id] ? { videoPoster: posters[v.id] } : {}),
     duration: v.duration,
     permissions: { quote: true, employer: false, photo: false },
   }));
 
+// Students first (newest first), then parents.
 export const results: Result[] = [...students, ...parents];
 
 export const permittedResults = () => results.filter((r) => r.permissions.quote);
+
+export const trackLabel: Record<Track, string> = { finance: "Finance", marketing: "Marketing", accounting: "Accounting" };
