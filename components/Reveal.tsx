@@ -3,14 +3,15 @@
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 
-// Subtle fade-up for section heads and cards as they scroll into view.
+// Subtle rise for section heads and cards as they scroll into view.
 // - Content is visible by default: the server HTML has no hidden state, and
 //   elements are only marked once this script runs, so nothing disappears if
 //   JS fails or is slow.
 // - Nothing on screen at load animates. Off entirely under
 //   prefers-reduced-motion.
-// - Starts 20% of a viewport before an element enters, fades from 40% opacity
-//   (never blank, even mid-transition), 12px rise, 250ms, 60ms stagger.
+// - Starts 20% of a viewport before an element enters: a 12px rise over
+//   250ms, 60ms stagger. No opacity change, so content is never blank or
+//   low-contrast, even mid-transition.
 // - The helper classes are removed afterwards so each element's own hover
 //   transitions are untouched.
 const SELECTOR = ".section-head, .card, .icon-tile, .stat, .story-card, .rung, .step";

@@ -556,7 +556,7 @@ a.topic-pill:hover { background: var(--navy); color: var(--cream); }
 .vt-play-mark { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 64px; height: 64px; border-radius: 999px; background: var(--navy); color: var(--cream); display: grid; place-items: center; box-shadow: 0 8px 24px rgba(26,43,72,.35); transition: transform .15s ease; }
 .vt-play-mark svg { width: 26px; height: 26px; margin-left: 3px; }
 .vt-play:hover .vt-play-mark { transform: translate(-50%, -50%) scale(1.06); }
-.vt-duration { position: absolute; right: 10px; bottom: 10px; background: var(--navy); color: var(--cream); font-size: 12px; font-weight: 700; letter-spacing: .04em; padding: 3px 8px; border-radius: 999px; }
+.vt-duration { position: absolute; right: 10px; bottom: 10px; background: var(--navy); color: var(--cream); font-size: 12px; font-weight: 700; letter-spacing: .04em; padding: 3px 8px; border-radius: 999px; pointer-events: none; }
 .vt-meta { padding: 18px 20px 20px; display: grid; gap: 4px; }
 .vt-meta .eyebrow { margin-bottom: 2px; }
 .vt-title { font-family: var(--sans); font-weight: 600; font-size: 20px; line-height: 1.25; color: var(--navy); letter-spacing: -0.01em; margin: 0; }
@@ -910,8 +910,8 @@ main:focus { outline: none; }
 .not-found-links { list-style: none; padding: 0; margin: 28px 0 0; display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
 
 /* Doubled class so these beat each component's own transition rules. */
-.reveal.reveal { opacity: .4; transform: translateY(12px); transition: opacity .25s ease-out, transform .25s ease-out; }
-@media (prefers-reduced-motion: reduce) { .reveal.reveal { opacity: 1; transform: none; transition: none; } }
+.reveal.reveal { transform: translateY(12px); transition: transform .25s ease-out; }
+@media (prefers-reduced-motion: reduce) { .reveal.reveal { transform: none; transition: none; } }
 .reveal.reveal.is-in { opacity: 1; transform: none; }
 
 /* One hover lift for everything clickable: buttons 1px, cards 3px. */

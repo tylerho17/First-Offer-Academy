@@ -32,9 +32,9 @@ export default function VideoTestimonial({ video, label, className = "" }: { vid
               height={360}
             />
             <span className="vt-play-mark" aria-hidden="true"><Play /></span>
-            <span className="vt-duration" aria-hidden="true">{video.duration}</span>
           </button>
         )}
+        {!playing && <span className="vt-duration" aria-hidden="true">{video.duration}</span>}
       </div>
       <figcaption className="vt-meta">
         {label && <span className="eyebrow">{label}</span>}

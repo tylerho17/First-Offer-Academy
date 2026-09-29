@@ -38,9 +38,9 @@ function Video({ r }: { r: Result }) {
         <button type="button" className="vt-play" onClick={() => setPlaying(true)} aria-label={`Play video: ${r.outcome}`}>
           <Poster r={r} />
           <span className="vt-play-mark" aria-hidden="true"><Play /></span>
-          {r.duration && <span className="vt-duration" aria-hidden="true">{r.duration}</span>}
         </button>
       )}
+      {!playing && r.duration && <span className="vt-duration" aria-hidden="true">{r.duration}</span>}
     </div>
   );
 }
