@@ -6,6 +6,7 @@ import { track } from "@vercel/analytics";
 import { postForm } from "@/lib/submit";
 import Honeypot from "./Honeypot";
 
+// Inline newsletter signup: email, role (segments follow-up email), Subscribe.
 export default function NewsletterForm() {
   const [status, setStatus] = useState<"idle" | "sending" | "done" | "error" | "unconnected">("idle");
   const id = useId();
@@ -19,14 +20,14 @@ export default function NewsletterForm() {
     setStatus(result === "ok" ? "done" : result);
   }
 
-  if (status === "done") return <p className="nl-status">You&apos;re in. Look for the first issue in your inbox.</p>;
+  if (status === "done") return <p className="nl-status" role="status">You&apos;re in. Look for the first issue in your inbox.</p>;
 
   return (
-    <form className="nl-form" onSubmit={onSubmit}>
+    <form className="nl-form nl-inline-form" onSubmit={onSubmit}>
       <Honeypot />
-      <div className="nl-row">
-        <label className="sr-only" htmlFor={`${id}-first`}>First name</label>
-        <input id={`${id}-first`} name="firstName" placeholder="First name" autoComplete="given-name" />
+      <div className="nl-fields">
+        <label className="sr-only" htmlFor={`${id}-email`}>Email</label>
+        <input id={`${id}-email`} name="email" type="email" required placeholder="Email" autoComplete="email" />
         <label className="sr-only" htmlFor={`${id}-role`}>I am a</label>
         <select id={`${id}-role`} name="role" defaultValue="">
           <option value="" disabled>I am a…</option>
@@ -34,14 +35,11 @@ export default function NewsletterForm() {
           <option>Parent</option>
           <option>Educator</option>
         </select>
+        <button type="submit" className="btn btn-primary" disabled={status === "sending"}>
+          {status === "sending" ? "Subscribing…" : "Subscribe"}
+        </button>
       </div>
-      <label className="sr-only" htmlFor={`${id}-email`}>Email</label>
-      <input id={`${id}-email`} name="email" type="email" required placeholder="Email" autoComplete="email" />
-      <p className="nl-fine">You&apos;ll also get the First Offer newsletter every other week. Unsubscribe anytime.</p>
-      <button type="submit" className="btn btn-primary" disabled={status === "sending"}>
-        {status === "sending" ? "Subscribing…" : "Subscribe"}
-      </button>
-      <p className="nl-fine">Unsubscribe anytime. See our <Link href="/privacy">Privacy Policy</Link>.</p>
+      <p className="nl-fine">Every other week. Unsubscribe anytime. See our <Link href="/privacy">Privacy Policy</Link>.</p>
       {status === "unconnected" && <p className="nl-status" role="status">Signup isn&apos;t connected yet. Check back soon.</p>}
       {status === "error" && <p className="nl-status" role="alert">Something went wrong. Please try again.</p>}
     </form>

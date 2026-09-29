@@ -1,59 +1,72 @@
 import Link from "next/link";
 import Logo from "./Logo";
 import Social from "./Social";
-import NewsletterForm from "./NewsletterForm";
 import { site } from "@/content/site";
+import { tracks } from "@/content/tracks";
+
+const columns: { title: string; links: { label: string; href: string; external?: boolean }[] }[] = [
+  {
+    title: "Program",
+    links: [
+      { label: "How it works", href: "/program" },
+      ...tracks.map((t) => ({ label: t.name, href: `/tracks/${t.slug}` })),
+      { label: "Pricing", href: "/pricing" },
+      { label: "Apply", href: "/apply" },
+    ],
+  },
+  {
+    title: "Free resources",
+    links: [
+      { label: "Playbook guides", href: "/blog" },
+      { label: "Playbook PDF", href: "/playbook-pdf" },
+      { label: "Templates", href: "/free-resources" },
+      { label: "Events", href: "/events" },
+    ],
+  },
+  {
+    title: "Company",
+    links: [
+      { label: "About", href: "/about" },
+      { label: "Results", href: "/results" },
+      { label: "For parents", href: "/parents" },
+      { label: "Refer a student", href: "/refer" },
+      { label: site.email, href: `mailto:${site.email}`, external: true },
+      { label: "Book a parent call", href: site.calendlyUrl, external: true },
+    ],
+  },
+];
 
 export default function Footer() {
   return (
     <footer className="footer">
-      <div className="footer-main">
+      <div className="wrap">
         <div className="footer-cols">
           <div className="footer-brand">
-            <Logo />
+            <Logo tone="cream" />
             <p className="tagline">{site.tagline}</p>
             <Social />
           </div>
-          <div>
-            <h2>Navigation</h2>
-            <ul>
-              <li><Link href="/">Home</Link></li>
-              <li><Link href="/about">About</Link></li>
-              <li><Link href="/results">Testimonials</Link></li>
-              {/* A review-platform link appears only once real reviews exist. */}
-              {site.reviewsUrl && <li><a href={site.reviewsUrl} target="_blank" rel="noopener noreferrer">Reviews</a></li>}
-              <li><Link href="/parents">For parents</Link></li>
-              <li><Link href="/blog">The Playbook</Link></li>
-              <li><Link href="/playbook-pdf">Free Playbook (PDF)</Link></li>
-              <li><Link href="/free-resources">Free templates</Link></li>
-              <li><Link href="/events">Free events</Link></li>
-              <li><Link href="/apply">Apply</Link></li>
-            </ul>
-          </div>
-          <div>
-            <h2>Program Details</h2>
-            <ul>
-              <li><Link href="/program">How it works</Link></li>
-              <li><Link href="/program#curriculum">Curriculum</Link></li>
-              <li><Link href="/program#modules">The six parts</Link></li>
-              <li><Link href="/program#promise">Our promise</Link></li>
-              <li><Link href="/pricing">Pricing</Link></li>
-              <li><Link href="/program#compare">Compare options</Link></li>
-            </ul>
-          </div>
-          <div>
-            <h2>Contact</h2>
-            <ul>
-              <li><a href={`mailto:${site.email}`}>{site.email}</a></li>
-              <li><a href={site.calendlyUrl} target="_blank" rel="noopener noreferrer">Book a parent call</a></li>
-              <li><Link href="/refer">Refer a student</Link></li>
-              {site.zhReviewed && <li><Link href="/zh" lang="zh-Hans">中文（家长）</Link></li>}
-            </ul>
-          </div>
+          {columns.map((col) => (
+            <div key={col.title}>
+              <h2>{col.title}</h2>
+              <ul>
+                {col.links.map((l) => (
+                  <li key={l.label}>
+                    {l.external ? (
+                      <a href={l.href} {...(l.href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}>{l.label}</a>
+                    ) : (
+                      <Link href={l.href}>{l.label}</Link>
+                    )}
+                  </li>
+                ))}
+                {col.title === "Company" && site.zhReviewed && <li><Link href="/zh" lang="zh-Hans">中文（家长）</Link></li>}
+              </ul>
+            </div>
+          ))}
         </div>
         <div className="footer-bottom">
-          <span>© 2026 First Offer Academy · All rights reserved</span>
           <nav aria-label="Legal" className="footer-legal">
+            <span>© 2026 {site.name}</span>
             <Link href="/privacy">Privacy</Link>
             <Link href="/terms">Terms</Link>
             <Link href="/refunds">Refunds</Link>
@@ -63,11 +76,6 @@ export default function Footer() {
           <p className="footer-disclaimer">First Offer Academy is not affiliated with any employer, university, or student organization mentioned by students.</p>
         </div>
       </div>
-      <aside className="footer-nl" aria-labelledby="nl-title">
-        <h3 id="nl-title">The First Offer Newsletter</h3>
-        <p>Every other week: recruiting timelines, outreach templates, and interview tips for students and parents. Free.</p>
-        <NewsletterForm />
-      </aside>
     </footer>
   );
 }

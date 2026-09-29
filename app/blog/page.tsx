@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { articles, categories } from "@/content/articles";
 import BlogFilter from "@/components/BlogFilter";
 import Link from "next/link";
-import NewsletterForm from "@/components/NewsletterForm";
 
 export const metadata: Metadata = {
   title: "The Playbook",
@@ -33,13 +32,6 @@ export default function BlogPage() {
             articles={articles.map(({ slug, title, excerpt, category, author, readMinutes }) => ({ slug, title, excerpt, category, author, readMinutes }))}
             categories={categories}
           />
-          <div className="card nl-inline">
-            <div>
-              <h2>Get the next guide in your inbox</h2>
-              <p>One email every other week. Unsubscribe anytime.</p>
-            </div>
-            <NewsletterForm />
-          </div>
         </div>
       </section>
     </>

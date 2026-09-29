@@ -4,15 +4,20 @@ import { hasLogo, LOGO_SRC, logoSize } from "@/lib/logo";
 
 // Logo image (public/logo.png, ~36px tall) plus the wordmark, linked home.
 // If the file is missing, only the wordmark shows (never a broken image).
-export default function Logo() {
+// tone="cream": the mark is drawn in cream through a CSS mask (for navy
+// grounds), so it needs no tile behind it.
+export default function Logo({ tone = "navy" }: { tone?: "navy" | "cream" }) {
   const { width, height } = logoSize();
   return (
-    <Link href="/" className="logo" aria-label="First Offer Academy home">
-      {hasLogo() && (
-        <span className="logo-img">
-          <Image src={LOGO_SRC} alt="" width={Math.round((36 * width) / height)} height={36} priority />
-        </span>
-      )}
+    <Link href="/" className={`logo${tone === "cream" ? " is-cream" : ""}`} aria-label="First Offer Academy home">
+      {hasLogo() &&
+        (tone === "cream" ? (
+          <span className="logo-mask" aria-hidden="true" style={{ width: Math.round((36 * width) / height) }} />
+        ) : (
+          <span className="logo-img">
+            <Image src={LOGO_SRC} alt="" width={Math.round((36 * width) / height)} height={36} priority />
+          </span>
+        ))}
       <span className="logo-word">First Offer<br />Academy</span>
     </Link>
   );
