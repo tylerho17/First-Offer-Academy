@@ -2,10 +2,8 @@ import Link from "next/link";
 import { phaseInfo, preWork, runningThroughout, weekHref, weeks } from "@/content/curriculum";
 import LevelBadge from "./LevelBadge";
 
-// /program#curriculum: Week 0 pre-work, then the four phases. The phases overlap by
-// design (Outreach starts in Phase 1 and never stops; Track Technicals and
-// Interview Reps share Weeks 5 and 6), so the rail spans real week ranges
-// instead of tidy blocks. Accountability & Pods runs underneath all of it.
+// /program#curriculum: Week 0 pre-work, then the four two-week phases on a
+// week rail. Accountability & Pods runs underneath all of it.
 export default function PhaseMap() {
   return (
     <div className="phase-map">

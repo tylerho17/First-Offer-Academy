@@ -951,7 +951,7 @@ a.card, .story-card, .icon-tile { transition: transform .15s ease, box-shadow .1
 
 /* ---------- v4: Curriculum ---------- */
 .level-badge { display: inline-block; background: var(--navy); color: var(--cream); font-size: 13px; font-weight: 700; padding: 5px 12px; border-radius: 999px; line-height: 1.4; }
-/* /program#curriculum: Week 0 + four overlapping phases */
+/* /program#curriculum: Week 0 + four two-week phases */
 .phase-map { display: grid; gap: 28px; }
 .prework-card { border-left: 4px solid var(--sage); padding: 24px 26px; }
 .prework-card h3 { margin-top: 6px; font-size: 24px; }

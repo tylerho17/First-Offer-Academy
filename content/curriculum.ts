@@ -56,8 +56,9 @@ export const preWork = {
     "Starts the day you enroll, not in January. Students arrive at Week 1 with a resume draft, their first 20 named contacts, and the Candidate Brand module already watched.",
 };
 
-// The four phases overlap on purpose: Outreach starts in Phase 1 and never
-// stops, and Track Technicals overlaps Interview Reps at Weeks 5 and 6.
+// Four phases, two weeks each; no week belongs to two phases. Outreach keeps
+// running as a weekly minimum after its phase, and Accountability & Pods runs
+// underneath all eight weeks.
 export const phaseInfo: { name: Phase; weeks: string; from: number; to: number; summary: string; points: string[] }[] = [
   {
     name: "Build the Candidate",
@@ -75,9 +76,9 @@ export const phaseInfo: { name: Phase; weeks: string; from: number; to: number; 
   },
   {
     name: "Run the Search",
-    weeks: "Weeks 3–5",
+    weeks: "Weeks 3–4",
     from: 3,
-    to: 5,
+    to: 4,
     summary: "Outreach System at full volume + Story Bank + externship applications.",
     points: [
       "50 emails a week, with a follow-up system",
@@ -91,19 +92,20 @@ export const phaseInfo: { name: Phase; weeks: string; from: number; to: number; 
     weeks: "Weeks 5–6",
     from: 5,
     to: 6,
-    summary: "The cohort splits by track.",
+    summary: "The cohort splits by track. First graded mock in Week 6.",
     points: [
       "Finance, Consulting, or Marketing — what each actually tests",
       "Where to start and how deep a freshman needs to go",
+      "The first graded mock interview, Week 6",
     ],
   },
   {
     name: "Interview Reps",
-    weeks: "Weeks 6–8",
-    from: 6,
+    weeks: "Weeks 7–8",
+    from: 7,
     to: 8,
-    summary: "Reps every week, then the close.",
-    points: ["Live reps every week", "Graded mocks", "Week 8 family meeting"],
+    summary: "Second graded mock in Week 7, then the family meeting in Week 8.",
+    points: ["Live reps every week", "The second graded mock, Week 7, run by a stranger", "Week 8 family meeting"],
   },
 ];
 
@@ -226,7 +228,7 @@ export const weeks: Week[] = [
   {
     n: 5,
     title: "Why This Industry, Why This Firm — and Technicals Begin",
-    phase: "Run the Search",
+    phase: "Track Technicals",
     split: true,
     objective: "Enthusiasm that reads as real, and a technical baseline that holds up in a first round.",
     teach: [

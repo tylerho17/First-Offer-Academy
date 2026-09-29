@@ -1,6 +1,6 @@
 import CallLink from "./CallLink";
 import LinkedInLink from "./LinkedInLink";
-import { founderInternships } from "@/content/site";
+import { founderInternships, PILOT_STUDENTS, spell } from "@/content/site";
 
 // Leland-style coach card. No ratings or review counts until real reviews exist.
 export default function CoachCard({ focus }: { focus?: string }) {
@@ -17,7 +17,7 @@ export default function CoachCard({ focus }: { focus?: string }) {
         </div>
         <p className="coach-headline">{founderInternships()} across investment banking, venture, consulting, FP&amp;A, and sales · Finance &amp; Computer Science</p>
         <p>
-          Coached eight first-year students to internships.{focus ? ` Leads ${focus} prep for the founding cohort.` : " Leads every track in the founding cohort."}
+          Coached {spell(PILOT_STUDENTS)} first-year students to internships.{focus ? ` Leads ${focus} prep for the founding cohort.` : " Leads every track in the founding cohort."}
         </p>
         <div className="coach-tags">
           <span>Networking</span><span>Resumes</span><span>Behaviorals</span><span>Finance technicals</span>

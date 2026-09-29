@@ -88,7 +88,7 @@ export const site = {
 
 
   // TODO: fill in. Empty strings render as "To be announced".
-  format: "", // e.g. "In person, Tuesdays 6–7:30pm"
+  format: "", // TODO(Tyler): [[FORMAT]], e.g. "Online, live sessions on Zoom"
   weeklyHours: "", // e.g. "6–8"
   applicationDeadline: "",
   // Founding cohort refund terms. /refunds, /pricing, the FAQ, and the deposit
