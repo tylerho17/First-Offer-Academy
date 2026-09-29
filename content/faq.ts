@@ -37,7 +37,11 @@ export const faqs: Faq[] = [
     q: "How much time does it take each week?",
     a: site.weeklyHours
       ? `Plan on ${site.weeklyHours} hours a week: the session, the 1:1, and outreach.`
-      : "The weekly session is 90 minutes and the 1:1 is 60 minutes. Outreach time on top of that will be confirmed before the cohort starts.",
+      : `The weekly session is 90 minutes and the 1:1 is 60 minutes. ${
+          site.outreachHours
+            ? `Plan on about ${site.outreachHours} hours of outreach on top of that.`
+            : "Outreach time on top of that will be confirmed before the cohort starts."
+        }`,
   },
   {
     q: "Is it online or in person?",

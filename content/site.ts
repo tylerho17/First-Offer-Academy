@@ -82,6 +82,9 @@ export const site = {
   // TODO: fill in. Empty strings render as "To be announced".
   format: "", // TODO(Tyler): [[FORMAT]], e.g. "Online, live sessions on Zoom"
   weeklyHours: "", // e.g. "6–8"
+  // TODO(Tyler): [[OUTREACH_HOURS]], e.g. "3–4". Empty = the FAQ says outreach time
+  // "will be confirmed before the cohort starts".
+  outreachHours: "",
   applicationDeadline: "",
   // Founding cohort refund terms. /refunds, /pricing, the FAQ, and the deposit
   // button all read these. Changing them changes a written promise to families.
