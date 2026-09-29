@@ -35,7 +35,7 @@ export default function Founder() {
             Finance &amp; Computer Science
           </div>
           <div className="btn-row">
-            <CallLink>Book a call with Tyler</CallLink>
+            <CallLink />
           </div>
           <p style={{ marginTop: 18 }}><LinkedInLink /></p>
         </div>

@@ -1,6 +1,6 @@
-import Link from "next/link";
 import { programOverview } from "@/content/programOverview";
 import CallLink from "../../CallLink";
+import PayButton from "@/components/PayButton";
 
 export default function BookingBand() {
   const b = programOverview.booking;
@@ -12,8 +12,8 @@ export default function BookingBand() {
           <p>{b.sub}</p>
         </div>
         <div className="btn-row">
-          <CallLink className="btn btn-sage">Book a free call</CallLink>
-          <Link href="/apply" className="btn btn-cream-outline">Apply</Link>
+          <PayButton className="btn btn-sage" />
+          <CallLink className="btn btn-cream-outline" />
         </div>
       </div>
     </section>

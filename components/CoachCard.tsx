@@ -23,7 +23,7 @@ export default function CoachCard({ focus }: { focus?: string }) {
           <span>Networking</span><span>Resumes</span><span>Behaviorals</span><span>Finance technicals</span>
         </div>
         <div className="btn-row" style={{ marginTop: 20 }}>
-          <CallLink className="btn btn-primary">Free intro call</CallLink>
+          <CallLink className="btn btn-primary" />
         </div>
         <p style={{ marginTop: 16 }}><LinkedInLink /></p>
       </div>

@@ -14,7 +14,7 @@ export default function Together() {
           <p className="together-note">{t.note}</p>
           <LeavesWithList compact />
           <div className="btn-row">
-            <CallLink className="btn btn-primary">Book a free call</CallLink>
+            <CallLink className="btn btn-primary" />
           </div>
         </div>
       </div>

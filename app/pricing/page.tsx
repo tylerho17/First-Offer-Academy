@@ -59,7 +59,6 @@ export default function PricingPage() {
             </p>
 
             <div className="btn-row price-actions">
-              <Link href="/apply" className="btn btn-secondary">Apply first</Link>
               <CallLink className="btn btn-secondary" />
             </div>
             <p className="price-free">

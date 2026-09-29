@@ -35,9 +35,12 @@ export default function ParentsPage() {
             <li><Check />Weekly check-ins after Week 8, until an offer or {afterProgram.until}</li>
           </ul>
           <div className="btn-row">
-            <CallLink className="btn btn-primary">Book a parent call</CallLink>
-            <Link href="/program" className="btn btn-secondary">See the full program</Link>
+            <PayButton />
+            <CallLink />
           </div>
+          <p style={{ marginTop: 16 }}>
+            <Link href="/program" className="link-arrow">See the full program →</Link>
+          </p>
         </div>
       </section>
 

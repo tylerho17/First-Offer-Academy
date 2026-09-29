@@ -3,6 +3,7 @@ import { promise as p } from "@/content/promise";
 import CallLink from "../../CallLink";
 import Ornament from "../../Ornament";
 import { Check, Minus } from "../../Icons";
+import PayButton from "@/components/PayButton";
 
 // What we promise, what we don't, and what we ask. Formerly /our-promise,
 // which now redirects here.
@@ -64,7 +65,7 @@ export default function OurPromise() {
             The full details are in our <Link href="/terms">Terms of Service</Link> and <Link href="/refunds">Refund &amp; Payment Policy</Link>.
           </p>
           <div className="btn-row">
-            <Link href="/apply" className="btn btn-primary">Apply</Link>
+            <PayButton />
             <CallLink />
           </div>
         </div>

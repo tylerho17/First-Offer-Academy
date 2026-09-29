@@ -42,9 +42,9 @@ export default function ApplyForm() {
         <h2>Application received.</h2>
         <p>Thank you. Tyler reads every application personally. Next step: book a short fit call.</p>
         <div className="btn-row">
-          <CallLink className="btn btn-primary">Book my fit call</CallLink>
+          <CallLink className="btn btn-primary" />
         </div>
-        <p className="apply-note" style={{ textAlign: "left" }}>Ready to commit? Hold your seat now:</p>
+        <p className="apply-note" style={{ textAlign: "left" }}>Ready to commit? Reserve your seat now:</p>
         <PayOptions />
       </div>
     );

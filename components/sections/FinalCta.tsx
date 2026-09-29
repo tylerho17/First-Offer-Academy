@@ -1,6 +1,6 @@
-import Link from "next/link";
 import { site } from "@/content/site";
 import CallLink from "../CallLink";
+import PayButton from "@/components/PayButton";
 
 export default function FinalCta() {
   return (
@@ -8,9 +8,9 @@ export default function FinalCta() {
       <div className="wrap">
         <span className="eyebrow">{site.cohort.name}</span>
         <h2>{site.cohort.seats} seats. January starts sooner than it sounds.</h2>
-        <p className="lede center">Apply in ten minutes, or talk it through with Tyler first.</p>
+        <p className="lede center">Reserve a seat now, or talk it through with Tyler first.</p>
         <div className="btn-row">
-          <Link href="/apply" className="btn btn-primary">Apply</Link>
+          <PayButton />
           <CallLink />
         </div>
       </div>

@@ -1,10 +1,10 @@
-import Link from "next/link";
 import { programOverview } from "@/content/programOverview";
 import CallLink from "../../CallLink";
 import VideoSlot from "../../VideoSlot";
 import Ornament from "../../Ornament";
 import ArchPhoto from "../../ArchPhoto";
 import { site } from "@/content/site";
+import PayButton from "@/components/PayButton";
 
 export default function ProgramHero() {
   const h = programOverview.hero;
@@ -17,7 +17,7 @@ export default function ProgramHero() {
           <h1>{h.title}</h1>
           <p className="lede">{h.lede} {h.sub}</p>
           <div className="btn-row">
-            <Link href="/apply" className="btn btn-primary">Apply</Link>
+            <PayButton />
             <CallLink />
           </div>
         </div>

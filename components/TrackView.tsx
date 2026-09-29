@@ -7,6 +7,7 @@ import LatestArticles from "./sections/LatestArticles";
 import FinalCta from "./sections/FinalCta";
 import CallLink from "./CallLink";
 import { Check } from "./Icons";
+import PayButton from "@/components/PayButton";
 
 export default function TrackView({ track }: { track: Track }) {
   return (
@@ -17,7 +18,7 @@ export default function TrackView({ track }: { track: Track }) {
           <h1>{track.headline}</h1>
           <p className="lede">{track.intro}</p>
           <div className="btn-row">
-            <Link href="/apply" className="btn btn-primary">Apply for the {track.name} track</Link>
+            <PayButton />
             <CallLink />
           </div>
           <div className="pill-row" style={{ marginTop: 28 }}>

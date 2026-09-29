@@ -6,6 +6,7 @@ import Ornament from "../Ornament";
 import CallLink from "../CallLink";
 import LevelBadge from "./LevelBadge";
 import { Check } from "../Icons";
+import PayButton from "@/components/PayButton";
 
 function Block({ title, children }: { title: string; children: React.ReactNode }) {
   return (
@@ -149,7 +150,7 @@ export default function WeekView({ week: w }: { week: Week }) {
             <p>Eight weeks, a 60-minute 1:1 every week, and a coach who checks the numbers.</p>
           </div>
           <div className="btn-row">
-            <Link href="/apply" className="btn btn-sage">Apply</Link>
+            <PayButton className="btn btn-sage" />
             <CallLink className="btn btn-cream-outline" />
           </div>
         </div>
