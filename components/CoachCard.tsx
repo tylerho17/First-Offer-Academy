@@ -20,7 +20,7 @@ export default function CoachCard({ focus }: { focus?: string }) {
           Coached {spell(PILOT_STUDENTS)} first-year students to internships.{focus ? ` Leads ${focus} prep for the founding cohort.` : " Leads every track in the founding cohort."}
         </p>
         <div className="coach-tags">
-          <span>Networking</span><span>Resumes</span><span>Behaviorals</span><span>Finance technicals</span>
+          <span>Networking</span><span>Resumes</span><span>Behaviorals</span><span>{focus ?? "Finance"} technicals</span>
         </div>
         <div className="btn-row" style={{ marginTop: 20 }}>
           <CallLink className="btn btn-primary" />
