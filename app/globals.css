@@ -1196,3 +1196,21 @@ a.featured-download:hover { transform: translateY(-3px); }
 .parent-see { list-style: none; padding: 0; margin: 20px 0 0; display: grid; gap: 10px; max-width: 620px; }
 .parent-see li { display: flex; gap: 10px; align-items: flex-start; font-size: 18px; }
 .parent-see svg { flex: none; width: 20px; height: 20px; color: var(--dusty); margin-top: 4px; }
+
+/* ---------- Results grid (/results and the homepage) ---------- */
+.result-filters { margin-bottom: 24px; }
+button.topic-pill { font: inherit; font-size: 15px; font-weight: 600; cursor: pointer; }
+.topic-pill.is-active, button.topic-pill:hover { background: var(--navy); color: var(--cream); border-color: var(--navy); }
+.result-grid { display: grid; gap: 20px; grid-template-columns: minmax(0, 1fr); align-items: start; }
+@media (min-width: 700px) { .result-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1040px) { .result-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.result-card { margin: 0; padding: 0; overflow: hidden; }
+.result-card .vt-frame { border-radius: 0; }
+.result-body { padding: 20px 22px 22px; display: grid; gap: 8px; }
+.result-body .tag { font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--dusty); }
+.result-body h3 { font-size: 20px; margin: 0; }
+.result-body blockquote { margin: 0; font-size: 18px; }
+.result-body figcaption { font-size: 15px; }
+.result-body figcaption strong { color: var(--navy); }
+.result-photo { width: 88px; height: 88px; border-radius: 999px; object-fit: cover; margin: 22px 22px 0; }
+.result-empty { font-size: 18px; }

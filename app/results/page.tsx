@@ -1,15 +1,14 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import Stats from "@/components/sections/Stats";
-import Testimonials from "@/components/sections/Testimonials";
-import ParentWall from "@/components/sections/ParentWall";
-import SuccessStories from "@/components/sections/SuccessStories";
+import ResultsGrid from "@/components/sections/ResultsGrid";
 import EmployerGrid from "@/components/sections/EmployerGrid";
 import FinalCta from "@/components/sections/FinalCta";
+import { permittedResults } from "@/content/results";
 
 export const metadata: Metadata = {
-  title: "Student Testimonials",
-  description: "Student and parent testimonials for First Offer Academy, each shared with written permission.",
+  title: "Results",
+  description: "Pilot results, student outcomes, and parent videos from First Offer Academy, each shared with written permission.",
 };
 
 export default function ResultsPage() {
@@ -18,12 +17,15 @@ export default function ResultsPage() {
       <PageHero
         eyebrow="Results"
         title="Real students. Their words, with their permission."
-        lede="Every quote on this page is from a student or parent who agreed in writing to share it."
+        lede="Every card on this page is from a student or parent who agreed in writing to share it."
       />
       <Stats />
-      <SuccessStories eyebrow="Case studies" title="How our students ran their searches" />
-      <ParentWall />
-      <Testimonials full />
+      <section className="section" style={{ paddingTop: 24 }} id="results">
+        <div className="wrap">
+          <h2 className="sr-only">Outcomes and parent videos</h2>
+          <ResultsGrid items={permittedResults()} filters />
+        </div>
+      </section>
       <EmployerGrid />
       <div style={{ paddingTop: 40 }}><FinalCta /></div>
     </>
