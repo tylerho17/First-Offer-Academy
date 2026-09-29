@@ -3,8 +3,9 @@ import { headingId, relatedArticles, type Article } from "@/content/articles";
 import { downloadFile, getDownload } from "@/content/downloads";
 import ArticleCard from "./ArticleCard";
 import Blocks from "./Blocks";
-import CallLink from "./CallLink";
 import GatedDownload from "./GatedDownload";
+import { leadMagnet } from "@/content/leadMagnet";
+import { site } from "@/content/site";
 
 export default function ArticleView({ article: a }: { article: Article }) {
   const related = relatedArticles(a);
@@ -47,19 +48,33 @@ export default function ArticleView({ article: a }: { article: Article }) {
             <Blocks blocks={a.body} />
           </div>
 
-          {files.length > 0 && (
-            <p className="article-download-line">
-              <a href="#templates">{files.length > 1 ? "Get the templates for this guide" : "Get the template for this guide"}</a>
-              {" "}· <Link href="/free-resources">All free resources</Link>
-            </p>
-          )}
-
-          <div className="card article-cta">
-            <h3>Want someone to run this with your student every week?</h3>
-            <p>The 8-week program adds weekly numbers, a 60-minute 1:1, and a coach checking the work.</p>
+          {/* Every guide ends with its template (or the Playbook), then a next step by audience. */}
+          <div className="card article-download article-end">
+            <div>
+              <span className="eyebrow">{files.length ? (files.length > 1 ? "The templates for this guide" : "The template for this guide") : "Free download"}</span>
+              <p>{files.length ? files.map((d) => `${d.title} (${d.format})`).join(" · ") : `${leadMagnet.title} (${leadMagnet.pages}-page PDF)`}</p>
+            </div>
             <div className="btn-row">
-              <Link href="/program" className="btn btn-primary">See the program</Link>
-              <CallLink />
+              {files.length ? (
+                files.map((d) => <GatedDownload key={d.slug} slug={d.slug} href={downloadFile(d)} label={`Download: ${d.title}`} />)
+              ) : (
+                <GatedDownload slug="playbook" href={leadMagnet.file} label="Download the Playbook (PDF)" event="playbook_download" />
+              )}
+            </div>
+          </div>
+
+          <div className="audience-cta">
+            <div className="card">
+              <span className="eyebrow">Students</span>
+              <h3>Join the next free workshop</h3>
+              <p>Resumes, cold email, networking calls, and interview reps, live.</p>
+              <Link href="/events" className="link-arrow">See free workshops →</Link>
+            </div>
+            <div className="card">
+              <span className="eyebrow">Parents</span>
+              <h3>Book a 20-minute call</h3>
+              <p>Talk through your student&apos;s situation with Tyler and whether the program fits.</p>
+              <a href={site.calendlyUrl} className="link-arrow" target="_blank" rel="noopener noreferrer">Book a parent call →</a>
             </div>
           </div>
         </div>

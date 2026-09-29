@@ -9,7 +9,7 @@ export default function EventCard({ e }: { e: EventItem }) {
         <strong>{d.day}</strong>
       </div>
       <div className="event-body">
-        <span className="tag">{e.kind}</span>
+        <span className="tag">{e.kind} · For {e.audience.toLowerCase()}</span>
         <h3>{e.title}</h3>
         <p>{d.full} · {e.location}</p>
       </div>

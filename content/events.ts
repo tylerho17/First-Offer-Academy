@@ -1,14 +1,15 @@
-// Free events: parent info sessions, student workshops, livestreams.
-// Shown on the home page schedule, /events, and each track page.
-// Past events drop off automatically (date before today).
+// Free events: parent info sessions, student workshops, livestreams. The one
+// data file for dated sessions: the homepage strip (next 3), /events, and each
+// track page render these inline. Past events drop off automatically.
 
 export type EventItem = {
   title: string;
   date: string; // ISO, e.g. "2026-10-14T18:30:00-07:00"
   kind: "Parent info session" | "Student workshop" | "Livestream";
+  audience: "Parents" | "Students" | "Parents and students";
   location: string; // "Zoom" or an address
   track?: "finance" | "consulting" | "marketing";
-  registerUrl: string;
+  registerUrl: string; // the Luma event URL
 };
 
 export const events: EventItem[] = [
@@ -16,8 +17,9 @@ export const events: EventItem[] = [
   //   title: "Parent info session: how internship recruiting works now",
   //   date: "2026-10-14T18:30:00-07:00",
   //   kind: "Parent info session",
+  //   audience: "Parents",
   //   location: "Zoom",
-  //   registerUrl: "https://calendly.com/...",
+  //   registerUrl: "https://luma.com/...",
   // },
 ];
 

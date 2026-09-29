@@ -8,7 +8,7 @@ import { COOKIE_MAX_AGE, DOWNLOAD_COOKIE, signDownload } from "@/lib/downloadTok
 const schema = z.object({
   email: email(),
   firstName: optText(100),
-  role: optText(40),
+  role: optText(40), // Student | Parent | Educator
   source: optText(60),
 });
 
@@ -21,7 +21,7 @@ export const POST = formRoute({
   // Runs only after the Supabase insert succeeds. The Resend sync never throws,
   // so a Resend outage can't fail the signup or block the confirmation email.
   after: async (d) => {
-    await addNewsletterContact({ email: d.email, firstName: d.firstName });
+    await addNewsletterContact({ email: d.email, firstName: d.firstName, source: d.source, role: d.role });
     await sendEmail({ to: d.email, ...subscribeConfirmation(d) });
   },
   // Any signup unlocks the Playbook PDF (/api/playbook) in this browser.

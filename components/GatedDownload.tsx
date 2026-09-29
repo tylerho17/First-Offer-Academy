@@ -6,6 +6,7 @@ import { track } from "@vercel/analytics";
 import { postForm } from "@/lib/submit";
 import { isSubscribed, rememberSubscribed } from "@/lib/subscribed";
 import Honeypot from "./Honeypot";
+import CallLink from "./CallLink";
 
 // A download button behind the email gate. The first download asks for an
 // email (posted to /api/subscribe with source = the download's slug, so it
@@ -20,12 +21,14 @@ export default function GatedDownload({
   className = "btn btn-secondary",
   event = "template_download",
 }: {
-  slug: string; // subscriber source, e.g. "cold-email-pack" or "playbook"
+  slug: string; // download slug, e.g. "cold-email-pack" or "playbook"
   href: string;
   label: string; // visible button text, e.g. "Download: Cold email template pack"
   className?: string;
   event?: string;
 }) {
+  // Subscriber source tag: "playbook" or "template-<slug>".
+  const source = slug === "playbook" ? "playbook" : `template-${slug}`;
   const [state, setState] = useState<"closed" | "open" | "sending" | "ready" | "unconnected" | "error">("closed");
   const id = useId();
   const emailRef = useRef<HTMLInputElement>(null);
@@ -43,10 +46,10 @@ export default function GatedDownload({
     e.preventDefault();
     const data = Object.fromEntries(new FormData(e.currentTarget).entries());
     setState("sending");
-    const result = await postForm("/api/subscribe", { ...data, source: slug });
+    const result = await postForm("/api/subscribe", { ...data, source });
     if (result === "ok") {
       rememberSubscribed();
-      track("subscribe", { source: slug });
+      track("subscribe", { source });
     }
     setState(result === "ok" ? "ready" : result);
   }
@@ -58,6 +61,7 @@ export default function GatedDownload({
           {state === "ready" ? "You're in. Your download is ready." : "Here's your copy. (Email signup isn't connected yet, so nothing was saved.)"}
         </p>
         <a ref={readyRef} href={href} className="btn btn-primary" download={download} data-event={event}>{label}</a>
+        <p className="gate-msg">Want someone checking this every week? <CallLink className="">Book a parent call</CallLink>.</p>
       </div>
     );
   }

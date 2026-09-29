@@ -1214,3 +1214,7 @@ button.topic-pill { font: inherit; font-size: 15px; font-weight: 600; cursor: po
 .result-body figcaption strong { color: var(--navy); }
 .result-photo { width: 88px; height: 88px; border-radius: 999px; object-fit: cover; margin: 22px 22px 0; }
 .result-empty { font-size: 18px; }
+.article-end { margin-top: 48px; }
+.audience-cta { display: grid; gap: 16px; margin-top: 20px; }
+@media (min-width: 700px) { .audience-cta { grid-template-columns: 1fr 1fr; } }
+.audience-cta .card p { margin: 6px 0 14px; }
