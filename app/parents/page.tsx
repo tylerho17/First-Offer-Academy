@@ -114,7 +114,7 @@ export default function ParentsPage() {
             <Ornament />
             <h2>{p.dont.title}</h2>
             <p className="lede">{p.dont.body}</p>
-            <p style={{ marginTop: 20 }}><Link href="/our-promise" className="link-arrow">Read our full promise →</Link></p>
+            <p style={{ marginTop: 20 }}><Link href="/program#promise" className="link-arrow">Read our full promise →</Link></p>
           </div>
           <ul className="card dont-card">
             <li><Minus />An internship offer</li>

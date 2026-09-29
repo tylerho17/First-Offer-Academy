@@ -1,4 +1,4 @@
-// /our-promise: what the program commits to, what it doesn't, and what it
+// /program#promise: what the program commits to, what it doesn't, and what it
 // asks of students. Keep this consistent with /terms and /refunds.
 
 export const promise = {

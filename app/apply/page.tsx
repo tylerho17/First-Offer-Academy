@@ -6,7 +6,7 @@ import { site } from "@/content/site";
 
 export const metadata: Metadata = {
   title: "Apply",
-  description: "Apply for one of 24 seats in the January 2027 founding cohort. Ten minutes, then a short fit call with Tyler. No payment to apply.",
+  description: `Apply for one of ${site.cohort.seats} seats in the ${site.cohort.start} founding cohort. Ten minutes, then a short fit call with Tyler. No payment to apply.`,
 };
 
 export default function ApplyPage() {
@@ -14,7 +14,7 @@ export default function ApplyPage() {
     <>
       <PageHero
         eyebrow={`${site.cohort.name} · ${site.cohort.start}`}
-        title="Apply for one of 24 seats."
+        title={`Apply for one of ${site.cohort.seats} seats.`}
         lede="Ten minutes, and applying costs nothing. After you apply, you'll book a short fit call with Tyler."
       />
       <section className="section" style={{ paddingTop: 16 }}>

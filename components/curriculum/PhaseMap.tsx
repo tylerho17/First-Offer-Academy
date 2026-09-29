@@ -2,7 +2,7 @@ import Link from "next/link";
 import { phaseInfo, preWork, runningThroughout, weekHref, weeks } from "@/content/curriculum";
 import LevelBadge from "./LevelBadge";
 
-// /curriculum: Week 0 pre-work, then the four phases. The phases overlap by
+// /program#curriculum: Week 0 pre-work, then the four phases. The phases overlap by
 // design (Outreach starts in Phase 1 and never stops; Track Technicals and
 // Interview Reps share Weeks 5 and 6), so the rail spans real week ranges
 // instead of tidy blocks. Accountability & Pods runs underneath all of it.
@@ -11,7 +11,7 @@ export default function PhaseMap() {
     <div className="phase-map">
       <section className="card prework-card" aria-labelledby="week-0">
         <span className="tag">{preWork.label}</span>
-        <h2 id="week-0">{preWork.name}</h2>
+        <h3 id="week-0">{preWork.name}</h3>
         <p>{preWork.summary}</p>
       </section>
 
@@ -33,7 +33,7 @@ export default function PhaseMap() {
         {phaseInfo.map((p, i) => (
           <li className="card phase-card" key={p.name}>
             <span className="tag">Phase {i + 1} · {p.weeks}</span>
-            <h2>{p.name}</h2>
+            <h3>{p.name}</h3>
             <p className="phase-card-sub">{p.summary}</p>
             <ul className="phase-points">
               {p.points.map((pt) => <li key={pt}>{pt}</li>)}
@@ -55,7 +55,7 @@ export default function PhaseMap() {
 
       <section className="band through-band" aria-labelledby="throughout">
         <span className="tag">{runningThroughout.label}</span>
-        <h2 id="throughout">{runningThroughout.name}</h2>
+        <h3 id="throughout">{runningThroughout.name}</h3>
         <p>{runningThroughout.summary}</p>
       </section>
     </div>

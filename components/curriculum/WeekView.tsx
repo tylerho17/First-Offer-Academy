@@ -38,7 +38,7 @@ export default function WeekView({ week: w }: { week: Week }) {
     <>
       <section className="page-hero week-hero">
         <div className="wrap">
-          <Link href="/curriculum" className="link-arrow">← All 8 weeks</Link>
+          <Link href="/program#curriculum" className="link-arrow">← All 8 weeks</Link>
           <div style={{ marginTop: 24 }}><Ornament /></div>
           <span className="eyebrow" style={{ display: "block" }}>
             Week {w.n} of 12 · {w.phase}{w.split ? " · track split" : ""}

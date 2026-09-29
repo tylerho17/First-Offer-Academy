@@ -6,44 +6,6 @@ import { modules } from "./programOverview";
 export const positioning =
   "Execution and accountability, from someone who just went through the two most recent recruiting cycles.";
 
-// The 8 weeks, phase by phase, named by which of the six parts each one
-// builds (content/programOverview.ts → modules). Phases overlap on purpose.
-// Accountability & Pods runs the whole way through.
-export const phases = [
-  {
-    weeks: "Week 0",
-    name: "Winter break pre-work",
-    body: "Starts the day you enroll, not in January. Students arrive at Week 1 with a resume draft, their first 20 named contacts, and the Candidate Brand module already watched.",
-  },
-  {
-    weeks: "Weeks 1–2",
-    name: "Candidate Brand + Outreach System",
-    body: "Candidate Brand: an honest gap check, a resume that passes our rubric, and a recorded 60-second intro. Outreach System: a target list of 50 with named contacts and the first email sequences sent.",
-  },
-  {
-    weeks: "Weeks 3–5",
-    name: "Outreach System + Story Bank",
-    body: "50 emails a week with a follow-up system, networking calls and the question that turns a call into a referral, and 8 stories mapped to every common question. Externship applications are written, recorded, and rehearsed in the same weeks.",
-  },
-  {
-    weeks: "Weeks 5–6",
-    name: "Track Technicals",
-    body: "The cohort splits into Finance, Consulting, or Marketing. Concepts before memorization, practice with answer walk-throughs, and the first graded mock in Week 6.",
-  },
-  {
-    weeks: "Weeks 6–8",
-    name: "Interview Reps",
-    body: "Live reps every week and a second graded mock run by a stranger. Accountability & Pods closes with the Week 8 family meeting.",
-  },
-];
-
-// Runs through all 8 weeks.
-export const throughout = {
-  weeks: "Weeks 1–8",
-  name: "Accountability & Pods",
-  body: "A pod of three, weekly minimums and a Sunday scoreboard, and biweekly parent reports.",
-};
-
 export { tracks } from "./tracks";
 
 // The Standard. Gates are all-required and graded on evidence in the tracker.
@@ -64,8 +26,6 @@ export const leavesWith = {
   items: modules.map((m) => m.title),
 };
 
-// "$5,000 includes": the same six parts, by the same names.
-export const included = modules.map((m) => m.title);
 
 // What tuition buys, in plain terms. Shown on /pricing under the price.
 export const pricingIncludes = [

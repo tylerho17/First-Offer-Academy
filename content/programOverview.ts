@@ -7,6 +7,8 @@
 // fields render as labeled placeholders while site.showPlaceholders is true
 // and disappear when it's false.
 
+import { site } from "./site";
+
 export type ProofAsset =
   | { kind: "images"; label: string; ratio: string; count: number; srcs: string[]; note?: string }
   | { kind: "image"; label: string; ratio: string; src: string; note?: string }
@@ -32,7 +34,7 @@ export const programOverview = {
   hero: {
     eyebrow: "The program",
     title: "An 8-week system that turns a first-year student into a real candidate.",
-    sub: "Membership is by application. The founding cohort has 24 seats in three sections of 8.",
+    sub: `Membership is by application. The founding cohort has ${site.cohort.seats} seats in ${site.cohort.sections}.`,
     videoLabel: "Program overview from Tyler",
     videoUrl: "", // TODO(Tyler): YouTube or Vimeo link
   },

@@ -25,10 +25,10 @@ function QuoteCard({ t }: { t: Testimonial }) {
   );
 }
 
-// `compact`: home page. The Success Stories row above supplies the header
-// and video, so this renders only the quote wall.
-export default function Testimonials({ full = false, compact = false }: { full?: boolean; compact?: boolean }) {
-  const ok = testimonials.filter((t) => t.permission);
+// `full`: /results, where ParentWall (#parents) already shows every parent
+// video and quote, so this renders students only.
+export default function Testimonials({ full = false }: { full?: boolean }) {
+  const ok = testimonials.filter((t) => t.permission && (!full || t.role === "student"));
   const parents = ok.filter((t) => t.role === "parent");
   const featuredParent = parents.find((t) => t.featured) ?? parents[0];
   const quotes = ok.filter((t) => t !== featuredParent);
@@ -45,16 +45,16 @@ export default function Testimonials({ full = false, compact = false }: { full?:
   const quoteSlots = placeholders ? Math.max(0, 6 - cards.length) : 0;
 
   return (
-    <section className="section" id="results" style={full ? { paddingTop: 24 } : compact ? { paddingTop: 0 } : undefined}>
+    <section className="section" id="results" style={full ? { paddingTop: 24 } : undefined}>
       <div className="wrap">
-        {!full && !compact && (
+        {!full && (
           <div className="section-head">
             <span className="eyebrow">Results</span>
             <h2>What students say</h2>
           </div>
         )}
 
-        {!compact && (videos.length > 0 || placeholders) && (
+        {(videos.length > 0 || placeholders) && (
           <div className="videos">
             {videos.map((t) => (
               <div className="video-card" key={t.name}>
@@ -90,13 +90,13 @@ export default function Testimonials({ full = false, compact = false }: { full?:
           ))}
         </div>
 
-        {featuredParent ? (
-          <figure className="card parent-quote" id="parents">
+        {full ? null : featuredParent ? (
+          <figure className="card parent-quote">
             <blockquote>{featuredParent.quote}</blockquote>
             <figcaption className="who"><div><strong>{featuredParent.name}</strong>Parent</div></figcaption>
           </figure>
         ) : placeholders ? (
-          <div className="slot" style={{ minHeight: 160 }} id="parents">
+          <div className="slot" style={{ minHeight: 160 }}>
             <span className="slot-tag">Placeholder</span>
             Featured parent quote
             <small>One parent, in their own words, with written permission</small>

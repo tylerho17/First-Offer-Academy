@@ -1,6 +1,6 @@
-import { leavesWith } from "@/content/program";
+import Link from "next/link";
+import { leavesWith, tracks } from "@/content/program";
 import { modules } from "@/content/programOverview";
-import IconTile from "../IconTile";
 import ModuleIcon from "../ModuleIcon";
 import Ornament from "../Ornament";
 import { Check } from "../Icons";
@@ -16,8 +16,26 @@ export function LeavesWithList({ compact = false }: { compact?: boolean }) {
   );
 }
 
-// "What the student leaves with": the six parts as cards. Card copy comes
-// straight from content/programOverview.ts, the source of truth.
+// Track Technicals names the three tracks, each linked to its page.
+function TrackLinks() {
+  return (
+    <>
+      Weeks 5–6 split by track:{" "}
+      {tracks.map((t, i) => (
+        <span key={t.slug}>
+          {i > 0 && (i === tracks.length - 1 ? ", or " : ", ")}
+          <Link href={`/tracks/${t.slug}`}>{t.name}</Link>
+        </span>
+      ))}
+      .
+    </>
+  );
+}
+
+// "What the student leaves with": the six parts, one sentence each, linking
+// to the full section on /program. Card copy comes from
+// content/programOverview.ts, the source of truth. This is the only place on
+// the homepage that names the six parts.
 export default function LeavesWith({ flush = true }: { flush?: boolean }) {
   return (
     <section className="section" id="leaves-with" style={flush ? { paddingTop: 0 } : undefined}>
@@ -27,18 +45,16 @@ export default function LeavesWith({ flush = true }: { flush?: boolean }) {
           <h2>{leavesWith.title}</h2>
           <p className="lede">{leavesWith.note}</p>
         </div>
-        <div className="tile-grid">
+        <ul className="tile-grid part-grid">
           {modules.map((m) => (
-            <IconTile
-              key={m.slug}
-              icon={<ModuleIcon name={m.icon} />}
-              title={m.title}
-              bullets={m.components}
-              detail={m.detail}
-              href={`/program#${m.slug}`}
-            />
+            <li className="card part-card" key={m.slug}>
+              <span className="icon-dot" aria-hidden="true"><ModuleIcon name={m.icon} /></span>
+              <h3 id={`part-${m.slug}`}>{m.title}</h3>
+              <p>{m.slug === "track-technicals" ? <TrackLinks /> : m.detail}</p>
+              <Link href={`/program#${m.slug}`} className="link-arrow" aria-describedby={`part-${m.slug}`}>Read more</Link>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </section>
   );

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Building, Clock, Lock } from "../Icons";
 
 const items = [
@@ -35,6 +36,9 @@ export default function Problem() {
             </div>
           ))}
         </div>
+        <p style={{ marginTop: 28 }}>
+          <Link href="/program" className="link-arrow">View program details →</Link>
+        </p>
       </div>
     </section>
   );

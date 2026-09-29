@@ -20,6 +20,9 @@ export default function Footer() {
               <li><Link href="/">Home</Link></li>
               <li><Link href="/about">About</Link></li>
               <li><Link href="/results">Testimonials</Link></li>
+              <li><Link href="/share-your-story">Share your story</Link></li>
+              {/* A review-platform link appears only once real reviews exist. */}
+              {site.reviewsUrl && <li><a href={site.reviewsUrl} target="_blank" rel="noopener noreferrer">Reviews</a></li>}
               <li><Link href="/parents">For parents</Link></li>
               <li><Link href="/blog">The Playbook</Link></li>
               <li><Link href="/playbook-pdf">Free Playbook (PDF)</Link></li>
@@ -33,9 +36,9 @@ export default function Footer() {
             <h2>Program Details</h2>
             <ul>
               <li><Link href="/program">How it works</Link></li>
-              <li><Link href="/curriculum">Curriculum</Link></li>
+              <li><Link href="/program#curriculum">Curriculum</Link></li>
               <li><Link href="/program#modules">The six parts</Link></li>
-              <li><Link href="/our-promise">Our promise</Link></li>
+              <li><Link href="/program#promise">Our promise</Link></li>
               <li><Link href="/pricing">Pricing</Link></li>
               <li><Link href="/program#compare">Compare options</Link></li>
             </ul>

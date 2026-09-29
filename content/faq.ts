@@ -10,16 +10,14 @@ export const faqs: Faq[] = [
     home: true,
     parent: true,
     q: "My student is a freshman. Isn't this too early?",
-    a: "No. Many internship timelines start sophomore year. Freshman year is when you build the Candidate Brand, the Outreach System, and the Story Bank that get you there.",
+    a: "No. Many internship timelines start sophomore year. Freshman year is when a student builds the resume, the contacts, and the interview stories that get them there.",
   },
   {
-    home: true,
     parent: true,
     q: "Why pay when the career center is free?",
-    a: "Use it too. Career centers serve thousands of students. We run all six parts with your student every week: Candidate Brand, Outreach System, Story Bank, Track Technicals, Interview Reps, and Accountability & Pods.",
+    a: "Use it too. Career centers serve thousands of students. We work with your student every week: reviewing the resume, the emails, the stories, and the interviews, and holding them to a weekly number.",
   },
   {
-    home: true,
     parent: true,
     q: "Is this right for my student?",
     a: "It fits a student who will do the work every week: the outreach, the calls, the reps. It doesn't fit a student who wants it done for them, and it isn't a fix for a student who doesn't want to be there. A parent of a pilot student explains who it isn't for:",
@@ -29,18 +27,18 @@ export const faqs: Faq[] = [
     home: true,
     parent: true,
     q: "What if they don't land an internship?",
-    a: "We don't promise offers; nobody honest can. We promise the six parts, fully run: Candidate Brand, Outreach System, Story Bank, Track Technicals, Interview Reps, and Accountability & Pods, with every email, call, and interview on record.",
+    a: "We don't promise offers; nobody honest can. We promise a fully executed search: a weekly session and 1:1, feedback on every piece of work, and every email, call, and interview on record.",
+    link: { label: "What we promise, and what we don't", href: "/program#promise" },
   },
   {
     home: true,
     parent: true,
     q: "How much time does it take each week?",
     a: site.weeklyHours
-      ? `Plan on ${site.weeklyHours} hours a week: the session, the Interview Reps 1:1, and the Outreach System.`
-      : "The weekly session is 90 minutes and the Interview Reps 1:1 is 60 minutes. Outreach System time on top of that will be confirmed before the cohort starts.",
+      ? `Plan on ${site.weeklyHours} hours a week: the session, the 1:1, and outreach.`
+      : "The weekly session is 90 minutes and the 1:1 is 60 minutes. Outreach time on top of that will be confirmed before the cohort starts.",
   },
   {
-    home: true,
     q: "Is it online or in person?",
     a: tba(site.format, "Format and meeting times will be confirmed before applications close."),
   },
@@ -81,6 +79,6 @@ export const faqs: Faq[] = [
   },
   {
     q: "What happens after Week 8?",
-    a: "Students leave with the six parts: Candidate Brand, Outreach System, Story Bank, Track Technicals, Interview Reps, and Accountability & Pods, and keep using them. Details on continued support will be shared with the cohort.",
+    a: "Students keep the system they built: the resume, the target list and tracker, the stories, and the interview prep. Details on continued support will be shared with the cohort.",
   },
 ];

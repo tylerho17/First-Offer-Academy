@@ -1,15 +1,17 @@
-import Image from "next/image";
+import { site } from "@/content/site";
 
-// Photo inside an arch-topped cream shape (headshot blends into cream).
-export default function ArchPhoto({
-  src = "/images/tyler.jpg",
-  alt = "Tyler Ho, founder of First Offer Academy",
-  width = 800,
-  height = 903,
-}: { src?: string; alt?: string; width?: number; height?: number }) {
+// Arch-topped cream card with the cohort facts. Used by the /program hero
+// when there is no overview video.
+// PHOTO: replace with a real photo of a workshop or pod session once one
+// exists (no stock or AI images of people).
+export default function ArchPhoto() {
+  const c = site.cohort;
   return (
-    <div className="arch-photo">
-      <Image src={src} alt={alt} width={width} height={height} sizes="(min-width: 860px) 420px, 90vw" />
+    <div className="arch-photo arch-card">
+      <span className="eyebrow">{c.name}</span>
+      <strong>{c.seats} seats</strong>
+      <span>{c.sections}</span>
+      <span>Starts {c.start}</span>
     </div>
   );
 }

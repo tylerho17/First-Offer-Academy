@@ -3,7 +3,6 @@ import Logo from "./Logo";
 import NavDropdown from "./NavDropdown";
 import MobileNav from "./MobileNav";
 import { tracks } from "@/content/tracks";
-import { site } from "@/content/site";
 
 type Item = { label: string; href: string; children?: { label: string; href: string; note?: string }[] };
 
@@ -13,23 +12,11 @@ export const nav: Item[] = [
     href: "/program",
     children: [
       { label: "How it works", href: "/program", note: "The 8-week plan" },
-      { label: "Curriculum", href: "/curriculum", note: "Week 0 plus four phases" },
       ...tracks.map((t) => ({ label: `${t.name} track`, href: `/tracks/${t.slug}` })),
-      { label: "Pricing", href: "/pricing", note: "Tuition and payment plans" },
     ],
   },
-  {
-    label: "Testimonials",
-    href: "/results",
-    children: [
-      { label: "Student testimonials", href: "/results" },
-      { label: "Parent testimonials", href: "/results/parents" },
-      { label: "For parents", href: "/parents", note: "Reports, payment, what we promise" },
-      { label: "Share your story", href: "/share-your-story", note: "For current students and alumni" },
-      // A review-platform link appears only once real reviews exist.
-      ...(site.reviewsUrl ? [{ label: "Reviews", href: site.reviewsUrl }] : []),
-    ],
-  },
+  { label: "Testimonials", href: "/results" },
+  { label: "For parents", href: "/parents" },
   { label: "Pricing", href: "/pricing" },
   {
     label: "Resources",

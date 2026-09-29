@@ -12,7 +12,7 @@ import { Check } from "@/components/Icons";
 
 export const metadata: Metadata = {
   title: "Pricing",
-  description: "First Offer Academy tuition: $5,000 for the 8-week program, or 3 payments of $1,700, with a $1,000 deposit to hold a seat, refundable until December 15, 2026.",
+  description: `First Offer Academy tuition: ${site.cohort.price} for the 8-week program, or ${site.cohort.plan}, with a ${site.cohort.deposit} deposit to hold a seat, refundable until ${site.depositRefundDeadline}.`,
 };
 
 export default function PricingPage() {

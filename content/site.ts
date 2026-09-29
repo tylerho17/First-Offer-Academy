@@ -3,6 +3,11 @@
 const founderLinkedIn = "https://www.linkedin.com/in/tylerho1";
 const deposit = "$1,000";
 const depositRefundDeadline = "December 15, 2026";
+const installment = "$1,700";
+
+// Students coached to internships in their first year of college, before the
+// academy existed. Every page that states the pilot number reads this.
+export const PILOT_STUDENTS = 8;
 
 export const site = {
   name: "First Offer Academy",
@@ -30,7 +35,8 @@ export const site = {
     seats: 24,
     sections: "three sections of 8",
     price: "$5,000",
-    plan: "3 payments of $1,700",
+    installment,
+    plan: `3 payments of ${installment}`,
     deposit,
     depositCents: 100000, // what Stripe Checkout charges for the deposit; keep in sync with `deposit`
   },
@@ -108,3 +114,8 @@ export const founderInternships = () =>
   site.founder.offerCount
     ? `7+ internships worked, and ${site.founder.offerCount} internship offers`
     : "7+ internships worked, and offers from many more";
+
+// Small whole numbers spelled out for running prose ("coached eight
+// freshmen"). Falls back to digits past twelve.
+const WORDS = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve"];
+export const spell = (n: number) => WORDS[n] ?? String(n);

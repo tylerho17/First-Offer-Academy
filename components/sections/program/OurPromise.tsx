@@ -1,35 +1,23 @@
-import type { Metadata } from "next";
 import Link from "next/link";
-import { promise } from "@/content/promise";
-import Ornament from "@/components/Ornament";
-import LeavesWith from "@/components/sections/LeavesWith";
-import CallLink from "@/components/CallLink";
-import { Check, Minus } from "@/components/Icons";
+import { promise as p } from "@/content/promise";
+import CallLink from "../../CallLink";
+import Ornament from "../../Ornament";
+import { Check, Minus } from "../../Icons";
 
-export const metadata: Metadata = {
-  title: "Our Promise",
-  description: "What First Offer Academy commits to, what it does not promise, and what it asks of students.",
-};
-
-export default function OurPromisePage() {
-  const p = promise;
+// What we promise, what we don't, and what we ask. Formerly /our-promise,
+// which now redirects here.
+export default function OurPromise() {
   return (
     <>
-      <section className="page-hero">
-        <div className="wrap">
-          <Ornament />
-          <span className="eyebrow" style={{ display: "block" }}>{p.eyebrow}</span>
-          <h1>{p.title}</h1>
-          <p className="lede">{p.lede}</p>
-        </div>
-      </section>
-
-      <section className="section" style={{ paddingTop: 32 }}>
+      <section className="section" id="promise" style={{ paddingTop: 0 }}>
         <div className="wrap">
           <div className="section-head">
             <Ornament />
-            <h2>{p.weDo.title}</h2>
+            <span className="eyebrow" style={{ display: "block" }}>{p.eyebrow}</span>
+            <h2>{p.title}</h2>
+            <p className="lede">{p.lede}</p>
           </div>
+          <h3 className="promise-sub">{p.weDo.title}</h3>
           <ul className="grid grid-3 promise-grid">
             {p.weDo.items.map((i) => (
               <li className="card" key={i.title}>
@@ -41,8 +29,6 @@ export default function OurPromisePage() {
           </ul>
         </div>
       </section>
-
-      <LeavesWith />
 
       <section className="section band">
         <div className="wrap two-col">

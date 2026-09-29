@@ -1,9 +1,8 @@
 import Link from "next/link";
 import { depositLine, site } from "@/content/site";
-import { included } from "@/content/program";
 import CallLink from "../CallLink";
-import { Check } from "../Icons";
 
+// Homepage tuition and final call to action in one navy band.
 export default function PriceBand() {
   const c = site.cohort;
   return (
@@ -12,14 +11,9 @@ export default function PriceBand() {
         <div>
           <span className="eyebrow">Tuition</span>
           <h2>{c.name} · {c.start}</h2>
-          <p className="includes-title">{c.price} includes</p>
-          <ul className="checks">
-            {included.map((i) => (
-              <li key={i}><Check />{i}</li>
-            ))}
-          </ul>
+          <p className="lede">Apply in ten minutes, or talk it through with Tyler first.</p>
           <div className="btn-row">
-            <Link href="/apply" className="btn btn-sage">Apply now</Link>
+            <Link href="/apply" className="btn btn-sage">Apply</Link>
             <CallLink className="btn btn-cream-outline" />
           </div>
         </div>

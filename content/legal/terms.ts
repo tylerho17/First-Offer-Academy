@@ -27,7 +27,7 @@ export const terms: LegalDoc = {
 
     { type: "h2", text: "No promise of outcomes" },
     { type: "p", text: "We do not promise internship offers or any specific outcome. We don't promise an internship at any particular company, in any particular role, at any particular pay, or by any particular date. Hiring decisions belong to employers, and they depend on things no one outside the employer controls." },
-    { type: "p", text: "What we do commit to is described on our [Our Promise](/our-promise) page: the sessions, 1:1s, feedback, documented search, parent reports, and the Week 8 meeting." },
+    { type: "p", text: "What we do commit to is described on our [Our Promise](/program#promise) page: the sessions, 1:1s, feedback, documented search, parent reports, and the Week 8 meeting." },
 
     { type: "h2", text: "Student responsibilities" },
     { type: "ul", items: [

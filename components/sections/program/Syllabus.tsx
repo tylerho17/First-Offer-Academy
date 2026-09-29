@@ -15,7 +15,7 @@ export default function Syllabus() {
           <h2>Week by week</h2>
           <p className="lede">
             The eight weeks, phase by phase. Open any week for the full plan: what we teach, the live reps, the 1:1 focus,
-            and what parents see. <Link href="/curriculum">See the full curriculum</Link>.
+            and what parents see. <a href="#curriculum">See the four phases</a>.
           </p>
         </div>
         <div className="syllabus">

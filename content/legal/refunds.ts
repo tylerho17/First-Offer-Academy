@@ -31,7 +31,7 @@ export const refunds: LegalDoc = {
 
     { type: "h2", text: "Withdrawing during the program" },
     { type: "p", text: site.withdrawalPolicy || `If a student needs to leave the program after it starts, email us and we'll talk it through. How much, if anything, is refunded after the program starts: ${pending}` },
-    { type: "p", text: "Not landing an internship offer is not by itself grounds for a refund, because we don't promise one. See [Our Promise](/our-promise) for what we do commit to." },
+    { type: "p", text: "Not landing an internship offer is not by itself grounds for a refund, because we don't promise one. See [Our Promise](/program#promise) for what we do commit to." },
 
     { type: "h2", text: "If we cancel or change the cohort" },
     { type: "p", text: "If we cancel the cohort, you get a full refund of every payment you've made, including the deposit. If we change the start date or format before the program starts in a way that doesn't work for you, you may withdraw for a full refund." },
