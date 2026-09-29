@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { assetTitles, weekHref, weeks, type Week } from "@/content/curriculum";
 import { getDownload, templateAnchor } from "@/content/downloads";
-import Ornament from "../Ornament";
 import CallLink from "../CallLink";
 import LevelBadge from "./LevelBadge";
 import { Check } from "../Icons";
@@ -39,7 +38,7 @@ export default function WeekView({ week: w }: { week: Week }) {
       <section className="page-hero week-hero">
         <div className="wrap">
           <Link href="/program#curriculum" className="link-arrow">← All 8 weeks</Link>
-          <div style={{ marginTop: 24 }}><Ornament /></div>
+          <div style={{ marginTop: 24 }}></div>
           <span className="eyebrow" style={{ display: "block" }}>
             Week {w.n} of {weeks.length} · {w.phase}{w.split ? " · track split" : ""}
           </span>

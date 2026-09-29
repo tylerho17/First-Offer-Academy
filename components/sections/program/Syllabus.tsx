@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { phaseInfo, weekHref, weeks } from "@/content/curriculum";
-import Ornament from "../../Ornament";
 import LevelBadge from "../../curriculum/LevelBadge";
 import { Check } from "../../Icons";
 
@@ -10,7 +9,6 @@ export default function Syllabus() {
     <section className="section" id="syllabus" style={{ paddingTop: 0 }}>
       <div className="wrap">
         <div className="section-head">
-          <Ornament />
           <span className="eyebrow" style={{ display: "block" }}>Syllabus</span>
           <h2>Week by week</h2>
           <p className="lede">

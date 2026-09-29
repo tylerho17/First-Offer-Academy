@@ -2,7 +2,6 @@ import Link from "next/link";
 import { leavesWith, tracks } from "@/content/program";
 import { modules } from "@/content/programOverview";
 import ModuleIcon from "../ModuleIcon";
-import Ornament from "../Ornament";
 import { Check } from "../Icons";
 
 // Compact list of the six part names (used inside other cards).
@@ -41,7 +40,6 @@ export default function LeavesWith({ flush = true }: { flush?: boolean }) {
     <section className="section" id="leaves-with" style={flush ? { paddingTop: 0 } : undefined}>
       <div className="wrap">
         <div className="section-head">
-          <Ornament />
           <h2>{leavesWith.title}</h2>
           <p className="lede">{leavesWith.note}</p>
         </div>

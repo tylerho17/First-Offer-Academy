@@ -4,7 +4,6 @@ import { articles } from "@/content/articles";
 import { downloadFile, downloads, stages } from "@/content/downloads";
 import TemplateLibrary from "@/components/TemplateLibrary";
 import { leadMagnet as m } from "@/content/leadMagnet";
-import Ornament from "@/components/Ornament";
 
 export const metadata: Metadata = {
   title: "Free Recruiting Templates and Guides",
@@ -16,7 +15,6 @@ export default function FreeResourcesPage() {
     <>
       <section className="page-hero">
         <div className="wrap">
-          <Ornament />
           <span className="eyebrow" style={{ display: "block" }}>Free resources</span>
           <h1>Every template we use. Free.</h1>
           <p className="lede">

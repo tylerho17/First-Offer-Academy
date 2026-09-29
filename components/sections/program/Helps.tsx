@@ -2,7 +2,6 @@ import { modules, programOverview } from "@/content/programOverview";
 import StatsRow from "../../StatsRow";
 import IconTile from "../../IconTile";
 import ModuleIcon from "../../ModuleIcon";
-import Ornament from "../../Ornament";
 import { ArrowDown } from "../../Icons";
 
 export default function Helps() {
@@ -11,7 +10,6 @@ export default function Helps() {
     <section className="section" id="how-it-helps">
       <div className="wrap">
         <div className="section-head">
-          <Ornament />
           <span className="eyebrow" style={{ display: "block" }}>{h.eyebrow}</span>
           <h2>{h.title}</h2>
         </div>

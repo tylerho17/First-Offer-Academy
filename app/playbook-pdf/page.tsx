@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { leadMagnet as m } from "@/content/leadMagnet";
-import Ornament from "@/components/Ornament";
 import PlaybookForm from "@/components/PlaybookForm";
 
 export const metadata: Metadata = {
@@ -13,7 +12,6 @@ export default function PlaybookPdfPage() {
     <section className="section timeline-page">
       <div className="wrap two-col playbook-top">
         <div>
-          <Ornament />
           <span className="eyebrow" style={{ display: "block" }}>
             {m.eyebrow} · {m.pages} pages{!m.reviewedByTyler && <span className="draft-chip">Draft</span>}
           </span>
@@ -34,7 +32,6 @@ export default function PlaybookPdfPage() {
       </div>
       <div className="wrap" style={{ marginTop: 64 }}>
         <div className="section-head">
-          <Ornament />
           <h2>What&apos;s inside</h2>
         </div>
         <ol className="chapter-list">

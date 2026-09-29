@@ -1,5 +1,4 @@
 import { rhythmNotes, weeklyRhythm } from "@/content/curriculum";
-import Ornament from "../Ornament";
 import { Check } from "../Icons";
 
 export default function WeeklyRhythm() {
@@ -7,7 +6,6 @@ export default function WeeklyRhythm() {
     <section className="section" id="rhythm" style={{ paddingTop: 0 }}>
       <div className="wrap">
         <div className="section-head">
-          <Ornament />
           <span className="eyebrow" style={{ display: "block" }}>Every week</span>
           <h2>Your student&apos;s weekly rhythm</h2>
         </div>

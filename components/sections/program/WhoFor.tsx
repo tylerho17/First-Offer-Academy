@@ -1,5 +1,4 @@
 import { programOverview } from "@/content/programOverview";
-import Ornament from "../../Ornament";
 import { Check } from "../../Icons";
 
 export default function WhoFor() {
@@ -8,7 +7,6 @@ export default function WhoFor() {
     <section className="section" id="who-its-for">
       <div className="wrap">
         <div className="section-head">
-          <Ornament />
           <h2>{w.title}</h2>
         </div>
         <ol className="pain-grid">

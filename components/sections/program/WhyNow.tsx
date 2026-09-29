@@ -1,5 +1,4 @@
 import { modules, programOverview } from "@/content/programOverview";
-import Ornament from "../../Ornament";
 
 export default function WhyNow() {
   const w = programOverview.whyNow;
@@ -7,7 +6,6 @@ export default function WhyNow() {
     <section className="section" style={{ paddingTop: 0 }}>
       <div className="wrap why-now">
         <div>
-          <Ornament />
           <h2>{w.title}</h2>
           <p className="why-sub">{w.sub}</p>
           <div className="why-body">

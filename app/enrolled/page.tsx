@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { site } from "@/content/site";
-import Ornament from "@/components/Ornament";
 
 // Stripe sends people here after a successful payment. No nav link, no
 // conversion pixel, no auto-redirect: a dead end on purpose. noindex, because
@@ -22,7 +21,6 @@ export default function EnrolledPage() {
   return (
     <section className="section enrolled">
       <div className="wrap">
-        <Ornament />
         <h1>You&apos;re in.</h1>
         <p className="lede">Your seat in the {site.cohort.start} {site.cohort.name.toLowerCase()} is held.</p>
 

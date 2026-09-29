@@ -2,7 +2,6 @@ import Link from "next/link";
 import { tracks } from "@/content/tracks";
 import type { Module, ProofAsset } from "@/content/programOverview";
 import { site } from "@/content/site";
-import Ornament from "../../Ornament";
 import VideoSlot from "../../VideoSlot";
 import ProofSlot from "../../ProofSlot";
 import { Check } from "../../Icons";
@@ -47,7 +46,6 @@ export default function ModuleSection({ m, n }: { m: Module; n: number }) {
     <section className={`section module${n % 2 === 0 ? " is-flipped" : ""}`} id={m.slug} aria-labelledby={`${m.slug}-title`}>
       <div className="wrap">
         <div className="module-head">
-          <Ornament />
           <span className="eyebrow" style={{ display: "block" }}>Part {n}</span>
           <h2 id={`${m.slug}-title`}>{m.title}</h2>
           <p className="module-positioning">{m.positioning}</p>

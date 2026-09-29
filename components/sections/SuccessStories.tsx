@@ -3,7 +3,6 @@ import { permittedStories, storyPhoto, storyVideo } from "@/content/stories";
 import { site } from "@/content/site";
 import Carousel from "../Carousel";
 import VideoSlot from "../VideoSlot";
-import Ornament from "../Ornament";
 import { Play } from "../Icons";
 
 // "How [Name] landed [role]…" story cards in a scroll-snap carousel.
@@ -23,7 +22,6 @@ export default function SuccessStories({
       <div className="wrap">
         <div className="section-head row-head">
           <div>
-            <Ornament />
             <span className="eyebrow" style={{ display: "block" }}>{eyebrow}</span>
             <h2>{title}</h2>
           </div>

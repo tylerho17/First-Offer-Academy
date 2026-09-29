@@ -1,4 +1,3 @@
-import Ornament from "../../Ornament";
 import PhaseMap from "../../curriculum/PhaseMap";
 
 // Week 0 pre-work and the four two-week phases. Formerly /curriculum,
@@ -8,7 +7,6 @@ export default function Curriculum() {
     <section className="section" id="curriculum" style={{ paddingTop: 0 }}>
       <div className="wrap">
         <div className="section-head">
-          <Ornament />
           <span className="eyebrow" style={{ display: "block" }}>Curriculum</span>
           <h2>Eight weeks, four phases, one search.</h2>
           <p className="lede">

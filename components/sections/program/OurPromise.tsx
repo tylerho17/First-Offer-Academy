@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { promise as p } from "@/content/promise";
 import CallLink from "../../CallLink";
-import Ornament from "../../Ornament";
 import { Check, Minus } from "../../Icons";
 import PayButton from "@/components/PayButton";
 
@@ -13,7 +12,6 @@ export default function OurPromise() {
       <section className="section" id="promise" style={{ paddingTop: 0 }}>
         <div className="wrap">
           <div className="section-head">
-            <Ornament />
             <span className="eyebrow" style={{ display: "block" }}>{p.eyebrow}</span>
             <h2>{p.title}</h2>
             <p className="lede">{p.lede}</p>
@@ -49,7 +47,6 @@ export default function OurPromise() {
       <section className="section">
         <div className="wrap">
           <div className="section-head">
-            <Ornament />
             <h2>{p.weAsk.title}</h2>
           </div>
           <ol className="grid grid-3 promise-grid">

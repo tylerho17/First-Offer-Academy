@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Ornament from "@/components/Ornament";
 
 export const metadata: Metadata = { title: "Page not found", robots: { index: false } };
 
@@ -16,7 +15,6 @@ export default function NotFound() {
     <section className="section not-found">
       <div className="wrap">
         <div className="card not-found-card">
-          <Ornament className="is-center" />
           <p className="not-found-code">404</p>
           <h1>This page isn&apos;t here.</h1>
           <p className="lede center">The link may be old, or the address may have a typo. Here are a few places to pick up from.</p>

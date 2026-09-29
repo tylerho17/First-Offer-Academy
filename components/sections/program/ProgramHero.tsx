@@ -1,7 +1,6 @@
 import { programOverview } from "@/content/programOverview";
 import CallLink from "../../CallLink";
 import VideoSlot from "../../VideoSlot";
-import Ornament from "../../Ornament";
 import ArchPhoto from "../../ArchPhoto";
 import { site } from "@/content/site";
 import PayButton from "@/components/PayButton";
@@ -12,7 +11,6 @@ export default function ProgramHero() {
     <section className="hero program-hero">
       <div className="wrap hero-grid">
         <div>
-          <Ornament />
           <span className="eyebrow" style={{ display: "block" }}>{h.eyebrow}</span>
           <h1>{h.title}</h1>
           <p className="lede">{h.lede} {h.sub}</p>

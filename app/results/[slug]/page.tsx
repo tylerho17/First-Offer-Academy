@@ -3,7 +3,6 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getStory, permittedStories, storyEmployer, storyPhoto, storyVideo } from "@/content/stories";
 import VideoSlot from "@/components/VideoSlot";
-import Ornament from "@/components/Ornament";
 import FinalCta from "@/components/sections/FinalCta";
 
 // Only permitted stories get a page; any other slug is a 404.
@@ -32,7 +31,7 @@ export default async function StoryPage({ params }: { params: Promise<{ slug: st
       <article className="section" style={{ paddingTop: 56 }}>
         <div className="wrap article-wrap">
           <Link href="/results" className="link-arrow">← All results</Link>
-          <div style={{ marginTop: 28 }}><Ornament /></div>
+          <div style={{ marginTop: 28 }}></div>
           <span className="eyebrow" style={{ display: "block" }}>{s.track} · {s.year}</span>
           <h1 className="story-title">{s.headline}</h1>
           <p className="article-byline">{s.name} · {s.school}{employer ? ` · ${s.role} at ${employer}` : ` · ${s.role}`}</p>

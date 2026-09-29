@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { zh } from "@/content/zh";
 import { site } from "@/content/site";
-import Ornament from "@/components/Ornament";
 import CallLink from "@/components/CallLink";
 import { Check } from "@/components/Icons";
 
@@ -29,7 +28,6 @@ export default function ZhPage() {
       <section className="page-hero">
         <div className="wrap">
           {!site.zhReviewed && <p className="legal-draft" role="note">{zh.draftNotice}</p>}
-          <Ornament />
           <span className="eyebrow" style={{ display: "block" }}>{zh.eyebrow}</span>
           <h1>{zh.title}</h1>
           <p className="lede">{zh.lede}</p>

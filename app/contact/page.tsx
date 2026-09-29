@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
-import Ornament from "@/components/Ornament";
 import { site } from "@/content/site";
 import LinkedInLink from "@/components/LinkedInLink";
 
@@ -15,7 +14,6 @@ export default function ContactPage() {
       <div className="wrap">
         <div className="card contact-card">
           <div className="contact-head">
-            <Ornament className="is-center" />
             <h1>Contact</h1>
             <p>Send a message if you have questions about the program or your student&apos;s search.</p>
           </div>

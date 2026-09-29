@@ -6,7 +6,6 @@ import LeavesWith from "@/components/sections/LeavesWith";
 import ExternshipNote from "@/components/sections/ExternshipNote";
 import { depositLine, site } from "@/content/site";
 import { testimonials } from "@/content/testimonials";
-import Ornament from "@/components/Ornament";
 import CallLink from "@/components/CallLink";
 import PayButton, { DepositNote } from "@/components/PayButton";
 import FaqList from "@/components/sections/FaqList";
@@ -31,7 +30,6 @@ export default async function ParentsPage() {
     <>
       <section className="page-hero">
         <div className="wrap">
-          <Ornament />
           <span className="eyebrow" style={{ display: "block" }}>{p.eyebrow}</span>
           <h1>{p.title}</h1>
           <p className="lede">{p.lede}</p>
@@ -53,7 +51,6 @@ export default async function ParentsPage() {
       <section className="section" style={{ paddingTop: 40 }}>
         <div className="wrap">
           <div className="section-head">
-            <Ornament />
             <h2>{p.weekly.title}</h2>
             <p className="lede">{p.weekly.note}</p>
           </div>
@@ -72,7 +69,6 @@ export default async function ParentsPage() {
       <section className="section" style={{ paddingTop: 0 }}>
         <div className="wrap">
           <div className="section-head">
-            <Ornament />
             <h2>{p.youSee.title}</h2>
           </div>
           <div className="grid grid-2">
@@ -130,7 +126,6 @@ export default async function ParentsPage() {
       <section className="section">
         <div className="wrap two-col">
           <div>
-            <Ornament />
             <h2>{p.dont.title}</h2>
             <p className="lede">{p.dont.body}</p>
             <p style={{ marginTop: 20 }}><Link href="/program#promise" className="link-arrow">Read our full promise →</Link></p>
