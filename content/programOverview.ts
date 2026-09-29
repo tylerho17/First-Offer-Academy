@@ -34,6 +34,7 @@ export const programOverview = {
   hero: {
     eyebrow: "The program",
     title: "An 8-week system that turns a first-year student into a real candidate.",
+    lede: "A weekly 90-minute session, a weekly 60-minute 1:1, and a pod of three, for 8 weeks.",
     sub: `Membership is by application. The founding cohort has ${site.cohort.seats} seats in ${site.cohort.sections}.`,
     videoLabel: "Program overview from Tyler",
     videoUrl: "", // TODO(Tyler): YouTube or Vimeo link

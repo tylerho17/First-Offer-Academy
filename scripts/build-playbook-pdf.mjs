@@ -96,7 +96,7 @@ function renderChapter(blocks) {
 function closingCta() {
   const c = site.cohort;
   return `<div class="cta">
-    <h3>Want someone making sure it actually gets done?</h3>
+    <h3>Want to run this with a coach every week?</h3>
     <p>${esc(site.name)} is an 8-week internship program for college freshmen and sophomores. ${esc(c.name)} starts ${esc(c.start)}: ${c.seats} seats, ${esc(c.price)} or ${esc(c.plan)}.</p>
     <a class="btn" href="https://${site.domain}/apply">Apply at ${site.domain}/apply</a>
     <a class="btn alt" href="https://${site.domain}/parents">For parents: ${site.domain}/parents</a>

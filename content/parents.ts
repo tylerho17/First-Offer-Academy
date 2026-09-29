@@ -1,3 +1,5 @@
+import { afterProgram } from "./program";
+
 // /parents: the page for the people paying. Built from content/program.ts,
 // content/site.ts, and content/promise.ts. No new claims.
 
@@ -16,6 +18,7 @@ export const parentsPage = {
     items: [
       { title: "A progress report every two weeks", body: "One page: your student's level on the Standard, their numbers (emails, calls, interviews), and what they're working on next. It goes only to the parent or guardian your student lists." },
       { title: "The Week 8 family meeting", body: "Your student presents their results to you: every email, call, and interview on record, plus their Week 1 and Week 8 recorded introductions side by side." },
+      { title: "Check-ins after Week 8", body: afterProgram.full },
       { title: "A call if things slip", body: "If your student misses their weekly minimums two weeks in a row, we set up a call with your student and you to reset the plan." },
     ],
   },

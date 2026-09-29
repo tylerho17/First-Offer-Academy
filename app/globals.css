@@ -1206,3 +1206,6 @@ a.featured-download:hover { transform: translateY(-3px); }
 .deposit-banner { margin-bottom: 20px; max-width: 860px; }
 .deposit-banner h2 { font-size: 28px; }
 .deposit-banner p { margin-top: 8px; }
+.parent-see { list-style: none; padding: 0; margin: 20px 0 0; display: grid; gap: 10px; max-width: 620px; }
+.parent-see li { display: flex; gap: 10px; align-items: flex-start; font-size: 18px; }
+.parent-see svg { flex: none; width: 20px; height: 20px; color: var(--dusty); margin-top: 4px; }

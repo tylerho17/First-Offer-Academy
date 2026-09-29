@@ -2,9 +2,13 @@ import { modules } from "./programOverview";
 
 // Program facts. Source of truth: docs/CURRICULUM-SOURCE.md.
 
-// What we sell. Used in the home hero, founder section, /program, /parents.
-export const positioning =
-  "Execution and accountability, from someone who just went through the two most recent recruiting cycles.";
+// After Week 8: weekly check-ins until an offer or the end date. Used on the
+// homepage price band, /parents, /pricing, and the FAQ.
+export const afterProgram = {
+  until: "May 31, 2027",
+  short: "After Week 8: weekly check-ins until an offer or May 31, 2027.",
+  full: "After Week 8, every student gets a free weekly 30-minute check-in call and progress update until they receive an internship offer (paid or unpaid) or May 31, 2027, whichever comes first. Students stay on the weekly maintenance minimum to keep the calls.",
+};
 
 export { tracks } from "./tracks";
 

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { parentsPage as p } from "@/content/parents";
-import { positioning, weekly } from "@/content/program";
+import { afterProgram, weekly } from "@/content/program";
 import LeavesWith from "@/components/sections/LeavesWith";
 import ExternshipNote from "@/components/sections/ExternshipNote";
 import { depositLine, site } from "@/content/site";
@@ -29,7 +29,11 @@ export default function ParentsPage() {
           <span className="eyebrow" style={{ display: "block" }}>{p.eyebrow}</span>
           <h1>{p.title}</h1>
           <p className="lede">{p.lede}</p>
-          <p className="lede">{positioning} The tactics are free; what you pay for is someone making sure the work gets done, every week.</p>
+          <ul className="parent-see">
+            <li><Check />A one-page progress report every two weeks</li>
+            <li><Check />The Week 8 family meeting, where your student presents their results</li>
+            <li><Check />Weekly check-ins after Week 8, until an offer or {afterProgram.until}</li>
+          </ul>
           <div className="btn-row">
             <CallLink className="btn btn-primary">Book a parent call</CallLink>
             <Link href="/program" className="btn btn-secondary">See the full program</Link>
@@ -62,7 +66,7 @@ export default function ParentsPage() {
             <Ornament />
             <h2>{p.youSee.title}</h2>
           </div>
-          <div className="grid grid-3">
+          <div className="grid grid-2">
             {p.youSee.items.map((i) => (
               <div className="card" key={i.title}>
                 <span className="icon-dot"><Check /></span>

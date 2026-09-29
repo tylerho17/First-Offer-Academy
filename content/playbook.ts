@@ -331,11 +331,11 @@ export const chapters: Chapter[] = [
   {
     n: 16,
     slug: "closing",
-    title: "The tactics are free. Execution is the hard part.",
-    summary: "What to do next.",
+    title: "What to do next",
+    summary: "Where the program fits.",
     blocks: [
-      p("You now have everything I use. None of it is secret; that's why it's free. What's hard is doing it every week for 8 weeks: sending the 50 emails when nobody's replying yet, following up when it feels awkward, recording the story for the fourth time, and showing your numbers to someone who will tell you the truth about them."),
-      p("That's what First Offer Academy is. Not more tactics: execution and accountability, from someone who just went through the two most recent recruiting cycles. A weekly 90-minute session, a weekly 60-minute 1:1, a pod of three, and a coach who reviews every piece of work and holds your student to a number. We don't promise offers; nobody honest can. We promise a fully executed search."),
+      p("You now have everything I use. What's hard is doing it every week for 8 weeks: sending the 50 emails when nobody's replying yet, following up when it feels awkward, recording the story for the fourth time, and showing your numbers to someone who will tell you the truth about them."),
+      p("That's what First Offer Academy is: a weekly 90-minute session, a weekly 60-minute 1:1, a pod of three, and a coach who reviews every piece of work and holds your student to a number. We don't promise offers; nobody honest can. We promise a fully executed search."),
     ],
   },
 ];

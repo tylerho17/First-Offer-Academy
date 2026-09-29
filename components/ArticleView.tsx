@@ -56,7 +56,7 @@ export default function ArticleView({ article: a }: { article: Article }) {
 
           <div className="card article-cta">
             <h3>Want someone to run this with your student every week?</h3>
-            <p>The tactics are free. The 8-week program adds execution and accountability: weekly numbers, a 60-minute 1:1, and a coach checking the work.</p>
+            <p>The 8-week program adds weekly numbers, a 60-minute 1:1, and a coach checking the work.</p>
             <div className="btn-row">
               <Link href="/program" className="btn btn-primary">See the program</Link>
               <CallLink />

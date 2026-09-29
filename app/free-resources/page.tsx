@@ -20,7 +20,7 @@ export default function FreeResourcesPage() {
           <span className="eyebrow" style={{ display: "block" }}>Free resources</span>
           <h1>Every template we use. Free.</h1>
           <p className="lede">
-            The tactics are free. These are the same templates students use in the program, week by week. Enter your
+            These are the same templates students use in the program, week by week. Enter your
             email once and every download opens right away after that.
           </p>
         </div>
