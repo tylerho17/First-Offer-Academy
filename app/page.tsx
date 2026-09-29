@@ -11,6 +11,9 @@ import JsonLd from "@/components/JsonLd";
 import { site } from "@/content/site";
 import { liveSocialLinks } from "@/content/social";
 
+// Event dates come from Luma (lib/events.ts), refreshed hourly.
+export const revalidate = 3600;
+
 export default function Home() {
   const sameAs = liveSocialLinks().map((s) => s.url);
   return (

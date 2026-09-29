@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Track } from "@/content/tracks";
 import { tracks } from "@/content/tracks";
 import CoachCard from "./CoachCard";
-import EventsSchedule from "./sections/EventsSchedule";
+import EventsStrip from "./sections/EventsStrip";
 import LatestArticles from "./sections/LatestArticles";
 import FinalCta from "./sections/FinalCta";
 import CallLink from "./CallLink";
@@ -63,7 +63,7 @@ export default function TrackView({ track }: { track: Track }) {
         </div>
       </section>
 
-      <EventsSchedule track={track.slug} limit={3} />
+      <EventsStrip page={`tracks-${track.slug}`} flush />
       <LatestArticles track={track.slug} title={`Free ${track.name.toLowerCase()} recruiting guides`} />
       <FinalCta />
     </>

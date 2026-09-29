@@ -46,12 +46,7 @@ export const site = {
 
   calendlyUrl: "https://calendly.com/tyler-firstofferacademy",
 
-  // Luma event calendars. People subscribe there and get every new date;
-  // individual sessions can also be listed in content/events.ts.
-  luma: {
-    parents: "https://luma.com/parentFOA",
-    students: "https://luma.com/firstofferacademy",
-  },
+  // Luma calendars and sessions: content/events.ts and lib/events.ts.
 
   // Stripe Payment Links live in lib/payments.ts.
   // TODO(Tyler): legal business entity name (e.g. "First Offer Academy LLC").

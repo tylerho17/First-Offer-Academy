@@ -3,6 +3,9 @@ import { notFound } from "next/navigation";
 import { getTrack, tracks } from "@/content/tracks";
 import TrackView from "@/components/TrackView";
 
+// Event dates come from Luma (lib/events.ts), refreshed hourly.
+export const revalidate = 3600;
+
 export function generateStaticParams() {
   return tracks.map((t) => ({ slug: t.slug }));
 }

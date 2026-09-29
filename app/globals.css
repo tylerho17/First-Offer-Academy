@@ -436,15 +436,26 @@ a.topic-pill:hover { background: var(--navy); color: var(--cream); }
 
 /* ---------- Events ---------- */
 .event-list { display: grid; gap: 14px; }
-.event-card { display: grid; grid-template-columns: auto 1fr; gap: 18px; align-items: center; padding: 20px; }
-@media (min-width: 768px) { .event-card { grid-template-columns: auto 1fr auto; padding: 24px 28px; } }
-.event-date { width: 64px; height: 72px; border-radius: 14px; background: var(--navy); color: var(--cream); display: grid; place-items: center; align-content: center; text-align: center; }
-.event-date span { font-size: 13px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--cream); }
-.event-date strong { font-family: var(--display); font-weight: 600; font-size: 24px; line-height: 1; }
-.event-body h3 { font-size: 22px; margin: 4px 0; }
-.event-body p { font-size: 15px; }
-.event-btn { grid-column: 1 / -1; }
-@media (min-width: 768px) { .event-btn { grid-column: auto; } }
+.event-card { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 18px; align-items: start; padding: 20px; }
+.event-card.is-undated { grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 768px) { .event-card { padding: 22px 26px; gap: 22px; } }
+.event-tile { width: 72px; border-radius: 14px; background: var(--navy); color: var(--cream); display: grid; justify-items: center; padding: 10px 6px; text-align: center; }
+.event-tile-month, .event-tile-weekday { font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--cream); line-height: 1.3; }
+.event-tile strong { font-family: var(--display); font-weight: 600; font-size: 32px; line-height: 1.05; color: var(--cream); }
+.event-body .tag { font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--dusty); }
+.event-body h3 { font-size: 20px; margin: 2px 0 4px; color: var(--navy); }
+.event-meta { font-size: 14px !important; color: var(--dusty); }
+.event-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; margin-top: 14px; }
+.event-actions .btn { min-height: 44px; padding: 0 20px; font-size: 16px; width: auto !important; }
+.event-ics { font-size: 15px; font-weight: 600; color: var(--dusty); text-decoration: underline; }
+.events-columns { display: grid; gap: 48px; }
+@media (min-width: 1000px) { .events-columns { grid-template-columns: 1fr 1fr; gap: 32px; } }
+.events-column h2 { font-size: 30px; }
+.events-note { margin: 8px 0 20px; }
+.parent-sessions { margin-bottom: 40px; }
+.call-card { display: flex; flex-wrap: wrap; gap: 20px; align-items: center; justify-content: space-between; }
+.call-card h2 { font-size: 28px; }
+.call-card p { margin-top: 6px; max-width: 560px; }
 .tag { font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--dusty); }
 .empty-card { display: flex; flex-wrap: wrap; gap: 20px; align-items: center; justify-content: space-between; }
 .empty-card h3 { margin-bottom: 6px; }
@@ -530,7 +541,6 @@ a.topic-pill:hover { background: var(--navy); color: var(--cream); }
 /* Luma event calendars (components/sections/EventCalendars.tsx) */
 .calendar-grid { list-style: none; padding: 0; margin: 0; display: grid; gap: 16px; }
 @media (min-width: 700px) { .calendar-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-.calendar-grid.is-below { margin-top: 16px; }
 .calendar-card { display: flex; flex-direction: column; gap: 8px; padding: 24px; }
 .calendar-card h3 { margin: 0; font-size: 22px; }
 .calendar-card p { font-size: 18px; }

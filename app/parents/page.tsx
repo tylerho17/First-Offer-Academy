@@ -10,14 +10,20 @@ import Ornament from "@/components/Ornament";
 import CallLink from "@/components/CallLink";
 import PayButton, { DepositNote } from "@/components/PayButton";
 import FaqList from "@/components/sections/FaqList";
+import EventCard from "@/components/EventCard";
+import { upcomingEvents } from "@/lib/events";
 import { Check, Minus } from "@/components/Icons";
+
+// Event dates come from Luma (lib/events.ts), refreshed hourly.
+export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: "For Parents",
   description: "For parents: what your student does each week in First Offer Academy, the progress reports you receive, payment and the deposit, and what we don't promise.",
 };
 
-export default function ParentsPage() {
+export default async function ParentsPage() {
+  const sessions = (await upcomingEvents("Parents")).slice(0, 2);
   const c = site.cohort;
   const quote = testimonials.find((t) => t.role === "parent" && t.permission && t.featured) ?? testimonials.find((t) => t.role === "parent" && t.permission);
 
@@ -158,6 +164,32 @@ export default function ParentsPage() {
           </div>
         </section>
       ) : null}
+
+      <section className="section" style={{ paddingTop: 0 }}>
+        <div className="wrap">
+          {sessions.length > 0 && (
+            <div className="parent-sessions">
+              <div className="section-head row-head">
+                <div>
+                  <span className="eyebrow">Free parent sessions</span>
+                  <h2>Ask your questions live</h2>
+                </div>
+                <Link href="/events" className="link-arrow">All events →</Link>
+              </div>
+              <div className="event-list">
+                {sessions.map((e) => <EventCard key={e.id} e={e} page="parents" />)}
+              </div>
+            </div>
+          )}
+          <div className="card call-card" id="call">
+            <div>
+              <h2>Book a parent call</h2>
+              <p>Twenty minutes with Tyler to talk through your student&apos;s situation and whether the program fits.</p>
+            </div>
+            <CallLink className="btn btn-primary" />
+          </div>
+        </div>
+      </section>
 
       <FaqList parent title="Questions parents ask" />
     </>

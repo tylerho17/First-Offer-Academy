@@ -1,13 +1,14 @@
 import Link from "next/link";
-import { upcomingEvents } from "@/content/events";
+import { upcomingEvents } from "@/lib/events";
 import EventCard from "../EventCard";
 import EventCalendars from "./EventCalendars";
 
-// Homepage: the next 3 dated sessions, or both Luma calendars when none are listed.
-export default function EventsStrip() {
-  const list = upcomingEvents().slice(0, 3);
+// The next 3 upcoming sessions across both audiences, each tagged; the two
+// Luma calendars when none are upcoming. Homepage and track pages.
+export default async function EventsStrip({ page = "home", flush = false }: { page?: string; flush?: boolean }) {
+  const list = (await upcomingEvents()).slice(0, 3);
   return (
-    <section className="section" id="events">
+    <section className="section" id="events" style={flush ? { paddingTop: 0 } : undefined}>
       <div className="wrap">
         <div className="section-head row-head">
           <div>
@@ -18,10 +19,10 @@ export default function EventsStrip() {
         </div>
         {list.length > 0 ? (
           <div className="event-list">
-            {list.map((e) => <EventCard key={e.title + e.date} e={e} />)}
+            {list.map((e) => <EventCard key={e.id} e={e} page={page} showAudience />)}
           </div>
         ) : (
-          <EventCalendars />
+          <EventCalendars page={page} />
         )}
       </div>
     </section>
