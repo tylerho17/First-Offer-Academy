@@ -7,12 +7,9 @@ const installment = "$1,700";
 
 // Students coached to internships in their first year of college, before the
 // academy existed. Every page that states the pilot number reads this.
-export const PILOT_STUDENTS = 8;
-// TODO(Tyler): [[PILOT_LANDED]] — how many pilot students landed an internship
-// in their first year. null = the stat doesn't render.
-export const PILOT_LANDED: number | null = null;
-// TODO(Tyler): [[PILOT_TWO]] — how many landed two. null = doesn't render.
-export const PILOT_TWO: number | null = null;
+export const PILOT_STUDENTS = 12;
+// How many of them landed an internship in their first year.
+export const PILOT_LANDED = 12;
 
 export const site = {
   name: "First Offer Academy",

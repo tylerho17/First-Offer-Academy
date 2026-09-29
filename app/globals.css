@@ -1225,3 +1225,4 @@ button.topic-pill { font: inherit; font-size: 15px; font-weight: 600; cursor: po
 .track-card { display: grid !important; gap: 6px; padding: 18px 20px; height: 100%; }
 .track-card strong { color: var(--navy); font-size: 18px; }
 .track-card span { font-size: 15px; color: var(--ink); }
+.stat span small { display: block; margin-top: 4px; font-size: 14px; color: var(--ink); opacity: .8; }

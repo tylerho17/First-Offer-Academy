@@ -10,7 +10,7 @@ export default function StatsRow() {
         {shown.map((s) => (
           <div className="stat" key={s.label}>
             <strong>{s.value}</strong>
-            <span>{s.label}</span>
+            <span>{s.label}{s.sub && <small>{s.sub}</small>}</span>
           </div>
         ))}
       </div>
