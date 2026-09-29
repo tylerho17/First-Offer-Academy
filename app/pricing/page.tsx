@@ -87,7 +87,7 @@ export default function PricingPage() {
               <p>Spread across the program.</p>
             </div>
             <div className="card">
-              <h3>Hold a seat</h3>
+              <h3>Reserve a seat</h3>
               <p className="pay-amt">{c.deposit} deposit</p>
               <p>{site.refundTerms}</p>
               <p style={{ marginTop: 12 }}>Already paid it? Your balance is {balance.full}, or {balance.plan}. We&apos;ll email your balance link.</p>
