@@ -2,7 +2,8 @@ import Hero from "@/components/sections/Hero";
 import Problem from "@/components/sections/Problem";
 import LeavesWith from "@/components/sections/LeavesWith";
 import Proof from "@/components/sections/Proof";
-import FreeStrip from "@/components/sections/FreeStrip";
+import Stats from "@/components/sections/Stats";
+import EventsStrip from "@/components/sections/EventsStrip";
 import PriceBand from "@/components/sections/PriceBand";
 import FaqList from "@/components/sections/FaqList";
 import JsonLd from "@/components/JsonLd";
@@ -28,11 +29,12 @@ export default function Home() {
         }}
       />
       <Hero />
+      <Stats />
       <Problem />
       <LeavesWith />
       <Proof />
-      <FreeStrip />
       <PriceBand />
+      <EventsStrip />
       <FaqList />
     </>
   );

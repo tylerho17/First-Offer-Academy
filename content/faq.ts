@@ -1,4 +1,5 @@
 import { depositLine, site } from "./site";
+import { afterProgram } from "./program";
 
 const tba = (v: string, fallback = "To be announced.") => (v ? v : fallback);
 
@@ -27,7 +28,7 @@ export const faqs: Faq[] = [
     home: true,
     parent: true,
     q: "What if they don't land an internship?",
-    a: "We don't promise offers; nobody honest can. We promise a fully executed search: a weekly session and 1:1, feedback on every piece of work, and every email, call, and interview on record.",
+    a: `We don't promise offers; nobody honest can. We promise a fully executed search: a weekly session and 1:1, feedback on every piece of work, and every email, call, and interview on record. ${afterProgram.full}`,
     link: { label: "What we promise, and what we don't", href: "/program#promise" },
   },
   {
@@ -48,6 +49,12 @@ export const faqs: Faq[] = [
     q: "Is the deposit refundable?",
     a: `${tba(site.refundTerms, "Exact refund dates will be published before deposits open.")} ${site.withdrawalPolicy}`.trim(),
     link: { label: "Read the Refund & Payment Policy", href: "/refunds" },
+  },
+  {
+    home: true,
+    parent: true,
+    q: "Is there financial aid?",
+    a: `${site.scholarship} Apply as usual, and book a parent call to ask about it.`,
   },
   {
     q: "Are community college students welcome?",

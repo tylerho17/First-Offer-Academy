@@ -5,17 +5,17 @@ const items = [
   {
     icon: <Lock />,
     title: "Access is gated.",
-    body: "The best recruiting help sits inside selective campus clubs. Most freshmen don't get in.",
+    body: "The best recruiting help sits inside selective campus clubs, and most freshmen don't get in.",
   },
   {
     icon: <Clock />,
     title: "The timeline is earlier than anyone says.",
-    body: "Internship recruiting for many roles starts sophomore year or earlier. Students find out too late.",
+    body: "Recruiting for many internships starts sophomore year or earlier, and most students find out too late.",
   },
   {
     icon: <Building />,
     title: "Career centers are built for everyone.",
-    body: "One advisor for thousands of students can't run your outreach, review every email, or mock-interview you weekly.",
+    body: "One advisor for thousands of students can't review every email or mock-interview you each week.",
   },
 ];
 

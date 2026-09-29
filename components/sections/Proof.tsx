@@ -2,7 +2,6 @@ import Link from "next/link";
 import { testimonials } from "@/content/testimonials";
 import { videosFor } from "@/content/videoTestimonials";
 import VideoTestimonial from "@/components/VideoTestimonial";
-import Ornament from "../Ornament";
 
 // Homepage proof: the lead parent video, one permitted student quote if one
 // exists, and a link to everything else on /results.
@@ -15,7 +14,6 @@ export default function Proof() {
     <section className="section" id="results" style={{ paddingTop: 0 }}>
       <div className="wrap">
         <div className="section-head">
-          <Ornament />
           <span className="eyebrow" style={{ display: "block" }}>Results</span>
           <h2>What changed, in a parent&apos;s words.</h2>
         </div>
@@ -35,7 +33,7 @@ export default function Proof() {
           )}
         </div>
         <p style={{ marginTop: 28 }}>
-          <Link href="/results" className="link-arrow">Read every result →</Link>
+          <Link href="/results" className="link-arrow">See all results →</Link>
         </p>
       </div>
     </section>

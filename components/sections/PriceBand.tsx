@@ -1,9 +1,12 @@
 import Link from "next/link";
 import { depositLine, site } from "@/content/site";
+import { afterProgram, leavesWith } from "@/content/program";
 import CallLink from "../CallLink";
 import PayButton, { DepositNote } from "../PayButton";
+import { Check } from "../Icons";
 
-// Homepage tuition and final call to action in one navy band.
+// Homepage tuition and final call to action in one navy band. The only sage
+// on the homepage: the price box and the Reserve button.
 export default function PriceBand() {
   const c = site.cohort;
   return (
@@ -12,7 +15,12 @@ export default function PriceBand() {
         <div>
           <span className="eyebrow">Tuition</span>
           <h2>{c.name} · {c.start}</h2>
-          <p className="lede">Reserve a seat now, or talk it through with Tyler first.</p>
+          <p className="includes-title">{c.price} includes</p>
+          <ul className="checks">
+            {leavesWith.items.map((i) => <li key={i}><Check />{i}</li>)}
+          </ul>
+          <p className="band-line">{afterProgram.short}</p>
+          <p className="band-line">{site.scholarship}</p>
           <div className="btn-row">
             <PayButton className="btn btn-sage" />
             <CallLink className="btn btn-cream-outline" />

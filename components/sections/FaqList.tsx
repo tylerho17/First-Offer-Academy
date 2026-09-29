@@ -4,9 +4,9 @@ import { getVideo } from "@/content/videoTestimonials";
 import VideoTestimonial from "@/components/VideoTestimonial";
 import { Plus } from "../Icons";
 
-// Default (homepage): the four questions marked `home`, capped at four.
+// Default (homepage): the questions marked `home`, capped at five.
 export default function FaqList({ all = false, parent = false, title = "Questions parents ask" }: { all?: boolean; parent?: boolean; title?: string }) {
-  const list = all ? faqs : parent ? faqs.filter((f) => f.parent) : faqs.filter((f) => f.home).slice(0, 4);
+  const list = all ? faqs : parent ? faqs.filter((f) => f.parent) : faqs.filter((f) => f.home).slice(0, 5);
   return (
     <section className="section" id="faq" style={all ? { paddingTop: 24 } : undefined}>
       <div className="wrap">

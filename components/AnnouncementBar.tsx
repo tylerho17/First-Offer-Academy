@@ -1,23 +1,13 @@
-import Link from "next/link";
 import { site } from "@/content/site";
-import { upcomingEvents, formatEventDate } from "@/content/events";
+import PayButton from "./PayButton";
 
 export default function AnnouncementBar() {
-  const next = upcomingEvents()[0];
+  const c = site.cohort;
   return (
     <div className="announce">
       <div className="wrap">
-        {next ? (
-          <>
-            <span>{formatEventDate(next.date).full.split(",").slice(0, 2).join(",")} — <strong>{next.title}</strong> —</span>
-            <a href={next.registerUrl} target="_blank" rel="noopener noreferrer">Register here</a>
-          </>
-        ) : (
-          <>
-            <span>{site.cohort.name} starts {site.cohort.start} — <strong>{site.cohort.seats} seats</strong> —</span>
-            <Link href="/apply">Apply here</Link>
-          </>
-        )}
+        <span>{c.name} starts {c.start} — <strong>{c.seats} seats</strong> —</span>
+        <PayButton className="">Reserve a seat</PayButton>
       </div>
     </div>
   );

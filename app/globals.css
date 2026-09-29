@@ -1154,11 +1154,15 @@ a.featured-download:hover { transform: translateY(-3px); }
 .band .includes-title, .plan-featured .includes-title { color: var(--cream); }
 
 /* ---------- Homepage (restructure, Sept 2026) ---------- */
-/* Founder line under the hero proof row: the homepage's only founder photo. */
-.founder-line { display: flex; align-items: center; gap: 14px; margin-top: 24px; font-size: 16px; line-height: 1.45; max-width: 560px; }
-.founder-line-photo { flex: none; width: 48px; height: 48px; border-radius: 999px; overflow: hidden; background: var(--cream); box-shadow: 0 0 0 1.5px var(--navy-line); }
-.founder-line-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; mix-blend-mode: multiply; }
-.founder-line a { font-weight: 600; text-decoration: underline; }
+/* Hero founder card: the homepage's only founder photo. */
+.founder-card { margin: 0; padding: 0; overflow: hidden; max-width: 380px; width: 100%; justify-self: center; }
+.founder-card-photo { background: var(--cream); aspect-ratio: 4 / 4.2; overflow: hidden; }
+.founder-card-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; mix-blend-mode: multiply; }
+.founder-card figcaption { display: grid; gap: 6px; padding: 20px 24px 24px; font-size: 16px; }
+.founder-card strong { font-size: 18px; color: var(--navy); }
+.stats-note { margin-top: 12px; font-size: 14px; }
+.band-line { margin-top: 16px; font-size: 18px; color: var(--cream); }
+.band .checks + .band-line { margin-top: 24px; }
 
 /* "What the student leaves with": title, one sentence, Read more. */
 .part-grid { list-style: none; padding: 0; margin: 0; align-items: stretch; gap: 20px; }
@@ -1170,12 +1174,6 @@ a.featured-download:hover { transform: translateY(-3px); }
 /* Proof: the lead video and, when one exists, a student quote. */
 .proof-grid { display: grid; gap: 20px; align-items: start; }
 @media (min-width: 900px) { .proof-grid { grid-template-columns: minmax(0, 560px) minmax(0, 1fr); } }
-
-/* Slim free-resources strip. */
-.free-strip { display: flex !important; flex-wrap: wrap; align-items: center; gap: 4px 14px; padding: 18px 24px; color: var(--navy) !important; }
-.free-strip .eyebrow { margin: 0; }
-.free-strip-text { flex: 1; font-weight: 600; font-size: 18px; text-decoration: underline; text-decoration-color: var(--navy-line); text-underline-offset: 4px; }
-.free-strip:hover .free-strip-text { text-decoration-color: currentColor; }
 
 /* /program hero fallback: the arch shape with cohort facts instead of a photo. */
 .arch-card { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; text-align: center; padding: 32px 24px; color: var(--navy); font-size: 18px; }
