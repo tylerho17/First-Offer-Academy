@@ -3,6 +3,7 @@ import Problem from "@/components/sections/Problem";
 import LeavesWith from "@/components/sections/LeavesWith";
 import Proof from "@/components/sections/Proof";
 import Stats from "@/components/sections/Stats";
+import EmployerStrip from "@/components/sections/EmployerStrip";
 import EventsStrip from "@/components/sections/EventsStrip";
 import PriceBand from "@/components/sections/PriceBand";
 import FaqList from "@/components/sections/FaqList";
@@ -30,6 +31,7 @@ export default function Home() {
       />
       <Hero />
       <Stats />
+      <EmployerStrip />
       <Problem />
       <LeavesWith />
       <Proof />
