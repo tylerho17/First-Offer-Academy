@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { articles } from "@/content/articles";
 import { downloadFile, downloads, stages } from "@/content/downloads";
+import TemplateLibrary from "@/components/TemplateLibrary";
 import { leadMagnet as m } from "@/content/leadMagnet";
-import GatedDownload from "@/components/GatedDownload";
 import Ornament from "@/components/Ornament";
 
 export const metadata: Metadata = {
@@ -21,7 +21,7 @@ export default function FreeResourcesPage() {
           <h1>Every template we use. Free.</h1>
           <p className="lede">
             These are the same templates students use in the program, week by week. Enter your
-            email once and every download opens right away after that.
+            email once and every download opens right away.
           </p>
         </div>
       </section>
@@ -30,45 +30,11 @@ export default function FreeResourcesPage() {
         <div className="wrap">
           <div className="section-head"><h2 id="download">Download</h2></div>
 
-          <div className="card featured-download">
-            <div className="pdf-cover is-small" aria-hidden="true">
-              <span>Free guide</span>
-              <strong>{m.title}</strong>
-            </div>
-            <div>
-              <span className="eyebrow">Featured · PDF · {m.pages} pages</span>
-              <h3 className="featured-title">{m.title}</h3>
-              <p className="playbook-sub">{m.subtitle}</p>
-              <p style={{ marginTop: 12 }}>
-                {m.chapters.length} chapters with every template included. <Link href="/playbook-pdf">See what&apos;s inside</Link>
-              </p>
-              <div style={{ marginTop: 20 }}>
-                <GatedDownload slug="playbook" href={m.file} label="Download: The First Offer Playbook (PDF)" className="btn btn-primary" event="playbook_download" />
-              </div>
-            </div>
-          </div>
-
-          {stages.map((stage) => {
-            const items = downloads.filter((d) => d.stage === stage);
-            if (!items.length) return null;
-            const id = `stage-${stage.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
-            return (
-              <section className="download-stage" key={stage} aria-labelledby={id}>
-                <h3 id={id} className="download-stage-title">{stage}</h3>
-                <ul className="download-grid">
-                  {items.map((d) => (
-                    <li className="card download-card" key={d.slug}>
-                      <span className="download-format">{d.format}{d.format === "CSV" ? " · opens in Sheets or Excel" : " · 1 page"}</span>
-                      <h4>{d.title}</h4>
-                      <p>{d.what}</p>
-                      <p className="download-week">Used in <Link href={`/curriculum/week-${d.week}`}>Week {d.week}</Link></p>
-                      <GatedDownload slug={d.slug} href={downloadFile(d)} label={`Download: ${d.title}`} />
-                    </li>
-                  ))}
-                </ul>
-              </section>
-            );
-          })}
+          <TemplateLibrary
+            templates={downloads.map((d) => ({ slug: d.slug, title: d.title, what: d.what, format: d.format, week: d.week, stage: d.stage, href: downloadFile(d) }))}
+            stages={stages}
+            playbook={{ href: m.file, title: m.title, subtitle: m.subtitle, pages: m.pages, chapters: m.chapters.length }}
+          />
         </div>
       </section>
 

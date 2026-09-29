@@ -1,4 +1,5 @@
-// Builds every file in content/downloads.ts into public/downloads/:
+// Builds every file in content/downloads.ts into private/templates/ (served
+// only by /api/templates/<slug>, behind the email gate):
 // CSVs for sheets and branded single-page PDFs for documents.
 //
 // Usage: npm run downloads
@@ -13,10 +14,10 @@ import { chromium } from "@playwright/test";
 
 register("./lib/ts-resolve.mjs", import.meta.url);
 const { root, esc, baseCss, renderBlocks, countPages, C } = await import("./lib/pdf.mjs");
-const { downloads, downloadFile, downloadsReviewedByTyler } = await import(path.join(root, "content/downloads.ts"));
+const { downloads, templateFileName, downloadsReviewedByTyler } = await import(path.join(root, "content/downloads.ts"));
 const { site } = await import(path.join(root, "content/site.ts"));
 
-const outDir = path.join(root, "public/downloads");
+const outDir = path.join(root, "private/templates");
 await mkdir(outDir, { recursive: true });
 
 // ---- CSV (RFC 4180, UTF-8 BOM so Excel opens it cleanly)
@@ -65,7 +66,7 @@ const page = await browser.newPage();
 let failed = 0;
 
 for (const d of downloads) {
-  const out = path.join(root, "public", downloadFile(d));
+  const out = path.join(outDir, templateFileName(d));
   if (d.format === "CSV") {
     await writeFile(out, csv(d));
     console.log(`Wrote ${path.relative(root, out)} (${d.rows.length} rows)`);

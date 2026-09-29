@@ -1,8 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // The gated Playbook PDF is read from disk by /api/playbook.
-  outputFileTracingIncludes: { "/api/playbook": ["./private/**"] },
+  // The gated Playbook PDF and templates are read from disk by their routes.
+  outputFileTracingIncludes: { "/api/playbook": ["./private/*.pdf"], "/api/templates/[slug]": ["./private/templates/**"] },
   async redirects() {
     return [
       { source: "/our-promise", destination: "/program", statusCode: 301 },
@@ -16,6 +16,8 @@ const nextConfig: NextConfig = {
       // The Playbook PDF is only served behind the email gate (/api/playbook).
       { source: "/downloads/first-offer-playbook.pdf", destination: "/playbook-pdf", statusCode: 301 },
       { source: "/downloads/freshman-recruiting-timeline.pdf", destination: "/playbook-pdf", statusCode: 301 },
+      // Templates are gated too (/api/templates/<slug>); old file paths land on their card.
+      { source: "/downloads/:slug([a-z0-9-]+).:ext(pdf|csv)", destination: "/free-resources#:slug", statusCode: 301 },
     ];
   },
 };

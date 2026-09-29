@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { headingId, relatedArticles, type Article } from "@/content/articles";
-import { downloadFile, getDownload } from "@/content/downloads";
+import { getDownload, templateAnchor } from "@/content/downloads";
 import ArticleCard from "./ArticleCard";
 import Blocks from "./Blocks";
 import GatedDownload from "./GatedDownload";
@@ -31,7 +31,7 @@ export default function ArticleView({ article: a }: { article: Article }) {
               </div>
               <div className="btn-row">
                 {files.map((d) => (
-                  <GatedDownload key={d.slug} slug={d.slug} href={downloadFile(d)} label={`Download: ${d.title}`} />
+                  <Link key={d.slug} href={templateAnchor(d)} className="btn btn-secondary">Get the template<span className="sr-only">: {d.title}</span></Link>
                 ))}
               </div>
             </div>
@@ -56,7 +56,7 @@ export default function ArticleView({ article: a }: { article: Article }) {
             </div>
             <div className="btn-row">
               {files.length ? (
-                files.map((d) => <GatedDownload key={d.slug} slug={d.slug} href={downloadFile(d)} label={`Download: ${d.title}`} />)
+                files.map((d) => <Link key={d.slug} href={templateAnchor(d)} className="btn btn-secondary">Get the template<span className="sr-only">: {d.title}</span></Link>)
               ) : (
                 <GatedDownload slug="playbook" href={leadMagnet.file} label="Download the Playbook (PDF)" event="playbook_download" />
               )}

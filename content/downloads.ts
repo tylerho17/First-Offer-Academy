@@ -1,8 +1,8 @@
-// Free downloads on /free-resources, guides, and curriculum weeks. Files are
-// generated into public/downloads/ by `npm run downloads`
-// (scripts/build-downloads.mjs): CSVs for sheets, branded single-page PDFs for
-// documents. Every download button sits behind the email gate
-// (components/GatedDownload.tsx); the file URLs themselves stay public.
+// Free templates on /free-resources. Files are generated into
+// private/templates/ by `npm run downloads` (scripts/build-downloads.mjs):
+// CSVs for sheets, branded single-page PDFs for documents. They are served
+// only by /api/templates/<slug>, after an email signup (the same gate as the
+// Playbook). Everywhere else links to /free-resources#<slug>.
 //
 // Content comes from content/toolkit.ts. No resume files for now: add them
 // here (and to the AssetSlug type) when they're ready.
@@ -22,7 +22,10 @@ export type CsvDownload = Base & { format: "CSV"; head: string[]; rows: string[]
 export type PdfDownload = Base & { format: "PDF"; subtitle: string; blocks: Block[] };
 export type Download = CsvDownload | PdfDownload;
 
-export const downloadFile = (d: Download) => `/downloads/${d.slug}.${d.format.toLowerCase()}`;
+// The file on disk (private/templates/), the gated URL, and the public anchor.
+export const templateFileName = (d: Download) => `${d.slug}.${d.format.toLowerCase()}`;
+export const downloadFile = (d: Download) => `/api/templates/${d.slug}`;
+export const templateAnchor = (d: Download) => `/free-resources#${d.slug}`;
 
 const EX = "EXAMPLE (delete this row)";
 

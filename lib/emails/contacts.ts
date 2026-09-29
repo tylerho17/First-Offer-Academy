@@ -6,14 +6,14 @@ import { Resend } from "resend";
 // truth, so Resend errors are only logged. A contact or segment membership
 // that already exists counts as success.
 //
-// The `source` and `role` properties must exist in the Resend dashboard
+// The `source`, `role`, and `template` properties must exist in the Resend dashboard
 // (Audience → Properties). If they don't, the contact is still created
 // without them.
 
 const isDuplicate = (e: { message: string; statusCode: number | null }) =>
   e.statusCode === 409 || /already (exists|in|a member)/i.test(e.message);
 
-type Signup = { email: string; firstName?: string | null; source?: string | null; role?: string | null };
+type Signup = { email: string; firstName?: string | null; source?: string | null; role?: string | null; template?: string | null };
 
 export async function addNewsletterContact(c: Signup) {
   const key = process.env.RESEND_API_KEY;
@@ -23,6 +23,7 @@ export async function addNewsletterContact(c: Signup) {
   const properties = {
     source: c.source ?? "newsletter",
     ...(c.role ? { role: c.role.toLowerCase() } : {}),
+    ...(c.template ? { template: c.template } : {}),
   };
 
   try {

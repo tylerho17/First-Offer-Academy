@@ -1,7 +1,7 @@
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { NextResponse, type NextRequest } from "next/server";
-import { COOKIE_MAX_AGE, DOWNLOAD_COOKIE, gateOpen, verifyDownload } from "@/lib/downloadToken";
+import { DOWNLOAD_COOKIE, gateOpen, setDownloadCookies, verifyDownload } from "@/lib/downloadToken";
 
 // The Playbook PDF, behind the email gate. The file lives in private/, not
 // public/, so there is no direct URL to it.
@@ -21,7 +21,7 @@ export async function GET(req: NextRequest) {
   });
   // Opened from the email link: remember this browser too.
   if (fromLink && verifyDownload(fromLink)) {
-    res.cookies.set(DOWNLOAD_COOKIE, fromLink, { httpOnly: true, secure: true, sameSite: "lax", maxAge: COOKIE_MAX_AGE, path: "/" });
+    setDownloadCookies(res, fromLink);
   }
   return res;
 }

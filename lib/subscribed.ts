@@ -2,38 +2,32 @@
 
 import { useSyncExternalStore } from "react";
 
-// Remembers, in this browser only, that the visitor already gave their email
-// for a download, so later downloads skip the form. If storage is blocked
-// (private mode, cleared site data), reads return false and we just ask again.
+// Whether this browser already gave an email for a download: the readable
+// foa_unlocked cookie (365 days) that /api/subscribe sets next to the signed
+// httpOnly one the file routes check. Later downloads then skip the form.
 
-const KEY = "foa-subscribed";
 const EVENT = "foa-subscribed";
 
 export function isSubscribed(): boolean {
   try {
-    return window.localStorage.getItem(KEY) === "1";
+    return document.cookie.split("; ").includes("foa_unlocked=1");
   } catch {
     return false;
   }
 }
 
+// Called after a signup succeeds (the response already set the cookies), or
+// when signup isn't connected (local dev), so the page re-renders unlocked.
+let devUnlocked = false;
 export function rememberSubscribed() {
-  try {
-    window.localStorage.setItem(KEY, "1");
-    window.dispatchEvent(new Event(EVENT));
-  } catch {
-    // Storage unavailable: the next download asks again.
-  }
+  if (!isSubscribed()) devUnlocked = true;
+  window.dispatchEvent(new Event(EVENT));
 }
 
 function subscribe(onChange: () => void) {
-  window.addEventListener("storage", onChange);
   window.addEventListener(EVENT, onChange);
-  return () => {
-    window.removeEventListener("storage", onChange);
-    window.removeEventListener(EVENT, onChange);
-  };
+  return () => window.removeEventListener(EVENT, onChange);
 }
 
-// false during server render and hydration, then the stored value.
-export const useSubscribed = () => useSyncExternalStore(subscribe, isSubscribed, () => false);
+// false during server render and hydration, then the cookie value.
+export const useSubscribed = () => useSyncExternalStore(subscribe, () => isSubscribed() || devUnlocked, () => false);
