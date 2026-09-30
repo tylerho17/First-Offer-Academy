@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import Stats from "@/components/sections/Stats";
-import LogoStrip from "@/components/sections/LogoStrip";
+import LogoMarquee from "@/components/sections/LogoMarquee";
 import StudentCard from "@/components/StudentCard";
 import StudentVideosGrid from "@/components/sections/StudentVideosGrid";
 import ResultsGrid from "@/components/sections/ResultsGrid";
@@ -24,7 +24,7 @@ export default function ResultsPage() {
         title="Real students. Their words, with their permission."
         lede="Every card on this page is from a student or parent who agreed in writing to share it. First names only."
       />
-      <LogoStrip />
+      <LogoMarquee />
       <Stats />
       {students.length > 0 && (
         <section className="section" style={{ paddingTop: 24 }} aria-labelledby="students-title">

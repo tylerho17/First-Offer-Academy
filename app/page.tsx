@@ -3,7 +3,7 @@ import Problem from "@/components/sections/Problem";
 import LeavesWith from "@/components/sections/LeavesWith";
 import Testimonials from "@/components/sections/Testimonials";
 import Stats from "@/components/sections/Stats";
-import LogoStrip from "@/components/sections/LogoStrip";
+import LogoMarquee from "@/components/sections/LogoMarquee";
 import EventsStrip from "@/components/sections/EventsStrip";
 import PriceBand from "@/components/sections/PriceBand";
 import FaqList from "@/components/sections/FaqList";
@@ -34,7 +34,7 @@ export default function Home() {
       />
       <Hero />
       <Stats />
-      <LogoStrip />
+      <LogoMarquee />
       <Problem />
       <LeavesWith />
       <Testimonials />

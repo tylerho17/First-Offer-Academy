@@ -226,31 +226,44 @@ export function companyNamer() {
   };
 }
 
-// ---------------------------------------------------------------- logo strip
+// ---------------------------------------------------------------- logo marquee
 
-export type CompanyLogo = {
-  company: string; // exactly as it appears in student data
-  slug: string; // public/logos/<slug>.svg
-  pairedWith?: string; // renders only alongside this company (Blackstone with Tricon)
+// Companies as shown in the marquee: "Sellside Group (M&A Analyst)" -> "Sellside Group".
+export const companyDisplay = (name: string) => name.replace(/\s*\([^)]*\)\s*$/, "").trim();
+
+// Companies with an official SVG in public/logos/<slug>.svg. Every other
+// company renders as a text wordmark. Blackstone isn't in the student data;
+// it renders only beside Tricon (Tyler's call), with the portfolio caption.
+export const companyLogos: Record<string, string> = {
+  PIMCO: "pimco",
+  "Morgan Stanley": "morgan-stanley",
+  "JPMorgan Chase": "jpmorgan-chase",
+  "Wells Fargo": "wells-fargo",
+  "U.S. Bank": "us-bank",
+  Blackstone: "blackstone",
+  Tricon: "tricon",
+  BridgeBio: "bridgebio",
+  "Sila Nanotechnologies": "sila",
+  "Mercer Advisors": "mercer-advisors",
 };
 
-// Strip order. A logo renders only when a visible student with employer
-// permission lists the company (or, for a paired logo, its partner).
-export const companyLogos: CompanyLogo[] = [
-  { company: "PIMCO", slug: "pimco" },
-  { company: "Morgan Stanley", slug: "morgan-stanley" },
-  { company: "JPMorgan Chase", slug: "jpmorgan-chase" },
-  { company: "Wells Fargo", slug: "wells-fargo" },
-  { company: "U.S. Bank", slug: "us-bank" },
-  { company: "Blackstone", slug: "blackstone", pairedWith: "Tricon" },
-  { company: "Tricon", slug: "tricon" },
-  { company: "BridgeBio", slug: "bridgebio" },
-  { company: "Sila Nanotechnologies", slug: "sila" },
-];
+export type MarqueeCompany = { name: string; slug?: string };
 
-export function visibleLogos(): CompanyLogo[] {
-  const named = namedCompanies();
-  return companyLogos.filter((l) => named.has(l.pairedWith ?? l.company));
+// Every company a visible student (with employer permission) lists, once,
+// logos and text wordmarks interleaved so the row reads evenly.
+export function marqueeCompanies(): MarqueeCompany[] {
+  const names = [...new Set(visibleStudents().filter((s) => s.employerPermission).flatMap((s) => [s.headline, ...s.otherCompanies]).map(companyDisplay))];
+  const withLogo = names.filter((n) => companyLogos[n]).sort((a, b) => Object.keys(companyLogos).indexOf(a) - Object.keys(companyLogos).indexOf(b));
+  const text = names.filter((n) => !companyLogos[n]);
+  const ordered: string[] = [];
+  while (withLogo.length || text.length) {
+    if (withLogo.length) ordered.push(withLogo.shift()!);
+    if (text.length) ordered.push(text.shift()!);
+  }
+  // Blackstone sits directly before Tricon.
+  const i = ordered.indexOf("Tricon");
+  if (i >= 0) ordered.splice(i, 0, "Blackstone");
+  return ordered.map((name) => ({ name, slug: companyLogos[name] }));
 }
 
 // ------------------------------------------------------------ student videos
