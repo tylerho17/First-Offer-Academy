@@ -16,7 +16,12 @@ export type Student = {
   role: string;
   otherCompanies: string[];
   quote: string;
-  headshot: string | null; // /public path; a missing file falls back to an initial
+  headshot: string | null; // /public path (the original); a missing file falls back to an initial
+  // Crop tweaks for scripts/crop-headshots.mjs: zoom > 1 makes the face larger;
+  // position shifts the crop center, as a fraction of the photo circle's
+  // diameter (negative y moves up).
+  headshotZoom?: number;
+  headshotPosition?: { x?: number; y?: number };
   homepage: boolean;
   label?: string; // shown after the headline company, e.g. "Full-time offer"
   approved: boolean;
@@ -44,6 +49,8 @@ export const students: Student[] = [
     otherCompanies: ["Mercer Advisors"],
     quote: "He put me through multiple mock interviews with challenging questions and helped me understand what I needed to know going into each interview.",
     headshot: "/images/students/jack.png",
+    headshotZoom: 0.82,
+    headshotPosition: { y: -0.12 },
     homepage: false,
     label: "Full-time offer",
     approved: true,
@@ -57,6 +64,8 @@ export const students: Student[] = [
     otherCompanies: ["JPMorgan Chase", "U.S. Bank"],
     quote: "I started applying what he taught me and within a week I had set up 5 coffee chats and by the end of the recruitment cycle had landed offers at the companies I interviewed with.",
     headshot: "/images/students/bella.png",
+    headshotZoom: 1.35,
+    headshotPosition: { y: -0.14 },
     homepage: false,
     approved: true,
     employerPermission: true,
@@ -69,6 +78,8 @@ export const students: Student[] = [
     otherCompanies: ["Concordia Capital", "L&B Capital"],
     quote: "Having someone I could bounce ideas off of made navigating finance recruiting easier and much less intimidating in the beginning.",
     headshot: "/images/students/zach.png",
+    headshotZoom: 0.94,
+    headshotPosition: { y: -0.13 },
     homepage: false,
     approved: true,
     employerPermission: true,
@@ -81,6 +92,8 @@ export const students: Student[] = [
     otherCompanies: ["Black Legend Capital", "The Amazing Group"],
     quote: "He's tough; if something's off, he'll say so directly and push me to do better. But there's no question too small for him.",
     headshot: "/images/students/kim.png",
+    headshotZoom: 1.05,
+    headshotPosition: { y: -0.1 },
     homepage: true,
     approved: true,
     employerPermission: true,
@@ -93,6 +106,8 @@ export const students: Student[] = [
     otherCompanies: ["The Amazing Group", "Ditto"],
     quote: "His mentorship has given me a much stronger understanding of the industry and made the recruiting process feel more structured and manageable.",
     headshot: "/images/students/vasavi.png",
+    headshotZoom: 1.3,
+    headshotPosition: { y: -0.12 },
     homepage: false,
     approved: true,
     employerPermission: true,
@@ -117,6 +132,8 @@ export const students: Student[] = [
     otherCompanies: ["Sellside Group (M&A Analyst)"],
     quote: "As a first-generation student, breaking into the finance industry felt overwhelming… I went from feeling completely unprepared to securing my first offers with total confidence.",
     headshot: "/images/students/nathaniel.png",
+    headshotZoom: 0.96,
+    headshotPosition: { y: -0.13 },
     homepage: true,
     approved: true,
     employerPermission: true,
@@ -129,6 +146,8 @@ export const students: Student[] = [
     otherCompanies: ["Concordia Capital"],
     quote: "One of Tyler's biggest strengths is that he is able to meet you where you are.",
     headshot: "/images/students/gavin.png",
+    headshotZoom: 0.82,
+    headshotPosition: { y: -0.14 },
     homepage: false,
     approved: true,
     employerPermission: true,
@@ -141,6 +160,8 @@ export const students: Student[] = [
     otherCompanies: ["Xnergy", "Smart Asset Capital"],
     quote: "Even during his own recruiting, working eight-hour days and grinding through mocks, he made time for me and the rest of the freshmen. He's one of the least transactional people I know.",
     headshot: "/images/students/james.png",
+    headshotZoom: 0.94,
+    headshotPosition: { y: -0.13 },
     homepage: false,
     approved: true,
     employerPermission: true,
@@ -153,6 +174,8 @@ export const students: Student[] = [
     otherCompanies: ["Concordia Capital", "Futuraiser"],
     quote: "Coming into college, I had no direction on my career path. After meeting Tyler, everything became clear.",
     headshot: "/images/students/ishank.png",
+    headshotZoom: 1.08,
+    headshotPosition: { y: -0.1 },
     homepage: false,
     approved: true,
     employerPermission: true,
@@ -165,11 +188,18 @@ export const students: Student[] = [
     otherCompanies: [],
     quote: "He knows how to push people in a way that's gentle but still serious, and he's always made me want to work harder and do things I never would've had the confidence to do before.",
     headshot: "/images/students/maddie.png",
+    headshotZoom: 1.28,
+    headshotPosition: { y: -0.15 },
     homepage: false,
     approved: true,
     employerPermission: true,
   },
 ];
+
+// The circle-cropped 400px webp made from `headshot` by
+// scripts/crop-headshots.mjs.
+export const croppedHeadshot = (s: Student) =>
+  s.headshot ? `/images/students/cropped/${s.headshot.split("/").pop()!.replace(/\.\w+$/, "")}.webp` : null;
 
 // Homepage quote cards, in this order.
 export const HOMEPAGE_ORDER = ["Nathaniel", "Kim", "Pranav"];

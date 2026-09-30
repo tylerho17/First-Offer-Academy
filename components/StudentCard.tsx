@@ -1,4 +1,4 @@
-import { companyNamer, isVisible, type Student } from "@/content/students";
+import { companyNamer, croppedHeadshot, isVisible, type Student } from "@/content/students";
 import StudentAvatar from "./StudentAvatar";
 
 // A pilot student's quote card. `showAlso` adds their other companies
@@ -11,7 +11,7 @@ export default function StudentCard({ s, showAlso = false }: { s: Student; showA
   return (
     <figure className="card student-card">
       {!s.approved && <span className="pending-badge">Pending permission</span>}
-      <StudentAvatar name={s.firstName} src={s.headshot} />
+      <StudentAvatar name={s.firstName} cropped={croppedHeadshot(s)} original={s.headshot} />
       <blockquote>{s.quote}</blockquote>
       <figcaption>
         <strong>{s.firstName}</strong>
