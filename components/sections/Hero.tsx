@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import CallLink from "../CallLink";
 import LinkedInLink from "../LinkedInLink";
 import PayButton from "../PayButton";
@@ -18,6 +19,10 @@ export default function Hero() {
           <div className="btn-row">
             <PayButton />
             <CallLink />
+          </div>
+          <div className="audience-split">
+            <Link href="/program" className="audience-card">I&apos;m a student <span aria-hidden="true">→</span></Link>
+            <Link href="/parents" className="audience-card">I&apos;m a parent <span aria-hidden="true">→</span></Link>
           </div>
         </div>
 

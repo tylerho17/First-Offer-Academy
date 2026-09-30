@@ -1,4 +1,5 @@
 import { stats, statsNote } from "@/content/stats";
+import CountUp from "./CountUp";
 
 // The real stats from content/stats.ts. A stat with an empty value is skipped.
 export default function StatsRow() {
@@ -9,7 +10,7 @@ export default function StatsRow() {
       <div className="stats" style={{ ["--n" as string]: shown.length } as React.CSSProperties}>
         {shown.map((s) => (
           <div className="stat" key={s.label}>
-            <strong>{s.value}</strong>
+            <CountUp value={s.value} />
             <span>{s.label}{s.sub && <small>{s.sub}</small>}</span>
           </div>
         ))}

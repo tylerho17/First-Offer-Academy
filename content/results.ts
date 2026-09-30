@@ -1,4 +1,5 @@
-// Every card on /results and the homepage results section. Add entries here.
+// Parent video cards on /results and the homepage (Tom). Student quote cards
+// are in content/students.ts.
 //
 // A card renders only when permissions.quote is true (written permission on
 // file). The employer renders only when permissions.employer is true, the
@@ -30,12 +31,6 @@ export type Result = {
   permissions: { quote: boolean; employer: boolean; photo: boolean };
 };
 
-// TODO(Tyler): [[RESULTS_ENTRIES]]: add student outcomes here, newest at
-// the top (that's the order they render). Example:
-// { id: "jamie-l", type: "student", outcome: "Landed a marketing internship, freshman year",
-//   firstName: "Jamie", lastInitial: "L", major: "Business", track: "marketing",
-//   quote: "…", permissions: { quote: true, employer: false, photo: false } },
-const students: Result[] = [];
 
 // Custom thumbnails (in /public) that replace YouTube's frame, e.g. to hide
 // the Zoom name tag.
@@ -61,8 +56,9 @@ const parents: Result[] = videoTestimonials
     permissions: { quote: true, employer: false, photo: false },
   }));
 
-// Students first (newest first), then parents.
-export const results: Result[] = [...students, ...parents];
+// Pilot students live in content/students.ts (StudentCard); these are the
+// parent video cards.
+export const results: Result[] = parents;
 
 export const permittedResults = () => results.filter((r) => r.permissions.quote);
 

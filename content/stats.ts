@@ -9,8 +9,8 @@ export const stats: Stat[] = [
   { value: String(PILOT_STUDENTS), label: "students coached in the pilot" },
   {
     value: `${Math.round((PILOT_LANDED / PILOT_STUDENTS) * 100)}%`,
-    label: "landed an internship in their first year",
-    sub: `${PILOT_LANDED} of ${PILOT_STUDENTS} pilot students`,
+    label: "landed an internship or offer",
+    sub: `${PILOT_LANDED} of ${PILOT_STUDENTS}`,
   },
   { value: String(site.cohort.seats), label: "seats in the founding cohort" },
 ];

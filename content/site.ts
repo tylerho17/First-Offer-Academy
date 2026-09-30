@@ -8,7 +8,8 @@ const installment = "$1,700";
 // Students coached to internships in their first year of college, before the
 // academy existed. Every page that states the pilot number reads this.
 export const PILOT_STUDENTS = 12;
-// How many of them landed an internship in their first year.
+// How many of them landed an internship or an offer (some pilot students were
+// juniors or seniors, and one result is a full-time offer).
 export const PILOT_LANDED = 12;
 
 export const site = {

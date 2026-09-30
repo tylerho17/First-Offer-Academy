@@ -1,9 +1,9 @@
 import Hero from "@/components/sections/Hero";
 import Problem from "@/components/sections/Problem";
 import LeavesWith from "@/components/sections/LeavesWith";
-import Proof from "@/components/sections/Proof";
+import Testimonials from "@/components/sections/Testimonials";
 import Stats from "@/components/sections/Stats";
-import EmployerStrip from "@/components/sections/EmployerStrip";
+import LogoStrip from "@/components/sections/LogoStrip";
 import EventsStrip from "@/components/sections/EventsStrip";
 import PriceBand from "@/components/sections/PriceBand";
 import FaqList from "@/components/sections/FaqList";
@@ -34,10 +34,10 @@ export default function Home() {
       />
       <Hero />
       <Stats />
-      <EmployerStrip />
+      <LogoStrip />
       <Problem />
       <LeavesWith />
-      <Proof />
+      <Testimonials />
       <PriceBand />
       <EventsStrip />
       <FaqList />
