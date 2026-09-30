@@ -1,12 +1,8 @@
 import Link from "next/link";
-import { depositLine, site } from "@/content/site";
-import { afterProgram, leavesWith } from "@/content/program";
-import CallLink from "../CallLink";
-import PayButton, { DepositNote } from "../PayButton";
-import { Check } from "../Icons";
+import { depositRefundLine, site } from "@/content/site";
 
-// Homepage tuition and final call to action in one navy band. The only sage
-// on the homepage: the price box and the Reserve button.
+// Homepage price band: navy, cream text, the sage price box and sage Apply
+// (the only sage on the homepage).
 export default function PriceBand() {
   const c = site.cohort;
   return (
@@ -14,23 +10,21 @@ export default function PriceBand() {
       <div className="wrap price-grid">
         <div>
           <span className="eyebrow">Tuition</span>
-          <h2>{c.name} · {c.start}</h2>
-          <p className="includes-title">{c.price} includes</p>
-          <ul className="checks">
-            {leavesWith.items.map((i) => <li key={i}><Check />{i}</li>)}
-          </ul>
-          <p className="band-line">{afterProgram.short}</p>
-          <p className="band-line">{site.scholarship}</p>
+          <h2>{c.price} · everything included</h2>
+          <p className="band-line">
+            Week 0 pre-work · 8-week training · 4-week Offer Sprint · weekly check-ins and mocks until your offer · coached
+            Extern applications, fee covered
+          </p>
+          <p className="band-line"><strong>{c.name}: {c.start} · {c.seats} seats</strong></p>
+          <p className="band-small">{depositRefundLine()}</p>
           <div className="btn-row">
-            <PayButton className="btn btn-sage" />
-            <CallLink className="btn btn-cream-outline" />
+            <Link href="/apply" className="btn btn-sage">Apply</Link>
           </div>
-          <DepositNote />
         </div>
         <div className="price-box">
           <span className="amount">{c.price}</span>
-          <span className="plan">or {c.plan}</span>
-          <span className="seats">{c.seats} seats. {depositLine()}</span>
+          <span className="plan">everything included</span>
+          <span className="seats">{c.deposit} deposit, then {c.balance} {c.balanceDue}.</span>
           <Link href="/refunds" className="price-policy">Refund &amp; payment policy</Link>
         </div>
       </div>

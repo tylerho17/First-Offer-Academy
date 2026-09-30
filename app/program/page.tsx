@@ -9,7 +9,7 @@ import ProgramCta from "@/components/sections/program/ProgramCta";
 export const metadata: Metadata = {
   title: "The Program",
   description:
-    "How the 8-week First Offer Academy program works: six parts, a week-by-week plan, three tracks, and what we promise and don't.",
+    "How First Offer Academy works: Week 0 pre-work, 8 weeks of training on six parts, a 4-week Offer Sprint, weekly check-ins and mocks until an offer, three tracks, and offer-or-refund.",
 };
 
 export default function ProgramPage() {

@@ -6,7 +6,7 @@ export const contentType = "image/png";
 
 export default function Image() {
   return brandImage({
-    label: "8-week internship program for freshmen and sophomores",
-    headline: "Your first internship shouldn't depend on which club lets you in.",
+    label: "Internship coaching for freshmen and sophomores",
+    headline: "Coached until your first offer.",
   });
 }

@@ -44,9 +44,9 @@ export const guide: Guide = {
     h3("Professors and campus"),
     p("Professors, research labs, and campus offices often have small projects: data entry that turns into analysis, a literature review, a survey, a communications plan. These count when they're defined and end with something you produced."),
 
-    h2("Project ideas by track"),
+    h2("Project ideas by field"),
     p("If you're pitching your own project, it helps to have ideas ready. Here are scoped projects that fit in two weeks and produce something you can show. Match the idea to what the person told you on the call; the best pitch solves a problem they mentioned."),
-    table("Two-week project ideas", ["Track", "Project", "Deliverable"], [
+    table("Two-week project ideas", ["Field", "Project", "Deliverable"], [
       ["Finance", "Comparable-companies snapshot for a sector the firm covers", "A one-page table of 6–8 companies with key metrics and three observations"],
       ["Finance", "Prospect list for a wealth manager or advisory firm", "25 potential clients with a one-line fit note each"],
       ["Marketing", "Social media audit", "A 6-slide review of the account with three content tests to try"],
@@ -92,7 +92,7 @@ export const guide: Guide = {
     p("An externship is a perfect behavioral story: a clear situation, specific actions, a result, and a lesson. It also answers \"what have you done in this field?\" and gives you real material for \"why this industry.\" Prepare a two-minute version: what the project was, what you did, what you found, what you'd do differently, and what it taught you about the work."),
 
     h2("How externships fit the program"),
-    p("In the 8-week program, externship applications run through Weeks 3–4, submitted by Week 5: we find the programs that are open, coach the written application, the recorded video, and the live interview, and cover the fee. Submitting them is part of the Standard's level gates; admission is the externship program's decision, not ours. Every week, the scoreboard and the tracker show exactly where each student is."),
+    p("In the program, externship applications run through Weeks 3–4, submitted by Week 5: we find the programs that are open, coach the written application, the recorded video, and the live interview, and cover the fee. Submitting them is part of the Standard's level gates; admission is the externship program's decision, not ours. Every week, the scoreboard and the tracker show exactly where each student is."),
 
     h2("After it's done: turning it into the next step"),
     p("The project isn't finished when you hit send. What you do in the following weeks decides whether it stays a resume line or becomes a relationship."),

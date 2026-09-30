@@ -43,7 +43,7 @@ export default async function ParentsPage() {
           <ul className="parent-see">
             <li><Check />A one-page progress report every two weeks</li>
             <li><Check />The Week 8 family meeting, where your student presents their results</li>
-            <li><Check />Weekly check-ins after Week 8, until an offer or {afterProgram.until}</li>
+            <li><Check />Weekly check-ins and mocks after Week 12, until an offer or {afterProgram.until}</li>
           </ul>
           <div className="btn-row">
             <PayButton />
@@ -122,9 +122,9 @@ export default async function ParentsPage() {
             <span className="eyebrow">Payment and deposit</span>
             <h2>{c.name} · {c.start}</h2>
             <ul className="checks">
-              <li><Check />Pay in full: {c.price}</li>
-              <li><Check />Or a payment plan: {c.plan}</li>
-              <li><Check />A {c.deposit} deposit holds a seat and counts toward tuition. It&apos;s fully refundable until {site.depositRefundDeadline}.</li>
+              <li><Check />{c.price}, everything included</li>
+              <li><Check />A {c.deposit} deposit holds a seat and counts toward tuition. It&apos;s fully refundable through {site.depositRefundDeadline}.</li>
+              <li><Check />The {c.balance} balance is due {c.balanceDue}</li>
               <li><Check />Payments are processed by Stripe; we never see your card number</li>
             </ul>
             <div className="btn-row">
@@ -138,7 +138,7 @@ export default async function ParentsPage() {
           </div>
           <div className="price-box">
             <span className="amount">{c.price}</span>
-            <span className="plan">or {c.plan}</span>
+            <span className="plan">everything included</span>
             <span className="seats">{c.seats} seats. {depositLine()}</span>
           </div>
         </div>
@@ -156,6 +156,7 @@ export default async function ParentsPage() {
             <li><Minus />An internship at a specific company</li>
             <li><Minus />Any particular outcome or timeline</li>
             <li className="is-yes"><Check />A fully executed, documented search</li>
+            <li className="is-yes"><Check />Offer-or-refund, if every weekly minimum is met</li>
           </ul>
         </div>
       </section>

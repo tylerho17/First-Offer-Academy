@@ -45,9 +45,9 @@ export const guide: Guide = {
       "Early-insight and diversity program listings at larger firms (put these in A or B depending on fit).",
     ),
 
-    h2("What a list looks like by track"),
-    p("The tiers work the same for everyone, but the firms in each tier look different depending on your track. Here's the general shape. Swap in real names from your own research."),
-    table("Firm types by track and tier", ["Track", "A tier (relationships)", "B tier (realistic)", "C tier (safe)"], [
+    h2("What a list looks like by field"),
+    p("The tiers work the same for everyone, but the firms in each tier look different depending on your field. Here's the general shape. Swap in real names from your own research."),
+    table("Firm types by field and tier", ["Field", "A tier (relationships)", "B tier (realistic)", "C tier (safe)"], [
       ["Finance", "Large banks and well-known investment firms with early-insight programs", "Boutique advisory firms, middle-market banks, local wealth managers and family offices", "Local accounting firms, a campus investment fund, small financial planners"],
       ["Marketing", "Big consumer brands and well-known agencies", "Mid-size agencies, growing DTC brands, local marketing teams", "Local businesses, campus offices, small startups that need social or content help"],
       ["Accounting", "Large public accounting firms with early-identification programs", "Mid-size and regional accounting firms, corporate accounting teams at local companies", "Small local CPA firms, a campus accounting society, bookkeeping for small businesses"],

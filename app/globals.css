@@ -1167,3 +1167,20 @@ details.more summary { cursor: pointer; font-weight: 600; color: var(--dusty); f
 .family-label { font-size: 14px; color: var(--dusty); font-weight: 600; margin-bottom: 10px; }
 .story-videos { grid-auto-flow: dense; }
 @media (min-width: 1024px) { .story-videos > li.is-pair { grid-column: span 2; } }
+
+/* ---------- Final offer (Sept 30, 2026) ---------- */
+.hero-proof { margin-top: 20px; font-size: 15px; font-weight: 600; color: var(--navy); max-width: 620px; }
+.how-grid { list-style: none; padding: 0; margin: 0; display: grid; gap: 16px; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 700px) { .how-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1024px) { .how-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.how-card { display: grid; gap: 6px; align-content: start; }
+.how-n { font-family: var(--display); font-weight: 600; font-size: 28px; color: var(--navy); line-height: 1; }
+.how-when { font-size: 13px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--dusty); }
+.how-card h3 { margin: 0; }
+.how-card p { font-size: 17px; }
+.band-small { margin-top: 12px; font-size: 15px; color: var(--cream); }
+.band-line strong { color: var(--cream); }
+.refund-panel { max-width: 860px; margin: 0 auto; }
+.refund-panel h3 { font-family: var(--display); font-size: 28px; }
+.refund-panel p { margin-top: 10px; }
+.refund-link { font-size: 15px; }

@@ -2,12 +2,36 @@ import { modules } from "./programOverview";
 
 // Program facts. Source of truth: docs/CURRICULUM-SOURCE.md.
 
-// After Week 8: weekly check-ins until an offer or the end date. Used on the
-// homepage price band, /parents, /pricing, and the FAQ.
+// The offer, locked Sept 30, 2026: Week 0 pre-work, Weeks 1–8 training,
+// Weeks 9–12 Offer Sprint, then weekly check-ins and mocks until an offer.
+
+// After Week 12: a weekly check-in and mock until an offer or the end date.
+// Used on /parents, /pricing, the FAQ, and the offer-or-refund terms.
 export const afterProgram = {
   until: "May 31, 2027",
-  short: "After Week 8: weekly check-ins until an offer or May 31, 2027.",
-  full: "After Week 8, every student gets a free weekly 30-minute check-in call and progress update until they receive an internship offer (paid or unpaid) or May 31, 2027, whichever comes first. Students stay on the weekly maintenance minimum to keep the calls.",
+  short: "After Week 12: a weekly 30-minute check-in and mock interview until an offer or May 31, 2027.",
+  full: "After Week 12, every student gets a weekly 30-minute check-in and a weekly mock interview until they receive an internship offer or May 31, 2027, whichever comes first.",
+};
+
+// Weeks 9–12.
+export const offerSprint = {
+  weeks: "Weeks 9–12",
+  name: "Offer Sprint",
+  summary: "Technical and behavioral mocks, plus prep and debriefs for every networking call you land.",
+};
+
+// Offer-or-refund: the only refund-on-outcome language on the site (never
+// describe it any other way). The FAQ, /refunds, and /terms read these.
+export const offerOrRefund = {
+  title: "Offer-or-refund",
+  body: "Do the work and we stand behind it. If your student hits every weekly minimum through May 31, 2027 and doesn't receive an internship offer, paid or unpaid, we refund the full $5,000.",
+  terms:
+    "Any internship offer, paid or unpaid, counts, including one that's declined. Minimums must be met and logged every week (one makeup week allowed). Dropping, pausing, or missing minimums past the makeup week ends eligibility. Refund requests are due by June 15, 2027 and paid within 30 days.",
+  minimums: {
+    training: "Weeks 1–8: 50 outreach emails, follow-ups on schedule, 3 networking calls, every session and 1:1 attended, assignments in by Sunday 11:59 pm, scheduled mocks completed.",
+    after: "Weeks 9–12 and after: 25 outreach emails, follow-ups on schedule, 2 networking calls, weekly mock completed, applications logged.",
+    makeup: "One makeup week allowed.",
+  },
 };
 
 export { tracks } from "./tracks";
@@ -33,22 +57,22 @@ export const leavesWith = {
 
 // What tuition buys, in plain terms. Shown on /pricing under the price.
 export const pricingIncludes = [
-  "90-minute group session every week",
-  "60-minute 1:1 every week",
-  "A pod of three, with weekly minimums and a Sunday scoreboard",
-  "Progress report for parents every two weeks",
-  "Week 8 family meeting",
-  "Winter break pre-work, starting the day you enroll",
-  "Externship applications, coached and paid for",
+  "Week 0 pre-work over winter break, starting the day you enroll",
+  "8-week training: a 90-minute group session and a 60-minute 1:1 every week, and a pod of three",
+  "4-week Offer Sprint: technical and behavioral mocks, networking call prep and debriefs",
+  "A weekly 30-minute check-in and mock interview until your offer or May 31, 2027",
+  "Progress report for parents every two weeks, and the Week 8 family meeting",
+  "Coached Extern externship applications, Extern fee covered",
+  "Offer-or-refund: hit every weekly minimum and get no offer by May 31, 2027, and we refund the full $5,000",
 ];
 
 // The externship block. Applications and coaching are what we provide;
 // admission is the externship program's decision. Never write this as
 // "externship included" or "every student gets an externship".
 export const externshipBlock = {
-  title: "Externship applications, covered.",
+  title: "Extern applications, fee covered.",
   body:
-    "Every student applies to real externship programs — remote projects with actual companies — with our coaching on the written application, the recorded video, and the live interview. We cover the cost. These are competitive and admission is each program's decision, but a student who lands one finishes the program with real company work on their resume before their first internship interview.",
+    "Every student applies to Extern externships — remote projects with real companies — with our coaching on the written application, the recorded video, and the live interview. We cover the Extern fee. These are competitive and admission is Extern's decision, but a student who lands one finishes with real company work on their resume before their first internship interview.",
 };
 
 export const weekly = [
@@ -84,7 +108,7 @@ export const comparison: { row: string; us: Cell; center: Cell; clubs: Cell; alo
   { row: "Outreach System: emails reviewed every week", us: true, center: "some", clubs: "some", alone: false },
   { row: "Story Bank: stories edited line by line", us: true, center: "some", clubs: "some", alone: false },
   { row: "Track Technicals for your field", us: true, center: "some", clubs: "some", alone: false },
-  { row: "Externship applications, coached and paid for", us: true, center: false, clubs: false, alone: false },
+  { row: "Coached Extern applications, fee covered", us: true, center: false, clubs: false, alone: false },
   { row: "Interview Reps: a weekly 1:1 and graded mocks", us: true, center: "some", clubs: "some", alone: false },
   { row: "Accountability & Pods: a weekly number and parent reports", us: true, center: false, clubs: false, alone: false },
   { row: "Open to every student", us: true, center: true, clubs: false, alone: true },

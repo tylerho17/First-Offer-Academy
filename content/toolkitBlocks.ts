@@ -17,8 +17,8 @@ export const tb = {
 
   calendarByTrack: (): Block => ({
     type: "table",
-    caption: "Recruiting calendar by track",
-    head: ["Track", "Freshman year", "Sophomore year", "Junior year"],
+    caption: "Recruiting calendar by field",
+    head: ["Field", "Freshman year", "Sophomore year", "Junior year"],
     rows: t.recruitingCalendar.byTrack.map((r) => [r.track, r.freshman, r.sophomore, r.junior]),
   }),
   calendarByQuarter: (): Block => ({
@@ -144,11 +144,11 @@ export const tb = {
     ];
   },
 
-  // All four tracks at once: one study-order table, then a question box per track.
+  // All four question banks at once: one study-order table, then a question box per field.
   technicalsAll: (limit?: number): Block[] => {
     const all = Object.values(t.technicals);
     return [
-      { type: "table", caption: "Study order by track", head: ["Track", "Study order", "How to practice"], rows: all.map((x) => [x.name, x.studyOrder.join(" → "), x.method]) },
+      { type: "table", caption: "Study order by field", head: ["Field", "Study order", "How to practice"], rows: all.map((x) => [x.name, x.studyOrder.join(" → "), x.method]) },
       ...all.map((x): Block => ({ type: "checklist", title: `${x.name} questions`, items: x.questions.slice(0, limit ?? x.questions.length) })),
     ];
   },

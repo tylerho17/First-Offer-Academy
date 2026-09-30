@@ -7,7 +7,7 @@ import { faqs } from "@/content/faq";
 
 export const metadata: Metadata = {
   title: "FAQ",
-  description: "Answers for parents and students: timing, cost, the payment plan, the deposit and refunds, time commitment, and what we do and don't promise.",
+  description: "Answers for parents and students: timing, cost, the deposit and balance, offer-or-refund, refunds, time commitment, and what we do and don't promise.",
 };
 
 export default function FaqPage() {

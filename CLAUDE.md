@@ -1,6 +1,6 @@
 # First Offer Academy — Website
 
-Marketing site for First Offer Academy: a 12-week recruiting program that teaches first- and second-year college students in Orange County (UCI, community colleges, nearby schools) how to land internships in Finance, Consulting, Marketing, and Tech. Buyers are parents; users are students. Solo founder: Tyler Ho.
+Marketing site for First Offer Academy: internship coaching for college freshmen and sophomores in Finance, Marketing, and Accounting. The offer (locked Sept 30, 2026): Week 0 pre-work, Weeks 1–8 training, Weeks 9–12 Offer Sprint, then weekly check-ins and mocks until an offer or May 31, 2027; $5,000 everything included, offer-or-refund. Content lives in `content/program.ts` and `content/site.ts`. Buyers are parents; users are students. Solo founder: Tyler Ho.
 
 Read `docs/brand-guide.md` and `docs/site-brief.md` before any UI or copy work. They are the source of truth. If this file and those docs disagree, the docs win.
 
@@ -36,7 +36,7 @@ Hard rules:
 This site sells a $5,000 program to parents. Every claim must be true and checkable.
 - NEVER invent testimonials, names, quotes, stats, employer names, or logos. Use the data in `content/`; if a field is empty, render nothing (or a clearly marked TODO in dev only).
 - A testimonial renders only if `permission: true`. An employer name/logo renders only if `employerPermission: true`.
-- Banned words: "guaranteed", "guarantee", "elite", "top 1%". No outcome promises. The program promises a fully executed internship search, not an offer.
+- Banned words: "guarantee" (any form), "elite", "top 1%". No outcome promises: the program promises a fully executed internship search, not an offer. Offer-or-refund (`content/program.ts` → `offerOrRefund`) is the only refund-on-outcome language.
 - Do not name Tyler's employers (Barclays, Deloitte) or the Irvine Investment & Trading Group anywhere on the site.
 - Say "internships", not "paid internships" (some student internships were unpaid).
 - No stock photos of fake students. No AI-generated people presented as real. Use placeholders labeled as such.

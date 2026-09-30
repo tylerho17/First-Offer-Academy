@@ -1,9 +1,9 @@
 import { payments } from "@/lib/payments";
 import { depositRefundLine, site } from "@/content/site";
 
-type Kind = "deposit" | "full" | "plan";
+type Kind = "deposit" | "full";
 
-const EVENTS: Record<Kind, string> = { deposit: "deposit_click", full: "pay_full_click", plan: "pay_plan_click" };
+const EVENTS: Record<Kind, string> = { deposit: "deposit_click", full: "pay_full_click" };
 
 // A Stripe Payment Link. The only component that renders one; the analytics
 // event rides on data-event (components/AnalyticsEvents.tsx).

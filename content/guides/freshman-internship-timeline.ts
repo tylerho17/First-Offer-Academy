@@ -5,8 +5,8 @@ import { tb } from "../toolkitBlocks";
 export const guide: Guide = {
   slug: "freshman-internship-timeline",
   title: "The complete freshman internship timeline: what to do each quarter",
-  excerpt: "Most students find out how early recruiting starts when it's already too late. Here's what freshman year, sophomore year, and the start of junior year should actually look like, by track.",
-  oneLine: "What to do each quarter of freshman and sophomore year, by track.",
+  excerpt: "Most students find out how early recruiting starts when it's already too late. Here's what freshman year, sophomore year, and the start of junior year should actually look like, by field.",
+  oneLine: "What to do each quarter of freshman and sophomore year, by field.",
   category: "Getting started",
   date: "2026-09-21",
   author: "Tyler Ho",
@@ -85,8 +85,8 @@ export const guide: Guide = {
     p("The good news: if you did freshman year right, sophomore year isn't a new project. It's the same weekly habits, with more relationships behind them and better stories."),
     tb.calendarByQuarter(),
 
-    h2("How the timeline differs by track"),
-    p("The quarterly plan above works for everyone, but the pressure points differ. Here's the general shape by track."),
+    h2("How the timeline differs by field"),
+    p("The quarterly plan above works for everyone, but the pressure points differ. Here's the general shape by field."),
     tb.calendarByTrack(),
     h3("Finance"),
     p("Finance is the earliest. Many junior-summer processes open during sophomore year, and the students who do well have been networking since freshman year. Freshman goals: resume, target list, calls, early-insight and diversity programs. Start technicals in the order accounting, valuation, enterprise vs. equity value, M&A, then LBOs."),
@@ -123,6 +123,6 @@ export const guide: Guide = {
       "Put the next three deadlines you know of on your calendar.",
       "Block one hour this week to start your target list.",
     ),
-    p("None of this is secret, and it's all free. The hard part is doing it every week. If you want someone checking the work and holding your student to a number, that's exactly what the 8-week program is for."),
+    p("None of this is secret, and it's all free. The hard part is doing it every week. If you want someone checking the work and holding your student to a number, that's exactly what First Offer Academy is for."),
   ],
 };

@@ -1,5 +1,5 @@
-import { depositLine, founderInternships, PILOT_STUDENTS, site, spell } from "./site";
-import { afterProgram, formatNote, oneOnOneFormat, sessionFormat } from "./program";
+import { founderInternships, PILOT_STUDENTS, site, spell } from "./site";
+import { afterProgram, formatNote, offerOrRefund, oneOnOneFormat, sessionFormat } from "./program";
 import { rhythmNotes, weeklyRhythm } from "./curriculum";
 import { programOverview } from "./programOverview";
 import { promise } from "./promise";
@@ -12,6 +12,32 @@ const tba = (v: string, fallback = "To be announced.") => (v ? v : fallback);
 export type Faq = { q: string; a: string; id?: string; list?: string[]; home?: boolean; parent?: boolean; video?: string | string[]; link?: { label: string; href: string } };
 
 export const faqs: Faq[] = [
+  {
+    home: true,
+    parent: true,
+    id: "offer-or-refund",
+    q: "What if my student doesn't land an offer?",
+    a: `Weekly check-ins and mocks continue through ${afterProgram.until}. If they've met every weekly minimum and still have no offer, you get a full $5,000 refund. Terms: ${offerOrRefund.terms}`,
+  },
+  {
+    home: true,
+    parent: true,
+    id: "weekly-minimums",
+    q: "What are the weekly minimums?",
+    a: `${offerOrRefund.minimums.training} ${offerOrRefund.minimums.after} ${offerOrRefund.minimums.makeup}`,
+  },
+  {
+    home: true,
+    parent: true,
+    q: "Do you place students?",
+    a: "No. We coach students through every application, including Extern externships, and cover the Extern fee. The offer is earned by the student.",
+  },
+  {
+    home: true,
+    parent: true,
+    q: "Is there a payment plan?",
+    a: `${site.cohort.deposit} deposit holds the seat (refundable through ${site.depositRefundDeadline.replace("December", "Dec")}), then ${site.cohort.balance} is due before Week 1.`,
+  },
   {
     home: true,
     parent: true,
@@ -31,14 +57,6 @@ export const faqs: Faq[] = [
     video: ["tom-not-for", "pranav-not-for"],
   },
   {
-    home: true,
-    parent: true,
-    q: "What if they don't land an internship?",
-    a: `We don't promise offers; nobody honest can. We promise a fully executed search: a weekly session and 1:1, feedback on every piece of work, and every email, call, and interview on record. ${afterProgram.full}`,
-    link: { label: "What we promise, and what we don't", href: "/program#promise" },
-  },
-  {
-    home: true,
     parent: true,
     q: "How much time does it take each week?",
     a: site.weeklyHours
@@ -54,17 +72,10 @@ export const faqs: Faq[] = [
     a: tba(site.format, "Format and meeting times will be confirmed before applications close."),
   },
   {
-    home: true,
     parent: true,
     q: "Is the deposit refundable?",
     a: `${tba(site.refundTerms, "Exact refund dates will be published before deposits open.")} ${site.withdrawalPolicy}`.trim(),
     link: { label: "Read the Refund & Payment Policy", href: "/refunds" },
-  },
-  {
-    home: true,
-    parent: true,
-    q: "Is there financial aid?",
-    a: `${site.scholarship} Apply as usual, and book a parent call to ask about it.`,
   },
   {
     id: "who-for",
@@ -135,17 +146,11 @@ export const faqs: Faq[] = [
   },
   {
     parent: true,
-    q: "How does the payment plan work?",
-    a: `The program is ${site.cohort.price}, or ${site.cohort.plan}. ${depositLine()}`,
-    link: { label: "Read the Refund & Payment Policy", href: "/refunds" },
-  },
-  {
-    parent: true,
     q: "What do parents see during the program?",
     a: "Through Accountability & Pods: a one-page progress report every two weeks, and a Week 8 family meeting where your student presents their results.",
   },
   {
-    q: "What happens after Week 8?",
-    a: "Students keep the system they built: the resume, the target list and tracker, the stories, and the interview prep. Details on continued support will be shared with the cohort.",
+    q: "What happens after Week 12?",
+    a: `Weeks 9–12 are the Offer Sprint: technical and behavioral mocks, plus prep and debriefs for every networking call. ${afterProgram.full}`,
   },
 ];

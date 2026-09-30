@@ -10,7 +10,7 @@ export default function ProgramCta() {
       <div className="wrap">
         <div className="card program-cta">
           <div>
-            <h2>{c.price}, or {c.plan}</h2>
+            <h2>{c.price} · everything included</h2>
             <p>{c.name}: {c.start} · {c.seats} seats. <Link href="/pricing">Full pricing →</Link></p>
           </div>
           <div>

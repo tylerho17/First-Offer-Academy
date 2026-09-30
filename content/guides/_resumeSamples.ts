@@ -14,7 +14,7 @@ export const tylerResume: ResumeDoc | null = null; // TODO(Tyler)
 export const PENN_SAMPLES_PAGE = "https://careerservices.upenn.edu/preparing-effective-resumes/undergraduates-student-resume-samples/";
 
 const pennSamples = [
-  { label: "Finance (Wharton)", note: "Deals nested under each banking role, and extracurricular bullets that end in a number.", href: "https://cdn.uconnectlabs.com/wp-content/uploads/sites/74/2021/09/SampleFinanceResume-3.jpg" },
+  { label: "Finance", note: "Deals nested under each banking role, and extracurricular bullets that end in a number.", href: "https://cdn.uconnectlabs.com/wp-content/uploads/sites/74/2021/09/SampleFinanceResume-3.jpg" },
   { label: "Computer Science", note: "Technical skills and coursework right under education, and projects in their own section.", href: "https://cdn.uconnectlabs.com/wp-content/uploads/sites/74/2026/06/Sample_Resume_Undergrad_ComputerScience.pdf" },
   { label: "Computer Engineering", note: "A TA role, a marketing internship, and a retail job on one page. Non-technical work still counts.", href: "https://cdn.uconnectlabs.com/wp-content/uploads/sites/74/2026/06/Sample_Resume_Undergrad_ComputerEngineering.pdf" },
 ];

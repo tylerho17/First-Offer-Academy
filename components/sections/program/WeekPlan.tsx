@@ -1,17 +1,19 @@
 import Link from "next/link";
 import { preWork, weekHref, weeks } from "@/content/curriculum";
 import { runningThroughout } from "@/content/curriculum";
+import { afterProgram, offerSprint } from "@/content/program";
 
-// The 8-week plan: one row per week (Week 0 first), full detail in a native,
-// server-rendered <details>.
+// The plan: Week 0, one row per training week (1–8) with full detail in a
+// native, server-rendered <details>, then the Offer Sprint and check-ins.
 export default function WeekPlan() {
   return (
     <section className="section" id="curriculum" style={{ paddingTop: 0 }}>
       <div className="wrap">
         <div className="section-head">
-          <h2>The 8-week plan</h2>
+          <h2>The plan, week by week</h2>
           <p className="lede">
-            Four two-week phases after winter break pre-work. {runningThroughout.name} runs the whole way: {runningThroughout.summary[0].toLowerCase() + runningThroughout.summary.slice(1)}
+            Winter break pre-work, 8 weeks of training in four two-week phases, then the Offer Sprint and weekly check-ins
+            until an offer. {runningThroughout.name} runs through training: {runningThroughout.summary[0].toLowerCase() + runningThroughout.summary.slice(1)}
           </p>
         </div>
         <ol className="week-rows">
@@ -60,6 +62,31 @@ export default function WeekPlan() {
               </details>
             </li>
           ))}
+          <li>
+            <details className="week-row">
+              <summary>
+                <span className="week-row-n">{offerSprint.weeks}</span>
+                <span className="week-row-title">{offerSprint.name}</span>
+                <span className="week-row-sum">{offerSprint.summary}</span>
+              </summary>
+              <div className="week-row-body">
+                <p>Four weeks of technical mocks and behavioral mocks, plus prep before and a debrief after every networking call your student lands.</p>
+              </div>
+            </details>
+          </li>
+          <li>
+            <details className="week-row">
+              <summary>
+                <span className="week-row-n">After Week 12</span>
+                <span className="week-row-title">Until your offer</span>
+                <span className="week-row-sum">A weekly 30-minute check-in and mock interview.</span>
+              </summary>
+              <div className="week-row-body">
+                <p>{afterProgram.full}</p>
+                <p><a href="/faq#offer-or-refund" className="link-arrow">Offer-or-refund terms →</a></p>
+              </div>
+            </details>
+          </li>
         </ol>
       </div>
     </section>

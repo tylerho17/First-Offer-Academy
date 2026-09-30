@@ -6,13 +6,13 @@ const who = site.legalEntityName ? `${site.name} (${site.legalEntityName})` : si
 export const terms: LegalDoc = {
   slug: "terms",
   title: "Terms of Service",
-  description: "The terms for using the First Offer Academy website and enrolling in the 8-week program, including what we do and don't promise.",
+  description: "The terms for using the First Offer Academy website and enrolling in the program, including what we do and don't promise.",
   lastUpdated: "2026-09-21",
   contactEmail: legalContact,
   intro: `These terms apply to the ${site.name} website and program. By using the website, applying, or enrolling, you agree to them. If a student is under 18, a parent or guardian must agree on their behalf.`,
   body: [
     { type: "h2", text: "Who we are" },
-    { type: "p", text: `${who} runs an 8-week internship recruiting program for college students. "We", "us", and "our" mean ${site.name}. "Student" means the person enrolled in the program. "You" means the student and, where one is involved, the parent or guardian who enrolls or pays for them.` },
+    { type: "p", text: `${who} runs an internship coaching program for college students. "We", "us", and "our" mean ${site.name}. "Student" means the person enrolled in the program. "You" means the student and, where one is involved, the parent or guardian who enrolls or pays for them.` },
 
     { type: "h2", text: "Eligibility" },
     { type: "ul", items: [
@@ -27,7 +27,8 @@ export const terms: LegalDoc = {
 
     { type: "h2", text: "No promise of outcomes" },
     { type: "p", text: "We do not promise internship offers or any specific outcome. We don't promise an internship at any particular company, in any particular role, at any particular pay, or by any particular date. Hiring decisions belong to employers, and they depend on things no one outside the employer controls." },
-    { type: "p", text: "What we do commit to is described on our [Our Promise](/program#promise) page: the sessions, 1:1s, feedback, documented search, parent reports, and the Week 8 meeting." },
+    { type: "p", text: "What we do commit to is described on our [Our Promise](/program#promise) page: the sessions, 1:1s, feedback, documented search, parent reports, the Week 8 meeting, the Offer Sprint, and weekly check-ins and mocks until an offer." },
+    { type: "p", text: "The one exception to \"no promise of outcomes\" is offer-or-refund: if a student meets every weekly minimum through May 31, 2027 and receives no internship offer, we refund the full tuition. The exact terms are in our [Refund & Payment Policy](/refunds)." },
 
     { type: "h2", text: "Student responsibilities" },
     { type: "ul", items: [
@@ -42,7 +43,7 @@ export const terms: LegalDoc = {
     { type: "p", text: "Students must follow our [Code of Conduct](/code-of-conduct): respect for everyone in the program, honesty and professionalism in outreach, and never misrepresenting themselves to professionals. Serious or repeated violations can lead to removal from the program, as described there." },
 
     { type: "h2", text: "Payment and refunds" },
-    { type: "p", text: `Tuition is ${site.cohort.price}, or ${site.cohort.plan}. ${depositLine()} Payment plans, deadlines, missed payments, withdrawals, and refunds are covered in our [Refund & Payment Policy](/refunds), which is part of these terms.` },
+    { type: "p", text: `Tuition is ${site.cohort.price}, everything included. ${depositLine()} The ${site.cohort.balance} balance is due before Week 1. Deadlines, missed payments, withdrawals, and refunds are covered in our [Refund & Payment Policy](/refunds), which is part of these terms.` },
 
     { type: "h2", text: "Intellectual property" },
     { type: "p", text: "Our curriculum, templates, rubrics, trackers, recordings of sessions, and website content belong to us. Enrolled students get a personal, non-transferable license to use them for their own internship search, during and after the program." },

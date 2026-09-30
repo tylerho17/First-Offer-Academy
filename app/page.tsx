@@ -6,6 +6,8 @@ import Stats from "@/components/sections/Stats";
 import LogoMarquee from "@/components/sections/LogoMarquee";
 import EventsStrip from "@/components/sections/EventsStrip";
 import PriceBand from "@/components/sections/PriceBand";
+import HowItWorks from "@/components/sections/HowItWorks";
+import OfferOrRefund from "@/components/sections/OfferOrRefund";
 import FaqList from "@/components/sections/FaqList";
 import JsonLd from "@/components/JsonLd";
 import { site } from "@/content/site";
@@ -26,7 +28,7 @@ export default function Home() {
           url: `https://${site.domain}`,
           logo: `https://${site.domain}/apple-icon`,
           description:
-            "An 8-week internship program for college freshmen and sophomores in finance, marketing, and accounting.",
+            "Internship coaching for college freshmen and sophomores in Finance, Marketing, and Accounting: Week 0 pre-work, 8 weeks of training, a 4-week Offer Sprint, then weekly check-ins and mocks until an offer.",
           email: site.email,
           founder: { "@type": "Person", name: site.founder.name, sameAs: [site.founder.linkedin] },
           ...(sameAs.length ? { sameAs } : {}),
@@ -35,10 +37,12 @@ export default function Home() {
       <Hero />
       <Stats />
       <LogoMarquee />
+      <HowItWorks />
       <Problem />
       <LeavesWith homeVideo />
       <Testimonials />
       <PriceBand />
+      <OfferOrRefund />
       <EventsStrip />
       <FaqList />
     </>

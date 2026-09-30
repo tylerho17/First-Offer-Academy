@@ -117,7 +117,7 @@ export const downloads: Download[] = [
     slug: `technicals-${k}` as AssetSlug,
     format: "PDF",
     title: `${t.technicals[k].name.split(" (")[0]} technical question bank`,
-    what: `The study order and ${t.technicals[k].questions.length} practice questions for the ${t.technicals[k].name} track.`,
+    what: `The study order and ${t.technicals[k].questions.length} practice questions for ${t.technicals[k].name} roles.`,
     subtitle: `Study order: ${t.technicals[k].studyOrder.join(" → ")}`,
     stage: "Technicals & interviews",
     week: 5,

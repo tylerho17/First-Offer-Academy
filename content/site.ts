@@ -3,7 +3,7 @@
 const founderLinkedIn = "https://www.linkedin.com/in/tylerho1";
 const deposit = "$1,000";
 const depositRefundDeadline = "December 15, 2026";
-const installment = "$1,700";
+const balance = "$4,000";
 
 // Students coached to internships in their first year of college, before the
 // academy existed. Every page that states the pilot number reads this.
@@ -11,6 +11,10 @@ export const PILOT_STUDENTS = 12;
 // How many of them landed an internship or an offer (some pilot students were
 // juniors or seniors, and one result is a full-time offer).
 export const PILOT_LANDED = 12;
+
+// Firms named in the hero proof row. Only list firms whose students have given
+// permission.
+export const PLACEMENT_FIRMS = ["Wells Fargo", "Morgan Stanley", "PIMCO", "Tricon"];
 
 export const site = {
   name: "First Offer Academy",
@@ -32,17 +36,14 @@ export const site = {
   // visitor never sees a dashed "Placeholder" box.
   showPlaceholders: process.env.NODE_ENV !== "production",
 
-  scholarship: "One founding seat is awarded as a scholarship by application.",
-
   cohort: {
     name: "Founding cohort",
     start: "January 2027",
     seats: 24,
-    sections: "three sections of 8",
-    price: "$5,000",
-    installment,
-    plan: `3 payments of ${installment}`,
+    price: "$5,000", // everything included; paid in full, or deposit + balance
     deposit,
+    balance, // due before Week 1
+    balanceDue: "before Week 1",
   },
 
   calendlyUrl: "https://calendly.com/tyler-firstofferacademy",
@@ -89,21 +90,21 @@ export const site = {
   applicationDeadline: "",
   // Founding cohort refund terms. /refunds, /pricing, the FAQ, and the deposit
   // button all read these. Changing them changes a written promise to families.
-  refundTerms: `The ${deposit} deposit is refunded in full if the fit call shows the program isn't a fit, or if you withdraw before ${depositRefundDeadline}. After that, it applies to tuition.`,
+  refundTerms: `The ${deposit} deposit is fully refundable through ${depositRefundDeadline}. After that, it applies to tuition, and the ${balance} balance is due before Week 1.`,
   depositRefundDeadline,
   withdrawalPolicy: "Withdraw before Week 3 for a prorated refund of unused weeks. No refunds after Week 3. If we cancel the cohort, every payment is refunded in full.",
 };
 
 // The line that sits next to every deposit button.
 export const depositRefundLine = () =>
-  `Refunded in full if the fit call shows it isn't a fit, or if you withdraw before ${site.depositRefundDeadline}.`;
+  `${site.cohort.deposit} deposit holds your seat, fully refundable through ${site.depositRefundDeadline}.`;
 
 // "A $1,000 deposit, refundable until December 15, 2026, holds a seat."
 // Used wherever a page mentions the deposit, so no page calls it refundable
 // without the deadline.
 export const depositLine = () =>
   site.depositRefundDeadline
-    ? `A ${site.cohort.deposit} deposit, fully refundable until ${site.depositRefundDeadline}, holds a seat.`
+    ? `A ${site.cohort.deposit} deposit, fully refundable through ${site.depositRefundDeadline}, holds a seat.`
     : `A ${site.cohort.deposit} deposit holds a seat.`;
 
 // "7+ internships worked, and offers from many more", or the exact offer

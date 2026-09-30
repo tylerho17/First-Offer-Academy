@@ -2,24 +2,26 @@ import Image from "next/image";
 import Link from "next/link";
 import CallLink from "../CallLink";
 import LinkedInLink from "../LinkedInLink";
-import PayButton from "../PayButton";
-import { site } from "@/content/site";
+import { PILOT_LANDED, PILOT_STUDENTS, PLACEMENT_FIRMS, site } from "@/content/site";
 
 export default function Hero() {
   return (
     <section className="hero">
       <div className="wrap hero-grid">
         <div>
-          <span className="eyebrow">8-week internship program · Freshmen and sophomores</span>
-          <h1>Your first internship shouldn&apos;t depend on which club lets you in.</h1>
+          <span className="eyebrow">Internship coaching · Freshmen and sophomores</span>
+          <h1>Coached until your first offer.</h1>
           <p className="lede">
-            An 8-week internship program for college freshmen and sophomores in finance, marketing,
-            and accounting.
+            Internship coaching for college freshmen and sophomores in Finance, Marketing, and Accounting. 12 weeks of
+            training and mocks, then weekly check-ins and mocks until you land an offer.
           </p>
           <div className="btn-row">
-            <PayButton />
+            <Link href="/apply" className="btn btn-primary">Apply</Link>
             <CallLink />
           </div>
+          <p className="hero-proof">
+            {[`${PILOT_LANDED} of ${PILOT_STUDENTS} pilot students landed internships`, ...PLACEMENT_FIRMS].join(" · ")}
+          </p>
           <div className="audience-split">
             <Link href="/program" className="audience-card">I&apos;m a student <span aria-hidden="true">→</span></Link>
             <Link href="/parents" className="audience-card">I&apos;m a parent <span aria-hidden="true">→</span></Link>

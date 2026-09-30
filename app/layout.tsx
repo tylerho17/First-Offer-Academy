@@ -22,11 +22,11 @@ export const metadata: Metadata = {
   // www, non-www, and ?utm= variants don't compete with each other in search.
   alternates: { canonical: "./" },
   title: {
-    default: "First Offer Academy · 8-week internship program for college students",
+    default: "First Offer Academy · Coached until your first offer",
     template: "%s · First Offer Academy",
   },
   description:
-    "An 8-week internship program for college freshmen and sophomores in finance, marketing, and accounting.",
+    "Internship coaching for college freshmen and sophomores in Finance, Marketing, and Accounting: Week 0 pre-work, 8 weeks of training, a 4-week Offer Sprint, then weekly check-ins and mocks until an offer.",
   openGraph: {
     type: "website",
     siteName: "First Offer Academy",

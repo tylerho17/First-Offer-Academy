@@ -43,8 +43,8 @@ export const guide: Guide = {
     example("A firm answer (made-up)", "\"Two reasons. First, your team works mostly with family-owned businesses, and I grew up doing the books for my parents' restaurant, so that's the kind of client I understand and want to learn to serve. Second, when I talked to Alex on your team, the thing they emphasized was how much the senior people teach first-years, and that's exactly the environment I want for my first internship.\""),
     p("If you can't fill in \"one person you've talked to there,\" you're not ready to interview at that firm yet. Go back to your target list and send the email."),
 
-    h2("Versions by track"),
-    table("What buckets 1 and 2 often sound like", ["Track", "Mentality (bucket 1)", "The work (bucket 2)"], [
+    h2("Versions by field"),
+    table("What buckets 1 and 2 often sound like", ["Field", "Mentality (bucket 1)", "The work (bucket 2)"], [
       ["Finance", "Measured against clear numbers; comfortable with detail and pace", "Building models, defending assumptions, seeing a deal from pitch to close"],
       ["Marketing", "Curious about why people choose things; likes testing ideas", "Campaign tests, audience research, turning numbers into creative decisions"],
       ["Accounting", "Likes getting the numbers exactly right; comfortable with rules and deadlines", "Audit fieldwork, preparing returns, explaining what the numbers say to a client"],
