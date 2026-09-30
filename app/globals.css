@@ -1065,7 +1065,8 @@ button.topic-pill { font: inherit; font-size: 15px; font-weight: 600; cursor: po
 .student-card blockquote { margin: 0; font-size: 18px; color: var(--ink); flex: 1; }
 .student-card figcaption { display: grid; gap: 4px; }
 .student-card figcaption strong { font-family: var(--display); font-weight: 600; font-size: 22px; color: var(--navy); }
-.student-line { font-size: 14px; color: var(--dusty); }
+.student-line { font-size: 14px; line-height: 1.5; color: var(--dusty); }
+@media (min-width: 700px) { .student-line { min-height: 3em; } } /* two lines, so names align across a row */
 .student-also { font-size: 14px; color: var(--ink); margin-top: 4px; }
 .pending-badge { position: absolute; top: 16px; right: 16px; font-size: 12px; font-weight: 700; color: var(--navy); border: 1.5px dashed var(--dusty); border-radius: 999px; padding: 3px 10px; }
 /* 2px navy ring, 3px cream gap, photo. Identical everywhere. */

@@ -16,9 +16,13 @@ export default function StudentCard({ s, showAlso = false }: { s: Student; showA
       <figcaption>
         <strong>{s.firstName}</strong>
         <span className="student-line">{line}</span>
-        {showAlso && companies && s.otherCompanies.length > 0 && (
-          <span className="student-also">Also: {s.otherCompanies.map(name).join(", ")}</span>
-        )}
+        {showAlso &&
+          (companies && s.otherCompanies.length > 0 ? (
+            <span className="student-also">Also: {s.otherCompanies.map(name).join(", ")}</span>
+          ) : (
+            // Keeps the name at the same height as the rest of its row.
+            <span className="student-also" aria-hidden="true">&nbsp;</span>
+          ))}
       </figcaption>
     </figure>
   );
