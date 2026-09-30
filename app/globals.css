@@ -1162,3 +1162,4 @@ details.more summary { cursor: pointer; font-weight: 600; color: var(--dusty); f
 .program-faq { margin-top: 20px; text-align: center; }
 .faq-points { margin: 10px 0 0; padding-left: 20px; display: grid; gap: 6px; }
 .faq-points li { font-size: 17px; }
+.marquee-logo.is-raster { background: var(--navy); -webkit-mask-position: center; mask-position: center; -webkit-mask-size: contain; mask-size: contain; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; }

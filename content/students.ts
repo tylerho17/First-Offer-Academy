@@ -103,7 +103,7 @@ export const students: Student[] = [
     track: "Finance",
     headline: "Tricon",
     role: "PE Analyst",
-    otherCompanies: ["The Amazing Group", "Ditto"],
+    otherCompanies: ["The Amazing Group", "Ditto", "Lōkahi Therapeutics"],
     quote: "His mentorship has given me a much stronger understanding of the industry and made the recruiting process feel more structured and manageable.",
     headshot: "/images/students/vasavi.png",
     headshotZoom: 1.3,
@@ -227,8 +227,8 @@ export function companyNamer() {
 // Companies as shown in the marquee: "Sellside Group (M&A Analyst)" -> "Sellside Group".
 export const companyDisplay = (name: string) => name.replace(/\s*\([^)]*\)\s*$/, "").trim();
 
-// Companies with an official SVG in public/logos/<slug>.svg. Every other
-// company renders as a text wordmark. Blackstone isn't in the student data;
+// Companies with an official logo in public/logos/<slug>.svg or .png. Every
+// other company renders as a text wordmark. Blackstone isn't in the student data;
 // it renders only beside Tricon (Tyler's call), with the portfolio caption.
 export const companyLogos: Record<string, string> = {
   PIMCO: "pimco",
@@ -241,21 +241,32 @@ export const companyLogos: Record<string, string> = {
   BridgeBio: "bridgebio",
   "Sila Nanotechnologies": "sila",
   "Mercer Advisors": "mercer-advisors",
+  // Boutique firms: each logo is from the firm's own website (see
+  // public/logos/README.md). Ditto, Valemont Group, Holter Holdings, and The
+  // Amazing Group have no usable official logo, so they stay text wordmarks.
+  "Black Legend Capital": "black-legend-capital",
+  "Concordia Capital": "concordia-capital",
+  Clicinsight: "clicinsight",
+  Futuraiser: "futuraiser",
+  "L&B Capital": "lb-capital",
+  "Lōkahi Therapeutics": "lokahi-therapeutics",
+  "Optimize Financial": "optimize-financial",
+  "Sellside Group": "sellside-group",
+  "Smart Asset Capital": "smart-asset-capital",
+  Xnergy: "xnergy",
 };
 
 export type MarqueeCompany = { name: string; slug?: string };
 
 // Every company a visible student (with employer permission) lists, once,
-// logos and text wordmarks interleaved so the row reads evenly.
+// logos in companyLogos order, with the text wordmarks spread evenly between them.
 export function marqueeCompanies(): MarqueeCompany[] {
   const names = [...new Set(visibleStudents().filter((s) => s.employerPermission).flatMap((s) => [s.headline, ...s.otherCompanies]).map(companyDisplay))];
   const withLogo = names.filter((n) => companyLogos[n]).sort((a, b) => Object.keys(companyLogos).indexOf(a) - Object.keys(companyLogos).indexOf(b));
   const text = names.filter((n) => !companyLogos[n]);
-  const ordered: string[] = [];
-  while (withLogo.length || text.length) {
-    if (withLogo.length) ordered.push(withLogo.shift()!);
-    if (text.length) ordered.push(text.shift()!);
-  }
+  // Spread the text wordmarks evenly between the logos.
+  const ordered = [...withLogo];
+  text.forEach((t, i) => ordered.splice(Math.round(((i + 1) * (withLogo.length + i + 1)) / (text.length + 1)), 0, t));
   // Blackstone sits directly before Tricon.
   const i = ordered.indexOf("Tricon");
   if (i >= 0) ordered.splice(i, 0, "Blackstone");

@@ -10,6 +10,19 @@ const MIST = "#E7EDF5";
 
 const cache = new Map<string, { svg: string; ratio: number } | null>();
 
+// Logo for the marquee: an inline one-color SVG, or a transparent PNG drawn
+// through a CSS mask in the same navy (so rasters match the SVGs exactly).
+export type LogoAsset = { kind: "svg"; svg: string; ratio: number } | { kind: "png"; src: string; ratio: number };
+
+export function logoAsset(slug: string): LogoAsset | null {
+  const svg = monoLogo(slug);
+  if (svg) return { kind: "svg", ...svg };
+  const file = path.join(process.cwd(), "public", "logos", `${slug}.png`);
+  if (!existsSync(file)) return null;
+  const png = readFileSync(file);
+  return { kind: "png", src: `/logos/${slug}.png`, ratio: png.readUInt32BE(16) / png.readUInt32BE(20) };
+}
+
 export function monoLogo(slug: string) {
   if (cache.has(slug)) return cache.get(slug)!;
   const file = path.join(process.cwd(), "public", "logos", `${slug}.svg`);
