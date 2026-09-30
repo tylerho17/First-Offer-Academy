@@ -1,10 +1,14 @@
 import { depositLine, site } from "./site";
-import { afterProgram } from "./program";
+import { afterProgram, formatNote, oneOnOneFormat, sessionFormat } from "./program";
+import { rhythmNotes, weeklyRhythm } from "./curriculum";
+import { programOverview } from "./programOverview";
+import { promise } from "./promise";
 
 const tba = (v: string, fallback = "To be announced.") => (v ? v : fallback);
 
 // `video`: id from content/videoTestimonials.ts, embedded inside the answer.
-export type Faq = { q: string; a: string; home?: boolean; parent?: boolean; video?: string; link?: { label: string; href: string } };
+// `id`: anchor on /faq. `list`: bullet points rendered under the answer.
+export type Faq = { q: string; a: string; id?: string; list?: string[]; home?: boolean; parent?: boolean; video?: string; link?: { label: string; href: string } };
 
 export const faqs: Faq[] = [
   {
@@ -59,6 +63,36 @@ export const faqs: Faq[] = [
     parent: true,
     q: "Is there financial aid?",
     a: `${site.scholarship} Apply as usual, and book a parent call to ask about it.`,
+  },
+  {
+    id: "who-for",
+    q: "Who is First Offer Academy for?",
+    a: `${programOverview.whoFor.title.replace(/…$/, ":")}`,
+    list: [...programOverview.whoFor.pains.map((p) => `${p.title}: ${p.body}`), programOverview.whoFor.callout],
+  },
+  {
+    id: "why-freshman-year",
+    q: "Why start in freshman year?",
+    a: `${programOverview.whyNow.title} ${programOverview.whyNow.sub}`,
+    list: programOverview.whyNow.paragraphs,
+  },
+  {
+    parent: true,
+    id: "typical-week",
+    q: "What does a typical week look like?",
+    a: `A 90-minute group session, a 60-minute 1:1, and a pod of three. ${formatNote}`,
+    list: [
+      `The session: ${sessionFormat.map((r) => `${r.block} (${r.time}): ${r.what}`).join(" ")}`,
+      `The 1:1: ${oneOnOneFormat.map((r) => `${r.block} (${r.time}): ${r.what}`).join(" ")}`,
+      ...weeklyRhythm.slice(2).map((r) => `${r.name}: ${r.body}`),
+      ...rhythmNotes,
+    ],
+  },
+  {
+    id: "what-we-ask",
+    q: "What do you ask of students?",
+    a: "Three things.",
+    list: promise.weAsk.items.map((i) => `${i.title}: ${i.body}`),
   },
   {
     q: "Are community college students welcome?",

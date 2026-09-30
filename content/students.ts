@@ -211,10 +211,6 @@ export const visibleStudents = () => students.filter(isVisible);
 export const homepageStudents = () =>
   HOMEPAGE_ORDER.map((n) => students.find((s) => s.firstName === n && s.homepage)).filter((s): s is Student => !!s && isVisible(s));
 
-// Companies a visible student can be named with.
-const namedCompanies = () =>
-  new Set(visibleStudents().filter((s) => s.employerPermission).flatMap((s) => [s.headline, ...s.otherCompanies]));
-
 // Tricon is shown with its parent company on first mention per card.
 export const TRICON_NOTE = "Tricon (a Blackstone portfolio company)";
 export function companyNamer() {

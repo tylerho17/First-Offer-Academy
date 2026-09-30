@@ -18,10 +18,11 @@ export default function FaqList({ all = false, parent = false, title = "Question
         )}
         <div className="faq-list">
           {list.map((f) => (
-            <details className="faq-item" key={f.q}>
+            <details className="faq-item" key={f.q} id={f.id}>
               <summary>{f.q}<span className="plus" aria-hidden="true"><Plus /></span></summary>
               <div className="answer">
                 <p>{f.a}</p>
+                {f.list && <ul className="faq-points">{f.list.map((x) => <li key={x.slice(0, 40)}>{x}</li>)}</ul>}
                 {f.video && getVideo(f.video) && <VideoTestimonial video={getVideo(f.video)!} />}
                 {f.link && <p style={{ marginTop: 10 }}><Link href={f.link.href}>{f.link.label} →</Link></p>}
               </div>

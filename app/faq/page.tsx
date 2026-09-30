@@ -17,7 +17,7 @@ export default function FaqPage() {
         data={{
           "@context": "https://schema.org",
           "@type": "FAQPage",
-          mainEntity: faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+          mainEntity: faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: [f.a, ...(f.list ?? [])].join(" ") } })),
         }}
       />
       <PageHero eyebrow="FAQ" title="Questions parents and students ask" lede="Don't see yours? Book a call and ask Tyler directly." />

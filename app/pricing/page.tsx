@@ -4,6 +4,7 @@ import { depositLine, site } from "@/content/site";
 import { balance } from "@/lib/payments";
 import { externshipBlock, pricingIncludes } from "@/content/program";
 import FaqList from "@/components/sections/FaqList";
+import Comparison from "@/components/sections/Comparison";
 import CallLink from "@/components/CallLink";
 import ExternshipNote from "@/components/sections/ExternshipNote";
 import PayOptions from "@/components/PayOptions";
@@ -97,6 +98,7 @@ export default function PricingPage() {
         </div>
       </section>
 
+      <Comparison />
       <FaqList />
     </>
   );
