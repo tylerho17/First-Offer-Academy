@@ -8,7 +8,7 @@ import Comparison from "@/components/sections/Comparison";
 import CallLink from "@/components/CallLink";
 import ExternshipNote from "@/components/sections/ExternshipNote";
 import PayOptions from "@/components/PayOptions";
-import VideoTestimonial from "@/components/VideoTestimonial";
+import VideoGroup from "@/components/VideoGroup";
 import { videosFor } from "@/content/videoTestimonials";
 import { Check } from "@/components/Icons";
 
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 
 export default function PricingPage() {
   const c = site.cohort;
-  const priceVideo = videosFor("pricing")[0];
+  const worth = videosFor("pricing"); // Tom, then Pranav
   return (
     <>
       <section className="page-hero center-hero">
@@ -52,8 +52,6 @@ export default function PricingPage() {
 
             <ExternshipNote block={externshipBlock} />
 
-            {priceVideo && <VideoTestimonial video={priceVideo} label="A parent on the price" />}
-
             <PayOptions className="price-pay" />
             <p className="pay-note balance-note">
               Already paid the deposit? Your balance is {balance.full}, or {balance.plan}. We&apos;ll email your balance link.
@@ -69,6 +67,17 @@ export default function PricingPage() {
           </article>
         </div>
       </section>
+
+      {worth.length > 0 && (
+        <section className="section" style={{ paddingTop: 0 }} aria-labelledby="worth-title">
+          <div className="wrap">
+            <div className="section-head">
+              <h2 id="worth-title">Was it worth it?</h2>
+            </div>
+            <VideoGroup videos={worth} columns={2} className="worth-grid" />
+          </div>
+        </section>
+      )}
 
       <section className="section" id="payment" style={{ paddingTop: 0 }}>
         <div className="wrap">

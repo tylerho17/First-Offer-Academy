@@ -8,8 +8,12 @@ import FinalCta from "./sections/FinalCta";
 import CallLink from "./CallLink";
 import { Check } from "./Icons";
 import PayButton from "@/components/PayButton";
+import { videosFor, type VideoPlacement } from "@/content/videoTestimonials";
+import VideoTestimonial from "./VideoTestimonial";
 
 export default function TrackView({ track }: { track: Track }) {
+  // e.g. tracks-finance; tracks without a tagged video show none.
+  const video = videosFor(`tracks-${track.slug}` as VideoPlacement)[0];
   return (
     <>
       <section className="page-hero">
@@ -17,6 +21,7 @@ export default function TrackView({ track }: { track: Track }) {
           <span className="eyebrow">{track.name} track</span>
           <h1>{track.headline}</h1>
           <p className="lede">{track.intro}</p>
+          {video && <div className="track-video"><VideoTestimonial video={video} /></div>}
           <div className="btn-row">
             <PayButton />
             <CallLink />

@@ -36,7 +36,7 @@ export default function Home() {
       <Stats />
       <LogoMarquee />
       <Problem />
-      <LeavesWith />
+      <LeavesWith homeVideo />
       <Testimonials />
       <PriceBand />
       <EventsStrip />

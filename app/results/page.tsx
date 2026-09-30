@@ -4,10 +4,8 @@ import Stats from "@/components/sections/Stats";
 import LogoMarquee from "@/components/sections/LogoMarquee";
 import StudentCard from "@/components/StudentCard";
 import StudentVideosGrid from "@/components/sections/StudentVideosGrid";
-import ResultsGrid from "@/components/sections/ResultsGrid";
 import FinalCta from "@/components/sections/FinalCta";
 import { visibleStudents } from "@/content/students";
-import { permittedResults } from "@/content/results";
 
 export const metadata: Metadata = {
   title: "Results",
@@ -16,7 +14,6 @@ export const metadata: Metadata = {
 
 export default function ResultsPage() {
   const students = visibleStudents();
-  const parents = permittedResults().filter((r) => r.type === "parent");
   return (
     <>
       <PageHero
@@ -37,17 +34,6 @@ export default function ResultsPage() {
         </section>
       )}
       <StudentVideosGrid />
-      {parents.length > 0 && (
-        <section className="section" style={{ paddingTop: 0 }} aria-labelledby="parents-title" id="parents">
-          <div className="wrap">
-            <div className="section-head">
-              <span className="eyebrow">Parents</span>
-              <h2 id="parents-title">Parents, in their own words</h2>
-            </div>
-            <ResultsGrid items={parents} />
-          </div>
-        </section>
-      )}
       <div style={{ paddingTop: 40 }}><FinalCta /></div>
     </>
   );

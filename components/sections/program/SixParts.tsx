@@ -2,9 +2,21 @@ import { leavesWith } from "@/content/program";
 import { modules } from "@/content/programOverview";
 import ModuleIcon from "../../ModuleIcon";
 import { Check } from "../../Icons";
+import { videosFor, type VideoPlacement } from "@/content/videoTestimonials";
+import VideoGroup from "../../VideoGroup";
 
-// The six parts as a compact grid. Each card's full write-up sits in a
-// collapsed <details>; card ids are the /program#<slug> anchors.
+// Each part's video placement.
+const PART_VIDEOS: Record<string, VideoPlacement> = {
+  "candidate-brand": "program-candidate-brand",
+  "outreach-system": "program-outreach",
+  "story-bank": "program-story-bank",
+  "interview-reps": "program-interview-reps",
+  "accountability-pods": "program-pods",
+};
+
+// The six parts as a compact grid. Each card's video sits in the always-visible
+// area; the full write-up is in a collapsed <details>. Card ids are the
+// /program#<slug> anchors.
 export default function SixParts() {
   return (
     <section className="section" id="modules" style={{ paddingTop: 16 }}>
@@ -21,6 +33,11 @@ export default function SixParts() {
                 <h3>{m.title}</h3>
               </div>
               <p>{m.detail}</p>
+              {PART_VIDEOS[m.slug] && (
+                <div className="part-videos">
+                  <VideoGroup videos={videosFor(PART_VIDEOS[m.slug])} columns={2} />
+                </div>
+              )}
               <details className="more">
                 <summary>How it works</summary>
                 <div className="more-body">

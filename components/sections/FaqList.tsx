@@ -23,7 +23,10 @@ export default function FaqList({ all = false, parent = false, title = "Question
               <div className="answer">
                 <p>{f.a}</p>
                 {f.list && <ul className="faq-points">{f.list.map((x) => <li key={x.slice(0, 40)}>{x}</li>)}</ul>}
-                {f.video && getVideo(f.video) && <VideoTestimonial video={getVideo(f.video)!} />}
+                {[f.video ?? []].flat().map((id) => {
+                  const v = getVideo(id);
+                  return v ? <VideoTestimonial key={id} video={v} /> : null;
+                })}
                 {f.link && <p style={{ marginTop: 10 }}><Link href={f.link.href}>{f.link.label} →</Link></p>}
               </div>
             </details>

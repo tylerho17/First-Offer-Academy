@@ -272,15 +272,3 @@ export function marqueeCompanies(): MarqueeCompany[] {
   if (i >= 0) ordered.splice(i, 0, "Blackstone");
   return ordered.map((name) => ({ name, slug: companyLogos[name] }));
 }
-
-// ------------------------------------------------------------ student videos
-
-// TODO(Tyler): paste unlisted YouTube ids. Tiles with an empty id don't render.
-export const studentVideos: { videoId: string; title: string }[] = [
-  { videoId: "", title: "" },
-  { videoId: "", title: "" },
-  { videoId: "", title: "" },
-  { videoId: "", title: "" },
-  { videoId: "", title: "" },
-  { videoId: "", title: "" },
-];

@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { tracks } from "@/content/tracks";
+import { videosFor } from "@/content/videoTestimonials";
+import VideoGroup from "../../VideoGroup";
 
 // Three track cards; the detail lives on /tracks/<slug>.
 export default function TrackCards() {
@@ -19,6 +21,7 @@ export default function TrackCards() {
             </li>
           ))}
         </ul>
+        <div style={{ marginTop: 20 }}><VideoGroup videos={videosFor("program-tracks")} columns={2} /></div>
       </div>
     </section>
   );
