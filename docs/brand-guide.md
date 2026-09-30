@@ -27,8 +27,9 @@ Direction: warm like a mentor, serious like an offer letter. Kind to students, c
 - No pure white anywhere; cream is the white.
 
 ## Type
-- Display: Young Serif (headlines, prices, big numbers), set in navy. One weight.
-- Body/UI: Hanken Grotesk, set in black on light ground, cream on navy.
+- Display: Newsreader (headlines, names, prices, big numbers), set in navy. Weights 500 and 600, with the optical-size axis on for large sizes.
+- Body/UI: Instrument Sans, weights 400, 500, 600. Black on light ground, cream on navy.
+- On the site both load through `next/font/google` and are read only via the `--font-display` and `--font-body` tokens, so a swap is one line in `app/layout.tsx`.
 - Web sizes: H1 56px desktop / 38px mobile, H2 36px, body 18px, buttons 16px/600.
 
 ## Buttons

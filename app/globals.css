@@ -8,8 +8,9 @@
   --color-cream: #f7f4ee;
   --color-sage: #a8c4a4;
   --color-dusty: #3f6690;
-  --font-display: var(--font-source-serif), "Source Serif Pro", Georgia, serif;
-  --font-sans: var(--font-hanken), ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  /* The two font tokens (faces loaded in app/layout.tsx). */
+  --font-display: var(--font-display-face), Georgia, serif;
+  --font-body: var(--font-body-face), ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 
 :root {
@@ -23,8 +24,8 @@
   --cream-line: rgba(247, 244, 238, 0.18);
   --radius: 20px;
   --shadow: 0 1px 2px rgba(26, 43, 72, 0.06), 0 8px 28px rgba(26, 43, 72, 0.07);
-  --display: var(--font-source-serif), "Source Serif Pro", Georgia, serif;
-  --sans: var(--font-hanken), ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --display: var(--font-display);
+  --sans: var(--font-body);
 }
 
 /* ---------- Base ---------- */
@@ -59,7 +60,7 @@ h1, h2, h3, p, li, a { overflow-wrap: break-word; }
 /* Type scale: H1 56/38, H2 36, card titles 24, body 18. */
 h1 { font-size: 38px; }
 h2 { font-size: 36px; }
-/* Sub-headings and card titles: Hanken 600, so the serif stays on H1/H2. */
+/* Sub-headings and card titles: the body font at 600, so the serif stays on H1/H2. */
 h3 { font-family: var(--sans); font-weight: 600; font-size: 22px; line-height: 1.25; color: var(--navy); margin: 0; }
 p { margin: 0; }
 @media (min-width: 768px) {

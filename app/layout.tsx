@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Source_Serif_4, Hanken_Grotesk } from "next/font/google";
+import { Newsreader, Instrument_Sans } from "next/font/google";
 import AnnouncementBar from "@/components/AnnouncementBar";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -9,8 +9,12 @@ import NewsletterBand from "@/components/NewsletterBand";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
-const sourceSerif = Source_Serif_4({ weight: "600", subsets: ["latin"], variable: "--font-source-serif", display: "swap" });
-const hanken = Hanken_Grotesk({ subsets: ["latin"], variable: "--font-hanken", display: "swap" });
+// The two brand fonts. Swapping one is a one-line change here: globals.css reads
+// them only through --font-display and --font-body.
+// Newsreader (variable: weights 500/600 used, optical-size axis on) for
+// headlines, names, and big numbers; Instrument Sans (400/500/600) for body/UI.
+const display = Newsreader({ subsets: ["latin"], axes: ["opsz"], variable: "--font-display-face", display: "swap" });
+const body = Instrument_Sans({ subsets: ["latin"], weight: ["400", "500", "600"], variable: "--font-body-face", display: "swap" });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://firstofferacademy.com"),
@@ -35,7 +39,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${sourceSerif.variable} ${hanken.variable}`}>
+    <html lang="en" className={`${display.variable} ${body.variable}`}>
       <body>
         <AnnouncementBar />
         <Header />

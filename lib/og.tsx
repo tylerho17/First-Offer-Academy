@@ -3,7 +3,7 @@ import path from "node:path";
 import { ImageResponse } from "next/og";
 import { logoDataUrl } from "./logo";
 
-// Brand share images: navy ground, cream Source Serif 4 headline, sage label.
+// Brand share images: navy ground, cream Newsreader headline, sage label.
 // Fonts are bundled in assets/fonts (next/og can't read woff2).
 
 export const ogSize = { width: 1200, height: 630 };
@@ -15,12 +15,12 @@ const SAGE = "#A8C4A4";
 async function fonts() {
   const dir = path.join(process.cwd(), "assets/fonts");
   const [serif, sans] = await Promise.all([
-    readFile(path.join(dir, "source-serif-4-600.woff")),
-    readFile(path.join(dir, "hanken-grotesk-700.woff")),
+    readFile(path.join(dir, "newsreader-600.woff")),
+    readFile(path.join(dir, "instrument-sans-700.woff")),
   ]);
   return [
-    { name: "Source Serif 4", data: serif, weight: 600 as const, style: "normal" as const },
-    { name: "Hanken Grotesk", data: sans, weight: 700 as const, style: "normal" as const },
+    { name: "Newsreader", data: serif, weight: 600 as const, style: "normal" as const },
+    { name: "Instrument Sans", data: sans, weight: 700 as const, style: "normal" as const },
   ];
 }
 
@@ -29,13 +29,13 @@ export async function brandImage({ label, headline, footer = "firstofferacademy.
   const logo = logoDataUrl();
   return new ImageResponse(
     (
-      <div style={{ width: "100%", height: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between", background: NAVY, padding: "72px 80px", fontFamily: "Hanken Grotesk" }}>
+      <div style={{ width: "100%", height: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between", background: NAVY, padding: "72px 80px", fontFamily: "Instrument Sans" }}>
         <div style={{ display: "flex" }}>
           <div style={{ display: "flex", background: SAGE, color: NAVY, fontSize: 24, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", padding: "10px 22px", borderRadius: 999 }}>
             {label}
           </div>
         </div>
-        <div style={{ display: "flex", fontFamily: "Source Serif 4", color: CREAM, fontSize: size, lineHeight: 1.15, letterSpacing: "-0.01em", maxWidth: 1000 }}>{headline}</div>
+        <div style={{ display: "flex", fontFamily: "Newsreader", color: CREAM, fontSize: size, lineHeight: 1.15, letterSpacing: "-0.01em", maxWidth: 1000 }}>{headline}</div>
         <div style={{ display: "flex", alignItems: "center", gap: 18, color: CREAM, fontSize: 26 }}>
           {logo && (
             <div style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 56, height: 56, borderRadius: 14, background: CREAM, padding: 6 }}>
@@ -69,13 +69,13 @@ export async function iconImage(px: number, { background }: { background?: strin
       { width: px, height: px },
     );
   }
-  const serif = await readFile(path.join(process.cwd(), "assets/fonts/source-serif-4-600.woff"));
+  const serif = await readFile(path.join(process.cwd(), "assets/fonts/newsreader-600.woff"));
   return new ImageResponse(
     (
-      <div style={{ width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center", background: NAVY, borderRadius: px * 0.22, color: CREAM, fontFamily: "Source Serif 4", fontSize: px * 0.62, paddingBottom: px * 0.04 }}>
+      <div style={{ width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center", background: NAVY, borderRadius: px * 0.22, color: CREAM, fontFamily: "Newsreader", fontSize: px * 0.62, paddingBottom: px * 0.04 }}>
         F
       </div>
     ),
-    { width: px, height: px, fonts: [{ name: "Source Serif 4", data: serif, weight: 600, style: "normal" }] },
+    { width: px, height: px, fonts: [{ name: "Newsreader", data: serif, weight: 600, style: "normal" }] },
   );
 }

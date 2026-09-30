@@ -6,7 +6,7 @@ Read `docs/brand-guide.md` and `docs/site-brief.md` before any UI or copy work. 
 
 ## Stack
 - Next.js (App Router) + TypeScript + Tailwind CSS
-- Fonts via `next/font/google`: Young Serif (display), Hanken Grotesk (body/UI)
+- Fonts via `next/font/google`: Newsreader (display, 500/600, optical-size axis) and Instrument Sans (body/UI, 400/500/600), exposed as the `--font-display` and `--font-body` tokens
 - Deploy: Vercel. Domain: firstofferacademy.com
 - No component library. Hand-built components in `components/`.
 - All editable content (testimonials, stats, employers, FAQ, program, tracks, events, articles, workshops, site settings) lives in typed files under `content/`, never hard-coded in components.
@@ -24,7 +24,7 @@ Read `docs/brand-guide.md` and `docs/site-brief.md` before any UI or copy work. 
 
 Hard rules:
 - No pure white anywhere. Cream is the white.
-- Headlines navy (Young Serif). Body black (Hanken Grotesk) on mist/cream, cream on navy.
+- Headlines navy (Newsreader). Body black (Instrument Sans) on mist/cream, cream on navy.
 - Never black text on navy. Never sage text, and never sage on mist without navy text inside a filled shape.
 - Black is text only: no black fills, borders, or buttons.
 - Cream appears as raised cards on mist, not as alternating full-width bands.
