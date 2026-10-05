@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { faqs } from "@/content/faq";
-import { getVideo } from "@/content/videoTestimonials";
-import VideoTestimonial from "@/components/VideoTestimonial";
+import { byPlacement } from "@/content/videoTestimonials";
+import VideoCard from "@/components/VideoCard";
 import { Plus } from "../Icons";
 
 // Default (homepage): the questions marked `home`, capped at five.
@@ -23,10 +23,7 @@ export default function FaqList({ all = false, parent = false, title = "Question
               <div className="answer">
                 <p>{f.a}</p>
                 {f.list && <ul className="faq-points">{f.list.map((x) => <li key={x.slice(0, 40)}>{x}</li>)}</ul>}
-                {[f.video ?? []].flat().map((id) => {
-                  const v = getVideo(id);
-                  return v ? <VideoTestimonial key={id} video={v} /> : null;
-                })}
+                {f.video && byPlacement(f.video).slice(0, 1).map((v) => <VideoCard key={v.youtubeId} video={v} />)}
                 {f.link && <p style={{ marginTop: 10 }}><Link href={f.link.href}>{f.link.label} →</Link></p>}
               </div>
             </details>

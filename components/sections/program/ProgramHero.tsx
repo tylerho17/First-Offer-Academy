@@ -1,13 +1,13 @@
 import { programOverview } from "@/content/programOverview";
-import { videosFor } from "@/content/videoTestimonials";
+import { byPlacement } from "@/content/videoTestimonials";
 import PayButton from "../../PayButton";
-import VideoTestimonial from "../../VideoTestimonial";
+import VideoCard from "../../VideoCard";
 
 // /program hero: one CTA, and the program-hero video on the right (stacked
 // under the text on mobile).
 export default function ProgramHero() {
   const h = programOverview.hero;
-  const video = videosFor("program-hero")[0];
+  const video = byPlacement("program-hero")[0];
   return (
     <section className="page-hero program-hero">
       <div className={`wrap${video ? " hero-split" : ""}`}>
@@ -19,7 +19,7 @@ export default function ProgramHero() {
             <PayButton />
           </div>
         </div>
-        {video && <VideoTestimonial video={video} />}
+        {video && <VideoCard video={video} size="hero" />}
       </div>
     </section>
   );

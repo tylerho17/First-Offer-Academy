@@ -8,7 +8,8 @@ import CallLink from "@/components/CallLink";
 import ExternshipNote from "@/components/sections/ExternshipNote";
 import PayOptions from "@/components/PayOptions";
 import VideoGroup from "@/components/VideoGroup";
-import { videosFor } from "@/content/videoTestimonials";
+import VideoCard from "@/components/VideoCard";
+import { byPlacement } from "@/content/videoTestimonials";
 import { Check } from "@/components/Icons";
 
 export const metadata: Metadata = {
@@ -18,7 +19,8 @@ export const metadata: Metadata = {
 
 export default function PricingPage() {
   const c = site.cohort;
-  const worth = videosFor("pricing"); // Tom, then Pranav
+  const priceVideo = byPlacement("pricing-hero")[0];
+  const worth = byPlacement("pricing-worth-it");
   return (
     <>
       <section className="page-hero center-hero">
@@ -37,10 +39,15 @@ export default function PricingPage() {
       <section className="section" id="plan" style={{ paddingTop: 16 }}>
         <div className="wrap">
           <article className="card price-card">
-            <span className="eyebrow">Everything included</span>
-            <p className="price-amount">{c.price}</p>
-            <p className="price-line">{depositLine()} The {c.balance} balance is due {c.balanceDue}.</p>
-            <p className="price-line">{c.name}: {c.start} · {c.seats} seats</p>
+            <div className={priceVideo ? "price-top" : undefined}>
+              <div>
+                <span className="eyebrow">Everything included</span>
+                <p className="price-amount">{c.price}</p>
+                <p className="price-line">{depositLine()} The {c.balance} balance is due {c.balanceDue}.</p>
+                <p className="price-line">{c.name}: {c.start} · {c.seats} seats</p>
+              </div>
+              {priceVideo && <VideoCard video={priceVideo} size="hero" />}
+            </div>
 
             <p className="includes-title">What&apos;s included</p>
             <ul className="plan-list">

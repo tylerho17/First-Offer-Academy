@@ -2,11 +2,11 @@ import { leavesWith } from "@/content/program";
 import { modules } from "@/content/programOverview";
 import ModuleIcon from "../../ModuleIcon";
 import { Check } from "../../Icons";
-import { videosFor, type VideoPlacement } from "@/content/videoTestimonials";
+import { byPlacement, type Placement } from "@/content/videoTestimonials";
 import VideoGroup from "../../VideoGroup";
 
 // Each part's video placement.
-const PART_VIDEOS: Record<string, VideoPlacement> = {
+const PART_VIDEOS: Record<string, Placement> = {
   "candidate-brand": "program-candidate-brand",
   "outreach-system": "program-outreach",
   "story-bank": "program-story-bank",
@@ -35,7 +35,7 @@ export default function SixParts() {
               <p>{m.detail}</p>
               {PART_VIDEOS[m.slug] && (
                 <div className="part-videos">
-                  <VideoGroup videos={videosFor(PART_VIDEOS[m.slug])} columns={2} />
+                  <VideoGroup videos={byPlacement(PART_VIDEOS[m.slug])} columns={1} />
                 </div>
               )}
               <details className="more">

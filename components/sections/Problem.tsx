@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Building, Clock, Lock } from "../Icons";
-import { videosFor } from "@/content/videoTestimonials";
-import VideoTestimonial from "../VideoTestimonial";
+import { byPlacement } from "@/content/videoTestimonials";
+import VideoGroup from "../VideoGroup";
 
 const items = [
   {
@@ -22,7 +22,6 @@ const items = [
 ];
 
 export default function Problem() {
-  const video = videosFor("home-problem")[0];
   const cards = items.map((i) => (
     <div className="card" key={i.title}>
       <div className="icon-dot">{i.icon}</div>
@@ -37,14 +36,8 @@ export default function Problem() {
           <span className="eyebrow">The problem</span>
           <h2>College teaches the major. Nobody teaches the job search.</h2>
         </div>
-        {video ? (
-          <div className="problem-split">
-            <div className="problem-list">{cards}</div>
-            <VideoTestimonial video={video} />
-          </div>
-        ) : (
-          <div className="grid grid-3">{cards}</div>
-        )}
+        <div className="grid grid-3">{cards}</div>
+        <div className="section-videos"><VideoGroup videos={byPlacement("home-problem")} columns={2} /></div>
         <p style={{ marginTop: 28 }}>
           <Link href="/program" className="link-arrow">View program details →</Link>
         </p>

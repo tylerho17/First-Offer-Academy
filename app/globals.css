@@ -511,7 +511,7 @@ a.topic-pill:hover { background: var(--navy); color: var(--cream); }
 .calendar-card p { font-size: 18px; }
 .calendar-card .btn { margin-top: auto; align-self: flex-start; }
 
-/* Video testimonials (components/VideoTestimonial.tsx) */
+/* Video testimonials (components/VideoCard.tsx, VideoGroup.tsx) */
 .vt { padding: 0; overflow: hidden; display: flex; flex-direction: column; border-radius: 16px; margin: 0; }
 .vt-frame { position: relative; aspect-ratio: 16 / 9; width: 100%; background: var(--navy); overflow: hidden; }
 .vt-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
@@ -528,12 +528,11 @@ a.topic-pill:hover { background: var(--navy); color: var(--cream); }
 .vt-meta .eyebrow { margin-bottom: 2px; }
 .vt-title { font-family: var(--display); font-weight: 600; font-size: 20px; line-height: 1.25; color: var(--navy); margin: 0; }
 .vt-who { font-size: 14px; color: var(--dusty); margin: 0; }
-.vt-len { font-size: 14px; color: var(--dusty); margin: 0; }
-.vt-pair-frames { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: var(--navy); }
 .video-group { list-style: none; padding: 0; margin: 0; display: grid; gap: 20px; grid-template-columns: minmax(0, 1fr); align-items: start; }
 @media (min-width: 700px) { .video-group.cols-2, .video-group.cols-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (min-width: 1024px) { .video-group.cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 .video-group > li { margin: 0; }
+.video-group.cols-1 { max-width: 560px; }
 .band .vt-title, .band .vt-who, .band .vt-meta .eyebrow { color: var(--cream); }
 .band .vt { background: rgba(247,244,238,.08); }
 
@@ -1151,22 +1150,14 @@ details.more summary { cursor: pointer; font-weight: 600; color: var(--dusty); f
 .marquee-logo.is-raster { background: var(--navy); -webkit-mask-position: center; mask-position: center; -webkit-mask-size: contain; mask-size: contain; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; }
 
 /* ---------- Video placements ---------- */
-.problem-split { display: grid; gap: 20px; align-items: start; }
-@media (min-width: 900px) { .problem-split { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px; } }
-.problem-list { display: grid; gap: 14px; }
-.problem-list .card { display: grid; grid-template-columns: auto 1fr; gap: 4px 16px; align-items: start; padding: 20px 22px; }
-.problem-list .card .icon-dot { grid-row: span 2; margin: 0; }
 .problem-list .card h3 { margin: 0; }
 .part-video { list-style: none; }
 .hero-split { display: grid; gap: 28px; align-items: center; }
 @media (min-width: 900px) { .hero-split { grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: 48px; } }
 .part-videos { margin-top: 14px; }
 .part-videos .vt-title { font-size: 17px; }
-.track-video { max-width: 560px; margin-top: 24px; }
 .worth-grid { max-width: 1000px; }
 .family-label { font-size: 14px; color: var(--dusty); font-weight: 600; margin-bottom: 10px; }
-.story-videos { grid-auto-flow: dense; }
-@media (min-width: 1024px) { .story-videos > li.is-pair { grid-column: span 2; } }
 
 /* ---------- Final offer (Sept 30, 2026) ---------- */
 .hero-proof { margin-top: 20px; font-size: 15px; font-weight: 600; color: var(--navy); max-width: 620px; }
@@ -1184,3 +1175,31 @@ details.more summary { cursor: pointer; font-weight: 600; color: var(--dusty); f
 .refund-panel h3 { font-family: var(--display); font-size: 28px; }
 .refund-panel p { margin-top: 10px; }
 .refund-link { font-size: 15px; }
+
+/* Video placements (content/videoTestimonials.ts byPlacement) and /stories */
+.vt-hero .vt-title { font-size: 24px; }
+.vt-hero .vt-play-mark { width: 68px; height: 68px; }
+.vt-hero .vt-play-mark svg { width: 28px; height: 28px; }
+.hero-video { margin-top: 28px; max-width: 640px; }
+.section-videos { margin-top: 24px; }
+.section-videos.narrow { max-width: 560px; }
+.home-parent { display: grid; gap: 16px; max-width: 560px; }
+.coach-split { display: grid; gap: 20px; align-items: start; }
+@media (min-width: 1024px) { .coach-split { grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 28px; } }
+.family-rows { list-style: none; padding: 0; margin: 0; display: grid; gap: 32px; }
+.family-rows > li { margin: 0; }
+.video-block + .video-block { margin-top: 40px; }
+.video-block h3 { margin-bottom: 16px; }
+.price-card:has(.price-top) { max-width: 1000px; }
+.price-top { display: grid; gap: 24px; align-items: center; }
+@media (min-width: 860px) { .price-top { grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 36px; } }
+.price-top .vt { margin-top: 0; }
+.stories-filters { display: grid; gap: 14px; margin-bottom: 24px; }
+.filter-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.filter-label { font-size: 14px; font-weight: 600; color: var(--navy); min-width: 56px; }
+.chip-count { font-weight: 500; opacity: .75; margin-left: 2px; }
+.filter-select { font: inherit; font-size: 16px; min-height: 44px; padding: 8px 14px; border-radius: 12px; border: 1.5px solid var(--navy-line); background: var(--cream); color: var(--ink); max-width: 100%; }
+.filter-select:focus-visible { outline: 3px solid var(--dusty); outline-offset: 2px; }
+.stories-count { font-size: 14px; color: var(--dusty); margin: 0 0 14px; }
+.stories-empty { padding: 24px 0; }
+.stories-more { display: flex; justify-content: center; margin-top: 28px; }

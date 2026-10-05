@@ -228,15 +228,14 @@ export function companyNamer() {
 export const companyDisplay = (name: string) => name.replace(/\s*\([^)]*\)\s*$/, "").trim();
 
 // Companies with an official logo in public/logos/<slug>.svg or .png. Every
-// other company renders as a text wordmark. Blackstone isn't in the student data;
-// it renders only beside Tricon (Tyler's call), with the portfolio caption.
+// other company renders as a text wordmark. Tricon is never shown as Blackstone;
+// the marquee caption calls it a Blackstone portfolio company.
 export const companyLogos: Record<string, string> = {
   PIMCO: "pimco",
   "Morgan Stanley": "morgan-stanley",
   "JPMorgan Chase": "jpmorgan-chase",
   "Wells Fargo": "wells-fargo",
   "U.S. Bank": "us-bank",
-  Blackstone: "blackstone",
   Tricon: "tricon",
   BridgeBio: "bridgebio",
   "Sila Nanotechnologies": "sila",
@@ -267,8 +266,5 @@ export function marqueeCompanies(): MarqueeCompany[] {
   // Spread the text wordmarks evenly between the logos.
   const ordered = [...withLogo];
   text.forEach((t, i) => ordered.splice(Math.round(((i + 1) * (withLogo.length + i + 1)) / (text.length + 1)), 0, t));
-  // Blackstone sits directly before Tricon.
-  const i = ordered.indexOf("Tricon");
-  if (i >= 0) ordered.splice(i, 0, "Blackstone");
   return ordered.map((name) => ({ name, slug: companyLogos[name] }));
 }

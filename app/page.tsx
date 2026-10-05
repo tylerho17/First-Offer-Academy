@@ -2,6 +2,7 @@ import Hero from "@/components/sections/Hero";
 import Problem from "@/components/sections/Problem";
 import LeavesWith from "@/components/sections/LeavesWith";
 import Testimonials from "@/components/sections/Testimonials";
+import HomeParent from "@/components/sections/HomeParent";
 import Stats from "@/components/sections/Stats";
 import LogoMarquee from "@/components/sections/LogoMarquee";
 import EventsStrip from "@/components/sections/EventsStrip";
@@ -39,8 +40,9 @@ export default function Home() {
       <LogoMarquee />
       <HowItWorks />
       <Problem />
-      <LeavesWith homeVideo />
+      <LeavesWith />
       <Testimonials />
+      <HomeParent />
       <PriceBand />
       <OfferOrRefund />
       <EventsStrip />

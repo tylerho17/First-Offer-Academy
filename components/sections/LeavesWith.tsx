@@ -3,8 +3,6 @@ import { leavesWith, tracks } from "@/content/program";
 import { modules } from "@/content/programOverview";
 import ModuleIcon from "../ModuleIcon";
 import { Check } from "../Icons";
-import { videosFor } from "@/content/videoTestimonials";
-import VideoTestimonial from "../VideoTestimonial";
 
 // Compact list of the six part names (used inside other cards).
 export function LeavesWithList({ compact = false }: { compact?: boolean }) {
@@ -37,9 +35,7 @@ function TrackLinks() {
 // to the full section on /program. Card copy comes from
 // content/programOverview.ts, the source of truth. This is the only place on
 // the homepage that names the six parts.
-// `homeVideo`: the homepage adds the home-leaves-with video as the last tile.
-export default function LeavesWith({ flush = true, homeVideo = false }: { flush?: boolean; homeVideo?: boolean }) {
-  const video = homeVideo ? videosFor("home-leaves-with")[0] : undefined;
+export default function LeavesWith({ flush = true }: { flush?: boolean }) {
   return (
     <section className="section" id="leaves-with" style={flush ? { paddingTop: 0 } : undefined}>
       <div className="wrap">
@@ -56,11 +52,6 @@ export default function LeavesWith({ flush = true, homeVideo = false }: { flush?
               <Link href={`/program#${m.slug}`} className="link-arrow" aria-describedby={`part-${m.slug}`}>Read more</Link>
             </li>
           ))}
-          {video && (
-            <li className="part-video">
-              <VideoTestimonial video={video} label="See it: a 60-second pitch built in the program." />
-            </li>
-          )}
         </ul>
       </div>
     </section>

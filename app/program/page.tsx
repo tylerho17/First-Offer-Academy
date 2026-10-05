@@ -3,6 +3,7 @@ import ProgramHero from "@/components/sections/program/ProgramHero";
 import SixParts from "@/components/sections/program/SixParts";
 import WeekPlan from "@/components/sections/program/WeekPlan";
 import TrackCards from "@/components/sections/program/TrackCards";
+import ProgramCoaching from "@/components/sections/program/ProgramCoaching";
 import OurPromise from "@/components/sections/program/OurPromise";
 import ProgramCta from "@/components/sections/program/ProgramCta";
 
@@ -19,6 +20,7 @@ export default function ProgramPage() {
       <SixParts />
       <WeekPlan />
       <TrackCards />
+      <ProgramCoaching />
       <OurPromise />
       <ProgramCta />
     </>

@@ -10,8 +10,11 @@ import CallLink from "@/components/CallLink";
 import PayButton, { DepositNote } from "@/components/PayButton";
 import FaqList from "@/components/sections/FaqList";
 import EventCard from "@/components/EventCard";
-import VideoTestimonial from "@/components/VideoTestimonial";
-import { videosFor } from "@/content/videoTestimonials";
+import VideoCard from "@/components/VideoCard";
+import VideoGroup from "@/components/VideoGroup";
+import FamilyStories from "@/components/sections/FamilyStories";
+import ParentVoices from "@/components/sections/ParentVoices";
+import { byPlacement } from "@/content/videoTestimonials";
 import { upcomingEvents } from "@/lib/events";
 import { Check, Minus } from "@/components/Icons";
 
@@ -25,18 +28,15 @@ export const metadata: Metadata = {
 
 export default async function ParentsPage() {
   const sessions = (await upcomingEvents("Parents")).slice(0, 2);
-  // Kim and her dad first, side by side, then the rest.
-  const PAIR = ["tom-finance-language", "kim-changed"];
-  const family = videosFor("parents");
-  const pair = PAIR.map((id) => family.find((v) => v.id === id)).filter((v) => !!v);
-  const rest = family.filter((v) => !PAIR.includes(v.id));
+  const heroVideo = byPlacement("parents-hero")[0];
   const c = site.cohort;
   const quote = testimonials.find((t) => t.role === "parent" && t.permission && t.featured) ?? testimonials.find((t) => t.role === "parent" && t.permission);
 
   return (
     <>
       <section className="page-hero">
-        <div className="wrap">
+        <div className={`wrap${heroVideo ? " hero-split" : ""}`}>
+          <div>
           <span className="eyebrow" style={{ display: "block" }}>{p.eyebrow}</span>
           <h1>{p.title}</h1>
           <p className="lede">{p.lede}</p>
@@ -52,6 +52,8 @@ export default async function ParentsPage() {
           <p style={{ marginTop: 16 }}>
             <Link href="/program" className="link-arrow">See the full program →</Link>
           </p>
+          </div>
+          {heroVideo && <VideoCard video={heroVideo} size="hero" />}
         </div>
       </section>
 
@@ -87,22 +89,12 @@ export default async function ParentsPage() {
               </div>
             ))}
           </div>
+          <div className="section-videos narrow"><VideoGroup videos={byPlacement("parents-relief")} columns={1} /></div>
         </div>
       </section>
 
-      {family.length > 0 && (
-        <section className="section" style={{ paddingTop: 0 }} aria-labelledby="families-title">
-          <div className="wrap">
-            <div className="section-head">
-              <h2 id="families-title">From families and students</h2>
-            </div>
-            {pair.length === 2 && <p className="family-label">Kim and her dad, Tom, on the same story.</p>}
-            <ul className="video-group cols-2">
-              {[...pair, ...rest].map((v) => <li key={v.id}><VideoTestimonial video={v} /></li>)}
-            </ul>
-          </div>
-        </section>
-      )}
+      <FamilyStories />
+      <ParentVoices />
 
       <section className="section" style={{ paddingTop: 0 }}>
         <div className="wrap">
