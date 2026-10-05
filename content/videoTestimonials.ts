@@ -1,5 +1,5 @@
 // Video testimonials (unlisted YouTube), shared with written permission.
-// Videos v4 (2026-10-04): 37 clips. Each clip has one unique `spot` and
+// Videos v4 (2026-10-04): 37 clips; polish v5 added three FAQ clips (40). Each clip has one unique `spot` and
 // renders in that one place only, beside the copy it proves. The only groups
 // of videos are the /pricing "It was worth it." section and the /results
 // "In their words" row. FAQ clips render on /faq only.
@@ -29,7 +29,10 @@ export type VideoSpot =
   // /results: the "In their words" row
   | "results-1" | "results-2" | "results-3" | "results-4"
   // /faq: inside the answer each clip directly answers
-  | "faq-right-fit-1" | "faq-right-fit-2" | "faq-ai" | "faq-coach";
+  | "faq-right-fit-1" | "faq-right-fit-2" | "faq-too-early" | "faq-club"
+  | "faq-coach" | "faq-career-center" | "faq-ai"
+  // /about: the Tyler intro video (content/founder.ts introVideoId), not a testimonial
+  | "about-intro";
 
 export interface VideoTestimonial {
   youtubeId: string;
@@ -82,6 +85,9 @@ export const videoTestimonials: VideoTestimonial[] = [
   // /faq
   { youtubeId: "c4J3yMBr4xI", person: "Tom", kind: "parent", parentOf: "Kim", title: "Who this program is not for", spot: "faq-right-fit-1" },
   { youtubeId: "_lhJNOtMIiI", person: "Steve", kind: "parent", parentOf: "James", title: "Who this program is not for", spot: "faq-right-fit-2" },
+  { youtubeId: "oMGm2ZbiigM", person: "Vasavi", kind: "student", title: "It's never too early to start", spot: "faq-too-early" },
+  { youtubeId: "RUDrbPjQzpQ", person: "Kim", kind: "student", title: "No clubs, no connections, no plan", spot: "faq-club" },
+  { youtubeId: "A80kP4Oq-dI", person: "Greg", kind: "parent", parentOf: "Maddie", title: "Giving her a leg up", spot: "faq-career-center" },
   { youtubeId: "aVcHIEV8_T0", person: "Greg", kind: "parent", parentOf: "Maddie", title: "Why this over AI", spot: "faq-ai" },
   { youtubeId: "vfGBf27EXyk", person: "Vasavi", kind: "student", title: "Tyler as a coach", spot: "faq-coach" },
 ];

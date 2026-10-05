@@ -34,9 +34,8 @@ LinkedIn logos.
 | concordia-capital.png | Concordia Capital | og:image, concordiacapitalco.com (blue background made transparent) |
 
 Text wordmarks (no usable official logo): Ditto and Valemont Group (no
-official site confirmed), Holter Holdings (site only has an "H" icon), The
-Amazing Group (site's only image is a photo), and Allied HOA Partners (no
-site beyond LinkedIn).
+official site confirmed), Holter Holdings (site only has an "H" icon), and The
+Amazing Group (site's only image is a photo).
 
 The `.jpg` squares in this folder are LinkedIn company logos. They are not
 used (official sources only) and are not committed.

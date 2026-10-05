@@ -1,3 +1,5 @@
+import { founder } from "./founder";
+
 // Site-wide settings. Every outbound link on the site comes from here.
 
 const founderLinkedIn = "https://www.linkedin.com/in/tylerho1";
@@ -107,12 +109,10 @@ export const depositLine = () =>
     ? `A ${site.cohort.deposit} deposit, fully refundable through ${site.depositRefundDeadline}, holds a seat.`
     : `A ${site.cohort.deposit} deposit holds a seat.`;
 
-// "7+ internships worked, and offers from many more", or the exact offer
-// count once Tyler sets founder.offerCount.
+// The founder credential from content/founder.ts ("10+ internships"), plus
+// the exact offer count once Tyler sets founder.offerCount.
 export const founderInternships = () =>
-  site.founder.offerCount
-    ? `7+ internships worked, and ${site.founder.offerCount} internship offers`
-    : "7+ internships worked, and offers from many more";
+  site.founder.offerCount ? `${founder.internships}, and ${site.founder.offerCount} internship offers` : founder.internships;
 
 // Small whole numbers spelled out for running prose ("coached eight
 // freshmen"). Falls back to digits past twelve.

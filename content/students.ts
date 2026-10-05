@@ -34,7 +34,7 @@ export const students: Student[] = [
     track: "Finance",
     headline: "PIMCO",
     role: "Summer Analyst, return offer",
-    otherCompanies: ["Optimize Financial", "Allied HOA Partners"],
+    otherCompanies: ["Optimize Financial"],
     quote: "Tyler covers all bases so that I felt ready in my interviews and coffee chats.",
     headshot: "/images/students/henry.png",
     homepage: false,

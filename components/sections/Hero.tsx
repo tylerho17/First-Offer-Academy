@@ -5,6 +5,7 @@ import LinkedInLink from "../LinkedInLink";
 import VideoCard from "../VideoCard";
 import { videoAt } from "@/content/videoTestimonials";
 import { PILOT_LANDED, PILOT_STUDENTS, PLACEMENT_FIRMS, site } from "@/content/site";
+import { founder } from "@/content/founder";
 
 export default function Hero() {
   // The lead video: the only large video on the homepage.
@@ -49,7 +50,8 @@ export default function Hero() {
           </div>
           <figcaption>
             <strong>{site.founder.name}, Founder</strong>
-            <span>7+ internships worked, incoming investment banking analyst</span>
+            <span>{founder.internships}, {founder.role.toLowerCase()}</span>
+            <Link href="/about" className="link-arrow">Meet Tyler →</Link>
             <LinkedInLink />
           </figcaption>
         </figure>
