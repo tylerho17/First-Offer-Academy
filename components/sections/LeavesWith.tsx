@@ -2,6 +2,8 @@ import Link from "next/link";
 import { leavesWith, tracks } from "@/content/program";
 import { modules } from "@/content/programOverview";
 import ModuleIcon from "../ModuleIcon";
+import VideoPair from "../VideoPair";
+import type { VideoTestimonial } from "@/content/videoTestimonials";
 import { Check } from "../Icons";
 
 // Compact list of the six part names (used inside other cards).
@@ -35,7 +37,8 @@ function TrackLinks() {
 // to the full section on /program. Card copy comes from
 // content/programOverview.ts, the source of truth. This is the only place on
 // the homepage that names the six parts.
-export default function LeavesWith({ flush = true }: { flush?: boolean }) {
+// `videos`: a pair of clips under the six parts (/parents only).
+export default function LeavesWith({ flush = true, videos = [] }: { flush?: boolean; videos?: VideoTestimonial[] }) {
   return (
     <section className="section" id="leaves-with" style={flush ? { paddingTop: 0 } : undefined}>
       <div className="wrap">
@@ -53,6 +56,7 @@ export default function LeavesWith({ flush = true }: { flush?: boolean }) {
             </li>
           ))}
         </ul>
+        <VideoPair videos={videos} />
       </div>
     </section>
   );

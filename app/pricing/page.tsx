@@ -8,7 +8,7 @@ import CallLink from "@/components/CallLink";
 import ExternshipNote from "@/components/sections/ExternshipNote";
 import PayOptions from "@/components/PayOptions";
 import VideoCard from "@/components/VideoCard";
-import { videoAt } from "@/content/videoTestimonials";
+import { videoAt, videosAt } from "@/content/videoTestimonials";
 import { Check } from "@/components/Icons";
 
 export const metadata: Metadata = {
@@ -18,9 +18,10 @@ export const metadata: Metadata = {
 
 export default function PricingPage() {
   const c = site.cohort;
-  // The purchase section's three clips, all on whether it was worth it.
+  // Tom beside the price, then the "It was worth it." section: every worth-it clip.
   const priceVideo = videoAt("pricing-hero");
-  const worthPair = [videoAt("pricing-priceless"), videoAt("pricing-worth-student")].filter((v) => !!v);
+  const worthParents = videosAt("worth-parent-1", "worth-parent-2", "worth-parent-3");
+  const worthStudents = videosAt("worth-student-1", "worth-student-2", "worth-student-3", "worth-student-4");
   return (
     <>
       <section className="page-hero center-hero">
@@ -97,15 +98,35 @@ export default function PricingPage() {
               <p style={{ marginTop: 12 }}><Link href="/refunds">Refund &amp; payment policy →</Link></p>
             </div>
           </div>
-          {/* A parent and a student on whether it was worth it, side by side
-              (stacked on mobile), right under the payment options. */}
-          {worthPair.length > 0 && (
-            <div className="video-pair">
-              {worthPair.map((v) => <VideoCard key={v.youtubeId} video={v} />)}
-            </div>
-          )}
         </div>
       </section>
+
+      {(worthParents.length > 0 || worthStudents.length > 0) && (
+        <section className="section" id="worth-it" style={{ paddingTop: 0 }} aria-labelledby="worth-title">
+          <div className="wrap">
+            <div className="section-head">
+              <h2 id="worth-title">It was worth it.</h2>
+              <p className="lede">Parents and students, in their own words.</p>
+            </div>
+            {worthParents.length > 0 && (
+              <div className="worth-row">
+                <h3>Parents</h3>
+                <ul className="worth-grid cols-3">
+                  {worthParents.map((v) => <li key={v.youtubeId}><VideoCard video={v} /></li>)}
+                </ul>
+              </div>
+            )}
+            {worthStudents.length > 0 && (
+              <div className="worth-row">
+                <h3>Students</h3>
+                <ul className="worth-grid cols-4">
+                  {worthStudents.map((v) => <li key={v.youtubeId}><VideoCard video={v} /></li>)}
+                </ul>
+              </div>
+            )}
+          </div>
+        </section>
+      )}
 
       <Comparison />
       <FaqList />

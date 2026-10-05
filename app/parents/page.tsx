@@ -11,7 +11,8 @@ import PayButton, { DepositNote } from "@/components/PayButton";
 import FaqList from "@/components/sections/FaqList";
 import EventCard from "@/components/EventCard";
 import VideoCard from "@/components/VideoCard";
-import { videoAt } from "@/content/videoTestimonials";
+import VideoPair from "@/components/VideoPair";
+import { videoAt, videosAt } from "@/content/videoTestimonials";
 import { upcomingEvents } from "@/lib/events";
 import { Check, Minus } from "@/components/Icons";
 
@@ -25,14 +26,13 @@ export const metadata: Metadata = {
 
 export default async function ParentsPage() {
   const sessions = (await upcomingEvents("Parents")).slice(0, 2);
-  // Exactly four parent clips, each beside the copy it proves.
+  // Ten parent clips, at most two per section, each beside the copy it proves.
   const heroVideo = videoAt("parents-hero");
-  const aiVideo = videoAt("parents-ai");
-  const growthVideo = videoAt("parents-growth");
+  const skills = videosAt("parents-skills-1", "parents-skills-2"); // the weekly skill work
+  const results = videosAt("parents-results-1", "parents-results-2"); // what parents see
+  const growth = videosAt("parents-growth-1", "parents-growth-2"); // what the student leaves with
   const ctaVideo = videoAt("parents-before-cta");
-  // The growth clip sits beside the Week 8 family meeting card.
-  const growthItem = growthVideo ? p.youSee.items.find((i) => i.title.includes("Week 8")) : undefined;
-  const seeItems = p.youSee.items.filter((i) => i !== growthItem);
+  const callVideos = videosAt("parents-coach", "parents-relief"); // beside the call with Tyler
   const c = site.cohort;
   const quote = testimonials.find((t) => t.role === "parent" && t.permission && t.featured) ?? testimonials.find((t) => t.role === "parent" && t.permission);
 
@@ -63,12 +63,9 @@ export default async function ParentsPage() {
 
       <section className="section" style={{ paddingTop: 40 }}>
         <div className="wrap">
-          <div className={aiVideo ? "copy-video section-head-split" : undefined}>
-            <div className="section-head">
-              <h2>{p.weekly.title}</h2>
-              <p className="lede">{p.weekly.note}</p>
-            </div>
-            {aiVideo && <VideoCard video={aiVideo} />}
+          <div className="section-head">
+            <h2>{p.weekly.title}</h2>
+            <p className="lede">{p.weekly.note}</p>
           </div>
           <div className="grid grid-3">
             {weekly.map((w) => (
@@ -79,6 +76,7 @@ export default async function ParentsPage() {
               </div>
             ))}
           </div>
+          <VideoPair videos={skills} />
         </div>
       </section>
 
@@ -87,18 +85,8 @@ export default async function ParentsPage() {
           <div className="section-head">
             <h2>{p.youSee.title}</h2>
           </div>
-          {growthItem && growthVideo && (
-            <div className="copy-video" style={{ marginBottom: 20 }}>
-              <div className="card">
-                <span className="icon-dot"><Check /></span>
-                <h3>{growthItem.title}</h3>
-                <p>{growthItem.body}</p>
-              </div>
-              <VideoCard video={growthVideo} />
-            </div>
-          )}
-          <div className={`grid ${seeItems.length === 3 ? "grid-3" : "grid-2"}`}>
-            {seeItems.map((i) => (
+          <div className="grid grid-2">
+            {p.youSee.items.map((i) => (
               <div className="card" key={i.title}>
                 <span className="icon-dot"><Check /></span>
                 <h3>{i.title}</h3>
@@ -106,6 +94,7 @@ export default async function ParentsPage() {
               </div>
             ))}
           </div>
+          <VideoPair videos={results} />
         </div>
       </section>
 
@@ -120,7 +109,7 @@ export default async function ParentsPage() {
         </div>
       </section>
 
-      <LeavesWith />
+      <LeavesWith videos={growth} />
 
       <section className="section band" id="payment">
         <div className="wrap price-grid">
@@ -207,6 +196,7 @@ export default async function ParentsPage() {
               </div>
             </div>
           )}
+          <VideoPair videos={callVideos} className="before-call" />
           <div className="card call-card" id="call">
             <div>
               <h2>Book a parent call</h2>

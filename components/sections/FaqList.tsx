@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { faqs } from "@/content/faq";
 import { Plus } from "../Icons";
+import VideoPair from "../VideoPair";
+import { videosAt } from "@/content/videoTestimonials";
 
 // Default (homepage): the questions marked `home`, capped at five.
 export default function FaqList({ all = false, parent = false, title = "Questions parents ask" }: { all?: boolean; parent?: boolean; title?: string }) {
@@ -21,6 +23,7 @@ export default function FaqList({ all = false, parent = false, title = "Question
               <div className="answer">
                 <p>{f.a}</p>
                 {f.list && <ul className="faq-points">{f.list.map((x) => <li key={x.slice(0, 40)}>{x}</li>)}</ul>}
+                {all && f.video && <VideoPair videos={videosAt(...f.video)} className="faq-videos" />}
                 {f.link && <p style={{ marginTop: 10 }}><Link href={f.link.href}>{f.link.label} →</Link></p>}
               </div>
             </details>

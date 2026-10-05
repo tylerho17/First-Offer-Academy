@@ -1090,7 +1090,7 @@ button.topic-pill { font: inherit; font-size: 15px; font-weight: 600; cursor: po
 @media (max-width: 400px) { .audience-card { font-size: 16px; padding: 16px; } }
 
 /* ---------- /program (compact) ---------- */
-.part-grid-compact { list-style: none; padding: 0; margin: 0; display: grid; gap: 16px; grid-template-columns: minmax(0, 1fr); align-items: start; }
+.part-grid-compact { list-style: none; padding: 0; margin: 0; display: grid; gap: 16px; grid-template-columns: minmax(0, 1fr); align-items: stretch; }
 @media (min-width: 700px) { .part-grid-compact { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .part-compact { padding: 22px 24px; scroll-margin-top: 110px; }
 .part-compact-head { display: flex; align-items: center; gap: 14px; margin-bottom: 10px; }
@@ -1176,15 +1176,11 @@ details.more summary { cursor: pointer; font-weight: 600; color: var(--dusty); f
 .copy-video { display: grid; gap: 20px; align-items: center; }
 @media (min-width: 900px) { .copy-video { grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 36px; } }
 .copy-video > .vt { max-width: 560px; width: 100%; }
-.section-head-split { margin-bottom: 28px; }
-.section-head-split .section-head { margin-bottom: 0; }
 .hero-side { display: grid; gap: 16px; width: 100%; align-content: start; }
 .founder-card.is-compact { max-width: none; justify-self: stretch; display: grid; grid-template-columns: 96px minmax(0, 1fr); align-items: center; }
 .founder-card.is-compact .founder-card-photo { aspect-ratio: 1; height: 100%; }
 .founder-card.is-compact figcaption { padding: 14px 18px; font-size: 15px; gap: 4px; }
 .founder-card.is-compact strong { font-size: 16px; }
-.part-grid-compact > .part-compact.is-featured { grid-column: 1 / -1; }
-.part-compact.is-featured .copy-video { align-items: start; }
 .coach-split { display: grid; gap: 20px; align-items: start; }
 @media (min-width: 1024px) { .coach-split { grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 28px; } }
 .coach-split > .vt { max-width: 560px; }
@@ -1195,6 +1191,19 @@ details.more summary { cursor: pointer; font-weight: 600; color: var(--dusty); f
 .video-pair { display: grid; gap: 20px; margin-top: 20px; }
 @media (min-width: 700px) { .video-pair { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .dont-side { display: grid; gap: 20px; align-content: start; }
-.student-video { margin-top: 4px; }
-.student-video .vt { box-shadow: none; border: 1px solid var(--navy-line); }
-.student-video .vt-title { font-size: 17px; }
+/* v4: /program cards in a row share a height (the description grows, so the
+   clips line up); pairs; the /pricing worth-it rows and the /results row. */
+.part-compact { display: flex; flex-direction: column; }
+.part-compact > .part-detail { flex: 1 0 auto; }
+.video-pair.is-single { max-width: 560px; }
+@media (min-width: 700px) { .video-pair.is-single { grid-template-columns: minmax(0, 1fr); } }
+.video-pair.before-call { margin: 0 0 20px; }
+.faq-videos { margin-top: 16px; }
+.worth-row + .worth-row { margin-top: 32px; }
+.worth-row h3 { margin-bottom: 14px; }
+.worth-grid { list-style: none; padding: 0; margin: 0; display: grid; gap: 20px; grid-template-columns: minmax(0, 1fr); align-items: start; }
+.worth-grid > li { margin: 0; }
+@media (min-width: 700px) { .worth-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1024px) { .worth-grid.cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); } .worth-grid.cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.worth-grid.cols-4 .vt-title { font-size: 17px; }
+#in-their-words { margin-bottom: 20px; }

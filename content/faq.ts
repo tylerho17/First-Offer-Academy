@@ -3,12 +3,14 @@ import { afterProgram, formatNote, offerOrRefund, oneOnOneFormat, sessionFormat 
 import { rhythmNotes, weeklyRhythm } from "./curriculum";
 import { programOverview } from "./programOverview";
 import { promise } from "./promise";
+import type { VideoSpot } from "./videoTestimonials";
 
 const tba = (v: string, fallback = "To be announced.") => (v ? v : fallback);
 
 // `id`: anchor on /faq. `list`: bullet points rendered under the answer.
-// The FAQ has no videos.
-export type Faq = { q: string; a: string; id?: string; list?: string[]; home?: boolean; parent?: boolean; link?: { label: string; href: string } };
+// `video`: clips that directly answer the question, shown under the answer on
+// /faq only (the FAQ lists on other pages stay text only).
+export type Faq = { q: string; a: string; id?: string; list?: string[]; home?: boolean; parent?: boolean; video?: VideoSpot[]; link?: { label: string; href: string } };
 
 export const faqs: Faq[] = [
   {
@@ -51,6 +53,7 @@ export const faqs: Faq[] = [
   {
     parent: true,
     q: "Is this right for my student?",
+    video: ["faq-right-fit-1", "faq-right-fit-2"],
     a: "It fits a student who will do the work every week: the outreach, the calls, the reps. It doesn't fit a student who wants it done for them, and it isn't a fix for a student who doesn't want to be there.",
   },
   {
@@ -126,11 +129,13 @@ export const faqs: Faq[] = [
   {
     parent: true,
     q: "Can't my student just use ChatGPT for this?",
+    video: ["faq-ai"],
     a: "AI is part of the system, not a replacement for it. In Week 2 every student sets up their own AI-assisted email automation, but AI drafts; your student personalizes and reads every email before it goes, and their coach reviews the emails in the weekly 1:1. AI can't take the networking call, tell your student's story, or sit the interview for them.",
   },
   {
     parent: true,
     q: "Why learn from someone who just went through recruiting?",
+    video: ["faq-coach"],
     a: `Because the timelines, emails, and interviews Tyler coaches are ones he ran himself, recently: ${founderInternships()}, and an incoming investment banking offer. In college he led finance recruiting education and coached ${spell(PILOT_STUDENTS)} freshmen who all landed internships in their first year.`,
   },
   {
