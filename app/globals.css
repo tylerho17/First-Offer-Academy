@@ -1246,13 +1246,6 @@ details.more summary { cursor: pointer; font-weight: 600; color: var(--dusty); f
 .about-stats .ui-stat-value { font-size: 34px; }
 @media (min-width: 640px) and (max-width: 1023px) { .about-top { grid-template-columns: 240px minmax(0, 1fr); } .about-stats { grid-column: 1 / -1; grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 @media (min-width: 1024px) { .about-top { grid-template-columns: 280px minmax(0, 1fr) 300px; gap: 36px; } .about-photo { width: 280px; } }
-.about-roles { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
-@media (min-width: 900px) { .about-roles { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; } }
-.about-role { margin: 0; padding: 16px 18px; display: grid; gap: 4px; align-content: start; }
-.about-role p { margin: 0; }
-.about-role-org { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; color: var(--navy); font-size: 16px; }
-.about-role-title { font-size: 15px; }
-.about-role-dates { font-size: 14px; color: var(--dusty); }
 .about-split { display: grid; gap: 32px; }
 @media (min-width: 900px) { .about-split { grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 48px; } }
 .about-prose p { font-size: 17px; }
@@ -1311,3 +1304,17 @@ details.more summary { cursor: pointer; font-weight: 600; color: var(--dusty); f
 .playbook-band h2 { font-size: 28px; margin: 0 0 6px; }
 .playbook-band p { margin: 0; }
 @media (max-width: 480px) { .playbook-band .btn { width: 100%; white-space: normal; text-align: center; } }
+/* v7b: /about logo wall (components/ui/LogoTile). Flex rows so a short last
+   row centers: 4 per row on desktop, 3 on tablet, 2 on mobile. */
+.about-logos { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; --cols: 2; }
+.about-logos > li { margin: 0; display: flex; flex: 0 0 calc((100% - (var(--cols) - 1) * 12px) / var(--cols)); }
+@media (min-width: 640px) { .about-logos { --cols: 3; gap: 16px; } .about-logos > li { flex-basis: calc((100% - (var(--cols) - 1) * 16px) / var(--cols)); } }
+@media (min-width: 1024px) { .about-logos { --cols: 4; } }
+.ui-logo-tile { position: relative; width: 100%; margin: 0; padding: 36px 14px 14px; display: grid; grid-template-rows: auto auto; justify-items: center; align-content: center; gap: 12px; text-align: center; }
+.ui-logo-tile-badge { position: absolute; top: 10px; right: 10px; line-height: 1; }
+.ui-logo-tile-box { width: 100%; max-width: 120px; height: 56px; display: flex; align-items: center; justify-content: center; }
+.ui-logo-tile-box img { display: block; height: auto; max-height: 56px; object-fit: contain; }
+.ui-logo-tile-mono { display: block; max-height: 56px; background: var(--navy); -webkit-mask-size: contain; mask-size: contain; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; -webkit-mask-position: center; mask-position: center; }
+.ui-logo-tile-monogram { width: 48px; height: 48px; border-radius: 12px; background: var(--navy); color: var(--cream); display: grid; place-items: center; font-family: var(--display); font-weight: 600; font-size: 20px; letter-spacing: .02em; }
+.ui-logo-tile-caption { margin: 0; font-size: 14px; line-height: 1.35; min-height: 2.7em; display: grid; align-items: start; color: var(--dusty); }
+@media (max-width: 359px) { .ui-logo-tile-caption { font-size: 12.5px; min-height: 4.05em; } .ui-logo-tile { padding-left: 10px; padding-right: 10px; } }

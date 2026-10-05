@@ -4,7 +4,7 @@ import CallLink from "@/components/CallLink";
 import LinkedInLink from "@/components/LinkedInLink";
 import VideoCard from "@/components/VideoCard";
 import Stat from "@/components/ui/Stat";
-import Badge from "@/components/ui/Badge";
+import LogoTile from "@/components/ui/LogoTile";
 import CTABanner from "@/components/ui/CTABanner";
 import { founder, shownCredentials, storyParagraph2, type Experience } from "@/content/founder";
 
@@ -45,24 +45,15 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 2. Where I've worked: every role, newest first, 4 per row */}
+      {/* 2. Where I've worked: a logo wall, newest first (4, then 3 centered) */}
       <section className="about-section" aria-labelledby="worked-title">
         <h2 id="worked-title">Where I&apos;ve worked</h2>
-        <ul className="about-roles">
-          {founder.experience.map((e) => {
-            const badge = BADGES[e.status];
-            return (
-              <li className="card about-role" key={e.org}>
-                <p className="about-role-org">
-                  <strong>{e.org}</strong>
-                  {badge && <Badge tone={badge.tone}>{badge.label}</Badge>}
-                </p>
-                <p className="about-role-title">{e.role}</p>
-                {/* An empty dates field (still a TODO in content/founder.ts) renders nothing. */}
-                {e.dates && <p className="about-role-dates">{e.dates}</p>}
-              </li>
-            );
-          })}
+        <ul className="about-logos">
+          {founder.experience.map((e) => (
+            <li key={e.org}>
+              <LogoTile name={e.org} caption={e.caption} logo={e.logo} ratio={e.logoRatio} mono={e.logoMono} monogram={e.monogram} badge={BADGES[e.status]} />
+            </li>
+          ))}
         </ul>
       </section>
 
