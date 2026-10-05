@@ -1,13 +1,18 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/meta";
 import { leadMagnet as m } from "@/content/leadMagnet";
+import Image from "next/image";
 import PlaybookForm from "@/components/PlaybookForm";
+import { captureConfigured } from "@/lib/capture";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Free Playbook: Land Your First Internship Before Junior Year",
   description: `The First Offer Playbook: a free ${m.pages}-page PDF on landing your first internship before junior year, with every template included.`,
-};
+});
 
-export default function PlaybookPdfPage() {
+export default function PlaybookPage() {
+  // No Supabase keys: plain download, no email field.
+  const capture = captureConfigured();
   return (
     <section className="section timeline-page">
       <div className="wrap two-col playbook-top">
@@ -20,14 +25,13 @@ export default function PlaybookPdfPage() {
           <p className="lede">{m.lede}</p>
         </div>
         <div className="card timeline-card">
-          <div className="pdf-cover" aria-hidden="true">
-            <span>Free guide</span>
-            <strong>{m.title}</strong>
-            <em>{m.subtitle}</em>
-            <small>{m.chapters.length} chapters · {m.pages} pages</small>
+          {/* The real first page of the PDF (rendered from private/first-offer-playbook.pdf). */}
+          <div className="pdf-cover-img">
+            <Image src="/images/playbook-cover.webp" alt={`Cover of ${m.title}: ${m.subtitle}`} width={900} height={1165} sizes="(min-width: 900px) 320px, 70vw" priority />
           </div>
-          <p className="timeline-note">{m.note}</p>
-          <PlaybookForm />
+          <p className="pdf-cover-meta">{m.chapters.length} chapters · {m.pages} pages</p>
+          {capture && <p className="timeline-note">{m.note}</p>}
+          <PlaybookForm capture={capture} />
         </div>
       </div>
       <div className="wrap" style={{ marginTop: 64 }}>

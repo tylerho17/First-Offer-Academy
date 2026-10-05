@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/meta";
 import PageHero from "@/components/PageHero";
 import Stats from "@/components/sections/Stats";
 import LogoMarquee from "@/components/sections/LogoMarquee";
@@ -8,10 +9,10 @@ import { videosAt } from "@/content/videoTestimonials";
 import FinalCta from "@/components/sections/FinalCta";
 import { visibleStudents } from "@/content/students";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Results",
   description: "Pilot results, student testimonials, and parent videos from First Offer Academy, each shared with written permission.",
-};
+});
 
 export default function ResultsPage() {
   const students = visibleStudents();

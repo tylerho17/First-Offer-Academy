@@ -51,6 +51,34 @@ export async function brandImage({ label, headline, footer = "firstofferacademy.
   );
 }
 
+// The site-wide link preview (iMessage, LinkedIn, etc.): navy ground, the
+// "F" mark and wordmark top-left, the headline in Newsreader, and the pilot
+// result along the bottom. No photos or video frames.
+export async function siteCard({ headline, proof }: { headline: string; proof: string }) {
+  const logo = logoDataUrl();
+  return new ImageResponse(
+    (
+      <div style={{ width: "100%", height: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between", background: NAVY, padding: "64px 80px", fontFamily: "Instrument Sans" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 18 }}>
+          {logo && (
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 64, height: 64, borderRadius: 14, background: CREAM, padding: 8 }}>
+              {/* eslint-disable-next-line @next/next/no-img-element, jsx-a11y/alt-text */}
+              <img src={logo} width={48} height={48} style={{ objectFit: "contain" }} />
+            </div>
+          )}
+          <div style={{ display: "flex", fontFamily: "Newsreader", color: CREAM, fontSize: 36 }}>First Offer Academy</div>
+        </div>
+        <div style={{ display: "flex", fontFamily: "Newsreader", color: CREAM, fontSize: 92, lineHeight: 1.08, letterSpacing: "-0.015em", maxWidth: 1000 }}>{headline}</div>
+        <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
+          <div style={{ display: "flex", width: 14, height: 14, borderRadius: 999, background: SAGE }} />
+          <div style={{ display: "flex", color: CREAM, fontSize: 32, fontWeight: 700 }}>{proof}</div>
+        </div>
+      </div>
+    ),
+    { ...ogSize, fonts: await fonts() },
+  );
+}
+
 // Favicons from public/logo.png. The 32px favicon keeps the logo's
 // transparency; the 180px apple-touch-icon sits on cream because iOS fills
 // transparent areas with black. If the logo file is missing, a temporary

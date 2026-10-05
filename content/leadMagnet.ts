@@ -1,4 +1,4 @@
-// The gated lead magnet on /playbook-pdf: "The First Offer Playbook" PDF.
+// The gated lead magnet on /playbook: "The First Offer Playbook" PDF.
 // The PDF itself is built from content/playbook.ts with `npm run pdf`, which
 // also writes the real page count to content/playbook-meta.json.
 

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/meta";
 import Link from "next/link";
 import { depositLine, site } from "@/content/site";
 import { externshipBlock, offerOrRefund, pricingIncludes } from "@/content/program";
@@ -13,10 +14,10 @@ import { tomQuotes } from "@/content/quotes";
 import { videoAt, videosAt } from "@/content/videoTestimonials";
 import { Check } from "@/components/Icons";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Pricing",
   description: `First Offer Academy tuition: ${site.cohort.price}, everything included. A ${site.cohort.deposit} deposit holds a seat, fully refundable through ${site.depositRefundDeadline}; the ${site.cohort.balance} balance is due before Week 1. Offer-or-refund.`,
-};
+});
 
 export default function PricingPage() {
   const c = site.cohort;

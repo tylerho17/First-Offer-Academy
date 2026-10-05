@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/meta";
 import Link from "next/link";
 import { parentsPage as p } from "@/content/parents";
 import { afterProgram, weekly } from "@/content/program";
@@ -23,10 +24,10 @@ import { Check, Minus } from "@/components/Icons";
 // Event dates come from Luma (lib/events.ts), refreshed hourly.
 export const revalidate = 3600;
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "For Parents",
   description: "For parents: what your student does each week in First Offer Academy, the progress reports you receive, payment and the deposit, and what we don't promise.",
-};
+});
 
 export default async function ParentsPage() {
   const sessions = (await upcomingEvents("Parents")).slice(0, 2);

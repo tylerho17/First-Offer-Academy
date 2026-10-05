@@ -76,7 +76,7 @@ export default function StoryForm() {
       </div>
       {status === "unconnected" && (
         <p className="form-status" role="status">
-          Story submissions aren&apos;t connected yet. Email your story to <a href={`mailto:${site.email}`}>{site.email}</a> instead.
+          Your story didn&apos;t go through. Please email it to <a href={`mailto:${site.email}`}>{site.email}</a> instead.
         </p>
       )}
       {status === "error" && <p className="form-status" role="alert">Something went wrong. Email <a href={`mailto:${site.email}`}>{site.email}</a>.</p>}

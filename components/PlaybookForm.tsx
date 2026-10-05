@@ -4,12 +4,19 @@ import Link from "next/link";
 import { useId, useState } from "react";
 import { leadMagnet } from "@/content/leadMagnet";
 import { track } from "@vercel/analytics";
-import { postForm } from "@/lib/submit";
+import { postFormJson } from "@/lib/submit";
 import { rememberSubscribed, useSubscribed } from "@/lib/subscribed";
 import Honeypot from "./Honeypot";
 
-export default function PlaybookForm() {
-  const [status, setStatus] = useState<"idle" | "sending" | "done" | "error" | "unconnected">("idle");
+// The Playbook signup. `capture` is false when email capture isn't set up
+// (no Supabase keys): then there's no email field, just the download.
+// Never a second gate: if the signup request fails, the download link still
+// appears (served by /api/playbook?fallback=1).
+const FALLBACK = `${leadMagnet.file}?fallback=1`;
+
+export default function PlaybookForm({ capture = true }: { capture?: boolean }) {
+  const [status, setStatus] = useState<"idle" | "sending" | "done" | "failed">("idle");
+  const [href, setHref] = useState(leadMagnet.file);
   const id = useId();
   // Already gave an email for another download in this browser: skip the form.
   const subscribed = useSubscribed();
@@ -18,27 +25,33 @@ export default function PlaybookForm() {
     e.preventDefault();
     const data = Object.fromEntries(new FormData(e.currentTarget).entries());
     setStatus("sending");
-    const result = await postForm("/api/subscribe", { ...data, source: "playbook" });
+    const { result, data: reply } = await postFormJson<{ download: string }>("/api/subscribe", { ...data, source: "playbook" });
     if (result === "ok") {
       rememberSubscribed();
-      track("newsletter_signup", { source: "playbook" });
+      track("email_signup", { source: "playbook" });
+      const url = typeof reply.download === "string" ? reply.download : leadMagnet.file;
+      setHref(url);
+      setStatus("done");
+      window.location.assign(url); // starts the download; the link stays on screen
+    } else {
+      setHref(FALLBACK);
+      setStatus("failed");
     }
-    setStatus(result === "ok" ? "done" : result);
   }
 
-  const download = (
-    <a href={leadMagnet.file} className="btn btn-primary" data-event="playbook_download">
+  const download = (url: string) => (
+    <a href={url} className="btn btn-primary" data-event="playbook_download">
       Download the Playbook (PDF)
     </a>
   );
 
-  if (subscribed && status === "idle") return <div className="timeline-done">{download}</div>;
+  if (!capture || (subscribed && status === "idle")) return <div className="timeline-done">{download(leadMagnet.file)}</div>;
 
-  if (status === "done" || status === "unconnected") {
+  if (status === "done" || status === "failed") {
     return (
       <div className="timeline-done" role="status">
-        <p><strong>{status === "done" ? "You're in." : "Here's your copy."}</strong> {status === "done" ? "Your download is ready." : "(Email signup isn't connected yet, so nothing was saved.)"}</p>
-        {download}
+        <p><strong>{status === "done" ? "You're in." : "Here's your copy."}</strong>{status === "done" ? " Your download is starting." : ""}</p>
+        {download(href)}
       </div>
     );
   }
@@ -59,12 +72,10 @@ export default function PlaybookForm() {
       </div>
       <label className="sr-only" htmlFor={`${id}-email`}>Email</label>
       <input id={`${id}-email`} name="email" type="email" required placeholder="Email" autoComplete="email" />
-      <p className="nl-fine">You&apos;ll also get the First Offer newsletter every other week. Unsubscribe anytime.</p>
       <button type="submit" className="btn btn-primary" disabled={status === "sending"}>
         {status === "sending" ? "Sending…" : "Get the free Playbook"}
       </button>
       <p className="nl-fine">Unsubscribe anytime. See our <Link href="/privacy">Privacy Policy</Link>.</p>
-      {status === "error" && <p className="nl-status" role="alert">Something went wrong. Please try again.</p>}
     </form>
   );
 }

@@ -58,7 +58,7 @@ export default function GatedDownload({
     return (
       <div className="gate is-open" role="status">
         <p className="gate-msg">
-          {state === "ready" ? "You're in. Your download is ready." : "Here's your copy. (Email signup isn't connected yet, so nothing was saved.)"}
+          {state === "ready" ? "You're in. Your download is ready." : "Here's your copy."}
         </p>
         <a ref={readyRef} href={href} className="btn btn-primary" download={download} data-event={event}>{label}</a>
         <p className="gate-msg">Want someone checking this every week? <CallLink className="">Book a parent call</CallLink>.</p>

@@ -30,7 +30,7 @@ export default function Home() {
           url: `https://${site.domain}`,
           logo: `https://${site.domain}/apple-icon`,
           description:
-            "Internship coaching for college freshmen and sophomores in Finance, Marketing, and Accounting: Week 0 pre-work, 8 weeks of training, a 4-week Offer Sprint, then weekly check-ins and mocks until an offer.",
+            site.description,
           email: site.email,
           founder: { "@type": "Person", name: site.founder.name, sameAs: [site.founder.linkedin] },
           ...(sameAs.length ? { sameAs } : {}),

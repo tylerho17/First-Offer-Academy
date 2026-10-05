@@ -3,7 +3,7 @@
 // fails if the PDF renders under 15 pages.
 //
 // Written in Tyler's voice from docs/CURRICULUM-SOURCE.md. Not yet reviewed by
-// While reviewedByTyler is false, the PDF cover and /playbook-pdf show a
+// While reviewedByTyler is false, the PDF cover and /playbook show a
 // "Draft" chip.
 
 import type { Block } from "./blocks";

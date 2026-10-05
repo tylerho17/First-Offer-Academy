@@ -7,8 +7,12 @@ import { DOWNLOAD_COOKIE, gateOpen, setDownloadCookies, verifyDownload } from "@
 // public/, so there is no direct URL to it.
 export async function GET(req: NextRequest) {
   const fromLink = req.nextUrl.searchParams.get("t");
-  const ok = gateOpen() || verifyDownload(fromLink) || verifyDownload(req.cookies.get(DOWNLOAD_COOKIE)?.value);
-  if (!ok) return NextResponse.redirect(new URL("/playbook-pdf", req.url));
+  // ?fallback=1: the signup request itself failed (network or server down).
+  // The visitor still gets the PDF: never a second gate.
+  const fallback = req.nextUrl.searchParams.get("fallback") === "1";
+  if (fallback) console.warn("[playbook] served via fallback (signup request failed)");
+  const ok = fallback || gateOpen() || verifyDownload(fromLink) || verifyDownload(req.cookies.get(DOWNLOAD_COOKIE)?.value);
+  if (!ok) return NextResponse.redirect(new URL("/playbook", req.url));
 
   const pdf = await readFile(path.join(process.cwd(), "private", "first-offer-playbook.pdf"));
   const res = new NextResponse(new Uint8Array(pdf), {

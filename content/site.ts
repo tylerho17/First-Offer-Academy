@@ -20,6 +20,8 @@ export const PLACEMENT_FIRMS = ["Wells Fargo", "Morgan Stanley", "PIMCO", "Trico
 export const site = {
   name: "First Offer Academy",
   tagline: "Build the skills. Be that candidate. Get the offer.",
+  // The homepage hero subhead, also the site's default meta description.
+  description: "Internship coaching for college freshmen and sophomores in Finance, Marketing, and Accounting. 12 weeks of training and mocks, then weekly check-ins and mocks until you land an offer.",
   domain: "firstofferacademy.com",
 
   founder: {
@@ -40,7 +42,7 @@ export const site = {
   cohort: {
     name: "Founding cohort",
     start: "January 2027",
-    seats: 24,
+    seats: 12, // founding cohort cap; every page reads this
     price: "$5,000", // everything included; paid in full, or deposit + balance
     deposit,
     balance, // due before Week 1

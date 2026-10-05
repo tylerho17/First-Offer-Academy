@@ -1,12 +1,14 @@
-import { brandImage, ogSize } from "@/lib/og";
+import { siteCard, ogSize } from "@/lib/og";
+import { PILOT_LANDED, PILOT_STUDENTS } from "@/content/site";
 
-export const alt = "First Offer Academy: Your first internship shouldn't depend on which club lets you in.";
+// The site-wide link preview. The headline is the homepage H1, word for word.
+const HEADLINE = "Coached until your first offer.";
+const PROOF = `${PILOT_STUDENTS} pilot students · ${Math.round((PILOT_LANDED / PILOT_STUDENTS) * 100)}% landed an internship or offer`;
+
+export const alt = `First Offer Academy: ${HEADLINE} ${PROOF}.`;
 export const size = ogSize;
 export const contentType = "image/png";
 
 export default function Image() {
-  return brandImage({
-    label: "Internship coaching for freshmen and sophomores",
-    headline: "Coached until your first offer.",
-  });
+  return siteCard({ headline: HEADLINE, proof: PROOF });
 }

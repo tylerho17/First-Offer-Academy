@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/meta";
 import Image from "next/image";
 import PrimaryCTA from "@/components/PrimaryCTA";
 import { site } from "@/content/site";
@@ -9,10 +10,10 @@ import LogoTile from "@/components/ui/LogoTile";
 import CTABanner from "@/components/ui/CTABanner";
 import { founder, shownCredentials, storyParagraph2, type Experience } from "@/content/founder";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "About",
   description: `Who's coaching your student: ${founder.name}, ${founder.title.toLowerCase()} of First Offer Academy. ${founder.education.field} at ${founder.education.school}, and an incoming 2027 investment banking summer analyst.`,
-};
+});
 
 const BADGES: Partial<Record<Experience["status"], { label: string; tone: "navy" | "sage" }>> = {
   current: { label: "Current", tone: "sage" },

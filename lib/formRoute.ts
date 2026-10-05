@@ -43,6 +43,10 @@ type Options<S extends z.ZodType> = {
   upsertOn?: string; // ignore duplicates on this unique column
   after?: (data: z.output<S>) => Promise<void>; // e.g. confirmation emails; errors are logged, not surfaced
   onOk?: (res: NextResponse, data: z.output<S>) => void; // e.g. set a cookie; not called for honeypot hits
+  respond?: (data: z.output<S>) => Record<string, unknown>; // extra fields in the JSON reply
+  // A failed insert is logged and the request still succeeds (e.g. a signup
+  // still gets its download). `saved: false` in the reply says so.
+  softFail?: boolean;
 };
 
 export function formRoute<S extends z.ZodType>(opts: Options<S>) {
@@ -77,7 +81,7 @@ export function formRoute<S extends z.ZodType>(opts: Options<S>) {
       : await db.from(opts.table).insert(row);
     if (error) {
       console.error(`[${opts.name}] insert failed:`, error.message);
-      return NextResponse.json({ error: "Something went wrong." }, { status: 500 });
+      if (!opts.softFail) return NextResponse.json({ error: "Something went wrong." }, { status: 500 });
     }
 
     if (opts.after) {
@@ -87,7 +91,7 @@ export function formRoute<S extends z.ZodType>(opts: Options<S>) {
         console.error(`[${opts.name}] after-submit hook failed:`, e);
       }
     }
-    const res = NextResponse.json({ ok: true });
+    const res = NextResponse.json({ ok: true, ...(error ? { saved: false } : {}), ...(opts.respond?.(parsed.data) ?? {}) });
     opts.onOk?.(res, parsed.data);
     return res;
   };

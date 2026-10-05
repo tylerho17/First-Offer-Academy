@@ -45,7 +45,7 @@ Reference: wallstmastermind.com/program-overview (structure and interaction patt
 
 ### A2.2 Rebuild `/program` as the long-form program overview
 Put all copy in `content/programOverview.ts`. Sections, in this order:
-1. **Hero:** H1 "A 12-week system that turns a first-year student into a real candidate." A sub-line that membership is by application, with 24 seats. Buttons: Apply (primary), Book a parent call (secondary). Right side: `VideoSlot` "Program overview from Tyler".
+1. **Hero:** H1 "A 12-week system that turns a first-year student into a real candidate." A sub-line that membership is by application, with 12 seats. Buttons: Apply (primary), Book a parent call (secondary). Right side: `VideoSlot` "Program overview from Tyler".
 2. **Who it's for:** "First Offer Academy is for first- and second-year students who are…" with 4 pain points: didn't get into the club; don't know where to start; have no network in the field; sending applications and hearing nothing. Then a callout card: "This does not require a target school, a 4.0, a finance background, or club membership."
 3. **By Week 12, your student will have:** a checklist drawn only from the program gates in `content/program.ts` (resume that passes the rubric, target list of 50, 100+ personalized emails sent, 5+ calls with professionals, 6 behavioral stories recorded, graded mock interviews completed, a documented search to show parents). Label it clearly as what the program requires, not as outcomes.
 4. **Booking CTA band (navy):** "Book a free call to ask questions or apply." Sage button to Calendly, plus a cream-outline Apply button.

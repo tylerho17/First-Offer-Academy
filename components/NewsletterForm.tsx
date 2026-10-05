@@ -8,7 +8,7 @@ import Honeypot from "./Honeypot";
 
 // Inline newsletter signup: email, role (segments follow-up email), Subscribe.
 export default function NewsletterForm() {
-  const [status, setStatus] = useState<"idle" | "sending" | "done" | "error" | "unconnected">("idle");
+  const [status, setStatus] = useState<"idle" | "sending" | "done" | "error">("idle");
   const id = useId();
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -16,8 +16,8 @@ export default function NewsletterForm() {
     const data = Object.fromEntries(new FormData(e.currentTarget).entries());
     setStatus("sending");
     const result = await postForm("/api/subscribe", { ...data, source: "newsletter" });
-    if (result === "ok") track("newsletter_signup", { source: "newsletter" });
-    setStatus(result === "ok" ? "done" : result);
+    if (result === "ok") track("email_signup", { source: "newsletter" });
+    setStatus(result === "ok" ? "done" : "error");
   }
 
   if (status === "done") return <p className="nl-status" role="status">You&apos;re in. Look for the first issue in your inbox.</p>;
@@ -40,7 +40,6 @@ export default function NewsletterForm() {
         </button>
       </div>
       <p className="nl-fine">Every other week. Unsubscribe anytime. See our <Link href="/privacy">Privacy Policy</Link>.</p>
-      {status === "unconnected" && <p className="nl-status" role="status">Signup isn&apos;t connected yet. Check back soon.</p>}
       {status === "error" && <p className="nl-status" role="alert">Something went wrong. Please try again.</p>}
     </form>
   );

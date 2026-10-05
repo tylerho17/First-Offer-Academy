@@ -18,7 +18,7 @@ const columns: { title: string; links: { label: string; href: string; external?:
     title: "Free resources",
     links: [
       { label: "Playbook guides", href: "/blog" },
-      { label: "Playbook PDF", href: "/playbook-pdf" },
+      { label: "Playbook PDF", href: "/playbook" },
       { label: "Templates", href: "/free-resources" },
       { label: "Events", href: "/events" },
     ],

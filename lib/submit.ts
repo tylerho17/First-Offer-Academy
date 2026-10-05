@@ -19,3 +19,16 @@ export async function postForm(url: string, payload: Record<string, unknown>): P
     return "error";
   }
 }
+
+// Same as postForm, plus the JSON reply (e.g. the signed download link that
+// /api/subscribe returns).
+export async function postFormJson<T extends Record<string, unknown>>(url: string, payload: Record<string, unknown>): Promise<{ result: SubmitResult; data: Partial<T> }> {
+  try {
+    const res = await fetch(url, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) });
+    const data = (await res.json().catch(() => ({}))) as Partial<T>;
+    if (res.ok) return { result: "ok", data };
+    return { result: res.status === 503 || res.status === 404 ? "unconnected" : "error", data };
+  } catch {
+    return { result: "error", data: {} };
+  }
+}

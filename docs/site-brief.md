@@ -11,7 +11,7 @@ Conversion goal, in order: 1) Apply, 2) Book a free parent call (Calendly), 3) R
 - Program: 12 weeks, founding cohort starts January 2027 (winter quarter).
 - Tracks: Finance, Consulting, Marketing, Tech (software, data, product).
 - Who: first- and second-year college students in Orange County, including community college students. Treat them as starting from zero; no club membership needed.
-- Seats: 24, in three sections of 8.
+- Seats: 12 (founding cohort cap, `content/site.ts` → `cohort.seats`).
 - Price: $5,000. Payment plan: 3 × $1,700. $1,000 refundable deposit holds a seat.
 - Format: weekly 90-minute group session + weekly 15-minute 1:1 + accountability pod of 3.
 - The Standard: 6 levels graded on evidence (Foundation → Launched → In Motion → Networked → Interviewing → Offer).
@@ -53,7 +53,7 @@ Global: sticky header (logo, Program, Results, About, FAQ, Apply button). Navy a
 - Sub: First Offer Academy is a 12-week program that teaches first- and second-year college students how to land internships in finance, consulting, marketing, and tech, starting from zero.
 - Buttons: **Apply for the January cohort** (primary navy) · **Book a parent call** (secondary)
 - Right side: Tyler's headshot (transparent PNG on a cream rounded card).
-- Proof row under the buttons: "24 seats · Starts January 2027 · Orange County"
+- Proof row under the buttons: "12 seats · Starts January 2027 · Orange County"
 
 ### 2. Stats row (cream cards on mist)
 Pull from `content/stats.ts`. Launch set:
@@ -116,7 +116,7 @@ Four cream cards with an icon each: Finance, Consulting, Marketing, Tech (softwa
 - H2: **Founding cohort · January 2027**
 - Sage price box: **$5,000** · or 3 payments of $1,700
 - Bullets: 12 weekly sessions · 12 1:1s · accountability pod · resume, outreach & interview toolkit · graded mocks · biweekly parent reports
-- "24 seats. A $1,000 refundable deposit holds your spot."
+- "12 seats. A $1,000 refundable deposit holds your spot."
 - Buttons: **Apply now** (sage, navy text) · Book a parent call (cream outline)
 
 ### 12. FAQ (cream panels, accordion)
@@ -130,7 +130,7 @@ Top 6 on home, full list on /faq:
 Also on /faq: community college students welcome? · which majors? · who coaches? · payment plan details · what happens after week 12?
 
 ### 13. Final CTA (mist)
-- H2: **24 seats. January starts sooner than it sounds.**
+- H2: **12 seats. January starts sooner than it sounds.**
 - Buttons: Apply · Book a parent call
 
 ### Footer (navy, cream text)
