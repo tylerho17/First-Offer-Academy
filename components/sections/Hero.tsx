@@ -2,11 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 import CallLink from "../CallLink";
 import LinkedInLink from "../LinkedInLink";
-import VideoGroup from "../VideoGroup";
-import { byPlacement } from "@/content/videoTestimonials";
+import VideoCard from "../VideoCard";
+import { videoAt } from "@/content/videoTestimonials";
 import { PILOT_LANDED, PILOT_STUDENTS, PLACEMENT_FIRMS, site } from "@/content/site";
 
 export default function Hero() {
+  // The lead video: the only large video on the homepage.
+  const lead = videoAt("home-hero");
   return (
     <section className="hero">
       <div className="wrap hero-grid">
@@ -24,15 +26,17 @@ export default function Hero() {
           <p className="hero-proof">
             {[`${PILOT_LANDED} of ${PILOT_STUDENTS} pilot students landed internships`, ...PLACEMENT_FIRMS].join(" · ")}
           </p>
-          <div className="hero-video"><VideoGroup videos={byPlacement("home-hero")} /></div>
           <div className="audience-split">
             <Link href="/program" className="audience-card">I&apos;m a student <span aria-hidden="true">→</span></Link>
             <Link href="/parents" className="audience-card">I&apos;m a parent <span aria-hidden="true">→</span></Link>
           </div>
         </div>
 
-        {/* The one place the founder photo appears on the homepage. */}
-        <figure className="card founder-card">
+        <div className="hero-side">
+        {lead && <VideoCard video={lead} size="hero" />}
+        {/* The one place the founder photo appears on the homepage. Compact
+            under the lead video. */}
+        <figure className={`card founder-card${lead ? " is-compact" : ""}`}>
           <div className="founder-card-photo">
             <Image
               src="/images/tyler.jpg"
@@ -49,6 +53,7 @@ export default function Hero() {
             <LinkedInLink />
           </figcaption>
         </figure>
+        </div>
       </div>
     </section>
   );

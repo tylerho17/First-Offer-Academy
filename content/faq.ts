@@ -3,14 +3,12 @@ import { afterProgram, formatNote, offerOrRefund, oneOnOneFormat, sessionFormat 
 import { rhythmNotes, weeklyRhythm } from "./curriculum";
 import { programOverview } from "./programOverview";
 import { promise } from "./promise";
-import type { Placement } from "./videoTestimonials";
 
 const tba = (v: string, fallback = "To be announced.") => (v ? v : fallback);
 
 // `id`: anchor on /faq. `list`: bullet points rendered under the answer.
-// `video`: a faq-* placement from content/videoTestimonials.ts; its clips are
-// embedded under the answer.
-export type Faq = { q: string; a: string; id?: string; list?: string[]; home?: boolean; parent?: boolean; video?: Placement; link?: { label: string; href: string } };
+// The FAQ has no videos.
+export type Faq = { q: string; a: string; id?: string; list?: string[]; home?: boolean; parent?: boolean; link?: { label: string; href: string } };
 
 export const faqs: Faq[] = [
   {
@@ -43,7 +41,6 @@ export const faqs: Faq[] = [
     home: true,
     parent: true,
     q: "My student is a freshman. Isn't this too early?",
-    video: "faq-too-early",
     a: "No. Many internship timelines start sophomore year. Freshman year is when a student builds the resume, the contacts, and the interview stories that get them there.",
   },
   {
@@ -54,8 +51,7 @@ export const faqs: Faq[] = [
   {
     parent: true,
     q: "Is this right for my student?",
-    a: "It fits a student who will do the work every week: the outreach, the calls, the reps. It doesn't fit a student who wants it done for them, and it isn't a fix for a student who doesn't want to be there. A pilot student explains who it isn't for:",
-    video: "faq-right-fit",
+    a: "It fits a student who will do the work every week: the outreach, the calls, the reps. It doesn't fit a student who wants it done for them, and it isn't a fix for a student who doesn't want to be there.",
   },
   {
     parent: true,
@@ -131,19 +127,16 @@ export const faqs: Faq[] = [
     parent: true,
     q: "Can't my student just use ChatGPT for this?",
     a: "AI is part of the system, not a replacement for it. In Week 2 every student sets up their own AI-assisted email automation, but AI drafts; your student personalizes and reads every email before it goes, and their coach reviews the emails in the weekly 1:1. AI can't take the networking call, tell your student's story, or sit the interview for them.",
-    video: "faq-ai",
   },
   {
     parent: true,
     q: "Why learn from someone who just went through recruiting?",
     a: `Because the timelines, emails, and interviews Tyler coaches are ones he ran himself, recently: ${founderInternships()}, and an incoming investment banking offer. In college he led finance recruiting education and coached ${spell(PILOT_STUDENTS)} freshmen who all landed internships in their first year.`,
-    video: "faq-coach",
   },
   {
     parent: true,
     q: "My student is shy. Can they still do the networking?",
     a: "Yes. Networking here is a process, not a personality. It starts in writing, with emails their coach reviews, and every call follows a framework your student practices out loud in session and in the weekly 1:1 before the real thing.",
-    video: "faq-shy",
   },
   {
     parent: true,

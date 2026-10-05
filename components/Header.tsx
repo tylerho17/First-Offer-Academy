@@ -8,7 +8,6 @@ type Item = { label: string; href: string };
 export const nav: Item[] = [
   { label: "Program", href: "/program" },
   { label: "Results", href: "/results" },
-  { label: "Stories", href: "/stories" },
   { label: "Parents", href: "/parents" },
   { label: "Pricing", href: "/pricing" },
   { label: "Events", href: "/events" },

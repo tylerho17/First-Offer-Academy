@@ -3,7 +3,7 @@ import PageHero from "@/components/PageHero";
 import Stats from "@/components/sections/Stats";
 import LogoMarquee from "@/components/sections/LogoMarquee";
 import StudentCard from "@/components/StudentCard";
-import StudentVideosGrid from "@/components/sections/StudentVideosGrid";
+import { videoAt, type VideoSpot } from "@/content/videoTestimonials";
 import FinalCta from "@/components/sections/FinalCta";
 import { visibleStudents } from "@/content/students";
 
@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   title: "Results",
   description: "Pilot results, student testimonials, and parent videos from First Offer Academy, each shared with written permission.",
 };
+
+// Clips attached to the student's own result card.
+const RESULT_VIDEOS: Record<string, VideoSpot> = { Kim: "results-kim", James: "results-james", Pranav: "results-pranav" };
 
 export default function ResultsPage() {
   const students = visibleStudents();
@@ -28,12 +31,11 @@ export default function ResultsPage() {
           <div className="wrap">
             <h2 id="students-title" className="sr-only">Pilot students</h2>
             <div className="student-grid">
-              {students.map((s) => <StudentCard key={s.firstName} s={s} showAlso />)}
+              {students.map((s) => <StudentCard key={s.firstName} s={s} showAlso video={RESULT_VIDEOS[s.firstName] ? videoAt(RESULT_VIDEOS[s.firstName]) : undefined} />)}
             </div>
           </div>
         </section>
       )}
-      <StudentVideosGrid />
       <div style={{ paddingTop: 40 }}><FinalCta /></div>
     </>
   );

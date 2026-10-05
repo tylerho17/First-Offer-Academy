@@ -11,10 +11,7 @@ import PayButton, { DepositNote } from "@/components/PayButton";
 import FaqList from "@/components/sections/FaqList";
 import EventCard from "@/components/EventCard";
 import VideoCard from "@/components/VideoCard";
-import VideoGroup from "@/components/VideoGroup";
-import FamilyStories from "@/components/sections/FamilyStories";
-import ParentVoices from "@/components/sections/ParentVoices";
-import { byPlacement } from "@/content/videoTestimonials";
+import { videoAt } from "@/content/videoTestimonials";
 import { upcomingEvents } from "@/lib/events";
 import { Check, Minus } from "@/components/Icons";
 
@@ -28,7 +25,14 @@ export const metadata: Metadata = {
 
 export default async function ParentsPage() {
   const sessions = (await upcomingEvents("Parents")).slice(0, 2);
-  const heroVideo = byPlacement("parents-hero")[0];
+  // Exactly four parent clips, each beside the copy it proves.
+  const heroVideo = videoAt("parents-hero");
+  const aiVideo = videoAt("parents-ai");
+  const growthVideo = videoAt("parents-growth");
+  const ctaVideo = videoAt("parents-before-cta");
+  // The growth clip sits beside the Week 8 family meeting card.
+  const growthItem = growthVideo ? p.youSee.items.find((i) => i.title.includes("Week 8")) : undefined;
+  const seeItems = p.youSee.items.filter((i) => i !== growthItem);
   const c = site.cohort;
   const quote = testimonials.find((t) => t.role === "parent" && t.permission && t.featured) ?? testimonials.find((t) => t.role === "parent" && t.permission);
 
@@ -59,9 +63,12 @@ export default async function ParentsPage() {
 
       <section className="section" style={{ paddingTop: 40 }}>
         <div className="wrap">
-          <div className="section-head">
-            <h2>{p.weekly.title}</h2>
-            <p className="lede">{p.weekly.note}</p>
+          <div className={aiVideo ? "copy-video section-head-split" : undefined}>
+            <div className="section-head">
+              <h2>{p.weekly.title}</h2>
+              <p className="lede">{p.weekly.note}</p>
+            </div>
+            {aiVideo && <VideoCard video={aiVideo} />}
           </div>
           <div className="grid grid-3">
             {weekly.map((w) => (
@@ -80,8 +87,18 @@ export default async function ParentsPage() {
           <div className="section-head">
             <h2>{p.youSee.title}</h2>
           </div>
-          <div className="grid grid-2">
-            {p.youSee.items.map((i) => (
+          {growthItem && growthVideo && (
+            <div className="copy-video" style={{ marginBottom: 20 }}>
+              <div className="card">
+                <span className="icon-dot"><Check /></span>
+                <h3>{growthItem.title}</h3>
+                <p>{growthItem.body}</p>
+              </div>
+              <VideoCard video={growthVideo} />
+            </div>
+          )}
+          <div className={`grid ${seeItems.length === 3 ? "grid-3" : "grid-2"}`}>
+            {seeItems.map((i) => (
               <div className="card" key={i.title}>
                 <span className="icon-dot"><Check /></span>
                 <h3>{i.title}</h3>
@@ -89,12 +106,9 @@ export default async function ParentsPage() {
               </div>
             ))}
           </div>
-          <div className="section-videos narrow"><VideoGroup videos={byPlacement("parents-relief")} columns={1} /></div>
         </div>
       </section>
 
-      <FamilyStories />
-      <ParentVoices />
 
       <section className="section" style={{ paddingTop: 0 }}>
         <div className="wrap">
@@ -143,6 +157,7 @@ export default async function ParentsPage() {
             <p className="lede">{p.dont.body}</p>
             <p style={{ marginTop: 20 }}><Link href="/program#promise" className="link-arrow">Read our full promise →</Link></p>
           </div>
+          <div className="dont-side">
           <ul className="card dont-card">
             <li><Minus />An internship offer</li>
             <li><Minus />An internship at a specific company</li>
@@ -150,6 +165,8 @@ export default async function ParentsPage() {
             <li className="is-yes"><Check />A fully executed, documented search</li>
             <li className="is-yes"><Check />Offer-or-refund, if every weekly minimum is met</li>
           </ul>
+          {ctaVideo && <VideoCard video={ctaVideo} />}
+          </div>
         </div>
       </section>
 

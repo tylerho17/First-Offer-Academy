@@ -6,6 +6,8 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       { source: "/our-promise", destination: "/program", statusCode: 301 },
+      // The v2 video library was removed; its clips now sit beside the copy they prove.
+      { source: "/stories", destination: "/results", statusCode: 301 },
       { source: "/curriculum", destination: "/program", statusCode: 301 },
       { source: "/results/parents", destination: "/results", statusCode: 301 },
       { source: "/tracks", destination: "/program#tracks", statusCode: 301 },
