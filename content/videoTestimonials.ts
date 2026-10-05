@@ -1,6 +1,8 @@
 // Video testimonials (unlisted YouTube), shared with written permission.
 // Videos v4 (2026-10-04): 37 clips; polish v5 added three FAQ clips (40);
-// v9 swapped three of Pranav's and Kim's clips for Ishank's (still 40). Each clip has one unique `spot` and
+// v9 swapped three of Pranav's and Kim's clips for Ishank's (still 40); v10
+// removed Tom's pricing clip (not a testimonial) and made Mangesh's the
+// /pricing hero (39). Each clip has one unique `spot` and
 // renders in that one place only, beside the copy it proves. The only groups
 // of videos are the /pricing "It was worth it." section and the /results
 // "In their words" row. FAQ clips render on /faq only.
@@ -25,7 +27,7 @@ export type VideoSpot =
   | "parents-coach" | "parents-before-cta"
   // /pricing: beside the price, then the "It was worth it." section
   | "pricing-hero"
-  | "worth-parent-1" | "worth-parent-2" | "worth-parent-3"
+  | "worth-parent-1" | "worth-parent-2"
   | "worth-student-1" | "worth-student-2" | "worth-student-3" | "worth-student-4"
   // /results: the "In their words" row
   | "results-1" | "results-2" | "results-3" | "results-4"
@@ -70,10 +72,9 @@ export const videoTestimonials: VideoTestimonial[] = [
   { youtubeId: "jnqTZ9YggUU", person: "Steve", kind: "parent", parentOf: "James", title: "A thank-you for the mentorship", spot: "parents-coach" },
   { youtubeId: "JkpO4huyVZo", person: "Steve", kind: "parent", parentOf: "James", title: "Why we went all in", spot: "parents-before-cta" },
   // /pricing
-  { youtubeId: "OCm9FudIe94", person: "Tom", kind: "parent", parentOf: "Kim", title: "Is $5,000 worth it?", spot: "pricing-hero" },
-  { youtubeId: "uPEfD2zR2cs", person: "Mangesh", kind: "parent", parentOf: "Ishank", title: "Priceless", spot: "worth-parent-1" },
-  { youtubeId: "6cIM_G9GHbI", person: "Steve", kind: "parent", parentOf: "James", title: "Was it worth it?", spot: "worth-parent-2" },
-  { youtubeId: "64R01N1Kn-Y", person: "Greg", kind: "parent", parentOf: "Maddie", title: "Was it worth it?", spot: "worth-parent-3" },
+  { youtubeId: "uPEfD2zR2cs", person: "Mangesh", kind: "parent", parentOf: "Ishank", title: "Priceless", spot: "pricing-hero" },
+  { youtubeId: "6cIM_G9GHbI", person: "Steve", kind: "parent", parentOf: "James", title: "Was it worth it?", spot: "worth-parent-1" },
+  { youtubeId: "64R01N1Kn-Y", person: "Greg", kind: "parent", parentOf: "Maddie", title: "Was it worth it?", spot: "worth-parent-2" },
   { youtubeId: "xtsshg-yxIE", person: "Ishank", kind: "student", title: "Was it worth it?", spot: "worth-student-1" },
   { youtubeId: "oIRmZvIpwqE", person: "Kim", kind: "student", title: "Was it worth it?", spot: "worth-student-2" },
   { youtubeId: "ck-FDQK5hdQ", person: "Maddie", kind: "student", title: "Was it worth it?", spot: "worth-student-3" },

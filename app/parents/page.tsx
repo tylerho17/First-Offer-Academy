@@ -13,6 +13,8 @@ import ResourceBlock from "@/components/sections/ResourceBlock";
 import EventCard from "@/components/EventCard";
 import VideoCard from "@/components/VideoCard";
 import VideoPair from "@/components/VideoPair";
+import QuoteCard from "@/components/ui/QuoteCard";
+import { tomQuotes } from "@/content/quotes";
 import { videoAt, videosAt } from "@/content/videoTestimonials";
 import { upcomingEvents } from "@/lib/events";
 import { Check, Minus } from "@/components/Icons";
@@ -110,7 +112,7 @@ export default async function ParentsPage() {
         </div>
       </section>
 
-      <LeavesWith videos={growth} />
+      <LeavesWith videos={growth} after={<QuoteCard {...tomQuotes.growth} />} />
 
       <section className="section band" id="payment">
         <div className="wrap price-grid">

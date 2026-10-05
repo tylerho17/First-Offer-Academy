@@ -1350,3 +1350,12 @@ details.more summary { cursor: pointer; font-weight: 600; color: var(--dusty); f
 .live-register { grid-column: 2; grid-row: 1 / span 2; min-height: 44px; }
 @media (min-width: 768px) { .live-row { grid-template-columns: 140px minmax(0, 1fr) auto; } .live-date, .live-title { grid-column: auto; grid-row: 1; } .live-register { grid-column: 3; grid-row: 1; } }
 @media (max-width: 480px) { .resource-feature .btn { width: 100%; white-space: normal; text-align: center; } .live-register { padding: 0 14px; } }
+/* v10: QuoteCard (components/ui/QuoteCard) */
+.ui-quote-card { margin: 0; height: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: 12px; }
+.ui-quote-card-label { margin: 0; }
+.ui-quote-card-quote { margin: 0; font-family: var(--display); font-weight: 500; font-size: 22px; line-height: 1.4; color: var(--navy); }
+.ui-quote-card .vt-who { margin: 0; }
+.quote-row { list-style: none; margin: 0; padding: 0; display: grid; gap: 20px; grid-template-columns: minmax(0, 1fr); align-items: stretch; }
+.quote-row > li { margin: 0; }
+@media (min-width: 768px) { .quote-row { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.leaves-after { margin-top: 20px; }

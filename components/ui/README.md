@@ -12,6 +12,7 @@ Small, reusable UI pieces (patterns from component.gallery). Token-based: they u
 | `ResourceCard` | Resource card | `href`, `title`, `body?`, `tag?`. One link; badge, title (2 lines max), description (2 lines max), "Open →" pinned to the bottom. |
 | `ResourceRow` | Compact list row | `href`, `title`, `body?`, `tag?`. One link, about 72px tall, hairline dividers when wrapped in `.ui-resource-rows`. |
 | `LogoTile` | Logo wall tile | `name` (alt text + screen-reader name), `caption`, `logo: string \| null` (null = monogram), `ratio?` (width/height, for equal visual weight), `mono?` (white-only logo drawn navy), `monogram?`, `badge?` |
+| `QuoteCard` | Text testimonial | `quote` (stored without quote marks; curly quotes are added), `person`, `parentOf?` (credit becomes "Tom · Kim's dad"), `label?` (eyebrow). Top-aligned; fills its row's height. |
 | `CTABanner` | Call-to-action banner | `title: string`, `body?: string`, `action: ReactNode` (pass the existing button, e.g. `<CallLink />`) |
 
 Used on `/about` (`Stat`, `LogoTile` with `Badge`, `CTABanner`), `/resources` (`ResourceRow`), and the resource blocks on `/program` and `/parents` (`ResourceCard`). `Timeline`, `Disclosure` and `PullQuote` are available but not currently placed.

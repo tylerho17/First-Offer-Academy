@@ -37,8 +37,9 @@ function TrackLinks() {
 // to the full section on /program. Card copy comes from
 // content/programOverview.ts, the source of truth. This is the only place on
 // the homepage that names the six parts.
-// `videos`: a pair of clips under the six parts (/parents only).
-export default function LeavesWith({ flush = true, videos = [] }: { flush?: boolean; videos?: VideoTestimonial[] }) {
+// `videos`: a pair of clips under the six parts (/parents only). `after`:
+// anything that belongs under them in the same section (a quote card).
+export default function LeavesWith({ flush = true, videos = [], after }: { flush?: boolean; videos?: VideoTestimonial[]; after?: React.ReactNode }) {
   return (
     <section className="section" id="leaves-with" style={flush ? { paddingTop: 0 } : undefined}>
       <div className="wrap">
@@ -57,6 +58,7 @@ export default function LeavesWith({ flush = true, videos = [] }: { flush?: bool
           ))}
         </ul>
         <VideoPair videos={videos} />
+        {after && <div className="leaves-after">{after}</div>}
       </div>
     </section>
   );

@@ -8,6 +8,8 @@ import CallLink from "@/components/CallLink";
 import ExternshipNote from "@/components/sections/ExternshipNote";
 import PayOptions from "@/components/PayOptions";
 import VideoCard from "@/components/VideoCard";
+import QuoteCard from "@/components/ui/QuoteCard";
+import { tomQuotes } from "@/content/quotes";
 import { videoAt, videosAt } from "@/content/videoTestimonials";
 import { Check } from "@/components/Icons";
 
@@ -18,9 +20,10 @@ export const metadata: Metadata = {
 
 export default function PricingPage() {
   const c = site.cohort;
-  // Tom beside the price, then the "It was worth it." section: every worth-it clip.
+  // Mangesh beside the price, Tom's quotes under the payment options, then the
+  // "It was worth it." section: every worth-it clip.
   const priceVideo = videoAt("pricing-hero");
-  const worthParents = videosAt("worth-parent-1", "worth-parent-2", "worth-parent-3");
+  const worthParents = videosAt("worth-parent-1", "worth-parent-2");
   const worthStudents = videosAt("worth-student-1", "worth-student-2", "worth-student-3", "worth-student-4");
   return (
     <>
@@ -101,6 +104,16 @@ export default function PricingPage() {
         </div>
       </section>
 
+      {/* Tom's words on the price and on free mentoring, under the price and payment options. */}
+      <section className="section" style={{ paddingTop: 0 }} aria-label="What a parent said about the price">
+        <div className="wrap">
+          <ul className="quote-row">
+            <li><QuoteCard {...tomQuotes.price} /></li>
+            <li><QuoteCard {...tomQuotes.focus} /></li>
+          </ul>
+        </div>
+      </section>
+
       {(worthParents.length > 0 || worthStudents.length > 0) && (
         <section className="section" id="worth-it" style={{ paddingTop: 0 }} aria-labelledby="worth-title">
           <div className="wrap">
@@ -111,7 +124,7 @@ export default function PricingPage() {
             {worthParents.length > 0 && (
               <div className="worth-row">
                 <h3>Parents</h3>
-                <ul className="worth-grid cols-3">
+                <ul className="worth-grid cols-2">
                   {worthParents.map((v) => <li key={v.youtubeId}><VideoCard video={v} /></li>)}
                 </ul>
               </div>
