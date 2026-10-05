@@ -52,7 +52,13 @@ export default function Footer() {
                 {col.links.map((l) => (
                   <li key={l.label}>
                     {l.external ? (
-                      <a href={l.href} {...(l.href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}>{l.label}</a>
+                      <a
+                        href={l.href}
+                        {...(l.href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                        {...(l.href === site.calendlyUrl ? { "data-event": "cta_click", "data-event-location": "footer" } : {})}
+                      >
+                        {l.label}
+                      </a>
                     ) : (
                       <Link href={l.href}>{l.label}</Link>
                     )}

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { track } from "@vercel/analytics";
 import { credit, type VideoTestimonial } from "@/content/videoTestimonials";
 import { Play } from "./Icons";
 
@@ -24,7 +25,7 @@ export default function VideoCard({ video, size = "card", className = "" }: { vi
             allowFullScreen
           />
         ) : (
-          <button type="button" className="vt-play" onClick={() => setPlaying(true)} aria-label={`Play: ${video.title} — ${video.person}`}>
+          <button type="button" className="vt-play" onClick={() => { setPlaying(true); track("video_play", { youtubeId: id, placement: video.spot }); }} aria-label={`Play: ${video.title} — ${video.person}`}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={`https://i.ytimg.com/vi/${id}/hqdefault.jpg`}

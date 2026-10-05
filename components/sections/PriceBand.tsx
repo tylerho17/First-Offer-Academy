@@ -1,4 +1,5 @@
 import Link from "next/link";
+import PrimaryCTA from "../PrimaryCTA";
 import { depositRefundLine, site } from "@/content/site";
 
 // Homepage price band: navy, cream text, the sage price box and sage Apply
@@ -18,8 +19,9 @@ export default function PriceBand() {
           <p className="band-line"><strong>{c.name}: {c.start} · {c.seats} seats</strong></p>
           <p className="band-small">{depositRefundLine()}</p>
           <div className="btn-row">
-            <Link href="/apply" className="btn btn-sage">Apply</Link>
+            <PrimaryCTA location="band" tone="navy-band" />
           </div>
+          <p style={{ marginTop: 12 }}><Link href="/apply" className="band-link">Apply →</Link></p>
         </div>
         <div className="price-box">
           <span className="amount">{c.price}</span>

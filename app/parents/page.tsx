@@ -6,7 +6,6 @@ import LeavesWith from "@/components/sections/LeavesWith";
 import ExternshipNote from "@/components/sections/ExternshipNote";
 import { depositLine, site } from "@/content/site";
 import { testimonials } from "@/content/testimonials";
-import CallLink from "@/components/CallLink";
 import PayButton, { DepositNote } from "@/components/PayButton";
 import FaqList from "@/components/sections/FaqList";
 import ResourceBlock from "@/components/sections/ResourceBlock";
@@ -17,6 +16,8 @@ import QuoteCard from "@/components/ui/QuoteCard";
 import { tomQuotes } from "@/content/quotes";
 import { videoAt, videosAt } from "@/content/videoTestimonials";
 import { upcomingEvents } from "@/lib/events";
+import PrimaryCTA, { CtaNote } from "@/components/PrimaryCTA";
+import AvatarGroup from "@/components/AvatarGroup";
 import { Check, Minus } from "@/components/Icons";
 
 // Event dates come from Luma (lib/events.ts), refreshed hourly.
@@ -52,11 +53,13 @@ export default async function ParentsPage() {
             <li><Check />The Week 8 family meeting, where your student presents their results</li>
             <li><Check />Weekly check-ins and mocks after Week 12, until an offer or {afterProgram.until}</li>
           </ul>
-          <div className="btn-row">
-            <PayButton />
-            <CallLink />
+          <div className="cta-block">
+            <PrimaryCTA location="parents" />
+            <CtaNote />
           </div>
-          <p style={{ marginTop: 16 }}>
+          <AvatarGroup />
+          <p className="hero-secondary">
+            <PayButton className="link-arrow">Reserve a seat · {c.deposit} →</PayButton>
             <Link href="/program" className="link-arrow">See the full program →</Link>
           </p>
           </div>
@@ -126,9 +129,9 @@ export default async function ParentsPage() {
               <li><Check />Payments are processed by Stripe; we never see your card number</li>
             </ul>
             <div className="btn-row">
-              <PayButton className="btn btn-sage" />
-              <CallLink className="btn btn-cream-outline" />
+              <PrimaryCTA location="parents" tone="navy-band" />
             </div>
+            <p style={{ marginTop: 12 }}><PayButton className="band-link">Reserve a seat · {c.deposit} →</PayButton></p>
             <DepositNote />
             <p style={{ marginTop: 16 }}>
               <Link href="/refunds" className="band-link">Read the Refund &amp; Payment Policy</Link>
@@ -205,9 +208,9 @@ export default async function ParentsPage() {
           <div className="card call-card" id="call">
             <div>
               <h2>Book a parent call</h2>
-              <p>Twenty minutes with Tyler to talk through your student&apos;s situation and whether the program fits.</p>
+              <p>{site.callNote}</p>
             </div>
-            <CallLink className="btn btn-primary" />
+            <PrimaryCTA location="parents" />
           </div>
         </div>
       </section>

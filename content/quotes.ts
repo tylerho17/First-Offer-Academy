@@ -17,4 +17,4 @@ export const tomQuotes = {
     person: "Tom", parentOf: "Kim",
   },
 };
-// TODO(Tyler): Tom approves all three quotes before merge.
+// All three quotes approved by Tom (confirmed by Tyler, 2026-10-05).

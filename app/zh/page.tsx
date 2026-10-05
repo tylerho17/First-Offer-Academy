@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { zh } from "@/content/zh";
 import { site } from "@/content/site";
-import CallLink from "@/components/CallLink";
+import PrimaryCTA from "@/components/PrimaryCTA";
 import { Check } from "@/components/Icons";
 
 // noindex until a native speaker has reviewed content/zh.ts.
@@ -32,7 +32,7 @@ export default function ZhPage() {
           <h1>{zh.title}</h1>
           <p className="lede">{zh.lede}</p>
           <div className="btn-row">
-            <CallLink className="btn btn-primary">{zh.cta.button}</CallLink>
+            <PrimaryCTA location="parents">{zh.cta.button}</PrimaryCTA>
             <Link href="/" className="btn btn-secondary" lang="en">{zh.cta.english}</Link>
           </div>
         </div>
@@ -55,7 +55,7 @@ export default function ZhPage() {
             <h2>{zh.cta.title}</h2>
             <p className="why-text">{zh.cta.body}</p>
             <div className="btn-row">
-              <CallLink className="btn btn-sage">{zh.cta.button}</CallLink>
+              <PrimaryCTA location="band" tone="navy-band">{zh.cta.button}</PrimaryCTA>
             </div>
             <p className="why-text">{zh.cta.email} <a href={`mailto:${site.email}`} className="band-link">{site.email}</a></p>
           </div>

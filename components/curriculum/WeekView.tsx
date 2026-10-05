@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { assetTitles, weekHref, weeks, type Week } from "@/content/curriculum";
 import { getDownload, templateAnchor } from "@/content/downloads";
-import CallLink from "../CallLink";
+import PrimaryCTA from "../PrimaryCTA";
 import LevelBadge from "./LevelBadge";
 import { Check } from "../Icons";
 import PayButton from "@/components/PayButton";
@@ -147,9 +147,9 @@ export default function WeekView({ week: w }: { week: Week }) {
             <h2>Want your student doing this every week?</h2>
             <p>Eight weeks, a 60-minute 1:1 every week, and a coach who checks the numbers.</p>
           </div>
-          <div className="btn-row">
-            <PayButton className="btn btn-sage" />
-            <CallLink className="btn btn-cream-outline" />
+          <div>
+            <div className="btn-row"><PrimaryCTA location="program" tone="navy-band" /></div>
+            <p style={{ marginTop: 12 }}><PayButton className="band-link">Reserve a seat →</PayButton></p>
           </div>
         </div>
       </section>

@@ -26,7 +26,7 @@ export default function Header() {
           ))}
         </nav>
         <div className="header-cta">
-          <PayButton className="btn btn-primary header-reserve">Reserve a seat</PayButton>
+          <PayButton className="btn btn-secondary header-reserve">Reserve a seat</PayButton>
           <MobileNav items={nav} />
         </div>
       </div>

@@ -100,16 +100,3 @@ export const oneOnOneFormat: FormatRow[] = [
   { block: "Work on the work", time: "40–55 min", what: "Edit live: resume bullets, emails, stories, \"why\" answers, or a mini-mock." },
   { block: "Next 7 days", time: "55–60 min", what: "Exact commitments written into the tracker." },
 ];
-
-// Comparison table. true = yes, false = no, "some" = partially.
-export type Cell = true | false | "some";
-export const comparison: { row: string; us: Cell; center: Cell; clubs: Cell; alone: Cell }[] = [
-  { row: "Candidate Brand: a resume graded on a rubric", us: true, center: "some", clubs: "some", alone: false },
-  { row: "Outreach System: emails reviewed every week", us: true, center: "some", clubs: "some", alone: false },
-  { row: "Story Bank: stories edited line by line", us: true, center: "some", clubs: "some", alone: false },
-  { row: "Track Technicals for your field", us: true, center: "some", clubs: "some", alone: false },
-  { row: "Coached Extern applications, fee covered", us: true, center: false, clubs: false, alone: false },
-  { row: "Interview Reps: a weekly 1:1 and graded mocks", us: true, center: "some", clubs: "some", alone: false },
-  { row: "Accountability & Pods: a weekly number and parent reports", us: true, center: false, clubs: false, alone: false },
-  { row: "Open to every student", us: true, center: true, clubs: false, alone: true },
-];

@@ -4,9 +4,9 @@ import { depositLine, site } from "@/content/site";
 import { externshipBlock, offerOrRefund, pricingIncludes } from "@/content/program";
 import FaqList from "@/components/sections/FaqList";
 import Comparison from "@/components/sections/Comparison";
-import CallLink from "@/components/CallLink";
+import PrimaryCTA, { CtaNote } from "@/components/PrimaryCTA";
+import PaymentToggle from "@/components/PaymentToggle";
 import ExternshipNote from "@/components/sections/ExternshipNote";
-import PayOptions from "@/components/PayOptions";
 import VideoCard from "@/components/VideoCard";
 import QuoteCard from "@/components/ui/QuoteCard";
 import { tomQuotes } from "@/content/quotes";
@@ -42,7 +42,8 @@ export default function PricingPage() {
 
       <section className="section" id="plan" style={{ paddingTop: 16 }}>
         <div className="wrap">
-          <article className="card price-card">
+          <article className="card price-card" aria-labelledby="price-title">
+            <h2 id="price-title" className="sr-only">The price</h2>
             <div className={priceVideo ? "price-top" : undefined}>
               <div>
                 <span className="eyebrow">Everything included</span>
@@ -60,7 +61,11 @@ export default function PricingPage() {
 
             <ExternshipNote block={externshipBlock} />
 
-            <PayOptions className="price-pay" />
+            <div className="cta-block price-cta">
+              <PrimaryCTA location="pricing" />
+              <CtaNote />
+            </div>
+            <p className="hero-secondary"><a href="#payment" className="link-arrow">Reserve a seat or pay in full ↓</a></p>
             <p className="pay-note balance-note">
               Already paid the deposit? Your {c.balance} balance is due {c.balanceDue}. We&apos;ll email your balance link.
             </p>
@@ -70,9 +75,6 @@ export default function PricingPage() {
               <p className="refund-link"><a href="/faq#offer-or-refund">See refund terms</a></p>
             </div>
 
-            <div className="btn-row price-actions">
-              <CallLink className="btn btn-secondary" />
-            </div>
             <p className="price-free">
               Not ready? The Playbook, every template, parent info sessions, and student workshops are{" "}
               <Link href="/free-resources">free</Link>.
@@ -87,22 +89,11 @@ export default function PricingPage() {
             <span className="eyebrow">Payment options</span>
             <h2>Two ways to pay</h2>
           </div>
-          <div className="grid grid-2">
-            <div className="card">
-              <h3>Pay in full</h3>
-              <p className="pay-amt">{c.price}</p>
-              <p>One payment before Week 1.</p>
-            </div>
-            <div className="card">
-              <h3>Reserve a seat</h3>
-              <p className="pay-amt">{c.deposit} deposit</p>
-              <p>{site.refundTerms}</p>
-              <p style={{ marginTop: 12 }}>Already paid it? We&apos;ll email your {c.balance} balance link.</p>
-              <p style={{ marginTop: 12 }}><Link href="/refunds">Refund &amp; payment policy →</Link></p>
-            </div>
-          </div>
+          <PaymentToggle />
         </div>
       </section>
+
+      <Comparison />
 
       {/* Tom's words on the price and on free mentoring, under the price and payment options. */}
       <section className="section" style={{ paddingTop: 0 }} aria-label="What a parent said about the price">
@@ -141,7 +132,6 @@ export default function PricingPage() {
         </section>
       )}
 
-      <Comparison />
       <FaqList />
     </>
   );

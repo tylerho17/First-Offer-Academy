@@ -3,6 +3,7 @@ import Problem from "@/components/sections/Problem";
 import LeavesWith from "@/components/sections/LeavesWith";
 import Testimonials from "@/components/sections/Testimonials";
 import Stats from "@/components/sections/Stats";
+import HomeTracks from "@/components/sections/HomeTracks";
 import PlaybookBand from "@/components/sections/PlaybookBand";
 import LogoMarquee from "@/components/sections/LogoMarquee";
 import EventsStrip from "@/components/sections/EventsStrip";
@@ -42,6 +43,7 @@ export default function Home() {
       <HowItWorks />
       <Problem />
       <LeavesWith />
+      <HomeTracks />
       <Testimonials />
       <PriceBand />
       <OfferOrRefund />

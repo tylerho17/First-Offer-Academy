@@ -6,7 +6,7 @@ import { site } from "@/content/site";
 import { track } from "@vercel/analytics";
 import { postForm } from "@/lib/submit";
 import Honeypot from "./Honeypot";
-import CallLink from "./CallLink";
+import PrimaryCTA from "./PrimaryCTA";
 import PayOptions from "./PayOptions";
 
 const tracks = ["Finance", "Marketing", "Accounting"];
@@ -43,7 +43,7 @@ export default function ApplyForm({ paid = false }: { paid?: boolean }) {
         <h2>Application received.</h2>
         <p>Thank you. Tyler reads every application personally. Next step: book a short fit call.</p>
         <div className="btn-row">
-          <CallLink className="btn btn-primary" />
+          <PrimaryCTA location="apply" />
         </div>
         {!paid && (
           <>

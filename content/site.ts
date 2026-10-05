@@ -48,6 +48,9 @@ export const site = {
   },
 
   calendlyUrl: "https://calendly.com/tyler-firstofferacademy",
+  // What the parent call is, in one line (the /parents call card, and the
+  // note under the main CTA on the homepage, /parents and /pricing).
+  callNote: "Twenty minutes with Tyler to talk through your student's situation and whether the program fits.",
 
   // Luma calendars and sessions: content/events.ts and lib/events.ts.
 

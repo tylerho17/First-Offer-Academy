@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import CallLink from "@/components/CallLink";
+import PrimaryCTA from "@/components/PrimaryCTA";
+import { site } from "@/content/site";
 import LinkedInLink from "@/components/LinkedInLink";
 import VideoCard from "@/components/VideoCard";
 import Stat from "@/components/ui/Stat";
@@ -83,8 +84,8 @@ export default function AboutPage() {
       <section className="about-section">
         <CTABanner
           title="Book a parent call"
-          body="Twenty minutes with Tyler to talk through your student's situation and whether the program fits."
-          action={<CallLink className="btn btn-primary">Book a call with Tyler</CallLink>}
+          body={site.callNote}
+          action={<PrimaryCTA location="about">Book a call with Tyler</PrimaryCTA>}
         />
       </section>
     </div>

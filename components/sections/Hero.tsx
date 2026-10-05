@@ -1,10 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import CallLink from "../CallLink";
 import LinkedInLink from "../LinkedInLink";
 import VideoCard from "../VideoCard";
 import { videoAt } from "@/content/videoTestimonials";
 import { PILOT_LANDED, PILOT_STUDENTS, PLACEMENT_FIRMS } from "@/content/site";
+import PrimaryCTA, { CtaNote } from "../PrimaryCTA";
+import AvatarGroup from "../AvatarGroup";
 import { founder, shownCredentials } from "@/content/founder";
 
 export default function Hero() {
@@ -20,10 +21,12 @@ export default function Hero() {
             Internship coaching for college freshmen and sophomores in Finance, Marketing, and Accounting. 12 weeks of
             training and mocks, then weekly check-ins and mocks until you land an offer.
           </p>
-          <div className="btn-row">
-            <Link href="/apply" className="btn btn-primary">Apply</Link>
-            <CallLink />
+          <AvatarGroup />
+          <div className="cta-block">
+            <PrimaryCTA location="hero" />
+            <CtaNote />
           </div>
+          <p className="hero-secondary"><Link href="/apply" className="link-arrow">Apply →</Link></p>
           <p className="hero-proof">
             {[`${PILOT_LANDED} of ${PILOT_STUDENTS} pilot students landed internships`, ...PLACEMENT_FIRMS].join(" · ")}
           </p>

@@ -6,6 +6,11 @@ import { site } from "@/content/site";
 
 // Vercel Analytics custom events, fired from shared components:
 //   deposit_click, pay_full_click                  PayButton (data-event)
+//   cta_click {location}                           PrimaryCTA (hero, sticky, pricing,
+//                                                  parents, faq, ...) and the footer
+//                                                  call link
+//   video_play {youtubeId, placement}              VideoCard (on click)
+//   pricing_toggle {option}                        PaymentToggle
 //   parent_call_click                              CallLink (data-event), plus any
 //                                                  other link to the Calendly URL
 //   playbook_download, template_download           GatedDownload, PlaybookForm; the

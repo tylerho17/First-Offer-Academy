@@ -3,10 +3,12 @@ import { Newsreader, Instrument_Sans } from "next/font/google";
 import AnnouncementBar from "@/components/AnnouncementBar";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import StickyCTA from "@/components/StickyCTA";
 import AnalyticsEvents from "@/components/AnalyticsEvents";
 import Reveal from "@/components/Reveal";
 import NewsletterBand from "@/components/NewsletterBand";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 // The two brand fonts. Swapping one is a one-line change here: globals.css reads
@@ -46,7 +48,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <main id="main" tabIndex={-1}>{children}</main>
         <NewsletterBand />
         <Footer />
+        <StickyCTA />
         <Analytics />
+        <SpeedInsights />
         <AnalyticsEvents />
         <Reveal />
       </body>

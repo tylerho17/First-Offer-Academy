@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef } from "react";
 import { Menu } from "./Icons";
+import PrimaryCTA from "./PrimaryCTA";
 import PayButton from "./PayButton";
 
 type Item = { label: string; href: string; children?: { label: string; href: string }[] };
@@ -30,7 +31,8 @@ export default function MobileNav({ items }: { items: Item[] }) {
       <summary aria-label="Menu"><Menu /></summary>
       <div className="mobile-panel">
         <div className="mobile-reserve">
-          <PayButton className="btn btn-primary">Reserve a seat</PayButton>
+          <PrimaryCTA location="menu" />
+          <PayButton className="link-arrow mobile-reserve-link">Reserve a seat →</PayButton>
         </div>
         {items.map((item) => (
           <div key={item.label} className="mobile-group">

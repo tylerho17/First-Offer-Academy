@@ -22,7 +22,7 @@ export default function FaqPage() {
       />
       <PageHero eyebrow="FAQ" title="Questions parents and students ask" lede="Don't see yours? Book a call and ask Tyler directly." />
       <FaqList all />
-      <FinalCta />
+      <FinalCta location="faq" />
     </>
   );
 }

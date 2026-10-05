@@ -1,4 +1,4 @@
-import CallLink from "./CallLink";
+import PrimaryCTA from "./PrimaryCTA";
 import LinkedInLink from "./LinkedInLink";
 import { founderInternships, PILOT_STUDENTS, spell } from "@/content/site";
 
@@ -23,7 +23,7 @@ export default function CoachCard({ focus }: { focus?: string }) {
           <span>Networking</span><span>Resumes</span><span>Behaviorals</span><span>{focus ?? "Finance"} technicals</span>
         </div>
         <div className="btn-row" style={{ marginTop: 20 }}>
-          <CallLink className="btn btn-primary" />
+          <PrimaryCTA location="coach" />
         </div>
         <p style={{ marginTop: 16 }}><LinkedInLink /></p>
       </div>

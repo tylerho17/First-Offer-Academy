@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { site } from "@/content/site";
+import PrimaryCTA from "../../PrimaryCTA";
 import PayButton, { DepositNote } from "../../PayButton";
 
 // Closing pricing CTA and the FAQ link.
@@ -14,7 +15,8 @@ export default function ProgramCta() {
             <p>{c.name}: {c.start} · {c.seats} seats. <Link href="/pricing">Full pricing →</Link></p>
           </div>
           <div>
-            <PayButton />
+            <PrimaryCTA location="program" />
+            <p className="hero-secondary"><PayButton className="link-arrow">Reserve a seat · {c.deposit} →</PayButton></p>
             <DepositNote />
           </div>
         </div>

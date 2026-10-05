@@ -5,8 +5,8 @@ import CoachCard from "./CoachCard";
 import EventsStrip from "./sections/EventsStrip";
 import LatestArticles from "./sections/LatestArticles";
 import FinalCta from "./sections/FinalCta";
-import CallLink from "./CallLink";
 import { Check } from "./Icons";
+import PrimaryCTA from "./PrimaryCTA";
 import PayButton from "@/components/PayButton";
 
 export default function TrackView({ track }: { track: Track }) {
@@ -17,10 +17,10 @@ export default function TrackView({ track }: { track: Track }) {
           <span className="eyebrow">{track.name} track</span>
           <h1>{track.headline}</h1>
           <p className="lede">{track.intro}</p>
-          <div className="btn-row">
-            <PayButton />
-            <CallLink />
+          <div className="cta-block">
+            <PrimaryCTA location="track" />
           </div>
+          <p className="hero-secondary"><PayButton className="link-arrow">Reserve a seat →</PayButton></p>
           <div className="pill-row" style={{ marginTop: 28 }}>
             <span className="pill-label">Other tracks:</span>
             {tracks.filter((t) => t.slug !== track.slug).map((t) => (

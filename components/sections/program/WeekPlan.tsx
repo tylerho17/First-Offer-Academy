@@ -3,8 +3,10 @@ import { preWork, weekHref, weeks } from "@/content/curriculum";
 import { runningThroughout } from "@/content/curriculum";
 import { afterProgram, offerSprint } from "@/content/program";
 
-// The plan: Week 0, one row per training week (1–8) with full detail in a
-// native, server-rendered <details>, then the Offer Sprint and check-ins.
+// The plan as a vertical timeline: Week 0, one node per training week (1–8),
+// then the Offer Sprint and check-ins. Each node shows the week label, the
+// phase, the week's name and its one-line outcome; the full detail opens on
+// tap (native <details>, collapsed by default).
 export default function WeekPlan() {
   return (
     <section className="section" id="curriculum" style={{ paddingTop: 0 }}>
@@ -16,13 +18,15 @@ export default function WeekPlan() {
             until an offer. {runningThroughout.name} runs through training: {runningThroughout.summary[0].toLowerCase() + runningThroughout.summary.slice(1)}
           </p>
         </div>
-        <ol className="week-rows">
+        <ol className="week-rows timeline">
           <li>
             <details className="week-row">
               <summary>
                 <span className="week-row-n">{preWork.label}</span>
-                <span className="week-row-title">{preWork.name}</span>
-                <span className="week-row-sum">Starts the day you enroll, not in January.</span>
+                <span className="week-row-main">
+                  <span className="week-row-title">{preWork.name}</span>
+                  <span className="week-row-sum">Starts the day you enroll, not in January.</span>
+                </span>
               </summary>
               <div className="week-row-body"><p>{preWork.summary}</p></div>
             </details>
@@ -32,8 +36,11 @@ export default function WeekPlan() {
               <details className="week-row">
                 <summary>
                   <span className="week-row-n">Week {w.n}</span>
-                  <span className="week-row-title">{w.title}</span>
-                  <span className="week-row-sum">{w.objective}</span>
+                  <span className="week-row-main">
+                    <span className="week-row-phase-tag">{w.phase}</span>
+                    <span className="week-row-title">{w.title}</span>
+                    <span className="week-row-sum">{w.objective}</span>
+                  </span>
                 </summary>
                 <div className="week-row-body">
                   <p className="week-row-phase">{w.phase}{w.split ? " · track split" : ""}</p>
@@ -66,8 +73,10 @@ export default function WeekPlan() {
             <details className="week-row">
               <summary>
                 <span className="week-row-n">{offerSprint.weeks}</span>
-                <span className="week-row-title">{offerSprint.name}</span>
-                <span className="week-row-sum">{offerSprint.summary}</span>
+                <span className="week-row-main">
+                  <span className="week-row-title">{offerSprint.name}</span>
+                  <span className="week-row-sum">{offerSprint.summary}</span>
+                </span>
               </summary>
               <div className="week-row-body">
                 <p>Four weeks of technical mocks and behavioral mocks, plus prep before and a debrief after every networking call your student lands.</p>
@@ -78,8 +87,10 @@ export default function WeekPlan() {
             <details className="week-row">
               <summary>
                 <span className="week-row-n">After Week 12</span>
-                <span className="week-row-title">Until your offer</span>
-                <span className="week-row-sum">A weekly 30-minute check-in and mock interview.</span>
+                <span className="week-row-main">
+                  <span className="week-row-title">Until your offer</span>
+                  <span className="week-row-sum">A weekly 30-minute check-in and mock interview.</span>
+                </span>
               </summary>
               <div className="week-row-body">
                 <p>{afterProgram.full}</p>
