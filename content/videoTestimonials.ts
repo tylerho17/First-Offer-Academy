@@ -1,5 +1,6 @@
 // Video testimonials (unlisted YouTube), shared with written permission.
-// Videos v4 (2026-10-04): 37 clips; polish v5 added three FAQ clips (40). Each clip has one unique `spot` and
+// Videos v4 (2026-10-04): 37 clips; polish v5 added three FAQ clips (40);
+// v9 swapped three of Pranav's and Kim's clips for Ishank's (still 40). Each clip has one unique `spot` and
 // renders in that one place only, beside the copy it proves. The only groups
 // of videos are the /pricing "It was worth it." section and the /results
 // "In their words" row. FAQ clips render on /faq only.
@@ -54,7 +55,7 @@ export const videoTestimonials: VideoTestimonial[] = [
   { youtubeId: "CbubLIpB0sQ", person: "Pranav", kind: "student", title: "Finding what makes me different", spot: "program-story-bank" },
   { youtubeId: "B6ItUko1cTA", person: "Maddie", kind: "student", title: "Talking to 70+ bankers", spot: "program-outreach-system" },
   { youtubeId: "RNlk3JSTY2Y", person: "Tom", kind: "parent", parentOf: "Kim", title: "Hearing Kim speak the language of finance", spot: "program-track-technicals" },
-  { youtubeId: "nWQ-XqmOaok", person: "Pranav", kind: "student", title: "From shy to confident through reps and coffee chats", spot: "program-interview-reps" },
+  { youtubeId: "XDaG3cP9EfY", person: "Ishank", kind: "student", title: "Mock interviews", spot: "program-interview-reps" },
   { youtubeId: "DBlK5J3KwEU", person: "James", kind: "student", title: "Accountability pods", spot: "program-accountability-pods" },
   { youtubeId: "3KvECu21E78", person: "Nathaniel", kind: "student", title: "Tyler as a coach", spot: "program-coaching" },
   // /parents
@@ -73,15 +74,15 @@ export const videoTestimonials: VideoTestimonial[] = [
   { youtubeId: "uPEfD2zR2cs", person: "Mangesh", kind: "parent", parentOf: "Ishank", title: "Priceless", spot: "worth-parent-1" },
   { youtubeId: "6cIM_G9GHbI", person: "Steve", kind: "parent", parentOf: "James", title: "Was it worth it?", spot: "worth-parent-2" },
   { youtubeId: "64R01N1Kn-Y", person: "Greg", kind: "parent", parentOf: "Maddie", title: "Was it worth it?", spot: "worth-parent-3" },
-  { youtubeId: "oIRmZvIpwqE", person: "Kim", kind: "student", title: "Was it worth it?", spot: "worth-student-1" },
-  { youtubeId: "ck-FDQK5hdQ", person: "Maddie", kind: "student", title: "Was it worth it?", spot: "worth-student-2" },
-  { youtubeId: "Rjt7WVJ4prE", person: "Pranav", kind: "student", title: "Was it worth it?", spot: "worth-student-3" },
+  { youtubeId: "xtsshg-yxIE", person: "Ishank", kind: "student", title: "Was it worth it?", spot: "worth-student-1" },
+  { youtubeId: "oIRmZvIpwqE", person: "Kim", kind: "student", title: "Was it worth it?", spot: "worth-student-2" },
+  { youtubeId: "ck-FDQK5hdQ", person: "Maddie", kind: "student", title: "Was it worth it?", spot: "worth-student-3" },
   { youtubeId: "cxoNC0Y6wsM", person: "Nathaniel", kind: "student", title: "Was it worth it?", spot: "worth-student-4" },
   // /results
   { youtubeId: "t_BL3ljvqVM", person: "James", kind: "student", title: "How much I grew", spot: "results-1" },
   { youtubeId: "Dk3Esuv2omo", person: "Nathaniel", kind: "student", title: "My biggest growth", spot: "results-2" },
   { youtubeId: "AI6lsV5fDhI", person: "Pranav", kind: "student", title: "My most recent internship", spot: "results-3" },
-  { youtubeId: "pCkLZnEEtes", person: "Kim", kind: "student", title: "My most recent internship", spot: "results-4" },
+  { youtubeId: "b1k0wBWgjRc", person: "Ishank", kind: "student", title: "“I landed 5 internships”", spot: "results-4" },
   // /faq
   { youtubeId: "c4J3yMBr4xI", person: "Tom", kind: "parent", parentOf: "Kim", title: "Who this program is not for", spot: "faq-right-fit-1" },
   { youtubeId: "_lhJNOtMIiI", person: "Steve", kind: "parent", parentOf: "James", title: "Who this program is not for", spot: "faq-right-fit-2" },
