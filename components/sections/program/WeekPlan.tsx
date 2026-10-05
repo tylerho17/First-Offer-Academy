@@ -3,7 +3,7 @@ import { preWork, weekHref, weeks } from "@/content/curriculum";
 import { runningThroughout } from "@/content/curriculum";
 import { afterProgram, offerSprint } from "@/content/program";
 
-// The plan: Week 0, one row per training week (1–8) with full detail in a
+// The plan: Week 0, one row per core-teaching week (1–8) with full detail in a
 // native, server-rendered <details>, then the Offer Sprint and check-ins.
 export default function WeekPlan() {
   return (
@@ -12,8 +12,8 @@ export default function WeekPlan() {
         <div className="section-head">
           <h2>The plan, week by week</h2>
           <p className="lede">
-            Winter break pre-work, 8 weeks of training in four two-week phases, then the Offer Sprint and weekly check-ins
-            until an offer. {runningThroughout.name} runs through training: {runningThroughout.summary[0].toLowerCase() + runningThroughout.summary.slice(1)}
+            Winter break pre-work, then a 12-week program: core teaching in Weeks 1–8 in four two-week phases, then the
+            Offer Sprint in Weeks 9–12, and weekly check-ins until an offer. {runningThroughout.name} runs through training: {runningThroughout.summary[0].toLowerCase() + runningThroughout.summary.slice(1)}
           </p>
         </div>
         <ol className="week-rows">
@@ -79,7 +79,7 @@ export default function WeekPlan() {
               <summary>
                 <span className="week-row-n">After Week 12</span>
                 <span className="week-row-title">Until your offer</span>
-                <span className="week-row-sum">A weekly 30-minute check-in and mock interview.</span>
+                <span className="week-row-sum">A 20-minute weekly check-in and a mock interview every other week.</span>
               </summary>
               <div className="week-row-body">
                 <p>{afterProgram.full}</p>

@@ -8,9 +8,9 @@ import { site } from "@/content/site";
 
 // Never listed in the sitemap: admin, the post-checkout page, and anything
 // kept out of search on purpose. /enrolled is noindex and reachable only from
-// Stripe, so it stays out. /workshops and /share-your-story are live but
-// unlinked and noindex.
-export const PRIVATE_ROUTES = ["/admin", "/enrolled", "/workshops", "/share-your-story", ...(site.zhReviewed ? [] : ["/zh"])];
+// Stripe, so it stays out. /workshops, /share-your-story, and /refer are live
+// but unlinked and noindex.
+export const PRIVATE_ROUTES = ["/admin", "/enrolled", "/workshops", "/share-your-story", "/refer", ...(site.zhReviewed ? [] : ["/zh"])];
 
 export function staticRoutes(dir = path.join(process.cwd(), "app"), base = ""): string[] {
   const out: string[] = [];

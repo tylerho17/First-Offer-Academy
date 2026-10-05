@@ -12,7 +12,8 @@ export default function PriceBand() {
           <span className="eyebrow">Tuition</span>
           <h2>{c.price} · everything included</h2>
           <p className="band-line">
-            Week 0 pre-work · 8-week training · 4-week Offer Sprint · weekly check-ins and mocks until your offer · coached
+            Week 0 pre-work · 12-week program: Weeks 1–8 core teaching, Weeks 9–12 Offer Sprint · weekly check-ins and mocks
+            every other week until your offer · coached
             Extern applications, fee covered
           </p>
           <p className="band-line"><strong>{c.name}: {c.start} · {c.seats} seats</strong></p>

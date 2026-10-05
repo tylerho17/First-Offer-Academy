@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import Founder from "@/components/sections/Founder";
 import FinalCta from "@/components/sections/FinalCta";
-import { PILOT_STUDENTS, spell } from "@/content/site";
+import { PILOT_LANDED, PILOT_STUDENTS, spell } from "@/content/site";
 
 export const metadata: Metadata = {
   title: "About",
-  description: `Why Tyler Ho built First Offer Academy: 7+ internships worked and offers from many more, ${spell(PILOT_STUDENTS)} freshmen coached into first-year internships, and a system for every student.`,
+  description: `Why Tyler Ho built First Offer Academy: 7+ internships worked and offers from many more, ${spell(PILOT_STUDENTS)} pilot students coached (${PILOT_LANDED} of ${PILOT_STUDENTS} landed an internship or offer), and a system for every student.`,
 };
 
 export default function AboutPage() {
@@ -15,7 +15,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About"
         title="Why I built First Offer Academy."
-        lede={`I'm Tyler Ho. I ran this search myself, the hard way, and then ran it with ${spell(PILOT_STUDENTS)} first-year students.`}
+        lede={`I'm Tyler Ho. I ran this search myself, the hard way, and then ran it with ${spell(PILOT_STUDENTS)} pilot students.`}
       />
       <Founder />
       <section className="section" style={{ paddingTop: 0 }}>

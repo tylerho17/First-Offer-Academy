@@ -22,12 +22,12 @@ export const terms: LegalDoc = {
     ] },
 
     { type: "h2", text: "What the program is" },
-    { type: "p", text: "The program is coaching and instruction for a student's internship search. It includes 8 weekly 90-minute group sessions, eight weekly 60-minute 1:1s, an accountability pod, feedback on the student's work, graded mock interviews, parent progress reports every two weeks, and a Week 8 family meeting. Dates, times, and format are shared before the cohort starts." },
+    { type: "p", text: "The program is coaching and instruction for a student's internship search. It runs 12 weeks. Weeks 1–8 are core teaching: eight weekly 90-minute group sessions, eight weekly 60-minute 1:1s, an accountability pod, feedback on the student's work, graded mock interviews, parent progress reports every two weeks, and a Week 8 family meeting. Weeks 9–12 are the Offer Sprint: technical and behavioral mock interviews and networking. After Week 12, until the student receives an internship offer (paid or unpaid) or May 31, 2027, whichever comes first, the student gets a 20-minute weekly check-in and a mock interview every other week, as long as they keep up the maintenance minimum of 100 outreach emails and 6–8 networking calls a week. Dates, times, and format are shared before the cohort starts." },
     { type: "p", text: "We may adjust session content, order, or coaches to improve the program. If we need to change a scheduled session, we'll give as much notice as we can and offer a make-up or recording." },
 
     { type: "h2", text: "No promise of outcomes" },
     { type: "p", text: "We do not promise internship offers or any specific outcome. We don't promise an internship at any particular company, in any particular role, at any particular pay, or by any particular date. Hiring decisions belong to employers, and they depend on things no one outside the employer controls." },
-    { type: "p", text: "What we do commit to is described on our [Our Promise](/program#promise) page: the sessions, 1:1s, feedback, documented search, parent reports, the Week 8 meeting, the Offer Sprint, and weekly check-ins and mocks until an offer." },
+    { type: "p", text: "What we do commit to is described on our [Our Promise](/program#promise) page: the sessions, 1:1s, feedback, documented search, parent reports, the Week 8 meeting, the Offer Sprint, and after Week 12 a 20-minute weekly check-in and a mock interview every other week until an offer or May 31, 2027." },
     { type: "p", text: "The one exception to \"no promise of outcomes\" is offer-or-refund: if a student meets every weekly minimum through May 31, 2027 and receives no internship offer, we refund the full tuition. The exact terms are in our [Refund & Payment Policy](/refunds)." },
 
     { type: "h2", text: "Student responsibilities" },

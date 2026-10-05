@@ -6,7 +6,7 @@ import { targetListColumns } from "../toolkit";
 export const guide: Guide = {
   slug: "target-list-of-50",
   title: "Building a target list of 50 companies (and finding the right contacts)",
-  excerpt: "A target list is 50 names you'll actually email, not 50 companies you might apply to someday. How to tier it A/B/C, where first-year opportunities really come from, and how to find the right person at each firm.",
+  excerpt: "A target list is 50 names you'll actually email, not 50 companies you might apply to someday. How to tier it A/B/C, where freshman opportunities really come from, and how to find the right person at each firm.",
   oneLine: "Tier 50 companies A/B/C and find a named contact at each one.",
   category: "Networking",
   date: "2026-09-21",
@@ -17,7 +17,7 @@ export const guide: Guide = {
   body: [
     p("Most students have a list of companies they'd like to work for. Almost none of them have a target list. The difference is names. A target list is 50 companies, each with a specific person you're going to email, a way to reach them, and one detail you can use in your first line. Without names, it's a wish list."),
     p("The target list is the Level 1 gate of our program, due in Week 2, because everything after it depends on it. Your outreach system sends emails to this list. Your calls come from this list. Your referrals come from the people on it. Build it well once, and the next ten weeks get much easier."),
-    p("This guide walks through how to tier your list, where first-year opportunities actually come from, how to find the right person at each firm, and what to log. All you need is one spreadsheet in Google Sheets or Excel."),
+    p("This guide walks through how to tier your list, where freshman opportunities actually come from, how to find the right person at each firm, and what to log. All you need is one spreadsheet in Google Sheets or Excel."),
 
     h2("Why 50, and why now"),
     p("Fifty is enough to keep a steady weekly pace without recycling the same people, and small enough to research properly. It's also the number where the math starts working in your favor. Most cold emails don't get replies, and that's normal. With a good list and good emails, your reply rate should move toward 10%. Fifty well-chosen contacts, plus the new names you add as people introduce you to others, gives you a real pipeline of calls."),
@@ -27,13 +27,13 @@ export const guide: Guide = {
     tb.tiers(),
     h3("A tier: dream firms, for relationships"),
     p("These are the firms you'd be thrilled to work at. As a freshman, you're very unlikely to get an internship at most of them this year, and that's fine. You're emailing A-tier contacts to build relationships that pay off in sophomore and junior year. Ask about their path, stay in touch, and update them when you make progress."),
-    h3("B tier: where first-year internships actually come from"),
+    h3("B tier: where freshman internships actually come from"),
     p("This is the heart of your list. Boutiques, middle-market firms, local firms, and startups hire first- and second-year interns far more often than the famous names, and they get far fewer emails from students. A single good call at a B-tier firm can turn into an interview, because there may not be a formal program standing between you and the decision-maker."),
     h3("C tier: safe, and still valuable"),
     p("Local businesses, campus roles, small startups, and companies in your family's network. They give you reps (every call makes the next one better) and a real line on your resume. Never skip your C tier because it feels less exciting."),
 
     h2("Where to find companies"),
-    p("Start with the kinds of firms that hire first-years, then find specific names within each type."),
+    p("Start with the kinds of firms that hire freshmen, then find specific names within each type."),
     tb.earlyMarket(),
     h3("Places to look"),
     ul(
@@ -97,7 +97,7 @@ export const guide: Guide = {
 
     h2("Common mistakes"),
     ul(
-      "Only famous firms. If your list is all A tier, you'll get very few replies and very few first-year opportunities.",
+      "Only famous firms. If your list is all A tier, you'll get very few replies and very few freshman opportunities.",
       "Companies with no names. Every row needs a person.",
       "Picking the most senior person you can find. A second-year analyst is far more likely to reply than a managing director.",
       "Skipping the personal detail. Without it, your email reads like everyone else's.",

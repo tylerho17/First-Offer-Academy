@@ -1,7 +1,7 @@
 import Image from "next/image";
 import CallLink from "../CallLink";
 import LinkedInLink from "../LinkedInLink";
-import { PILOT_STUDENTS, site, spell } from "@/content/site";
+import { PILOT_LANDED, PILOT_STUDENTS, site, spell } from "@/content/site";
 
 export default function Founder() {
   return (
@@ -23,8 +23,8 @@ export default function Founder() {
             consulting, FP&amp;A, and sales,{" "}
             {site.founder.offerCount ? `${site.founder.offerCount} internship offers` : "offers from many more"}, and an
             incoming investment banking offer. In college I led finance
-            recruiting education for a student investing organization and coached {spell(PILOT_STUDENTS)} freshmen who all
-            landed internships in their first year. The system kept producing after I stepped back.
+            recruiting education for a student investing organization and coached {spell(PILOT_STUDENTS)} pilot students:{" "}
+            {PILOT_LANDED} of {PILOT_STUDENTS} landed an internship or offer. The system kept producing after I stepped back.
           </p>
           <p>
             First Offer Academy is that system, built for every student, not just the ones who got

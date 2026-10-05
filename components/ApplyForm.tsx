@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { site } from "@/content/site";
+import { PARENT_CALL_URL, site } from "@/content/site";
 import { track } from "@vercel/analytics";
 import { postForm } from "@/lib/submit";
 import Honeypot from "./Honeypot";
@@ -127,12 +127,12 @@ export default function ApplyForm({ paid = false }: { paid?: boolean }) {
 
       {status === "unconnected" && (
         <p className="form-status" role="status">
-          The application form isn&apos;t connected yet. For now, <a href={site.calendlyUrl} target="_blank" rel="noopener noreferrer">book a call with Tyler</a> directly.
+          The application form isn&apos;t connected yet. For now, <a href={PARENT_CALL_URL} target="_blank" rel="noopener noreferrer">book a call with Tyler</a> directly.
         </p>
       )}
       {status === "error" && (
         <p className="form-status" role="alert">
-          Something went wrong. Email <a href={`mailto:${site.email}`}>{site.email}</a> or <a href={site.calendlyUrl}>book a call</a>.
+          Something went wrong. Email <a href={`mailto:${site.email}`}>{site.email}</a> or <a href={PARENT_CALL_URL}>book a call</a>.
         </p>
       )}
     </form>

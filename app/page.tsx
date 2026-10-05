@@ -11,6 +11,7 @@ import OfferOrRefund from "@/components/sections/OfferOrRefund";
 import FaqList from "@/components/sections/FaqList";
 import JsonLd from "@/components/JsonLd";
 import { site } from "@/content/site";
+import { programLength } from "@/content/program";
 import { liveSocialLinks } from "@/content/social";
 
 // Event dates come from Luma (lib/events.ts), refreshed hourly.
@@ -28,7 +29,7 @@ export default function Home() {
           url: `https://${site.domain}`,
           logo: `https://${site.domain}/apple-icon`,
           description:
-            "Internship coaching for college freshmen and sophomores in Finance, Marketing, and Accounting: Week 0 pre-work, 8 weeks of training, a 4-week Offer Sprint, then weekly check-ins and mocks until an offer.",
+            `Internship coaching for college freshmen and sophomores in Finance, Marketing, and Accounting: ${programLength.meta}`,
           email: site.email,
           founder: { "@type": "Person", name: site.founder.name, sameAs: [site.founder.linkedin] },
           ...(sameAs.length ? { sameAs } : {}),

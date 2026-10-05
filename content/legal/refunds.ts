@@ -1,4 +1,4 @@
-import { site } from "../site";
+import { PARENT_CALL_URL, site } from "../site";
 import { afterProgram, offerOrRefund } from "../program";
 import { legalContact, type LegalDoc } from "./types";
 
@@ -14,7 +14,7 @@ export const refunds: LegalDoc = {
   intro: `This page explains what the program costs, how to pay, and how refunds work. It's part of our [Terms of Service](/terms).`,
   body: [
     { type: "h2", text: "Tuition" },
-    { type: "p", text: `Tuition for the ${c.name.toLowerCase()} (${c.start}) is ${c.price}, everything included: Week 0 pre-work, the 8-week training, the 4-week Offer Sprint, weekly check-ins and mock interviews until an offer or ${afterProgram.until}, and coached Extern externship applications with the Extern fee covered. There are no other required fees.` },
+    { type: "p", text: `Tuition for the ${c.name.toLowerCase()} (${c.start}) is ${c.price}, everything included: Week 0 pre-work; the 12-week program (core teaching in Weeks 1–8, then the 4-week Offer Sprint of mock interviews and networking); after Week 12, a 20-minute weekly check-in and a mock interview every other week until an internship offer or ${afterProgram.until}, while the student keeps up ${afterProgram.maintenance}; and coached Extern externship applications with the Extern fee covered. There are no other required fees.` },
 
     { type: "h2", text: "Ways to pay" },
     { type: "ul", items: [
@@ -38,7 +38,7 @@ export const refunds: LegalDoc = {
     { type: "h2", text: "Offer-or-refund" },
     { type: "p", text: offerOrRefund.body },
     { type: "p", text: `Terms: ${offerOrRefund.terms}` },
-    { type: "p", text: `The weekly minimums. ${offerOrRefund.minimums.training} ${offerOrRefund.minimums.after} ${offerOrRefund.minimums.makeup}` },
+    { type: "p", text: `The weekly minimums. ${offerOrRefund.minimums.training} ${offerOrRefund.minimums.sprint} ${offerOrRefund.minimums.after} ${offerOrRefund.minimums.makeup}` },
     { type: "p", text: "Outside offer-or-refund and the rules above, not landing an internship offer is not by itself grounds for a refund. See [Our Promise](/program#promise) for what we commit to." },
 
     { type: "h2", text: "If we cancel or change the cohort" },
@@ -48,6 +48,6 @@ export const refunds: LegalDoc = {
     { type: "p", text: `Email ${legalContact} from the email address you used to apply, with the student's name and "Refund request" in the subject line. We'll confirm we received it within 2 business days. Approved refunds go back to the original payment method through Stripe; your bank may take 5–10 business days to show it.` },
 
     { type: "h2", text: "Questions" },
-    { type: "p", text: `Not sure how any of this applies to you? Email ${legalContact} or [book a call](${site.calendlyUrl}) before you pay.` },
+    { type: "p", text: `Not sure how any of this applies to you? Email ${legalContact} or [book a call](${PARENT_CALL_URL}) before you pay.` },
   ],
 };

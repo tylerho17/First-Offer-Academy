@@ -6,6 +6,8 @@ import { site } from "@/content/site";
 export const metadata: Metadata = {
   title: "Refer a Student",
   description: "Know a first- or second-year college student who'd benefit from First Offer Academy? Refer them, and Tyler will reach out personally.",
+  // Unlinked from the nav and footer; reachable only by direct link.
+  robots: { index: false, follow: false },
 };
 
 export default function ReferPage() {

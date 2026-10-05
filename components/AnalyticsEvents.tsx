@@ -2,7 +2,7 @@
 
 import { track } from "@vercel/analytics";
 import { useEffect } from "react";
-import { site } from "@/content/site";
+import { PARENT_CALL_URL } from "@/content/site";
 
 // Vercel Analytics custom events, fired from shared components:
 //   deposit_click, pay_full_click                  PayButton (data-event)
@@ -21,7 +21,7 @@ export default function AnalyticsEvents() {
       const name = el.getAttribute("data-event");
       if (name) return void track(name, { path: location.pathname });
       const href = el.getAttribute("href") ?? "";
-      if (site.calendlyUrl && href.startsWith(site.calendlyUrl)) track("parent_call_click", { path: location.pathname });
+      if (href.startsWith(PARENT_CALL_URL)) track("parent_call_click", { path: location.pathname });
     }
     document.addEventListener("click", onClick, { capture: true });
     return () => document.removeEventListener("click", onClick, { capture: true });

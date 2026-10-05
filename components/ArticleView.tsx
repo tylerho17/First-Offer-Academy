@@ -5,7 +5,7 @@ import ArticleCard from "./ArticleCard";
 import Blocks from "./Blocks";
 import GatedDownload from "./GatedDownload";
 import { leadMagnet } from "@/content/leadMagnet";
-import { site } from "@/content/site";
+import { PARENT_CALL_URL } from "@/content/site";
 
 export default function ArticleView({ article: a }: { article: Article }) {
   const related = relatedArticles(a);
@@ -74,7 +74,7 @@ export default function ArticleView({ article: a }: { article: Article }) {
               <span className="eyebrow">Parents</span>
               <h3>Book a 20-minute call</h3>
               <p>Talk through your student&apos;s situation with Tyler and whether the program fits.</p>
-              <a href={site.calendlyUrl} className="link-arrow" target="_blank" rel="noopener noreferrer">Book a parent call →</a>
+              <a href={PARENT_CALL_URL} className="link-arrow" target="_blank" rel="noopener noreferrer">Book a parent call →</a>
             </div>
           </div>
         </div>

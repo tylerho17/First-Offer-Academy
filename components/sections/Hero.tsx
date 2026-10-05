@@ -13,14 +13,14 @@ export default function Hero() {
           <h1>Coached until your first offer.</h1>
           <p className="lede">
             Internship coaching for college freshmen and sophomores in Finance, Marketing, and Accounting. 12 weeks of
-            training and mocks, then weekly check-ins and mocks until you land an offer.
+            training and mocks, then weekly check-ins and mocks every other week until you land an offer.
           </p>
           <div className="btn-row">
             <Link href="/apply" className="btn btn-primary">Apply</Link>
             <CallLink />
           </div>
           <p className="hero-proof">
-            {[`${PILOT_LANDED} of ${PILOT_STUDENTS} pilot students landed internships`, ...PLACEMENT_FIRMS].join(" · ")}
+            {[`${PILOT_LANDED} of ${PILOT_STUDENTS} pilot students landed an internship or offer`, ...PLACEMENT_FIRMS].join(" · ")}
           </p>
           <div className="audience-split">
             <Link href="/program" className="audience-card">I&apos;m a student <span aria-hidden="true">→</span></Link>

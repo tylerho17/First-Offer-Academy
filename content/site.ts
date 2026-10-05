@@ -5,8 +5,8 @@ const deposit = "$1,000";
 const depositRefundDeadline = "December 15, 2026";
 const balance = "$4,000";
 
-// Students coached to internships in their first year of college, before the
-// academy existed. Every page that states the pilot number reads this.
+// Students coached in the pilot, before the academy existed. Every page that
+// states the pilot number reads this.
 export const PILOT_STUDENTS = 12;
 // How many of them landed an internship or an offer (some pilot students were
 // juniors or seniors, and one result is a full-time offer).
@@ -15,6 +15,11 @@ export const PILOT_LANDED = 12;
 // Firms named in the hero proof row. Only list firms whose students have given
 // permission.
 export const PLACEMENT_FIRMS = ["Wells Fargo", "Morgan Stanley", "PIMCO", "Tricon"];
+
+// Every "Book a parent call" link on the site (and every other call link)
+// points here.
+// TODO(Tyler): paste the real Calendly parent-call event URL.
+export const PARENT_CALL_URL = "https://calendly.com/tyler-firstofferacademy/REPLACE-WITH-EVENT-SLUG";
 
 export const site = {
   name: "First Offer Academy",
@@ -45,8 +50,6 @@ export const site = {
     balance, // due before Week 1
     balanceDue: "before Week 1",
   },
-
-  calendlyUrl: "https://calendly.com/tyler-firstofferacademy",
 
   // Luma calendars and sessions: content/events.ts and lib/events.ts.
 

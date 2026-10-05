@@ -20,7 +20,7 @@ export const playbook = {
   reviewedByTyler: true,
   minPages: 15,
   intro:
-    "Everything in here is free. It's the exact system I used through the two most recent recruiting cycles, and the one I've taught to first-year students. The tactics aren't the hard part. Doing them every week is.",
+    "Everything in here is free. It's the exact system I used through the two most recent recruiting cycles, and the one I've taught to freshmen. The tactics aren't the hard part. Doing them every week is.",
 };
 
 const p = (text: string): Block => ({ type: "p", text });
@@ -101,7 +101,7 @@ export const chapters: Chapter[] = [
     blocks: [
       p("A target list is 50 companies, each with a named person you're going to email. Not 50 companies you might apply to someday: 50 names you'll actually contact. Without names, it's a wish list."),
       tb.tiers(),
-      p("Most of your first-year opportunities will come from your B tier. Your A tier is for relationships that pay off in sophomore and junior year. Your C tier gives you reps and a line on the resume."),
+      p("Most of your freshman opportunities will come from your B tier. Your A tier is for relationships that pay off in sophomore and junior year. Your C tier gives you reps and a line on the resume."),
       h3("Finding the right contacts"),
       tb.sourcing(),
       tyler("Alumni from your school reply more than anyone else. Start there. After that, look for anything you share: hometown, high school, first job, first-gen path. People help people who remind them of themselves."),

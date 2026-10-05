@@ -12,11 +12,11 @@ Conversion goal, in order: 1) Apply, 2) Book a free parent call (Calendly), 3) R
 - Tracks: Finance, Consulting, Marketing, Tech (software, data, product).
 - Who: first- and second-year college students in Orange County, including community college students. Treat them as starting from zero; no club membership needed.
 - Seats: 24, in three sections of 8.
-- Price: $5,000. Payment plan: 3 × $1,700. $1,000 refundable deposit holds a seat.
+- Price: $5,000. $1,000 refundable deposit holds a seat.
 - Format: weekly 90-minute group session + weekly 15-minute 1:1 + accountability pod of 3.
 - The Standard: 6 levels graded on evidence (Foundation → Launched → In Motion → Networked → Interviewing → Offer).
 - Week 12: family meeting where the student presents their results and a side-by-side of their Week 1 and Week 12 recorded intros.
-- Proof: Tyler coached 8 students who landed internships in their first year of college (exact internship count: TODO). Tyler landed 7 internships himself before starting First Offer Academy.
+- Proof: Tyler coached 12 pilot students; 12 of 12 landed an internship or offer. Tyler landed 7 internships himself before starting First Offer Academy.
 - Tagline: Build the skills. Be that candidate. Get the offer.
 
 ## TODO before launch (render nothing until filled)
@@ -100,7 +100,7 @@ Four cream cards with an icon each: Finance, Consulting, Marketing, Tech (softwa
 ### 9. Founder story (mist, casual photo left)
 - H2: **Why I built this**
 - Copy:
-  > I grew up in Garden Grove, the son of Vietnamese parents who worked hard but couldn't show me how recruiting worked. So I learned it the hard way: seven internships across investment banking, venture, and consulting, and an incoming investment banking offer. At UCI I ran finance recruiting education for a student investing organization and coached eight freshmen who landed internships in their first year. The system kept producing after I stepped back.
+  > I grew up in Garden Grove, the son of Vietnamese parents who worked hard but couldn't show me how recruiting worked. So I learned it the hard way: seven internships across investment banking, venture, and consulting, and an incoming investment banking offer. At UCI I ran finance recruiting education for a student investing organization and coached twelve pilot students, and 12 of 12 landed an internship or offer. The system kept producing after I stepped back.
   >
   > First Offer Academy is that system, built for every student, not just the ones who got into the right club.
 - Signature line: **Tyler Ho, Founder** · UC Irvine, Finance & Computer Science
@@ -114,7 +114,7 @@ Four cream cards with an icon each: Finance, Consulting, Marketing, Tech (softwa
 
 ### 11. Price band (navy band, cream text)
 - H2: **Founding cohort · January 2027**
-- Sage price box: **$5,000** · or 3 payments of $1,700
+- Sage price box: **$5,000**
 - Bullets: 12 weekly sessions · 12 1:1s · accountability pod · resume, outreach & interview toolkit · graded mocks · biweekly parent reports
 - "24 seats. A $1,000 refundable deposit holds your spot."
 - Buttons: **Apply now** (sage, navy text) · Book a parent call (cream outline)
@@ -127,7 +127,7 @@ Top 6 on home, full list on /faq:
 4. **How much time per week?** Plan on [TODO] hours: the session, the 1:1, and outreach.
 5. **Online or in person?** [TODO]
 6. **Is the deposit refundable?** Yes. [TODO: exact terms]
-Also on /faq: community college students welcome? · which majors? · who coaches? · payment plan details · what happens after week 12?
+Also on /faq: community college students welcome? · which majors? · who coaches? · payment details · what happens after week 12?
 
 ### 13. Final CTA (mist)
 - H2: **24 seats. January starts sooner than it sounds.**

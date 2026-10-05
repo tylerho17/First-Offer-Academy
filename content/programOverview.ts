@@ -35,7 +35,7 @@ export const programOverview = {
   hero: {
     eyebrow: "The program",
     title: "From Week 0 to your first offer.",
-    lede: "Week 0 pre-work, 8 weeks of training (a weekly 90-minute session, a 60-minute 1:1, and a pod of three), a 4-week Offer Sprint, then a weekly check-in and mock interview until you land an offer.",
+    lede: "Week 0 pre-work, then a 12-week program: core teaching in Weeks 1–8 (a weekly 90-minute session, a 60-minute 1:1, and a pod of three) and a 4-week Offer Sprint in Weeks 9–12 of mock interviews and networking. Then a 20-minute weekly check-in and a mock interview every other week until you land an offer.",
     sub: `Membership is by application. The founding cohort has ${site.cohort.seats} seats.`,
   },
 

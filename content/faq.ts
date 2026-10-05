@@ -1,4 +1,4 @@
-import { founderInternships, PILOT_STUDENTS, site, spell } from "./site";
+import { founderInternships, PILOT_LANDED, PILOT_STUDENTS, site, spell } from "./site";
 import { afterProgram, formatNote, offerOrRefund, oneOnOneFormat, sessionFormat } from "./program";
 import { rhythmNotes, weeklyRhythm } from "./curriculum";
 import { programOverview } from "./programOverview";
@@ -17,14 +17,14 @@ export const faqs: Faq[] = [
     parent: true,
     id: "offer-or-refund",
     q: "What if my student doesn't land an offer?",
-    a: `Weekly check-ins and mocks continue through ${afterProgram.until}. If they've met every weekly minimum and still have no offer, you get a full $5,000 refund. Terms: ${offerOrRefund.terms}`,
+    a: `${afterProgram.full} If they've met every weekly minimum and still have no offer, you get a full $5,000 refund. Terms: ${offerOrRefund.terms}`,
   },
   {
     home: true,
     parent: true,
     id: "weekly-minimums",
     q: "What are the weekly minimums?",
-    a: `${offerOrRefund.minimums.training} ${offerOrRefund.minimums.after} ${offerOrRefund.minimums.makeup}`,
+    a: `${offerOrRefund.minimums.training} ${offerOrRefund.minimums.sprint} ${offerOrRefund.minimums.after} ${offerOrRefund.minimums.makeup}`,
   },
   {
     home: true,
@@ -35,7 +35,7 @@ export const faqs: Faq[] = [
   {
     home: true,
     parent: true,
-    q: "Is there a payment plan?",
+    q: "How does payment work?",
     a: `${site.cohort.deposit} deposit holds the seat (refundable through ${site.depositRefundDeadline.replace("December", "Dec")}), then ${site.cohort.balance} is due before Week 1.`,
   },
   {
@@ -135,7 +135,7 @@ export const faqs: Faq[] = [
   {
     parent: true,
     q: "Why learn from someone who just went through recruiting?",
-    a: `Because the timelines, emails, and interviews Tyler coaches are ones he ran himself, recently: ${founderInternships()}, and an incoming investment banking offer. In college he led finance recruiting education and coached ${spell(PILOT_STUDENTS)} freshmen who all landed internships in their first year.`,
+    a: `Because the timelines, emails, and interviews Tyler coaches are ones he ran himself, recently: ${founderInternships()}, and an incoming investment banking offer. In college he led finance recruiting education and coached ${spell(PILOT_STUDENTS)} pilot students: ${PILOT_LANDED} of ${PILOT_STUDENTS} landed an internship or offer.`,
     video: "james-mentor",
   },
   {

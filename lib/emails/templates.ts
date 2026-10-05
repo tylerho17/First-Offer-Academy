@@ -1,5 +1,5 @@
 import { signDownload } from "@/lib/downloadToken";
-import { site } from "@/content/site";
+import { PARENT_CALL_URL, site } from "@/content/site";
 import { leadMagnet } from "@/content/leadMagnet";
 import { button, esc, layout, p } from "./layout";
 
@@ -13,7 +13,7 @@ export function applyConfirmation(d: { name: string }) {
 
 Thanks for applying to ${site.name}'s ${site.cohort.name.toLowerCase()} (${site.cohort.start}). Tyler reads every application personally.
 
-Next step: book a short fit call if you haven't already: ${site.calendlyUrl}
+Next step: book a short fit call if you haven't already: ${PARENT_CALL_URL}
 
 No payment has been taken. If you have questions, reply to this email.
 
@@ -25,7 +25,7 @@ ${site.name}`;
       p(hi(d.name)) +
       p(`Thanks for applying to the ${esc(site.cohort.name.toLowerCase())} (${esc(site.cohort.start)}). Tyler reads every application personally.`) +
       p("Next step: book a short fit call if you haven't already.") +
-      button("Book your fit call", site.calendlyUrl) +
+      button("Book your fit call", PARENT_CALL_URL) +
       p("No payment has been taken. Questions? Just reply to this email."),
   });
   return { subject, text, html };

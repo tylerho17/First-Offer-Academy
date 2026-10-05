@@ -7,6 +7,7 @@ import AnalyticsEvents from "@/components/AnalyticsEvents";
 import Reveal from "@/components/Reveal";
 import NewsletterBand from "@/components/NewsletterBand";
 import { Analytics } from "@vercel/analytics/next";
+import { programLength } from "@/content/program";
 import "./globals.css";
 
 // The two brand fonts. Swapping one is a one-line change here: globals.css reads
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
     template: "%s · First Offer Academy",
   },
   description:
-    "Internship coaching for college freshmen and sophomores in Finance, Marketing, and Accounting: Week 0 pre-work, 8 weeks of training, a 4-week Offer Sprint, then weekly check-ins and mocks until an offer.",
+    `Internship coaching for college freshmen and sophomores in Finance, Marketing, and Accounting: ${programLength.meta}`,
   openGraph: {
     type: "website",
     siteName: "First Offer Academy",

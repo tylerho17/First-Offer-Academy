@@ -15,7 +15,7 @@ export const guide: Guide = {
   related: ["tell-me-about-yourself", "behavioral-stories", "freshman-internship-timeline"],
   reviewedByTyler: true,
   body: [
-    p("Every first-year student I talk to says some version of the same thing: \"I don't have anything to put on my resume.\" That's almost never true. What's true is that they don't know how to write about what they've done, so it reads like nothing."),
+    p("Every freshman I talk to says some version of the same thing: \"I don't have anything to put on my resume.\" That's almost never true. What's true is that they don't know how to write about what they've done, so it reads like nothing."),
     p("Here's the good news. Nobody reading a freshman's resume expects a finance internship or a startup exit. What they want is a clean page, specific bullets, and a sense of who you are and what you're curious about. That's achievable for every student, regardless of background, by the end of a single weekend."),
     p("This guide covers the rubric we grade every resume against in the program, how to turn duties into outcomes, what counts as experience when you think you have none, and a full before-and-after example."),
 
@@ -68,7 +68,7 @@ export const guide: Guide = {
     p("Notice what changed. The \"after\" version has a clear header, specific titles, numbers in most bullets, a project that shows interest in the field, and skills that are real and testable. It also cut \"teamwork, communication, leadership\" from the skills line, because those are claims, not skills. Show them in bullets instead."),
 
     h2("Sample resumes"),
-    p("The best way to see what a finished resume looks like is to read a few. Penn Career Services publishes undergraduate samples by field, and they're some of the cleanest examples out there. They're written for juniors and seniors, so expect more experience than a first-year student has. Borrow the format, not the bar: notice where the strongest item sits, how every bullet ends in a result, and how specific the skills are."),
+    p("The best way to see what a finished resume looks like is to read a few. Penn Career Services publishes undergraduate samples by field, and they're some of the cleanest examples out there. They're written for juniors and seniors, so expect more experience than a freshman has. Borrow the format, not the bar: notice where the strongest item sits, how every bullet ends in a result, and how specific the skills are."),
     ...sampleResumeBlocks(),
 
     h2("Section by section"),
