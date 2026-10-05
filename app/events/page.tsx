@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import EventCard from "@/components/EventCard";
 import FinalCta from "@/components/sections/FinalCta";
-import { calendars } from "@/content/events";
-import { upcomingEvents, withUtm, type Audience } from "@/lib/events";
+import { calendars, eventColumns } from "@/content/events";
+import { upcomingEvents, withUtm } from "@/lib/events";
 
 export const revalidate = 3600;
 
@@ -12,10 +12,7 @@ export const metadata: Metadata = {
   description: "Free parent info sessions and weekly student workshops from First Offer Academy, live on Google Meet.",
 };
 
-const columns: { audience: Audience; title: string; note: string }[] = [
-  { audience: "Parents", title: "For parents", note: "How internship recruiting works now, and whether the program fits." },
-  { audience: "Students", title: "For students", note: "Live Tuesdays at 7 PM PT: resumes, outreach, networking, and interview reps." },
-];
+const columns = eventColumns;
 
 export default async function EventsPage() {
   const lists = await Promise.all(columns.map((c) => upcomingEvents(c.audience)));

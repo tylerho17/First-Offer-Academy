@@ -16,6 +16,12 @@ export type EventItem = {
   url: string; // the Luma event page
 };
 
+// The two event series, as described on /events (also reused on /resources).
+export const eventColumns: { audience: Audience; title: string; note: string }[] = [
+  { audience: "Parents", title: "For parents", note: "How internship recruiting works now, and whether the program fits." },
+  { audience: "Students", title: "For students", note: "Live Tuesdays at 7 PM PT: resumes, outreach, networking, and interview reps." },
+];
+
 export const calendars: Record<Audience, { id: string; url: string }> = {
   Parents: { id: "cal-Hrrgm78gZqZ7SD1", url: "https://luma.com/parentFOA" },
   Students: { id: "cal-fpzON4satzremqd", url: "https://luma.com/firstofferacademy" },

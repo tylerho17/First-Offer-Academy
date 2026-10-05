@@ -12,6 +12,7 @@ export const nav: Item[] = [
   { label: "About", href: "/about" },
   { label: "Pricing", href: "/pricing" },
   { label: "Events", href: "/events" },
+  { label: "Free Resources", href: "/resources" },
 ];
 
 export default function Header() {

@@ -35,24 +35,22 @@ export default function Hero() {
 
         <div className="hero-side">
         {lead && <VideoCard video={lead} size="hero" />}
-        {/* The one place the founder photo appears on the homepage. Compact
-            under the lead video. */}
-        <figure className={`card founder-card${lead ? " is-compact" : ""}`}>
+        {/* The one place the founder photo appears on the homepage. Two
+            columns: the photo in its own fixed box, the text beside it
+            (photo on top below 560px). Nothing is absolutely positioned. */}
+        <figure className="card founder-card">
           <div className="founder-card-photo">
-            <Image
-              src="/images/tyler.jpg"
-              alt="Tyler Ho, founder of First Offer Academy"
-              width={800}
-              height={903}
-              sizes="(min-width: 900px) 360px, 90vw"
-              priority
-            />
+            <Image src="/images/tyler.jpg" alt="Tyler Ho, founder of First Offer Academy" width={800} height={903} sizes="160px" priority />
           </div>
           <figcaption>
-            <strong>{founder.name}, {founder.title}</strong>
-            {shownCredentials().map((c) => <span key={c.label}>{c.value} {c.label}</span>)}
-            <Link href="/about" className="link-arrow">Meet Tyler →</Link>
-            <LinkedInLink />
+            <p className="founder-card-name"><strong>{founder.name}</strong>, {founder.title}</p>
+            <ul className="founder-card-creds">
+              {shownCredentials().map((c) => <li key={c.label}>{c.value} {c.label}</li>)}
+            </ul>
+            <p className="founder-card-links">
+              <Link href="/about" className="link-arrow">Meet Tyler →</Link>
+              <LinkedInLink />
+            </p>
           </figcaption>
         </figure>
         </div>

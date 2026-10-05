@@ -58,10 +58,10 @@ export const videoTestimonials: VideoTestimonial[] = [
   { youtubeId: "DBlK5J3KwEU", person: "James", kind: "student", title: "Accountability pods", spot: "program-accountability-pods" },
   { youtubeId: "3KvECu21E78", person: "Nathaniel", kind: "student", title: "Tyler as a coach", spot: "program-coaching" },
   // /parents
-  { youtubeId: "CbqHmX_fDkw", person: "Mangesh", kind: "parent", parentOf: "Ishank", title: "Parents don't know how recruiting works", spot: "parents-hero" },
+  { youtubeId: "CbqHmX_fDkw", person: "Mangesh", kind: "parent", parentOf: "Ishank", title: "Parents don't know how recruiting works", spot: "parents-growth-2" },
   { youtubeId: "-Lx63esArBE", person: "Mangesh", kind: "parent", parentOf: "Ishank", title: "Taking the pressure off me as a parent", spot: "parents-relief" },
   { youtubeId: "0Pykk8D84NM", person: "Greg", kind: "parent", parentOf: "Maddie", title: "Watching my daughter become confident", spot: "parents-growth-1" },
-  { youtubeId: "WA5_7WhPhec", person: "Steve", kind: "parent", parentOf: "James", title: "James's transformation: comfort and laser focus", spot: "parents-growth-2" },
+  { youtubeId: "WA5_7WhPhec", person: "Steve", kind: "parent", parentOf: "James", title: "James's transformation: comfort and laser focus", spot: "parents-hero" },
   { youtubeId: "Il1iH3jpZzI", person: "Greg", kind: "parent", parentOf: "Maddie", title: "Public speaking and confidence", spot: "parents-skills-1" },
   { youtubeId: "hwpEEALK4F4", person: "Mangesh", kind: "parent", parentOf: "Ishank", title: "Building clarity", spot: "parents-skills-2" },
   { youtubeId: "44O-rA-wB44", person: "Greg", kind: "parent", parentOf: "Maddie", title: "Seeing the results", spot: "parents-results-1" },

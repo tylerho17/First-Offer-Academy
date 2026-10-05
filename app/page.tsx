@@ -3,6 +3,7 @@ import Problem from "@/components/sections/Problem";
 import LeavesWith from "@/components/sections/LeavesWith";
 import Testimonials from "@/components/sections/Testimonials";
 import Stats from "@/components/sections/Stats";
+import PlaybookBand from "@/components/sections/PlaybookBand";
 import LogoMarquee from "@/components/sections/LogoMarquee";
 import EventsStrip from "@/components/sections/EventsStrip";
 import PriceBand from "@/components/sections/PriceBand";
@@ -36,6 +37,7 @@ export default function Home() {
       />
       <Hero />
       <Stats video="home-results" />
+      <PlaybookBand />
       <LogoMarquee />
       <HowItWorks />
       <Problem />

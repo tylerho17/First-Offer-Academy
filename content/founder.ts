@@ -18,8 +18,8 @@ export const founder = {
   // Shown as the /about stat tiles and on the homepage founder card. A tile
   // with an empty value doesn't render.
   credentials: [
-    // TODO(Tyler): number of internships. LinkedIn currently lists 7 roles; use a number that matches LinkedIn.
-    { value: "", label: "internships" },
+    // Confirmed by Tyler (v7 brief).
+    { value: "10+", label: "internships" },
     { value: "12", label: "pilot students, 100% landed an internship or offer" },
     { value: "2027", label: "incoming investment banking summer analyst, Barclays" },
   ],

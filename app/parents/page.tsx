@@ -9,6 +9,7 @@ import { testimonials } from "@/content/testimonials";
 import CallLink from "@/components/CallLink";
 import PayButton, { DepositNote } from "@/components/PayButton";
 import FaqList from "@/components/sections/FaqList";
+import ResourceBlock from "@/components/sections/ResourceBlock";
 import EventCard from "@/components/EventCard";
 import VideoCard from "@/components/VideoCard";
 import VideoPair from "@/components/VideoPair";
@@ -179,6 +180,8 @@ export default async function ParentsPage() {
           </div>
         </section>
       ) : null}
+
+      <ResourceBlock audience="parents" />
 
       <section className="section" style={{ paddingTop: 0 }}>
         <div className="wrap">
