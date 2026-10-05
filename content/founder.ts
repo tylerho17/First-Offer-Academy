@@ -38,12 +38,12 @@ export const founder = {
     { org: "Barclays Investment Bank", role: "Incoming 2027 Investment Banking Summer Analyst", dates: "Summer 2027", detail: "Global Technology Group · San Francisco Bay Area", status: "incoming", caption: "IB Summer Analyst · 2027", logo: "/logos/tyler/barclays.svg", logoRatio: 174 / 29 },
     { org: "Deloitte", role: "Summer Analyst", dates: "Jun – Aug 2026", detail: "", status: "past", caption: "Summer Analyst", logo: "/logos/tyler/deloitte.svg", logoRatio: 182 / 34 },
     { org: "Concordia Capital", role: "Tech Investment Banking Summer Analyst", dates: "Summer 2025", detail: "", status: "past", caption: "Tech IB Summer Analyst", logo: "/logos/concordia-capital.png", logoRatio: 907 / 314 },
-    // TODO(Tyler): CB Capital dates, and the official logo file (monogram until then).
-    { org: "CB Capital", role: "Tech Investment Banking Fall Co-op", dates: "", detail: "", status: "past", caption: "Tech IB Co-op", logo: null, monogram: "CB" },
+    // TODO(Tyler): CB Capital dates.
+    { org: "CB Capital", role: "Tech Investment Banking Fall Co-op", dates: "", detail: "", status: "past", caption: "Tech IB Co-op", logo: "/logos/tyler/cb-capital.png", logoRatio: 1 },
     // TODO(Tyler): Futuraiser dates.
     { org: "Futuraiser", role: "Deeptech Venture Capital", dates: "", detail: "", status: "past", caption: "Venture Capital", logo: "/logos/futuraiser.png", logoRatio: 1396 / 222, logoMono: true },
-    // TODO(Tyler): Crosspoint Financial dates, and the official logo file (monogram until then).
-    { org: "Crosspoint Financial", role: "FP&A", dates: "", detail: "", status: "past", caption: "FP&A", logo: null, monogram: "CF" },
+    // TODO(Tyler): Crosspoint Financial dates.
+    { org: "Crosspoint Financial", role: "FP&A", dates: "", detail: "", status: "past", caption: "FP&A", logo: "/logos/tyler/crosspoint-financial.png", logoRatio: 155 / 57 },
   ] as Experience[],
 
   education: { school: "UC Irvine", field: "Finance & Computer Science" },

@@ -6,7 +6,8 @@ import { hasLogo, LOGO_SRC, logoSize } from "@/lib/logo";
 // If the file is missing, only the wordmark shows (never a broken image).
 // tone="cream": the mark is drawn in cream through a CSS mask (for navy
 // grounds), so it needs no tile behind it.
-export default function Logo({ tone = "navy" }: { tone?: "navy" | "cream" }) {
+// oneLine: the wordmark on a single line (the header).
+export default function Logo({ tone = "navy", oneLine = false }: { tone?: "navy" | "cream"; oneLine?: boolean }) {
   const { width, height } = logoSize();
   return (
     <Link href="/" className={`logo${tone === "cream" ? " is-cream" : ""}`} aria-label="First Offer Academy home">
@@ -18,7 +19,7 @@ export default function Logo({ tone = "navy" }: { tone?: "navy" | "cream" }) {
             <Image src={LOGO_SRC} alt="" width={Math.round((36 * width) / height)} height={36} priority />
           </span>
         ))}
-      <span className="logo-word">First Offer<br />Academy</span>
+      <span className="logo-word">{oneLine ? "First Offer Academy" : <>First Offer<br />Academy</>}</span>
     </Link>
   );
 }
