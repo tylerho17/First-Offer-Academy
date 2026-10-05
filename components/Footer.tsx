@@ -29,7 +29,6 @@ const columns: { title: string; links: { label: string; href: string; external?:
       { label: "About", href: "/about" },
       { label: "Results", href: "/results" },
       { label: "For parents", href: "/parents" },
-      { label: "Refer a student", href: "/refer" },
       { label: site.email, href: `mailto:${site.email}`, external: true },
       { label: "Book a parent call", href: site.calendlyUrl, external: true },
     ],

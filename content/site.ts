@@ -1,14 +1,13 @@
-import { founder } from "./founder";
+import { founder, internshipsLine } from "./founder";
 
 // Site-wide settings. Every outbound link on the site comes from here.
 
-const founderLinkedIn = "https://www.linkedin.com/in/tylerho1";
 const deposit = "$1,000";
 const depositRefundDeadline = "December 15, 2026";
 const balance = "$4,000";
 
-// Students coached to internships in their first year of college, before the
-// academy existed. Every page that states the pilot number reads this.
+// Students coached in the pilot, before the academy existed. Every page that
+// states the pilot number reads this.
 export const PILOT_STUDENTS = 12;
 // How many of them landed an internship or an offer (some pilot students were
 // juniors or seniors, and one result is a full-time offer).
@@ -25,7 +24,7 @@ export const site = {
 
   founder: {
     name: "Tyler Ho",
-    linkedin: founderLinkedIn,
+    linkedin: founder.linkedin,
     // TODO(Tyler): exact number of internship offers you received, e.g. "12".
     // Empty = the site says "and offers from many more". Once set, stats and
     // the founder copy say "[N] internship offers".
@@ -71,9 +70,6 @@ export const site = {
   // TODO: real inbox on the domain.
   email: "hello@firstofferacademy.com",
   // Social profile URLs live in content/social.ts.
-  // TODO(Tyler): referral reward, e.g. "$250 off tuition for you and your
-  // friend". Empty = /refer doesn't mention a reward at all.
-  referralReward: "",
   // /zh (Mandarin parent page) stays noindex, out of the nav, and out of the
   // sitemap until a native speaker has reviewed content/zh.ts.
   zhReviewed: false,
@@ -109,10 +105,13 @@ export const depositLine = () =>
     ? `A ${site.cohort.deposit} deposit, fully refundable through ${site.depositRefundDeadline}, holds a seat.`
     : `A ${site.cohort.deposit} deposit holds a seat.`;
 
-// The founder credential from content/founder.ts ("10+ internships"), plus
-// the exact offer count once Tyler sets founder.offerCount.
-export const founderInternships = () =>
-  site.founder.offerCount ? `${founder.internships}, and ${site.founder.offerCount} internship offers` : founder.internships;
+// "N internships" from content/founder.ts, plus the exact offer count once
+// Tyler sets founder.offerCount. Empty until Tyler sets the internship number.
+export const founderInternships = () => {
+  const n = internshipsLine();
+  if (!n) return "";
+  return site.founder.offerCount ? `${n}, and ${site.founder.offerCount} internship offers` : n;
+};
 
 // Small whole numbers spelled out for running prose ("coached eight
 // freshmen"). Falls back to digits past twelve.

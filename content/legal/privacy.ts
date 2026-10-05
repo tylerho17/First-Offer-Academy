@@ -21,7 +21,7 @@ export const privacy: LegalDoc = {
       "Application form: the student's name, email, phone, school, year, major, track interests, GPA range, answers about their search so far, how they heard about us, and (optionally) a parent or guardian's name and email. We use this to evaluate the application and contact you about it.",
       "Contact form: first and last name, email, phone, whether you're a student, parent, or school, your message, and whether you agreed to receive text messages. We use this to reply to you and schedule a call.",
       "Newsletter form: first name, email, and whether you're a student, parent, or educator. We use this to send the newsletter.",
-      "Story and referral forms: the details you choose to submit. Nothing from these forms is published without separate, written permission (see \"Student outcomes and testimonials\" below).",
+      "Story form: the details you choose to submit. Nothing from this form is published without separate, written permission (see \"Student outcomes and testimonials\" below).",
       "Call bookings: when you book a call, Calendly collects your name, email, and the time you choose, and shares them with us. Calendly processes this under its own privacy policy.",
       "Payments: deposits and tuition are processed by Stripe. Stripe collects your card details directly. We never see or store full card numbers; we receive only a confirmation, the amount, and the name and email on the payment.",
       "Analytics: we use Vercel Analytics, which counts page views in aggregate without cookies and without identifying individual visitors.",

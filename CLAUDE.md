@@ -37,7 +37,7 @@ This site sells a $5,000 program to parents. Every claim must be true and checka
 - NEVER invent testimonials, names, quotes, stats, employer names, or logos. Use the data in `content/`; if a field is empty, render nothing (or a clearly marked TODO in dev only).
 - A testimonial renders only if `permission: true`. An employer name/logo renders only if `employerPermission: true`.
 - Banned words: "guarantee" (any form), "elite", "top 1%". No outcome promises: the program promises a fully executed internship search, not an offer. Offer-or-refund (`content/program.ts` → `offerOrRefund`) is the only refund-on-outcome language.
-- Do not name Tyler's employers (Barclays, Deloitte) or the Irvine Investment & Trading Group anywhere on the site.
+- Tyler's own employers and school may be named on /about and the founder card only. Student employers follow the existing results rules.
 - Say "internships", not "paid internships" (some student internships were unpaid).
 - No stock photos of fake students. No AI-generated people presented as real. Use placeholders labeled as such.
 

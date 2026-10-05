@@ -143,7 +143,7 @@ export const faqs: Faq[] = [
     id: "recent-recruit",
     q: "Why learn from someone who just went through recruiting?",
     video: ["faq-coach"],
-    a: `Because the timelines, emails, and interviews Tyler coaches are ones he ran himself, recently: ${founderInternships()}, and an incoming investment banking offer. In college he led finance recruiting education and coached ${spell(PILOT_STUDENTS)} freshmen who all landed internships in their first year.`,
+    a: `Because the timelines, emails, and interviews Tyler coaches are ones he ran himself, recently: ${founderInternships() ? `${founderInternships()}, and ` : ""}an incoming investment banking offer. In college he led finance recruiting education and coached ${spell(PILOT_STUDENTS)} freshmen who all landed internships.`,
   },
 
   // Cost and alternatives. "Is there a payment plan?" was removed: there is
