@@ -21,7 +21,12 @@ export const POST = formRoute({
   schema,
   table: "subscribers",
   upsertOn: "email",
-  toRow: (d) => ({ email: d.email, first_name: d.firstName, role: roleOf(d.role), source: [d.source ?? "newsletter", d.template].filter(Boolean).join(",") }),
+  // signup_source (migration 002) and the older source column get the same
+  // value; whichever the table has is written (see formRoute's retry).
+  toRow: (d) => {
+    const from = [d.source ?? "newsletter", d.template].filter(Boolean).join(",");
+    return { email: d.email, first_name: d.firstName, role: roleOf(d.role), source: from, signup_source: from };
+  },
   // The download still works if the insert fails (logged server-side).
   softFail: true,
   // Runs only after the Supabase insert succeeds. The Resend sync never throws,

@@ -75,10 +75,21 @@ export function formRoute<S extends z.ZodType>(opts: Options<S>) {
     const db = supabaseAdmin();
     if (!db) return NextResponse.json({ error: "Not connected yet." }, { status: 503 });
 
-    const row = opts.toRow(parsed.data);
-    const { error } = opts.upsertOn
-      ? await db.from(opts.table).upsert(row, { onConflict: opts.upsertOn, ignoreDuplicates: true })
-      : await db.from(opts.table).insert(row);
+    // If the live table lacks a column the row sets (e.g. a migration that
+    // adds it hasn't run yet), drop that column and retry instead of failing.
+    const row: Record<string, unknown> = { ...opts.toRow(parsed.data) };
+    const write = () =>
+      opts.upsertOn
+        ? db.from(opts.table).upsert(row, { onConflict: opts.upsertOn, ignoreDuplicates: true })
+        : db.from(opts.table).insert(row);
+    let { error } = await write();
+    for (let i = 0; error && i < 3; i++) {
+      const missing = error.code === "PGRST204" ? /'([^']+)' column/.exec(error.message)?.[1] : undefined;
+      if (!missing || !(missing in row)) break;
+      console.warn(`[${opts.name}] column "${missing}" not in ${opts.table}; saved without it`);
+      delete row[missing];
+      ({ error } = await write());
+    }
     if (error) {
       console.error(`[${opts.name}] insert failed:`, error.message);
       if (!opts.softFail) return NextResponse.json({ error: "Something went wrong." }, { status: 500 });
