@@ -1,4 +1,4 @@
-// The 8-week curriculum, plus Week 0 winter-break pre-work. Generated from
+// The core-teaching curriculum (Weeks 1–8), plus Week 0 winter-break pre-work. Generated from
 // docs/CURRICULUM-SOURCE.md. Every number here must match the Standard in
 // content/program.ts.
 //

@@ -43,7 +43,7 @@ Real students in everyday clothes, daylight, campus. AI images only as labeled p
 
 ## Voice
 Specific numbers stated calmly (12 seats, 12 of 12 pilot students landed internships). No "elite," no firm logos without student permission, no ITG name/logo, written permission for every testimonial.
-No 'guaranteed' outcomes. Offer-or-refund is the only refund/guarantee language.
+No promised outcomes. Offer-or-refund is the only refund-on-outcome language.
 
 ## Homepage order
 Hero → how it works (Week 0 → Build → Offer Sprint → check-ins) as cream cards → … → navy price band → offer-or-refund cream panel → …

@@ -27,9 +27,8 @@ We do not promise internship offers or any specific outcome, employer, role, pay
 - If you miss your minimums two weeks in a row, join a call with your coach and a parent/guardian to reset the plan.
 
 ## 4. Tuition and payment
-- Tuition: $5,000, or 3 payments of $1,700.
+- Tuition: $5,000. Pay in full, or pay the deposit and then the $4,000 balance before Week 1.
 - Deposit: $1,000, credited toward tuition. Fully refundable until December 15, 2026; after that it applies to tuition.
-- Payment schedule (if on the plan): ______________________ / ______________________ / ______________________
 - Withdrawal and refunds after the program starts: withdraw before Week 3 for a prorated refund of unused weeks. No refunds after Week 3. If we cancel the cohort, every payment is refunded in full.
 - Full terms: Refund & Payment Policy (firstofferacademy.com/refunds).
 

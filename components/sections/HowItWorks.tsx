@@ -5,7 +5,7 @@ const steps = [
   { when: "Week 0", title: "Get ahead.", body: "Pre-work over winter break, starting the day you enroll." },
   { when: "Weeks 1–8", title: "Build.", body: "Your Candidate Brand, Outreach System, Story Bank, Track Technicals, Interview Reps, and Accountability Pod." },
   { when: offerSprint.weeks, title: `${offerSprint.name}.`, body: offerSprint.summary },
-  { when: "Until your offer", title: "Keep going.", body: `A weekly 30-minute check-in and mock interview until you receive an internship offer or ${afterProgram.until}.` },
+  { when: "Until your offer", title: "Keep going.", body: `A 20-minute weekly check-in and a mock interview every other week until you receive an internship offer or ${afterProgram.until}, while you keep up ${afterProgram.maintenance}.` },
 ];
 
 export default function HowItWorks() {

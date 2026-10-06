@@ -1,4 +1,4 @@
-import { founderInternships, PILOT_STUDENTS, site, spell } from "./site";
+import { founderInternships, PILOT_LANDED, PILOT_STUDENTS, site, spell } from "./site";
 import { afterProgram, formatNote, offerOrRefund, oneOnOneFormat, sessionFormat } from "./program";
 import { rhythmNotes, weeklyRhythm } from "./curriculum";
 import { programOverview } from "./programOverview";
@@ -26,7 +26,7 @@ export const faqs: Faq[] = [
     parent: true,
     id: "offer-or-refund",
     q: "What if my student doesn't land an offer?",
-    a: `Weekly check-ins and mocks continue through ${afterProgram.until}. If they've met every weekly minimum and still have no offer, you get a full $5,000 refund. Terms: ${offerOrRefund.terms}`,
+    a: `Check-ins and mocks continue through ${afterProgram.until}. If they've met every weekly minimum and still have no offer, you get a full $5,000 refund. Terms: ${offerOrRefund.terms}`,
   },
   {
     group: "Results and refunds",
@@ -99,9 +99,10 @@ export const faqs: Faq[] = [
         }`,
     list: [
       offerOrRefund.minimums.training,
+      offerOrRefund.minimums.sprint,
       offerOrRefund.minimums.after,
       offerOrRefund.minimums.makeup,
-      // "Hit the weekly minimums" is covered by the three lines above.
+      // "Hit the weekly minimums" is covered by the four lines above.
       ...promise.weAsk.items.slice(1).map((i) => `${i.title}: ${i.body}`),
     ],
   },
@@ -143,7 +144,7 @@ export const faqs: Faq[] = [
     id: "recent-recruit",
     q: "Why learn from someone who just went through recruiting?",
     video: ["faq-coach"],
-    a: `Because the timelines, emails, and interviews Tyler coaches are ones he ran himself, recently: ${founderInternships() ? `${founderInternships()}, and ` : ""}an incoming investment banking offer. In college he led finance recruiting education and coached ${spell(PILOT_STUDENTS)} freshmen who all landed internships.`,
+    a: `Because the timelines, emails, and interviews Tyler coaches are ones he ran himself, recently: ${founderInternships() ? `${founderInternships()}, and ` : ""}an incoming investment banking offer. In college he led finance recruiting education and coached ${spell(PILOT_STUDENTS)} pilot students: ${PILOT_LANDED} of ${PILOT_STUDENTS} landed an internship or offer.`,
   },
 
   // Cost and alternatives. "Is there a payment plan?" was removed: there is

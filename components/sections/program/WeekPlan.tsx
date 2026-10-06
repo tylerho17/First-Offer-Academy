@@ -14,8 +14,8 @@ export default function WeekPlan() {
         <div className="section-head">
           <h2>The plan, week by week</h2>
           <p className="lede">
-            Winter break pre-work, 8 weeks of training in four two-week phases, then the Offer Sprint and weekly check-ins
-            until an offer. {runningThroughout.name} runs through training: {runningThroughout.summary[0].toLowerCase() + runningThroughout.summary.slice(1)}
+            Winter break pre-work, then a 12-week program: core teaching in Weeks 1–8 in four two-week phases, then the
+            Offer Sprint in Weeks 9–12, and weekly check-ins until an offer. {runningThroughout.name} runs through training: {runningThroughout.summary[0].toLowerCase() + runningThroughout.summary.slice(1)}
           </p>
         </div>
         <ol className="week-rows timeline">
@@ -89,7 +89,7 @@ export default function WeekPlan() {
                 <span className="week-row-n">After Week 12</span>
                 <span className="week-row-main">
                   <span className="week-row-title">Until your offer</span>
-                  <span className="week-row-sum">A weekly 30-minute check-in and mock interview.</span>
+                  <span className="week-row-sum">A 20-minute weekly check-in and a mock interview every other week.</span>
                 </span>
               </summary>
               <div className="week-row-body">

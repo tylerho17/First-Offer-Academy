@@ -16,6 +16,7 @@ register("./lib/ts-resolve.mjs", import.meta.url);
 const { root, esc, baseCss, renderBlocks, countPages, destPages, C, logoTag } = await import("./lib/pdf.mjs");
 const { playbook: pb, chapters } = await import(path.join(root, "content/playbook.ts"));
 const { site } = await import(path.join(root, "content/site.ts"));
+const { programLength } = await import(path.join(root, "content/program.ts"));
 
 const footer = `${pb.title} · ${site.domain}/playbook-pdf${pb.reviewedByTyler ? "" : " · Draft"}`;
 
@@ -98,7 +99,7 @@ function closingCta() {
   const c = site.cohort;
   return `<div class="cta">
     <h3>Want to run this with a coach every week?</h3>
-    <p>${esc(site.name)} coaches college freshmen and sophomores until their first offer: Week 0 pre-work, 8 weeks of training, a 4-week Offer Sprint, then weekly check-ins and mocks. ${esc(c.name)} starts ${esc(c.start)}: ${c.seats} seats, ${esc(c.price)}, everything included.</p>
+    <p>${esc(site.name)} coaches college freshmen and sophomores until their first offer: ${esc(programLength.meta)} ${esc(c.name)} starts ${esc(c.start)}: ${c.seats} seats, ${esc(c.price)}, everything included.</p>
     <a class="btn" href="https://${site.domain}/apply">Apply at ${site.domain}/apply</a>
     <a class="btn alt" href="https://${site.domain}/parents">For parents: ${site.domain}/parents</a>
   </div>`;

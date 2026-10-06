@@ -15,7 +15,7 @@ export const guide: Guide = {
   reviewedByTyler: true,
   body: [
     p("The most common thing I hear from sophomores is some version of: \"I didn't know it started this early.\" For finance and accounting especially, and for a growing share of tech and marketing roles, the students who land internships in sophomore and junior summer started building toward them in freshman year. Not by applying to everything they could find, but by doing a few boring things consistently, every week, for a long time."),
-    p("This guide is the timeline I give every first-year student. It covers what to do each quarter of freshman year, what changes in sophomore year, and how the calendar differs across Finance, Marketing, Accounting, and Tech. At the end there's a checklist you can print."),
+    p("This guide is the timeline I give every freshman. It covers what to do each quarter of freshman year, what changes in sophomore year, and how the calendar differs across Finance, Marketing, Accounting, and Tech. At the end there's a checklist you can print."),
     note("Dates move", "Recruiting timelines move earlier almost every year, and they differ from firm to firm. Treat everything here as a planning map. For any firm you care about, check its careers page for the real dates and put them on your calendar the day you find them."),
 
     h2("Why freshman year matters more than people think"),
@@ -45,7 +45,7 @@ export const guide: Guide = {
     h2("Freshman winter: start talking to people"),
     p("Winter is when the real work starts. Networking is ranked first for a reason: most early opportunities start with someone who replied to an email and remembered the call, not with an application portal."),
     h3("Build a target list of 50, with names"),
-    p("Build a list of 50 companies in your field, each with a named person you're going to email. Tier them. A is dream firms, where you're building relationships for later. B is realistic: boutiques, middle-market firms, local firms, and startups, where most first-year opportunities actually come from. C is safe: places very likely to take a first-year student. Roughly 10 A, 30 B, and 10 C works for most students."),
+    p("Build a list of 50 companies in your field, each with a named person you're going to email. Tier them. A is dream firms, where you're building relationships for later. B is realistic: boutiques, middle-market firms, local firms, and startups, where most freshman opportunities actually come from. C is safe: places very likely to take a freshman. Roughly 10 A, 30 B, and 10 C works for most students."),
     h3("Set up your outreach system"),
     p("Sending 50 personalized emails a week sounds impossible until you have a system. Use AI to research people and draft first lines, a mail-merge or sequencing tool to send and follow up, and your own eyes to read every single email before it goes. The AI outreach guide walks through the setup."),
     h3("Hit a weekly number"),
@@ -53,7 +53,7 @@ export const guide: Guide = {
     h3("Turn replies into calls"),
     p("Every reply is a chance at a 20-minute call. Open with \"anything exciting going on lately?\", listen 80% of the time, and send a thank-you note within two hours that mentions one specific thing they said. Log every call in your tracker."),
     h3("Apply to early programs"),
-    p("Winter is also when many freshman and sophomore programs take applications: early-insight days, diversity programs, and local internships. They're structured for first-years, so they're worth the application even if you're not sure about the field yet."),
+    p("Winter is also when many freshman and sophomore programs take applications: early-insight days, diversity programs, and local internships. They're structured for freshmen, so they're worth the application even if you're not sure about the field yet."),
     check("Freshman winter checklist",
       "Target list of 50 companies with named contacts",
       "Outreach system live (sequence + follow-ups)",
@@ -110,7 +110,7 @@ export const guide: Guide = {
     h2("Common mistakes"),
     ul(
       "Waiting until the resume is perfect before emailing anyone. Good enough and sent beats perfect and saved.",
-      "Only targeting famous firms. Your B tier is where most first-year opportunities come from.",
+      "Only targeting famous firms. Your B tier is where most freshman opportunities come from.",
       "Treating calls like interviews. The biggest failure mode on a call is being dry.",
       "Asking for a referral on the first call. Use the close instead.",
       "Tracking everyone you email. Only track people who reply; everyone else lives in the sequence.",

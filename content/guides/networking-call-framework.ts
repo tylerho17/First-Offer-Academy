@@ -48,7 +48,7 @@ export const guide: Guide = {
     h2("The middle: their story, and listening"),
     p("Most of the call is them talking. Your job is to be genuinely curious and to follow the conversation where it goes. Talk about 20% of the time."),
     h3("Questions that prove you were listening"),
-    p("The best question on any call is a follow-up to something they just said. \"You mentioned the first year was mostly learning to organize information. What did that look like day to day?\" A follow-up proves you're listening, and people love talking to someone who listens. Prepared questions are your backup when the conversation stalls."),
+    p("The best question on any call is a follow-up to something they just said. \"You mentioned the first few months were mostly learning to organize information. What did that look like day to day?\" A follow-up proves you're listening, and people love talking to someone who listens. Prepared questions are your backup when the conversation stalls."),
     h3("The question bank"),
     p("Pick three or four before each call, based on what you learned in prep. You won't get to all of them, and that's fine."),
     ...tb.questionBank(),
@@ -78,7 +78,7 @@ export const guide: Guide = {
     table("A call, annotated (made-up)", ["Moment", "What was said", "Why it works"], [
       ["Open", "\"Anything exciting going on lately?\" / \"Honestly, just got back from a trip. You?\" / \"I just finished my first cooking class series. I burned everything for three weeks and finally made a decent dumpling.\"", "Casual, a little funny, and long enough to set the tone."],
       ["Intro", "\"I did the books for my family's restaurant growing up, and that got me curious about how businesses make money. I reached out because you went from our school into advisory.\"", "Short, specific, and tells them exactly how to help."],
-      ["Their story", "\"…and my first year was mostly learning to organize information.\" / \"What did that look like day to day?\"", "A follow-up on their words, not a scripted question."],
+      ["Their story", "\"…and my first few months were mostly learning to organize information.\" / \"What did that look like day to day?\"", "A follow-up on their words, not a scripted question."],
       ["Listening", "The student mostly listens, takes two notes, and asks one more follow-up.", "80/20."],
       ["Close", "\"This has been really helpful. Is there anyone on the team you'd be comfortable introducing me to?\"", "Easy to say yes to, and asked at the right moment."],
     ]),

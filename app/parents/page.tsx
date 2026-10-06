@@ -52,7 +52,7 @@ export default async function ParentsPage() {
           <ul className="parent-see">
             <li><Check />A one-page progress report every two weeks</li>
             <li><Check />The Week 8 family meeting, where your student presents their results</li>
-            <li><Check />Weekly check-ins and mocks after Week 12, until an offer or {afterProgram.until}</li>
+            <li><Check />After Week 12: a 20-minute weekly check-in and a mock every other week, until an offer or {afterProgram.until}</li>
           </ul>
           <div className="cta-block">
             <PrimaryCTA location="parents" />

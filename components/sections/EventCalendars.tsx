@@ -4,7 +4,7 @@ import { Calendar } from "../Icons";
 
 // The two Luma calendars, shown only when no dated session is upcoming.
 const copy = [
-  { who: "Parents" as const, cta: "See parent events", body: "Info sessions on how internship recruiting works now, and what a first-year search looks like." },
+  { who: "Parents" as const, cta: "See parent events", body: "Info sessions on how internship recruiting works now, and what a freshman search looks like." },
   { who: "Students" as const, cta: "See student events", body: "Free workshops: resumes, cold email, networking calls, and interview reps. Live Tuesdays, 7 PM PT." },
 ];
 

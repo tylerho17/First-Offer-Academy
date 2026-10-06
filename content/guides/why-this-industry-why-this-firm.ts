@@ -40,7 +40,7 @@ export const guide: Guide = {
       ["One person you've talked to there", "Your tracker", "\"When I spoke with Alex, they described…\""],
       ["A link to your bucket 1", "Your stories", "\"…which fits how I like to work, because…\""],
     ]),
-    example("A firm answer (made-up)", "\"Two reasons. First, your team works mostly with family-owned businesses, and I grew up doing the books for my parents' restaurant, so that's the kind of client I understand and want to learn to serve. Second, when I talked to Alex on your team, the thing they emphasized was how much the senior people teach first-years, and that's exactly the environment I want for my first internship.\""),
+    example("A firm answer (made-up)", "\"Two reasons. First, your team works mostly with family-owned businesses, and I grew up doing the books for my parents' restaurant, so that's the kind of client I understand and want to learn to serve. Second, when I talked to Alex on your team, the thing they emphasized was how much the senior people teach new analysts, and that's exactly the environment I want for my first internship.\""),
     p("If you can't fill in \"one person you've talked to there,\" you're not ready to interview at that firm yet. Go back to your target list and send the email."),
 
     h2("Versions by field"),
@@ -71,7 +71,7 @@ export const guide: Guide = {
     ),
 
     h2("What if you're not sure yet?"),
-    p("Plenty of first-year students aren't certain which field they want, and that's fine. You don't need lifelong certainty to give a good answer. You need honest, specific reasons for this stage of your life. \"I'm exploring finance and accounting, and here's what I've learned about each from my calls\" is a real answer in a networking conversation."),
+    p("Plenty of freshmen aren't certain which field they want, and that's fine. You don't need lifelong certainty to give a good answer. You need honest, specific reasons for this stage of your life. \"I'm exploring finance and accounting, and here's what I've learned about each from my calls\" is a real answer in a networking conversation."),
     p("In an interview for a specific role, though, commit. Choose the reasons that are true for this field and lead with them. If the honest answer is that you're still deciding, the 3 buckets will help you decide: the field where you can fill all three with real, specific material is usually the one that fits."),
     table("Signs a field fits you", ["Signal", "What it looks like"], [
       ["Calls energize you", "You leave conversations with people in this field wanting to learn more"],

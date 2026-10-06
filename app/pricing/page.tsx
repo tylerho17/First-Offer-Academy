@@ -32,7 +32,7 @@ export default function PricingPage() {
         <div className="wrap">
           <span className="proof-chip">{c.seats} seats · {c.name} · {c.start}</span>
           <h1>Clear pricing. <em>No surprises.</em></h1>
-          <p className="lede">One program, one price, everything included: training, the Offer Sprint, and weekly check-ins and mocks until your student lands an offer.</p>
+          <p className="lede">One program, one price, everything included: the 12-week program, then weekly check-ins and mocks every other week until your student lands an offer.</p>
           <div className="tab-row">
             <a href="#plan" className="tab is-active">The price</a>
             <a href="#payment" className="tab">Payment options</a>

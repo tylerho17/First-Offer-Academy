@@ -35,7 +35,7 @@ export const recruitingCalendar = {
     { track: "Finance (banking, investing)", freshman: "Resume, target list, first calls. Apply to early-insight and diversity programs.", sophomore: "Heavy networking in fall and winter. Many junior-summer processes open during sophomore year. Sophomore internships at boutiques and local firms.", junior: "Junior-summer internship (the one that most often leads to a full-time offer). Remaining processes run early in the year." },
     { track: "Marketing", freshman: "Portfolio pieces, a campus or local role, calls with marketers at brands and agencies.", sophomore: "Internships at agencies, startups, and brands. Many postings go up in winter and spring.", junior: "Brand and agency internships. Rolling timelines: apply as roles post, and keep a warm list ready." },
     { track: "Accounting", freshman: "Resume, target list, firm recruiting events and office visits. Apply to early-identification and leadership programs where they exist.", sophomore: "Many early-identification programs run in sophomore year and feed junior-summer internships. Plan coursework toward the CPA's 150-credit-hour requirement.", junior: "Junior-summer internship in audit, tax, or advisory: the main path to a full-time offer." },
-    { track: "Tech (software, data, product)", freshman: "One real project, coding practice, first-year programs where they exist.", sophomore: "Many roles post in late summer and fall for the next summer. Referrals matter a lot.", junior: "Junior-summer internships, mostly recruited in the fall. Online assessments plus technical interviews." },
+    { track: "Tech (software, data, product)", freshman: "One real project, coding practice, freshman programs where they exist.", sophomore: "Many roles post in late summer and fall for the next summer. Referrals matter a lot.", junior: "Junior-summer internships, mostly recruited in the fall. Online assessments plus technical interviews." },
   ],
   byQuarter: [
     { when: "Freshman fall", do: ["Resume v1 (high school counts)", "Answer the 25 self-questions", "Pick one or two directions", "Record your 60-second intro"] },
@@ -159,7 +159,7 @@ export const introStructure = [
 export const targetTiers = [
   { tier: "A", name: "Dream firms", share: "About 10", purpose: "For relationships, not for this season's offer. You're playing the long game here: calls, updates, and staying warm into sophomore and junior year." },
   { tier: "B", name: "Realistic", share: "About 30", purpose: "Boutiques, middle-market firms, local firms, and startups. This is where most first- and second-year internships actually come from." },
-  { tier: "C", name: "Safe", share: "About 10", purpose: "Places very likely to take a first-year student: local businesses, campus roles, small startups, family-network companies. Reps and a line on the resume." },
+  { tier: "C", name: "Safe", share: "About 10", purpose: "Places very likely to take a freshman: local businesses, campus roles, small startups, family-network companies. Reps and a line on the resume." },
 ];
 
 export const sourcingSteps = [
@@ -206,7 +206,7 @@ export const emailTemplates = [
   {
     name: "2. Shared background",
     use: "Same hometown, same high school, same first job, same first-gen path.",
-    text: "Subject: From [hometown] to [role]: a question\n\nHi [First name],\n\nI noticed you're also from [hometown] (I went to [high school]). Seeing someone from home working in [field] at [firm] made me want to reach out.\n\nI'm a first-year at [school] exploring [field]. Would you have 20 minutes for a quick call sometime soon? I'd love to hear how you got started.\n\nBest,\n[Your name]\n[LinkedIn URL]",
+    text: "Subject: From [hometown] to [role]: a question\n\nHi [First name],\n\nI noticed you're also from [hometown] (I went to [high school]). Seeing someone from home working in [field] at [firm] made me want to reach out.\n\nI'm a freshman at [school] exploring [field]. Would you have 20 minutes for a quick call sometime soon? I'd love to hear how you got started.\n\nBest,\n[Your name]\n[LinkedIn URL]",
   },
   {
     name: "3. Something they made",
@@ -303,7 +303,7 @@ export const callQuestionBank = {
     "How did you end up in [field]? Was it the plan?",
     "What did you do in college that actually mattered for getting here?",
     "If you were a freshman again, what would you do differently?",
-    "What surprised you most in your first year on the job?",
+    "What surprised you most in your first few months on the job?",
   ],
   work: [
     "What does a normal week look like for you?",
@@ -429,7 +429,7 @@ export const whyWorksheet = [
 
 export const whyExample = {
   label: "EXAMPLE ONLY. A made-up answer showing the 3 buckets.",
-  text: "\"I've always liked work where you're measured against a clear number: I ran the register at a coffee shop and tracked our end-of-night counts to zero errors (mentality). From my calls this fall, what pulls me in is building a model from scratch and then having to defend every assumption to someone senior, and seeing a deal from the first pitch to close (the work). And every analyst I talked to at your firm described feedback the same way: direct, fast, and meant to make you better. That's the environment I want my first year in (the people).\"",
+  text: "\"I've always liked work where you're measured against a clear number: I ran the register at a coffee shop and tracked our end-of-night counts to zero errors (mentality). From my calls this fall, what pulls me in is building a model from scratch and then having to defend every assumption to someone senior, and seeing a deal from the first pitch to close (the work). And every analyst I talked to at your firm described feedback the same way: direct, fast, and meant to make you better. That's the environment I want to start my career in (the people).\"",
 };
 
 // ---------------------------------------------------------------- technicals
@@ -609,7 +609,7 @@ export const executionCalendar = [
 export const weeklyMinimumLine = "From Week 2: 50 new sequenced emails, every follow-up due that week, and the tracker updated by Sunday night. 7 weeks × 50 = 350+.";
 
 export const gamePlan = {
-  intro: "The search doesn't end when the 8 weeks do. Fill this in before your last session and review it on the first of every month.",
+  intro: "The search doesn't end when the program does. Fill this in before your last session and review it on the first of every month.",
   months: ["Month 1", "Month 2", "Month 3", "Month 4", "Month 5", "Month 6"],
   fields: [
     "Outreach target (new emails this month)",

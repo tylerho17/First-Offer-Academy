@@ -2,15 +2,23 @@ import { modules } from "./programOverview";
 
 // Program facts. Source of truth: docs/CURRICULUM-SOURCE.md.
 
-// The offer, locked Sept 30, 2026: Week 0 pre-work, Weeks 1–8 training,
-// Weeks 9–12 Offer Sprint, then weekly check-ins and mocks until an offer.
+// The offer: Week 0 pre-work, then a 12-week program (Weeks 1–8 core
+// teaching, Weeks 9–12 Offer Sprint of mocks and networking), then weekly
+// check-ins and mocks every other week until an offer.
 
-// After Week 12: a weekly check-in and mock until an offer or the end date.
-// Used on /parents, /pricing, the FAQ, and the offer-or-refund terms.
+// The program length for page metadata (title-bar descriptions, JSON-LD).
+export const programLength = {
+  meta: "Week 0 pre-work, a 12-week program (Weeks 1–8 core teaching, Weeks 9–12 mocks and networking), then weekly check-ins and mocks every other week until an offer.",
+};
+
+// After Week 12: support until an offer or the end date, while the student
+// keeps up the maintenance minimum. Used on the homepage, /program, /parents,
+// /pricing, the FAQ, and the offer-or-refund terms.
 export const afterProgram = {
   until: "May 31, 2027",
-  short: "After Week 12: a weekly 30-minute check-in and mock interview until an offer or May 31, 2027.",
-  full: "After Week 12, every student gets a weekly 30-minute check-in and a weekly mock interview until they receive an internship offer or May 31, 2027, whichever comes first.",
+  maintenance: "100 outreach emails and 6–8 networking calls a week",
+  short: "After Week 12: a 20-minute weekly check-in and a mock interview every other week, until an internship offer or May 31, 2027.",
+  full: "After Week 12, until your student receives an internship offer (paid or unpaid) or May 31, 2027, whichever comes first: a 20-minute weekly check-in and a mock interview every other week. To keep this support, the student keeps up the maintenance minimum of 100 outreach emails and 6–8 networking calls a week.",
 };
 
 // Weeks 9–12.
@@ -29,7 +37,10 @@ export const offerOrRefund = {
     "Any internship offer, paid or unpaid, counts, including one that's declined. Minimums must be met and logged every week (one makeup week allowed). Dropping, pausing, or missing minimums past the makeup week ends eligibility. Refund requests are due by June 15, 2027 and paid within 30 days.",
   minimums: {
     training: "Weeks 1–8: 50 outreach emails, follow-ups on schedule, 3 networking calls, every session and 1:1 attended, assignments in by Sunday 11:59 pm, scheduled mocks completed.",
-    after: "Weeks 9–12 and after: 25 outreach emails, follow-ups on schedule, 2 networking calls, weekly mock completed, applications logged.",
+    sprint: "Weeks 9–12: 25 outreach emails, follow-ups on schedule, 2 networking calls, weekly mock completed, applications logged.",
+    // TODO(Tyler): confirm the post-Week-12 maintenance minimum also governs
+    // offer-or-refund eligibility (it replaced the old "Weeks 9–12 and after" line).
+    after: "After Week 12: 100 outreach emails, follow-ups on schedule, 6–8 networking calls, a mock interview every other week, applications logged.",
     makeup: "One makeup week allowed.",
   },
 };
@@ -58,9 +69,9 @@ export const leavesWith = {
 // What tuition buys, in plain terms. Shown on /pricing under the price.
 export const pricingIncludes = [
   "Week 0 pre-work over winter break, starting the day you enroll",
-  "8-week training: a 90-minute group session and a 60-minute 1:1 every week, and a pod of three",
-  "4-week Offer Sprint: technical and behavioral mocks, networking call prep and debriefs",
-  "A weekly 30-minute check-in and mock interview until your offer or May 31, 2027",
+  "Weeks 1–8, core teaching: a 90-minute group session and a 60-minute 1:1 every week, and a pod of three",
+  "Weeks 9–12, the Offer Sprint: technical and behavioral mock interviews, networking call prep and debriefs",
+  "After Week 12: a 20-minute weekly check-in and a mock interview every other week until your offer or May 31, 2027, while your student keeps up 100 outreach emails and 6–8 networking calls a week",
   "Progress report for parents every two weeks, and the Week 8 family meeting",
   "Coached Extern externship applications, Extern fee covered",
   "Offer-or-refund: hit every weekly minimum and get no offer by May 31, 2027, and we refund the full $5,000",

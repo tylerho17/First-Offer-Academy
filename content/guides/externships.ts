@@ -15,7 +15,7 @@ export const guide: Guide = {
   reviewedByTyler: true,
   body: [
     p("The hardest part of the first internship search is the loop everyone complains about: you need experience to get an internship, and you need an internship to get experience. Most students respond by waiting, hoping someone will take a chance on them. The better response is to go create the experience yourself."),
-    p("An externship is one of the fastest ways to do that. It's short, it's structured, it ends with a real deliverable, and it gives you something concrete to put on your resume and talk about in every interview. In our program, every student applies to real externship programs with coaching on the application, the video, and the interview, and we cover the fee, because the difference one makes on a thin first-year resume is hard to overstate."),
+    p("An externship is one of the fastest ways to do that. It's short, it's structured, it ends with a real deliverable, and it gives you something concrete to put on your resume and talk about in every interview. In our program, every student applies to real externship programs with coaching on the application, the video, and the interview, and we cover the fee, because the difference one makes on a thin freshman resume is hard to overstate."),
     p("This guide covers what an externship is, what counts and what doesn't, how to find one or create your own, how to do it well, and how to write it up."),
 
     h2("What an externship is"),
@@ -24,7 +24,7 @@ export const guide: Guide = {
     table("Externship vs. internship", ["", "Externship", "Internship"], [
       ["Length", "Days to a few weeks", "Usually a summer or a semester"],
       ["Structure", "One defined project with a deliverable", "Ongoing work on a team"],
-      ["Access", "Often open to first-years; can be self-created", "More competitive; formal applications"],
+      ["Access", "Often open to freshmen; can be self-created", "More competitive; formal applications"],
       ["What you get", "A real project to talk about and a resume line", "Deeper experience, relationships, sometimes a return offer"],
     ]),
     tyler("An externship won't replace an internship. It's what gets you the internship: a real project you can walk through when an interviewer asks what you've done."),

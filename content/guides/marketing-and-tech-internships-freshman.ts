@@ -20,7 +20,7 @@ export const guide: Guide = {
     h2("What's different about marketing and tech"),
     table("Marketing vs. tech at a glance", ["", "Marketing", "Tech (software, data, product)"], [
       ["What gets you noticed", "Portfolio pieces, a campaign you ran, numbers you moved", "One strong project, coding practice, a referral"],
-      ["Where first-year roles come from", "Agencies, startups, local businesses, brand teams, campus offices", "Startups, research labs, mid-size companies, first-year programs"],
+      ["Where freshman roles come from", "Agencies, startups, local businesses, brand teams, campus offices", "Startups, research labs, mid-size companies, freshman programs"],
       ["Timelines", "Rolling; many postings in winter and spring", "Many roles post in late summer and fall for the next summer"],
       ["Interviews", "Behaviorals, a portfolio walkthrough, marketing questions", "Behaviorals, a project walkthrough, coding/SQL/product questions"],
       ["What matters most", "Showing how you think about customers", "Showing how you think while you build"],
@@ -67,7 +67,7 @@ export const guide: Guide = {
       "Mid-size software companies and local tech firms.",
       "Campus research labs that need programming help.",
       "Small businesses and nonprofits that need a site, a tool, or data work.",
-      "First-year programs at larger tech companies (check each one's dates).",
+      "Freshman programs at larger tech companies (check each one's dates).",
     ),
 
     h2("Interviews in marketing and tech"),

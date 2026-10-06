@@ -28,7 +28,7 @@ export const guide: Guide = {
     table("Compliments, generic vs. specific (made-up examples)", ["Generic (skip)", "Specific (use)"], [
       ["I admire your impressive career.", "Your move from audit into deal advisory after two years is the exact path I'm trying to understand."],
       ["Your firm does amazing work.", "I read about your team's work with family-owned businesses near campus."],
-      ["You seem like a great leader.", "Your talk at the campus finance night, especially the part about your first year, stuck with me."],
+      ["You seem like a great leader.", "Your talk at the campus finance night, especially the part about your first job, stuck with me."],
     ]),
     h3("Where to find a connection"),
     ul(
