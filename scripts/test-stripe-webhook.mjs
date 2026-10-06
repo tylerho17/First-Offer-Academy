@@ -4,7 +4,7 @@
 //   1. Build and start the site pointed at the stand-in (port 4547):
 //        SUPABASE_URL=http://localhost:4547 SUPABASE_SERVICE_ROLE_KEY=test \
 //        RESEND_API_KEY=re_test RESEND_BASE_URL=http://localhost:4547 EMAIL_FROM="FOA <test@example.com>" \
-//        STRIPE_WEBHOOK_SECRET=whsec_test DEPOSIT_PAYMENT_LINK_IDS=plink_deposit_test \
+//        STRIPE_WEBHOOK_SECRET=whsec_test DEPOSIT_PAYMENT_LINK_IDS=plink_deposit_test FULL_PAYMENT_LINK_IDS=plink_full_test \
 //        npm run build && npx next start -p 3125
 //   2. In another terminal (same env not needed):  BASE=http://localhost:3125 npm run test:webhook
 //
@@ -23,6 +23,7 @@ const rows = [];
 const emails = [];
 let failEmails = false;
 let failInsert = false;
+let noPaymentTypeColumn = false; // simulates migration 004 not run yet
 const match = (row, q) =>
   [...q.entries()].every(([k, v]) => {
     if (["select", "on_conflict"].includes(k)) return true;
@@ -39,6 +40,9 @@ const server = http.createServer((req, res) => {
     if (u.pathname === "/rest/v1/deposits" && req.method === "POST") {
       if (failInsert) return json(500, { message: "simulated outage" });
       const row = JSON.parse(body);
+      if (noPaymentTypeColumn && (Array.isArray(row) ? row : [row]).some((r) => "payment_type" in r)) {
+        return json(400, { code: "PGRST204", message: "Could not find the 'payment_type' column of 'deposits' in the schema cache" });
+      }
       for (const r of Array.isArray(row) ? row : [row]) {
         if (!rows.some((x) => x.stripe_session_id === r.stripe_session_id)) rows.push({ confirmation_sent_at: null, owner_notified_at: null, id: `row_${rows.length + 1}`, ...r });
       }
@@ -162,6 +166,52 @@ await check("(f) database outage: 500, no emails", async () => {
   failInsert = false;
   assert.equal(r.status, 500);
   assert.equal(emails.length, before);
+});
+
+// (g) a full payment ($5,000 link): row with payment_type 'full', both emails
+await check("(g) full payment: row payment_type 'full', confirmed + full-payment emails", async () => {
+  const s = session({ payment_link: "plink_full_test", amount_total: 500000 });
+  const before = emails.length;
+  const r = await post(event(s));
+  assert.equal(r.status, 200);
+  const row = rows.find((x) => x.stripe_session_id === s.id);
+  assert.equal(row.payment_type, "full");
+  const sent = emails.slice(before);
+  assert.equal(sent.length, 2);
+  const parent = sent.find((e) => e.subject.startsWith("You're in"));
+  const owner = sent.find((e) => e !== parent);
+  assert.equal(parent.subject, "You're in: your First Offer Academy seat is confirmed");
+  assert.match(parent.text, /Your seat in the January 2027 founding cohort is confirmed\. The program is paid in full\./);
+  assert.match(parent.text, /Keep this email; it's your confirmation\./);
+  assert.doesNotMatch(parent.text + parent.html, /refundable|held|credited|guarantee/i);
+  assert.match(parent.text, /Questions\? Just reply to this email\./);
+  assert.equal(owner.subject, "New full payment: Pat Parent ($5,000)");
+  // the deposit email still has its own subject and refund line
+  const dep = emails.find((e) => e.subject === "You're in: your First Offer Academy seat is held");
+  assert.match(dep.text, /fully refundable until December 15, 2026/);
+});
+
+// (h) the same full payment again: nothing new
+await check("(h) replayed full payment: no new row, no new email", async () => {
+  const s = rows.find((x) => x.payment_type === "full");
+  const before = emails.length;
+  const r = await post(event(session({ id: s.stripe_session_id, payment_link: "plink_full_test", amount_total: 500000 })));
+  assert.equal(r.status, 200);
+  assert.equal(rows.filter((x) => x.stripe_session_id === s.stripe_session_id).length, 1);
+  assert.equal(emails.length, before);
+});
+
+// (i) migration 004 not run yet: still saved (without payment_type), emails sent
+await check("(i) payment_type column missing: row saved without it, emails sent", async () => {
+  noPaymentTypeColumn = true;
+  const s = session({ payment_link: "plink_full_test", amount_total: 500000 });
+  const before = emails.length;
+  const r = await post(event(s));
+  noPaymentTypeColumn = false;
+  assert.equal(r.status, 200);
+  const row = rows.find((x) => x.stripe_session_id === s.id);
+  assert.ok(row && !("payment_type" in row));
+  assert.equal(emails.length, before + 2);
 });
 
 server.close();

@@ -1,9 +1,10 @@
 import { NextResponse } from "next/server";
 import Stripe from "stripe";
-import { isDeposit, recordDeposit } from "@/lib/deposits";
+import { paymentType, recordDeposit } from "@/lib/deposits";
 
-// Stripe webhook: checkout.session.completed for the $1,000 deposit Payment
-// Links → deposit row + confirmation and owner emails (lib/deposits.ts).
+// Stripe webhook: checkout.session.completed for the $1,000 deposit and $5,000
+// pay-in-full Payment Links → a deposits row + confirmation and owner emails
+// (lib/deposits.ts).
 // The signature is checked against the raw body; anything unverified is a 400.
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -28,8 +29,9 @@ export async function POST(req: Request) {
 
   if (event.type !== "checkout.session.completed") return NextResponse.json({ ignored: event.type });
   const session = event.data.object as Stripe.Checkout.Session;
-  if (!isDeposit(session)) return NextResponse.json({ ignored: "not a deposit payment link" });
+  const type = paymentType(session);
+  if (!type) return NextResponse.json({ ignored: "not a deposit or full-payment link" });
 
-  const outcome = await recordDeposit(session);
+  const outcome = await recordDeposit(session, type);
   return NextResponse.json({ ok: outcome.status === 200, note: outcome.note }, { status: outcome.status });
 }

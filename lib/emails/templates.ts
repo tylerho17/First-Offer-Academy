@@ -74,42 +74,45 @@ ${site.name}`;
 }
 
 
-// Deposit paid (Stripe webhook): the parent's confirmation. Copy is the "You're
-// in." page's, word for word, except step 1 (this email is the confirmation).
-export function depositConfirmation(d: { name?: string | null }) {
-  const subject = "You're in: your First Offer Academy seat is held";
+// Paid (Stripe webhook): the parent's confirmation. Copy is the "You're in."
+// page's, word for word, except step 1 (this email is the confirmation).
+// type "full": the seat is confirmed and paid in full. /terms has no refund
+// wording specific to paying in full, so that version has no refund line.
+export function depositConfirmation(d: { name?: string | null; type?: "deposit" | "full" }) {
+  const full = d.type === "full";
+  const subject = full ? "You're in: your First Offer Academy seat is confirmed" : "You're in: your First Offer Academy seat is held";
+  const lead = full ? `${enrolled.confirmed} ${enrolled.paidInFull}` : enrolled.held;
   const steps = [enrolled.emailStep1, ...enrolled.steps.slice(1)];
   const terms = `${url}${enrolled.terms.href}`;
   const text = `${hi(d.name)}
 
-${enrolled.held}
+${lead}
 
 What happens next:
 ${steps.map((s, i) => `${i + 1}. ${s}`).join("\n")}
-
-${enrolled.refund} ${enrolled.terms.label.replace(" →", "")}: ${terms}
-
+${full ? "" : `\n${enrolled.refund} ${enrolled.terms.label.replace(" →", "")}: ${terms}\n`}
 Questions? Just reply to this email.
 
 ${site.name}`;
   const html = layout({
     logo: true,
-    preheader: enrolled.held,
+    preheader: lead,
     heading: "You're in.",
     body:
       p(hi(d.name)) +
-      p(esc(enrolled.held)) +
+      p(esc(lead)) +
       `<p style="margin:20px 0 8px;font-family:Georgia,serif;font-size:19px;color:#1A2B48">What happens next</p>` +
       `<ol style="margin:0 0 18px;padding-left:22px">${steps.map((s) => `<li style="margin:0 0 10px">${esc(s)}</li>`).join("")}</ol>` +
-      p(`${esc(enrolled.refund)} <a href="${esc(terms)}" style="color:#3F6690">${esc(enrolled.terms.label)}</a>`) +
+      (full ? "" : p(`${esc(enrolled.refund)} <a href="${esc(terms)}" style="color:#3F6690">${esc(enrolled.terms.label)}</a>`)) +
       p("Questions? Just reply to this email."),
   });
   return { subject, text, html };
 }
 
-// Deposit paid: the note to Tyler.
-export function depositNotify(d: { name?: string | null; email: string; phone?: string | null; amount: string; time: string; sessionId: string }) {
-  const subject = `New deposit: ${d.name || d.email} (${d.amount})`;
+// Paid: the note to Tyler.
+export function depositNotify(d: { name?: string | null; email: string; phone?: string | null; amount: string; time: string; sessionId: string; type?: "deposit" | "full" }) {
+  const full = d.type === "full";
+  const subject = `${full ? "New full payment" : "New deposit"}: ${d.name || d.email} (${d.amount})`;
   const rows: [string, string][] = [
     ["Name", d.name || "(not given)"],
     ["Email", d.email],
@@ -126,7 +129,7 @@ Stripe: ${dashboard}
 Send pre-work within 2 business days.`;
   const html = layout({
     preheader: subject,
-    heading: "New deposit",
+    heading: full ? "New full payment" : "New deposit",
     body:
       `<table role="presentation" cellpadding="0" cellspacing="0" style="width:100%;font-size:14px">${rows
         .map(([k, v]) => `<tr><td style="padding:6px 12px 6px 0;vertical-align:top;color:#3F6690;font-weight:600;white-space:nowrap">${esc(k)}</td><td style="padding:6px 0">${esc(v)}</td></tr>`)
