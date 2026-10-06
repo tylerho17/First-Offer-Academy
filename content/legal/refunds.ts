@@ -9,7 +9,8 @@ export const refunds: LegalDoc = {
   slug: "refunds",
   title: "Refund & Payment Policy",
   description: "Tuition, the deposit and balance, offer-or-refund, and how refunds and withdrawals work at First Offer Academy.",
-  lastUpdated: "2026-09-30",
+  effective: "2026-10-05",
+  lastUpdated: "2026-10-05",
   contactEmail: legalContact,
   intro: `This page explains what the program costs, how to pay, and how refunds work. It's part of our [Terms of Service](/terms).`,
   body: [

@@ -1,19 +1,20 @@
 import { site } from "../site";
 import { legalContact, type LegalDoc } from "./types";
 
-const who = site.legalEntityName ? `${site.name} (${site.legalEntityName})` : site.name;
+const who = site.legalEntityName || site.name;
 const providers = site.serviceProviders.map((p) => `${p.name}: ${p.purpose}. [Privacy policy](${p.url})`);
 
 export const privacy: LegalDoc = {
   slug: "privacy",
   title: "Privacy Policy",
   description: "How First Offer Academy collects, uses, shares, and protects information from students and parents, and how to exercise your privacy rights.",
-  lastUpdated: "2026-09-21",
+  effective: "2026-10-05",
+  lastUpdated: "2026-10-05",
   contactEmail: legalContact,
   intro: `This policy explains what information ${site.name} collects, why, who we share it with, and the choices you have. We wrote it in plain English. If anything is unclear, email ${legalContact}.`,
   body: [
     { type: "h2", text: "Who we are" },
-    { type: "p", text: `${who} runs an internship coaching program for college students. In this policy, "we", "us", and "our" mean ${site.name}. "You" means anyone who uses our website or program, including students and their parents or guardians.` },
+    { type: "p", text: `${who}${site.legalEntityName ? "," : ""} runs an internship coaching program for college students. In this policy, "we", "us", and "our" mean ${site.name}. "You" means anyone who uses our website or program, including students and their parents or guardians.` },
 
     { type: "h2", text: "What we collect and why" },
     { type: "p", text: "We only collect what we need to run the program and answer your questions." },

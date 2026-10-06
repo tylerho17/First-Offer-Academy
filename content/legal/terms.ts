@@ -1,18 +1,19 @@
 import { depositLine, site } from "../site";
 import { legalContact, type LegalDoc } from "./types";
 
-const who = site.legalEntityName ? `${site.name} (${site.legalEntityName})` : site.name;
+const who = site.legalEntityName || site.name;
 
 export const terms: LegalDoc = {
   slug: "terms",
   title: "Terms of Service",
   description: "The terms for using the First Offer Academy website and enrolling in the program, including what we do and don't promise.",
-  lastUpdated: "2026-09-21",
+  effective: "2026-10-05",
+  lastUpdated: "2026-10-05",
   contactEmail: legalContact,
   intro: `These terms apply to the ${site.name} website and program. By using the website, applying, or enrolling, you agree to them. If a student is under 18, a parent or guardian must agree on their behalf.`,
   body: [
     { type: "h2", text: "Who we are" },
-    { type: "p", text: `${who} runs an internship coaching program for college students. "We", "us", and "our" mean ${site.name}. "Student" means the person enrolled in the program. "You" means the student and, where one is involved, the parent or guardian who enrolls or pays for them.` },
+    { type: "p", text: `${who}${site.legalEntityName ? "," : ""} runs an internship coaching program for college students. "We", "us", and "our" mean ${site.name}. "Student" means the person enrolled in the program. "You" means the student and, where one is involved, the parent or guardian who enrolls or pays for them.` },
 
     { type: "h2", text: "Eligibility" },
     { type: "ul", items: [

@@ -4,7 +4,8 @@ export const codeOfConduct: LegalDoc = {
   slug: "code-of-conduct",
   title: "Code of Conduct",
   description: "How First Offer Academy students treat each other, the professionals they contact, and the program.",
-  lastUpdated: "2026-09-21",
+  effective: "2026-10-05",
+  lastUpdated: "2026-10-05",
   contactEmail: legalContact,
   intro: "Recruiting runs on trust. Professionals take calls from students because they expect honesty and respect. This code keeps that trust intact for every student in the program, including the ones who come after you.",
   body: [

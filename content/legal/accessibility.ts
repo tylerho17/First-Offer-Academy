@@ -4,7 +4,8 @@ export const accessibility: LegalDoc = {
   slug: "accessibility",
   title: "Accessibility Statement",
   description: "First Offer Academy's commitment to an accessible website, known limitations, and how to report a problem.",
-  lastUpdated: "2026-09-21",
+  effective: "2026-10-05",
+  lastUpdated: "2026-10-05",
   contactEmail: legalContact,
   intro: "We want every student and parent to be able to use this website, including people who use screen readers, keyboard navigation, magnification, or other assistive technology.",
   body: [

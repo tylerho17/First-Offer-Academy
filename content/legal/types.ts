@@ -14,6 +14,7 @@ export type LegalDoc = {
   slug: string; // route: /<slug>
   title: string;
   description: string; // meta description
+  effective: string; // ISO date the current version took effect
   lastUpdated: string; // ISO date
   contactEmail: string;
   intro?: string;

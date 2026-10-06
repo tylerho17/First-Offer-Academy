@@ -57,8 +57,8 @@ export const site = {
   // Luma calendars and sessions: content/events.ts and lib/events.ts.
 
   // Stripe Payment Links live in lib/payments.ts.
-  // Legal name for the privacy policy and terms ("First Offer Academy (Tyler Ho)").
-  legalEntityName: "Tyler Ho",
+  // Legal name of the business, used wherever the legal pages name it.
+  legalEntityName: "Tyler Ho, doing business as First Offer Academy",
 
   // Every outside service that touches personal data. The privacy policy
   // lists exactly these, so keep it accurate when a tool is added or dropped.
@@ -71,7 +71,6 @@ export const site = {
     { name: "YouTube and Vimeo", purpose: "Embedded videos (loaded in privacy-enhanced mode; they only collect data when you play a video)", url: "https://policies.google.com/privacy" },
   ],
 
-  // TODO: real inbox on the domain.
   email: "hello@firstofferacademy.com",
   // Social profile URLs live in content/social.ts.
   // /zh (Mandarin parent page) stays noindex, out of the nav, and out of the
@@ -85,10 +84,10 @@ export const site = {
 
   // The FAQ answer to "Is it online or in person?". Empty strings below render
   // as "To be announced" / "will be confirmed".
-  format: "Online, with live sessions on Zoom.",
+  format: "Online, live sessions on Zoom",
   weeklyHours: "", // e.g. "6–8"
   // Hours of outreach a week on top of the session and 1:1 (shown in the FAQ).
-  outreachHours: "3–4",
+  outreachHours: "3–5 hours a week, rising as outreach ramps up",
   applicationDeadline: "",
   // Founding cohort refund terms. /refunds, /pricing, the FAQ, and the deposit
   // button all read these. Changing them changes a written promise to families.

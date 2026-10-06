@@ -38,12 +38,9 @@ export const founder = {
     { org: "Barclays Investment Bank", role: "Incoming 2027 Investment Banking Summer Analyst", dates: "Summer 2027", detail: "Global Technology Group · San Francisco Bay Area", status: "incoming", caption: "IB Summer Analyst · 2027", logo: "/logos/tyler/barclays.svg", logoRatio: 174 / 29 },
     { org: "Deloitte", role: "Summer Analyst", dates: "Jun – Aug 2026", detail: "", status: "past", caption: "Summer Analyst", logo: "/logos/tyler/deloitte.svg", logoRatio: 182 / 34 },
     { org: "Concordia Capital", role: "Tech Investment Banking Summer Analyst", dates: "Summer 2025", detail: "", status: "past", caption: "Tech IB Summer Analyst", logo: "/logos/concordia-capital.png", logoRatio: 907 / 314 },
-    // TODO(Tyler): CB Capital dates.
-    { org: "CB Capital", role: "Tech Investment Banking Fall Co-op", dates: "", detail: "", status: "past", caption: "Tech IB Co-op", logo: "/logos/tyler/cb-capital.png", logoRatio: 1 },
-    // TODO(Tyler): Futuraiser dates.
-    { org: "Futuraiser", role: "Deeptech Venture Capital", dates: "", detail: "", status: "past", caption: "Venture Capital", logo: "/logos/futuraiser.png", logoRatio: 1396 / 222, logoMono: true },
-    // TODO(Tyler): Crosspoint Financial dates.
-    { org: "Crosspoint Financial", role: "FP&A", dates: "", detail: "", status: "past", caption: "FP&A", logo: "/logos/tyler/crosspoint-financial.png", logoRatio: 155 / 57 },
+    { org: "CB Capital", role: "Tech Investment Banking Fall Co-op", dates: "Sep 2025 – Feb 2026", detail: "", status: "past", caption: "Tech IB Co-op", logo: "/logos/tyler/cb-capital.png", logoRatio: 1 },
+    { org: "Futuraiser", role: "Deeptech Venture Capital", dates: "Apr – Jun 2026", detail: "", status: "past", caption: "Venture Capital", logo: "/logos/futuraiser.png", logoRatio: 1396 / 222, logoMono: true },
+    { org: "Crosspoint Financial", role: "FP&A", dates: "Aug 2024 – Aug 2025", detail: "", status: "past", caption: "FP&A", logo: "/logos/tyler/crosspoint-financial.png", logoRatio: 155 / 57 },
   ] as Experience[],
 
   education: { school: "UC Irvine", field: "Finance & Computer Science" },
@@ -59,26 +56,17 @@ export const founder = {
   // /about "My story".
   story: {
     p1: "I'm the son of Vietnamese parents who worked hard but couldn't show me how recruiting worked.",
-    // Paragraph 2. Until both numbers are set, the clause with them is cut.
-    // TODO(Tyler): number of cold emails it took.
-    coldEmails: "",
-    // TODO(Tyler): number of coffee chats it took.
-    coffeeChats: "",
+    // Paragraph 2 (numbers confirmed by Tyler, 2026-10-05).
+    p2Lead: "Over my own recruiting, I sent about 4,000 cold emails, had 174 coffee chats, and went through 19 first-round interviews.",
     p2Rest: "Nobody taught me the timeline, how to write an email that gets answered, or how to talk to a banker. I learned it by getting it wrong, then wrote down what worked.",
     p3: "First Offer Academy is that system, built for every student, not just the ones who got into the right club.",
     pullQuote: "Nobody taught me the timeline. So I wrote it down.",
   },
 };
 
-// Story paragraph 2: with both numbers, the full sentence; otherwise the
-// numbers clause is cut.
+// Story paragraph 2.
 export function storyParagraph2() {
-  const s = founder.story;
-  const lead =
-    s.coldEmails && s.coffeeChats
-      ? `It took me ${s.coldEmails} cold emails, ${s.coffeeChats} coffee chats, and more rejections than I can count to land my first internship.`
-      : "It took me more rejections than I can count to land my first internship.";
-  return `${lead} ${s.p2Rest}`;
+  return `${founder.story.p2Lead} ${founder.story.p2Rest}`;
 }
 
 // Credentials with a value, as one line each ("12 pilot students, 100% …").
