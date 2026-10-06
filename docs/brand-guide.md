@@ -42,7 +42,7 @@ Direction: warm like a mentor, serious like an offer letter. Kind to students, c
 Real students in everyday clothes, daylight, campus. AI images only as labeled placeholders; never presented as actual students. Founder headshot: background removed, placed on cream or mist.
 
 ## Voice
-Specific numbers stated calmly (24 seats, 12 of 12 pilot students landed internships). No "elite," no firm logos without student permission, no ITG name/logo, written permission for every testimonial.
+Specific numbers stated calmly (12 seats, 12 of 12 pilot students landed internships). No "elite," no firm logos without student permission, no ITG name/logo, written permission for every testimonial.
 No 'guaranteed' outcomes. Offer-or-refund is the only refund/guarantee language.
 
 ## Homepage order

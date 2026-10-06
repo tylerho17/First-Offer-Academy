@@ -50,7 +50,7 @@ export function applyNotify(d: Record<string, unknown>) {
 export function subscribeConfirmation(d: { email: string; firstName?: string | null; source?: string | null }) {
   const playbook = d.source === "playbook";
   const token = signDownload(d.email);
-  const pdf = token ? `${url}${leadMagnet.file}?t=${token}` : `${url}/playbook-pdf`;
+  const pdf = token ? `${url}${leadMagnet.file}?t=${token}` : `${url}/playbook`;
   const subject = playbook ? `Your copy of ${leadMagnet.title}` : "You're subscribed to the First Offer newsletter";
   const text = `${hi(d.firstName)}
 

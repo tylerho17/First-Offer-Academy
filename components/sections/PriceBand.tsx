@@ -26,7 +26,7 @@ export default function PriceBand() {
         <div className="price-box">
           <span className="amount">{c.price}</span>
           <span className="plan">everything included</span>
-          <span className="seats">{c.deposit} deposit, then {c.balance} {c.balanceDue}.</span>
+          <span className="seats">{c.deposit} deposit reserves your seat; the remaining {c.balance} is invoiced separately, due {c.balanceDue}.</span>
           <Link href="/refunds" className="price-policy">Refund &amp; payment policy</Link>
         </div>
       </div>

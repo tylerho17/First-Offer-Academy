@@ -127,7 +127,7 @@ export default function ApplyForm({ paid = false }: { paid?: boolean }) {
 
       {status === "unconnected" && (
         <p className="form-status" role="status">
-          The application form isn&apos;t connected yet. For now, <a href={site.calendlyUrl} target="_blank" rel="noopener noreferrer">book a call with Tyler</a> directly.
+          Your application didn&apos;t go through. Please <a href={site.calendlyUrl} target="_blank" rel="noopener noreferrer">book a call with Tyler</a> directly, or email <a href={`mailto:${site.email}`}>{site.email}</a>.
         </p>
       )}
       {status === "error" && (

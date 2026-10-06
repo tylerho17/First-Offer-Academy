@@ -20,6 +20,8 @@ export const PLACEMENT_FIRMS = ["Wells Fargo", "Morgan Stanley", "PIMCO", "Trico
 export const site = {
   name: "First Offer Academy",
   tagline: "Build the skills. Be that candidate. Get the offer.",
+  // The homepage hero subhead, also the site's default meta description.
+  description: "Internship coaching for college freshmen and sophomores in Finance, Marketing, and Accounting. 12 weeks of training and mocks, then weekly check-ins and mocks until you land an offer.",
   domain: "firstofferacademy.com",
 
   founder: {
@@ -40,10 +42,10 @@ export const site = {
   cohort: {
     name: "Founding cohort",
     start: "January 2027",
-    seats: 24,
-    price: "$5,000", // everything included; paid in full, or deposit + balance
+    seats: 12, // founding cohort cap; every page reads this
+    price: "$5,000", // everything included; paid in full, or the deposit then the invoiced balance
     deposit,
-    balance, // due before Week 1
+    balance, // invoiced separately (a Stripe Invoice) after the deposit; due before Week 1
     balanceDue: "before Week 1",
   },
 
@@ -55,9 +57,8 @@ export const site = {
   // Luma calendars and sessions: content/events.ts and lib/events.ts.
 
   // Stripe Payment Links live in lib/payments.ts.
-  // TODO(Tyler): legal business entity name (e.g. "First Offer Academy LLC").
-  // Empty = the privacy policy and terms say "First Offer Academy" only.
-  legalEntityName: "",
+  // Legal name for the privacy policy and terms ("First Offer Academy (Tyler Ho)").
+  legalEntityName: "Tyler Ho",
 
   // Every outside service that touches personal data. The privacy policy
   // lists exactly these, so keep it accurate when a tool is added or dropped.
@@ -82,16 +83,16 @@ export const site = {
 
 
 
-  // TODO: fill in. Empty strings render as "To be announced".
-  format: "", // TODO(Tyler): [[FORMAT]], e.g. "Online, live sessions on Zoom"
+  // The FAQ answer to "Is it online or in person?". Empty strings below render
+  // as "To be announced" / "will be confirmed".
+  format: "Online, with live sessions on Zoom.",
   weeklyHours: "", // e.g. "6–8"
-  // TODO(Tyler): [[OUTREACH_HOURS]], e.g. "3–4". Empty = the FAQ says outreach time
-  // "will be confirmed before the cohort starts".
-  outreachHours: "",
+  // Hours of outreach a week on top of the session and 1:1 (shown in the FAQ).
+  outreachHours: "3–4",
   applicationDeadline: "",
   // Founding cohort refund terms. /refunds, /pricing, the FAQ, and the deposit
   // button all read these. Changing them changes a written promise to families.
-  refundTerms: `The ${deposit} deposit is fully refundable through ${depositRefundDeadline}. After that, it applies to tuition, and the ${balance} balance is due before Week 1.`,
+  refundTerms: `The ${deposit} deposit is fully refundable through ${depositRefundDeadline}. After that, it applies to tuition, and the remaining ${balance} is invoiced separately and due before Week 1.`,
   depositRefundDeadline,
   withdrawalPolicy: "Withdraw before Week 3 for a prorated refund of unused weeks. No refunds after Week 3. If we cancel the cohort, every payment is refunded in full.",
 };

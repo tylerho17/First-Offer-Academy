@@ -11,7 +11,7 @@ export type Resource = { href: string; title: string; body: string; tag: string 
 const note = (a: "Parents" | "Students") => eventColumns.find((c) => c.audience === a)?.note ?? "";
 const parentGuide = articles.find((a) => a.slug === "parents-support-without-taking-over");
 
-export const playbookPdf: Resource = { href: "/playbook-pdf", title: leadMagnet.title, body: leadMagnet.subtitle, tag: "Free PDF" };
+export const playbookPdf: Resource = { href: "/playbook", title: leadMagnet.title, body: leadMagnet.subtitle, tag: "Free PDF" };
 const guides: Resource = { href: "/blog", title: "Playbook guides", body: `${articles.length} free guides: timelines, resumes, outreach, interviews, technicals.`, tag: "Guides" };
 const templates: Resource = { href: "/free-resources", title: "Templates", body: "The same templates students use in the program, week by week.", tag: "Templates" };
 const parentSessions: Resource = { href: "/events", title: "Thursday parent sessions", body: note("Parents"), tag: "Live" };

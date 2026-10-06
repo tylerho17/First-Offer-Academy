@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/meta";
 import Link from "next/link";
 import { depositLine, site } from "@/content/site";
 import { externshipBlock, offerOrRefund, pricingIncludes } from "@/content/program";
@@ -13,10 +14,10 @@ import { tomQuotes } from "@/content/quotes";
 import { videoAt, videosAt } from "@/content/videoTestimonials";
 import { Check } from "@/components/Icons";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Pricing",
   description: `First Offer Academy tuition: ${site.cohort.price}, everything included. A ${site.cohort.deposit} deposit holds a seat, fully refundable through ${site.depositRefundDeadline}; the ${site.cohort.balance} balance is due before Week 1. Offer-or-refund.`,
-};
+});
 
 export default function PricingPage() {
   const c = site.cohort;
@@ -48,7 +49,7 @@ export default function PricingPage() {
               <div>
                 <span className="eyebrow">Everything included</span>
                 <p className="price-amount">{c.price}</p>
-                <p className="price-line">{depositLine()} The {c.balance} balance is due {c.balanceDue}.</p>
+                <p className="price-line">{depositLine()} The remaining {c.balance} is invoiced separately and due {c.balanceDue}.</p>
                 <p className="price-line">{c.name}: {c.start} · {c.seats} seats</p>
               </div>
               {priceVideo && <VideoCard video={priceVideo} size="hero" />}
@@ -67,7 +68,7 @@ export default function PricingPage() {
             </div>
             <p className="hero-secondary"><a href="#payment" className="link-arrow">Reserve a seat or pay in full ↓</a></p>
             <p className="pay-note balance-note">
-              Already paid the deposit? Your {c.balance} balance is due {c.balanceDue}. We&apos;ll email your balance link.
+              Already paid the deposit? We&apos;ll send you a separate invoice for the remaining {c.balance}, due {c.balanceDue}.
             </p>
             <div className="card refund-panel price-refund">
               <h3>{offerOrRefund.title}</h3>

@@ -22,7 +22,7 @@ export default function BlogPage() {
       </section>
       <section className="section" style={{ paddingTop: 56 }}>
         <div className="wrap">
-          <Link href="/playbook-pdf" className="card timeline-promo">
+          <Link href="/playbook" className="card timeline-promo">
             <span className="eyebrow">Free download</span>
             <strong>The First Offer Playbook: how to land your first internship before junior year.</strong>
             <span className="link-arrow">Get the PDF →</span>

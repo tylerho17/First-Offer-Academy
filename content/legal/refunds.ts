@@ -19,7 +19,7 @@ export const refunds: LegalDoc = {
     { type: "h2", text: "Ways to pay" },
     { type: "ul", items: [
       `Pay in full: ${c.price}, before Week 1.`,
-      `Or reserve a seat with the ${c.deposit} deposit, then pay the ${c.balance} balance before Week 1. Those are the only two ways to pay.`,
+      `Or reserve a seat with the ${c.deposit} deposit; the remaining ${c.balance} is invoiced separately and due before Week 1. Those are the only two ways to pay.`,
       "All payments are processed securely by Stripe. We never see or store your card number.",
     ] },
 
@@ -27,7 +27,7 @@ export const refunds: LegalDoc = {
     { type: "p", text: `A ${c.deposit} deposit holds a seat in the cohort. It counts toward tuition; it is not an extra fee.` },
     { type: "p", text: site.refundTerms || `The deposit is refundable. The deadline for a full deposit refund: ${pending}` },
     { type: "p", text: "If the fit call shows the program isn't a fit, we refund the deposit in full, whatever the date." },
-    { type: "p", text: `The ${c.balance} balance is due before Week 1. We email your balance link; it isn't posted on the site.` },
+    { type: "p", text: `After the deposit, the remaining ${c.balance} is sent to you as a separate invoice, due before Week 1.` },
 
     { type: "h2", text: "Missed payments" },
     { type: "p", text: "If the balance payment fails or is late, we'll email you and give you time to update your payment method. Please reply and tell us what's going on. A student's access to sessions may be paused if a payment remains unresolved after we've been in touch." },

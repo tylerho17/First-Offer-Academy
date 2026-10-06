@@ -94,7 +94,7 @@ export default function TemplateLibrary({
           <h3 className="featured-title">{playbook.title}</h3>
           <p className="playbook-sub">{playbook.subtitle}</p>
           <p style={{ marginTop: 12 }}>
-            {playbook.chapters} chapters with every template included. <Link href="/playbook-pdf">See what&apos;s inside</Link>
+            {playbook.chapters} chapters with every template included. <Link href="/playbook">See what&apos;s inside</Link>
           </p>
           <div style={{ marginTop: 20 }}>
             {unlocked ? (

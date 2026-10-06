@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/meta";
 import PageHero from "@/components/PageHero";
 import EventCard from "@/components/EventCard";
 import FinalCta from "@/components/sections/FinalCta";
@@ -7,10 +8,10 @@ import { upcomingEvents, withUtm } from "@/lib/events";
 
 export const revalidate = 3600;
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Free events",
   description: "Free parent info sessions and weekly student workshops from First Offer Academy, live on Google Meet.",
-};
+});
 
 const columns = eventColumns;
 

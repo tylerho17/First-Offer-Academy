@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/meta";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import ResourceRow from "@/components/ui/ResourceRow";
@@ -8,10 +9,10 @@ import { formatEvent, upcomingEvents, withUtm, type EventItem } from "@/lib/even
 // Event dates come from Luma (lib/events.ts), refreshed hourly.
 export const revalidate = 3600;
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Free Resources",
   description: "Free recruiting resources from First Offer Academy for students and parents: the Playbook PDF, guides, templates, and live workshops and info sessions.",
-};
+});
 
 function SessionRow({ e, who }: { e: EventItem; who: string }) {
   const d = formatEvent(e);

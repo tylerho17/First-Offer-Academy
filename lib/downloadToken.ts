@@ -1,4 +1,5 @@
 import { createHmac, timingSafeEqual } from "node:crypto";
+import { captureConfigured } from "./capture";
 
 // The Playbook PDF is served only to someone who gave an email. Proof is a
 // token: an HMAC of the email, carried in a cookie (set by /api/subscribe) or
@@ -10,8 +11,10 @@ export const COOKIE_MAX_AGE = 60 * 60 * 24 * 365;
 
 const secret = () => process.env.DOWNLOAD_SECRET || process.env.SUPABASE_SERVICE_ROLE_KEY || "";
 
-// No secret configured: allowed locally so the gate can be tested, never in production.
-export const gateOpen = () => !secret() && process.env.NODE_ENV !== "production";
+// The gate is open (downloads need no email) when email capture isn't set up
+// (no Supabase keys: the site shows plain download links), or locally with no
+// secret so the gate can be tested.
+export const gateOpen = () => !captureConfigured() || (!secret() && process.env.NODE_ENV !== "production");
 
 const mac = (email: string) => createHmac("sha256", secret()).update(`playbook:${email}`).digest("base64url").slice(0, 32);
 

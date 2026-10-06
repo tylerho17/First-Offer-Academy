@@ -3,7 +3,7 @@ import Link from "next/link";
 import LinkedInLink from "../LinkedInLink";
 import VideoCard from "../VideoCard";
 import { videoAt } from "@/content/videoTestimonials";
-import { PILOT_LANDED, PILOT_STUDENTS, PLACEMENT_FIRMS } from "@/content/site";
+import { PILOT_LANDED, PILOT_STUDENTS, PLACEMENT_FIRMS, site } from "@/content/site";
 import PrimaryCTA, { CtaNote } from "../PrimaryCTA";
 import AvatarGroup from "../AvatarGroup";
 import { founder, shownCredentials } from "@/content/founder";
@@ -17,10 +17,7 @@ export default function Hero() {
         <div>
           <span className="eyebrow">Internship coaching · Freshmen and sophomores</span>
           <h1>Coached until your first offer.</h1>
-          <p className="lede">
-            Internship coaching for college freshmen and sophomores in Finance, Marketing, and Accounting. 12 weeks of
-            training and mocks, then weekly check-ins and mocks until you land an offer.
-          </p>
+          <p className="lede">{site.description}</p>
           <AvatarGroup />
           <div className="cta-block">
             <PrimaryCTA location="hero" />

@@ -2,7 +2,7 @@ import Link from "next/link";
 import { leadMagnet } from "@/content/leadMagnet";
 
 // Homepage: the free Playbook, after the stats strip. The button goes to the
-// existing gated download (/playbook-pdf: email, then the PDF). It's an
+// existing gated download (/playbook: email, then the PDF). It's an
 // outline button so "Book a parent call" stays the dominant CTA.
 export default function PlaybookBand() {
   return (
@@ -13,7 +13,7 @@ export default function PlaybookBand() {
             <h2 id="playbook-band-title">Get the free recruiting playbook</h2>
             <p>{leadMagnet.title}: {leadMagnet.subtitle}.</p>
           </div>
-          <Link href="/playbook-pdf" className="btn btn-secondary" data-event="playbook_download" data-event-location="home">
+          <Link href="/playbook" className="btn btn-secondary" data-event="playbook_download" data-event-location="home">
             Download the free playbook
           </Link>
         </div>

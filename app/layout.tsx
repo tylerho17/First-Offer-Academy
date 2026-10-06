@@ -9,6 +9,7 @@ import Reveal from "@/components/Reveal";
 import NewsletterBand from "@/components/NewsletterBand";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { site } from "@/content/site";
 import "./globals.css";
 
 // The two brand fonts. Swapping one is a one-line change here: globals.css reads
@@ -24,19 +25,19 @@ export const metadata: Metadata = {
   // www, non-www, and ?utm= variants don't compete with each other in search.
   alternates: { canonical: "./" },
   title: {
-    default: "First Offer Academy · Coached until your first offer",
-    template: "%s · First Offer Academy",
+    default: "First Offer Academy | Coached until your first offer.",
+    template: "%s | First Offer Academy",
   },
-  description:
-    "Internship coaching for college freshmen and sophomores in Finance, Marketing, and Accounting: Week 0 pre-work, 8 weeks of training, a 4-week Offer Sprint, then weekly check-ins and mocks until an offer.",
+  description: site.description,
+  // The preview image is app/opengraph-image.tsx (and twitter-image.tsx).
   openGraph: {
     type: "website",
     siteName: "First Offer Academy",
     locale: "en_US",
-    title: "First Offer Academy",
-    description: "Build the skills. Be that candidate. Get the offer.",
+    title: "First Offer Academy | Coached until your first offer.",
+    description: site.description,
   },
-  twitter: { card: "summary_large_image" },
+  twitter: { card: "summary_large_image", title: "First Offer Academy | Coached until your first offer.", description: site.description },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
