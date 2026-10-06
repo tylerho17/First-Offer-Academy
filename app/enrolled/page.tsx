@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { site } from "@/content/site";
+import { enrolled } from "@/content/enrolled";
 
 // Stripe sends people here after a successful payment. No nav link, no
 // conversion pixel, no auto-redirect: a dead end on purpose. noindex, because
@@ -11,18 +12,15 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
-const steps = [
-  "A confirmation email is on its way, within the hour. If it hasn't landed, check spam, then email us.",
-  "Your winter break pre-work arrives within 2 business days: the resume template, the target list worksheet, and the Candidate Brand module. You start now, not in January.",
-  "We'll send a link to book your first 1:1 in the first week of December.",
-];
+// Shared with the deposit confirmation email (content/enrolled.ts).
+const steps = enrolled.steps;
 
 export default function EnrolledPage() {
   return (
     <section className="section enrolled">
       <div className="wrap">
         <h1>You&apos;re in.</h1>
-        <p className="lede">Your seat in the {site.cohort.start} {site.cohort.name.toLowerCase()} is held.</p>
+        <p className="lede">{enrolled.held}</p>
 
         <div className="card enrolled-card">
           <h2>What happens next</h2>
@@ -37,8 +35,8 @@ export default function EnrolledPage() {
         </div>
 
         <p className="enrolled-refund">
-          Changed your mind? Your deposit is fully refundable until {site.depositRefundDeadline} — just email us.{" "}
-          <Link href="/terms">Read the enrollment terms →</Link>
+          {enrolled.refund}{" "}
+          <Link href={enrolled.terms.href}>{enrolled.terms.label}</Link>
         </p>
 
         <p className="enrolled-foot">
