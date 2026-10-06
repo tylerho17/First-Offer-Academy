@@ -17,9 +17,9 @@ function fit(ratio: number) {
 // an optional status badge in the top-right corner. `name` is the alt text and
 // is also read out by screen readers. No logo: a monogram tile (initials in
 // the display serif on navy). `mono`: a white-only official logo, drawn as a
-// navy silhouette.
-export default function LogoTile({ name, caption, logo, ratio = 1, mono = false, monogram, badge }: {
-  name: string; caption: string; logo: string | null; ratio?: number; mono?: boolean; monogram?: string;
+// navy silhouette. `category`: a small tag under the caption (the field).
+export default function LogoTile({ name, caption, logo, ratio = 1, mono = false, monogram, badge, category }: {
+  name: string; caption: string; logo: string | null; ratio?: number; mono?: boolean; monogram?: string; category?: string;
   badge?: { label: string; tone?: "navy" | "sage" | "outline" };
 }) {
   const { w } = fit(ratio);
@@ -38,6 +38,7 @@ export default function LogoTile({ name, caption, logo, ratio = 1, mono = false,
         )}
       </div>
       <p className="ui-logo-tile-caption"><span className="sr-only">{name}: </span>{caption}</p>
+      {category && <p className="ui-logo-tile-tag"><span className="sr-only">Field: </span>{category}</p>}
     </div>
   );
 }

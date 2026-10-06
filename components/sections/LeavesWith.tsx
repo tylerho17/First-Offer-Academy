@@ -17,14 +17,14 @@ export function LeavesWithList({ compact = false }: { compact?: boolean }) {
   );
 }
 
-// Track Technicals names the three tracks, each linked to its page.
+// Track Technicals names the tracks, each linked to its page.
 function TrackLinks() {
   return (
     <>
       Weeks 5–6 split by track:{" "}
       {tracks.map((t, i) => (
         <span key={t.slug}>
-          {i > 0 && (i === tracks.length - 1 ? ", or " : ", ")}
+          {i > 0 && (i < tracks.length - 1 ? ", " : tracks.length > 2 ? ", or " : " or ")}
           <Link href={`/tracks/${t.slug}`}>{t.name}</Link>
         </span>
       ))}

@@ -12,7 +12,7 @@ import ProgramCta from "@/components/sections/program/ProgramCta";
 export const metadata: Metadata = pageMeta({
   title: "The Program",
   description:
-    "How First Offer Academy works: Week 0 pre-work, a 12-week program (Weeks 1–8 core teaching on six parts, Weeks 9–12 mocks and networking), weekly check-ins and mocks every other week until an offer, three tracks, and offer-or-refund.",
+    "For business freshmen and sophomores, built for finance and accounting recruiting. How First Offer Academy works: Week 0 pre-work, a 12-week program (Weeks 1–8 core teaching on six parts, Weeks 9–12 mocks and networking), weekly check-ins and mocks every other week until an offer, two tracks (Finance and Accounting), and offer-or-refund.",
 });
 
 export default function ProgramPage() {

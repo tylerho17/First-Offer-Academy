@@ -15,7 +15,7 @@ export const guide: Guide = {
   reviewedByTyler: true,
   body: [
     p("The most common thing I hear from sophomores is some version of: \"I didn't know it started this early.\" For finance and accounting especially, and for a growing share of tech and marketing roles, the students who land internships in sophomore and junior summer started building toward them in freshman year. Not by applying to everything they could find, but by doing a few boring things consistently, every week, for a long time."),
-    p("This guide is the timeline I give every freshman. It covers what to do each quarter of freshman year, what changes in sophomore year, and how the calendar differs across Finance, Marketing, Accounting, and Tech. At the end there's a checklist you can print."),
+    p("This guide is the timeline I give every freshman. It covers what to do each quarter of freshman year, what changes in sophomore year, and how the calendar differs across Finance and Accounting, plus Marketing and Tech. At the end there's a checklist you can print."),
     note("Dates move", "Recruiting timelines move earlier almost every year, and they differ from firm to firm. Treat everything here as a planning map. For any firm you care about, check its careers page for the real dates and put them on your calendar the day you find them."),
 
     h2("Why freshman year matters more than people think"),

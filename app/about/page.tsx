@@ -53,7 +53,7 @@ export default function AboutPage() {
         <ul className="about-logos">
           {founder.experience.map((e) => (
             <li key={e.org}>
-              <LogoTile name={e.org} caption={e.caption} logo={e.logo} ratio={e.logoRatio} mono={e.logoMono} monogram={e.monogram} badge={BADGES[e.status]} />
+              <LogoTile name={e.org} caption={e.caption} logo={e.logo} ratio={e.logoRatio} mono={e.logoMono} monogram={e.monogram} badge={BADGES[e.status]} category={e.category} />
             </li>
           ))}
         </ul>

@@ -1,4 +1,5 @@
 import { founderInternships, PILOT_LANDED, PILOT_STUDENTS, site, spell } from "./site";
+import { internshipsLine } from "./founder";
 import { afterProgram, formatNote, offerOrRefund, oneOnOneFormat, sessionFormat } from "./program";
 import { rhythmNotes, weeklyRhythm } from "./curriculum";
 import { programOverview } from "./programOverview";
@@ -49,7 +50,7 @@ export const faqs: Faq[] = [
     q: "Is this right for my student?",
     video: ["faq-right-fit-1", "faq-right-fit-2"],
     // Merged: "Who is First Offer Academy for?" and "Which majors is this for?"
-    a: `It fits a student who will do the work every week: the outreach, the calls, the reps. It doesn't fit a student who wants it done for them, and it isn't a fix for a student who doesn't want to be there. Any major. In Track Technicals, students pick one of three tracks: Finance, Marketing, or Accounting. ${programOverview.whoFor.title.replace(/…$/, ":")}`,
+    a: `It fits a student who will do the work every week: the outreach, the calls, the reps. It doesn't fit a student who wants it done for them, and it isn't a fix for a student who doesn't want to be there. It's for business freshmen and sophomores. It's built for finance and accounting recruiting; the outreach and interview system works for any business role. In Track Technicals, students pick one of two tracks: Finance or Accounting. ${programOverview.whoFor.title.replace(/…$/, ":")}`,
     list: [...programOverview.whoFor.pains.map((p) => `${p.title}: ${p.body}`), programOverview.whoFor.callout],
   },
   {
@@ -66,7 +67,7 @@ export const faqs: Faq[] = [
   {
     group: "Fit",
     q: "Are community college students welcome?",
-    a: "Yes. The program is built for college freshmen and sophomores at any school, including community colleges.",
+    a: "Yes. The program is built for business freshmen and sophomores at any school, including community colleges.",
   },
   {
     group: "Fit",
@@ -134,7 +135,7 @@ export const faqs: Faq[] = [
     group: "How it works",
     parent: true,
     q: "Who coaches the program?",
-    a: "Tyler Ho, the founder, leads the founding cohort. Guest professionals run the last graded mocks in Interview Reps.",
+    a: `Tyler Ho, the founder, leads the founding cohort. ${internshipsLine() ? `${internshipsLine()}. ` : ""}He is an incoming investment banking summer analyst. Guest professionals run the last graded mocks in Interview Reps.`,
   },
   // Drafted 2026-09-30 from facts elsewhere on the site (programOverview,
   // Founder, site.ts). TODO(Tyler): review the wording of this answer and the ChatGPT one below.
@@ -144,7 +145,7 @@ export const faqs: Faq[] = [
     id: "recent-recruit",
     q: "Why learn from someone who just went through recruiting?",
     video: ["faq-coach"],
-    a: `Because the timelines, emails, and interviews Tyler coaches are ones he ran himself, recently: ${founderInternships() ? `${founderInternships()}, and ` : ""}an incoming investment banking offer. In college he led finance recruiting education and coached ${spell(PILOT_STUDENTS)} pilot students: ${PILOT_LANDED} of ${PILOT_STUDENTS} landed an internship or offer.`,
+    a: `Because the timelines, emails, and interviews Tyler coaches are ones he ran himself, recently. ${founderInternships() ? `${founderInternships()}. ` : ""}He also has an incoming investment banking summer analyst offer. In college he led finance recruiting education and coached ${spell(PILOT_STUDENTS)} pilot students: ${PILOT_LANDED} of ${PILOT_STUDENTS} landed an internship or offer.`,
   },
 
   // Cost and alternatives. "Is there a payment plan?" was removed: there is

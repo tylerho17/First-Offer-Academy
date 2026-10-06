@@ -6,7 +6,7 @@ import { afterProgram } from "./program";
 export const parentsPage = {
   eyebrow: "For parents",
   title: "What you're paying for, and what you'll see.",
-  lede: "You won't be in the sessions, so you deserve a clear picture of what your student does each week, what you'll get to see, and what we will and won't promise.",
+  lede: "First Offer Academy is for business freshmen and sophomores: built for finance and accounting recruiting, with an outreach and interview system that works for any business role. You won't be in the sessions, so you deserve a clear picture of what your student does each week, what you'll get to see, and what we will and won't promise.",
 
   weekly: {
     title: "What your student does every week",

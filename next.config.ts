@@ -13,6 +13,8 @@ const nextConfig: NextConfig = {
       { source: "/tracks", destination: "/program#tracks", statusCode: 301 },
       { source: "/tracks/tech", destination: "/program#tracks", statusCode: 301 },
       { source: "/tracks/consulting", destination: "/tracks/accounting", statusCode: 301 },
+      // Marketing is no longer a track (2026-10-05).
+      { source: "/tracks/marketing", destination: "/program", statusCode: 301 },
       { source: "/results/by-type", destination: "/results", statusCode: 301 },
       { source: "/contact", destination: "/parents#call", statusCode: 301 },
       // The Playbook page moved from /playbook-pdf (2026-10-05).

@@ -9,7 +9,7 @@ Conversion goal, in order: 1) Apply, 2) Book a free parent call (Calendly), 3) R
 ## Facts the site may state
 
 - Program: 12 weeks, founding cohort starts January 2027 (winter quarter).
-- Tracks: Finance, Consulting, Marketing, Tech (software, data, product).
+- Tracks: Finance and Accounting (Marketing removed 2026-10-05). Positioning: "For business freshmen and sophomores. Built for finance and accounting recruiting; the outreach and interview system works for any business role."
 - Who: first- and second-year college students in Orange County, including community college students. Treat them as starting from zero; no club membership needed.
 - Seats: 12 (founding cohort cap, `content/site.ts` → `cohort.seats`).
 - Price: $5,000. $1,000 refundable deposit holds a seat.

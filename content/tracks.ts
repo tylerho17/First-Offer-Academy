@@ -28,21 +28,6 @@ export const tracks: Track[] = [
     ],
   },
   {
-    slug: "marketing",
-    name: "Marketing",
-    roles: "Brand, growth, content, and product marketing at startups and consumer companies.",
-    headline: "Show the work, not just the resume.",
-    intro:
-      "Marketing hiring managers want to see what you've made. The Marketing track pairs outreach with a small portfolio: real campaigns, content, or growth experiments your student can point to in interviews.",
-    roleList: ["Brand marketing", "Growth & performance", "Content & social", "Product marketing", "Marketing analytics"],
-    prep: [
-      { title: "A starter portfolio", body: "Two or three concrete pieces of work that prove taste and results." },
-      { title: "Metrics that matter", body: "Reach, conversion, retention, and how to talk about them credibly." },
-      { title: "Brand teardown", body: "Analyzing a company's positioning and proposing one smart idea for it." },
-      { title: "Marketing behaviorals", body: "Stories about creativity, iteration, and working with data." },
-    ],
-  },
-  {
     slug: "accounting",
     name: "Accounting",
     roles: "Audit, tax, and advisory at public accounting firms, plus corporate accounting in industry.",

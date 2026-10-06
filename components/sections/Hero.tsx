@@ -15,7 +15,7 @@ export default function Hero() {
     <section className="hero">
       <div className="wrap hero-grid">
         <div>
-          <span className="eyebrow">Internship coaching · Freshmen and sophomores</span>
+          <span className="eyebrow">Internship coaching · Business freshmen and sophomores</span>
           <h1>Coached until your first offer.</h1>
           <p className="lede">{site.description}</p>
           <AvatarGroup />

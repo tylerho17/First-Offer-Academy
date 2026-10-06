@@ -21,7 +21,7 @@ export const site = {
   name: "First Offer Academy",
   tagline: "Build the skills. Be that candidate. Get the offer.",
   // The homepage hero subhead, also the site's default meta description.
-  description: "Internship coaching for college freshmen and sophomores in Finance, Marketing, and Accounting. 12 weeks of training and mocks, then weekly check-ins and mocks every other week until you land an offer.",
+  description: "For business freshmen and sophomores. Built for finance and accounting recruiting; the outreach and interview system works for any business role. 12 weeks of training and mocks, then weekly check-ins and mocks every other week until you land an offer.",
   domain: "firstofferacademy.com",
 
   founder: {

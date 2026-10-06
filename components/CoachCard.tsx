@@ -15,7 +15,7 @@ export default function CoachCard({ focus }: { focus?: string }) {
           <h3>Tyler Ho</h3>
           <span className="badge">Founder &amp; head coach</span>
         </div>
-        <p className="coach-headline">{founderInternships() ? `${founderInternships()} across` : "Internships across"} investment banking, venture, consulting, FP&amp;A, and sales · Finance &amp; Computer Science</p>
+        <p className="coach-headline">{founderInternships() || "Internships across finance, accounting, sales, and AI engineering"} · Finance &amp; Computer Science</p>
         <p>
           Coached {spell(PILOT_STUDENTS)} pilot students: {PILOT_LANDED} of {PILOT_STUDENTS} landed an internship or offer.{focus ? ` Leads ${focus} prep for the founding cohort.` : " Leads every track in the founding cohort."}
         </p>

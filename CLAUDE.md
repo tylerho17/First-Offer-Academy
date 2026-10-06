@@ -1,6 +1,6 @@
 # First Offer Academy — Website
 
-Marketing site for First Offer Academy: internship coaching for college freshmen and sophomores in Finance, Marketing, and Accounting. The offer (locked Sept 30, 2026): Week 0 pre-work, Weeks 1–8 training, Weeks 9–12 Offer Sprint, then weekly check-ins and mocks until an offer or May 31, 2027; $5,000 everything included, offer-or-refund. Content lives in `content/program.ts` and `content/site.ts`. Buyers are parents; users are students. Solo founder: Tyler Ho.
+Marketing site for First Offer Academy: internship coaching for business freshmen and sophomores, built for finance and accounting recruiting (two tracks: Finance and Accounting). The offer (locked Sept 30, 2026): Week 0 pre-work, Weeks 1–8 training, Weeks 9–12 Offer Sprint, then weekly check-ins and mocks until an offer or May 31, 2027; $5,000 everything included, offer-or-refund. Content lives in `content/program.ts` and `content/site.ts`. Buyers are parents; users are students. Solo founder: Tyler Ho.
 
 Read `docs/brand-guide.md` and `docs/site-brief.md` before any UI or copy work. They are the source of truth. If this file and those docs disagree, the docs win.
 

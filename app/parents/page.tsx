@@ -26,7 +26,7 @@ export const revalidate = 3600;
 
 export const metadata: Metadata = pageMeta({
   title: "For Parents",
-  description: "For parents: what your student does each week in First Offer Academy, the progress reports you receive, payment and the deposit, and what we don't promise.",
+  description: "For parents of business freshmen and sophomores (built for finance and accounting recruiting; the system works for any business role): what your student does each week in First Offer Academy, the progress reports you receive, payment and the deposit, and what we don't promise.",
 });
 
 export default async function ParentsPage() {

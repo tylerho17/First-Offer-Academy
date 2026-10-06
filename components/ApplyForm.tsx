@@ -9,7 +9,7 @@ import Honeypot from "./Honeypot";
 import PrimaryCTA from "./PrimaryCTA";
 import PayOptions from "./PayOptions";
 
-const tracks = ["Finance", "Marketing", "Accounting"];
+const tracks = ["Finance", "Accounting"];
 
 // `paid`: arrived from the deposit checkout (/apply?deposit=1).
 export default function ApplyForm({ paid = false }: { paid?: boolean }) {

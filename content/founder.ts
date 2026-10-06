@@ -11,6 +11,8 @@ export type ExperienceStatus = "current" | "incoming" | "past";
 export type Experience = {
   org: string; role: string; dates: string; detail: string; status: ExperienceStatus;
   caption: string; logo: string | null; logoRatio?: number; logoMono?: boolean; monogram?: string;
+  // The /about card's category tag (Tyler, 2026-10-05).
+  category: string;
 };
 
 export const founder = {
@@ -25,8 +27,8 @@ export const founder = {
   // Shown as the /about stat tiles and on the homepage founder card. A tile
   // with an empty value doesn't render.
   credentials: [
-    // Confirmed by Tyler (v7 brief).
-    { value: "10+", label: "internships" },
+    // Confirmed by Tyler (v7 brief; wording 2026-10-05).
+    { id: "internships", value: "10+", label: "internships across finance, accounting, sales, and AI engineering" },
     { value: "12", label: "pilot students, 100% landed an internship or offer" },
     { value: "2027", label: "incoming investment banking summer analyst, Barclays" },
   ],
@@ -34,13 +36,13 @@ export const founder = {
   // Newest first. Barclays shows "Summer 2027", the role, not the Jan 2026
   // offer date. An empty `dates` doesn't render.
   experience: [
-    { org: "K1 Investment Management", role: "AI Engineering Intern", dates: "Oct 2026 – Present", detail: "AI automations", status: "current", caption: "AI Engineering Intern", logo: "/logos/tyler/k1.svg", logoRatio: 1 },
-    { org: "Barclays Investment Bank", role: "Incoming 2027 Investment Banking Summer Analyst", dates: "Summer 2027", detail: "Global Technology Group · San Francisco Bay Area", status: "incoming", caption: "IB Summer Analyst · 2027", logo: "/logos/tyler/barclays.svg", logoRatio: 174 / 29 },
-    { org: "Deloitte", role: "Summer Analyst", dates: "Jun – Aug 2026", detail: "", status: "past", caption: "Summer Analyst", logo: "/logos/tyler/deloitte.svg", logoRatio: 182 / 34 },
-    { org: "Concordia Capital", role: "Tech Investment Banking Summer Analyst", dates: "Summer 2025", detail: "", status: "past", caption: "Tech IB Summer Analyst", logo: "/logos/concordia-capital.png", logoRatio: 907 / 314 },
-    { org: "CB Capital", role: "Tech Investment Banking Fall Co-op", dates: "Sep 2025 – Feb 2026", detail: "", status: "past", caption: "Tech IB Co-op", logo: "/logos/tyler/cb-capital.png", logoRatio: 1 },
-    { org: "Futuraiser", role: "Deeptech Venture Capital", dates: "Apr – Jun 2026", detail: "", status: "past", caption: "Venture Capital", logo: "/logos/futuraiser.png", logoRatio: 1396 / 222, logoMono: true },
-    { org: "Crosspoint Financial", role: "FP&A", dates: "Aug 2024 – Aug 2025", detail: "", status: "past", caption: "FP&A", logo: "/logos/tyler/crosspoint-financial.png", logoRatio: 155 / 57 },
+    { org: "K1 Investment Management", role: "AI Engineering Intern", dates: "Oct 2026 – Present", detail: "AI automations", category: "AI Engineering", status: "current", caption: "AI Engineering Intern", logo: "/logos/tyler/k1.svg", logoRatio: 1 },
+    { org: "Barclays Investment Bank", role: "Incoming 2027 Investment Banking Summer Analyst", dates: "Summer 2027", detail: "Global Technology Group · San Francisco Bay Area", category: "Finance", status: "incoming", caption: "IB Summer Analyst · 2027", logo: "/logos/tyler/barclays.svg", logoRatio: 174 / 29 },
+    { org: "Deloitte", role: "Summer Analyst", dates: "Jun – Aug 2026", detail: "", category: "Accounting (Tax)", status: "past", caption: "Summer Analyst", logo: "/logos/tyler/deloitte.svg", logoRatio: 182 / 34 },
+    { org: "Concordia Capital", role: "Tech Investment Banking Summer Analyst", dates: "Summer 2025", detail: "", category: "Finance", status: "past", caption: "Tech IB Summer Analyst", logo: "/logos/concordia-capital.png", logoRatio: 907 / 314 },
+    { org: "CB Capital", role: "Tech Investment Banking Fall Co-op", dates: "Sep 2025 – Feb 2026", detail: "", category: "Finance", status: "past", caption: "Tech IB Co-op", logo: "/logos/tyler/cb-capital.png", logoRatio: 1 },
+    { org: "Futuraiser", role: "Deeptech Venture Capital", dates: "Apr – Jun 2026", detail: "", category: "Finance", status: "past", caption: "Venture Capital", logo: "/logos/futuraiser.png", logoRatio: 1396 / 222, logoMono: true },
+    { org: "Crosspoint Financial", role: "FP&A", dates: "Aug 2024 – Aug 2025", detail: "", category: "Finance (FP&A)", status: "past", caption: "FP&A", logo: "/logos/tyler/crosspoint-financial.png", logoRatio: 155 / 57 },
   ] as Experience[],
 
   education: { school: "UC Irvine", field: "Finance & Computer Science" },
@@ -72,8 +74,10 @@ export function storyParagraph2() {
 // Credentials with a value, as one line each ("12 pilot students, 100% …").
 export const shownCredentials = () => founder.credentials.filter((c) => c.value.trim() !== "");
 
-// "N internships" once Tyler sets the number; empty until then.
+// "10+ internships across finance, accounting, sales, and AI engineering":
+// the one-line summary of Tyler's background (founder card, /about, the coach
+// card, the FAQ). Empty until the number is set.
 export const internshipsLine = () => {
-  const c = founder.credentials.find((x) => x.label === "internships");
-  return c?.value ? `${c.value} internships` : "";
+  const c = founder.credentials.find((x) => x.id === "internships");
+  return c?.value ? `${c.value} ${c.label}` : "";
 };
