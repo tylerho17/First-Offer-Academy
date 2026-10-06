@@ -70,7 +70,6 @@ export default function PaymentToggle() {
           <>
             <p className="pay-amt">{c.deposit} deposit</p>
             <p>{site.refundTerms}</p>
-            <p style={{ marginTop: 12 }}>Already paid it? We&apos;ll email your {c.balance} balance link.</p>
             <div className="btn-row"><PayButton className="btn btn-secondary" /></div>
             <DepositNote />
           </>

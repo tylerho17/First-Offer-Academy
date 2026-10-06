@@ -126,7 +126,7 @@ export default async function ParentsPage() {
             <ul className="checks">
               <li><Check />{c.price}, everything included</li>
               <li><Check />A {c.deposit} deposit holds a seat and counts toward tuition. It&apos;s fully refundable through {site.depositRefundDeadline}.</li>
-              <li><Check />The {c.balance} balance is due {c.balanceDue}</li>
+              <li><Check />The remaining {c.balance} is invoiced separately and due {c.balanceDue}</li>
               <li><Check />Payments are processed by Stripe; we never see your card number</li>
             </ul>
             <div className="btn-row">

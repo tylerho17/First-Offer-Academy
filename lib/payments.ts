@@ -9,8 +9,6 @@ export const payments = {
   deposit: "https://buy.stripe.com/4gM9ALgTDgXd6JQbpT6g802", // $1,000
   full: "https://buy.stripe.com/aFa14f0UF6iz1pw9hL6g803", // $5,000
 
-  // Balance links for families who already paid the deposit. Emailed, never
-  // shown on the site.
-  // TODO(Tyler): [[STRIPE_BALANCE_FULL_URL]] — the $4,000 balance.
-  balanceFull: "",
+  // No balance link: after the deposit, the remaining balance is sent as a
+  // separate Stripe Invoice.
 };

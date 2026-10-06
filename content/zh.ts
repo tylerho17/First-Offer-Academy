@@ -53,7 +53,7 @@ export const zh = {
     title: "费用",
     items: [
       `学费：${c.price}，全部包含。`,
-      `${c.deposit}订金即可保留名额，并计入学费；截至${site.depositRefundDeadline}（含）可全额退还。余款${c.balance}须在第1周前付清。`,
+      `${c.deposit}订金即可保留名额，并计入学费；截至${site.depositRefundDeadline}（含）可全额退还。余款${c.balance}将另行开具发票，须在第1周前付清。`,
       "所有付款均通过 Stripe 安全处理，我们不会看到或保存您的银行卡号。",
       "具体退款条款请参阅英文版《退款与付款政策》。",
     ],
