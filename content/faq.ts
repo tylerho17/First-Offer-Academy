@@ -1,6 +1,6 @@
 import { founderInternships, PILOT_LANDED, PILOT_STUDENTS, site, spell } from "./site";
 import { internshipsLine } from "./founder";
-import { afterProgram, formatNote, offerOrRefund, oneOnOneFormat, sessionFormat } from "./program";
+import { afterProgram, formatNote, minimumLines, offerOrRefund, oneOnOneFormat, sessionFormat } from "./program";
 import { rhythmNotes, weeklyRhythm } from "./curriculum";
 import { programOverview } from "./programOverview";
 import { promise } from "./promise";
@@ -99,11 +99,8 @@ export const faqs: Faq[] = [
             : "Outreach time on top of that will be confirmed before the cohort starts."
         }`,
     list: [
-      offerOrRefund.minimums.training,
-      offerOrRefund.minimums.sprint,
-      offerOrRefund.minimums.after,
-      offerOrRefund.minimums.makeup,
-      // "Hit the weekly minimums" is covered by the four lines above.
+      ...minimumLines(),
+      // "Hit the weekly minimums" is covered by the lines above.
       ...promise.weAsk.items.slice(1).map((i) => `${i.title}: ${i.body}`),
     ],
   },

@@ -1,5 +1,5 @@
 import { site } from "../site";
-import { afterProgram, offerOrRefund } from "../program";
+import { afterProgram, minimumLines, offerOrRefund } from "../program";
 import { legalContact, type LegalDoc } from "./types";
 
 const c = site.cohort;
@@ -39,7 +39,7 @@ export const refunds: LegalDoc = {
     { type: "h2", text: "Offer-or-refund" },
     { type: "p", text: offerOrRefund.body },
     { type: "p", text: `Terms: ${offerOrRefund.terms}` },
-    { type: "p", text: `The weekly minimums. ${offerOrRefund.minimums.training} ${offerOrRefund.minimums.sprint} ${offerOrRefund.minimums.after} ${offerOrRefund.minimums.makeup}` },
+    { type: "p", text: `The weekly minimums. ${minimumLines().join(" ")}` },
     { type: "p", text: "Outside offer-or-refund and the rules above, not landing an internship offer is not by itself grounds for a refund. See [Our Promise](/program#promise) for what we commit to." },
 
     { type: "h2", text: "If we cancel or change the cohort" },

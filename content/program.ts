@@ -36,13 +36,22 @@ export const offerOrRefund = {
   terms:
     "Any internship offer, paid or unpaid, counts, including one that's declined. Minimums must be met and logged every week (one makeup week allowed). Dropping, pausing, or missing minimums past the makeup week ends eligibility. Refund requests are due by June 15, 2027 and paid within 30 days.",
   minimums: {
-    training: "Weeks 1–8: 50 outreach emails, follow-ups on schedule, 3 networking calls, every session and 1:1 attended, assignments in by Sunday 11:59 pm, scheduled mocks completed.",
-    sprint: "Weeks 9–12: 25 outreach emails, follow-ups on schedule, 2 networking calls, weekly mock completed, applications logged.",
+    // Outreach ramps up across the 12 weeks, never down.
+    foundation: "Weeks 1–4: 25 outreach emails and 2 networking calls per week, follow-ups on schedule, every session and 1:1 attended, assignments in by Sunday 11:59 pm, scheduled mocks completed.",
+    training: "Weeks 5–8: 50 outreach emails and 3 networking calls per week, follow-ups on schedule, every session and 1:1 attended, assignments in by Sunday 11:59 pm, scheduled mocks completed.",
+    sprint: "Weeks 9–12: 75 outreach emails and 4–5 networking calls per week, follow-ups on schedule, weekly mock completed, applications logged.",
     // TODO(Tyler): confirm the post-Week-12 maintenance minimum also governs
     // offer-or-refund eligibility (it replaced the old "Weeks 9–12 and after" line).
     after: "After Week 12: 100 outreach emails, follow-ups on schedule, 6–8 networking calls, a mock interview every other week, applications logged.",
     makeup: "One makeup week allowed.",
   },
+};
+
+// The weekly minimums in order (Weeks 1–4 → after Week 12), then the makeup
+// rule: the one list the FAQ and /refunds read.
+export const minimumLines = () => {
+  const m = offerOrRefund.minimums;
+  return [m.foundation, m.training, m.sprint, m.after, m.makeup];
 };
 
 export { tracks } from "./tracks";
