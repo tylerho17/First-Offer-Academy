@@ -9,10 +9,10 @@ Conversion goal, in order: 1) Apply, 2) Book a free parent call (Calendly), 3) R
 ## Facts the site may state
 
 - Program: 12 weeks, founding cohort starts January 2027 (winter quarter).
-- Tracks: Finance and Accounting (Marketing removed 2026-10-05). Positioning: "For business freshmen and sophomores. Built for finance and accounting recruiting; the outreach and interview system works for any business role."
-- Who: first- and second-year college students in Orange County, including community college students. Treat them as starting from zero; no club membership needed.
+- Tracks: Finance and Accounting (Marketing removed 2026-10-05). Positioning: "For business students starting recruiting. Built for finance and accounting; the outreach and interview system works for any business role."
+- Who: business students starting recruiting, including community college students. Treat them as starting from zero; no club membership needed.
 - Seats: 12 (founding cohort cap, `content/site.ts` → `cohort.seats`).
-- Price: $5,000. $1,000 refundable deposit holds a seat.
+- Price: not shown on the site (covered on the parent call). A refundable deposit holds a seat. One full-tuition scholarship seat per cohort (/scholarship). No payment plan.
 - Format: weekly 90-minute group session + weekly 15-minute 1:1 + accountability pod of 3.
 - The Standard: 6 levels graded on evidence (Foundation → Launched → In Motion → Networked → Interviewing → Offer).
 - Week 12: family meeting where the student presents their results and a side-by-side of their Week 1 and Week 12 recorded intros.
@@ -114,10 +114,9 @@ Four cream cards with an icon each: Finance, Consulting, Marketing, Tech (softwa
 
 ### 11. Price band (navy band, cream text)
 - H2: **Founding cohort · January 2027**
-- Sage price box: **$5,000**
 - Bullets: 12 weekly sessions · 12 1:1s · accountability pod · resume, outreach & interview toolkit · graded mocks · biweekly parent reports
-- "12 seats. A $1,000 refundable deposit holds your spot."
-- Buttons: **Apply now** (sage, navy text) · Book a parent call (cream outline)
+- "Limited seats. Tuition and scholarship details are covered on the parent call."
+- Buttons: **Book a parent call** (sage, navy text) · "Apply for the scholarship seat" (cream underlined link, /scholarship)
 
 ### 12. FAQ (cream panels, accordion)
 Top 6 on home, full list on /faq:

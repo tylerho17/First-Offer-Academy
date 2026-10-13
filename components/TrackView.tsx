@@ -7,7 +7,6 @@ import LatestArticles from "./sections/LatestArticles";
 import FinalCta from "./sections/FinalCta";
 import { Check } from "./Icons";
 import PrimaryCTA from "./PrimaryCTA";
-import PayButton from "@/components/PayButton";
 
 export default function TrackView({ track }: { track: Track }) {
   return (
@@ -20,7 +19,7 @@ export default function TrackView({ track }: { track: Track }) {
           <div className="cta-block">
             <PrimaryCTA location="track" />
           </div>
-          <p className="hero-secondary"><PayButton className="link-arrow">Reserve a seat →</PayButton></p>
+          <p className="hero-secondary"><Link href="/apply" className="link-arrow">Apply →</Link></p>
           <div className="pill-row" style={{ marginTop: 28 }}>
             <span className="pill-label">Other tracks:</span>
             {tracks.filter((t) => t.slug !== track.slug).map((t) => (

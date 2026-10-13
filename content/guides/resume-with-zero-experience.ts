@@ -86,7 +86,7 @@ export const guide: Guide = {
     h2("Formatting that passes the 6-second test"),
     p("Most readers decide in about six seconds whether to keep reading. In those six seconds, a stranger should be able to tell what you're interested in, and your strongest item should be in the top third of the page."),
     ul(
-      "One page. No exceptions for first- and second-year students.",
+      "One page. No exceptions for students starting recruiting.",
       "One standard font, 10–12 pt body, margins of at least 0.5 inch.",
       "No photos, graphics, skill bars, color blocks, or two-column templates. They look nice and read badly, and many application systems can't parse them.",
       "Consistent dates, punctuation, and alignment on every line.",

@@ -32,7 +32,7 @@ export const offerSprint = {
 // describe it any other way). The FAQ, /refunds, and /terms read these.
 export const offerOrRefund = {
   title: "Offer-or-refund",
-  body: "Do the work and we stand behind it. If your student hits every weekly minimum through May 31, 2027 and doesn't receive an internship offer, paid or unpaid, we refund the full $5,000.",
+  body: "Do the work and we stand behind it. If your student hits every weekly minimum through May 31, 2027 and doesn't receive an internship offer, paid or unpaid, we refund your full tuition.",
   terms:
     "Any internship offer, paid or unpaid, counts, including one that's declined. Minimums must be met and logged every week (one makeup week allowed). Dropping, pausing, or missing minimums past the makeup week ends eligibility. Refund requests are due by June 15, 2027 and paid within 30 days.",
   minimums: {
@@ -75,7 +75,7 @@ export const leavesWith = {
 };
 
 
-// What tuition buys, in plain terms. Shown on /pricing under the price.
+// What tuition buys, in plain terms. Shown on /pricing.
 export const pricingIncludes = [
   "Week 0 pre-work over winter break, starting the day you enroll",
   "Weeks 1–8, core teaching: a 90-minute group session and a 60-minute 1:1 every week, and a pod of three",
@@ -83,7 +83,7 @@ export const pricingIncludes = [
   "After Week 12: a 20-minute weekly check-in and a mock interview every other week until your offer or May 31, 2027, while your student keeps up 100 outreach emails and 6–8 networking calls a week",
   "Progress report for parents every two weeks, and the Week 8 family meeting",
   "Coached Extern externship applications, Extern fee covered",
-  "Offer-or-refund: hit every weekly minimum and get no offer by May 31, 2027, and we refund the full $5,000",
+  "Offer-or-refund: hit every weekly minimum and get no offer by May 31, 2027, and we refund your full tuition",
 ];
 
 // The externship block. Applications and coaching are what we provide;

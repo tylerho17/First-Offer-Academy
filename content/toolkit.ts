@@ -15,16 +15,16 @@ export const fiveThings = [
   { rank: 1, name: "Networking", why: "Most early internships are filled by someone who already knows you, or knows someone who does. A resume gets read because a person asked to see it." },
   { rank: 2, name: "Resume", why: "It's the document every conversation ends up at. It doesn't need to be impressive; it needs to be clean, specific, and easy to talk through." },
   { rank: 3, name: "Enthusiasm", why: "Interviewers hire people they want to sit next to for ten weeks. Real interest in the work, backed by specifics, beats a perfect answer." },
-  { rank: 4, name: "Behaviorals", why: "\"Tell me about a time…\" questions decide more first rounds than technicals do, especially for freshmen and sophomores." },
-  { rank: 5, name: "Technicals", why: "They matter, and you'll learn them. But for first- and second-year roles, nobody expects you to know everything. They expect you to be learning." },
+  { rank: 4, name: "Behaviorals", why: "\"Tell me about a time…\" questions decide more first rounds than technicals do, especially for students starting recruiting." },
+  { rank: 5, name: "Technicals", why: "They matter, and you'll learn them. But for students starting recruiting, nobody expects you to know everything. They expect you to be learning." },
 ];
 
 export const earlyMarket = [
   { name: "Boutiques", body: "Small, specialized firms (advisory, investment, accounting, agencies). Fewer applicants, and a single conversation can turn into an interview." },
-  { name: "Middle-market firms", body: "Firms that work with mid-sized companies. Real work, lean teams, and more willingness to take a first- or second-year intern." },
+  { name: "Middle-market firms", body: "Firms that work with mid-sized companies. Real work, lean teams, and more willingness to take an intern who's just starting out." },
   { name: "Local firms near you", body: "Wealth managers, accounting and advisory firms, family offices, agencies, and operating companies. Being local is an advantage you should use." },
   { name: "Startups", body: "They hire for hustle and learn-fast. Founders often answer cold emails themselves." },
-  { name: "Early-insight and diversity programs", body: "Structured programs at larger firms built for first- and second-year students. Deadlines are early and dates change every year, so check each one directly." },
+  { name: "Early-insight and diversity programs", body: "Structured programs at larger firms built for students early in college. Deadlines are early and dates change every year, so check each one directly." },
 ];
 
 // ---------------------------------------------------------------- calendar
@@ -53,7 +53,7 @@ export const resumeRubric = [
   {
     area: "Format",
     checks: [
-      "One page. No exceptions for first- and second-year students.",
+      "One page. No exceptions for students starting recruiting.",
       "One clean, standard font; 10–12 pt body; margins no smaller than 0.5 in.",
       "No photos, graphics, color blocks, skill bars, or two-column templates.",
       "Consistent dates, punctuation, and alignment on every line.",
@@ -158,7 +158,7 @@ export const introStructure = [
 
 export const targetTiers = [
   { tier: "A", name: "Dream firms", share: "About 10", purpose: "For relationships, not for this season's offer. You're playing the long game here: calls, updates, and staying warm into sophomore and junior year." },
-  { tier: "B", name: "Realistic", share: "About 30", purpose: "Boutiques, middle-market firms, local firms, and startups. This is where most first- and second-year internships actually come from." },
+  { tier: "B", name: "Realistic", share: "About 30", purpose: "Boutiques, middle-market firms, local firms, and startups. This is where most early internships actually come from." },
   { tier: "C", name: "Safe", share: "About 10", purpose: "Places very likely to take a freshman: local businesses, campus roles, small startups, family-network companies. Reps and a line on the resume." },
 ];
 
@@ -315,7 +315,7 @@ export const callQuestionBank = {
     "What makes [firm] different from similar firms you considered?",
     "How does the team work together day to day?",
     "What's the firm focused on this year?",
-    "Does the team ever take first- or second-year interns, formally or informally?",
+    "Does the team ever take interns early in college, formally or informally?",
   ],
   advice: [
     "Where would you focus if you were in my position this year?",

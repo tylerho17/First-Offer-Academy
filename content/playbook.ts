@@ -33,7 +33,7 @@ export const chapters: Chapter[] = [
     n: 1,
     slug: "how-recruiting-works",
     title: "How recruiting actually works",
-    summary: "The 5 things that matter, ranked, and the market freshmen and sophomores can actually win.",
+    summary: "The 5 things that matter, ranked, and the market students starting recruiting can actually win.",
     blocks: [
       p("Here's the thing nobody tells you as a freshman: recruiting doesn't reward the smartest student. It rewards the most persistent one. The student who sent the 40th email, followed up on time, and practiced their stories out loud will beat the student with the better GPA who waited to be discovered."),
       p("Most students study for recruiting in reverse order. They start with technicals because that feels like school, then they polish the resume, and networking comes last, if at all. The actual order of importance is the opposite."),
@@ -41,7 +41,7 @@ export const chapters: Chapter[] = [
       h3("Why clubs matter less than people think"),
       p("Clubs are useful. They give you reps, mock interviews, and a group chat of people going through the same thing. But a club is one way to get those things, not a gate you have to pass. If you didn't get in, you haven't lost anything you can't build yourself: a resume that passes a rubric, a target list, an outreach system, and a stack of calls."),
       h3("The freshman and sophomore market"),
-      p("The famous firms with the famous programs are a small slice of the market, and they're where everyone applies. The rest of the market is bigger, quieter, and much more open to a first- or second-year student who shows up prepared:"),
+      p("The famous firms with the famous programs are a small slice of the market, and they're where everyone applies. The rest of the market is bigger, quieter, and much more open to a student starting recruiting who shows up prepared:"),
       tb.earlyMarket(),
       tyler("Networking is ranked first for a reason. Early opportunities rarely start in an application portal. They start with someone who replied to an email and remembered the call."),
       check("Chapter 1 checklist", [
@@ -212,7 +212,7 @@ export const chapters: Chapter[] = [
     title: "Behavioral stories",
     summary: "The 25 self-questions, the story template, and mapping 8 stories to 10 questions.",
     blocks: [
-      p("Behavioral questions decide more first rounds for freshmen and sophomores than technicals do. You need 8 stories, chosen for uniqueness, not impressiveness. The best stories are usually the ones you think are too small."),
+      p("Behavioral questions decide more first rounds for students starting recruiting than technicals do. You need 8 stories, chosen for uniqueness, not impressiveness. The best stories are usually the ones you think are too small."),
       h3("Step 1: answer the 25 self-questions"),
       p("Don't write stories yet. Just answer these honestly, in bullet points. This is your raw material."),
       tb.selfQuestions(),
@@ -255,7 +255,7 @@ export const chapters: Chapter[] = [
     title: "Technicals by track",
     summary: "Study order and question lists for Finance and Accounting, plus Marketing and Tech.",
     blocks: [
-      p("Understand the concept first; the answer comes easier after that. For first- and second-year roles, nobody expects you to know everything. They expect you to be learning, and to reason out loud when you don't know. Say answers out loud, work on paper, and use AI to close gaps, not to hand you answers."),
+      p("Understand the concept first; the answer comes easier after that. For students starting recruiting, nobody expects you to know everything. They expect you to be learning, and to reason out loud when you don't know. Say answers out loud, work on paper, and use AI to close gaps, not to hand you answers."),
       ...tb.technicalsAll(10),
       p("The full question bank for each track is a free download."),
       check("Chapter 11 checklist", [

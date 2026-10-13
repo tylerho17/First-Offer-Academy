@@ -1,24 +1,22 @@
 import { z } from "zod";
-import { bool, email, formRoute, optText, reqText } from "@/lib/formRoute";
+import { email, formRoute, reqText } from "@/lib/formRoute";
 import { sendEmail } from "@/lib/emails/send";
 import { applyConfirmation, applyNotify } from "@/lib/emails/templates";
 
+// The short application (/apply). Stored in public.applications; the
+// "Where are you in recruiting right now?" answer goes in recruiting_status
+// (supabase/migrations/005_applications_short_form.sql). Until that migration
+// runs, formRoute drops the missing column and the answer still reaches Tyler
+// in the notification email.
 const schema = z.object({
   name: reqText(),
   email: email(),
-  phone: optText(40),
+  phone: reqText(40),
   school: reqText(),
+  major: reqText(120),
   year: reqText(40),
-  major: optText(120),
-  tracks: z.array(z.enum(["Finance", "Accounting"])).max(2).optional().default([]),
-  gpa: optText(40),
-  source: optText(300),
-  tried: optText(3000),
-  obstacle: optText(3000),
-  parentName: optText(200),
+  recruiting: reqText(3000),
   parentEmail: z.union([email(), z.literal("")]).optional().transform((v) => v || null),
-  agreeTerms: z.literal(true, { error: "You must agree to the Terms and Privacy Policy." }),
-  updatesConsent: bool(),
 });
 
 export const POST = formRoute({
@@ -30,17 +28,12 @@ export const POST = formRoute({
     email: d.email,
     phone: d.phone,
     school: d.school,
-    year: d.year,
     major: d.major,
-    tracks: d.tracks,
-    gpa: d.gpa,
-    source: d.source,
-    tried: d.tried,
-    obstacle: d.obstacle,
-    parent_name: d.parentName,
+    year: d.year,
+    recruiting_status: d.recruiting,
     parent_email: d.parentEmail,
-    agree_terms: d.agreeTerms,
-    updates_consent: d.updatesConsent,
+    // The form states that applying means agreeing to the Terms and Privacy Policy.
+    agree_terms: true,
   }),
   after: async (d) => {
     await Promise.allSettled([

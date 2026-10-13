@@ -93,7 +93,7 @@ export const guide: Guide = {
     h3("Marketing"),
     p("Marketing timelines are more rolling. Many roles post in winter and spring, and smaller agencies and startups hire when they need someone. Build two portfolio pieces (a campaign idea and an analysis) so you're ready when a role posts."),
     h3("Accounting"),
-    p("Many public accounting firms run early-identification and leadership programs for freshmen and sophomores that feed into junior-summer internships, the main path to full-time offers. Freshman goals: resume, target list, firm recruiting events and office visits, and a coursework plan, since most states require 150 credit hours for the CPA."),
+    p("Many public accounting firms run early-identification and leadership programs for students early in college that feed into junior-summer internships, the main path to full-time offers. Freshman goals: resume, target list, firm recruiting events and office visits, and a coursework plan, since most states require 150 credit hours for the CPA."),
     h3("Tech"),
     p("Many tech internships post in late summer and fall for the following summer, and referrals matter a lot. Freshman goals: one strong project you can explain end to end, steady coding practice, and relationships with engineers and product people who can refer you."),
 

@@ -27,7 +27,7 @@ export const faqs: Faq[] = [
     parent: true,
     id: "offer-or-refund",
     q: "What if my student doesn't land an offer?",
-    a: `Check-ins and mocks continue through ${afterProgram.until}. If they've met every weekly minimum and still have no offer, you get a full $5,000 refund. Terms: ${offerOrRefund.terms}`,
+    a: `Check-ins and mocks continue through ${afterProgram.until}. If they've met every weekly minimum and still have no offer, you get a full tuition refund. Terms: ${offerOrRefund.terms}`,
   },
   {
     group: "Results and refunds",
@@ -50,7 +50,7 @@ export const faqs: Faq[] = [
     q: "Is this right for my student?",
     video: ["faq-right-fit-1", "faq-right-fit-2"],
     // Merged: "Who is First Offer Academy for?" and "Which majors is this for?"
-    a: `It fits a student who will do the work every week: the outreach, the calls, the reps. It doesn't fit a student who wants it done for them, and it isn't a fix for a student who doesn't want to be there. It's for business freshmen and sophomores. It's built for finance and accounting recruiting; the outreach and interview system works for any business role. In Track Technicals, students pick one of two tracks: Finance or Accounting. ${programOverview.whoFor.title.replace(/…$/, ":")}`,
+    a: `It fits a student who will do the work every week: the outreach, the calls, the reps. It doesn't fit a student who wants it done for them, and it isn't a fix for a student who doesn't want to be there. It's built for business students starting recruiting, in finance and accounting; the outreach and interview system works for any business role. In Track Technicals, students pick one of two tracks: Finance or Accounting. ${programOverview.whoFor.title.replace(/…$/, ":")}`,
     list: [...programOverview.whoFor.pains.map((p) => `${p.title}: ${p.body}`), programOverview.whoFor.callout],
   },
   {
@@ -67,7 +67,7 @@ export const faqs: Faq[] = [
   {
     group: "Fit",
     q: "Are community college students welcome?",
-    a: "Yes. The program is built for business freshmen and sophomores at any school, including community colleges.",
+    a: "Yes. The program is built for business students starting recruiting at any school, including community colleges.",
   },
   {
     group: "Fit",
@@ -145,8 +145,8 @@ export const faqs: Faq[] = [
     a: `Because the timelines, emails, and interviews Tyler coaches are ones he ran himself, recently. ${founderInternships() ? `${founderInternships()}. ` : ""}He also has an incoming investment banking summer analyst offer. In college he led finance recruiting education and coached ${spell(PILOT_STUDENTS)} pilot students: ${PILOT_LANDED} of ${PILOT_STUDENTS} landed an internship or offer.`,
   },
 
-  // Cost and alternatives. "Is there a payment plan?" was removed: there is
-  // no payment plan, only pay in full or the deposit plus the balance.
+  // Cost and alternatives. Tuition figures aren't on the site; they're covered
+  // on the parent call.
   {
     group: "Cost and alternatives",
     home: true,
@@ -154,6 +154,15 @@ export const faqs: Faq[] = [
     q: "Is the deposit refundable?",
     a: `${tba(site.refundTerms, "Exact refund dates will be published before deposits open.")} ${site.withdrawalPolicy}`.trim(),
     link: { label: "Read the Refund & Payment Policy", href: "/refunds" },
+  },
+  {
+    group: "Cost and alternatives",
+    home: true,
+    parent: true,
+    id: "financial-aid",
+    q: "Is there financial aid?",
+    a: `Yes: one full-tuition scholarship seat per cohort, the First Offer Scholarship, for a student who has the drive but not the means. Applications close ${site.scholarship.closes}.`,
+    link: { label: "About the scholarship", href: "/scholarship" },
   },
   {
     group: "Cost and alternatives",

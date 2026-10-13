@@ -8,6 +8,7 @@ import PlaybookBand from "@/components/sections/PlaybookBand";
 import LogoMarquee from "@/components/sections/LogoMarquee";
 import EventsStrip from "@/components/sections/EventsStrip";
 import PriceBand from "@/components/sections/PriceBand";
+import ScholarshipCard from "@/components/sections/ScholarshipCard";
 import HowItWorks from "@/components/sections/HowItWorks";
 import OfferOrRefund from "@/components/sections/OfferOrRefund";
 import FaqList from "@/components/sections/FaqList";
@@ -46,6 +47,7 @@ export default function Home() {
       <HomeTracks />
       <Testimonials />
       <PriceBand />
+      <ScholarshipCard />
       <OfferOrRefund />
       <EventsStrip />
       <FaqList />

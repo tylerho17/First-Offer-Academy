@@ -2,9 +2,7 @@ import { founder, internshipsLine } from "./founder";
 
 // Site-wide settings. Every outbound link on the site comes from here.
 
-const deposit = "$1,000";
 const depositRefundDeadline = "December 15, 2026";
-const balance = "$4,000";
 
 // Students coached in the pilot, before the academy existed. Every page that
 // states the pilot number reads this.
@@ -21,7 +19,7 @@ export const site = {
   name: "First Offer Academy",
   tagline: "Build the skills. Be that candidate. Get the offer.",
   // The homepage hero subhead, also the site's default meta description.
-  description: "For business freshmen and sophomores. Built for finance and accounting recruiting; the outreach and interview system works for any business role. 12 weeks of training and mocks, then weekly check-ins and mocks every other week until you land an offer.",
+  description: "For business students starting recruiting. Built for finance and accounting; the outreach and interview system works for any business role. 12 weeks of training and mocks, then weekly check-ins and mocks every other week until you land an offer.",
   domain: "firstofferacademy.com",
 
   founder: {
@@ -43,9 +41,9 @@ export const site = {
     name: "Founding cohort",
     start: "January 2027",
     seats: 12, // founding cohort cap; every page reads this
-    price: "$5,000", // everything included; paid in full, or the deposit then the invoiced balance
-    deposit,
-    balance, // invoiced separately (a Stripe Invoice) after the deposit; due before Week 1
+    // No tuition figure appears anywhere on the site: tuition and scholarship
+    // details are covered on the parent call. The deposit and the balance
+    // invoice are Stripe-side (lib/payments.ts).
     balanceDue: "before Week 1",
   },
 
@@ -91,22 +89,30 @@ export const site = {
   applicationDeadline: "",
   // Founding cohort refund terms. /refunds, /pricing, the FAQ, and the deposit
   // button all read these. Changing them changes a written promise to families.
-  refundTerms: `The ${deposit} deposit is fully refundable through ${depositRefundDeadline}. After that, it applies to tuition, and the remaining ${balance} is invoiced separately and due before Week 1.`,
+  refundTerms: `Your deposit is fully refundable through ${depositRefundDeadline}. After that, it applies to tuition, and the remaining tuition is invoiced separately and due before Week 1.`,
   depositRefundDeadline,
+  // The First Offer Scholarship: one full-tuition seat per cohort (/scholarship).
+  scholarship: {
+    closes: "November 30, 2026",
+    closesShort: "Nov 30",
+    finalists: "first week of December",
+    decision: "December 10, 2026",
+    replyBy: "December 7",
+  },
   withdrawalPolicy: "Withdraw before Week 3 for a prorated refund of unused weeks. No refunds after Week 3. If we cancel the cohort, every payment is refunded in full.",
 };
 
 // The line that sits next to every deposit button.
 export const depositRefundLine = () =>
-  `${site.cohort.deposit} deposit holds your seat, fully refundable through ${site.depositRefundDeadline}.`;
+  `Your deposit holds your seat, fully refundable through ${site.depositRefundDeadline}.`;
 
-// "A $1,000 deposit, refundable until December 15, 2026, holds a seat."
+// "A deposit, fully refundable through December 15, 2026, holds a seat."
 // Used wherever a page mentions the deposit, so no page calls it refundable
 // without the deadline.
 export const depositLine = () =>
   site.depositRefundDeadline
-    ? `A ${site.cohort.deposit} deposit, fully refundable through ${site.depositRefundDeadline}, holds a seat.`
-    : `A ${site.cohort.deposit} deposit holds a seat.`;
+    ? `A deposit, fully refundable through ${site.depositRefundDeadline}, holds a seat.`
+    : "A deposit holds a seat.";
 
 // "N internships" from content/founder.ts, plus the exact offer count once
 // Tyler sets founder.offerCount. Empty until Tyler sets the internship number.

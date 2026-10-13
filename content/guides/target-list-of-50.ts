@@ -28,7 +28,7 @@ export const guide: Guide = {
     h3("A tier: dream firms, for relationships"),
     p("These are the firms you'd be thrilled to work at. As a freshman, you're very unlikely to get an internship at most of them this year, and that's fine. You're emailing A-tier contacts to build relationships that pay off in sophomore and junior year. Ask about their path, stay in touch, and update them when you make progress."),
     h3("B tier: where freshman internships actually come from"),
-    p("This is the heart of your list. Boutiques, middle-market firms, local firms, and startups hire first- and second-year interns far more often than the famous names, and they get far fewer emails from students. A single good call at a B-tier firm can turn into an interview, because there may not be a formal program standing between you and the decision-maker."),
+    p("This is the heart of your list. Boutiques, middle-market firms, local firms, and startups hire interns early in college far more often than the famous names, and they get far fewer emails from students. A single good call at a B-tier firm can turn into an interview, because there may not be a formal program standing between you and the decision-maker."),
     h3("C tier: safe, and still valuable"),
     p("Local businesses, campus roles, small startups, and companies in your family's network. They give you reps (every call makes the next one better) and a real line on your resume. Never skip your C tier because it feels less exciting."),
 

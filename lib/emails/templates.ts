@@ -14,38 +14,73 @@ export function applyConfirmation(d: { name: string }) {
 
 Thanks for applying to ${site.name}'s ${site.cohort.name.toLowerCase()} (${site.cohort.start}). Tyler reads every application personally.
 
-Next step: book a short fit call if you haven't already: ${site.calendlyUrl}
+Next step: a 20-minute call with Tyler. Book it here if you haven't already: ${site.calendlyUrl}
 
 No payment has been taken. If you have questions, reply to this email.
 
 ${site.name}`;
   const html = layout({
-    preheader: "Tyler reads every application personally. Next step: a short fit call.",
+    preheader: "Tyler reads every application personally. Next step: a 20-minute call with Tyler.",
     heading: "We received your application.",
     body:
       p(hi(d.name)) +
       p(`Thanks for applying to the ${esc(site.cohort.name.toLowerCase())} (${esc(site.cohort.start)}). Tyler reads every application personally.`) +
-      p("Next step: book a short fit call if you haven't already.") +
-      button("Book your fit call", site.calendlyUrl) +
+      p("Next step: a 20-minute call with Tyler. Book it if you haven't already.") +
+      button("Book your call", site.calendlyUrl) +
       p("No payment has been taken. Questions? Just reply to this email."),
   });
   return { subject, text, html };
 }
 
 export function applyNotify(d: Record<string, unknown>) {
+  return fieldsNotify("New application", d);
+}
+
+// Every submitted field as a table, for Tyler. Subject: "<heading>: name (school)".
+function fieldsNotify(heading: string, d: Record<string, unknown>) {
   const rows = Object.entries(d)
     .filter(([, v]) => v !== null && v !== undefined && v !== "" && !(Array.isArray(v) && v.length === 0))
     .map(([k, v]) => [k, Array.isArray(v) ? v.join(", ") : String(v)] as const);
-  const subject = `New application: ${String(d.name ?? "")} (${String(d.school ?? "")})`;
+  const subject = `${heading}: ${String(d.name ?? "")} (${String(d.school ?? "")})`;
   const text = rows.map(([k, v]) => `${k}: ${v}`).join("\n");
   const html = layout({
     preheader: subject,
-    heading: "New application",
+    heading,
     body: `<table role="presentation" cellpadding="0" cellspacing="0" style="width:100%;font-size:14px">${rows
       .map(([k, v]) => `<tr><td style="padding:6px 12px 6px 0;vertical-align:top;color:#3F6690;font-weight:600;white-space:nowrap">${esc(k)}</td><td style="padding:6px 0">${esc(v)}</td></tr>`)
       .join("")}</table>`,
   });
   return { subject, text, html };
+}
+
+// The First Offer Scholarship: the applicant's confirmation.
+export function scholarshipConfirmation(d: { name: string }) {
+  const sc = site.scholarship;
+  const subject = "We received your scholarship application";
+  const text = `${hi(d.name)}
+
+Thanks for applying for the First Offer Scholarship: one full-tuition seat in the ${site.cohort.start} ${site.cohort.name.toLowerCase()}.
+
+Applications close ${sc.closes}. Finalists get a 15-minute call in the ${sc.finalists}, and we'll be in touch by ${sc.replyBy}.
+
+One seat per cohort. Applicants not selected can still enroll in the program.
+
+${site.name}`;
+  const html = layout({
+    preheader: `We'll be in touch by ${sc.replyBy}.`,
+    heading: "Got it.",
+    body:
+      p(hi(d.name)) +
+      p(`Thanks for applying for the First Offer Scholarship: one full-tuition seat in the ${esc(site.cohort.start)} ${esc(site.cohort.name.toLowerCase())}.`) +
+      p(`Applications close ${esc(sc.closes)}. Finalists get a 15-minute call in the ${esc(sc.finalists)}, and we'll be in touch by ${esc(sc.replyBy)}.`) +
+      p("One seat per cohort. Applicants not selected can still enroll in the program. Questions? Just reply to this email."),
+  });
+  return { subject, text, html };
+}
+
+// The scholarship application, for Tyler: every field as submitted.
+export function scholarshipNotify(d: Record<string, unknown>) {
+  return fieldsNotify("New scholarship application", d);
 }
 
 export function subscribeConfirmation(d: { email: string; firstName?: string | null; source?: string | null }) {

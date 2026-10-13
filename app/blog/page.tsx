@@ -16,7 +16,7 @@ export default function BlogPage() {
           <span className="eyebrow">Free recruiting guides</span>
           <h1>The First Offer Playbook</h1>
           <p className="lede">
-            In-depth guides to the exact system we use with our students, from the first resume to the first interview. Written for first- and second-year college students and their parents. Free, always.
+            In-depth guides to the exact system we use with our students, from the first resume to the first interview. Written for business students starting recruiting, and their parents. Free, always.
           </p>
         </div>
       </section>

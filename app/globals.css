@@ -505,12 +505,11 @@ a.topic-pill:hover { background: var(--navy); color: var(--cream); }
 .plan-list { list-style: none; padding: 0; margin: 24px 0 0; display: grid; gap: 12px; }
 .plan-list li { display: flex; gap: 10px; align-items: flex-start; font-size: 18px; }
 .plan-list svg { flex: none; width: 20px; height: 20px; margin-top: 4px; color: var(--dusty); }
-.pay-amt { font-family: var(--display); font-weight: 600; font-size: 24px; color: var(--navy); margin: 6px 0 10px; }
 
 /* /pricing: one centered cream card (single tier) */
 .price-card { max-width: 680px; margin: 0 auto; padding: 32px 24px; }
 @media (min-width: 768px) { .price-card { padding: 44px 48px; } }
-.price-card .price-amount { font-family: var(--display); font-weight: 600; font-size: 56px; line-height: 1.05; color: var(--navy); letter-spacing: -0.01em; margin: 6px 0 0; }
+.price-card .price-amount { font-family: var(--display); font-weight: 600; font-size: 32px; line-height: 1.15; color: var(--navy); letter-spacing: -0.01em; margin: 6px 0 0; }
 .price-card .price-sub { font-size: 18px; margin-top: 6px; }
 .price-card .price-line { font-size: 18px; margin-top: 8px; }
 .price-card .price-note { font-size: 18px; font-weight: 600; color: var(--navy); margin-top: 16px; }
@@ -550,10 +549,6 @@ a.topic-pill:hover { background: var(--navy); color: var(--cream); }
 /* Parent video grid (/results) */
 .price-card .vt { margin-top: 24px; }
 
-/* Payment links (components/PayOptions.tsx) */
-.pay-options { display: grid; gap: 10px; justify-items: start; margin-top: 24px; }
-.pay-alts { font-size: 18px; margin: 0; }
-.pay-alts a { color: var(--dusty); }
 .pay-note { font-size: 15px; color: var(--dusty); margin: 0; }
 .pay-note a { color: var(--dusty); }
 
@@ -1021,11 +1016,7 @@ a.featured-download:hover { transform: translateY(-3px); }
 .mobile-reserve { padding: 4px 0 10px; border-bottom: 1px solid var(--navy-line); }
 .mobile-reserve .btn { width: 100%; }
 .band .pay-note { color: var(--cream); margin-top: 14px; }
-.pay-options .pay-note:first-of-type { color: var(--ink); }
 .balance-note { margin-top: 12px; color: var(--ink); }
-.deposit-banner { margin-bottom: 20px; }
-.deposit-banner h2 { font-size: 28px; }
-.deposit-banner p { margin-top: 8px; }
 .parent-see { list-style: none; padding: 0; margin: 20px 0 0; display: grid; gap: 10px; max-width: 620px; }
 .parent-see li { display: flex; gap: 10px; align-items: flex-start; font-size: 18px; }
 .parent-see svg { flex: none; width: 20px; height: 20px; color: var(--dusty); margin-top: 4px; }
@@ -1400,18 +1391,7 @@ details.more summary { cursor: pointer; font-weight: 600; color: var(--dusty); f
 @media (prefers-reduced-motion: reduce) { .sticky-cta { transition: none; } }
 
 /* /pricing payment toggle (role="radiogroup") */
-.pay-toggle { display: grid; gap: 16px; max-width: 720px; }
 .seg { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 6px; border-radius: 18px; background: var(--cream); box-shadow: var(--shadow); }
-.seg-option { font: inherit; display: grid; grid-template-columns: 20px minmax(0, 1fr); align-items: center; gap: 2px 8px; min-height: 56px; padding: 10px 12px; border: 1.5px solid transparent; border-radius: 14px; background: transparent; color: var(--navy); cursor: pointer; text-align: left; }
-.seg-option.is-selected { border-color: var(--navy); background: var(--mist); }
-.seg-option:focus-visible { outline: 3px solid var(--dusty); outline-offset: 2px; }
-.seg-check { grid-row: 1 / span 2; width: 20px; height: 20px; display: grid; place-items: center; }
-.seg-check svg { width: 18px; height: 18px; }
-.seg-label { font-size: 16px; font-weight: 500; }
-.seg-option.is-selected .seg-label { font-weight: 700; }
-.seg-amount { grid-column: 2; font-size: 14px; color: var(--dusty); }
-.pay-panel { display: grid; gap: 8px; }
-.pay-panel .btn-row { margin-top: 8px; }
 .pay-policy { margin-top: 6px; }
 
 /* /pricing "How this compares": table from 768px, stacked cards below */
@@ -1465,3 +1445,28 @@ details.more summary { cursor: pointer; font-weight: 600; color: var(--dusty); f
 /* /playbook on the narrowest phones: columns may shrink, buttons may wrap. */
 .playbook-top > * { min-width: 0; }
 @media (max-width: 480px) { .timeline-card .btn { white-space: normal; text-align: center; width: 100%; } }
+
+/* Homepage scholarship card (below the navy band) and the /scholarship page. */
+.card.scholarship-card { display: grid; gap: 8px; padding: 24px; color: var(--ink); text-decoration: none; }
+.card.scholarship-card h2 { margin: 0; font-size: 28px; line-height: 1.2; }
+@media (min-width: 768px) { .card.scholarship-card { padding: 32px 36px; } .card.scholarship-card h2 { font-size: 32px; } }
+.card.scholarship-card:hover h2 { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.card.scholarship-card:focus-visible { outline: 3px solid var(--dusty); outline-offset: 3px; }
+
+/* /apply: the consent line under the short form; /apply/thanks. */
+.form-fine { margin: 0; font-size: 15px; color: var(--ink); }
+.apply-thanks { max-width: 720px; }
+.apply-thanks-deposit { margin-top: 28px; font-size: 16px; }
+.apply-thanks-deposit a { color: var(--dusty); font-weight: 600; text-decoration: underline; }
+
+.scholarship-intro { margin-top: 16px; max-width: 64ch; font-size: 18px; }
+.scholarship-grid { display: grid; gap: 16px; grid-template-columns: minmax(0, 1fr); align-items: stretch; }
+@media (min-width: 1024px) { .scholarship-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; } }
+.scholarship-grid h2 { font-size: 24px; margin: 0 0 4px; }
+.scholarship-grid .plan-list { margin-top: 12px; }
+.scholarship-grid p { margin-top: 12px; }
+.scholarship-timeline { margin: 12px 0 0; display: grid; gap: 12px; }
+.scholarship-timeline dt { font-size: 14px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--dusty); }
+.scholarship-timeline dd { margin: 2px 0 0; font-size: 18px; }
+.word-count { margin: 6px 0 0; font-size: 14px; color: var(--dusty); }
+.word-count.is-over { color: var(--navy); font-weight: 700; }

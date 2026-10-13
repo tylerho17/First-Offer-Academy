@@ -1,5 +1,5 @@
 import { payments } from "@/lib/payments";
-import { depositRefundLine, site } from "@/content/site";
+import { depositRefundLine } from "@/content/site";
 
 type Kind = "deposit" | "full";
 
@@ -14,7 +14,7 @@ export default function PayButton({
 }: { kind?: Kind; className?: string; children?: React.ReactNode }) {
   return (
     <a href={payments[kind]} className={className} target="_blank" rel="noopener noreferrer" data-event={EVENTS[kind]}>
-      {children ?? `Reserve a seat · ${site.cohort.deposit}`}
+      {children ?? "Reserve your seat with the refundable deposit"}
     </a>
   );
 }
