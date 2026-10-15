@@ -8,11 +8,11 @@ import VideoCard from "@/components/VideoCard";
 import Stat from "@/components/ui/Stat";
 import LogoTile from "@/components/ui/LogoTile";
 import CTABanner from "@/components/ui/CTABanner";
-import { founder, shownCredentials, storyParagraph2, type Experience } from "@/content/founder";
+import { cofounder, founder, shownCredentials, storyParagraph2, type Experience } from "@/content/founder";
 
 export const metadata: Metadata = pageMeta({
   title: "About",
-  description: `Who's coaching your student: ${founder.name}, ${founder.title.toLowerCase()} of First Offer Academy. ${founder.education.field} at ${founder.education.school}, and an incoming 2027 investment banking summer analyst.`,
+  description: `Who's coaching your student: ${founder.name}, ${founder.title.toLowerCase()} (${founder.education.field} at ${founder.education.school}, incoming 2027 investment banking summer analyst), and co-founder ${cofounder.name} (${cofounder.education.field} at ${cofounder.education.school}, incoming investment banking analyst at Piper Sandler).`,
 });
 
 const BADGES: Partial<Record<Experience["status"], { label: string; tone: "navy" | "sage" }>> = {
@@ -22,7 +22,8 @@ const BADGES: Partial<Record<Experience["status"], { label: string; tone: "navy"
 
 // /about, compact: about two screens on desktop. Every section shares one
 // left edge and one max-width (.wrap). Tyler's photo appears once. Every fact
-// comes from content/founder.ts; an empty field renders nothing.
+// comes from content/founder.ts; an empty field renders nothing. Co-founder
+// Kenji follows in the same layout one heading level down (h2, then h3s).
 export default function AboutPage() {
   const intro = founder.introVideoId
     ? { youtubeId: founder.introVideoId, person: "Tyler", kind: "student" as const, title: "Meet Tyler", spot: "about-intro" as const }
@@ -75,6 +76,48 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Co-founder: Kenji. Same layout as Tyler's, one heading level down. */}
+      <section className="about-section about-cofounder about-top" aria-labelledby="kenji-title">
+        <div className="about-photo">
+          <Image src={cofounder.photo.src} alt={`${cofounder.name}, ${cofounder.title.toLowerCase()} of First Offer Academy`} width={cofounder.photo.width} height={cofounder.photo.height} sizes="(min-width: 1024px) 280px, 240px" />
+        </div>
+        <div className="about-intro">
+          <span className="eyebrow">Co-founder</span>
+          <h2 id="kenji-title" className="about-name">Hi, I&apos;m {cofounder.firstName}.</h2>
+          <p className="lede">{cofounder.oneLiner}</p>
+          <p className="about-title-line">{cofounder.name} · {cofounder.title}</p>
+          {cofounder.linkedin && <p><LinkedInLink href={cofounder.linkedin} /></p>}
+        </div>
+        <div className="about-stats" aria-label={`${cofounder.name}'s credentials`}>
+          {cofounder.credentials.map((c) => <Stat key={c.label} value={c.value} label={c.label} />)}
+        </div>
+      </section>
+
+      <section className="about-section" aria-labelledby="kenji-worked-title">
+        <h3 id="kenji-worked-title" className="about-h">Where I&apos;ve worked</h3>
+        <ul className="about-logos">
+          {cofounder.experience.map((e) => (
+            <li key={e.org}>
+              <LogoTile name={e.org} caption={e.caption} logo={e.logo} ratio={e.logoRatio} mono={e.logoMono} monogram={e.monogram} badge={BADGES[e.status]} category={e.category} />
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="about-section about-split">
+        <div className="about-prose" aria-labelledby="kenji-story-title">
+          <h3 id="kenji-story-title" className="about-h">My story</h3>
+          {cofounder.story.map((p) => <p key={p.slice(0, 24)}>{p}</p>)}
+        </div>
+        <div aria-labelledby="kenji-edu-title">
+          <h3 id="kenji-edu-title" className="about-h">Education &amp; leadership</h3>
+          <p className="about-school"><strong>{cofounder.education.school}</strong> · {cofounder.education.field}</p>
+          <ul className="about-leadership">
+            {cofounder.leadership.map((l) => <li key={l}>{l}</li>)}
+          </ul>
+        </div>
+      </section>
+
       {/* Intro video: renders only once a real YouTube id is set */}
       {intro && (
         <section className="about-section about-video">
@@ -86,7 +129,7 @@ export default function AboutPage() {
         <CTABanner
           title="Book a parent call"
           body={site.callNote}
-          action={<PrimaryCTA location="about">Book a call with Tyler</PrimaryCTA>}
+          action={<PrimaryCTA location="about">Book a call with us</PrimaryCTA>}
         />
       </section>
     </div>

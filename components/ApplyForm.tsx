@@ -67,7 +67,7 @@ export default function ApplyForm() {
 
       {status === "unconnected" && (
         <p className="form-status" role="status">
-          Your application didn&apos;t go through. Please <a href={site.calendlyUrl} target="_blank" rel="noopener noreferrer">book a call with Tyler</a> directly, or email <a href={`mailto:${site.email}`}>{site.email}</a>.
+          Your application didn&apos;t go through. Please <a href={site.calendlyUrl} target="_blank" rel="noopener noreferrer">book a call with us</a> directly, or email <a href={`mailto:${site.email}`}>{site.email}</a>.
         </p>
       )}
       {status === "error" && (
