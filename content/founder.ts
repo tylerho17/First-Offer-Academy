@@ -96,7 +96,7 @@ export const cofounder = {
 
   credentials: [
     { value: "Piper Sandler", label: "Full-time investment banking analyst offer; internships at Stifel, UBS, and other boutiques" },
-    { value: "12", label: "pilot students, 100% landed an internship or offer" },
+    { value: "8", label: "pilot students, 100% landed an internship or offer" },
     { value: "TeeSync", label: "Founder of a VC-backed startup" },
   ],
 
