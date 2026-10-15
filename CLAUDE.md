@@ -1,6 +1,6 @@
 # First Offer Academy — Website
 
-Marketing site for First Offer Academy: internship coaching for business freshmen and sophomores, built for finance and accounting recruiting (two tracks: Finance and Accounting). The offer (locked Sept 30, 2026): Week 0 pre-work, Weeks 1–8 training, Weeks 9–12 Offer Sprint, then weekly check-ins and mocks until an offer or May 31, 2027; $5,000 everything included, offer-or-refund. Content lives in `content/program.ts` and `content/site.ts`. Buyers are parents; users are students. Solo founder: Tyler Ho.
+Marketing site for First Offer Academy: internship coaching for business students starting recruiting, built for finance and accounting (two tracks: Finance and Accounting). The offer (locked Sept 30, 2026): Week 0 pre-work, Weeks 1–8 training, Weeks 9–12 Offer Sprint, then weekly check-ins and mocks until an offer or May 31, 2027; tuition everything included (no tuition figure on the site: tuition and scholarship details are covered on the parent call), one full-tuition scholarship seat per cohort (/scholarship), offer-or-refund. Content lives in `content/program.ts` and `content/site.ts`. Buyers are parents; users are students. Solo founder: Tyler Ho.
 
 Read `docs/brand-guide.md` and `docs/site-brief.md` before any UI or copy work. They are the source of truth. If this file and those docs disagree, the docs win.
 
@@ -33,7 +33,7 @@ Hard rules:
 - Mobile-first. Every section must work at 375px with a 16px side gutter and no horizontal scroll.
 
 ## Content integrity (non-negotiable)
-This site sells a $5,000 program to parents. Every claim must be true and checkable.
+This site sells a paid program to parents. Every claim must be true and checkable. No tuition, deposit, or balance figure appears anywhere on the site, and there is no payment plan.
 - NEVER invent testimonials, names, quotes, stats, employer names, or logos. Use the data in `content/`; if a field is empty, render nothing (or a clearly marked TODO in dev only).
 - A testimonial renders only if `permission: true`. An employer name/logo renders only if `employerPermission: true`.
 - Banned words: "guarantee" (any form), "elite", "top 1%". No outcome promises: the program promises a fully executed internship search, not an offer. Offer-or-refund (`content/program.ts` → `offerOrRefund`) is the only refund-on-outcome language.

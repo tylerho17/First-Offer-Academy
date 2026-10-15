@@ -5,9 +5,8 @@ import { parentsPage as p } from "@/content/parents";
 import { afterProgram, weekly } from "@/content/program";
 import LeavesWith from "@/components/sections/LeavesWith";
 import ExternshipNote from "@/components/sections/ExternshipNote";
-import { depositLine, site } from "@/content/site";
+import { site } from "@/content/site";
 import { testimonials } from "@/content/testimonials";
-import PayButton, { DepositNote } from "@/components/PayButton";
 import FaqList from "@/components/sections/FaqList";
 import ResourceBlock from "@/components/sections/ResourceBlock";
 import EventCard from "@/components/EventCard";
@@ -26,7 +25,7 @@ export const revalidate = 3600;
 
 export const metadata: Metadata = pageMeta({
   title: "For Parents",
-  description: "For parents of business freshmen and sophomores (built for finance and accounting recruiting; the system works for any business role): what your student does each week in First Offer Academy, the progress reports you receive, payment and the deposit, and what we don't promise.",
+  description: "For parents of business students starting recruiting (built for finance and accounting; the system works for any business role): what your student does each week in First Offer Academy, the progress reports you receive, payment and the deposit, and what we don't promise.",
 });
 
 export default async function ParentsPage() {
@@ -60,7 +59,7 @@ export default async function ParentsPage() {
           </div>
           <AvatarGroup />
           <p className="hero-secondary">
-            <PayButton className="link-arrow">Reserve a seat · {c.deposit} →</PayButton>
+            <Link href="/apply" className="link-arrow">Apply →</Link>
             <Link href="/program" className="link-arrow">See the full program →</Link>
           </p>
           </div>
@@ -119,30 +118,23 @@ export default async function ParentsPage() {
       <LeavesWith videos={growth} after={<QuoteCard {...tomQuotes.growth} />} />
 
       <section className="section band" id="payment">
-        <div className="wrap price-grid">
-          <div>
-            <span className="eyebrow">Payment and deposit</span>
-            <h2>{c.name} · {c.start}</h2>
-            <ul className="checks">
-              <li><Check />{c.price}, everything included</li>
-              <li><Check />A {c.deposit} deposit holds a seat and counts toward tuition. It&apos;s fully refundable through {site.depositRefundDeadline}.</li>
-              <li><Check />The remaining {c.balance} is invoiced separately and due {c.balanceDue}</li>
-              <li><Check />Payments are processed by Stripe; we never see your card number</li>
-            </ul>
-            <div className="btn-row">
-              <PrimaryCTA location="parents" tone="navy-band" />
-            </div>
-            <p style={{ marginTop: 12 }}><PayButton className="band-link">Reserve a seat · {c.deposit} →</PayButton></p>
-            <DepositNote />
-            <p style={{ marginTop: 16 }}>
-              <Link href="/refunds" className="band-link">Read the Refund &amp; Payment Policy</Link>
-            </p>
+        <div className="wrap">
+          <span className="eyebrow">Tuition and deposit</span>
+          <h2>{c.name} · {c.start}</h2>
+          <ul className="checks">
+            <li><Check />Limited seats. Tuition and scholarship details are covered on the parent call</li>
+            <li><Check />Tuition includes everything; there are no other required fees</li>
+            <li><Check />A deposit holds a seat and counts toward tuition. It&apos;s fully refundable through {site.depositRefundDeadline}.</li>
+            <li><Check />The remaining tuition is invoiced separately and due {c.balanceDue}</li>
+            <li><Check />Payments are processed by Stripe; we never see your card number</li>
+          </ul>
+          <div className="btn-row">
+            <PrimaryCTA location="parents" tone="navy-band" />
           </div>
-          <div className="price-box">
-            <span className="amount">{c.price}</span>
-            <span className="plan">everything included</span>
-            <span className="seats">{c.seats} seats. {depositLine()}</span>
-          </div>
+          <p style={{ marginTop: 12 }}><Link href="/scholarship" className="band-link">Apply for the scholarship seat</Link></p>
+          <p style={{ marginTop: 16 }}>
+            <Link href="/refunds" className="band-link">Read the Refund &amp; Payment Policy</Link>
+          </p>
         </div>
       </section>
 

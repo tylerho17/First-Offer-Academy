@@ -1,56 +1,35 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import ApplyForm from "@/components/ApplyForm";
-import PayButton, { DepositNote } from "@/components/PayButton";
 import Link from "next/link";
+import { redirect } from "next/navigation";
 import { site } from "@/content/site";
 
 export const metadata: Metadata = {
   title: "Apply",
-  description: `Apply for one of ${site.cohort.seats} seats in the ${site.cohort.start} founding cohort. Ten minutes, then a short fit call with Tyler. No payment to apply.`,
+  description: `Apply for one of ${site.cohort.seats} seats in the ${site.cohort.start} founding cohort. A short form, then a 20-minute call with Tyler and Kenji. Applying costs nothing.`,
 };
 
-// /apply?deposit=1 is the Stripe success URL for the deposit link: the family
-// has paid and now tells us about the student, on the same form.
+// /apply?deposit=1 is the Stripe success URL for the deposit link. A family
+// that just paid goes straight to the "You're in." page (/enrolled), never back
+// to the form and the thanks page that offers the deposit again.
 export default async function ApplyPage({ searchParams }: { searchParams: Promise<{ deposit?: string }> }) {
-  const paid = (await searchParams).deposit === "1";
+  if ((await searchParams).deposit === "1") redirect("/enrolled");
   const c = site.cohort;
   return (
     <>
-      {paid ? (
-        <>
-          <p className="deposit-received" role="status">Deposit received.</p>
-          <PageHero
-            eyebrow={`${c.name} · ${c.start}`}
-            title="Your seat is held."
-            lede={`Tell us about the student, then pick a time for the fit call. If the call shows it isn't a fit, your ${c.deposit} is refunded in full.`}
-          />
-        </>
-      ) : (
-        <PageHero
-          eyebrow={`${c.name} · ${c.start}`}
-          title={`Apply for one of ${c.seats} seats.`}
-          lede="Ten minutes, and applying costs nothing. After you apply, you'll book a short fit call with Tyler."
-        />
-      )}
+      <PageHero
+        eyebrow={`${c.name} · ${c.start}`}
+        title={`Apply for one of ${c.seats} seats.`}
+        lede="A short form, and applying costs nothing. The next step is a 20-minute call with Tyler and Kenji."
+      />
       <section className="section" style={{ paddingTop: 16 }}>
         <div className="wrap">
-          {!paid && (
-            <div className="card deposit-banner">
-              <p>
-                <strong>Ready now?</strong> Reserve your seat with a {c.deposit} refundable deposit, then fill this in.
-              </p>
-              <div className="btn-row" style={{ marginTop: 16 }}>
-                <PayButton />
-              </div>
-              <DepositNote />
-            </div>
-          )}
           <div className="card form-card">
-            <ApplyForm paid={paid} />
+            <ApplyForm />
           </div>
           <p className="apply-note">
-            Questions about cost? See <Link href="/pricing">pricing</Link> and the <Link href="/refunds">Refund &amp; Payment Policy</Link>.
+            Cost a concern? Read about <Link href="/scholarship">the scholarship seat</Link> and the <Link href="/refunds">Refund &amp; Payment Policy</Link>.
           </p>
         </div>
       </section>

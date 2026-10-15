@@ -274,7 +274,7 @@ export const weeks: Week[] = [
       "Interview flow: the intro, behaviorals, the why, technicals or the case, and your questions.",
       "Pacing: how long each answer should run, and how to tell when you've lost the room.",
       "Recovering from a blank: say what you know, reason out loud, and come back to it.",
-      "How deep a first- or second-year student actually needs to go in their track, and what to skip for now.",
+      "How deep a student starting recruiting actually needs to go in their track, and what to skip for now.",
       "Applying to every open role on the target list, and keeping the outreach running while you do.",
     ],
     trackTeach: {

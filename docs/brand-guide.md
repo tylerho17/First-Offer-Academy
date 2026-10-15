@@ -1,6 +1,6 @@
 # First Offer Academy — Brand Guide (updated Sept 21, 2026)
 
-Direction: warm like a mentor, serious like an offer letter. Kind to students, credible to parents paying $5,000.
+Direction: warm like a mentor, serious like an offer letter. Kind to students, credible to parents paying tuition.
 
 ## Palette
 | Role | Name | Hex | Use |

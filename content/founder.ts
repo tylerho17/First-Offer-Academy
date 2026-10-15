@@ -81,3 +81,44 @@ export const internshipsLine = () => {
   const c = founder.credentials.find((x) => x.id === "internships");
   return c?.value ? `${c.value} ${c.label}` : "";
 };
+
+// Co-founder: Kenji. Every fact below is from Kenji's bio as Tyler supplied
+// it (2026-10-14); nothing invented. No logo files yet, so the /about logo
+// wall shows monogram tiles for his firms (drop files in public/logos/kenji/
+// and set `logo` + `logoRatio` to swap them in).
+export const cofounder = {
+  firstName: "Kenji",
+  name: "Kenji",
+  title: "Co-Founder",
+  oneLiner: "I spent two years learning what nobody tells students about recruiting for internships. My students get to learn it in 12 weeks.",
+  linkedin: "https://www.linkedin.com/in/kenjiswun/" as string | null,
+  photo: { src: "/images/kenji.jpg", width: 640, height: 800 },
+
+  credentials: [
+    { value: "Piper Sandler", label: "Full-time investment banking analyst offer; internships at Stifel, UBS, and other boutiques" },
+    { value: "8", label: "pilot students, 100% landed an internship or offer" },
+    { value: "TeeSync", label: "Founder of a VC-backed startup" },
+  ],
+
+  experience: [
+    { org: "Piper Sandler", role: "Investment Banking Analyst", dates: "", detail: "Full-time offer", category: "Finance", status: "incoming", caption: "IB Analyst", logo: "/logos/kenji/piper-sandler.svg", logoRatio: 400 / 60.23 },
+    { org: "TeeSync", role: "Co-Founder & CEO", dates: "", detail: "VC-backed", category: "Startup", status: "current", caption: "Co-Founder & CEO", logo: "/logos/kenji/teesync.jpg", logoRatio: 1 },
+    { org: "UBS Asset Management", role: "Intern", dates: "", detail: "", category: "Finance (Asset Mgmt)", status: "past", caption: "Asset Management", logo: "/logos/kenji/ubs.svg", logoRatio: 300 / 109.94 },
+    { org: "Stifel", role: "Investment Banking Intern", dates: "", detail: "", category: "Finance", status: "past", caption: "Investment Banking", logo: "/logos/kenji/stifel.svg", logoRatio: 922 / 279 },
+    { org: "Renewable Advisors", role: "M&A Diligence", dates: "", detail: "", category: "Finance (M&A)", status: "past", caption: "M&A Diligence", logo: null, monogram: "RA" },
+    { org: "Sackett Financial Group", role: "Accounting, then Wealth Management", dates: "", detail: "", category: "Accounting · Wealth Mgmt", status: "past", caption: "Accounting → Wealth Mgmt", logo: "/logos/kenji/sfg-wealth-management.png", logoRatio: 200 / 111 },
+  ] as Experience[],
+
+  education: { school: "UCLA", field: "Business Economics, Value Investing concentration" },
+  leadership: [
+    "Director of Corporate Relations, Bruin Investment and Trading Group",
+    "Internal Vice President, Bruin Microfinance",
+    "Recruiting Mentor, Undergraduate Business Society",
+  ],
+
+  story: [
+    "I'm the son of immigrants from Singapore and Japan. I started college thinking high grades and a degree would be enough to land a job in the career I wanted. I found out fast that they weren't.",
+    "Recruiting became a second major for me. I sent thousands of cold emails and had hundreds of coffee chats, in person and over Zoom. That added up to 11 superdays and 6 offers in finance, mostly through trial and error. Eventually I landed an investment banking internship and received a return offer after this past summer.",
+    "Looking back, what surprised me most was the gap between how recruiting actually works and what students are told. The real timeline, the unwritten rules, and the reps it takes are known to a few and missed by most students. First Offer Academy exists to close that gap, with a system built for every student, not just the ones who already know someone.",
+  ],
+};

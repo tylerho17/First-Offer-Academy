@@ -6,7 +6,7 @@ import { afterProgram } from "./program";
 export const parentsPage = {
   eyebrow: "For parents",
   title: "What you're paying for, and what you'll see.",
-  lede: "First Offer Academy is for business freshmen and sophomores: built for finance and accounting recruiting, with an outreach and interview system that works for any business role. You won't be in the sessions, so you deserve a clear picture of what your student does each week, what you'll get to see, and what we will and won't promise.",
+  lede: "First Offer Academy is built for business students starting recruiting, in finance and accounting, with an outreach and interview system that works for any business role. You won't be in the sessions, so you deserve a clear picture of what your student does each week, what you'll get to see, and what we will and won't promise.",
 
   weekly: {
     title: "What your student does every week",
@@ -35,6 +35,6 @@ export const parentsPage = {
 
   dont: {
     title: "What we don't promise",
-    body: "We don't promise an internship offer, a specific employer, or any particular outcome. Hiring decisions belong to employers, and anyone who promises an offer is promising something they can't control. We promise a fully executed search: the sessions, the 1:1s, feedback on every piece of work, and a documented record graded against a clear standard. And offer-or-refund: if your student hits every weekly minimum through May 31, 2027 and gets no internship offer, we refund the full $5,000.",
+    body: "We don't promise an internship offer, a specific employer, or any particular outcome. Hiring decisions belong to employers, and anyone who promises an offer is promising something they can't control. We promise a fully executed search: the sessions, the 1:1s, feedback on every piece of work, and a documented record graded against a clear standard. And offer-or-refund: if your student hits every weekly minimum through May 31, 2027 and gets no internship offer, we refund your full tuition.",
   },
 };

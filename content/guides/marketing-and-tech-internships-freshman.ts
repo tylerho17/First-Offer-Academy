@@ -15,7 +15,7 @@ export const guide: Guide = {
   reviewedByTyler: true,
   body: [
     p("Finance and accounting get most of the attention in campus recruiting conversations, so students interested in marketing or tech often feel like they're figuring it out alone. The good news is that both fields reward something every student can build, starting today: proof. A marketing student with two portfolio pieces and a tech student with one real project they can explain end to end have something to talk about in every email and every interview."),
-    p("This guide covers what marketing and tech internships look for in first- and second-year students, how to build proof, who to target, how the timelines differ, and the questions to practice for each. The marketing and tech question banks are free downloads."),
+    p("This guide covers what marketing and tech internships look for in students starting recruiting, how to build proof, who to target, how the timelines differ, and the questions to practice for each. The marketing and tech question banks are free downloads."),
 
     h2("What's different about marketing and tech"),
     table("Marketing vs. tech at a glance", ["", "Marketing", "Tech (software, data, product)"], [

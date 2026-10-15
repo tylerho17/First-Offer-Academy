@@ -99,7 +99,7 @@ function closingCta() {
   const c = site.cohort;
   return `<div class="cta">
     <h3>Want to run this with a coach every week?</h3>
-    <p>${esc(site.name)} coaches college freshmen and sophomores until their first offer: ${esc(programLength.meta)} ${esc(c.name)} starts ${esc(c.start)}: ${c.seats} seats, ${esc(c.price)}, everything included.</p>
+    <p>${esc(site.name)} coaches business students starting recruiting until their first offer: ${esc(programLength.meta)} ${esc(c.name)} starts ${esc(c.start)}: ${c.seats} seats, everything included. Tuition and scholarship details are covered on the parent call.</p>
     <a class="btn" href="https://${site.domain}/apply">Apply at ${site.domain}/apply</a>
     <a class="btn alt" href="https://${site.domain}/parents">For parents: ${site.domain}/parents</a>
   </div>`;

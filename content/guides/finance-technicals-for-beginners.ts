@@ -16,7 +16,7 @@ export const guide: Guide = {
   reviewedByTyler: true,
   body: [
     p("Most students approach finance technicals the way they approach a hard class: download a 400-question guide and start memorizing from page one. A week later they can recite a definition of WACC and can't explain why a company's cash goes up when depreciation goes up. Then an interviewer asks the question in a slightly different way, and the memorized answer falls apart."),
-    p("Technicals are ranked last of the five things that matter in recruiting, and for first- and second-year roles, nobody expects you to know everything. But you do need a solid base, and you need to be able to reason out loud when you don't know. That comes from studying in the right order and understanding each concept before moving on."),
+    p("Technicals are ranked last of the five things that matter in recruiting, and for students starting recruiting, nobody expects you to know everything. But you do need a solid base, and you need to be able to reason out loud when you don't know. That comes from studying in the right order and understanding each concept before moving on."),
     p("This guide gives you the study order I recommend, plain-English explanations of each core concept, worked examples, and the questions to practice. The full question bank is a free one-page download."),
     note("Not financial advice", "This guide teaches interview concepts, not investing. Examples use simple made-up numbers."),
 

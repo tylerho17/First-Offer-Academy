@@ -4,7 +4,6 @@ import { getDownload, templateAnchor } from "@/content/downloads";
 import PrimaryCTA from "../PrimaryCTA";
 import LevelBadge from "./LevelBadge";
 import { Check } from "../Icons";
-import PayButton from "@/components/PayButton";
 
 function Block({ title, children }: { title: string; children: React.ReactNode }) {
   return (
@@ -149,7 +148,7 @@ export default function WeekView({ week: w }: { week: Week }) {
           </div>
           <div>
             <div className="btn-row"><PrimaryCTA location="program" tone="navy-band" /></div>
-            <p style={{ marginTop: 12 }}><PayButton className="band-link">Reserve a seat →</PayButton></p>
+            <p style={{ marginTop: 12 }}><Link href="/apply" className="band-link">Apply →</Link></p>
           </div>
         </div>
       </section>

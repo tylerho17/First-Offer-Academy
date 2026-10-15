@@ -1,31 +1,24 @@
 "use client";
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { site } from "@/content/site";
 import { track } from "@vercel/analytics";
 import { postForm } from "@/lib/submit";
 import Honeypot from "./Honeypot";
-import PrimaryCTA from "./PrimaryCTA";
-import PayOptions from "./PayOptions";
 
-const tracks = ["Finance", "Accounting"];
-
-// `paid`: arrived from the deposit checkout (/apply?deposit=1).
-export default function ApplyForm({ paid = false }: { paid?: boolean }) {
-  const [status, setStatus] = useState<"idle" | "sending" | "done" | "error" | "unconnected">("idle");
+// The short application. No payment here: after submit, /apply/thanks offers
+// the call first, and the refundable deposit only to families who've spoken
+// with us.
+export default function ApplyForm() {
+  const router = useRouter();
+  const [status, setStatus] = useState<"idle" | "sending" | "error" | "unconnected">("idle");
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const form = e.currentTarget;
-    const data = new FormData(form);
-    const payload = {
-      ...Object.fromEntries(data.entries()),
-      tracks: data.getAll("tracks"),
-      agreeTerms: data.get("agreeTerms") === "on",
-      updatesConsent: data.get("updatesConsent") === "on",
-    };
-
+    const data = new FormData(e.currentTarget);
+    const payload = { ...Object.fromEntries(data.entries()), agreeTerms: data.get("agreeTerms") === "on" };
     setStatus("sending");
     const result = await postForm("/api/apply", payload);
     if (result !== "ok") {
@@ -33,101 +26,50 @@ export default function ApplyForm({ paid = false }: { paid?: boolean }) {
       return;
     }
     track("apply_submit");
-    setStatus("done");
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }
-
-  if (status === "done") {
-    return (
-      <div className="apply-done" role="status">
-        <h2>Application received.</h2>
-        <p>Thank you. Tyler reads every application personally. Next step: book a short fit call.</p>
-        <div className="btn-row">
-          <PrimaryCTA location="apply" />
-        </div>
-        {!paid && (
-          <>
-            <p className="apply-note" style={{ textAlign: "left" }}>Ready to commit? Reserve your seat now:</p>
-            <PayOptions />
-          </>
-        )}
-      </div>
-    );
+    router.push("/apply/thanks");
   }
 
   return (
     <form className="form" onSubmit={onSubmit}>
       <Honeypot />
-      <h2 className="form-group-title">About the student</h2>
       <div className="field"><label htmlFor="name">Full name</label><input id="name" name="name" required autoComplete="name" /></div>
       <div className="field"><label htmlFor="email">Email</label><input id="email" name="email" type="email" required autoComplete="email" /></div>
-      <div className="field"><label htmlFor="phone">Phone</label><input id="phone" name="phone" type="tel" autoComplete="tel" /></div>
-      <div className="field"><label htmlFor="school">School</label><input id="school" name="school" required placeholder="Your college or community college" /></div>
+      <div className="field"><label htmlFor="phone">Phone</label><input id="phone" name="phone" type="tel" required autoComplete="tel" /></div>
+      <div className="field"><label htmlFor="school">School</label><input id="school" name="school" required /></div>
+      <div className="field"><label htmlFor="major">Major</label><input id="major" name="major" required /></div>
       <div className="field">
         <label htmlFor="year">Year</label>
         <select id="year" name="year" required defaultValue="">
           <option value="" disabled>Select</option>
           <option>Freshman</option>
           <option>Sophomore</option>
+          <option>Junior</option>
+          <option>Senior</option>
           <option>Other</option>
         </select>
       </div>
-      <div className="field"><label htmlFor="major">Major</label><input id="major" name="major" /></div>
       <div className="field full">
-        <fieldset>
-          <legend>Track interest <span className="hint">(pick any)</span></legend>
-          <div className="choices">
-            {tracks.map((t) => (
-              <label className="choice" key={t}>
-                <input type="checkbox" name="tracks" value={t} />
-                <span>{t}</span>
-              </label>
-            ))}
-          </div>
-        </fieldset>
+        <label htmlFor="recruiting">Where are you in recruiting right now?</label>
+        <textarea id="recruiting" name="recruiting" required />
       </div>
-      <div className="field">
-        <label htmlFor="gpa">GPA range</label>
-        <select id="gpa" name="gpa" defaultValue="">
-          <option value="" disabled>Select</option>
-          <option>3.7+</option>
-          <option>3.3–3.69</option>
-          <option>3.0–3.29</option>
-          <option>Below 3.0</option>
-          <option>No college GPA yet</option>
-        </select>
-      </div>
-      <div className="field">
-        <label htmlFor="source">How did you hear about us?</label>
-        <input id="source" name="source" />
-      </div>
-      <div className="field full"><label htmlFor="tried">What have you tried so far?</label><textarea id="tried" name="tried" placeholder="Clubs applied to, applications sent, people contacted…" /></div>
-      <div className="field full"><label htmlFor="obstacle">What&apos;s your biggest obstacle right now?</label><textarea id="obstacle" name="obstacle" /></div>
-
-      <h2 className="form-group-title">Parent or guardian <span className="hint" style={{ fontFamily: "var(--sans)", fontSize: 15 }}>(optional)</span></h2>
-      <div className="field"><label htmlFor="parentName">Name</label><input id="parentName" name="parentName" /></div>
-      <div className="field"><label htmlFor="parentEmail">Email</label><input id="parentEmail" name="parentEmail" type="email" /></div>
-
-      <div className="field full consent-group">
-        <div className="consent">
-          <input id="agreeTerms" name="agreeTerms" type="checkbox" required />
-          <label htmlFor="agreeTerms">I agree to the <Link href="/terms">Terms</Link> and <Link href="/privacy">Privacy Policy</Link>. <span aria-hidden="true">*</span></label>
-        </div>
-        <div className="consent">
-          <input id="updatesConsent" name="updatesConsent" type="checkbox" />
-          <label htmlFor="updatesConsent">Send me program updates by email and text <span className="hint">(optional)</span>. Every email has an unsubscribe link; reply STOP to any text to opt out.</label>
-        </div>
+      <div className="field full">
+        <label htmlFor="parentEmail">Parent/guardian email <span className="hint">(optional)</span></label>
+        <input id="parentEmail" name="parentEmail" type="email" autoComplete="off" />
       </div>
 
-      <div className="full" style={{ gridColumn: "1 / -1" }}>
+      <div className="field full consent">
+        <input id="agreeTerms" name="agreeTerms" type="checkbox" required />
+        <label htmlFor="agreeTerms">I agree to the <Link href="/terms">Terms</Link> and <Link href="/privacy">Privacy Policy</Link>. <span aria-hidden="true">*</span></label>
+      </div>
+      <div className="full">
         <button type="submit" className="btn btn-primary" disabled={status === "sending"}>
-          {status === "sending" ? "Sending…" : paid ? "Submit and book the fit call." : "Submit and book my fit call"}
+          {status === "sending" ? "Sending…" : "Submit application"}
         </button>
       </div>
 
       {status === "unconnected" && (
         <p className="form-status" role="status">
-          Your application didn&apos;t go through. Please <a href={site.calendlyUrl} target="_blank" rel="noopener noreferrer">book a call with Tyler</a> directly, or email <a href={`mailto:${site.email}`}>{site.email}</a>.
+          Your application didn&apos;t go through. Please <a href={site.calendlyUrl} target="_blank" rel="noopener noreferrer">book a call with us</a> directly, or email <a href={`mailto:${site.email}`}>{site.email}</a>.
         </p>
       )}
       {status === "error" && (

@@ -8,27 +8,27 @@ const pending = "Exact terms will be published here before deposits open, and th
 export const refunds: LegalDoc = {
   slug: "refunds",
   title: "Refund & Payment Policy",
-  description: "Tuition, the deposit and balance, offer-or-refund, and how refunds and withdrawals work at First Offer Academy.",
+  description: "Tuition, the deposit, offer-or-refund, and how refunds and withdrawals work at First Offer Academy.",
   effective: "2026-10-05",
   lastUpdated: "2026-10-05",
   contactEmail: legalContact,
   intro: `This page explains what the program costs, how to pay, and how refunds work. It's part of our [Terms of Service](/terms).`,
   body: [
     { type: "h2", text: "Tuition" },
-    { type: "p", text: `Tuition for the ${c.name.toLowerCase()} (${c.start}) is ${c.price}, everything included: Week 0 pre-work; the 12-week program (core teaching in Weeks 1–8, then the 4-week Offer Sprint of mock interviews and networking); after Week 12, a 20-minute weekly check-in and a mock interview every other week until an internship offer or ${afterProgram.until}, while the student keeps up ${afterProgram.maintenance}; and coached Extern externship applications with the Extern fee covered. There are no other required fees.` },
+    { type: "p", text: `Tuition for the ${c.name.toLowerCase()} (${c.start}) includes everything: Week 0 pre-work; the 12-week program (core teaching in Weeks 1–8, then the 4-week Offer Sprint of mock interviews and networking); after Week 12, a 20-minute weekly check-in and a mock interview every other week until an internship offer or ${afterProgram.until}, while the student keeps up ${afterProgram.maintenance}; and coached Extern externship applications with the Extern fee covered. There are no other required fees.` },
 
     { type: "h2", text: "Ways to pay" },
     { type: "ul", items: [
-      `Pay in full: ${c.price}, before Week 1.`,
-      `Or reserve a seat with the ${c.deposit} deposit; the remaining ${c.balance} is invoiced separately and due before Week 1. Those are the only two ways to pay.`,
+      "Pay your full tuition before Week 1.",
+      "Or reserve a seat with your deposit; the remaining tuition is invoiced separately and due before Week 1. Those are the only two ways to pay.",
       "All payments are processed securely by Stripe. We never see or store your card number.",
     ] },
 
     { type: "h2", text: "The deposit" },
-    { type: "p", text: `A ${c.deposit} deposit holds a seat in the cohort. It counts toward tuition; it is not an extra fee.` },
+    { type: "p", text: "Your deposit holds a seat in the cohort. It counts toward tuition; it is not an extra fee." },
     { type: "p", text: site.refundTerms || `The deposit is refundable. The deadline for a full deposit refund: ${pending}` },
     { type: "p", text: "If the fit call shows the program isn't a fit, we refund the deposit in full, whatever the date." },
-    { type: "p", text: `After the deposit, the remaining ${c.balance} is sent to you as a separate invoice, due before Week 1.` },
+    { type: "p", text: "After the deposit, the remaining tuition is sent to you as a separate invoice, due before Week 1." },
 
     { type: "h2", text: "Missed payments" },
     { type: "p", text: "If the balance payment fails or is late, we'll email you and give you time to update your payment method. Please reply and tell us what's going on. A student's access to sessions may be paused if a payment remains unresolved after we've been in touch." },

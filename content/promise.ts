@@ -17,7 +17,7 @@ export const promise = {
       { title: "The Week 8 family meeting", body: "Your student presents their results to you, including their Week 1 and Week 8 recorded introductions side by side." },
       { title: "The Offer Sprint, then weekly check-ins", body: "Weeks 9–12: technical and behavioral mocks, plus prep and debriefs for every networking call. After that, a 20-minute weekly check-in and a mock interview every other week until an internship offer or May 31, 2027, while your student keeps up 100 outreach emails and 6–8 networking calls a week." },
       { title: "Coached Extern applications, fee covered", body: "We coach the Extern externship application, the recorded video, and the live interview, and cover the Extern fee. Admission is Extern's decision, not ours." },
-      { title: "Offer-or-refund", body: "If your student hits every weekly minimum through May 31, 2027 and doesn't receive an internship offer, paid or unpaid, we refund the full $5,000." },
+      { title: "Offer-or-refund", body: "If your student hits every weekly minimum through May 31, 2027 and doesn't receive an internship offer, paid or unpaid, we refund your full tuition." },
     ],
   },
 

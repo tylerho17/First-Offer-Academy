@@ -9,7 +9,7 @@ export const enrolled = {
     "Your winter break pre-work arrives within 2 business days: the resume template, the target list worksheet, and the Candidate Brand module. You start now, not in January.",
     "We'll send a link to book your first 1:1 in the first week of December.",
   ],
-  // Paid in full (the $5,000 Payment Link): the email's opening lines.
+  // Paid in full (the pay-in-full Payment Link): the email's opening lines.
   confirmed: `Your seat in the ${site.cohort.start} ${site.cohort.name.toLowerCase()} is confirmed.`,
   paidInFull: "The program is paid in full.",
   // Step 1 in the email itself (the email is the confirmation).

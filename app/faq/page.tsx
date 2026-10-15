@@ -7,7 +7,7 @@ import { faqs } from "@/content/faq";
 
 export const metadata: Metadata = {
   title: "FAQ",
-  description: "Answers for parents and students: timing, cost, the deposit and balance, offer-or-refund, refunds, time commitment, and what we do and don't promise.",
+  description: "Answers for parents and students: timing, tuition and the deposit, financial aid, offer-or-refund, refunds, time commitment, and what we do and don't promise.",
 };
 
 export default function FaqPage() {
@@ -20,7 +20,7 @@ export default function FaqPage() {
           mainEntity: faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: [f.a, ...(f.list ?? [])].join(" ") } })),
         }}
       />
-      <PageHero eyebrow="FAQ" title="Questions parents and students ask" lede="Don't see yours? Book a call and ask Tyler directly." />
+      <PageHero eyebrow="FAQ" title="Questions parents and students ask" lede="Don't see yours? Book a call and ask Tyler and Kenji directly." />
       <FaqList all />
       <FinalCta location="faq" />
     </>

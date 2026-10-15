@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Logo from "./Logo";
 import MobileNav from "./MobileNav";
-import PayButton from "./PayButton";
 
 type Item = { label: string; href: string };
 
@@ -26,7 +25,7 @@ export default function Header() {
           ))}
         </nav>
         <div className="header-cta">
-          <PayButton className="btn btn-secondary header-reserve">Reserve a seat</PayButton>
+          <Link href="/apply" className="btn btn-secondary header-reserve">Apply</Link>
           <MobileNav items={nav} />
         </div>
       </div>

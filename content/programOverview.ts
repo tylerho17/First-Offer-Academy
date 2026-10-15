@@ -35,12 +35,12 @@ export const programOverview = {
   hero: {
     eyebrow: "The program",
     title: "From Week 0 to your first offer.",
-    lede: "For business freshmen and sophomores. Built for finance and accounting recruiting; the outreach and interview system works for any business role. Week 0 pre-work, then a 12-week program: core teaching in Weeks 1–8 (a weekly 90-minute session, a 60-minute 1:1, and a pod of three) and a 4-week Offer Sprint in Weeks 9–12 of mock interviews and networking. Then a 20-minute weekly check-in and a mock interview every other week until you land an offer.",
+    lede: "For business students starting recruiting. Built for finance and accounting; the outreach and interview system works for any business role. Week 0 pre-work, then a 12-week program: core teaching in Weeks 1–8 (a weekly 90-minute session, a 60-minute 1:1, and a pod of three) and a 4-week Offer Sprint in Weeks 9–12 of mock interviews and networking. Then a 20-minute weekly check-in and a mock interview every other week until you land an offer.",
     sub: `Membership is by application. The founding cohort has ${site.cohort.seats} seats.`,
   },
 
   whoFor: {
-    title: "First Offer Academy is for business freshmen and sophomores who are…",
+    title: "First Offer Academy is for business students starting recruiting who are…",
     pains: [
       { title: "Didn't get into the club", body: "The recruiting help on campus sits inside selective clubs, and most freshmen don't get in." },
       { title: "Don't know where to start", body: "They know internships matter. Nobody has shown them what to do first, or in what order." },

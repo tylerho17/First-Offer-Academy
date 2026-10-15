@@ -33,7 +33,7 @@ export const tracks: Track[] = [
     roles: "Audit, tax, and advisory at public accounting firms, plus corporate accounting in industry.",
     headline: "Start your accounting career before junior year.",
     intro:
-      "Many public accounting firms run early-identification and leadership programs for freshmen and sophomores that feed into junior-summer internships, the main path to full-time offers. The Accounting track gets your student ready for those programs early. Planning coursework early also matters for the CPA's 150-credit-hour requirement in most states.",
+      "Many public accounting firms run early-identification and leadership programs for students early in college that feed into junior-summer internships, the main path to full-time offers. The Accounting track gets your student ready for those programs early. Planning coursework early also matters for the CPA's 150-credit-hour requirement in most states.",
     roleList: ["Audit and assurance", "Tax", "Advisory", "Mid-size and regional public accounting", "Corporate accounting in industry"],
     prep: [
       { title: "Debits, credits, and the three statements", body: "How a transaction moves through the books, and how the three financial statements connect. Weeks 5–6, with answer walk-throughs." },

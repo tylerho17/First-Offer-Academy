@@ -10,7 +10,7 @@ import { site } from "@/content/site";
 // kept out of search on purpose. /enrolled is noindex and reachable only from
 // Stripe, so it stays out. /workshops and /share-your-story are live but
 // unlinked and noindex.
-export const PRIVATE_ROUTES = ["/admin", "/enrolled", "/workshops", "/share-your-story", ...(site.zhReviewed ? [] : ["/zh"])];
+export const PRIVATE_ROUTES = ["/admin", "/enrolled", "/apply/thanks", "/workshops", "/share-your-story", ...(site.zhReviewed ? [] : ["/zh"])];
 
 export function staticRoutes(dir = path.join(process.cwd(), "app"), base = ""): string[] {
   const out: string[] = [];

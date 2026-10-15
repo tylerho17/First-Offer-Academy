@@ -1,6 +1,6 @@
 import { programOverview } from "@/content/programOverview";
 import { videoAt } from "@/content/videoTestimonials";
-import PayButton from "../../PayButton";
+import Link from "next/link";
 import PrimaryCTA from "../../PrimaryCTA";
 import VideoCard from "../../VideoCard";
 
@@ -19,7 +19,7 @@ export default function ProgramHero() {
           <div className="cta-block">
             <PrimaryCTA location="program" />
           </div>
-          <p className="hero-secondary"><PayButton className="link-arrow">Reserve a seat →</PayButton></p>
+          <p className="hero-secondary"><Link href="/apply" className="link-arrow">Apply →</Link></p>
         </div>
         {clip && <VideoCard video={clip} size="hero" />}
       </div>

@@ -10,7 +10,7 @@ import { site } from "@/content/site";
 //                                                  parents, faq, ...) and the footer
 //                                                  call link
 //   video_play {youtubeId, placement}              VideoCard (on click)
-//   pricing_toggle {option}                        PaymentToggle
+//   scholarship_submit                             ScholarshipForm
 //   parent_call_click                              CallLink (data-event), plus any
 //                                                  other link to the Calendly URL
 //   playbook_download, template_download           GatedDownload, PlaybookForm; the

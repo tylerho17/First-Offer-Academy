@@ -14,12 +14,12 @@ const c = site.cohort;
 export const zh = {
   meta: {
     title: "给家长的介绍（中文）",
-    description: "First Offer Academy 是一个实习求职辅导项目，帮助大一、大二学生申请金融和会计领域的实习。",
+    description: "First Offer Academy 是一个实习求职辅导项目，帮助刚开始求职的商科学生申请金融和会计领域的实习。",
   },
   draftNotice: "草稿：本页为机器翻译初稿，尚未经母语人士审阅。如有疑问，请以英文网站为准。 (Draft: machine-translated, not yet reviewed.)",
   eyebrow: "给家长的介绍",
   title: "您孩子的第一份实习，不应取决于能否进入某个社团。",
-  lede: "First Offer Academy 是一个实习求职辅导项目，面向大一、大二学生（包括社区大学学生），从零开始教他们如何申请金融和会计领域的实习。",
+  lede: "First Offer Academy 是一个实习求职辅导项目，面向刚开始求职的商科学生（包括社区大学学生），从零开始教他们如何申请金融和会计领域的实习。",
 
   program: {
     title: "项目内容",
@@ -52,8 +52,8 @@ export const zh = {
   price: {
     title: "费用",
     items: [
-      `学费：${c.price}，全部包含。`,
-      `${c.deposit}订金即可保留名额，并计入学费；截至${site.depositRefundDeadline}（含）可全额退还。余款${c.balance}将另行开具发票，须在第1周前付清。`,
+      "学费全部包含；学费与奖学金详情将在家长通话中说明。",
+      `订金即可保留名额，并计入学费；截至${site.depositRefundDeadline}（含）可全额退还。余下学费将另行开具发票，须在第1周前付清。`,
       "所有付款均通过 Stripe 安全处理，我们不会看到或保存您的银行卡号。",
       "具体退款条款请参阅英文版《退款与付款政策》。",
     ],
