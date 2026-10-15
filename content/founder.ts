@@ -92,7 +92,7 @@ export const cofounder = {
   title: "Co-Founder",
   oneLiner: "I spent two years learning what nobody tells students about recruiting for internships. My students get to learn it in 12 weeks.",
   linkedin: "https://www.linkedin.com/in/kenjiswun/" as string | null,
-  photo: { src: "/images/kenji.jpg", width: 800, height: 1000 },
+  photo: { src: "/images/kenji.jpg", width: 640, height: 800 },
 
   credentials: [
     { value: "Piper Sandler", label: "Full-time investment banking analyst offer; internships at Stifel, UBS, and other boutiques" },
