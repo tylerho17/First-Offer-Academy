@@ -15,18 +15,18 @@ export function applyConfirmation(d: { name: string }) {
 
 Thanks for applying to ${site.name}'s ${site.cohort.name.toLowerCase()} (${site.cohort.start}). Tyler reads every application personally.
 
-Next step: a 20-minute call with Tyler. Book it here if you haven't already: ${site.calendlyUrl}
+Next step: a 20-minute call with Tyler and Kenji. Book it here if you haven't already: ${site.calendlyUrl}
 
 No payment has been taken. If you have questions, reply to this email.
 
 ${site.name}`;
   const html = layout({
-    preheader: "Tyler reads every application personally. Next step: a 20-minute call with Tyler.",
+    preheader: "Tyler reads every application personally. Next step: a 20-minute call with Tyler and Kenji.",
     heading: "We received your application.",
     body:
       p(hi(d.name)) +
       p(`Thanks for applying to the ${esc(site.cohort.name.toLowerCase())} (${esc(site.cohort.start)}). Tyler reads every application personally.`) +
-      p("Next step: a 20-minute call with Tyler. Book it if you haven't already.") +
+      p("Next step: a 20-minute call with Tyler and Kenji. Book it if you haven't already.") +
       button("Book your call", site.calendlyUrl) +
       p("No payment has been taken. Questions? Just reply to this email."),
   });

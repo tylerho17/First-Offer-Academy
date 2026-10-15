@@ -14,7 +14,7 @@ export default function ApplyThanksPage() {
     <section className="page-hero">
       <div className="wrap apply-thanks">
         <span className="eyebrow">Application received</span>
-        <h1>Thanks — next step is a 20-minute call with Tyler.</h1>
+        <h1>Thanks — next step is a 20-minute call with Tyler and Kenji.</h1>
         <div className="cta-block">
           <PrimaryCTA location="apply">Book your call</PrimaryCTA>
         </div>

@@ -8,7 +8,7 @@ export default function FinalCta({ location = "final" }: { location?: CtaLocatio
       <div className="wrap">
         <span className="eyebrow">{site.cohort.name}</span>
         <h2>{site.cohort.seats} seats. January starts sooner than it sounds.</h2>
-        <p className="lede center">Apply now, or talk it through with Tyler first.</p>
+        <p className="lede center">Apply now, or talk it through with Tyler and Kenji first.</p>
         <div className="btn-row">
           <PrimaryCTA location={location} />
         </div>
