@@ -11,3 +11,14 @@ Each logo comes from the firm's own website (checked 2026-10-05), or from a file
 | Futuraiser | `futuraiser.png` (reused) | Already in the repo: header logo, futuraiser.com (see `public/logos/README.md`). The official file is white only, so it's drawn as a navy silhouette. |
 | CB Capital | `tyler/cb-capital.png` | Provided by Tyler (2026-10-05): the CB Capital Partners, Inc. logo, cropped to the mark. |
 | Crosspoint Financial | `tyler/crosspoint-financial.png` | Provided by Tyler (2026-10-05): the Crosspoint Financial (Advisory & Investments) logo, cropped to the mark. |
+
+# Kenji's experience logos (/about, co-founder section)
+
+| Firm | File | Source |
+|---|---|---|
+| Piper Sandler | `kenji/piper-sandler.svg` | Header logo, https://www.pipersandler.com/themes/custom/pipersandler/logo.svg (checked 2026-10-15) |
+| Stifel | `kenji/stifel.svg` | Header logo, https://www.stifel.com/images/home/stifel-logo.svg (checked 2026-10-15) |
+| TeeSync | `kenji/teesync.jpg` | Provided by Tyler (2026-10-15): the TeeSync LinkedIn company page logo (linkedin.com/company/teesync) |
+| Sackett Financial Group | `kenji/sfg-wealth-management.png` | Provided by Tyler (2026-10-15): the SFG Wealth Management (Northwestern Mutual) LinkedIn company logo, white margin trimmed |
+| UBS Asset Management | monogram | ubs.com blocks automated downloads; monogram tile until Tyler supplies the file |
+| Renewable Advisors | monogram | Not requested yet |

@@ -101,12 +101,12 @@ export const cofounder = {
   ],
 
   experience: [
-    { org: "Piper Sandler", role: "Investment Banking Analyst", dates: "", detail: "Full-time offer", category: "Finance", status: "incoming", caption: "IB Analyst", logo: null, monogram: "PS" },
-    { org: "TeeSync", role: "Co-Founder & CEO", dates: "", detail: "VC-backed", category: "Startup", status: "current", caption: "Co-Founder & CEO", logo: null, monogram: "TS" },
+    { org: "Piper Sandler", role: "Investment Banking Analyst", dates: "", detail: "Full-time offer", category: "Finance", status: "incoming", caption: "IB Analyst", logo: "/logos/kenji/piper-sandler.svg", logoRatio: 400 / 60.23 },
+    { org: "TeeSync", role: "Co-Founder & CEO", dates: "", detail: "VC-backed", category: "Startup", status: "current", caption: "Co-Founder & CEO", logo: "/logos/kenji/teesync.jpg", logoRatio: 1 },
     { org: "UBS Asset Management", role: "Intern", dates: "", detail: "", category: "Finance (Asset Mgmt)", status: "past", caption: "Asset Management", logo: null, monogram: "UBS" },
-    { org: "Stifel", role: "Investment Banking Intern", dates: "", detail: "", category: "Finance", status: "past", caption: "Investment Banking", logo: null, monogram: "SF" },
+    { org: "Stifel", role: "Investment Banking Intern", dates: "", detail: "", category: "Finance", status: "past", caption: "Investment Banking", logo: "/logos/kenji/stifel.svg", logoRatio: 922 / 279 },
     { org: "Renewable Advisors", role: "M&A Diligence", dates: "", detail: "", category: "Finance (M&A)", status: "past", caption: "M&A Diligence", logo: null, monogram: "RA" },
-    { org: "Sackett Financial Group", role: "Accounting, then Wealth Management", dates: "", detail: "", category: "Accounting · Wealth Mgmt", status: "past", caption: "Accounting → Wealth Mgmt", logo: null, monogram: "SFG" },
+    { org: "Sackett Financial Group", role: "Accounting, then Wealth Management", dates: "", detail: "", category: "Accounting · Wealth Mgmt", status: "past", caption: "Accounting → Wealth Mgmt", logo: "/logos/kenji/sfg-wealth-management.png", logoRatio: 200 / 111 },
   ] as Experience[],
 
   education: { school: "UCLA", field: "Business Economics, Value Investing concentration" },
