@@ -38,7 +38,9 @@ export const scholarship = {
   ] as const,
   commitment: "I understand the scholarship recipient commits to the same weekly targets as every student.",
   finePrint: "One seat per cohort. Applicants not selected can still enroll in the program.",
-  thanks: `Got it. We'll be in touch by ${s.replyBy}.`,
+  // When applicants hear: the thank-you state and the confirmation email.
+  hearBy: `Finalists hear by ${s.finalistsBy}. Decisions by ${s.decisionBy}.`,
+  thanks: `Got it. Finalists hear by ${s.finalistsBy}. Decisions by ${s.decisionBy}.`,
 };
 
 export const wordCount = (text: string) => (text.trim() ? text.trim().split(/\s+/).length : 0);

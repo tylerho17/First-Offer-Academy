@@ -97,7 +97,8 @@ export const site = {
     closesShort: "Nov 30",
     finalists: "first week of December",
     decision: "December 10, 2026",
-    replyBy: "December 7",
+    finalistsBy: "December 7",
+    decisionBy: "December 10",
   },
   withdrawalPolicy: "Withdraw before Week 3 for a prorated refund of unused weeks. No refunds after Week 3. If we cancel the cohort, every payment is refunded in full.",
 };

@@ -2,6 +2,7 @@ import { signDownload } from "@/lib/downloadToken";
 import { site } from "@/content/site";
 import { leadMagnet } from "@/content/leadMagnet";
 import { enrolled } from "@/content/enrolled";
+import { scholarship } from "@/content/scholarship";
 import { button, esc, layout, p } from "./layout";
 
 const url = `https://${site.domain}`;
@@ -61,18 +62,18 @@ export function scholarshipConfirmation(d: { name: string }) {
 
 Thanks for applying for the First Offer Scholarship: one full-tuition seat in the ${site.cohort.start} ${site.cohort.name.toLowerCase()}.
 
-Applications close ${sc.closes}. Finalists get a 15-minute call in the ${sc.finalists}, and we'll be in touch by ${sc.replyBy}.
+Applications close ${sc.closes}. Finalists get a 15-minute call in the ${sc.finalists}. ${scholarship.hearBy}
 
 One seat per cohort. Applicants not selected can still enroll in the program.
 
 ${site.name}`;
   const html = layout({
-    preheader: `We'll be in touch by ${sc.replyBy}.`,
+    preheader: scholarship.hearBy,
     heading: "Got it.",
     body:
       p(hi(d.name)) +
       p(`Thanks for applying for the First Offer Scholarship: one full-tuition seat in the ${esc(site.cohort.start)} ${esc(site.cohort.name.toLowerCase())}.`) +
-      p(`Applications close ${esc(sc.closes)}. Finalists get a 15-minute call in the ${esc(sc.finalists)}, and we'll be in touch by ${esc(sc.replyBy)}.`) +
+      p(`Applications close ${esc(sc.closes)}. Finalists get a 15-minute call in the ${esc(sc.finalists)}. ${esc(scholarship.hearBy)}`) +
       p("One seat per cohort. Applicants not selected can still enroll in the program. Questions? Just reply to this email."),
   });
   return { subject, text, html };
