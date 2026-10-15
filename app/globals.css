@@ -1459,8 +1459,7 @@ details.more summary { cursor: pointer; font-weight: 600; color: var(--dusty); f
 .card.scholarship-card:hover h2 { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; }
 .card.scholarship-card:focus-visible { outline: 3px solid var(--dusty); outline-offset: 3px; }
 
-/* /apply: the consent line under the short form; /apply/thanks. */
-.form-fine { margin: 0; font-size: 15px; color: var(--ink); }
+/* /apply/thanks */
 .apply-thanks { max-width: 720px; }
 .apply-thanks-deposit { margin-top: 28px; font-size: 16px; }
 .apply-thanks-deposit a { color: var(--dusty); font-weight: 600; text-decoration: underline; }

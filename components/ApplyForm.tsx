@@ -17,7 +17,8 @@ export default function ApplyForm() {
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const payload = Object.fromEntries(new FormData(e.currentTarget).entries());
+    const data = new FormData(e.currentTarget);
+    const payload = { ...Object.fromEntries(data.entries()), agreeTerms: data.get("agreeTerms") === "on" };
     setStatus("sending");
     const result = await postForm("/api/apply", payload);
     if (result !== "ok") {
@@ -56,9 +57,10 @@ export default function ApplyForm() {
         <input id="parentEmail" name="parentEmail" type="email" autoComplete="off" />
       </div>
 
-      <p className="full form-fine">
-        By applying, you agree to our <Link href="/terms">Terms</Link> and <Link href="/privacy">Privacy Policy</Link>. Applying costs nothing.
-      </p>
+      <div className="field full consent">
+        <input id="agreeTerms" name="agreeTerms" type="checkbox" required />
+        <label htmlFor="agreeTerms">I agree to the <Link href="/terms">Terms</Link> and <Link href="/privacy">Privacy Policy</Link>. <span aria-hidden="true">*</span></label>
+      </div>
       <div className="full">
         <button type="submit" className="btn btn-primary" disabled={status === "sending"}>
           {status === "sending" ? "Sending…" : "Submit application"}

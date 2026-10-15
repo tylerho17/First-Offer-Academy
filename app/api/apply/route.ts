@@ -17,6 +17,7 @@ const schema = z.object({
   year: reqText(40),
   recruiting: reqText(3000),
   parentEmail: z.union([email(), z.literal("")]).optional().transform((v) => v || null),
+  agreeTerms: z.literal(true, { error: "You must agree to the Terms and Privacy Policy." }),
 });
 
 export const POST = formRoute({
@@ -32,8 +33,7 @@ export const POST = formRoute({
     year: d.year,
     recruiting_status: d.recruiting,
     parent_email: d.parentEmail,
-    // The form states that applying means agreeing to the Terms and Privacy Policy.
-    agree_terms: true,
+    agree_terms: d.agreeTerms,
   }),
   after: async (d) => {
     await Promise.allSettled([
