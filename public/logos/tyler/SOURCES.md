@@ -20,5 +20,5 @@ Each logo comes from the firm's own website (checked 2026-10-05), or from a file
 | Stifel | `kenji/stifel.svg` | Header logo, https://www.stifel.com/images/home/stifel-logo.svg (checked 2026-10-15) |
 | TeeSync | `kenji/teesync.jpg` | Provided by Tyler (2026-10-15): the TeeSync LinkedIn company page logo (linkedin.com/company/teesync) |
 | Sackett Financial Group | `kenji/sfg-wealth-management.png` | Provided by Tyler (2026-10-15): the SFG Wealth Management (Northwestern Mutual) LinkedIn company logo, white margin trimmed |
-| UBS Asset Management | monogram | ubs.com blocks automated downloads; monogram tile until Tyler supplies the file |
+| UBS Asset Management | `kenji/ubs.svg` | UBS logo (keys and wordmark, UBS red), https://upload.wikimedia.org/wikipedia/en/a/ab/UBS_Logo.svg (en.wikipedia File:UBS_Logo.svg); ubs.com blocks automated downloads |
 | Renewable Advisors | monogram | Not requested yet |
