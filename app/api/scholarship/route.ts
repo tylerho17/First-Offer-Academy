@@ -3,6 +3,7 @@ import { email, formRoute, optText, reqText } from "@/lib/formRoute";
 import { sendEmail } from "@/lib/emails/send";
 import { scholarshipConfirmation, scholarshipNotify } from "@/lib/emails/templates";
 import { WORD_LIMIT, wordCount } from "@/content/scholarship";
+import { site } from "@/content/site";
 
 // The First Offer Scholarship application (/scholarship). Stored in
 // public.scholarship_applications (supabase/migrations/006_scholarship_applications.sql).
@@ -42,7 +43,7 @@ export const POST = formRoute({
   after: async (d) => {
     await Promise.allSettled([
       sendEmail({ to: d.email, ...scholarshipConfirmation(d) }),
-      process.env.NOTIFY_EMAIL ? sendEmail({ to: process.env.NOTIFY_EMAIL, replyTo: d.email, ...scholarshipNotify(d) }) : Promise.resolve(),
+      sendEmail({ to: process.env.NOTIFY_EMAIL || site.notifyEmail, replyTo: d.email, ...scholarshipNotify(d) }),
     ]).then((rs) => rs.forEach((r) => r.status === "rejected" && console.error("[scholarship] email failed:", r.reason)));
   },
 });

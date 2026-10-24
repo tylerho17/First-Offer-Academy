@@ -2,6 +2,7 @@ import { z } from "zod";
 import { email, formRoute, reqText } from "@/lib/formRoute";
 import { sendEmail } from "@/lib/emails/send";
 import { applyConfirmation, applyNotify } from "@/lib/emails/templates";
+import { site } from "@/content/site";
 
 // The short application (/apply). Stored in public.applications; the
 // "Where are you in recruiting right now?" answer goes in recruiting_status
@@ -38,7 +39,7 @@ export const POST = formRoute({
   after: async (d) => {
     await Promise.allSettled([
       sendEmail({ to: d.email, ...applyConfirmation(d) }),
-      process.env.NOTIFY_EMAIL ? sendEmail({ to: process.env.NOTIFY_EMAIL, replyTo: d.email, ...applyNotify(d) }) : Promise.resolve(),
+      sendEmail({ to: process.env.NOTIFY_EMAIL || site.notifyEmail, replyTo: d.email, ...applyNotify(d) }),
     ]).then((rs) => rs.forEach((r) => r.status === "rejected" && console.error("[apply] email failed:", r.reason)));
   },
 });

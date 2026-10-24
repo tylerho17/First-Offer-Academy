@@ -20,7 +20,7 @@ export const fullLinkIds = () => ids(process.env.FULL_PAYMENT_LINK_IDS);
 
 export type PaymentType = "deposit" | "full";
 
-export const ownerEmail = () => process.env.OWNER_NOTIFY_EMAIL || site.email;
+export const ownerEmail = () => process.env.OWNER_NOTIFY_EMAIL || site.notifyEmail;
 
 const linkId = (s: Stripe.Checkout.Session) => (typeof s.payment_link === "string" ? s.payment_link : s.payment_link?.id ?? null);
 
@@ -99,7 +99,7 @@ export async function recordDeposit(s: Stripe.Checkout.Session, type: PaymentTyp
   };
 
   const amount = formatAmount(s.amount_total ?? 0, s.currency ?? "usd");
-  await send("confirmation_sent_at", { to: email, replyTo: site.email, ...depositConfirmation({ name: s.customer_details?.name, type }) });
+  await send("confirmation_sent_at", { to: email, ...depositConfirmation({ name: s.customer_details?.name, type }) });
   await send("owner_notified_at", {
     to: ownerEmail(),
     replyTo: email,

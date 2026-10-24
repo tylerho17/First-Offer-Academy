@@ -70,6 +70,12 @@ export const site = {
   ],
 
   email: "hello@firstofferacademy.com",
+  // Reply-To on every outgoing email, unless the email sets its own
+  // (owner notifications reply to the applicant or parent).
+  replyTo: "tyler@firstofferacademy.com",
+  // Where new-application, scholarship and deposit alerts go, unless
+  // NOTIFY_EMAIL / OWNER_NOTIFY_EMAIL override it.
+  notifyEmail: "tyler@firstofferacademy.com",
   // Social profile URLs live in content/social.ts.
   // /zh (Mandarin parent page) stays noindex, out of the nav, and out of the
   // sitemap until a native speaker has reviewed content/zh.ts.
