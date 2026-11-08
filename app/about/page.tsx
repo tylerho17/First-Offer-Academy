@@ -127,7 +127,7 @@ export default function AboutPage() {
 
       <section className="about-section">
         <CTABanner
-          title="Book a parent call"
+          title="Book a free 20-min call"
           body={site.callNote}
           action={<PrimaryCTA location="about">Book a call with us</PrimaryCTA>}
         />

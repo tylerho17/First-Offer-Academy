@@ -7,7 +7,7 @@ const links = [
   { href: "/program", label: "How the program works" },
   { href: "/pricing", label: "Pricing" },
   { href: "/blog", label: "Free recruiting guides" },
-  { href: "/parents#call", label: "Book a parent call" },
+  { href: "/parents#call", label: "Book a free 20-min call" },
 ];
 
 export default function NotFound() {

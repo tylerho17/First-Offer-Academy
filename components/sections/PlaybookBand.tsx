@@ -3,7 +3,7 @@ import { leadMagnet } from "@/content/leadMagnet";
 
 // Homepage: the free Playbook, after the stats strip. The button goes to the
 // existing gated download (/playbook: email, then the PDF). It's an
-// outline button so "Book a parent call" stays the dominant CTA.
+// outline button so "Book a free 20-min call" stays the dominant CTA.
 export default function PlaybookBand() {
   return (
     <section className="section-tight" aria-labelledby="playbook-band-title">

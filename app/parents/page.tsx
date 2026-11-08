@@ -200,7 +200,7 @@ export default async function ParentsPage() {
           <VideoPair videos={callVideos} className="before-call" />
           <div className="card call-card" id="call">
             <div>
-              <h2>Book a parent call</h2>
+              <h2>Book a free 20-min call</h2>
               <p>{site.callNote}</p>
             </div>
             <PrimaryCTA location="parents" />

@@ -74,7 +74,7 @@ export default function ArticleView({ article: a }: { article: Article }) {
               <span className="eyebrow">Parents</span>
               <h3>Book a 20-minute call</h3>
               <p>Talk through your student&apos;s situation with Tyler and Kenji and whether the program fits.</p>
-              <a href={site.calendlyUrl} className="link-arrow" target="_blank" rel="noopener noreferrer">Book a parent call →</a>
+              <a href={site.calendlyUrl} className="link-arrow" target="_blank" rel="noopener noreferrer">Book a free 20-min call →</a>
             </div>
           </div>
         </div>

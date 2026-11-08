@@ -53,7 +53,7 @@ export default function TemplateLibrary({
         {unlocked ? (
           <div role="status">
             <h2>Everything is unlocked.</h2>
-            <p>Download any template below. Want someone checking this every week? <CallLink className="">Book a parent call</CallLink>.</p>
+            <p>Download any template below. Want someone checking this every week? <CallLink className="">Book a free 20-min call</CallLink>.</p>
           </div>
         ) : (
           <>

@@ -2,7 +2,7 @@
 
 Reference: Wall Street Mastermind's long-form, proof-heavy sales page and call funnel (structure only, not its claims or logo use). Secondary reference: Leland's clean program pages and coach cards. Tone: warm like a mentor, serious like an offer letter.
 
-Conversion goal, in order: 1) Apply, 2) Book a free parent call (Calendly), 3) Register for an info session.
+Conversion goal, in order: 1) Apply, 2) Book a free 20-min call (Calendly), 3) Register for an info session.
 
 ---
 
@@ -51,7 +51,7 @@ Global: sticky header (logo, Program, Results, About, FAQ, Apply button). Navy a
 ### 1. Hero (mist)
 - H1: **Your first internship shouldn't depend on which club lets you in.**
 - Sub: First Offer Academy is a 12-week program that teaches first- and second-year college students how to land internships in finance, consulting, marketing, and tech, starting from zero.
-- Buttons: **Apply for the January cohort** (primary navy) · **Book a parent call** (secondary)
+- Buttons: **Apply for the January cohort** (primary navy) · **Book a free 20-min call** (secondary)
 - Right side: Tyler's headshot (transparent PNG on a cream rounded card).
 - Proof row under the buttons: "12 seats · Starts January 2027 · Orange County"
 
@@ -116,7 +116,7 @@ Four cream cards with an icon each: Finance, Consulting, Marketing, Tech (softwa
 - H2: **Founding cohort · January 2027**
 - Bullets: 12 weekly sessions · 12 1:1s · accountability pod · resume, outreach & interview toolkit · graded mocks · biweekly parent reports
 - "Limited seats. Tuition and scholarship details are covered on the parent call."
-- Buttons: **Book a parent call** (sage, navy text) · "Apply for the scholarship seat" (cream underlined link, /scholarship)
+- Buttons: **Book a free 20-min call** (sage, navy text) · "Apply for the scholarship seat" (cream underlined link, /scholarship)
 
 ### 12. FAQ (cream panels, accordion)
 Top 6 on home, full list on /faq:
@@ -130,7 +130,7 @@ Also on /faq: community college students welcome? · which majors? · who coache
 
 ### 13. Final CTA (mist)
 - H2: **12 seats. January starts sooner than it sounds.**
-- Buttons: Apply · Book a parent call
+- Buttons: Apply · Book a free 20-min call
 
 ### Footer (navy, cream text)
 Logo, tagline, nav links, email, Instagram, © 2026 First Offer Academy, Privacy · Terms.

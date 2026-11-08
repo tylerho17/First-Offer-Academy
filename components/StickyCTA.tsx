@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import PrimaryCTA from "./PrimaryCTA";
 
-// The sticky "Book a parent call" bar, below 768px only (CSS hides it wider).
+// The sticky "Book a free 20-min call" bar, below 768px only (CSS hides it wider).
 // It shows once the visitor has scrolled past the page's first booking button
 // (or one screen down on a page without one), and hides while:
 //  - any other booking button (<PrimaryCTA>, [data-primary-cta]) is on screen,

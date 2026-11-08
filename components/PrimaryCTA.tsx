@@ -3,7 +3,7 @@ import { site } from "@/content/site";
 // Where a CTA sits, for the cta_click analytics event.
 export type CtaLocation = "hero" | "sticky" | "pricing" | "parents" | "faq" | "footer" | "program" | "about" | "track" | "menu" | "header" | "final" | "coach" | "apply" | "band";
 
-// The one primary action site-wide: book a parent call. Every booking button
+// The one primary action site-wide: book a free 20-min call. Every booking button
 // renders through here, so the link, wording and style live in one place.
 // tone="navy-band": the sage pill used on navy bands. Full width on mobile,
 // auto width from 768px, at least 48px tall. data-primary-cta lets the sticky
@@ -12,7 +12,7 @@ export default function PrimaryCTA({
   location,
   tone = "default",
   className = "",
-  children = "Book a parent call",
+  children = "Book a free 20-min call",
 }: { location: CtaLocation; tone?: "default" | "navy-band"; className?: string; children?: React.ReactNode }) {
   return (
     <a

@@ -30,7 +30,7 @@ const columns: { title: string; links: { label: string; href: string; external?:
       { label: "Results", href: "/results" },
       { label: "For parents", href: "/parents" },
       { label: site.email, href: `mailto:${site.email}`, external: true },
-      { label: "Book a parent call", href: site.calendlyUrl, external: true },
+      { label: "Book a free 20-min call", href: site.calendlyUrl, external: true },
     ],
   },
 ];
