@@ -14,7 +14,7 @@ This agreement is between **First Offer Academy** [legal entity name: __________
 - An accountability pod of three
 - Feedback on your resume, outreach emails, behavioral stories, and interviews
 - Graded mock interviews in Weeks 11–12
-- A parent progress report every two weeks (to the parent/guardian you list)
+- A status email every Monday to you and the parent/guardian you list
 - A Week 12 family meeting
 
 ## 2. No promise of outcomes
@@ -24,10 +24,10 @@ We do not promise internship offers or any specific outcome, employer, role, pay
 - Attend sessions and 1:1s, or tell your coach in advance.
 - Hit the weekly minimums and log them honestly in your tracker.
 - Follow the Code of Conduct (firstofferacademy.com/code-of-conduct), including never misrepresenting yourself to professionals.
-- If you miss your minimums two weeks in a row, join a call with your coach and a parent/guardian to reset the plan.
+- One makeup week: you may miss one week's minimums once and make them up the following week. A second miss ends offer-or-refund eligibility; coaching continues, and we schedule a reset call with you and a parent/guardian.
 
 ## 4. Tuition and payment
-- Tuition: $5,000. Pay in full, or pay the deposit and then the $4,000 balance before Week 1.
+- Tuition: $5,000 total: a $1,000 deposit at enrollment, then $2,000 due December 15, 2026 and $2,000 due January 15, 2027, paid by Zelle request from tyler@firstofferacademy.com.
 - Deposit: $1,000, credited toward tuition. Fully refundable until December 15, 2026; after that it applies to tuition.
 - Withdrawal and refunds after the program starts: withdraw before Week 3 for a prorated refund of unused weeks. No refunds after Week 3. If we cancel the cohort, every payment is refunded in full.
 - Full terms: Refund & Payment Policy (firstofferacademy.com/refunds).

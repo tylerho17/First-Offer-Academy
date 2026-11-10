@@ -45,7 +45,7 @@ export const guide: Guide = {
     tyler("The most useful thing a parent can ask is \"What did you learn on your last call?\" It shows interest in the process, not the result, and it's a question your student can always answer if they're doing the work."),
 
     h2("Reading your student's numbers"),
-    p("A search that's working produces visible activity, even before it produces an offer. If your student is willing to share, these are the numbers worth knowing. They're the same ones we use in the program's biweekly parent reports."),
+    p("A search that's working produces visible activity, even before it produces an offer. If your student is willing to share, these are the numbers worth knowing. They're the same ones in the program's Monday status emails."),
     table("Signs of a healthy search", ["Number", "What healthy looks like"], [
       ["Emails sent per week", "A steady weekly number (our program's minimum is 50 from Week 3)"],
       ["Reply rate", "Moving up over time as emails improve (the goal is toward 10%)"],
@@ -54,7 +54,7 @@ export const guide: Guide = {
       ["Stories and practice", "8 stories written and recorded; mock interviews done"],
       ["Tracker updated", "Every week, not in bursts"],
     ]),
-    p("If the numbers are near zero for several weeks, that's worth a gentle conversation about what's getting in the way: time, confidence, not knowing what to do next, or discouragement. In our program, two missed weekly minimums in a row triggers a call with the student and a parent for exactly this reason. Early is much easier than late."),
+    p("If the numbers are near zero for several weeks, that's worth a gentle conversation about what's getting in the way: time, confidence, not knowing what to do next, or discouragement. In our program, a second missed weekly minimum triggers a reset call with the student and a parent for exactly this reason. Early is much easier than late."),
 
     h2("Using your own network, well"),
     p("If you know people in your student's field, that can help, as long as your student does the work. Here's the right way to do it:"),
@@ -115,7 +115,7 @@ export const guide: Guide = {
     p("If your student would rather not share numbers with you directly, that's okay too. What matters is that someone is looking at them every week. That can be a mentor, a career center advisor, a coach, or your student alone with an honest tracker."),
 
     h2("How the program handles this"),
-    p("First Offer Academy is built for exactly this tension. Students own their search; parents get visibility. Every two weeks, parents receive a one-page progress report with their student's level on the Standard and their numbers. In Week 8, families attend a 30-minute results meeting where the student presents their own numbers and plays their Week 1 and Week 8 recorded introductions side by side. The coach holds the student to the weekly number, so you don't have to."),
+    p("First Offer Academy is built for exactly this tension. Students own their search; parents get visibility. Every Monday, parent and student receive a status email with the student's numbers and status. In Week 8, families attend a 30-minute results meeting where the student presents their own numbers and plays their Week 1 and Week 8 recorded introductions side by side. The coach holds the student to the weekly number, so you don't have to."),
     check("A good week, from a parent's side",
       "You asked about the process, not the outcome",
       "Your student knows their numbers for the week",

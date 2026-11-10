@@ -53,7 +53,7 @@ export const preWork = {
   label: "Week 0",
   name: "Winter Break Pre-Work",
   summary:
-    "Starts the day you enroll, not in January. Students arrive at Week 1 with a resume draft, their first 20 named contacts, and the Candidate Brand module already watched.",
+    "Prep materials are sent January 1, 2027, and Week 1 starts Monday, January 4, 2027. Students arrive at Week 1 with a resume draft, their first 20 named contacts, and the Candidate Brand module already watched.",
 };
 
 // Four phases, two weeks each; no week belongs to two phases. Outreach keeps
@@ -113,10 +113,12 @@ export const phaseInfo: { name: Phase; weeks: string; from: number; to: number; 
 export const runningThroughout = {
   name: "Accountability & Pods",
   label: "Running the whole way",
-  summary: "Pod of three, weekly minimums, Sunday scoreboard, parent report every two weeks.",
+  summary: "Pod of three, weekly minimums, Sunday scoreboard, a status email every Monday.",
 };
 
-const MIN = "50 new sequenced emails · every follow-up due this week · tracker updated by Sunday night";
+// Mirrors commitment.minimums in content/program.ts.
+const FOUNDATION = "No outreach minimums yet: Weeks 1–3 build the foundation (resume, target list, story bank). Outreach minimums start in Week 4.";
+const MIN = (emails: string, calls: string) => `${emails} outreach emails · ${calls} networking ${calls === "1" ? "call" : "calls"} · 25 applications`;
 
 export const weeks: Week[] = [
   {
@@ -134,7 +136,7 @@ export const weeks: Week[] = [
     ],
     liveReps: "Each student answers \"tell me about yourself\" cold, on camera. No prep. This recording is the Week 8 baseline. Then peers swap resumes and grade them against the rubric.",
     oneOnOne: "Honest gap check against the pre-work: what the student has already done that counts, what's missing, and a live resume edit until it passes the rubric.",
-    minimum: "Resume passes the rubric, intro recorded, and the target list of 50 with named contacts built.",
+    minimum: "No outreach minimums yet. The foundation: resume passes the rubric, intro recorded, and the target list of 50 with named contacts built.",
     deliverables: ["Resume passes the rubric", "60-second intro recorded", "Answers to the 25 self-questions (raw material for stories)", "Target list of 50 companies with named contacts"],
     level: 1,
     coachQuestions: [
@@ -156,11 +158,11 @@ export const weeks: Week[] = [
       "Sourcing contacts with tools like Apollo or RecruitEm, and checking that the person actually does the job you want to hear about.",
       "Building the AI email automation: personalization prompts, mail merge and sequencing, and the follow-up steps loaded from day one.",
       "The tracker. Only track people who reply. Everyone else lives in the sequence until they do.",
-      "The weekly minimum starts now: 50 new sequenced emails, every follow-up due, and the tracker updated by Sunday night.",
+      "The tracker starts now: every email, follow-up, and reply logged by Sunday night. Outreach minimums start in Week 4.",
     ],
     liveReps: "Every student builds their sequence live in the session and sends before leaving.",
     oneOnOne: "Check the automation end to end: the personalization prompt, the first five emails line by line, and the follow-up steps.",
-    minimum: MIN,
+    minimum: FOUNDATION,
     deliverables: ["AI email automation live", "50 sequenced emails sent and logged"],
     level: 2,
     coachQuestions: [
@@ -169,7 +171,7 @@ export const weeks: Week[] = [
       "What will stop you from sending 50 next week, and what's the plan for that?",
     ],
     assets: ["target-list", "outreach-tracker", "ai-prompt-pack"],
-    parents: "The first biweekly progress report: your student's level, the resume status, and the target list count. The tracker starts counting this week.",
+    parents: "In the Monday status email: your student's level, the resume status, and the target list count. The tracker starts counting this week.",
     numbers: { emails: "50", calls: "0", stories: "—", externship: "Open programs identified" },
   },
   {
@@ -187,7 +189,7 @@ export const weeks: Week[] = [
     ],
     liveReps: "The worst email of the week is rewritten live on screen. Then mock calls in pairs, with the coach playing a distracted associate.",
     oneOnOne: "Reply-rate diagnosis on ten sent emails, then a recorded mini-mock call played back: where the energy dropped and what to ask instead.",
-    minimum: MIN,
+    minimum: FOUNDATION,
     deliverables: ["150 total sent", "3 calls completed", "A thank-you within 2 hours of each call", "First externship application started"],
     level: 3,
     coachQuestions: [
@@ -196,7 +198,7 @@ export const weeks: Week[] = [
       "When did you send the thank-you? What did it say?",
     ],
     assets: ["cold-email-pack", "ai-prompt-pack", "call-framework", "outreach-tracker"],
-    parents: "The second progress report: emails sent (target: 150), reply rate, calls completed, and the first externship application underway.",
+    parents: "In the Monday status email: emails sent (target: 150), reply rate, calls completed, and the first externship application underway.",
     numbers: { emails: "150", calls: "3", stories: "—", externship: "First application started" },
   },
   {
@@ -214,7 +216,7 @@ export const weeks: Week[] = [
     ],
     liveReps: "Practice the close until it sounds natural, then role-play the awkward \"no.\" Each student tells two stories; peers guess which question each one answers.",
     oneOnOne: "Walk through every call so far (did the close happen, who's owed a follow-up), then line-by-line edits on the weakest two stories.",
-    minimum: MIN,
+    minimum: MIN("25", "1"),
     deliverables: ["250 total sent", "5 calls completed", "First intro earned", "8 stories written, recorded, and mapped", "Externship applications submitted"],
     coachQuestions: [
       "Did you use the close on every call? Which one did you skip, and why?",
@@ -252,7 +254,7 @@ export const weeks: Week[] = [
     },
     liveReps: "Rapid-fire \"why us\" drills across firms on each student's own target list, then timed technical drills where students grade each other.",
     oneOnOne: "Record the \"why\" pitch and rebuild it for the three firms the student cares about most, then work the weakest technical area out loud.",
-    minimum: MIN,
+    minimum: MIN("50", "2"),
     deliverables: ["300 total sent", "\"Why\" pitch recorded", "2 referrals or intros", "Technical baseline quiz passed at the track threshold"],
     level: 4,
     coachQuestions: [
@@ -261,7 +263,7 @@ export const weeks: Week[] = [
       "Which question did you get right without being able to explain why?",
     ],
     assets: ["why-worksheet", "technicals-finance", "technicals-accounting"],
-    parents: "The third progress report: whether your student has reached Level 4 (Networked), and their track group for technical prep.",
+    parents: "In the Monday status email: whether your student has reached Level 4 (Networked), and their track group for technical prep.",
     numbers: { emails: "300", calls: "5+", stories: "8 recorded", externship: "Interviews where invited" },
   },
   {
@@ -291,7 +293,7 @@ export const weeks: Week[] = [
     },
     liveReps: "A full 30-minute mock per student (behavioral, why, technical or case), graded on a written scorecard.",
     oneOnOne: "Watch the mock recording together, line by line against the scorecard, and pick the two fixes for next week.",
-    minimum: MIN,
+    minimum: MIN("75", "3"),
     deliverables: ["350 total sent", "1 graded mock passed", "Applications submitted to every open role on the target list"],
     coachQuestions: [
       "Where on the scorecard did you lose the most points?",
@@ -299,7 +301,7 @@ export const weeks: Week[] = [
       "Which open roles on your list haven't you applied to yet?",
     ],
     assets: ["interview-scorecard", "technicals-finance", "technicals-accounting"],
-    parents: "The fourth progress report: the graded mock score, applications submitted, and emails sent (target: 350).",
+    parents: "In the Monday status email: the graded mock score, applications submitted, and emails sent (target: 350).",
     numbers: { emails: "350", calls: "5+", stories: "8 recorded", externship: "Outcome depends on the program" },
   },
   {
@@ -316,7 +318,7 @@ export const weeks: Week[] = [
     ],
     liveReps: "A second full mock with a harder interviewer (a stranger), in a different format.",
     oneOnOne: "Prep for whatever is real this week: a first round, a follow-up, or a decline. If nothing is live, a mini-mock on the weakest scorecard area.",
-    minimum: MIN,
+    minimum: MIN("100", "4–5"),
     deliverables: ["350+ total sent", "2 graded mocks passed", "First rounds completed where available"],
     level: 5,
     coachQuestions: [
@@ -341,7 +343,7 @@ export const weeks: Week[] = [
     ],
     liveReps: "Each student re-records \"tell me about yourself\" and watches it next to the Week 1 baseline.",
     oneOnOne: "Finish the 6-month game plan together, and rehearse the family results presentation.",
-    minimum: "Final results report and the 6-month game plan.",
+    minimum: `${MIN("100", "4–5")}, plus the final results report and the 6-month game plan.`,
     deliverables: ["Final results report", "6-month game plan (monthly targets, contacts to keep warm, applications calendar, skills to build)"],
     coachQuestions: [
       "What's the one habit from these 8 weeks you'll keep?",
@@ -363,8 +365,8 @@ export const weeklyRhythm = [
 
 export const rhythmNotes = [
   "Finals week and holiday weeks run async: no session, but the minimums are still due.",
-  "Two missed weekly minimums in a row triggers a call with the student and a parent.",
-  "Parents get a one-page progress report every two weeks, plus the Week 8 family results meeting.",
+  "One makeup week: the student may miss one week's minimums once and make them up the following week. A second miss ends offer-or-refund eligibility; coaching continues, and we schedule a reset call with the student and parent.",
+  "Parent and student get a status email every Monday, plus the Week 8 family results meeting.",
 ];
 
 export const getWeek = (n: number) => weeks.find((w) => w.n === n);

@@ -310,7 +310,7 @@ export const chapters: Chapter[] = [
     blocks: [
       p("This is the calendar we run in the program. Every week has a focus and a number. Hit the number, and the search takes care of itself far more often than you'd think."),
       ...tb.executionCalendar(),
-      tyler("Two missed weeks in a row is where searches die. If you miss one, the next week's number doesn't go down. You make it up."),
+      tyler("Missed weeks are where searches die. If you miss one, the next week's number doesn't go down. You make it up."),
       check("Every Sunday night", [
         "Tracker updated.",
         "50 new sequenced emails sent this week.",

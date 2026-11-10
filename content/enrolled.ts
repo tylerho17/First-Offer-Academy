@@ -6,7 +6,7 @@ export const enrolled = {
   held: `Your seat in the ${site.cohort.start} ${site.cohort.name.toLowerCase()} is held.`,
   steps: [
     "A confirmation email is on its way in the next few minutes. If it hasn't landed, check spam, then email us.",
-    "Your winter break pre-work arrives within 2 business days: the resume template, the target list worksheet, and the Candidate Brand module. You start now, not in January.",
+    `Your Week 0 prep materials arrive ${site.cohort.week0}: the resume template, the target list worksheet, and the Candidate Brand module. Week 1 starts ${site.cohort.week1}.`,
     "We'll send a link to book your first 1:1 in the first week of December.",
   ],
   // Paid in full (the pay-in-full Payment Link): the email's opening lines.

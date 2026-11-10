@@ -25,7 +25,7 @@ export default function OurPromise() {
             </ul>
             <p className="promise-why">{p.weDont.why}</p>
             <p className="promise-why">
-              Details: <Link href="/terms">Terms</Link> · <Link href="/refunds">Refund &amp; Payment Policy</Link> · <Link href="/faq#what-we-ask">What we ask of students</Link>
+              Details: <Link href="/terms">Terms</Link> · <Link href="/refunds">Refund &amp; Payment Policy</Link> · <Link href="/faq#weekly-minimums">What we ask of students</Link>
             </p>
           </div>
         </div>

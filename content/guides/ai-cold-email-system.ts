@@ -14,7 +14,7 @@ export const guide: Guide = {
   related: ["cold-email-template", "target-list-of-50", "networking-call-framework"],
   reviewedByTyler: true,
   body: [
-    p("In our program, the weekly minimum from Week 3 on is 50 new sequenced emails, every follow-up due that week, and the tracker updated by Sunday night. Ten weeks of that is 500+ personalized emails. When students hear that number, the first reaction is always the same: there's no way I have time to write 50 emails a week."),
+    p("In our program, the outreach minimum starts at 25 emails in Week 4 and reaches 100 a week by Week 7. By Week 12 that's 750+ personalized emails. When students hear that number, the first reaction is always the same: there's no way I have time to write 100 emails a week."),
     p("They're right, if they write them one at a time from scratch. Nobody should. The answer is a system: AI helps you research each person and draft a personalized first line, a sequencing tool sends the emails and the follow-ups on schedule, and you personalize and read every single email before it goes. Done well, it takes a few focused hours a week, and the emails read like you wrote them, because you did."),
     p("This guide walks through the whole system: the setup, the prompts, the follow-up cadence, and the guardrails that keep it from sounding like a robot."),
 

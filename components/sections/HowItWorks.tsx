@@ -2,7 +2,7 @@ import { afterProgram, offerSprint } from "@/content/program";
 
 // Homepage "How it works": the four stages of the offer, as cream cards.
 const steps = [
-  { when: "Week 0", title: "Get ahead.", body: "Pre-work over winter break, starting the day you enroll." },
+  { when: "Week 0", title: "Get ahead.", body: "Prep materials sent January 1, 2027, over winter break." },
   { when: "Weeks 1–8", title: "Build.", body: "Your Candidate Brand, Outreach System, Story Bank, Track Technicals, Interview Reps, and Accountability Pod." },
   { when: offerSprint.weeks, title: `${offerSprint.name}.`, body: offerSprint.summary },
   { when: "Until your offer", title: "Keep going.", body: `A 20-minute weekly check-in and a mock interview every other week until you receive an internship offer or ${afterProgram.until}, while you keep up ${afterProgram.maintenance}.` },

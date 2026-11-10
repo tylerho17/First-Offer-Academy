@@ -13,11 +13,11 @@ export const promise = {
       { title: "A weekly 1:1", body: "Eight 60-minute 1:1s: a line-by-line tracker review, the single biggest bottleneck fixed, live edits on real work, and exact commitments for the next 7 days." },
       { title: "Feedback on every piece of work", body: "Resume, outreach emails, behavioral stories, and interviews. Nothing your student submits goes unreviewed." },
       { title: "A documented search, graded against the Standard", body: "Every email, call, and interview is logged. Your student's level on the Standard moves on evidence, not on how the week felt." },
-      { title: "Parent progress reports", body: "A one-page report every two weeks showing your student's level and numbers." },
+      { title: "A status email every Monday", body: "To parent and student: your student's numbers for the week and their offer-or-refund status." },
       { title: "The Week 8 family meeting", body: "Your student presents their results to you, including their Week 1 and Week 8 recorded introductions side by side." },
-      { title: "The Offer Sprint, then weekly check-ins", body: "Weeks 9–12: technical and behavioral mocks, plus prep and debriefs for every networking call. After that, a 20-minute weekly check-in and a mock interview every other week until an internship offer or May 31, 2027, while your student keeps up 100 outreach emails and 6–8 networking calls a week." },
+      { title: "The Offer Sprint, then weekly check-ins", body: "Weeks 9–12: technical and behavioral mocks, plus prep and debriefs for every networking call. After that, a 20-minute weekly check-in and a mock interview every other week until an internship offer or May 31, 2027, while your student keeps up 100 emails, 6–8 networking calls, and 25 applications a week." },
       { title: "Coached Extern applications, fee covered", body: "We coach the Extern externship application, the recorded video, and the live interview, and cover the Extern fee. Admission is Extern's decision, not ours." },
-      { title: "Offer-or-refund", body: "If your student hits every weekly minimum through May 31, 2027 and doesn't receive an internship offer, paid or unpaid, we refund your full tuition." },
+      { title: "Offer-or-refund", body: "If your student meets every weekly minimum through May 31, 2027 and receives no internship offer, we refund the full $5,000. An offer is any internship, paid or unpaid, offered in writing." },
     ],
   },
 
@@ -34,9 +34,9 @@ export const promise = {
   weAsk: {
     title: "What we ask of students",
     items: [
-      { title: "Hit the weekly minimums", body: "Each week has a number: emails sent, calls completed, stories recorded. The program only works if the work gets done." },
-      { title: "Show up", body: "Attend the weekly session and the 1:1, and check in with the pod every Sunday." },
-      { title: "Two missed weeks in a row triggers a call", body: "If a student misses their minimums two weeks in a row, we set up a call with the student and a parent to reset the plan together." },
+      { title: "Hit the weekly minimums", body: "Weeks 1–3 build the foundation with no outreach minimums. From Week 4, each week has a number: outreach emails, networking calls, applications. About 8–12 hours a week from Week 7. The program only works if the work gets done." },
+      { title: "Show up", body: "Attend every session, 1:1, and scheduled mock, check in with the pod every Sunday, turn in assignments by Sunday 11:59 pm Pacific, and attend every interview an employer schedules." },
+      { title: "One makeup week", body: "Miss one week's minimums once and make them up the following week. A second miss ends offer-or-refund eligibility; coaching continues, and we schedule a reset call with the student and parent." },
     ],
   },
 };

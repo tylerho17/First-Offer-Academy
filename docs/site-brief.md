@@ -95,7 +95,7 @@ Four cream cards with an icon each: Finance, Consulting, Marketing, Tech (softwa
 
 ### 8. The Standard
 - H2: **Progress you can see, graded on evidence**
-- 6-level ladder (Foundation → Offer) with the gate for each level. Parent angle: "Every two weeks, parents get a one-page progress report."
+- 6-level ladder (Foundation → Offer) with the gate for each level. Parent angle: "Every Monday, parent and student get a status email with the student's numbers and status."
 
 ### 9. Founder story (mist, casual photo left)
 - H2: **Why I built this**
@@ -109,12 +109,12 @@ Four cream cards with an icon each: Finance, Consulting, Marketing, Tech (softwa
 ### 10. Comparison table
 - H2: **Why not just…**
 - Columns: First Offer Academy · Career center · Campus clubs · Doing it alone
-- Rows: Weekly 1:1 coaching · Someone reviews every outreach email · Graded mock interviews · Open to every student · Accountability to a weekly number · Parent progress reports · Track-specific prep
+- Rows: Weekly 1:1 coaching · Someone reviews every outreach email · Graded mock interviews · Open to every student · Accountability to a weekly number · Monday status emails · Track-specific prep
 - First Offer column: all checks. Others: honest mix (career center: open to every student ✓; clubs: some mock interviews ✓; etc.). Don't trash the alternatives; stay factual.
 
 ### 11. Price band (navy band, cream text)
 - H2: **Founding cohort · January 2027**
-- Bullets: 12 weekly sessions · 12 1:1s · accountability pod · resume, outreach & interview toolkit · graded mocks · biweekly parent reports
+- Bullets: 12 weekly sessions · 12 1:1s · accountability pod · resume, outreach & interview toolkit · graded mocks · Monday status emails
 - "Limited seats. Tuition and scholarship details are covered on the parent call."
 - Buttons: **Book a free 20-min call** (sage, navy text) · "Apply for the scholarship seat" (cream underlined link, /scholarship)
 

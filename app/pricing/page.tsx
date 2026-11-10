@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { pageMeta } from "@/lib/meta";
 import Link from "next/link";
-import { depositLine, site } from "@/content/site";
+import { site, tuitionLine } from "@/content/site";
 import { externshipBlock, offerOrRefund, pricingIncludes } from "@/content/program";
 import FaqList from "@/components/sections/FaqList";
 import Comparison from "@/components/sections/Comparison";
@@ -16,14 +16,13 @@ import { Check } from "@/components/Icons";
 
 export const metadata: Metadata = pageMeta({
   title: "Pricing",
-  description: `What First Offer Academy tuition includes: everything, from Week 0 to your first offer. Tuition and scholarship details are covered on the parent call. A deposit, fully refundable through ${site.depositRefundDeadline}, holds a seat. Offer-or-refund.`,
+  description: `First Offer Academy tuition: ${site.tuition.total}, everything included, from Week 0 to your first offer. A ${site.tuition.deposit} deposit, fully refundable through ${site.depositRefundDeadline}, holds a seat. Offer-or-refund.`,
 });
 
 export default function PricingPage() {
   const c = site.cohort;
-  // No tuition figure on this page: tuition and scholarship details are
-  // covered on the parent call. Mangesh beside the plan, then Tom's quote, then
-  // the "It was worth it." section: every worth-it clip.
+  // Mangesh beside the plan, then Tom's quote, then the "It was worth it."
+  // section: every worth-it clip.
   const priceVideo = videoAt("pricing-hero");
   const worthParents = videosAt("worth-parent-1", "worth-parent-2");
   const worthStudents = videosAt("worth-student-1", "worth-student-2", "worth-student-3", "worth-student-4");
@@ -33,7 +32,7 @@ export default function PricingPage() {
         <div className="wrap">
           <span className="proof-chip">{c.seats} seats · {c.name} · {c.start}</span>
           <h1>One program. <em>Everything included.</em></h1>
-          <p className="lede">The 12-week program, then weekly check-ins and mocks every other week until your student lands an offer. Tuition and scholarship details are covered on the parent call.</p>
+          <p className="lede">The 12-week program, then weekly check-ins and mocks every other week until your student lands an offer. {site.tuition.total}, everything included.</p>
           <div className="tab-row">
             <a href="#plan" className="tab is-active">What&apos;s included</a>
             <a href="#scholarship" className="tab">Scholarship</a>
@@ -49,9 +48,9 @@ export default function PricingPage() {
             <div className={priceVideo ? "price-top" : undefined}>
               <div>
                 <span className="eyebrow">Everything included</span>
-                <p className="price-amount">{c.name} · {c.start}</p>
-                <p className="price-line">Limited seats. Tuition and scholarship details are covered on the parent call.</p>
-                <p className="price-line">{depositLine()} The remaining tuition is invoiced separately and due {c.balanceDue}.</p>
+                <p className="price-amount">{site.tuition.total}</p>
+                <p className="price-line">{c.name} · {c.start}. Limited seats.</p>
+                <p className="price-line">{tuitionLine()}</p>
               </div>
               {priceVideo && <VideoCard video={priceVideo} size="hero" />}
             </div>
@@ -69,7 +68,7 @@ export default function PricingPage() {
             </div>
             <p className="hero-secondary"><Link href="/apply" className="link-arrow">Apply →</Link></p>
             <p className="pay-note balance-note">
-              Already paid the deposit? We&apos;ll send you a separate invoice for the remaining tuition, due {c.balanceDue}.
+              Already paid the deposit? Your next payment of {site.tuition.payments[0].amount} is due {site.tuition.payments[0].due}.
             </p>
             <div className="card refund-panel price-refund">
               <h3>{offerOrRefund.title}</h3>

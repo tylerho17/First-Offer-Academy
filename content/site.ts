@@ -41,10 +41,21 @@ export const site = {
     name: "Founding cohort",
     start: "January 2027",
     seats: 12, // founding cohort cap; every page reads this
-    // No tuition figure appears anywhere on the site: tuition and scholarship
-    // details are covered on the parent call. The deposit and the balance
-    // invoice are Stripe-side (lib/payments.ts).
-    balanceDue: "before Week 1",
+    week0: "January 1, 2027", // Week 0 prep materials sent
+    week1: "Monday, January 4, 2027", // Week 1 starts
+  },
+
+  // Tuition and the payment schedule. /pricing, /parents, the FAQ, /terms and
+  // /refunds all read these. The deposit is a Stripe Payment Link
+  // (lib/payments.ts); the two later payments are Zelle requests.
+  tuition: {
+    total: "$5,000",
+    deposit: "$1,000",
+    payments: [
+      { amount: "$2,000", due: "December 15, 2026" },
+      { amount: "$2,000", due: "January 15, 2027" },
+    ],
+    zelleFrom: "tyler@firstofferacademy.com",
   },
 
   calendlyUrl: "https://calendly.com/tyler-firstofferacademy",
@@ -63,7 +74,7 @@ export const site = {
   serviceProviders: [
     { name: "Vercel", purpose: "Website hosting and cookieless, aggregate site analytics", url: "https://vercel.com/legal/privacy-policy" },
     { name: "Supabase", purpose: "Database that stores form submissions (applications, contact messages, subscribers)", url: "https://supabase.com/privacy" },
-    { name: "Stripe", purpose: "Payment processing for deposits and tuition", url: "https://stripe.com/privacy" },
+    { name: "Stripe", purpose: "Payment processing for deposits", url: "https://stripe.com/privacy" },
     { name: "Calendly", purpose: "Scheduling calls", url: "https://calendly.com/privacy" },
     { name: "Resend", purpose: "Sending confirmation and program emails", url: "https://resend.com/legal/privacy-policy" },
     { name: "YouTube and Vimeo", purpose: "Embedded videos (loaded in privacy-enhanced mode; they only collect data when you play a video)", url: "https://policies.google.com/privacy" },
@@ -89,13 +100,10 @@ export const site = {
   // The FAQ answer to "Is it online or in person?". Empty strings below render
   // as "To be announced" / "will be confirmed".
   format: "Online, live sessions on Zoom",
-  weeklyHours: "", // e.g. "6–8"
-  // Hours of outreach a week on top of the session and 1:1 (shown in the FAQ).
-  outreachHours: "3–5 hours a week, rising as outreach ramps up",
   applicationDeadline: "",
   // Founding cohort refund terms. /refunds, /pricing, the FAQ, and the deposit
   // button all read these. Changing them changes a written promise to families.
-  refundTerms: `Your deposit is fully refundable through ${depositRefundDeadline}. After that, it applies to tuition, and the remaining tuition is invoiced separately and due before Week 1.`,
+  refundTerms: `Your deposit is fully refundable through ${depositRefundDeadline}. After that, it counts toward tuition.`,
   depositRefundDeadline,
   // The First Offer Scholarship: one full-tuition seat per cohort (/scholarship).
   scholarship: {
@@ -106,7 +114,18 @@ export const site = {
     finalistsBy: "December 7",
     decisionBy: "December 10",
   },
-  withdrawalPolicy: "Withdraw before Week 3 for a prorated refund of unused weeks. No refunds after Week 3. If we cancel the cohort, every payment is refunded in full.",
+  withdrawalPolicy: `Cancel before ${depositRefundDeadline} for a full refund. Before Week 3, a prorated refund of unused weeks. After Week 3, no refund. If we cancel the cohort, every payment is refunded in full.`,
+  // /refunds and the FAQ.
+  latePayments: "7 days late: sessions, 1:1s, and check-ins pause until paid. 14 days late: the student is removed, payments made are not refunded, and offer-or-refund ends.",
+};
+
+// "$5,000 total: a $1,000 deposit at enrollment (fully refundable through
+// December 15, 2026), then $2,000 due December 15, 2026 and $2,000 due
+// January 15, 2027, paid by Zelle request from tyler@firstofferacademy.com."
+export const tuitionLine = () => {
+  const t = site.tuition;
+  const [a, b] = t.payments;
+  return `${t.total} total: a ${t.deposit} deposit at enrollment (fully refundable through ${site.depositRefundDeadline}), then ${a.amount} due ${a.due} and ${b.amount} due ${b.due}, paid by Zelle request from ${t.zelleFrom}.`;
 };
 
 // The line that sits next to every deposit button.

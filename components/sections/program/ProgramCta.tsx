@@ -2,7 +2,7 @@ import Link from "next/link";
 import { site } from "@/content/site";
 import PrimaryCTA from "../../PrimaryCTA";
 
-// Closing CTA (no tuition figure) and the FAQ link.
+// Closing CTA (tuition, then the scholarship link) and the FAQ link.
 export default function ProgramCta() {
   const c = site.cohort;
   return (
@@ -11,7 +11,7 @@ export default function ProgramCta() {
         <div className="card program-cta">
           <div>
             <h2>{c.name} · {c.start}</h2>
-            <p>Limited seats. Tuition and scholarship details are covered on the parent call. <Link href="/scholarship">The scholarship seat →</Link></p>
+            <p>Limited seats. {site.tuition.total}, everything included. <Link href="/scholarship">The scholarship seat →</Link></p>
           </div>
           <div>
             <PrimaryCTA location="program" />

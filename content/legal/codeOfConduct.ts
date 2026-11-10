@@ -39,7 +39,7 @@ export const codeOfConduct: LegalDoc = {
     { type: "p", text: "Most problems get solved with a conversation. How we respond depends on what happened:" },
     { type: "ul", items: [
       "First, a private conversation with your coach about what happened and how to fix it.",
-      "Missing minimums two weeks in a row leads to a call with the student and a parent to reset the plan.",
+      "One makeup week: the student may miss one week's minimums once and make them up the following week. A second miss ends offer-or-refund eligibility; coaching continues, and we schedule a reset call with the student and parent.",
       "Serious or repeated violations (harassment, lying to professionals, or sharing others' private information) can lead to removal from the program. Refunds in that case follow our [Refund & Payment Policy](/refunds).",
     ] },
     { type: "h2", text: "Reporting a concern" },

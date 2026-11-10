@@ -162,7 +162,7 @@ export function depositNotify(d: { name?: string | null; email: string; phone?: 
 
 Stripe: ${dashboard}
 
-Send pre-work within 2 business days.`;
+Week 0 prep materials go out January 1, 2027.`;
   const html = layout({
     preheader: subject,
     heading: full ? "New full payment" : "New deposit",
@@ -171,7 +171,7 @@ Send pre-work within 2 business days.`;
         .map(([k, v]) => `<tr><td style="padding:6px 12px 6px 0;vertical-align:top;color:#3F6690;font-weight:600;white-space:nowrap">${esc(k)}</td><td style="padding:6px 0">${esc(v)}</td></tr>`)
         .join("")}</table>` +
       button("Open Stripe payments", dashboard) +
-      p("<strong>Send pre-work within 2 business days.</strong>"),
+      p("<strong>Week 0 prep materials go out January 1, 2027.</strong>"),
   });
   return { subject, text, html };
 }

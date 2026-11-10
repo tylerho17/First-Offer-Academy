@@ -2,6 +2,7 @@ import Link from "next/link";
 import { preWork, weekHref, weeks } from "@/content/curriculum";
 import { runningThroughout } from "@/content/curriculum";
 import { afterProgram, offerSprint } from "@/content/program";
+import { site } from "@/content/site";
 
 // The plan as a vertical timeline: Week 0, one node per training week (1–8),
 // then the Offer Sprint and check-ins. Each node shows the week label, the
@@ -25,7 +26,7 @@ export default function WeekPlan() {
                 <span className="week-row-n">{preWork.label}</span>
                 <span className="week-row-main">
                   <span className="week-row-title">{preWork.name}</span>
-                  <span className="week-row-sum">Starts the day you enroll, not in January.</span>
+                  <span className="week-row-sum">Prep materials sent {site.cohort.week0}.</span>
                 </span>
               </summary>
               <div className="week-row-body"><p>{preWork.summary}</p></div>

@@ -1,4 +1,4 @@
-import { depositLine, site } from "../site";
+import { site, tuitionLine } from "../site";
 import { legalContact, type LegalDoc } from "./types";
 
 const who = site.legalEntityName || site.name;
@@ -8,7 +8,7 @@ export const terms: LegalDoc = {
   title: "Terms of Service",
   description: "The terms for using the First Offer Academy website and enrolling in the program, including what we do and don't promise.",
   effective: "2026-10-05",
-  lastUpdated: "2026-10-05",
+  lastUpdated: "2026-11-09",
   contactEmail: legalContact,
   intro: `These terms apply to the ${site.name} website and program. By using the website, applying, or enrolling, you agree to them. If a student is under 18, a parent or guardian must agree on their behalf.`,
   body: [
@@ -23,20 +23,20 @@ export const terms: LegalDoc = {
     ] },
 
     { type: "h2", text: "What the program is" },
-    { type: "p", text: "The program is coaching and instruction for a student's internship search. It runs 12 weeks. Weeks 1–8 are core teaching: eight weekly 90-minute group sessions, eight weekly 60-minute 1:1s, an accountability pod, feedback on the student's work, graded mock interviews, parent progress reports every two weeks, and a Week 8 family meeting. Weeks 9–12 are the Offer Sprint: technical and behavioral mock interviews and networking. After Week 12, until the student receives an internship offer (paid or unpaid) or May 31, 2027, whichever comes first, the student gets a 20-minute weekly check-in and a mock interview every other week, as long as they keep up the maintenance minimum of 100 outreach emails and 6–8 networking calls a week. Dates, times, and format are shared before the cohort starts." },
+    { type: "p", text: "The program is coaching and instruction for a student's internship search. It runs 12 weeks. Weeks 1–8 are core teaching: eight weekly 90-minute group sessions, eight weekly 60-minute 1:1s, an accountability pod, feedback on the student's work, graded mock interviews, a status email to parent and student every Monday, and a Week 8 family meeting. Weeks 9–12 are the Offer Sprint: technical and behavioral mock interviews and networking. After Week 12, until the student receives an internship offer (paid or unpaid) or May 31, 2027, whichever comes first, the student gets a 20-minute weekly check-in and a mock interview every other week, as long as they keep up the weekly minimum of 100 emails, 6–8 networking calls, and 25 applications. Week 0 prep materials are sent January 1, 2027, and Week 1 starts Monday, January 4, 2027. Times and format are shared before the cohort starts." },
     { type: "p", text: "We may adjust session content, order, or coaches to improve the program. If we need to change a scheduled session, we'll give as much notice as we can and offer a make-up or recording." },
 
     { type: "h2", text: "No promise of outcomes" },
     { type: "p", text: "We do not promise internship offers or any specific outcome. We don't promise an internship at any particular company, in any particular role, at any particular pay, or by any particular date. Hiring decisions belong to employers, and they depend on things no one outside the employer controls." },
-    { type: "p", text: "What we do commit to is described on our [Our Promise](/program#promise) page: the sessions, 1:1s, feedback, documented search, parent reports, the Week 8 meeting, the Offer Sprint, and after Week 12 a 20-minute weekly check-in and a mock interview every other week until an offer or May 31, 2027." },
-    { type: "p", text: "The one exception to \"no promise of outcomes\" is offer-or-refund: if a student meets every weekly minimum through May 31, 2027 and receives no internship offer, we refund the full tuition. The exact terms are in our [Refund & Payment Policy](/refunds)." },
+    { type: "p", text: "What we do commit to is described on our [Our Promise](/program#promise) page: the sessions, 1:1s, feedback, documented search, Monday status emails, the Week 8 meeting, the Offer Sprint, and after Week 12 a 20-minute weekly check-in and a mock interview every other week until an offer or May 31, 2027." },
+    { type: "p", text: "The one exception to \"no promise of outcomes\" is offer-or-refund: if a student meets every weekly minimum through May 31, 2027 and receives no internship offer, we refund the full $5,000. The exact terms are in our [Refund & Payment Policy](/refunds)." },
 
     { type: "h2", text: "Student responsibilities" },
     { type: "ul", items: [
-      "Attend the weekly session and 1:1, or tell your coach ahead of time if you can't.",
-      "Hit the weekly minimums (emails sent, calls completed, stories recorded) and log them honestly in the tracker.",
-      "Check in with your pod every Sunday.",
-      "If a student misses their minimums two weeks in a row, we'll set up a call with the student and a parent to reset the plan.",
+      "Attend every session, 1:1, and scheduled mock, and every interview an employer schedules.",
+      "Meet the weekly minimums (outreach emails, networking calls, applications) from Week 4, counted as set out in the [Refund & Payment Policy](/refunds#how-work-is-counted).",
+      "Turn in assignments by Sunday 11:59 pm Pacific, and check in with your pod every Sunday.",
+      "One makeup week: the student may miss one week's minimums once and make them up the following week. A second miss ends offer-or-refund eligibility; coaching continues, and we schedule a reset call with the student and parent.",
     ] },
     { type: "p", text: "The program's results depend heavily on the student's own effort. A student who doesn't do the work won't get the benefit of it, and that isn't grounds for a refund beyond what the [Refund & Payment Policy](/refunds) provides." },
 
@@ -44,7 +44,7 @@ export const terms: LegalDoc = {
     { type: "p", text: "Students must follow our [Code of Conduct](/code-of-conduct): respect for everyone in the program, honesty and professionalism in outreach, and never misrepresenting themselves to professionals. Serious or repeated violations can lead to removal from the program, as described there." },
 
     { type: "h2", text: "Payment and refunds" },
-    { type: "p", text: `Tuition includes everything. ${depositLine()} The remaining tuition is invoiced separately and due before Week 1. Deadlines, missed payments, withdrawals, and refunds are covered in our [Refund & Payment Policy](/refunds), which is part of these terms.` },
+    { type: "p", text: `Tuition includes everything. ${tuitionLine()} Deadlines, late payments, cancellation, and refunds are covered in our [Refund & Payment Policy](/refunds), which is part of these terms.` },
 
     { type: "h2", text: "Intellectual property" },
     { type: "p", text: "Our curriculum, templates, rubrics, trackers, recordings of sessions, and website content belong to us. Enrolled students get a personal, non-transferable license to use them for their own internship search, during and after the program." },

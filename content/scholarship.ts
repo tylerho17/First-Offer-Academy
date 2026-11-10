@@ -16,7 +16,7 @@ export const scholarship = {
     items: [
       "Business students starting recruiting",
       "Students for whom tuition would be a real barrier for them or their family",
-      "Students ready to hit weekly outreach and mock-interview targets",
+      "Students ready to meet the weekly email, call, and application minimums",
     ],
   },
   lookFor: {
@@ -36,7 +36,7 @@ export const scholarship = {
     { name: "drive", label: "Tell us about something you worked hard for without anyone telling you to." },
     { name: "cost", label: "How would the cost of a program like this affect you or your family?" },
   ] as const,
-  commitment: "I understand the scholarship recipient commits to the same weekly targets as every student.",
+  commitment: "I understand the scholarship recipient commits to the same weekly minimums as every student.",
   finePrint: "One seat per cohort. Applicants not selected can still enroll in the program.",
   // When applicants hear: the thank-you state and the confirmation email.
   hearBy: `Finalists hear by ${s.finalistsBy}. Decisions by ${s.decisionBy}.`,

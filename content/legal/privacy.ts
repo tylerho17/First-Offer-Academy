@@ -24,7 +24,7 @@ export const privacy: LegalDoc = {
       "Newsletter form: first name, email, and whether you're a student, parent, or educator. We use this to send the newsletter.",
       "Story form: the details you choose to submit. Nothing from this form is published without separate, written permission (see \"Student outcomes and testimonials\" below).",
       "Call bookings: when you book a call, Calendly collects your name, email, and the time you choose, and shares them with us. Calendly processes this under its own privacy policy.",
-      "Payments: deposits and tuition are processed by Stripe. Stripe collects your card details directly. We never see or store full card numbers; we receive only a confirmation, the amount, and the name and email on the payment.",
+      "Payments: the deposit is processed by Stripe. Stripe collects your card details directly. We never see or store full card numbers; we receive only a confirmation, the amount, and the name and email on the payment. The two remaining tuition payments are made by Zelle through your bank; we see the payer's name, the amount, and the date.",
       "Analytics: we use Vercel Analytics, which counts page views in aggregate without cookies and without identifying individual visitors.",
       "Program records: once a student enrolls, we keep their tracker (emails sent, calls, interviews), coach feedback, recorded practice answers, and progress level, because running the program depends on them.",
     ] },
@@ -33,7 +33,7 @@ export const privacy: LegalDoc = {
     { type: "ul", items: [
       "To evaluate applications and schedule fit calls.",
       "To run the program: sessions, 1:1s, pods, feedback, and progress tracking.",
-      "To send parent progress reports. These go only to the parent or guardian the student lists, and to no one else.",
+      "To send the Monday status emails. These go only to the student and the parent or guardian the student lists, and to no one else.",
       "To send program emails, confirmations, and (if you subscribed) the newsletter. Every marketing email includes an unsubscribe link.",
       "To send text messages, only if you checked the box agreeing to them. Reply STOP at any time to opt out.",
       "To keep the website secure and working.",

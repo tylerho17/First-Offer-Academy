@@ -105,7 +105,7 @@ export const guide: Guide = {
       ["Any day", "One hour on the skill of the moment: resume, stories, the why, technicals."],
       ["Sunday night", "Update your tracker. Read your numbers: sent, replies, calls, level."],
     ]),
-    tyler("Two missed weeks in a row is where searches die. If you miss a week, next week's number doesn't go down. You make it up."),
+    tyler("Missed weeks are where searches die. If you miss a week, next week's number doesn't go down. You make it up."),
 
     h2("Common mistakes"),
     ul(

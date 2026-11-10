@@ -25,7 +25,7 @@ export const revalidate = 3600;
 
 export const metadata: Metadata = pageMeta({
   title: "For Parents",
-  description: "For parents of business students starting recruiting (built for finance and accounting; the system works for any business role): what your student does each week in First Offer Academy, the progress reports you receive, payment and the deposit, and what we don't promise.",
+  description: "For parents of business students starting recruiting (built for finance and accounting; the system works for any business role): what your student does each week in First Offer Academy, the Monday status emails you receive, payment and the deposit, and what we don't promise.",
 });
 
 export default async function ParentsPage() {
@@ -49,7 +49,7 @@ export default async function ParentsPage() {
           <h1>{p.title}</h1>
           <p className="lede">{p.lede}</p>
           <ul className="parent-see">
-            <li><Check />A one-page progress report every two weeks</li>
+            <li><Check />A status email every Monday with your student&apos;s numbers and status</li>
             <li><Check />The Week 8 family meeting, where your student presents their results</li>
             <li><Check />After Week 12: a 20-minute weekly check-in and a mock every other week, until an offer or {afterProgram.until}</li>
           </ul>
@@ -122,11 +122,10 @@ export default async function ParentsPage() {
           <span className="eyebrow">Tuition and deposit</span>
           <h2>{c.name} · {c.start}</h2>
           <ul className="checks">
-            <li><Check />Limited seats. Tuition and scholarship details are covered on the parent call</li>
-            <li><Check />Tuition includes everything; there are no other required fees</li>
-            <li><Check />A deposit holds a seat and counts toward tuition. It&apos;s fully refundable through {site.depositRefundDeadline}.</li>
-            <li><Check />The remaining tuition is invoiced separately and due {c.balanceDue}</li>
-            <li><Check />Payments are processed by Stripe; we never see your card number</li>
+            <li><Check />Limited seats. Tuition is {site.tuition.total} and includes everything; there are no other required fees</li>
+            <li><Check />A {site.tuition.deposit} deposit at enrollment holds a seat and counts toward tuition. It&apos;s fully refundable through {site.depositRefundDeadline}.</li>
+            <li><Check />Then {site.tuition.payments[0].amount} due {site.tuition.payments[0].due} and {site.tuition.payments[1].amount} due {site.tuition.payments[1].due}, paid by Zelle request from {site.tuition.zelleFrom}</li>
+            <li><Check />The deposit is processed by Stripe; we never see your card number</li>
           </ul>
           <div className="btn-row">
             <PrimaryCTA location="parents" tone="navy-band" />

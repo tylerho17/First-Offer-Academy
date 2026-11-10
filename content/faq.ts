@@ -1,9 +1,8 @@
-import { founderInternships, PILOT_LANDED, PILOT_STUDENTS, site, spell } from "./site";
+import { founderInternships, PILOT_LANDED, PILOT_STUDENTS, site, spell, tuitionLine } from "./site";
 import { internshipsLine } from "./founder";
-import { afterProgram, formatNote, minimumLines, offerOrRefund, oneOnOneFormat, sessionFormat } from "./program";
+import { afterProgram, commitment, formatNote, howCounted, minimumLines, offerOrRefund, oneOnOneFormat, sessionFormat } from "./program";
 import { rhythmNotes, weeklyRhythm } from "./curriculum";
 import { programOverview } from "./programOverview";
-import { promise } from "./promise";
 import type { VideoSpot } from "./videoTestimonials";
 
 const tba = (v: string, fallback = "To be announced.") => (v ? v : fallback);
@@ -27,7 +26,9 @@ export const faqs: Faq[] = [
     parent: true,
     id: "offer-or-refund",
     q: "What if my student doesn't land an offer?",
-    a: `Check-ins and mocks continue through ${afterProgram.until}. If they've met every weekly minimum and still have no offer, you get a full tuition refund. Terms: ${offerOrRefund.terms}`,
+    a: `Check-ins and mocks continue through ${afterProgram.until}. ${offerOrRefund.body}`,
+    list: offerOrRefund.terms,
+    link: { label: "How the work is counted", href: "/faq#how-work-is-counted" },
   },
   {
     group: "Results and refunds",
@@ -89,20 +90,19 @@ export const faqs: Faq[] = [
     parent: true,
     id: "weekly-minimums",
     q: "What does my student commit to each week?",
-    // Merged: "What are the weekly minimums?", "What do you ask of students?",
-    // and "How much time does it take each week?"
-    a: site.weeklyHours
-      ? `Plan on ${site.weeklyHours} hours a week: the session, the 1:1, and outreach.`
-      : `The weekly session is 90 minutes and the 1:1 is 60 minutes. ${
-          site.outreachHours
-            ? `Outreach on top of that: ${site.outreachHours}.`
-            : "Outreach time on top of that will be confirmed before the cohort starts."
-        }`,
-    list: [
-      ...minimumLines(),
-      // "Hit the weekly minimums" is covered by the lines above.
-      ...promise.weAsk.items.slice(1).map((i) => `${i.title}: ${i.body}`),
-    ],
+    // The weekly minimums (emails, calls, applications), then what every
+    // week asks on top of them.
+    a: `${commitment.foundation} ${commitment.hours} The weekly minimums:`,
+    list: [...minimumLines(), commitment.also],
+    link: { label: "How the work is counted", href: "/faq#how-work-is-counted" },
+  },
+  {
+    group: "How it works",
+    parent: true,
+    id: "how-work-is-counted",
+    q: "How is the work counted?",
+    a: "Every minimum is counted from a record, not from what a student reports:",
+    list: howCounted,
   },
   {
     group: "How it works",
@@ -126,7 +126,7 @@ export const faqs: Faq[] = [
     group: "How it works",
     parent: true,
     q: "What do parents see during the program?",
-    a: "Through Accountability & Pods: a one-page progress report every two weeks, and a Week 8 family meeting where your student presents their results.",
+    a: "Through Accountability & Pods: a status email to parent and student every Monday, with your student's numbers and offer-or-refund status, and a Week 8 family meeting where your student presents their results.",
   },
   {
     group: "How it works",
@@ -145,8 +145,15 @@ export const faqs: Faq[] = [
     a: `Because the timelines, emails, and interviews Tyler coaches are ones he ran himself, recently. ${founderInternships() ? `${founderInternships()}. ` : ""}He also has an incoming investment banking summer analyst offer. In college he led finance recruiting education and coached ${spell(PILOT_STUDENTS)} pilot students: ${PILOT_LANDED} of ${PILOT_STUDENTS} landed an internship or offer.`,
   },
 
-  // Cost and alternatives. Tuition figures aren't on the site; they're covered
-  // on the parent call.
+  // Cost and alternatives.
+  {
+    group: "Cost and alternatives",
+    parent: true,
+    id: "tuition",
+    q: "How much is tuition, and when is it due?",
+    a: `${tuitionLine()} Tuition includes everything; there are no other required fees. Late payments: ${site.latePayments}`,
+    link: { label: "Read the Refund & Payment Policy", href: "/refunds" },
+  },
   {
     group: "Cost and alternatives",
     home: true,

@@ -9,6 +9,6 @@ export const payments = {
   deposit: "https://buy.stripe.com/4gM9ALgTDgXd6JQbpT6g802", // $1,000
   full: "https://buy.stripe.com/aFa14f0UF6iz1pw9hL6g803", // $5,000
 
-  // No balance link: after the deposit, the remaining balance is sent as a
-  // separate Stripe Invoice.
+  // No balance link: after the deposit, the two $2,000 payments are Zelle
+  // requests (content/site.ts → tuition).
 };
