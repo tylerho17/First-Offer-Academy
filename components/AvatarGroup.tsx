@@ -10,6 +10,7 @@ const has = (p: string | null) => !!p && existsSync(path.join(process.cwd(), "pu
 // and the pilot result, beside the main CTA. Alt text: first name only.
 export default function AvatarGroup({ count = 5 }: { count?: number }) {
   const faces = visibleStudents()
+    .filter((s) => !s.anonymous)
     .map((s) => ({ name: s.firstName, src: has(croppedHeadshot(s)) ? croppedHeadshot(s) : has(s.headshot) ? s.headshot : null }))
     .filter((f): f is { name: string; src: string } => !!f.src)
     .slice(0, count);

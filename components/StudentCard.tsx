@@ -11,10 +11,20 @@ export default function StudentCard({ s, showAlso = false }: { s: Student; showA
   return (
     <figure className="card student-card">
       {!s.approved && <span className="pending-badge">Pending permission</span>}
-      <StudentAvatar name={s.firstName} cropped={croppedHeadshot(s)} original={s.headshot} />
+      {s.anonymous ? (
+        // Blank-profile silhouette in the same ring as a headshot.
+        <span className="student-avatar is-anon" role="img" aria-label="Anonymous student (no photo)">
+          <svg viewBox="0 0 100 100" aria-hidden="true">
+            <circle cx="50" cy="39" r="19" />
+            <ellipse cx="50" cy="100" rx="36" ry="32" />
+          </svg>
+        </span>
+      ) : (
+        <StudentAvatar name={s.firstName} cropped={croppedHeadshot(s)} original={s.headshot} />
+      )}
       <blockquote>{s.quote}</blockquote>
       <figcaption>
-        <strong>{s.firstName}</strong>
+        {!s.anonymous && <strong>{s.firstName}</strong>}
         <span className="student-line">{line}</span>
         {showAlso &&
           (companies && s.otherCompanies.length > 0 ? (

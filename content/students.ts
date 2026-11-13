@@ -24,6 +24,8 @@ export type Student = {
   headshotPosition?: { x?: number; y?: number };
   homepage: boolean;
   label?: string; // shown after the headline company, e.g. "Full-time offer"
+  // Quote shown without a name or photo, behind a blank-profile silhouette. firstName is then only a React key and is never rendered.
+  anonymous?: boolean;
   approved: boolean;
   employerPermission: boolean;
 };
@@ -71,16 +73,15 @@ export const students: Student[] = [
     employerPermission: true,
   },
   {
-    firstName: "Zach",
+    firstName: "anonymous-1",
     track: "Finance",
-    headline: "BridgeBio",
-    role: "FP&A Intern",
-    otherCompanies: ["Concordia Capital", "L&B Capital"],
+    headline: "Concordia Capital",
+    role: "",
+    otherCompanies: [],
     quote: "Having someone I could bounce ideas off of made navigating finance recruiting easier and much less intimidating in the beginning.",
-    headshot: "/images/students/zach.png",
-    headshotZoom: 0.94,
-    headshotPosition: { y: -0.13 },
+    headshot: null,
     homepage: false,
+    anonymous: true,
     approved: true,
     employerPermission: true,
   },
@@ -237,7 +238,6 @@ export const companyLogos: Record<string, string> = {
   "Wells Fargo": "wells-fargo",
   "U.S. Bank": "us-bank",
   Tricon: "tricon",
-  BridgeBio: "bridgebio",
   "Sila Nanotechnologies": "sila",
   "Mercer Advisors": "mercer-advisors",
   // Boutique firms: each logo is from the firm's own website (see
@@ -247,7 +247,6 @@ export const companyLogos: Record<string, string> = {
   "Concordia Capital": "concordia-capital",
   Clicinsight: "clicinsight",
   Futuraiser: "futuraiser",
-  "L&B Capital": "lb-capital",
   "Lōkahi Therapeutics": "lokahi-therapeutics",
   "Optimize Financial": "optimize-financial",
   "Sellside Group": "sellside-group",

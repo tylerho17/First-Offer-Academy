@@ -19,11 +19,9 @@ LinkedIn logos.
 | us-bank.svg | U.S. Bank | Wikimedia Commons: "US Bank logo 2023 color.svg" |
 | blackstone.svg | Blackstone | Lettering from Wikimedia Commons "The Blackstone Group logo (2).svg", black box removed |
 | tricon.svg | Tricon | Wikimedia Commons: "Tricon Residential.svg" |
-| bridgebio.svg | BridgeBio | Header logo, bridgebio.com |
 | sila.svg | Sila | Header logo, silanano.com |
 | mercer-advisors.svg | Mercer Advisors | Header logo, merceradvisors.com |
 | black-legend-capital.svg | Black Legend Capital | Site logo, blacklegendcapital.com |
-| lb-capital.svg | L&B Capital SGR | Header logo, lbcapitalsgr.it |
 | smart-asset-capital.svg | Smart Asset Capital | Header logo, smartassetcapital.com (white fills set to ink) |
 | clicinsight.png | Clicinsight | Header logo, clicinsight.com |
 | futuraiser.png | Futuraiser | Header logo, futuraiser.com |
